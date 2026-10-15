@@ -6,7 +6,7 @@
 | File | Pages | Content |
 |---|---|---|
 | [`raw/montreal_communique_2026-02-10_10-actions-en-100-jours_fr.pdf`](raw/montreal_communique_2026-02-10_10-actions-en-100-jours_fr.pdf) | 3 | Press release "10 ACTIONS EN 100 JOURS : la Ville de Montréal annonce un état des lieux pour une mobilité planifiée et sécuritaire pour tous", published February 10, 2026 at 10:48. Live URL: https://montreal.ca/communiques-de-presse/10-actions-en-100-jours-la-ville-de-montreal-annonce-un-etat-des-lieux-pour-une-mobilite-planifiee . Snapshot: https://web.archive.org/web/20261015001815/https://montreal.ca/communiques-de-presse/10-actions-en-100-jours-la-ville-de-montreal-annonce-un-etat-des-lieux-pour-une-mobilite-planifiee |
-| [`raw/realisons_montreal_place-du-velo_2026-10-14.pdf`](raw/realisons_montreal_place-du-velo_2026-10-14.pdf) | 4 | Project page "La place du vélo à Montréal" on Réalisons Montréal, with the project timeline, as it stood on October 14, 2026. Live URL: https://realisons.montreal.ca/projects/place-du-velo . Snapshot: requested October 14, 2026 |
+| [`raw/realisons_montreal_place-du-velo_2026-10-14.pdf`](raw/realisons_montreal_place-du-velo_2026-10-14.pdf) | 4 | Project page "La place du vélo à Montréal" on Réalisons Montréal, with the project timeline, as it stood on October 14, 2026. Live URL: https://realisons.montreal.ca/projects/place-du-velo . Snapshot: https://web.archive.org/web/20261015001835/https://realisons.montreal.ca/projects/place-du-velo |
 
 ## What the documents say
 
