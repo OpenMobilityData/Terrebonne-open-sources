@@ -30,6 +30,7 @@ Rules:
 
 | Folder | Document | Issued by | Date |
 |---|---|---|---|
+| [`2020-temporary-lanes/`](2020-temporary-lanes/) | Council file of June 22, 2020 approving the "rues, secteurs et corridors à vocation familiale et active" program (the temporary lanes), and the motion of September 8, 2020 to remove the Terrebonne lanes | Arrondissement CDN–NDG | 2020-06 to 2020-09 |
 | [`2023-exp-mobility-study/`](2023-exp-mobility-study/) | *Étude de mobilité – rue de Terrebonne* (Les Services EXP inc.), 351 pp., the study behind the 2024 project | Arrondissement CDN–NDG (commissioned); made public with the project announcement | 2023-10-30 |
 | [`2020-2021-working-committee/`](2020-2021-working-committee/) | Resolution CA20 170210 creating the Comité de travail pour la mobilité sur la rue de Terrebonne; the committee's recommendations of June 13, 2021; the council file tabling them; the committee's vote results | Arrondissement CDN–NDG; the committee | 2020-09 to 2021-06 |
 
