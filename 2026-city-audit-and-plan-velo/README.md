@@ -1,0 +1,19 @@
+# The City's 2026 review of the cycling network and the Plan vélo timeline
+
+**Issued by:** Ville de Montréal, Cabinet de la mairesse et du comité exécutif (press release); Ville de Montréal, Réalisons Montréal consultation platform (project page)
+**Obtained:** both pages captured to PDF with a headless browser on October 14, 2026, from the live URLs below; Wayback Machine snapshots requested the same day (links below). The site's cookie-consent banner overprints a few lines of the press-release capture; the snapshot is the clean reference
+
+| File | Pages | Content |
+|---|---|---|
+| [`raw/montreal_communique_2026-02-10_10-actions-en-100-jours_fr.pdf`](raw/montreal_communique_2026-02-10_10-actions-en-100-jours_fr.pdf) | 3 | Press release "10 ACTIONS EN 100 JOURS : la Ville de Montréal annonce un état des lieux pour une mobilité planifiée et sécuritaire pour tous", published February 10, 2026 at 10:48. Live URL: https://montreal.ca/communiques-de-presse/10-actions-en-100-jours-la-ville-de-montreal-annonce-un-etat-des-lieux-pour-une-mobilite-planifiee . Snapshot: https://web.archive.org/web/20261015001815/https://montreal.ca/communiques-de-presse/10-actions-en-100-jours-la-ville-de-montreal-annonce-un-etat-des-lieux-pour-une-mobilite-planifiee |
+| [`raw/realisons_montreal_place-du-velo_2026-10-14.pdf`](raw/realisons_montreal_place-du-velo_2026-10-14.pdf) | 4 | Project page "La place du vélo à Montréal" on Réalisons Montréal, with the project timeline, as it stood on October 14, 2026. Live URL: https://realisons.montreal.ca/projects/place-du-velo . Snapshot: requested October 14, 2026 |
+
+## What the documents say
+
+**The press release of February 10, 2026** presents "son plan d'action pour réaliser un état des lieux du réseau cyclable", one of the "10 actions en 100 jours promises durant la campagne", "structurée en deux actions". First, "une analyse technique approfondie du réseau existant, une collecte de données et une observation sur le terrain" on four existing lanes: rue Meilleur (Ahuntsic-Cartierville), rue Rachel (Plateau-Mont-Royal), chemin de la Côte-Sainte-Catherine (Outremont) and rue de la Commune (Ville-Marie). Second, a review of projects already under study or design: Viau, Berri, Saint-Urbain and Bellechasse. It adds: "De plus, la Ville collabore déjà avec plusieurs arrondissements pour sécuriser certains aménagements existants présentant des enjeux connus, notamment sur les rues Hochelaga, Terrebonne et Gouin, ainsi que sur le boulevard Henri-Bourassa." It announces a new post-implementation evaluation process at the Service de l'urbanisme et de la mobilité, noting that "un mécanisme d'évaluation existait auparavant, principalement mis en place à la suite de collisions mortelles", piloted on a section of Henri-Bourassa; and that "la révision du Plan Vélo débutera cette année" to establish "des critères clairs, cohérents et harmonisés". The mayor is quoted: "À notre arrivée, les documents qu'on nous a remis ne répondaient pas aux préoccupations exprimées sur le terrain. On a donc décidé de faire les choses autrement : aller sur place, recueillir les données, analyser et corriger au besoin, en concertation avec les élus des arrondissements."
+
+**The Réalisons Montréal timeline** (as captured October 14, 2026): consultation, June–July 2026; "Analyse et poursuite de la consultation", autumn 2026, "Consultation publique - détails à venir"; "Rétroaction et diffusion des résultats auprès de la population", spring–summer 2027; "Diffusion du Plan vélo avec carte interactive du réseau planifié", autumn 2027.
+
+## Why they are here
+
+Both are cited in the executive summaries of access request 2026-581 (section 4.4, "Against the City's own review method") and in the questions prepared for council. The City's own note of November 10, 2025 on the audits of the network, released under request 2025-12847, is in the companion repository.

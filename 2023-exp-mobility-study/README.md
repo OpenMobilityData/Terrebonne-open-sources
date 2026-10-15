@@ -3,7 +3,11 @@
 **Issued by:** Arrondissement de Côte-des-Neiges–Notre-Dame-de-Grâce (commissioned from Les Services EXP inc.)
 **Date:** report dated 2023 (PDF title: "rapport - étude de mobilité rue de Terrebonne 2023b"); made public with the borough's project announcement of October 30, 2023
 **Obtained:** downloaded from the borough's project page on or about October 31, 2023 (file date). The borough's page has not been checked since and the link may no longer be live; the borough's press release of October 30, 2023 ([FR](https://montreal.ca/communiques-de-presse/larrondissement-de-cote-des-neiges-notre-dame-de-grace-presente-son-projet-de-reamenagement-de-la), [EN](https://montreal.ca/en/press-releases/cote-des-neiges-notre-dame-de-grace-presents-its-redevelopment-project-rue-de-terrebonne)) describes the study but carries no link to the PDF (checked October 14, 2026)
-**File:** [`raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf`](raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf), 351 pages, 45 MB, French
+| File | Pages | Content |
+|---|---|---|
+| [`raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf`](raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf) | 351 | The study (French), 45 MB |
+| [`raw/cdn-ndg_communique_2023-10-30_reamenagement-terrebonne_fr.pdf`](raw/cdn-ndg_communique_2023-10-30_reamenagement-terrebonne_fr.pdf) | 3 | The borough's press release of October 30, 2023 (French), captured October 14, 2026; snapshot requested the same day |
+| [`raw/cdn-ndg_press-release_2023-10-30_redevelopment-terrebonne_en.pdf`](raw/cdn-ndg_press-release_2023-10-30_redevelopment-terrebonne_en.pdf) | 3 | The same release in English, captured October 14, 2026; snapshot requested the same day |
 
 ## What it is
 
