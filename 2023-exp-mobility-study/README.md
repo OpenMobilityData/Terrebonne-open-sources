@@ -6,8 +6,8 @@
 | File | Pages | Content |
 |---|---|---|
 | [`raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf`](raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf) | 351 | The study (French), 45 MB |
-| [`raw/cdn-ndg_communique_2023-10-30_reamenagement-terrebonne_fr.pdf`](raw/cdn-ndg_communique_2023-10-30_reamenagement-terrebonne_fr.pdf) | 3 | The borough's press release of October 30, 2023 (French), captured October 14, 2026; snapshot requested the same day |
-| [`raw/cdn-ndg_press-release_2023-10-30_redevelopment-terrebonne_en.pdf`](raw/cdn-ndg_press-release_2023-10-30_redevelopment-terrebonne_en.pdf) | 3 | The same release in English, captured October 14, 2026; snapshot requested the same day |
+| [`raw/cdn-ndg_communique_2023-10-30_reamenagement-terrebonne_fr.pdf`](raw/cdn-ndg_communique_2023-10-30_reamenagement-terrebonne_fr.pdf) | 3 | The borough's press release of October 30, 2023 (French), captured October 14, 2026. Live URL: https://montreal.ca/communiques-de-presse/larrondissement-de-cote-des-neiges-notre-dame-de-grace-presente-son-projet-de-reamenagement-de-la . Snapshot: https://web.archive.org/web/20261015002009/https://montreal.ca/communiques-de-presse/larrondissement-de-cote-des-neiges-notre-dame-de-grace-presente-son-projet-de-reamenagement-de-la |
+| [`raw/cdn-ndg_press-release_2023-10-30_redevelopment-terrebonne_en.pdf`](raw/cdn-ndg_press-release_2023-10-30_redevelopment-terrebonne_en.pdf) | 3 | The same release in English, captured October 14, 2026. Live URL: https://montreal.ca/en/press-releases/cote-des-neiges-notre-dame-de-grace-presents-its-redevelopment-project-rue-de-terrebonne . Snapshot: https://web.archive.org/web/20261015002124/https://montreal.ca/en/press-releases/cote-des-neiges-notre-dame-de-grace-presents-its-redevelopment-project-rue-de-terrebonne |
 
 ## What it is
 
