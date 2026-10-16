@@ -1,0 +1,168 @@
+% Extrait : les points sommaires de la vérification des faits de
+% l'entrevue de CBC Daybreak du 9 octobre 2026 (rempli par build.py).
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.8in,bottom=0.8in,left=0.9in,right=0.9in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-16-15-38-58} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.0}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{gray}CBC Daybreak, 9 octobre 2026 -- vérification des faits, points sommaires -- \repourl}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+
+% ---- Links ----
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\repo}[1]{\href{\repourl}{#1}}
+\newcommand{\doc}[2]{\href{\repourl/blob/main/#1}{#2}}
+\newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
+\newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
+\newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+% \pg{pages}: page of bundle 01 of access request 2026-581, linked
+\newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
+\newcommand{\pg}[1]{\pgl{#1}{#1}}
+% \exp{page}: page of the 2023 EXP study (open-sources repository)
+\newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
+\newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
+
+\begin{document}
+
+{\large\bfseries CBC \emph{Daybreak}, 9~octobre 2026~: les affirmations du conseiller vérifiées au dossier}\hfill{\small 16~octobre 2026}
+
+\vspace{-0.2em}
+{\small Points sommaires de la vérification, mot pour mot (traduction\,; l'anglais fait foi). Document complet, sources, références aux pages et transcription~:\\ \href{\repourl/tree/main/2026-cbc-daybreak-interview}{\repourl/tree/main/2026-cbc-daybreak-interview}.}
+\vspace{0.4em}
+
+\begin{enumerate}[nosep,itemsep=0.3em,leftmargin=1.4em]
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,Less than one an hour\,» (moins d'un à l'heure) l'hiver
+    \cliptime{03:11}~: en partie conforme.} Du 1\textsuperscript{er}~décembre
+    au 31~mars, le compteur de l'arrondissement à Kensington a enregistré
+    4\,891~passages de vélos en 121~jours~: 40{,}4 par jour, soit 1{,}68 à
+    l'heure sur 24~heures, les deux directions réunies. Prise une direction à
+    la fois sur 24~heures, la moyenne est inférieure à un à l'heure (vers
+    l'est 0{,}96, vers l'ouest 0{,}73, le canal ouest sous-comptant depuis le
+    1\textsuperscript{er}~mars environ). En semaine, de 7~h à 19~h, elle
+    était de 3{,}2 à l'heure. Dans les données ouvertes de la Ville, le seul
+    canal de Terrebonne (vers l'ouest, à Girouard) a donné en moyenne 27{,}4
+    par jour, 1{,}14 à l'heure, sur les mêmes mois.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{Le «\,8\,» était «\,the sum of all the hours during the
+    rush hour… six hours\,» \cliptime{07:03}~: conforme.} Le chiffre figure
+    sur la diapositive de l'arrondissement \pg{62}~: vélos sur l'axe
+    Terrebonne à une intersection, Grand, un seul jour, le 29~janvier 2025,
+    sur les six heures de pointe définies à la \pg{34} (6~h~30 à 9~h~30 et
+    15~h~30 à 18~h~30), les deux directions réunies. La même diapositive
+    donne 10 à Cavendish ce jour-là. Dans son allocution du 6~octobre, le
+    chiffre était présenté ainsi~: «\,8 passage, right? So that's 4
+    cyclists.\,»\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{Le site de données ouvertes serait «\,connected
+    directly to Eco-Counter, which has those loops installed on the
+    ground\,» \cliptime{07:19}~: non conforme aux données ouvertes.} Le jeu
+    de données \emph{Compteurs cyclistes permanents} de la Ville énumère
+    128~sites de comptage, dont 77 Éco-Compteur\,; aucun n'est sur
+    Terrebonne. Le seul site de Terrebonne est un détecteur de la Ville à
+    Girouard (source «\,Ville\,»), dont le seul canal de Terrebonne compte la
+    circulation vers l'ouest, avec des données quotidiennes depuis le
+    23~octobre 2025. La boucle Éco-Compteur de l'arrondissement à Kensington
+    n'est pas sur le portail\,; ses données n'ont été rendues publiques que
+    par les demandes d'accès 2025-697, 2026-300 et 2026-581.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,From 40 a day to 30 a day during December to March\,»
+    \cliptime{07:34}~: en partie conforme.} Les chiffres correspondent au
+    compteur de l'arrondissement à Kensington, deux directions~: décembre
+    40{,}0, janvier 32{,}7, février 34{,}9 par jour\,; mars, 53{,}5. Au canal
+    de données ouvertes désigné comme source (vers l'ouest seulement, à
+    Girouard)~: décembre 32{,}5, janvier 22{,}6, février 29{,}1, mars
+    24{,}7.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,We have the data for many years\,» \cliptime{03:33}~:
+    en partie conforme.} Les comptages continus sur Terrebonne couvrent un
+    seul hiver, 2025-2026 (boucle de Kensington depuis le 26~juillet 2025\,;
+    détecteur des données ouvertes depuis le 23~octobre 2025). Les hivers
+    précédents ne sont couverts que par des comptages d'un jour aux
+    intersections (Miovision, novembre 2024 et 29~janvier 2025) et par des
+    comptages Telraam se terminant en décembre 2024 \pg{65}.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,If you go back to 2023… they basically removed about
+    250 parking spots\,» \cliptime{01:08}~: en partie conforme.} L'étude et
+    l'annonce datent de 2023\,; la piste a été approuvée en février 2024 et
+    aménagée en mai et juin 2024. L'étude d'EXP de 2023 compte 475~places sur
+    Terrebonne, 375 une fois appliqués les dégagements de 5~mètres, et 171
+    dans l'aménagement retenu \exppg{100}~: une réduction de 304, ou de 204
+    par rapport aux 375. Aucun relevé après travaux ne figure au dossier. En
+    2020, la presse a rapporté 250~places supprimées par les voies
+    temporaires de cette année-là (\emph{Métro}, 1\textsuperscript{er}~septembre
+    2020).\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,At least 50 to 60 parking spots\,» \cliptime{01:28}~:
+    introuvable au dossier.} Le chiffre ne figure pas dans les 508~pages de
+    la demande 2026-581, qui ne contiennent aucun inventaire des places sur
+    rue, aucun relevé d'occupation et aucune estimation des places que le
+    changement créerait. Le seul relevé d'occupation au dossier est celui
+    d'EXP, fait deux jours à l'automne 2022, avant la piste, en soirée~:
+    35 à 70~\% en semaine \exppg{54}.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,We vote here at the borough, then a vote at the Conseil
+    Municipal, then it comes back to the borough\,» \cliptime{08:19}~:
+    conforme au précédent de 2024.} Terrebonne fait partie du réseau
+    artériel de la Ville. En 2024, l'arrondissement a offert les travaux en
+    vertu de l'article~85 de la Charte (CA24 170018, 5~février), le conseil
+    de la ville a accepté (CM24 0179, 19~février), puis l'arrondissement a
+    adopté l'ordonnance de sens unique (CA24 170131, 3~juin)~: trois votes en
+    quatre mois. Aucun ordre du jour du conseil d'arrondissement ou du
+    conseil de la ville jusqu'au 19~octobre 2026 ne comporte de point
+    décisionnel sur Terrebonne. La mise en œuvre «\,before Christmas\,» ne
+    peut être vérifiée.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,So for now, we're looking at it in a way that will make
+    it permanent\,» \cliptime{12:22}~: diffère des descriptions
+    antérieures.} Le 6~octobre, le conseiller a dit~: «\,It's going to be a
+    test.\,» La demande de service de l'arrondissement du 20~août décrit la
+    mesure hivernale comme une «\,mesure transitoire pour l'hiver
+    2026-2027\,» \pg{4}\,; le mandat permanent du 13~août vise un autre
+    aménagement, une piste bidirectionnelle d'un côté \pg{1}.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,The final study… still need to be submitted to us\,»
+    \cliptime{00:38}~: invérifiable.} La note finale d'EXP était attendue
+    le 2~octobre 2026 \pg{12}\,; une ébauche a été transmise le
+    17~septembre \pg{167}. Aucune note finale ne figure dans la réponse, et
+    l'étude d'ingénierie et l'analyse de la Ville sont refusées. Une demande
+    visant la note finale est en cours (réponse attendue le
+    7~novembre).\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{«\,We've been able to reduce vehicle traffic by
+    two-thirds\,» \cliptime{09:56}~: conforme à la fourchette du dossier.}
+    Avant le projet~: 6\,300~véhicules par jour (2022) entre Cavendish et
+    Grand \exppg{41}. Après~: 1\,375 par jour la première année du compteur
+    de Kensington, une baisse de 78~\%\,; les entrées aux heures de pointe à
+    Grand ont baissé de 46 à 63~\% \pg{34}. Le sens unique à Cavendish
+    faisait partie du projet de 2024.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{Par rapport au 6~octobre.} Dans son allocution au
+    conseil d'arrondissement trois jours plus tôt, le conseiller décrivait
+    les données comme «\,the official data provided by the borough\,» (à
+    \emph{Daybreak}~: «\,the open data website\,»)\,; le changement hivernal
+    comme une baisse de 99~\%, «\,from 700 during the good months to 8\,» (à
+    \emph{Daybreak}~: 30 à 40 par jour, et le 8 comme une somme sur six
+    heures)\,; «\,data for 3 years in a row\,» («\,many years\,»)\,; «\,more
+    than 30 meetings\,» («\,more than 40\,»)\,; et la mesure comme «\,a
+    test\,» («\,for now… permanent\,»). Aucun nombre de places n'a été donné
+    dans l'allocution. Les affirmations sont mises côte à côte à la
+    section~3.\end{minipage}\vspace{0.35em}
+\end{enumerate}
+
+\end{document}

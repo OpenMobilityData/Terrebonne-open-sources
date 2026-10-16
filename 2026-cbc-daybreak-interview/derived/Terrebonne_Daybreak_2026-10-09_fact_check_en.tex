@@ -1,0 +1,455 @@
+% Fact check of the CBC Daybreak interview of October 9, 2026 with
+% councillor Alexandre Teodoresco on rue de Terrebonne. Compile with
+% pdflatex (twice), or run build.py.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.9in,bottom=0.95in,left=1in,right=1in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-16-15-38-58} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.03}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{gray}CBC Daybreak, October 9, 2026 -- fact check -- page \thepage}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+
+% ---- Links ----
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\repo}[1]{\href{\repourl}{#1}}
+\newcommand{\doc}[2]{\href{\repourl/blob/main/#1}{#2}}
+\newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
+\newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
+\newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+% \pg{pages}: page of bundle 01 of access request 2026-581, linked
+\newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
+\newcommand{\pg}[1]{\pgl{#1}{#1}}
+% \exp{page}: page of the 2023 EXP study (open-sources repository)
+\newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
+\newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
+% Statements from the October 6 question period: machine transcript of the
+% webcast, to be checked against the video before use. Set \qatrue to include.
+\newif\ifqa\qafalse
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries CBC \emph{Daybreak}, October 9, 2026: the councillor's statements checked against the record}\\[0.4em]
+{\large Fact check of the interview on rue de Terrebonne}\\[0.6em]
+Richard Hoge, Côte-des-Neiges--Notre-Dame-de-Grâce -- October 16, 2026\\
+Published with the transcript at \repo{\repourl}
+\end{center}
+
+\section*{Summary}
+
+On October~9, 2026, CBC Radio's \emph{Daybreak} (Montréal) interviewed
+Alexandre Teodoresco, city councillor for the Loyola district of
+Côte-des-Neiges--Notre-Dame-de-Grâce, about the borough's plan to convert
+one direction of the protected bike lane on rue de Terrebonne to parking in
+winter. Each statement of fact in the interview was compared with the
+public record: the 508 pages released by the borough under access request
+2026-581, the borough's counter data released under requests 2025-697 and
+2026-300, the City of Montréal's open data, the 2023 EXP mobility study,
+council records, and press coverage. Times in square brackets are minutes
+and seconds from the start of the CBC clip; the full transcript is
+published alongside this document and has been checked against the audio.
+This document compares
+statements with records, and with what the councillor said at the borough
+council on October~6, three days earlier; it does not assess intent.
+
+\begin{enumerate}[nosep]
+  \item \begin{minipage}[t]{\linewidth}\textbf{``Less than one an hour'' in winter
+    \cliptime{03:11}: partly consistent.} Over December~1 -- March~31 the
+    borough's counter at Kensington recorded 4{,}891 bicycle passages in 121
+    days: 40.4 a day, or 1.68 an hour counted around the clock, both
+    directions. Taken one direction at a time over all 24 hours the rate is
+    below one an hour (eastbound 0.96, westbound 0.73, the westbound channel
+    undercounting from about March~1). On weekdays between 07:00 and 19:00 it
+    was 3.2 an hour. On the City's open data, the one Terrebonne channel
+    (westbound, at Girouard) averaged 27.4 a day, 1.14 an hour, over the same
+    months.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{The ``8'' was ``the sum of all the hours during the rush
+    hour… six hours'' \cliptime{07:03}: consistent.} The figure is on the
+    borough's slide \pg{62}: bicycles on the Terrebonne axis at one
+    intersection, Grand, on one day, January~29, 2025, over the six peak
+    hours defined at \pg{34} (06:30--09:30 and 15:30--18:30), both
+    directions together. The same slide gives 10 at Cavendish that day. In
+    his October~6 address the figure was described as ``8 passage, right? So
+    that's 4 cyclists.''\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{The open data website is ``connected directly to
+    Eco-Counter, which has those loops installed on the ground''
+    \cliptime{07:19}: not consistent with the open data.} The City's
+    \emph{Compteurs cyclistes permanents} dataset lists 128 counting sites,
+    77 of them Eco-Counter; none is on Terrebonne. The only Terrebonne site
+    is a City detector at Girouard (source ``Ville''), whose one Terrebonne
+    channel counts westbound traffic, with daily data from October~23, 2025.
+    The borough's Eco-Counter loop at Kensington is not on the portal; its
+    data have been made public only through access requests 2025-697,
+    2026-300 and 2026-581.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``From 40 a day to 30 a day during December to March''
+    \cliptime{07:34}: partly consistent.} The figures match the borough's
+    Kensington counter, both directions: December 40.0, January 32.7,
+    February 34.9 a day; March was 53.5. On the open data channel named as
+    the source (westbound only, at Girouard): December 32.5, January 22.6,
+    February 29.1, March 24.7.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``We have the data for many years'' \cliptime{03:33}:
+    partly consistent.} Continuous counts on Terrebonne cover one winter,
+    2025--26 (Kensington loop from July~26, 2025; open-data detector from
+    October~23, 2025). Earlier winters are covered by single-day intersection
+    counts (Miovision, November 2024 and January 29, 2025) and by Telraam
+    counts ending in December 2024 \pg{65}.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``If you go back to 2023… they basically removed about 250
+    parking spots'' \cliptime{01:08}: partly consistent.} The study and the
+    announcement date from 2023; the lane was approved in February 2024 and
+    built in May--June 2024. The 2023 EXP study counts 475 spaces on
+    Terrebonne, 375 once the 5-metre clearances are applied, and 171 in the
+    retained design \exppg{100}: a reduction of 304, or 204 against the
+    375. No as-built count is in the record. In 2020 a press report gave 250
+    spaces removed by the temporary lanes of that year (\emph{Métro},
+    September~1, 2020).\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``At least 50 to 60 parking spots'' \cliptime{01:28}: not
+    found in the record.} The figure does not appear in the 508 pages of
+    request 2026-581, which contain no inventory of on-street spaces, no
+    occupancy count and no estimate of the spaces the change would create.
+    The only occupancy survey on record is EXP's, taken on two days in
+    autumn 2022, before the lane, in the evening: 35--70\% on weekdays
+    \exppg{54}.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``We vote here at the borough, then a vote at the Conseil
+    Municipal, then it comes back to the borough'' \cliptime{08:19}:
+    consistent with the 2024 precedent.} Terrebonne is on the City's
+    arterial network. In 2024 the borough offered the work under art.~85 of
+    the City's Charter (CA24 170018, February~5), City council accepted it
+    (CM24 0179, February~19), and the borough then adopted the one-way
+    ordinance (CA24 170131, June~3): three votes over four months. No
+    borough or City council agenda through October~19, 2026 carries a
+    decision item on Terrebonne. Implementation ``before Christmas'' cannot
+    be verified.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``So for now, we're looking at it in a way that will make
+    it permanent'' \cliptime{12:22}: differs from earlier descriptions.} On
+    October~6 the councillor said: ``It's going to be a test.'' The
+    borough's service request of August~20 describes the winter measure as
+    ``mesure transitoire pour l'hiver 2026-2027'' \pg{4}; the permanent
+    mandate of August~13 concerns a different layout, a two-way lane on one
+    side \pg{1}.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``The final study… still need to be submitted to us''
+    \cliptime{00:38}: cannot be verified.} EXP's final note was due on
+    October~2, 2026 \pg{12}; a draft was transmitted on September~17
+    \pg{167}. No final note is in the release, and the engineering study and
+    the City's analysis are withheld. A request for the final note is
+    pending (answer due November~7).\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{``We've been able to reduce vehicle traffic by two-thirds''
+    \cliptime{09:56}: consistent with the range in the record.} Before the
+    project: 6{,}300 vehicles a day (2022) between Cavendish and Grand
+    \exppg{41}. After: 1{,}375 a day on the Kensington counter's first year,
+    a reduction of 78\%; peak-hour entries at Grand fell by 46--63\%
+    \pg{34}. The one-way change at Cavendish was part of the 2024
+    project.\end{minipage}\vspace{0.35em}
+  \item \begin{minipage}[t]{\linewidth}\textbf{Compared with October~6.} In his address to the borough
+    council three days earlier, the councillor described the data as ``the
+    official data provided by the borough'' (on \emph{Daybreak}: ``the open
+    data website''); the winter change as a 99\,\% drop, ``from 700 during the
+    good months to 8'' (on \emph{Daybreak}: 30 to 40 a day, and the 8 as a
+    six-hour sum); ``data for 3 years in a row'' (``many years''); ``more than 30
+    meetings'' (``more than 40''); and the measure as ``a test'' (``for now…
+    permanent''). No number of parking spaces was given in the address. The
+    statements are set side by side in section~3.\end{minipage}\vspace{0.35em}
+\end{enumerate}
+
+\section{What was checked, and how}
+
+\textbf{The interview.} CBC Radio One, \emph{Daybreak} (Montréal), clip
+``Terrebonne bike path in CDN to shut down in winter'', dated October~9,
+2026, 13~min~32~s. The transcript published with this document was made by
+machine transcription and then checked word by word against the audio.
+
+\textbf{Sources.} Access request 2026-581 (borough response of October~9,
+2026; bundle~01, 167~pp., cited by page); the borough's Eco-Counter data at
+Terrebonne/Kensington (daily totals, 2026-581 pp.~74--81; hourly by
+direction, request 2026-300); the City's open data (\emph{Compteurs
+cyclistes permanents}, site list and 2025--2026 files, and
+\emph{Comptages des véhicules, cyclistes et piétons}, downloaded October~16,
+2026); the 2023 EXP mobility study and the 2024 council records in this
+repository; the borough's budget document of October~6, 2026; the
+councillor's October~6 address to the borough council; press reports.
+
+\textbf{Verdicts.} \emph{Consistent}: the record supports the statement.
+\emph{Partly consistent}: the record supports part of it, or supports it
+under conditions stated. \emph{Not consistent} / \emph{not found}: the
+record says otherwise, or does not contain the figure. \emph{Cannot be
+verified}: the record does not bear on it. \emph{Differs from earlier
+descriptions}: the statement concerns plans, and is compared with what was
+said or written before.
+
+\section{Findings in detail}
+
+\subsection{Cycling counts}
+
+\textbf{Winter rate \cliptime{03:11}.} Asked by the host whether ``less
+than one cyclist per hour is using the bike path on either side'', the
+councillor answered ``Indeed.'' Kensington counter, December~1, 2025 --
+March~31, 2026: 4{,}891 passages (2{,}783 eastbound, 2{,}108 westbound) in
+121 days. Per hour over 24 hours: 1.68 both directions, 0.96 eastbound,
+0.73 westbound. Weekdays 07:00--19:00 (87 days, 1{,}044 hours): 3{,}318
+passages, 3.18 an hour. By month, both directions: December 40.0, January
+32.7, February 34.9, March 53.5 a day. The westbound channel undercounts
+from about March~1, 2026 (see the 2026-300 note in the
+\href{\arurl}{access-requests repository}); the westbound figures are lower
+bounds. City detector at Girouard, westbound only: 3{,}150 passages in 115
+days with data, 27.4 a day, 1.14 an hour.
+
+\textbf{The ``8'' \cliptime{07:03}.} Slide ``Nombre de vélo aux heures de
+pointes axes est/ouest'' \pg{62}: Terrebonne/Grand, January 2025, 8
+($-95$\,\% against October 2022); Terrebonne/Cavendish, 10. Peak hours as
+defined in the borough's presentation \pg{34}: 06:30--09:30 and
+15:30--18:30. The underlying Miovision table for Grand, January~29, 2025, is
+at \pg{85}. The same day's twelve-hour count at Grand on the Terrebonne axis
+was 12. October~6 address: ``We go from 7700 [700] during the good months
+to 8. That's 8 passage, right? So that's 4 cyclists.''
+
+\textbf{The open data source \cliptime{07:19}, \cliptime{03:36}.} Site list
+of \emph{Compteurs cyclistes permanents}, October~16, 2026: 128 sites (77
+Eco-Counter, 51 City). On Terrebonne: \texttt{det-00118-01}, \texttt{-02},
+\texttt{-03}, ``Girouard/Terrebonne'', source ``Ville''; only
+\texttt{det-00118-01} records a Terrebonne direction (``Ouest''). Daily data
+start October~23, 2025. The intersection-count dataset
+(\emph{Comptages des véhicules, cyclistes et piétons}) has Terrebonne counts
+up to September 2023 and none after. The borough's Kensington loop is the
+Eco-Counter referred to in the borough engineering division's email of
+June~10, 2026 (``Nous disposons également d'un compteur permanent
+Éco-Compteur sur le corridor'' \pg{8}); its data are not on the portal.
+
+\textbf{Years of data \cliptime{03:33}.} On October~6 the councillor
+referred to ``having data for 3 years in a row''. Records available: EXP
+counts of 2022; Miovision intersection counts from July 2024 to September
+2025 \pg{82}--\pg{164}; Telraam counts to December 2024 \pg{65}; Kensington
+loop from July~26, 2025; open-data detector from October~23, 2025.
+
+\textbf{Children in winter \cliptime{09:22}.} ``I've very, very, very
+rarely seen any kids use it during winter.'' No counter in the record
+records age. Cannot be verified.
+
+\subsection{Parking}
+
+\textbf{About 250 spaces removed \cliptime{01:08}.} EXP 2023: 230 spaces
+westbound and 248 eastbound on Terrebonne \exppg{46}; 475 in the current
+situation, 375 after the 5-metre clearance rule, 171 in scenario~3, the one
+retained \exppg{100}. Project approval: CA24 170018 (February~5, 2024) and
+CM24 0179 (February~19, 2024); deployment May--June 2024 (borough file
+1246880002). \emph{Métro}, September~1, 2020, on the temporary lanes of that
+year: they ``a éliminé 250 places de stationnement des deux côtés de la
+rue''.
+
+\textbf{50 to 60 spaces \cliptime{01:28}.} Not in the 508 pages. The
+service request asks EXP to identify the spaces the layout ``pourrait
+permettre de recréer'' \pg{4}; EXP's result is withheld. Item C4 of the
+request, which asked for parking inventories and occupancy surveys, was
+answered with traffic counting tables. For comparison only: on EXP's
+figures, the difference between 375 and 171 spaces is 204, about 100 to a
+side; the record does not say which blocks the conversion would cover.
+
+\textbf{Occupancy \cliptime{05:41}.} The councillor used ``only 60\% of the
+parking used'' as an example of a figure he would not rely on. EXP surveyed
+Thursday September~29 and Saturday October~1, 2022, in three one-hour
+periods ending by 19:30 \exppg{13}: ``le taux d'occupation varie entre 35\%
+et 70\% la semaine et entre 10\% et 60\% la fin de semaine'' \exppg{54}.
+No later, winter or overnight measurement is in the record.
+
+\subsection{Process and timing}
+
+\textbf{Three votes \cliptime{08:19}.} Charter of Ville de Montréal,
+art.~85: a borough offer to provide a service within the City council's
+jurisdiction takes effect when the City council accepts it. Terrebonne is
+on the arterial network (2.54~km marked arterial in the City's RAAV layer,
+covering the lane). 2024 sequence: CA24 170018 (offer), CM24 0179
+(acceptance), CA24 170131 (June~3, 2024, ordinance OCA24 17042, one-way).
+Agendas checked: borough, June~1, July~6, September~8 and October~6, 2026
+(regular) and October~6 (budget); City council, August~24, September~21
+and October~19, 2026. None has a decision item on Terrebonne. The
+councillor's statement card says the proposal requires consideration by
+``the borough council and City Council''.
+
+\textbf{Permanent \cliptime{12:22}.} Full answer to the question ``what are
+the chances the borough makes this change permanent?'': ``We certainly don't
+want to be changing, you know, the layout of all the bike paths every year…
+But, yeah, so for now, we're looking at it in a way that will make it
+permanent. But if there's really a big change in the data… we'll certainly
+look at it.'' October~6: ``So this is what we're going to propose. It's
+going to be a test.'' August~13 mandate from the borough mayor's office: a
+``piste cyclable bidirectionnelle d'un côté'' with ``le retour du
+stationnement d'un côté de la rue'' \pg{1}. August~20 service request:
+``Volet 1 -- existant… (mesure transitoire pour l'hiver 2026-2027)'' and
+``Volet 2 -- faisabilité d'une piste cyclable bidirectionnelle
+unilatérale'' \pg{4}.
+
+\textbf{The final study \cliptime{00:38}.} EXP's offer sets the final note
+for October~2, 2026 \pg{12}; the kick-off form lists ``NT finale
+2-Oct-26'' \pg{26}; the draft was transmitted September~17 \pg{167}. The
+response of October~9 withholds the note under ss.~9, 37 and 39 of the
+Access Act. In the October~6 question period (machine transcript, not yet
+checked) the councillor referred to having received ``le dernier rapport''
+the week before.
+
+\textbf{Reopening date \cliptime{13:08}.} ``I look at the data and the
+weather.'' No reopening date appears in the release; the councillor
+described the season as ``December to March'' \cliptime{07:34}.
+
+\textbf{Which side \cliptime{00:38}.} The orientation given is to keep the
+lane that runs against motor traffic. The service request asks for the
+maintenance of one lane and the removal of the other without naming a side
+\pg{4}; the kick-off form asks EXP to consider the direction of motor
+traffic against the direction of cyclists \pg{26}. No safety analysis of
+this option is in the release; the only safety conclusion that survives is
+the borough's summary of the City's June~17 analysis of earlier concepts,
+``plusieurs compromis importants sur le plan de la sécurité'' \pg{6}.
+
+\subsection{Traffic and street type}
+
+\textbf{Two-thirds less traffic \cliptime{09:56}.} EXP 2023, 2022 daily
+traffic between Cavendish and Grand: 1{,}800 westbound and 4{,}500
+eastbound, 6{,}300 in all \exppg{41}. Kensington counter, first year
+(July~26, 2025 -- July~25, 2026): 501{,}817 motor vehicles, 1{,}375 a day
+($-78$\,\%). Peak-hour entries at Grand: 2{,}101 in October 2022, then
+770--1{,}138 ($-46$ to $-63$\,\%) \pg{34}.
+
+\textbf{``Les rues vélo'' \cliptime{10:14}.} A \emph{vélorue} is designated
+by municipal by-law under the \emph{Code de la sécurité routière}
+(arts.~496.1--496.8; 30~km/h). Québec's guidance: at most 1{,}000 vehicles
+a day, ideally 500, not on the trucking network. Montréal's design guide:
+under 1{,}000 vehicles a day, local trucking only, 30~km/h. Terrebonne:
+1{,}375 vehicles a day in the counter's first year; arterial network;
+trucks prohibited except local delivery; 30~km/h. Terrebonne is not on the
+City's list of vélorues.
+
+\subsection{Other statements}
+
+\textbf{Executive committee \cliptime{00:25}.} The host's description
+(``responsible for optimization in municipal performance and innovation'')
+matches the City's announcement of November~18, 2025. Consistent.
+
+\textbf{Since 2020 \cliptime{00:08}.} The host's ``first put in place in
+2020'': temporary lanes were installed in 2020 and removed in September
+2020 after a council motion; the present lanes date from 2024. Partly
+consistent.
+
+\textbf{Meetings \cliptime{02:37}.} ``More than 40 meetings and work
+sessions''; on October~6, ``more than 30 meetings on this topic with the
+services''. The release names a meeting with the borough mayor on June~18
+\pg{8}, the kick-off on September~3 \pg{26} and a working meeting on
+September~11 \pg{167}; for agendas or minutes of follow-up meetings the
+response states that no documents were found. Cannot be verified.
+
+\textbf{School zones \cliptime{10:52}.} ``\$1.5 million over the next two
+years.'' The borough's budget document of October~6, 2026 lists
+``760~000~\$ spécifiquement pour sécuriser et apaiser les abords des
+écoles'' and an addition of 700{,}000~\$ over two years to the budget for
+traffic-calming measures. The figure of \$1.5 million does not appear.
+Cannot be verified as stated.
+
+\textbf{Campaign \cliptime{01:53}.} ``4,000 doors'': no source. That the
+lane was a campaign issue is consistent with press coverage (\emph{Montreal
+Gazette}, November~26, 2025 and October~7, 2026).
+
+\section{Compared with the October~6 council meeting}
+
+On October~6, 2026 the councillor addressed the borough council on
+Terrebonne and answered questions from the public. The address is quoted
+from the webcast captions (``Taliban'' corrected to Terrebonne; the
+captions' ``7700'' is 700, as the slides show). His statement card of the
+same day is quoted as published. \ifqa Statements from the question period
+are quoted from a transcript of the webcast checked against the video, with
+clip and time.\else Statements from the question period are not used here:
+the transcript of the webcast has not yet been checked against the
+video.\fi
+
+\begin{small}
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}p{3.6cm}}
+\toprule
+Topic & October~6 & \emph{Daybreak}, October~9 & The record \\
+\midrule
+\endhead
+The ``8'' & ``We go from 7700 [700] during the good months to 8. That's 8 passage, right? So that's 4 cyclists, right? Including me, right?'' & ``it basically was eight during all of the hours. So, it was the sum of all the hours during the rush hour. So, that's six hours'' \cliptime{07:03} & Sum over six peak hours, one intersection (Grand), one day (January~29, 2025), both directions \pg{62}, \pg{34} \\
+\addlinespace
+Winter level & ``in winter, the volume of traffic diminishes by 99\%'' & ``less than one an hour'' \cliptime{03:11}; ``from 40 a day to 30 a day during December to March'' \cliptime{07:34} & Kensington counter: 40.4 a day December--March, 747 a day in June 2026 ($-95$\,\%) \\
+\addlinespace
+Data source & ``if we looked at the official data provided by the borough and we have counters everywhere, we have more counters than before. So we know exactly how many people use it, when and how'' & ``the source of truth is to look at the open data website that we have, which is connected directly to Eco-Counter'' \cliptime{07:19} & The 8 and the 700 are Miovision counts from the borough's slides; the Kensington Eco-Counter is the borough's and is not on the open data portal (section~2.1) \\
+\addlinespace
+Years of data & ``now having data for 3 years in a row'' & ``we have the data for many years to confirm that'' \cliptime{03:33} & One continuous winter (2025--26); single-day counts before \\
+\addlinespace
+Test or permanent & ``So this is what we're going to propose. It's going to be a test. We're going to see the data this year, and hopefully try to make it even better after.'' & ``So for now, we're looking at it in a way that will make it permanent'' \cliptime{12:22} & ``mesure transitoire pour l'hiver 2026-2027'' (August~20) \pg{4} \\
+\addlinespace
+Meetings & ``more than 30 meetings on this topic with the services, with professionals'' & ``more than 40 meetings and work sessions'' \cliptime{02:37} & Three meetings named in the release (section~2.5) \\
+\addlinespace
+Doors & ``door knocking on 1000s of doors'' & ``I've knocked on 4,000 doors'' \cliptime{01:53} & No record \\
+\addlinespace
+Parking spaces & No number in the address or on the statement card & ``at least 50 to 60 parking spots'' \cliptime{01:28} & Not in the release (section~2.2) \\
+\addlinespace
+Steps and timing & Card: ``several steps remain … borough council and City Council … residents will see changes before Christmas 2026'' & Borough vote, Conseil municipal vote, back to the borough; ``it's very tight''; ``implement those changes before Christmas'' \cliptime{08:19} & Consistent with each other and with the 2024 precedent (three votes) \\
+\ifqa
+\addlinespace
+The ``8'' (question period) & Clip~04 (French): ``des journées où il y a huit personnes qui l'utilisent''; ``c'est huit comptages pour quatre cyclistes''. Clip~05: ``eight trips in January … Per hour. Heure de pointe.'' & As above: a six-hour sum \cliptime{07:03} & Six-hour sum \pg{62} \\
+\addlinespace
+The study & Clip~03 (French): ``on a reçu le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée''. Clip~05: ``we have the study … an internal working document'' & ``the final study by the services and the experts still need to be submitted to us'' \cliptime{00:38} & Final note due October~2 \pg{12}; withheld \\
+\addlinespace
+Consultation & Clip~05: ``we will not have another moment to consult now before the implementation'' & ``we're all about looking at the data, looking at the impact, consulting the population'' \cliptime{11:58} & -- \\
+\addlinespace
+Test & Clip~04 (French): ``on va le tester cette année'' & ``for now… permanent'' \cliptime{12:22} & As above \\
+\fi
+\bottomrule
+\end{longtable}
+\end{small}
+
+\section{What this check does not establish}
+
+It compares statements with records. It does not establish why any
+statement was made, and it draws no conclusion about intent. Counter data have limits: an outage on May~29--31, 2026; the Kensington
+westbound channel undercounting from about March~1, 2026; the open-data
+detector at Girouard counting one direction, with gaps. The final EXP note
+and the City's analysis, which may contain figures not in the release, are
+withheld.
+
+\section{Sources}
+
+\begin{small}
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{10.6cm}}
+\toprule
+Source & Where \\
+\midrule
+\endhead
+Interview & CBC \emph{Daybreak}, October~9, 2026: \url{https://www.cbc.ca/listen/live-radio/1-15-daybreak-montreal/clip/16243474-terrebonne-bike-path-cdn-shut-winter}; transcript: \doc{2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md}{this repository} \\
+Request 2026-581 & Borough response of October~9, 2026, bundle 01: \href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf}{PDF}; summaries and counter tables in the \href{\arurl/tree/main/2026-581}{access-requests repository} \\
+Requests 2025-697, 2026-300 & Kensington counter, hourly by direction: \href{\arurl/tree/main/2026-300}{2026-300} \\
+City open data & \url{https://donnees.montreal.ca/dataset/cyclistes}; \url{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons}; \url{https://donnees.montreal.ca/dataset/reseau-arteriel-administratif} (downloaded October~16, 2026) \\
+EXP 2023 & \doc{2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{Étude de mobilité -- rue de Terrebonne} (pp.~13, 41, 46, 54, 100) \\
+Council records & \doc{2024-project-approval/}{2024 project approval} (CA24 170018, CM24 0179); CA24 170131: \url{https://ville.montreal.qc.ca/documents/Adi_Public/CA_Cdn/CA_Cdn_PV_ORDI_2024-06-03_19h00_FR.pdf} (p.~11) \\
+Budget & \url{https://ville.montreal.qc.ca/documents/Adi_Public/CA_Cdn/CA_Cdn_ODJ_LPP_EXTRA_2026-10-06_16h00_FR.pdf} (pp.~14, 31) \\
+Executive committee & \url{https://montreal.ca/communiques-de-presse/la-mairesse-martinez-ferrada-devoile-son-comite-executif} \\
+Vélorues & \url{https://www.quebec.ca/transports/municipalites/infrastructures-routieres/velorue}; \url{https://montreal.ca/articles/velorues-des-voies-cyclables-accessibles-aux-automobilistes-54165} \\
+October~6, 2026 & Borough council webcast (address; question period); councillor's statement card \\
+Press & \emph{Métro}, September~1, 2020; \emph{Montreal Gazette}, November~26, 2025 and October~7, 2026 \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+\end{document}
