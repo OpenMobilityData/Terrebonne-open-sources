@@ -18,7 +18,7 @@
 \usepackage{textcomp}
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
-\newcommand{\docversion}{2026-10-16-18-46-12} % set by build.py (America/Toronto)
+\newcommand{\docversion}{2026-10-16-21-31-15} % set by build.py (America/Toronto)
 \hypersetup{pdfsubject={version \docversion}}
 
 \setlength{\parindent}{0pt}
@@ -43,13 +43,14 @@
 \newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
 \newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
 \newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+\newcommand{\wctime}[1]{\textsf{\small[webdiffusion #1]}}
 \newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
 \newcommand{\pg}[1]{\pgl{#1}{#1}}
 \newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
 \newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
 % Période de questions du 6 octobre : transcription automatique de la
 % webdiffusion, à vérifier sur la vidéo avant usage. \qatrue pour l'inclure.
-\newif\ifqa\qafalse
+\newif\ifqa\qatrue
 
 \begin{document}
 
@@ -377,7 +378,7 @@ en Terrebonne\,; le «\,7700\,» des sous-titres est 700, comme le montrent
 les diapositives). Sa carte de déclaration du même jour est citée telle que
 publiée. \ifqa Les affirmations de la période de questions sont citées
 d'après une transcription de la webdiffusion vérifiée sur la vidéo, avec
-l'extrait et l'heure.\else Les affirmations de la période de questions ne
+le minutage de l'enregistrement de la webdiffusion.\else Les affirmations de la période de questions ne
 sont pas utilisées ici~: la transcription de la webdiffusion n'a pas encore
 été vérifiée sur la vidéo.\fi
 
@@ -406,13 +407,13 @@ Places de stationnement & Aucun nombre dans l'allocution ni sur la carte de déc
 Étapes et calendrier & Carte~: «\,several steps remain … borough council and City Council … residents will see changes before Christmas 2026\,» & Vote de l'arrondissement, vote du conseil municipal, retour à l'arrondissement\,; «\,it's very tight\,»\,; «\,implement those changes before Christmas\,» \cliptime{08:19} & Concordants entre eux et avec le précédent de 2024 (trois votes) \\
 \ifqa
 \addlinespace
-Le «\,8\,» (période de questions) & Extrait~04~: «\,des journées où il y a huit personnes qui l'utilisent\,»\,; «\,c'est huit comptages pour quatre cyclistes\,». Extrait~05~: «\,eight trips in January … Per hour. Heure de pointe.\,» & Comme ci-dessus~: une somme sur six heures \cliptime{07:03} & Somme sur six heures \pg{62} \\
+Le «\,8\,» (période de questions) & En français~: «\,des journées où il y a huit personnes qui l'utilisent\,» \wctime{1:45:43}\,; «\,c'est huit comptages pour quatre cyclistes\,» \wctime{1:46:42}. En anglais~: «\,eight trips in January … Per hour. Heure de pointe.\,» \wctime{2:22:06} & Comme ci-dessus~: une somme sur six heures \cliptime{07:03} & Somme sur six heures \pg{62} \\
 \addlinespace
-L'étude & Extrait~03~: «\,on a reçu le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée\,». Extrait~05~: «\,we have the study … an internal working document\,» & «\,the final study by the services and the experts still need to be submitted to us\,» \cliptime{00:38} & Note finale attendue le 2~octobre \pg{12}\,; refusée \\
+L'étude & En français~: «\,on a reçu le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée\,» \wctime{1:22:46}. En anglais~: «\,we have the study … an internal working document\,» \wctime{2:25:39} & «\,the final study by the services and the experts still need to be submitted to us\,» \cliptime{00:38} & Note finale attendue le 2~octobre \pg{12}\,; refusée \\
 \addlinespace
-Consultation & Extrait~05~: «\,we will not have another moment to consult now before the implementation\,» & «\,we're all about looking at the data, looking at the impact, consulting the population\,» \cliptime{11:58} & -- \\
+Consultation & «\,we will not have another moment to consult now before the implementation\,» \wctime{2:24:49} & «\,we're all about looking at the data, looking at the impact, consulting the population\,» \cliptime{11:58} & -- \\
 \addlinespace
-Essai & Extrait~04~: «\,on va le tester cette année\,» & «\,for now… permanent\,» \cliptime{12:22} & Comme ci-dessus \\
+Essai & En français~: «\,on va le tester cette année\,» \wctime{1:47:06} & «\,for now… permanent\,» \cliptime{12:22} & Comme ci-dessus \\
 \fi
 \bottomrule
 \end{longtable}
@@ -446,7 +447,7 @@ Procès-verbaux & \doc{2024-project-approval/}{Approbation du projet de 2024} (C
 Budget & \url{https://ville.montreal.qc.ca/documents/Adi_Public/CA_Cdn/CA_Cdn_ODJ_LPP_EXTRA_2026-10-06_16h00_FR.pdf} (p.~14, 31) \\
 Comité exécutif & \url{https://montreal.ca/communiques-de-presse/la-mairesse-martinez-ferrada-devoile-son-comite-executif} \\
 Vélorues & \url{https://www.quebec.ca/transports/municipalites/infrastructures-routieres/velorue}\,; \url{https://montreal.ca/articles/velorues-des-voies-cyclables-accessibles-aux-automobilistes-54165} \\
-6~octobre 2026 & Webdiffusion du conseil d'arrondissement (allocution\,; période de questions)\,; carte de déclaration du conseiller \\
+6~octobre 2026 & Webdiffusion du conseil d'arrondissement (allocution\,; période de questions)~: \url{https://www.youtube.com/live/0k_KZf9uxTk}\,; carte de déclaration du conseiller \\
 Presse & \emph{Métro}, 1\textsuperscript{er}~septembre 2020\,; \emph{Montreal Gazette}, 26~novembre 2025 et 7~octobre 2026 \\
 \bottomrule
 \end{longtable}

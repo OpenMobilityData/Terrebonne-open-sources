@@ -18,7 +18,7 @@
 \usepackage{textcomp}
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
-\newcommand{\docversion}{2026-10-16-18-46-12} % set by build.py (America/Toronto)
+\newcommand{\docversion}{2026-10-16-21-31-15} % set by build.py (America/Toronto)
 \hypersetup{pdfsubject={version \docversion}}
 
 \setlength{\parindent}{0pt}
@@ -43,6 +43,7 @@
 \newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
 \newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
 \newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+\newcommand{\wctime}[1]{\textsf{\small[webcast #1]}}
 % \pg{pages}: page of bundle 01 of access request 2026-581, linked
 \newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
 \newcommand{\pg}[1]{\pgl{#1}{#1}}
@@ -51,7 +52,7 @@
 \newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
 % Statements from the October 6 question period: machine transcript of the
 % webcast, to be checked against the video before use. Set \qatrue to include.
-\newif\ifqa\qafalse
+\newif\ifqa\qatrue
 
 \begin{document}
 
@@ -345,7 +346,7 @@ from the webcast captions (``Taliban'' corrected to Terrebonne; the
 captions' ``7700'' is 700, as the slides show). His statement card of the
 same day is quoted as published. \ifqa Statements from the question period
 are quoted from a transcript of the webcast checked against the video, with
-clip and time.\else Statements from the question period are not used here:
+the time in the webcast recording.\else Statements from the question period are not used here:
 the transcript of the webcast has not yet been checked against the
 video.\fi
 
@@ -374,13 +375,13 @@ Parking spaces & No number in the address or on the statement card & ``at least 
 Steps and timing & Card: ``several steps remain … borough council and City Council … residents will see changes before Christmas 2026'' & Borough vote, Conseil municipal vote, back to the borough; ``it's very tight''; ``implement those changes before Christmas'' \cliptime{08:19} & Consistent with each other and with the 2024 precedent (three votes) \\
 \ifqa
 \addlinespace
-The ``8'' (question period) & Clip~04 (French): ``des journées où il y a huit personnes qui l'utilisent''; ``c'est huit comptages pour quatre cyclistes''. Clip~05: ``eight trips in January … Per hour. Heure de pointe.'' & As above: a six-hour sum \cliptime{07:03} & Six-hour sum \pg{62} \\
+The ``8'' (question period) & In French: ``des journées où il y a huit personnes qui l'utilisent'' \wctime{1:45:43}; ``c'est huit comptages pour quatre cyclistes'' \wctime{1:46:42}. In English: ``eight trips in January … Per hour. Heure de pointe.'' \wctime{2:22:06} & As above: a six-hour sum \cliptime{07:03} & Six-hour sum \pg{62} \\
 \addlinespace
-The study & Clip~03 (French): ``on a reçu le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée''. Clip~05: ``we have the study … an internal working document'' & ``the final study by the services and the experts still need to be submitted to us'' \cliptime{00:38} & Final note due October~2 \pg{12}; withheld \\
+The study & In French: ``on a reçu le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée'' \wctime{1:22:46}. In English: ``we have the study … an internal working document'' \wctime{2:25:39} & ``the final study by the services and the experts still need to be submitted to us'' \cliptime{00:38} & Final note due October~2 \pg{12}; withheld \\
 \addlinespace
-Consultation & Clip~05: ``we will not have another moment to consult now before the implementation'' & ``we're all about looking at the data, looking at the impact, consulting the population'' \cliptime{11:58} & -- \\
+Consultation & ``we will not have another moment to consult now before the implementation'' \wctime{2:24:49} & ``we're all about looking at the data, looking at the impact, consulting the population'' \cliptime{11:58} & -- \\
 \addlinespace
-Test & Clip~04 (French): ``on va le tester cette année'' & ``for now… permanent'' \cliptime{12:22} & As above \\
+Test & In French: ``on va le tester cette année'' \wctime{1:47:06} & ``for now… permanent'' \cliptime{12:22} & As above \\
 \fi
 \bottomrule
 \end{longtable}
@@ -412,7 +413,7 @@ Council records & \doc{2024-project-approval/}{2024 project approval} (CA24 1700
 Budget & \url{https://ville.montreal.qc.ca/documents/Adi_Public/CA_Cdn/CA_Cdn_ODJ_LPP_EXTRA_2026-10-06_16h00_FR.pdf} (pp.~14, 31) \\
 Executive committee & \url{https://montreal.ca/communiques-de-presse/la-mairesse-martinez-ferrada-devoile-son-comite-executif} \\
 Vélorues & \url{https://www.quebec.ca/transports/municipalites/infrastructures-routieres/velorue}; \url{https://montreal.ca/articles/velorues-des-voies-cyclables-accessibles-aux-automobilistes-54165} \\
-October~6, 2026 & Borough council webcast (address; question period); councillor's statement card \\
+October~6, 2026 & Borough council webcast (address; question period): \url{https://www.youtube.com/live/0k_KZf9uxTk}; councillor's statement card \\
 Press & \emph{Métro}, September~1, 2020; \emph{Montreal Gazette}, November~26, 2025 and October~7, 2026 \\
 \bottomrule
 \end{longtable}
