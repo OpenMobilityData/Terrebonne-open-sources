@@ -1,0 +1,11 @@
+{
+  "_note": "Numbers that come from analyses outside this build. Each carries its source; update by hand when the source changes.",
+  "camera_sept_count": {"value": 707, "source": "2026-581 bundle 01 p. 61: Miovision, Grand, Sept 19 2024, all four approaches, 6 peak hours"},
+  "camera_jan_count": {"value": 8, "source": "2026-581 bundle 01 p. 62: Miovision, Grand, Jan 29 2025, Terrebonne axis, 6 peak hours"},
+  "camera_cars_drop_pct": {"value": 23, "source": "2026-581 README point 5: cars on the Terrebonne approaches, Jan 29 2025 vs Nov 20 2024 (pp. 82–88, 131–137)"},
+  "camera_peds_drop_pct": {"value": 26, "source": "same"},
+  "like_for_like_pct": {"value": "97–98", "source": "2026-581 README point 5: the slides' own like-for-like comparison; January labelled −95 %"},
+  "djma_2022": {"value": 6300, "source": "EXP 2023 mobility study: 2022 DJMA on Terrebonne"},
+  "loading_season_rank": {"en": "the season's loading volume was the second-lowest of eleven", "fr": "le volume de chargement de la saison a été le deuxième plus bas en onze ans", "source": "City snow-transactions open data, 2015–16 to 2025–26 (2026-300 exposure note)"},
+  "lane_width_m": {"value": 3.5, "source": "EXP 2023 study, current layout"}
+}

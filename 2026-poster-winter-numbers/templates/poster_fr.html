@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terrebonne en hiver, les chiffres</title>
+<style>{{css}}
+@page{size:11in 28in;margin:0.4in}</style></head><body>
+<header><h1>La rue de Terrebonne en hiver : les chiffres sur une page</h1>
+<p class="lede">Tout ce qui suit vient de documents publics : le compteur de vélos de l'arrondissement à Kensington (communiqué en réponse à la demande d'accès 2026-581), deux capteurs citoyens Telraam, Environnement Canada et les enregistrements des conseils. Des comptages, pas des opinions. Généré le {{built}} ; données du compteur jusqu'au {{counter_last}}.</p></header>
+<div class="grid">
+
+<section><h2><span class="n">1</span>Combien l'utilisent, mois par mois</h2>
+<div class="row"><div class="stat"><div class="big">{{year_total}} <small>passages la première année</small></div><div class="lab">26 juillet 2025 – 25 juillet 2026 · {{year_per_day}} par jour · deux directions</div></div></div>
+<table><tr><th>Mois</th><th>Médiane / jour</th><th>Moyenne / jour</th><th>Véhicules motorisés / jour</th></tr>{{month_rows}}</table>
+<ul><li><b>Hiver, du 1er décembre au 31 mars :</b> {{winter_total}} passages, {{winter_per_day}} par jour, {{winter_days}} jours, <b>aucune journée sans vélo</b> (minimum {{winter_min}}, maximum {{winter_max}}) ; généralement entre 25 et 75 ({{winter_25_75}} jours sur {{winter_days}}).</li><li>Reste de l'année : {{rest_per_day}} par jour. Circulation motorisée : {{motor_per_day}} par jour sur l'année, contre {{djma_2022}} en 2022.</li></ul>
+<p class="src">Source : tableau quotidien, demande d'accès 2026-581, liasse 01, p. 74–81. Borne inférieure : trois jours de panne en mai 2026.</p></section>
+
+<section><h2><span class="n">2</span>Les vitesses sur une rue à 30 km/h</h2>
+<div class="row"><div class="stat"><div class="big">{{ke_winter_v85}}–{{ke_summer_v85}} <small>km/h</small></div><div class="lab">V85 à King Edward, hiver – été (la vitesse sous laquelle roulent 85 % des voitures)</div></div><div class="stat"><div class="big">{{dr_winter_v85}}–{{dr_summer_v85}} <small>km/h</small></div><div class="lab">V85 à Draper, hiver – été</div></div></div>
+<table><tr><th>Capteur</th><th>Saison</th><th>V85 (médiane des heures)</th><th>Voitures au-dessus de 30 km/h</th><th>Au-dessus de 40 km/h</th></tr>
+<tr><td>King Edward</td><td>Hiver</td><td>{{ke_winter_v85}}</td><td>{{ke_winter_o30}} %</td><td>{{ke_winter_o40}} %</td></tr><tr><td>King Edward</td><td>Été</td><td>{{ke_summer_v85}}</td><td>{{ke_summer_o30}} %</td><td>{{ke_summer_o40}} %</td></tr>
+<tr><td>Draper</td><td>Hiver</td><td>{{dr_winter_v85}}</td><td>{{dr_winter_o30}} %</td><td>{{dr_winter_o40}} %</td></tr><tr><td>Draper</td><td>Été</td><td>{{dr_summer_v85}}</td><td>{{dr_summer_o30}} %</td><td>{{dr_summer_o40}} %</td></tr></table>
+<ul><li>Avec les pistes en place et une seule voie de circulation de {{lane_width}} m, la vitesse du 85e percentile atteint ou dépasse déjà la limite de 30 km/h sur les deux tronçons, en toute saison.</li><li>Environ une voiture sur trois à King Edward et une sur deux à Draper dépasse la limite ; environ une sur six à King Edward roule à plus de 40 km/h l'été.</li></ul>
+<p class="src">Source : capteurs Telraam S2 à King Edward (à l'ouest de Cavendish) et à Draper (à l'est de Cavendish), données horaires, heures de clarté comptant au moins 20 voitures ; vitesses estimées par caméra ; hiver = déc.–mars, été = juin–août. Données jusqu'au {{telraam_last}}.</p></section>
+
+<section><h2><span class="n">3</span>Ce qui a été dit, et ce que montre le compteur</h2>
+<div class="vs">
+<div><div class="t">Dit au conseil, le 6 octobre 2026</div><div class="big">99 %</div>« We go from 700 during the good months to 8. That's 8 passage, right? So that's 4 cyclists, right? »<br><span class="src">Le 8 : six heures de pointe d'une seule journée, le 29 janvier 2025, par une caméra temporaire à Grand. Le 700 : un comptage de septembre ({{camera_sept}}) sur une autre diapositive, les quatre approches ; à méthode égale, les diapositives donnent {{like_for_like}} %.</span></div>
+<div class="ok"><div class="t">Le compteur de l'arrondissement</div><div class="big">{{winter_per_day}} <small>par jour</small></div>l'hiver, {{rest_per_day}} par jour le reste de l'année : une baisse de <b>{{drop_per_day_pct}} %</b> par jour, pas de 99 %. Aucune journée d'hiver sous {{winter_min}} vélos. Le conseiller lui-même a dit « 40 a day to 30 a day » à CBC (9 oct.).</div>
+<div><div class="t">Dit au conseil municipal, le 19 octobre 2026</div><div class="big">3,6 %</div>« of overall cycling traffic » pendant les quatre mois d'hiver.<br><span class="src">{{winter_total}} ÷ {{year_total}} = {{share_year_pct}} % : la part de l'hiver dans les passages de l'année. Avec un usage identique chaque jour de l'année, cette formule donnerait encore {{const_share_pct}} %.</span></div>
+<div class="ok"><div class="t">Compté par jour</div><div class="big">{{ratio_per_day_pct}} %</div>L'usage hivernal par jour est {{ratio_per_day_pct}} % de celui du reste de l'année ({{winter_per_day}} contre {{rest_per_day}}), {{ratio_annual_pct}} % de la moyenne annuelle. Le dénominateur du « 3,6 % » compte {{rest_days}} jours qui ne sont pas l'hiver.</div>
+</div>
+<img src="poster_assets/kensington_daily_violin_winter_fr.svg" alt="Diagramme en violon des comptages quotidiens d'hiver" style="margin-top:8px;max-height:250px;object-fit:contain">
+<p class="src">Citations vérifiées à l'écoute des enregistrements (webdiffusion du 6 oct. 0k_KZf9uxTk ; du 19 oct. rii3nUTuKRE, 41 min 44 s et 7 h 38 min 24 s ; CBC Daybreak, 9 oct., 7 min 03 s).</p></section>
+
+<section><h2><span class="n">4</span>La météo : l'hiver dernier, et la journée derrière le « 8 »</h2>
+<div class="row"><div class="stat"><div class="big">{{snow_total_cm}} <small>cm de neige</small></div><div class="lab">1er déc. 2025 – 31 mars 2026, aéroport Trudeau</div></div><div class="stat"><div class="big">{{snow_days_25}} <small>jours ≥ 2,5 cm</small></div><div class="lab">{{snow_days_10}} jours ≥ 10 cm · {{cold_days_m20}} jours à −20 °C ou moins · minimum {{coldest}} °C</div></div><div class="stat"><div class="big">{{loading_days}} <small>jours de chargement</small></div><div class="lab">dans le secteur de la piste (CDN-301) ; {{loading_rank}}</div></div></div>
+<ul><li><b>Le 29 janvier 2025, la journée du « 8 » :</b> {{j29_snow}} cm de neige, maximum {{j29_max}} °C, minimum {{j29_min}} °C, rafales à {{j29_gust}} km/h, sous un avertissement de temps hivernal d'Environnement Canada. La même caméra temporaire a relevé des voitures en baisse de {{cars_drop}} % et des piétons en baisse de {{peds_drop}} % sur les approches de Terrebonne par rapport à son comptage de novembre.</li>
+<li>Les capteurs citoyens ont tout de même compté ce jour-là <b>{{ke_jan29}} vélos à King Edward et {{dr_jan29}} à Draper</b> en heures de clarté, deux directions, contre {{ke_jan28}} et {{dr_jan28}} la veille.</li>
+<li>L'hiver dernier, {{outside_pct}} % des passages d'hiver vers l'est à Kensington ont eu lieu des jours sans contrainte de déneigement sur le stationnement.</li></ul>
+<p class="src">Sources : données quotidiennes d'Environnement Canada, station 7025251 ; données ouvertes de la Ville sur le chargement de la neige (analyse d'exposition 2026-300) ; tableaux Miovision, 2026-581 liasse 01, p. 82–164 ; données horaires Telraam.</p></section>
+
+<section class="wide"><h2><span class="n">5</span>La chronologie : décisions et demandes de l'administration actuelle</h2>
+<ul class="tl">{{timeline_items}}</ul>
+<p class="src">Sources : résolutions CA24 170018, CM24 0179 ; demande d'accès 2026-581 (liasse 01, p. 1–26) ; webdiffusions des conseils ; CBC Daybreak, 9 oct. ; Le Devoir, 19 oct. Documents et transcriptions : github.com/OpenMobilityData. Préparé à partir de documents publics pour les résidents de Côte-des-Neiges–Notre-Dame-de-Grâce ; chiffres reproductibles à partir des dépôts Terrebonne-access-requests (2026-581) et Terrebonne-telraam ; cette page est régénérée à partir des données par build_poster.py.</p></section>
+</div>
+</body></html>

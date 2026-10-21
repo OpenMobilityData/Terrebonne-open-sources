@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terrebonne winter numbers</title>
+<style>{{css}}</style></head><body>
+<header><h1>Rue de Terrebonne in winter: the numbers on one page</h1>
+<p class="lede">Everything below comes from public records: the borough's own bicycle counter at Kensington (released under access request 2026-581), two citizen Telraam sensors, Environment Canada, and the council recordings. Counts, not opinions. Built {{built}}; counter data to {{counter_last}}.</p></header>
+<div class="grid">
+
+<section><h2><span class="n">1</span>How many use it, month by month</h2>
+<div class="row"><div class="stat"><div class="big">{{year_total}} <small>passages in the first year</small></div><div class="lab">July 26, 2025 – July 25, 2026 · {{year_per_day}} a day · both directions</div></div></div>
+<table><tr><th>Month</th><th>Median / day</th><th>Mean / day</th><th>Motor vehicles / day</th></tr>{{month_rows}}</table>
+<ul><li><b>Winter, December 1 to March 31:</b> {{winter_total}} passages, {{winter_per_day}} a day, {{winter_days}} days, <b>no day without a bicycle</b> (lowest {{winter_min}}, highest {{winter_max}}); usually between 25 and 75 ({{winter_25_75}} of {{winter_days}} days).</li><li>Rest of the year: {{rest_per_day}} a day. Motor traffic: {{motor_per_day}} a day over the year, down from {{djma_2022}} in 2022.</li></ul>
+<p class="src">Source: daily table, access request 2026-581, bundle 01, pp. 74–81. Lower bound: three outage days in May 2026.</p></section>
+
+<section><h2><span class="n">2</span>Speeds on a 30 km/h street</h2>
+<div class="row"><div class="stat"><div class="big">{{ke_winter_v85}}–{{ke_summer_v85}} <small>km/h</small></div><div class="lab">V85 at King Edward, winter – summer (the speed 85 % of cars stay under)</div></div><div class="stat"><div class="big">{{dr_winter_v85}}–{{dr_summer_v85}} <small>km/h</small></div><div class="lab">V85 at Draper, winter – summer</div></div></div>
+<table><tr><th>Sensor</th><th>Season</th><th>V85 (median of hours)</th><th>Cars over 30 km/h</th><th>Cars over 40 km/h</th></tr>
+<tr><td>King Edward</td><td>Winter</td><td>{{ke_winter_v85}}</td><td>{{ke_winter_o30}} %</td><td>{{ke_winter_o40}} %</td></tr><tr><td>King Edward</td><td>Summer</td><td>{{ke_summer_v85}}</td><td>{{ke_summer_o30}} %</td><td>{{ke_summer_o40}} %</td></tr>
+<tr><td>Draper</td><td>Winter</td><td>{{dr_winter_v85}}</td><td>{{dr_winter_o30}} %</td><td>{{dr_winter_o40}} %</td></tr><tr><td>Draper</td><td>Summer</td><td>{{dr_summer_v85}}</td><td>{{dr_summer_o30}} %</td><td>{{dr_summer_o40}} %</td></tr></table>
+<ul><li>With the lanes in place and one {{lane_width}} m traffic lane, the 85th-percentile speed already sits at or above the 30 km/h limit on both segments, in every season.</li><li>Roughly one car in three at King Edward and one in two at Draper passes above the limit; about one in six at King Edward is over 40 km/h in summer.</li></ul>
+<p class="src">Source: Telraam S2 sensors at King Edward (west of Cavendish) and Draper (east of Cavendish), hourly data, daylight hours with at least 20 cars; camera-based speed estimates; winter = Dec–Mar, summer = Jun–Aug. Data to {{telraam_last}}.</p></section>
+
+<section><h2><span class="n">3</span>What was said, and what the counter shows</h2>
+<div class="vs">
+<div><div class="t">Said at council, Oct 6, 2026</div><div class="big">99 %</div>"We go from 700 during the good months to 8. That's 8 passage, right? So that's 4 cyclists, right?"<br><span class="src">The 8: six peak hours on one day, January 29, 2025, from a temporary camera at Grand. The 700: a September count ({{camera_sept}}) on a different slide, all four approaches; like for like, the slides give {{like_for_like}} %.</span></div>
+<div class="ok"><div class="t">The borough's own counter</div><div class="big">{{winter_per_day}} <small>a day</small></div>in winter, {{rest_per_day}} a day the rest of the year: a drop of <b>{{drop_per_day_pct}} %</b> per day, not 99 %. No winter day under {{winter_min}} bicycles. The councillor himself put it at "40 a day to 30 a day" on CBC (Oct 9).</div>
+<div><div class="t">Said at City council, Oct 19, 2026</div><div class="big">3.6 %</div>"of overall cycling traffic" in the four winter months.<br><span class="src">{{winter_total}} ÷ {{year_total}} = {{share_year_pct}} %: winter's share of the year's passages. With use identical every day of the year, this formula would still read {{const_share_pct}} %.</span></div>
+<div class="ok"><div class="t">Counted per day</div><div class="big">{{ratio_per_day_pct}} %</div>Winter use per day is {{ratio_per_day_pct}} % of the rest of the year ({{winter_per_day}} against {{rest_per_day}}), {{ratio_annual_pct}} % of the annual average. The denominator of "3.6 %" is {{rest_days}} days that are not winter.</div>
+</div>
+<img src="poster_assets/kensington_daily_violin_winter_en.svg" alt="Violin plot of daily winter counts" style="margin-top:8px;max-height:250px;object-fit:contain">
+<p class="src">Quotations checked by ear against the recordings (Oct 6 webcast 0k_KZf9uxTk; Oct 19 webcast rii3nUTuKRE, 41:44 and 7:38:24; CBC Daybreak Oct 9, 07:03).</p></section>
+
+<section><h2><span class="n">4</span>The weather: last winter, and the day behind the "8"</h2>
+<div class="row"><div class="stat"><div class="big">{{snow_total_cm}} <small>cm of snow</small></div><div class="lab">Dec 1, 2025 – Mar 31, 2026, Trudeau airport</div></div><div class="stat"><div class="big">{{snow_days_25}} <small>days ≥ 2.5 cm</small></div><div class="lab">{{snow_days_10}} days ≥ 10 cm · {{cold_days_m20}} days at −20 °C or below · coldest {{coldest}} °C</div></div><div class="stat"><div class="big">{{loading_days}} <small>snow-loading days</small></div><div class="lab">in the lane's sector (CDN-301); {{loading_rank}}</div></div></div>
+<ul><li><b>January 29, 2025, the day of the "8":</b> {{j29_snow}} cm of snow, high {{j29_max}} °C, low {{j29_min}} °C, gusts to {{j29_gust}} km/h, under an Environment Canada winter weather advisory. The same temporary camera recorded cars on the Terrebonne approaches down {{cars_drop}} % and pedestrians down {{peds_drop}} % from its November count.</li>
+<li>The citizen sensors on that day still counted <b>{{ke_jan29}} bicycles at King Edward and {{dr_jan29}} at Draper</b> in daylight, both directions, against {{ke_jan28}} and {{dr_jan28}} the day before.</li>
+<li>Last winter, {{outside_pct}} % of the eastbound winter passages at Kensington were made on days with no snow-removal constraint on parking.</li></ul>
+<p class="src">Sources: Environment Canada daily data, station 7025251; City snow-loading open data (2026-300 exposure analysis); Miovision tables, 2026-581 bundle 01, pp. 82–164; Telraam hourly data.</p></section>
+
+<section class="wide"><h2><span class="n">5</span>The timeline: decisions and requests of the current administration</h2>
+<ul class="tl">{{timeline_items}}</ul>
+<p class="src">Sources: council records CA24 170018, CM24 0179; access request 2026-581 (bundle 01, pp. 1–26); council webcasts; CBC Daybreak Oct 9; Le Devoir Oct 19. Documents and transcripts: github.com/OpenMobilityData. Prepared from public records for residents of Côte-des-Neiges–Notre-Dame-de-Grâce; figures reproducible from the Terrebonne-access-requests (2026-581) and Terrebonne-telraam repositories; this page is rebuilt from the data by build_poster.py.</p></section>
+</div>
+</body></html>
