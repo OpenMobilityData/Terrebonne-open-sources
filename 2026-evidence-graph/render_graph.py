@@ -25,7 +25,7 @@ def wrap(s, w=34):
         if len(line) + len(word) + 1 > w: out.append(line); line = word
         else: line = (line + ' ' + word).strip()
     out.append(line); return '\\n'.join(out)
-dot = ['digraph G {', 'rankdir=LR; splines=true; nodesep=0.25; ranksep=0.9; fontname="Helvetica"; node [fontname="Helvetica", fontsize=9, style="filled,rounded", penwidth=0.6, color="#9aa0a6"]; edge [fontname="Helvetica", fontsize=7.5, color="#9aa0a6", arrowsize=0.6];']
+dot = ['digraph G {', 'rankdir=LR; newrank=true; splines=spline; nodesep=0.25; ranksep=0.9; fontname="Helvetica"; node [fontname="Helvetica", fontsize=9, style="filled,rounded", penwidth=0.6, color="#9aa0a6"]; edge [fontname="Helvetica", fontsize=7.5, color="#9aa0a6", arrowsize=0.6];']
 order = ['agent', 'document', 'data', 'figure', 'statement', 'event']
 for t in order:
     fill, shape = STYLE[t]
@@ -38,11 +38,10 @@ for t in order:
 for e in edges:
     col, sty = EDGE.get(e['relation'], ('#9aa0a6', 'solid'))
     tip = e.get('note', '').replace('"', '\\"')
-    dot.append(f'{e["from"]} -> {e["to"]} [label="{e["relation"].replace("_", " ")}", color="{col}", fontcolor="{col}", style={sty}' + (f', tooltip="{tip}"' if tip else '') + '];')
+    extra = ', constraint=false' if e['relation'] in ('made_at', 'attributed_to', 'same_day') else ''
+    dot.append(f'{e["from"]} -> {e["to"]} [label="{e["relation"].replace("_", " ")}", color="{col}", fontcolor="{col}", style={sty}{extra}' + (f', tooltip="{tip}"' if tip else '') + '];')
 dot.append('}')
 open(os.path.join(HERE, 'evidence_graph.dot'), 'w', encoding='utf-8').write('\n'.join(dot))
-for fmt in ('svg', 'png'):
-    subprocess.run(['dot', f'-T{fmt}', '-Gdpi=110' if fmt == 'png' else '-Gdpi=72', os.path.join(HERE, 'evidence_graph.dot'), '-o', os.path.join(HERE, f'evidence_graph.{fmt}')], check=True)
 # Cytoscape.js page (data embedded; cdnjs, pinned version). Short titles on the nodes, full text in the side panel.
 COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'figure': '#1baf7a', 'statement': '#e34948', 'event': '#6250d6'}
 ORDER = ['agent', 'document', 'data', 'figure', 'statement', 'event']
@@ -95,4 +94,8 @@ document.getElementById('b_copy').onclick=async()=>{{try{{const blob=await (awai
 document.getElementById('b_save').onclick=()=>{{const a=document.createElement('a');a.href=shot();a.download='terrebonne-evidence-graph-'+new Date().toISOString().slice(0,10)+'.png';a.click();say('Saved.');}};
 </script></body></html>'''
 open(os.path.join(HERE, 'evidence_graph.html'), 'w', encoding='utf-8').write(page)
-print('nodes', len(nodes), 'edges', len(edges), '-> evidence_graph.{svg,png,html,dot}')
+ok = True
+for fmt in ('svg', 'png'):
+    r = subprocess.run(['dot', f'-T{fmt}', '-Gdpi=110' if fmt == 'png' else '-Gdpi=72', os.path.join(HERE, 'evidence_graph.dot'), '-o', os.path.join(HERE, f'evidence_graph.{fmt}')], capture_output=True)
+    if r.returncode: ok = False; print('graphviz failed for', fmt, r.stderr.decode()[-300:])
+print('nodes', len(nodes), 'edges', len(edges), '-> evidence_graph.html, .dot' + (', .svg, .png' if ok else ' (svg/png NOT updated)'))

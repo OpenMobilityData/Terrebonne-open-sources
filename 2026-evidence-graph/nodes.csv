@@ -47,3 +47,8 @@ s_cm_36,statement,"Oct 19: ""3.6 %""","City council 7:38:24: ""3.6 % of overall 
 s_cm_sign,statement,Oct 19: « signée par les ingénieurs »,City council 7:10:02: no lane « qui ne va pas être signée par les ingénieurs »; « très content de cette décision »,2026-10-19,webcast rii3nUTuKRE
 e_dec7,event,Dec 7 vote,Borough council vote,2026-12-07,
 s_cm_fourmonths,statement,"Oct 19: ""only for four months … the rest we keep as is""","City council 7:38:24: ""It's 3.6% that we're talking about only for four months, and then the rest we protect and we keep as is""",2026-10-19,"webcast rii3nUTuKRE, 7:38:24 (checked)"
+e_zoom,event,APC Zoom meeting (early Oct),"Zoom meeting between the councillor and the APC-NDG, scheduled shortly before the Oct 6 sitting (first planned as a bike ride); cited by him at council on Oct 6 as his consultation with the APC",2026-10,APC minutes; council Oct 6
+e_oct6,event,"Borough council, Oct 6","Borough council sitting of October 6, 2026: the councillor's address and the question period",2026-10-06,webcast 0k_KZf9uxTk
+e_daybreak,event,"CBC Daybreak interview, Oct 9","CBC Daybreak interview with the councillor, October 9, 2026 (the day the access request was answered)",2026-10-09,"Daybreak transcript, checked by ear"
+e_cm_oct19,event,"City council, Oct 19","City council of Montréal, October 19, 2026: members' and public question periods (four exchanges on Terrebonne)",2026-10-19,webcast rii3nUTuKRE; transcripts in 2026-10-19-city-council/
+e_cm_dec,event,"City council, Dec 14–15","City council sitting of December 14–15, 2026: the step the councillor described after the borough vote (""then a vote at the Conseil Municipal, then it comes back to the borough"", Daybreak 08:19)",2026-12-14,Daybreak 08:19; City council calendar

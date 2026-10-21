@@ -63,3 +63,29 @@ s_cm_fourmonths,s_db_perm,refers_to,
 s_cm_fourmonths,d_aug13,differs_from,The mandate asks for a permanent bidirectional lane on one side with parking restored: not 'as is' in any month.
 s_cm_fourmonths,d_aug20,differs_from,"The service request makes the winter removal Volet 1, « mesure transitoire pour l'hiver 2026-2027 », ahead of Volet 2, the permanent reconfiguration; nothing released withdraws Volet 2."
 s_cm_fourmonths,d_devoir,differs_from,"The window only: the office's « d'avril à décembre » kept implies January–March removed (three months); he said four months, December to March. Otherwise the two statements agree (seasonal; one side kept)."
+s_zoom,e_zoom,made_at,
+s_oct6_99,e_oct6,made_at,
+s_oct6_propose,e_oct6,made_at,
+s_oct6_decision,e_oct6,made_at,
+s_oct6_bidir,e_oct6,made_at,
+s_db_40,e_daybreak,made_at,
+s_db_source,e_daybreak,made_at,
+s_db_perm,e_daybreak,made_at,
+s_db_spaces,e_daybreak,made_at,
+s_db_final,e_daybreak,made_at,
+s_db_window,e_daybreak,made_at,
+s_cm_3,e_cm_oct19,made_at,
+s_cm_share,e_cm_oct19,made_at,
+s_cm_counter,e_cm_oct19,made_at,
+s_cm_36,e_cm_oct19,made_at,
+s_cm_sign,e_cm_oct19,made_at,
+s_cm_fourmonths,e_cm_oct19,made_at,
+s_oct6_bidir,s_zoom,echoes,"Both set the bidirectional option aside: ""too complicated and no real upside"" at council; at the Zoom, that the engineers would not sign a bidirectional lane."
+s_oct6_bidir,a_teodoresco,attributed_to,
+e_zoom,e_oct6,precedes,He cited the Zoom at council on Oct 6 as his consultation with the APC.
+e_oct6,e_daybreak,precedes,
+e_daybreak,e_cm_oct19,precedes,
+e_cm_oct19,e_dec7,precedes,
+e_dec7,e_cm_dec,precedes,"The route he described on Daybreak (08:19): borough vote, City council vote, back to the borough."
+d_note,e_dec7,precedes,The note is the document whose recommendation the vote decides (s. 39 ground for withholding lapses with the decision).
+d_release,e_cm_oct19,precedes,
