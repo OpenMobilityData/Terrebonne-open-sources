@@ -19,6 +19,14 @@ Every statement node quotes words checked by ear against the recording and gives
 | `statement` | a dated public statement, quoted, with its time stamp |
 | `event` | a dated step in the process |
 
+## Coverage and checks
+
+The graph is meant to be exhaustive for the question at hand: every checked quotation, every document and table in the record that bears on the winter conversion, and every figure derived from them. Coverage as of October 21, 2026: the October 6, 2026 address and question period (clips 02–06), the CBC Daybreak interview of October 9, the City council exchanges of October 19, the borough mayor's November 26, 2025 answer and the mayor's office's December 12, 2025 reply, the Gazette (Oct 7) and Le Devoir (Oct 19), the 2026-581 bundle (mandate, service request, offer, purchase order, kick-off, scheduling e-mails, draft and final note, decks, camera tables, counter table), the 2025-697, 2026-300 and 2025-12847 releases, the 2024 approvals, the 2023 EXP study, the 2021 working committee, the City's February 10, 2026 release, the Telraam sensors, the City open-data detector, and the author's pending requests and reconsideration letter.
+
+`render_graph.py` checks the structure at every build and writes [`validation_report.txt`](validation_report.txt): no orphan node; every statement has `made_at`, `attributed_to` and a source; every figure has `computed_from`; every bundle-01 document has a release status; every `differs_from`, `unsupported_by` or `does_not_include` edge has a note; and every question in [`questions.csv`](questions.csv) (the written questions prepared for the December 7 sitting, 3.1–3.12, each with the nodes that are its premises) cites nodes that exist. A build with problems still writes the page, and says so.
+
+Rule for additions: a newly checked quotation or newly filed document gets its node and relations in the same commit as the transcript or file.
+
 ## Sources
 
 Access request 2026-581 (bundle 01 page numbers) and 2026-300: [Terrebonne-access-requests](https://github.com/OpenMobilityData/Terrebonne-access-requests). Council recordings: borough council of October 6, 2026 (webcast 0k_KZf9uxTk) and City council of October 19, 2026 (rii3nUTuKRE; transcripts in [`../2026-10-19-city-council/`](../2026-10-19-city-council/)). CBC *Daybreak*, October 9, 2026 ([`../2026-cbc-daybreak-interview/`](../2026-cbc-daybreak-interview/)). *Le Devoir*, October 19, 2026. Telraam sensors: [Terrebonne-telraam](https://github.com/OpenMobilityData/Terrebonne-telraam). The APC Zoom meeting node rests on the association's minutes of the meeting the councillor cited at council as his consultation.

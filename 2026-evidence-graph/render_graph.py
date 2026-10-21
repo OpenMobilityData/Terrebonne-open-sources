@@ -13,6 +13,40 @@ edges = list(csv.DictReader(open(os.path.join(HERE, 'edges.csv'), encoding='utf-
 ids = {n['id'] for n in nodes}
 bad = [(e['from'], e['to']) for e in edges if e['from'] not in ids or e['to'] not in ids]
 assert not bad, f'edges to unknown nodes: {bad}'
+
+# ---- structural checks (printed at every build; the report is also written to validation_report.txt)
+def validate(nodes, edges):
+    out_rel = {}; in_rel = {}; deg = {n['id']: 0 for n in nodes}
+    for e in edges:
+        out_rel.setdefault(e['from'], set()).add(e['relation']); in_rel.setdefault(e['to'], set()).add(e['relation'])
+        deg[e['from']] += 1; deg[e['to']] += 1
+    problems = []
+    for n in nodes:
+        o = out_rel.get(n['id'], set()); i = in_rel.get(n['id'], set()); t = n['type']
+        if deg[n['id']] == 0: problems.append(f"orphan: {n['id']}")
+        if t == 'statement':
+            if 'made_at' not in o: problems.append(f"statement without made_at: {n['id']}")
+            if 'attributed_to' not in o: problems.append(f"statement without attributed_to: {n['id']}")
+            if not n['source']: problems.append(f"statement without source: {n['id']}")
+        if t == 'figure' and 'computed_from' not in o: problems.append(f"figure without computed_from: {n['id']}")
+        if t == 'document' and n['source'].startswith('2026-581') and not (o & {'released_in', 'withheld_in', 'redacted_in', 'contained_in'}) and n['id'] != 'd_release':
+            problems.append(f"document without release status: {n['id']}")
+        if t == 'data' and not n['source']: problems.append(f"data without source: {n['id']}")
+        if t in ('statement', 'document', 'data', 'event') and not n['date']: problems.append(f"undated {t}: {n['id']}")
+    for e in edges:
+        if e['relation'] in ('differs_from', 'unsupported_by', 'does_not_include', 'same_data_other_denominator') and not e.get('note'):
+            problems.append(f"difference without note: {e['from']} -> {e['to']}")
+    # questions.csv: every question's premises must be nodes
+    qp = os.path.join(HERE, 'questions.csv')
+    if os.path.exists(qp):
+        for q in csv.DictReader(open(qp, encoding='utf-8')):
+            for nid in [x.strip() for x in q['nodes'].split(';') if x.strip()]:
+                if nid not in ids: problems.append(f"question {q['question']} cites unknown node: {nid}")
+            if not q['nodes'].strip(): problems.append(f"question {q['question']} has no nodes")
+    return problems
+problems = validate(nodes, edges)
+open(os.path.join(HERE, 'validation_report.txt'), 'w', encoding='utf-8').write(f"{len(nodes)} nodes, {len(edges)} edges; {len(problems)} problem(s)\n" + '\n'.join(problems) + '\n')
+print(f"validation: {len(problems)} problem(s)" + (': ' + '; '.join(problems[:12]) + (' …' if len(problems) > 12 else '') if problems else ''))
 STYLE = {'agent': ('#e9ebee', 'ellipse'), 'document': ('#fff3e8', 'note'), 'data': ('#e8f1fb', 'box'),
          'figure': ('#e6f6ef', 'box'), 'statement': ('#fdf1f1', 'box'), 'event': ('#f3eefc', 'hexagon')}
 EDGE = {'differs_from': ('#e34948', 'dashed'), 'same_data_other_denominator': ('#e34948', 'dashed'), 'unsupported_by': ('#e34948', 'dotted'),
@@ -55,7 +89,7 @@ pos = {}
 for ci, t in enumerate(ORDER):
     col = lanes.get(t, [])
     for ri, nid in enumerate(col):
-        pos[nid] = {'x': 80 + ci * 260, 'y': 60 + ri * (900 / max(1, len(col) - 1) if len(col) > 1 else 0)}
+        pos[nid] = {'x': 80 + ci * 300, 'y': 60 + ri * 46}
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terrebonne evidence graph</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape-svg@0.4.0/cytoscape-svg.js"></script>
@@ -65,8 +99,8 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .leg span{{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px}}.leg div{{margin:2px 0;font-size:12px}}#info{{margin-top:12px;font-size:13px}}#info b{{display:block;margin-bottom:4px}}#info ul{{padding-left:16px;margin:6px 0 0}}#info li{{margin:2px 0;font-size:12px}}
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
-<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, statements, event; newest at the bottom.</p>
-<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
+<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, statements, events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
+<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
 const COL={json.dumps(COL)}; const POS={json.dumps(pos)};
@@ -76,7 +110,8 @@ const cy=cytoscape({{container:document.getElementById('cy'),elements:{json.dump
         {{selector:'edge',style:{{'width':1,'line-color':'#b0b4b9','target-arrow-color':'#b0b4b9','target-arrow-shape':'triangle','arrow-scale':0.7,'curve-style':'bezier','label':'','font-size':8,'color':'#5f6b74','text-rotation':'autorotate','text-background-color':bg,'text-background-opacity':0.85,'text-background-padding':1}}}},
         {{selector:'edge[rel = "differs from"], edge[rel = "same data other denominator"], edge[rel = "unsupported by"], edge[rel = "does not include"]',style:{{'line-color':'#e34948','target-arrow-color':'#e34948','line-style':'dashed'}}}},
         {{selector:'edge[rel = "withheld in"], edge[rel = "redacted in"]',style:{{'line-style':'dashed'}}}},
-        {{selector:'.dim',style:{{'opacity':0.15}}}},{{selector:'.hl',style:{{'width':2,'label':'data(rel)','opacity':1}}}},{{selector:'node.hl',style:{{'width':22,'height':22,'font-size':11,'opacity':1}}}},
+        {{selector:'.dim',style:{{'opacity':0.15}}}},{{selector:'.hl',style:{{'width':2,'label':'data(rel)','opacity':1}}}},{{selector:'node.hl',style:{{'width':22,'height':22,'font-size':11,'opacity':1,'label':'data(short)'}}}},
+        {{selector:'node.nolabel',style:{{'label':''}}}},{{selector:'node.hover',style:{{'label':'data(short)','z-index':9}}}},
         {{selector:':selected',style:{{'border-width':3,'border-color':fg}}}}],
  layout:{{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30}}}});
 function focus(n){{cy.elements().removeClass('hl dim'); if(!n){{return;}} const nb=n.closedNeighborhood(); cy.elements().not(nb).addClass('dim'); nb.addClass('hl');}}
@@ -85,10 +120,14 @@ cy.on('tap','node',e=>{{const n=e.target,d=n.data(); focus(n);
  document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+'<ul>'+links+'</ul>';}});
 cy.on('tap',e=>{{if(e.target===cy){{focus(null);document.getElementById('info').innerHTML='Nothing selected.';}}}});
 const bl=document.getElementById('b_lanes'),bf=document.getElementById('b_force');
-bl.onclick=()=>{{cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
-bf.onclick=()=>{{cy.layout({{name:'cose',animate:true,nodeRepulsion:()=>40000,idealEdgeLength:()=>160,edgeElasticity:()=>60,gravity:0.3,padding:30}}).run();bf.classList.add('on');bl.classList.remove('on');}};
+bl.onclick=()=>{{setLabels(true);cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
+let labels=true; const bL=document.getElementById('b_labels');
+function setLabels(on){{labels=on;cy.nodes().toggleClass('nolabel',!on);bL.textContent='Labels: '+(on?'on':'off');}}
+bL.onclick=()=>setLabels(!labels);
+cy.on('mouseover','node',e=>e.target.addClass('hover')); cy.on('mouseout','node',e=>e.target.removeClass('hover'));
+bf.onclick=()=>{{setLabels(false);cy.layout({{name:'cose',animate:true,nodeRepulsion:()=>400000,idealEdgeLength:()=>220,edgeElasticity:()=>40,gravity:0.15,numIter:1500,padding:30,fit:true}}).run();bf.classList.add('on');bl.classList.remove('on');}};
 document.getElementById('b_fit').onclick=()=>cy.fit(30);
-document.getElementById('b_reset').onclick=()=>{{focus(null);cy.elements().unselect();document.getElementById('info').innerHTML='Nothing selected.';cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
+document.getElementById('b_reset').onclick=()=>{{setLabels(true);focus(null);cy.elements().unselect();document.getElementById('info').innerHTML='Nothing selected.';cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
 function shot(){{return cy.png({{full:false,scale:2,bg:bg}});}}
 function say(m){{const s=document.getElementById('msg');s.textContent=m;setTimeout(()=>s.textContent='',3000);}}
 document.getElementById('b_copy').onclick=async()=>{{try{{const blob=await (await fetch(shot())).blob();await navigator.clipboard.write([new ClipboardItem({{'image/png':blob}})]);say('Copied to the clipboard.');}}catch(e){{say('Clipboard not available here; use Save PNG.');}}}};
@@ -98,6 +137,10 @@ document.getElementById('b_save').onclick=()=>{{const a=document.createElement('
 open(os.path.join(HERE, 'evidence_graph.html'), 'w', encoding='utf-8').write(page)
 ok = True
 for fmt in ('svg', 'png'):
-    r = subprocess.run(['dot', f'-T{fmt}', '-Gdpi=110' if fmt == 'png' else '-Gdpi=72', os.path.join(HERE, 'evidence_graph.dot'), '-o', os.path.join(HERE, f'evidence_graph.{fmt}')], capture_output=True)
-    if r.returncode: ok = False; print('graphviz failed for', fmt, r.stderr.decode()[-300:])
+    dotfile = os.path.join(HERE, 'evidence_graph.dot'); outp = os.path.join(HERE, f'evidence_graph.{fmt}'); dpi = '-Gdpi=110' if fmt == 'png' else '-Gdpi=72'
+    for cmd in (['dot', dpi], ['dot', dpi, '-Gclusterrank=none'], ['sfdp', dpi, '-Goverlap=prism', '-Gsplines=true']):
+        r = subprocess.run(cmd + [f'-T{fmt}', dotfile, '-o', outp], capture_output=True)
+        if r.returncode == 0: break
+    else:
+        ok = False; print('graphviz failed for', fmt, r.stderr.decode()[-200:])
 print('nodes', len(nodes), 'edges', len(edges), '-> evidence_graph.html, .dot' + (', .svg, .png' if ok else ' (svg/png NOT updated)'))
