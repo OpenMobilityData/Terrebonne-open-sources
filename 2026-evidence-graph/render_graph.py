@@ -37,7 +37,8 @@ for t in order:
     dot.append('}')
 for e in edges:
     col, sty = EDGE.get(e['relation'], ('#9aa0a6', 'solid'))
-    dot.append(f'{e["from"]} -> {e["to"]} [label="{e["relation"].replace("_", " ")}", color="{col}", fontcolor="{col}", style={sty}];')
+    tip = e.get('note', '').replace('"', '\\"')
+    dot.append(f'{e["from"]} -> {e["to"]} [label="{e["relation"].replace("_", " ")}", color="{col}", fontcolor="{col}", style={sty}' + (f', tooltip="{tip}"' if tip else '') + '];')
 dot.append('}')
 open(os.path.join(HERE, 'evidence_graph.dot'), 'w', encoding='utf-8').write('\n'.join(dot))
 for fmt in ('svg', 'png'):
@@ -46,7 +47,7 @@ for fmt in ('svg', 'png'):
 COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'figure': '#1baf7a', 'statement': '#e34948', 'event': '#6250d6'}
 ORDER = ['agent', 'document', 'data', 'figure', 'statement', 'event']
 els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source']}} for n in nodes] + \
-      [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' ')}} for i, e in enumerate(edges)]
+      [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' '), 'note': e.get('note', '')}} for i, e in enumerate(edges)]
 # swimlane positions: one column per type, nodes ordered by date (undated last)
 lanes = {}
 for n in sorted(nodes, key=lambda n: (n['date'] or '9999')):
@@ -80,7 +81,7 @@ const cy=cytoscape({{container:document.getElementById('cy'),elements:{json.dump
  layout:{{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30}}}});
 function focus(n){{cy.elements().removeClass('hl dim'); if(!n){{return;}} const nb=n.closedNeighborhood(); cy.elements().not(nb).addClass('dim'); nb.addClass('hl');}}
 cy.on('tap','node',e=>{{const n=e.target,d=n.data(); focus(n);
- const links=n.connectedEdges().map(ed=>{{const other=ed.source().id()===n.id()?ed.target():ed.source(); const dir=ed.source().id()===n.id()?'→':'←'; return '<li>'+dir+' '+ed.data('rel')+' <i>'+other.data('short').replace(/</g,'&lt;')+'</i></li>';}}).join('');
+ const links=n.connectedEdges().map(ed=>{{const other=ed.source().id()===n.id()?ed.target():ed.source(); const dir=ed.source().id()===n.id()?'→':'←'; return '<li>'+dir+' '+ed.data('rel')+' <i>'+other.data('short').replace(/</g,'&lt;')+'</i>'+(ed.data('note')?'<br><span class="muted">'+ed.data('note').replace(/</g,'&lt;')+'</span>':'')+'</li>';}}).join('');
  document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+'<ul>'+links+'</ul>';}});
 cy.on('tap',e=>{{if(e.target===cy){{focus(null);document.getElementById('info').innerHTML='Nothing selected.';}}}});
 const bl=document.getElementById('b_lanes'),bf=document.getElementById('b_force');
