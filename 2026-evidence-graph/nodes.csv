@@ -1,0 +1,48 @@
+id,type,short,label,date,source
+a_teodoresco,agent,Councillor Teodoresco,Councillor Teodoresco (Loyola),,
+a_mayor,agent,Mayor's office,Borough mayor's office,,
+a_sum,agent,SUM (City),SUM (City street-design service),,
+a_sim,agent,SIM (fire),SIM (fire department),,
+a_exp,agent,EXP,EXP (consultant),,
+a_eng,agent,Borough engineers,Borough engineering division,,
+d_june10,document,Jun 10 e-mail: objective,"Jun 10 e-mail: objective = restore the parking lane; internal opinion already given; external ""neutral"" opinion wanted",2026-06-10,2026-581 b01 p. 8
+d_sum,document,SUM analysis (withheld),SUM analysis of the two layouts (WITHHELD),2026-06-17,"2026-581, ss. 37, 39"
+d_jun22,document,Jun 22 summary of SUM,Borough summary of the SUM analysis: « plusieurs compromis importants … sécurité »,2026-06-22,2026-581 b01 p. 6
+d_sim,document,SIM opinion (redacted),SIM opinion (REDACTED),2026-07-13,2026-581 b01 p. 5
+d_aug13,document,Aug 13 mandate (permanent),"Mayor's office mandate: permanent bidirectional lane one side, parking restored",2026-08-13,2026-581 b01 pp. 1–2
+d_aug20,document,Aug 20 service request,"Service request: Volet 1 winter removal « mesure transitoire 2026-2027 », Volet 2 permanent",2026-08-20,2026-581 b01 pp. 3–4
+d_offer,document,"EXP offer ($14,755)","EXP offer: $14,755, six weeks; storm-only closure among the scenarios",2026-08-25,2026-581 b01 pp. 9–13
+d_note,document,EXP note (withheld),"EXP technical note (WITHHELD): draft Sep 17, final due Oct 2",2026-10-02,"2026-581 b01 p. 167; ss. 37, 39"
+d_deck,document,Slides « MAJ 2025 »,Presentation « MAJ 2025 » (counts slides),2025-09,2026-581 b01 pp. 51–73
+d_release,document,Release 2026-581 (508 pp.),"Access release 2026-581: 508 pages, three documents withheld",2026-10-09,2026-581
+d_card,document,Oct 6 card: 'before Christmas',"Councillor's signed card: ""residents will see changes before Christmas 2026""",2026-10-06,media/
+d_devoir,document,Le Devoir Oct 19,"Le Devoir: mayor's office statement (« d'avril à décembre », « au moins 60 places »)",2026-10-19,press/
+t_p61,data,Camera Sept 2024: 707,"Miovision, Grand, Sept 19 2024: 707 bicycles, all four approaches, 6 peak hours",2024-09-19,2026-581 b01 p. 61
+t_p62,data,Camera Jan 29 2025: 8,"Miovision, Grand, Jan 29 2025: 8 bicycles on the Terrebonne axis, 6 peak hours, weather-advisory day",2025-01-29,2026-581 b01 p. 62
+t_counter,data,Kensington counter table,"Kensington loop counter, daily table Jul 26 2025 – Aug 31 2026 (135,276 in the first year; 4,891 Dec–Mar)",2026-08-31,2026-581 b01 pp. 74–81
+t_portal,data,Open-data portal (no Kensington),"City open-data portal: no Kensington counter; only a City detector at Girouard, westbound",2026-10-16,data/montreal_opendata
+t_parking,data,No parking count in file,No parking inventory or occupancy count anywhere in the 508 pages,2026-10-09,2026-581
+t_snow,data,Snow-loading days,City snow-loading data: 30 loading days in sector CDN-301 last winter; 72 % of eastbound winter passages on unconstrained days,2026-03-31,2026-300 exposure note
+t_telraam,data,Telraam Jan 29 2025: 21 / 57,"Telraam sensors (King Edward, Draper): daylight counts, Jan 29 2025 = 21 and 57 bicycles",2025-01-29,Terrebonne-telraam
+c_99,figure,"""99 %"" = 8 ÷ 707","""99 %"" = 8 ÷ 707 (two different slides; like-for-like 97–98 %)",2026-10-06,derived
+c_4,figure,"""4 cyclists"" = 8 ÷ 2","""4 cyclists"" = 8 passages ÷ 2",2026-10-06,derived
+c_40,figure,40 a day,"40 a day = 4,891 ÷ 121 days; no day under 2",2026-10-20,derived
+c_36,figure,3.6 % = share of year,"3.6 % = 4,891 ÷ 135,276 (winter's share of the year)",2026-10-20,derived
+c_76,figure,7.6 % per day,7.6 % = 40.4 ÷ 534.4 per day (winter vs rest of year); 93 % drop per day,2026-10-20,derived
+s_oct6_99,statement,"Oct 6: ""99 % … 4 cyclists""","Oct 6 address: ""diminishes by 99 % … from 700 … to 8 … that's 4 cyclists""",2026-10-06,webcast 0k_KZf9uxTk
+s_oct6_propose,statement,"Oct 6: ""propose"", ""test""","Oct 6: ""this is what we're going to propose""; ""it's going to be a test""",2026-10-06,webcast 0k_KZf9uxTk
+s_oct6_decision,statement,Oct 6: « décision … semaine passée »,Oct 6 Q&A: « le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée »,2026-10-06,clip 03 @ 5:12 (webcast 1:22:43)
+s_oct6_bidir,statement,"Oct 6: bidirectional ""too complicated""","Oct 6: bidirectional option ""too complicated and no real upside for anyone""",2026-10-06,webcast 0k_KZf9uxTk
+s_zoom,statement,APC Zoom: engineers; storm-only; 50–60,"APC Zoom (cited at council as his consultation): engineers would not sign a bidirectional lane; storm-only ruled out (residents could not be informed); ""50 to 60"" spaces",2026-10,APC minutes
+s_db_40,statement,"Daybreak: ""40 a day to 30 a day""","Daybreak 07:03: the 8 = six rush hours; ""from 40 a day to 30 a day during December to March""",2026-10-09,Daybreak transcript
+s_db_source,statement,"Daybreak: ""source of truth … portal""","Daybreak 07:03: ""source of truth … open data website … connected directly to Eco-Counter""",2026-10-09,Daybreak transcript
+s_db_perm,statement,"Daybreak 12:22: ""permanent""","Daybreak 12:22: ""for now, we're looking at it in a way that will make it permanent"" (ambiguous)",2026-10-09,Daybreak transcript
+s_db_spaces,statement,"Daybreak: ""50 to 60"" spaces","Daybreak 01:08: ""at least 50 to 60"" spaces, ""a bit too early""",2026-10-09,Daybreak transcript
+s_db_final,statement,"Daybreak: ""final study … submitted""","Daybreak 00:38: ""the final study … still need to be submitted to us""",2026-10-09,Daybreak transcript
+s_db_window,statement,"Daybreak: ""December to March""","Daybreak 03:11: ""December to March""",2026-10-09,Daybreak transcript
+s_cm_3,statement,Oct 19: « 3 % d'usage »,"City council 41:44: « on passe à 3 % d'usage … décembre, janvier, février et mars »",2026-10-19,webcast rii3nUTuKRE
+s_cm_share,statement,Oct 19: « aucun problème à partager »,City council 41:44: « On n'a aucun problème à partager nos documents »,2026-10-19,webcast rii3nUTuKRE
+s_cm_counter,statement,Oct 19: « compteur … retiré »,"City council 44:51: « le seul compteur disponible … retiré du domaine public »; ""30 … 40 passages par jour""",2026-10-19,webcast rii3nUTuKRE
+s_cm_36,statement,"Oct 19: ""3.6 %""","City council 7:38:24: ""3.6 % of overall cycling traffic""",2026-10-19,webcast rii3nUTuKRE
+s_cm_sign,statement,Oct 19: « signée par les ingénieurs »,City council 7:10:02: no lane « qui ne va pas être signée par les ingénieurs »; « très content de cette décision »,2026-10-19,webcast rii3nUTuKRE
+e_dec7,event,Dec 7 vote,Borough council vote,2026-12-07,
