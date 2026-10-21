@@ -58,6 +58,7 @@ for ci, t in enumerate(ORDER):
         pos[nid] = {'x': 80 + ci * 260, 'y': 60 + ri * (900 / max(1, len(col) - 1) if len(col) > 1 else 0)}
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terrebonne evidence graph</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-svg@0.4.0/cytoscape-svg.js"></script>
 <style>:root{{--bg:#fcfcfb;--fg:#1f2428;--muted:#5f6b74;--line:#d9dcd8;--panel:#ffffff}}@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#1a1a19;--fg:#ecece8;--muted:#a3a79f;--line:#34373a;--panel:#222322}}}}:root[data-theme="dark"]{{--bg:#1a1a19;--fg:#ecece8;--muted:#a3a79f;--line:#34373a;--panel:#222322}}
 html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1.4 -apple-system,"Helvetica Neue",Arial,sans-serif}}#cy{{position:absolute;inset:0;right:360px}}
 #side{{position:absolute;top:0;right:0;width:360px;height:100%;overflow:auto;border-left:1px solid var(--line);padding:14px 16px;box-sizing:border-box;background:var(--panel)}}h1{{font-size:16px;margin:0 0 6px}}.muted{{color:var(--muted);font-size:12px}}
@@ -65,7 +66,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
 <div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, statements, event; newest at the bottom.</p>
-<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button> <span id="msg" class="muted"></span></div>
+<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
 const COL={json.dumps(COL)}; const POS={json.dumps(pos)};
@@ -91,6 +92,7 @@ document.getElementById('b_reset').onclick=()=>{{focus(null);cy.elements().unsel
 function shot(){{return cy.png({{full:false,scale:2,bg:bg}});}}
 function say(m){{const s=document.getElementById('msg');s.textContent=m;setTimeout(()=>s.textContent='',3000);}}
 document.getElementById('b_copy').onclick=async()=>{{try{{const blob=await (await fetch(shot())).blob();await navigator.clipboard.write([new ClipboardItem({{'image/png':blob}})]);say('Copied to the clipboard.');}}catch(e){{say('Clipboard not available here; use Save PNG.');}}}};
+document.getElementById('b_svg').onclick=()=>{{try{{const s=cy.svg({{scale:1,full:false,bg:bg}});const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([s],{{type:'image/svg+xml'}}));a.download='terrebonne-evidence-graph-'+new Date().toISOString().slice(0,10)+'.svg';a.click();say('Saved.');}}catch(e){{say('SVG export not available (extension did not load).');}}}};
 document.getElementById('b_save').onclick=()=>{{const a=document.createElement('a');a.href=shot();a.download='terrebonne-evidence-graph-'+new Date().toISOString().slice(0,10)+'.png';a.click();say('Saved.');}};
 </script></body></html>'''
 open(os.path.join(HERE, 'evidence_graph.html'), 'w', encoding='utf-8').write(page)
