@@ -85,7 +85,7 @@ open(os.path.join(HERE, 'evidence_graph.dot'), 'w', encoding='utf-8').write('\n'
 # Cytoscape.js page (data embedded; cdnjs, pinned version). Short titles on the nodes, full text in the side panel.
 COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'numerical assertion': '#1baf7a', 'assertion': '#eda100', 'statement': '#e34948', 'event': '#6250d6'}
 ORDER = ['agent', 'document', 'data', 'numerical assertion', 'assertion', 'statement', 'event']
-els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source']}} for n in nodes] + \
+els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source'], 'aliases': n.get('aliases', '')}} for n in nodes] + \
       [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' '), 'note': e.get('note', '')}} for i, e in enumerate(edges)]
 # swimlane positions: one column per type, nodes ordered by date (undated last)
 # swimlanes: one column per type, except statements, which get one column per event they were made at (events in date order)
@@ -116,7 +116,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
 <div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data, numerical assertions and assertions, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, numerical assertions, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
-<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
+<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><input id="q" type="search" placeholder="Find a node (words, phrases, aliases)…" style="width:100%;font:13px -apple-system,&quot;Helvetica Neue&quot;,Arial,sans-serif;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)"><div id="hits" class="muted" style="font-size:12px;margin-top:4px"></div></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
 const COL={json.dumps(COL)}; const POS={json.dumps(pos)};
@@ -128,13 +128,13 @@ const cy=cytoscape({{container:document.getElementById('cy'),elements:{json.dump
         {{selector:'edge[rel = "withheld in"], edge[rel = "redacted in"]',style:{{'line-style':'dashed'}}}},
         {{selector:'edge[rel = "supports"]',style:{{'line-color':'#1baf7a','target-arrow-color':'#1baf7a'}}}},{{selector:'edge[rel = "undercuts"]',style:{{'line-color':'#e34948','target-arrow-color':'#e34948'}}}},{{selector:'edge[rel = "bears on"]',style:{{'line-color':'#eda100','target-arrow-color':'#eda100','line-style':'dotted'}}}},
         {{selector:'.dim',style:{{'opacity':0.15}}}},{{selector:'.hl',style:{{'width':2,'label':'data(rel)','opacity':1}}}},{{selector:'node.hl',style:{{'width':22,'height':22,'font-size':11,'opacity':1,'label':'data(short)'}}}},
-        {{selector:'node.nolabel',style:{{'label':''}}}},{{selector:'node.hover',style:{{'label':'data(short)','z-index':9}}}},
+        {{selector:'node.nolabel',style:{{'label':''}}}},{{selector:'node.found',style:{{'border-width':3,'border-color':'#eda100','label':'data(short)','z-index':8}}}},{{selector:'node.hover',style:{{'label':'data(short)','z-index':9}}}},
         {{selector:':selected',style:{{'border-width':3,'border-color':fg}}}}],
  layout:{{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30}}}});
 function focus(n){{cy.elements().removeClass('hl dim'); if(!n){{return;}} const nb=n.closedNeighborhood(); cy.elements().not(nb).addClass('dim'); nb.addClass('hl');}}
 cy.on('tap','node',e=>{{const n=e.target,d=n.data(); focus(n);
  const links=n.connectedEdges().map(ed=>{{const other=ed.source().id()===n.id()?ed.target():ed.source(); const dir=ed.source().id()===n.id()?'→':'←'; return '<li>'+dir+' '+ed.data('rel')+' <i>'+other.data('short').replace(/</g,'&lt;')+'</i>'+(ed.data('note')?'<br><span class="muted">'+ed.data('note').replace(/</g,'&lt;')+'</span>':'')+'</li>';}}).join('');
- document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+'<ul>'+links+'</ul>';}});
+ document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+(d.aliases?'<br>Also said as: '+d.aliases.replace(/</g,'&lt;'):'')+'<ul>'+links+'</ul>';}});
 cy.on('tap',e=>{{if(e.target===cy){{focus(null);document.getElementById('info').innerHTML='Nothing selected.';}}}});
 const bl=document.getElementById('b_lanes'),bf=document.getElementById('b_force');
 bl.onclick=()=>{{setLabels(true);cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
@@ -144,6 +144,12 @@ bL.onclick=()=>setLabels(!labels);
 cy.on('mouseover','node',e=>e.target.addClass('hover')); cy.on('mouseout','node',e=>e.target.removeClass('hover'));
 bf.onclick=()=>{{setLabels(false);cy.layout({{name:'cose',animate:true,nodeRepulsion:()=>400000,idealEdgeLength:()=>220,edgeElasticity:()=>40,gravity:0.15,numIter:1500,padding:30,fit:true}}).run();bf.classList.add('on');bl.classList.remove('on');}};
 document.getElementById('b_fit').onclick=()=>cy.fit(30);
+const qbox=document.getElementById('q'),hits=document.getElementById('hits');
+qbox.oninput=()=>{{const s=qbox.value.trim().toLowerCase();hits.innerHTML='';if(s.length<2){{cy.nodes().removeClass('found');return;}}
+ const m=cy.nodes().filter(n=>((n.data('short')||'')+' '+(n.data('label')||'')+' '+(n.data('aliases')||'')).toLowerCase().includes(s));
+ cy.nodes().removeClass('found');m.addClass('found');
+ hits.innerHTML=m.length?m.slice(0,12).map(n=>'<div><a href="#" data-id="'+n.id()+'" style="color:inherit">'+n.data('short').replace(/</g,'&lt;')+'</a></div>').join('')+(m.length>12?'<div>… '+(m.length-12)+' more</div>':''):'No match.';
+ hits.querySelectorAll('a').forEach(a=>a.onclick=ev=>{{ev.preventDefault();const n=cy.getElementById(a.dataset.id);n.select();cy.animate({{center:{{eles:n}},zoom:1.2}},{{duration:300}});n.emit('tap');}});}};
 document.getElementById('b_reset').onclick=()=>{{setLabels(true);focus(null);cy.elements().unselect();document.getElementById('info').innerHTML='Nothing selected.';cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
 function shot(){{return cy.png({{full:false,scale:2,bg:bg}});}}
 function say(m){{const s=document.getElementById('msg');s.textContent=m;setTimeout(()=>s.textContent='',3000);}}

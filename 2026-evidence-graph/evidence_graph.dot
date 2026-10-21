@@ -73,7 +73,7 @@ subgraph cluster_numerical_assertion { label="numerical assertions"; fontsize=11
   c_76 [label="7.6 % = 40.4 ÷ 534.4 per day\n(winter vs rest of year); 93 %\ndrop per day\n[2026-10-20]", fillcolor="#e6f6ef", shape=box];
 }
 subgraph cluster_assertion { label="assertions"; fontsize=11; color="#d9dcd8"; style="rounded";
-  x_yearround [label="Assertion: the winter layout, with\none protected direction removed,\nwill not be reversed in spring but\nwill remain the year-round layout\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
+  x_yearround [label="Assertion: the protected direction\nremoved for the winter will not be\nreinstalled in the spring, so the\none-direction layout becomes\nyear-round\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_99 [label="Assertion: bicycle traffic on\nTerrebonne falls by 99 % in winter\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_36rate [label="Assertion: the 3.6 % figure\nexpresses how much the lane is\nused in winter relative to the\nrest of the year\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_parking_measured [label="Assertion: the borough measured\nthe shortage of winter parking\nthat the conversion is meant to\nrelieve\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
@@ -558,4 +558,5 @@ d_jun22 -> x_bidir [label="undercuts", color="#e34948", fontcolor="#e34948", sty
 s_oct6_bikeplan -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« A longer term, more sophisticated bike plan … for next year »: the only public hint of what follows the winter measure."];
 d_release -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Nothing in the 508 pages withdraws the mandate or Volet 2."];
 x_bidir -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Two different permanent end states; the mandate supports the first, the seasonal statements undercut the second."];
+x_reopen -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The two assertions are complements: evidence for one is evidence against the other."];
 }
