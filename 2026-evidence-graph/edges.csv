@@ -414,3 +414,10 @@ d_ca24,x_precedent,supports,
 x_precedent,x_shared,bears_on,"The comparison: the 2024 project's study was public before its vote; the 2026 measure's note, SUM analysis and SIM opinion are withheld before its vote."
 x_precedent,x_consulted,bears_on,A public session open to all residents in 2023; one Zoom with the APC in 2026.
 d_dec12_2025,x_precedent,bears_on,The mayor's office's own standard of dialogue from the start.
+s_db_route,x_dec7,bears_on,"The sequence (borough, City council, borough) and ""before Christmas""; no sitting date given."
+s_card_steps,x_dec7,bears_on,"""Several steps remain … borough council and City Council""; ""changes before Christmas 2026""; no date."
+e_dec7,x_dec7,bears_on,"December 7 is the borough's ordinary December sitting (its calendar); the inference rests on ""before Christmas"" plus the calendar."
+s_desousa_review,x_dec7,bears_on,The City expects the borough to share the file and will present it to City council; no borough date given.
+d_release,x_dec7,undercuts,"No borough or City agenda through October 19 carried the item; the released file names no sitting (the Sept 10 e-mail cites the October 5 calendar, i.e. the Oct 6 sitting, for the announcement only)."
+e_cm_dec,x_dec7,bears_on,"City council sits December 14–15; by his sequence the borough votes first and the item then ""comes back to the borough"", which an ordinary sitting before Christmas cannot accommodate after December 7."
+s_oct6_propose,x_dec7,bears_on,"""This is what we're going to propose"": a proposal, with no sitting named."

@@ -93,6 +93,7 @@ subgraph cluster_assertion { label="assertions"; fontsize=11; color="#d9dcd8"; s
   x_double [label="Assertion: the borough would\nreconsider the measure if winter\nbicycle traffic doubled\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_bidir [label="Assertion: the lanes will be\nreplaced by a single bidirectional\nlane on one side of Terrebonne\nwith parking restored on the other\n(the layout of the August 13\nmandate and of Volet 2)\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_precedent [label="Assertion: before the vote on the\n2024 lanes, the borough published\nits study and held a public\ninformation session (the standard\nthe current measure is compared\nwith)\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
+  x_dec7 [label="Assertion: the borough council\nwill vote on the winter conversion\nat its sitting of December 7, 2026\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
 }
 subgraph cluster_statement { label="statements"; fontsize=11; color="#d9dcd8"; style="rounded";
   s_oct6_99 [label="Oct 6 address: \"diminishes by 99\n% … from 700 … to 8 … that's 4\ncyclists\"\n[2026-10-06]", fillcolor="#fdf1f1", shape=box, URL="https://www.youtube.com/watch?v=0k_KZf9uxTk", target="_blank"];
@@ -579,4 +580,11 @@ d_ca24 -> x_precedent [label="supports", color="#1baf7a", fontcolor="#1baf7a", s
 x_precedent -> x_shared [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The comparison: the 2024 project's study was public before its vote; the 2026 measure's note, SUM analysis and SIM opinion are withheld before its vote."];
 x_precedent -> x_consulted [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="A public session open to all residents in 2023; one Zoom with the APC in 2026."];
 d_dec12_2025 -> x_precedent [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The mayor's office's own standard of dialogue from the start."];
+s_db_route -> x_dec7 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The sequence (borough, City council, borough) and \"before Christmas\"; no sitting date given."];
+s_card_steps -> x_dec7 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="\"Several steps remain … borough council and City Council\"; \"changes before Christmas 2026\"; no date."];
+e_dec7 -> x_dec7 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="December 7 is the borough's ordinary December sitting (its calendar); the inference rests on \"before Christmas\" plus the calendar."];
+s_desousa_review -> x_dec7 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The City expects the borough to share the file and will present it to City council; no borough date given."];
+d_release -> x_dec7 [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="No borough or City agenda through October 19 carried the item; the released file names no sitting (the Sept 10 e-mail cites the October 5 calendar, i.e. the Oct 6 sitting, for the announcement only)."];
+e_cm_dec -> x_dec7 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="City council sits December 14–15; by his sequence the borough votes first and the item then \"comes back to the borough\", which an ordinary sitting before Christmas cannot accommodate after December 7."];
+s_oct6_propose -> x_dec7 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="\"This is what we're going to propose\": a proposal, with no sitting named."];
 }
