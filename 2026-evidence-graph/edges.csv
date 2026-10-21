@@ -455,3 +455,16 @@ s_devoir_window,x_window4,undercuts,"The office to Le Devoir: lane kept « d'avr
 d_card,x_window4,bears_on,Changes « before Christmas 2026 » put the start in December.
 d_aug20,x_window4,bears_on,"« Mesure transitoire pour l'hiver 2026-2027 », no months given."
 x_window4,x_reopen,bears_on,The window is the seasonal measure's length; its dates are question 3.3.
+d_eng_oct15,a_eng,attributed_to,
+d_eng_oct15,t_counter,refers_to,Reply to the question on the westbound channel from March 2026.
+d_eco_oct21,a_eco,attributed_to,
+d_eco_oct21,t_counter,refers_to,Lists the five revisions of the series; the released table predates the May and June reconstructions.
+d_eco_oct21,d_r2026_300,refers_to,The June 4 export contains the November redistribution but not the March one.
+d_counter_note,a_author,attributed_to,
+d_counter_note,d_eng_oct15,refers_to,
+d_counter_note,d_eco_oct21,refers_to,
+c_revisions,t_counter,computed_from,
+c_revisions,d_r2026_300,computed_from,
+c_revisions,d_eco_oct21,computed_from,
+c_revisions,c_36,refers_to,3.6 % stays 3.6 % at one decimal once the May gap is filled; the denominator grows.
+c_revisions,t_snow,refers_to,"Eastbound Dec–Mar becomes about 2,716; the 72 % outside constraint days is unchanged at the rounding."
