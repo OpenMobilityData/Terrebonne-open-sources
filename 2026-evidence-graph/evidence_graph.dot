@@ -65,7 +65,7 @@ subgraph cluster_data { label="data"; fontsize=11; color="#d9dcd8"; style="round
   t_portal_girouard [label="City open-data detector det-00118\nat Girouard: its only Terrebonne\nchannel counts westbound, from\nOctober 23, 2025; Jan 22.6, Feb\n29.1, Mar 24.7 a day (2026)\n[2025-10-23]", fillcolor="#e8f1fb", shape=box];
   t_csr [label="Code de la sécurité routière: art.\n341, a driver must leave at least\n1 m when passing a cyclist where\nthe limit is 50 km/h or less; art.\n487, cyclists ride as near as\npracticable to the right « en\ntenant compte de l'état de la\nchaussée et des risques\nd'emportiérage »\n[2018]", fillcolor="#e8f1fb", shape=box];
 }
-subgraph cluster_calculation { label="calculations"; fontsize=11; color="#d9dcd8"; style="rounded";
+subgraph cluster_numerical_assertion { label="numerical assertions"; fontsize=11; color="#d9dcd8"; style="rounded";
   c_99 [label="\"99 %\" = 8 ÷ 707 (two different\nslides; like-for-like 97–98 %)\n[2026-10-06]", fillcolor="#e6f6ef", shape=box];
   c_4 [label="\"4 cyclists\" = 8 passages ÷ 2\n[2026-10-06]", fillcolor="#e6f6ef", shape=box];
   c_40 [label="40 a day = 4,891 ÷ 121 days; no\nday under 2\n[2026-10-20]", fillcolor="#e6f6ef", shape=box];

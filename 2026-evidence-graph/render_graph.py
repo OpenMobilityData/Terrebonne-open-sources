@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render the Terrebonne evidence graph (nodes.csv, edges.csv) with Graphviz and as a browsable Cytoscape.js page.
 
-Node types: agent, document, data, calculation (a number derived from data by a stated operation), assertion, statement (a dated public statement), event.
+Node types: agent, document, data, numerical assertion (a number put forward or derived, with the operation that produces it from the data), assertion, statement (a dated public statement), event.
 Relations are factual verbs only (computed_from, states, matches, refers_to, withheld_in, differs_from, ...); none carries a judgment.
 Outputs: evidence_graph.svg/.png (dot, left-to-right by type), evidence_graph.html (Cytoscape.js, click a node for its source).
 Usage: python3 render_graph.py   (needs Graphviz `dot`)
@@ -31,7 +31,7 @@ def validate(nodes, edges):
             if 'made_at' not in o: problems.append(f"statement without made_at: {n['id']}")
             if 'attributed_to' not in o: problems.append(f"statement without attributed_to: {n['id']}")
             if not n['source']: problems.append(f"statement without source: {n['id']}")
-        if t == 'calculation' and 'computed_from' not in o: problems.append(f"calculation without computed_from: {n['id']}")
+        if t == 'numerical assertion' and 'computed_from' not in o: problems.append(f"numerical assertion without computed_from: {n['id']}")
         if t == 'assertion':
             if not (i & {'states', 'supports', 'undercuts', 'bears_on'}): problems.append(f"assertion without evidence: {n['id']}")
             if n['id'] not in q_nodes: problems.append(f"assertion not attached to a question: {n['id']}")
@@ -53,7 +53,7 @@ problems = validate(nodes, edges)
 open(os.path.join(HERE, 'validation_report.txt'), 'w', encoding='utf-8').write(f"{len(nodes)} nodes, {len(edges)} edges; {len(problems)} problem(s)\n" + '\n'.join(problems) + '\n')
 print(f"validation: {len(problems)} problem(s)" + (': ' + '; '.join(problems[:12]) + (' …' if len(problems) > 12 else '') if problems else ''))
 STYLE = {'agent': ('#e9ebee', 'ellipse'), 'document': ('#fff3e8', 'note'), 'data': ('#e8f1fb', 'box'),
-         'calculation': ('#e6f6ef', 'box'), 'assertion': ('#fff8e1', 'octagon'), 'statement': ('#fdf1f1', 'box'), 'event': ('#f3eefc', 'hexagon')}
+         'numerical assertion': ('#e6f6ef', 'box'), 'assertion': ('#fff8e1', 'octagon'), 'statement': ('#fdf1f1', 'box'), 'event': ('#f3eefc', 'hexagon')}
 EDGE = {'differs_from': ('#e34948', 'dashed'), 'same_data_other_denominator': ('#e34948', 'dashed'), 'unsupported_by': ('#e34948', 'dotted'),
         'does_not_include': ('#e34948', 'dotted'), 'withheld_in': ('#7a7a7a', 'dashed'), 'redacted_in': ('#7a7a7a', 'dashed'),
         'computed_from': ('#2a78d6', 'solid'), 'states': ('#2a78d6', 'solid'), 'matches': ('#1baf7a', 'solid'), 'attributed_to': ('#b0b4b9', 'solid'),
@@ -66,10 +66,10 @@ def wrap(s, w=34):
         else: line = (line + ' ' + word).strip()
     out.append(line); return '\\n'.join(out)
 dot = ['digraph G {', 'rankdir=LR; newrank=true; splines=spline; nodesep=0.25; ranksep=0.9; fontname="Helvetica"; node [fontname="Helvetica", fontsize=9, style="filled,rounded", penwidth=0.6, color="#9aa0a6"]; edge [fontname="Helvetica", fontsize=7.5, color="#9aa0a6", arrowsize=0.6];']
-order = ['agent', 'document', 'data', 'calculation', 'assertion', 'statement', 'event']
+order = ['agent', 'document', 'data', 'numerical assertion', 'assertion', 'statement', 'event']
 for t in order:
     fill, shape = STYLE[t]
-    dot.append(f'subgraph cluster_{t} {{ label="{t if t == "data" else t + "s"}"; fontsize=11; color="#d9dcd8"; style="rounded";')
+    dot.append(f'subgraph cluster_{t.replace(" ", "_")} {{ label="{t if t == "data" else t + "s"}"; fontsize=11; color="#d9dcd8"; style="rounded";')
     for n in nodes:
         if n['type'] == t:
             lab = wrap(n['label']) + (f'\\n[{n["date"]}]' if n['date'] else '')
@@ -83,8 +83,8 @@ for e in edges:
 dot.append('}')
 open(os.path.join(HERE, 'evidence_graph.dot'), 'w', encoding='utf-8').write('\n'.join(dot))
 # Cytoscape.js page (data embedded; cdnjs, pinned version). Short titles on the nodes, full text in the side panel.
-COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'calculation': '#1baf7a', 'assertion': '#eda100', 'statement': '#e34948', 'event': '#6250d6'}
-ORDER = ['agent', 'document', 'data', 'calculation', 'assertion', 'statement', 'event']
+COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'numerical assertion': '#1baf7a', 'assertion': '#eda100', 'statement': '#e34948', 'event': '#6250d6'}
+ORDER = ['agent', 'document', 'data', 'numerical assertion', 'assertion', 'statement', 'event']
 els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source']}} for n in nodes] + \
       [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' '), 'note': e.get('note', '')}} for i, e in enumerate(edges)]
 # swimlane positions: one column per type, nodes ordered by date (undated last)
@@ -115,7 +115,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .leg span{{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px}}.leg div{{margin:2px 0;font-size:12px}}#info{{margin-top:12px;font-size:13px}}#info b{{display:block;margin-bottom:4px}}#info ul{{padding-left:16px;margin:6px 0 0}}#info li{{margin:2px 0;font-size:12px}}
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
-<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data, calculations and assertions, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, calculations, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
+<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data, numerical assertions and assertions, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, numerical assertions, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
 <div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
