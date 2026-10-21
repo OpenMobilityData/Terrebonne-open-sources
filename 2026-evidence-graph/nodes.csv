@@ -24,11 +24,11 @@ t_portal,data,Open-data portal (no Kensington),"City open-data portal: no Kensin
 t_parking,data,No parking count in file,No parking inventory or occupancy count anywhere in the 508 pages,2026-10-09,2026-581
 t_snow,data,Snow-loading days,City snow-loading data: 30 loading days in sector CDN-301 last winter; 72 % of eastbound winter passages on unconstrained days,2026-03-31,2026-300 exposure note
 t_telraam,data,Telraam Jan 29 2025: 21 / 57,"Telraam sensors (King Edward, Draper): daylight counts, Jan 29 2025 = 21 and 57 bicycles",2025-01-29,Terrebonne-telraam
-c_99,figure,"""99 %"" = 8 ÷ 707","""99 %"" = 8 ÷ 707 (two different slides; like-for-like 97–98 %)",2026-10-06,derived
-c_4,figure,"""4 cyclists"" = 8 ÷ 2","""4 cyclists"" = 8 passages ÷ 2",2026-10-06,derived
-c_40,figure,40 a day,"40 a day = 4,891 ÷ 121 days; no day under 2",2026-10-20,derived
-c_36,figure,3.6 % = share of year,"3.6 % = 4,891 ÷ 135,276 (winter's share of the year)",2026-10-20,derived
-c_76,figure,7.6 % per day,7.6 % = 40.4 ÷ 534.4 per day (winter vs rest of year); 93 % drop per day,2026-10-20,derived
+c_99,calculation,"""99 %"" = 8 ÷ 707","""99 %"" = 8 ÷ 707 (two different slides; like-for-like 97–98 %)",2026-10-06,derived
+c_4,calculation,"""4 cyclists"" = 8 ÷ 2","""4 cyclists"" = 8 passages ÷ 2",2026-10-06,derived
+c_40,calculation,40 a day,"40 a day = 4,891 ÷ 121 days; no day under 2",2026-10-20,derived
+c_36,calculation,3.6 % = share of year,"3.6 % = 4,891 ÷ 135,276 (winter's share of the year)",2026-10-20,derived
+c_76,calculation,7.6 % per day,7.6 % = 40.4 ÷ 534.4 per day (winter vs rest of year); 93 % drop per day,2026-10-20,derived
 s_oct6_99,statement,"Oct 6: ""99 % … 4 cyclists""","Oct 6 address: ""diminishes by 99 % … from 700 … to 8 … that's 4 cyclists""",2026-10-06,webcast 0k_KZf9uxTk
 s_oct6_propose,statement,"Oct 6: ""propose"", ""test""","Oct 6: ""this is what we're going to propose""; ""it's going to be a test""",2026-10-06,webcast 0k_KZf9uxTk
 s_oct6_decision,statement,Oct 6: « décision … semaine passée »,Oct 6 Q&A: « le dernier rapport qui nous permettait de prendre une décision en consensus la semaine passée »,2026-10-06,clip 03 @ 5:12 (webcast 1:22:43)
