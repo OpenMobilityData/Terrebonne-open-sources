@@ -97,6 +97,8 @@ subgraph cluster_assertion { label="assertions"; fontsize=11; color="#d9dcd8"; s
   x_dec7 [label="Assertion: the borough council\nwill vote on the winter conversion\nat its sitting of December 7, 2026\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_since_jan [label="Assertion: the current\nadministration has been examining\nthe Terrebonne change since the\nbeginning of 2026 (the\ncouncillor's reported reply at the\nCafé Citoyens of October 18,\nunrecorded; also « since we got\ninto office », October 6)\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_campaign [label="Assertion: removing one direction\nof the Terrebonne lane in winter\nwas announced to voters as a\ncommitment during the 2025\ncampaign\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
+  x_info_coming [label="Assertion: the borough will\ncommunicate detailed information\non the winter change to residents\nbefore the council votes (the\nborough's stated intention, in\ncorrespondence seen by the author,\nis « au cours des prochaines\nsemaines », with no date and no\nsession named)\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
+  x_window4 [label="Assertion: the conversion of one\ndirection lasts about four months\neach winter (December to March),\nas opposed to the three months\nimplied by « d'avril à décembre »\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
 }
 subgraph cluster_statement { label="statements"; fontsize=11; color="#d9dcd8"; style="rounded";
   s_oct6_99 [label="Oct 6 address: \"diminishes by 99\n% … from 700 … to 8 … that's 4\ncyclists\"\n[2026-10-06]", fillcolor="#fdf1f1", shape=box, URL="https://www.youtube.com/watch?v=0k_KZf9uxTk", target="_blank"];
@@ -614,4 +616,17 @@ d_dec12_2025 -> x_since_jan [label="bears on", color="#eda100", fontcolor="#eda1
 d_feb10 -> x_since_jan [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="February 10, 2026: Terrebonne named among streets the City is working with boroughs to make safer; the SUM's follow-up process announced."];
 e_zoom -> x_since_jan [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The first exchange with residents' representatives on the measure came shortly before October 6."];
 x_campaign -> x_since_jan [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Both are about when the change was first communicated; neither is supported by a document before June 10, 2026."];
+s_oct6_mayor_study -> x_info_coming [label="supports", color="#1baf7a", fontcolor="#1baf7a", style=solid, tooltip="« Once it's available, if we can make it available »."];
+d_card -> x_info_coming [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« Residents will see changes before Christmas 2026 »: changes announced, not information."];
+d_dec12_2025 -> x_info_coming [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The office's own standard: dialogue from the start to avoid later modifications."];
+e_nov30_2023 -> x_info_coming [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The 2023 precedent: a public session before the vote."];
+d_release -> x_info_coming [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="Nothing released sets a date or a format for informing residents; the three technical documents are withheld."];
+s_cm_share -> x_info_coming [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted];
+s_db_window -> x_window4 [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="« December, January, February, March » (Daybreak 03:11)."];
+s_cm_3 -> x_window4 [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="« décembre, janvier, février et mars » (Oct 19, 41:44)."];
+s_cm_fourmonths -> x_window4 [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="« Only for four months » (Oct 19, 7:38:24)."];
+s_devoir_window -> x_window4 [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="The office to Le Devoir: lane kept « d'avril à décembre », i.e. three months removed."];
+d_card -> x_window4 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Changes « before Christmas 2026 » put the start in December."];
+d_aug20 -> x_window4 [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« Mesure transitoire pour l'hiver 2026-2027 », no months given."];
+x_window4 -> x_reopen [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The window is the seasonal measure's length; its dates are question 3.3."];
 }

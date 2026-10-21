@@ -442,3 +442,16 @@ d_dec12_2025,x_since_jan,bears_on,"December 12, 2025: the review to proceed in d
 d_feb10,x_since_jan,bears_on,"February 10, 2026: Terrebonne named among streets the City is working with boroughs to make safer; the SUM's follow-up process announced."
 e_zoom,x_since_jan,bears_on,The first exchange with residents' representatives on the measure came shortly before October 6.
 x_campaign,x_since_jan,bears_on,"Both are about when the change was first communicated; neither is supported by a document before June 10, 2026."
+s_oct6_mayor_study,x_info_coming,supports,"« Once it's available, if we can make it available »."
+d_card,x_info_coming,bears_on,"« Residents will see changes before Christmas 2026 »: changes announced, not information."
+d_dec12_2025,x_info_coming,bears_on,The office's own standard: dialogue from the start to avoid later modifications.
+e_nov30_2023,x_info_coming,bears_on,The 2023 precedent: a public session before the vote.
+d_release,x_info_coming,undercuts,Nothing released sets a date or a format for informing residents; the three technical documents are withheld.
+s_cm_share,x_info_coming,bears_on,
+s_db_window,x_window4,states,"« December, January, February, March » (Daybreak 03:11)."
+s_cm_3,x_window4,states,"« décembre, janvier, février et mars » (Oct 19, 41:44)."
+s_cm_fourmonths,x_window4,states,"« Only for four months » (Oct 19, 7:38:24)."
+s_devoir_window,x_window4,undercuts,"The office to Le Devoir: lane kept « d'avril à décembre », i.e. three months removed."
+d_card,x_window4,bears_on,Changes « before Christmas 2026 » put the start in December.
+d_aug20,x_window4,bears_on,"« Mesure transitoire pour l'hiver 2026-2027 », no months given."
+x_window4,x_reopen,bears_on,The window is the seasonal measure's length; its dates are question 3.3.
