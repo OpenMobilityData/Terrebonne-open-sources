@@ -9,5 +9,5 @@ question,title,nodes
 3.8,Who signs the plans,s_cm_sign;d_jun22;d_sum;d_sim;x_safety_addressed;x_pass
 3.9,The snow-removal-only option,d_offer;t_snow;s_zoom;d_note;x_stormonly
 3.10,The meetings and the door-to-door,s_cm_counter;e_zoom;x_consulted
-3.11,The City's follow-up,e_cm_oct19;x_shared;x_precedent
+3.11,The City's follow-up,e_cm_oct19;x_shared;x_precedent;x_since_jan;x_campaign
 3.12,Residents' mobility,s_db_spaces;x_parking_measured

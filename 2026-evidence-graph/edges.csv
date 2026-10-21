@@ -421,3 +421,24 @@ s_desousa_review,x_dec7,bears_on,The City expects the borough to share the file 
 d_release,x_dec7,undercuts,"No borough or City agenda through October 19 carried the item; the released file names no sitting (the Sept 10 e-mail cites the October 5 calendar, i.e. the Oct 6 sitting, for the announcement only)."
 e_cm_dec,x_dec7,bears_on,"City council sits December 14–15; by his sequence the borough votes first and the item then ""comes back to the borough"", which an ordinary sitting before Christmas cannot accommodate after December 7."
 s_oct6_propose,x_dec7,bears_on,"""This is what we're going to propose"": a proposal, with no sitting named."
+d_platform,a_mayor,attributed_to,The party platform of the mayor and the councillor.
+d_platform,e_election,precedes,
+e_election,e_cm_nov26_2025,precedes,
+s_oct6_sinceoffice,a_teodoresco,attributed_to,
+s_oct6_sinceoffice,e_oct6,made_at,
+s_cm_campaign,a_teodoresco,attributed_to,
+s_cm_campaign,e_cm_oct19,made_at,
+s_oct6_promise,x_campaign,states,« We have made a commitment and we have to act on this promise ».
+s_cm_campaign,x_campaign,states,« Engagé à faire en campagne … de revoir la configuration »: the commitment stated is a review of the configuration.
+d_platform,x_campaign,undercuts,The written platform commits to « un état des lieux du réseau cyclable »; its CDN-NDG section does not mention Terrebonne or the removal of any lane.
+d_feb10,x_campaign,bears_on,"After the election the City framed the commitment as an audit: « recueillir les données, analyser et corriger au besoin », results at the end of 2026."
+d_june10,x_campaign,bears_on,"The objective of restoring the parking lane first appears in writing on June 10, 2026, attributed to the elected officials."
+s_oct6_sinceoffice,x_since_jan,supports,« Since we got into office » (November 2025).
+s_cm_campaign,x_since_jan,supports,« Tout de suite après qu'on est arrivé à la mairie ».
+d_june10,x_since_jan,supports,By June 10 the elected officials had sketched two concepts and the engineers had given an opinion: work before June.
+d_release,x_since_jan,undercuts,"The earliest document in the 508 pages released is the June 10, 2026 e-mail; nothing from January to May."
+s_mayor_nov2025,x_since_jan,bears_on,"November 26, 2025: « Je ne peux pas vous dire aujourd'hui si cette piste cyclable va être démantelée »."
+d_dec12_2025,x_since_jan,bears_on,"December 12, 2025: the review to proceed in dialogue, building on existing data and analyses."
+d_feb10,x_since_jan,bears_on,"February 10, 2026: Terrebonne named among streets the City is working with boroughs to make safer; the SUM's follow-up process announced."
+e_zoom,x_since_jan,bears_on,The first exchange with residents' representatives on the measure came shortly before October 6.
+x_campaign,x_since_jan,bears_on,"Both are about when the change was first communicated; neither is supported by a document before June 10, 2026."
