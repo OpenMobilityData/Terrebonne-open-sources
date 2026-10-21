@@ -404,3 +404,13 @@ d_petition,t_counter,refers_to,"135,000 bicycle passages in the first year (the 
 d_petition,s_oct6_sameside,matches,"The direction removed: the one running with traffic, eastbound east of Cavendish, westbound west of it."
 d_petition,e_dec7,precedes,To be handed to the borough council before the vote.
 d_petition,e_oct6,refers_to,"« Lors de la séance du conseil d'arrondissement du 6 octobre 2026, l'administration … a annoncé »."
+d_rel2023,a_city,attributed_to,
+d_rel2023,d_exp2023,refers_to,The study published with the release.
+d_rel2023,e_nov30_2023,precedes,
+e_nov30_2023,d_ca24,precedes,"The session preceded the February 5, 2024 vote."
+d_rel2023,x_precedent,supports,"The study was published on October 30, 2023, with the announcement."
+e_nov30_2023,x_precedent,supports,"Recorded in the decisional file of the February 5, 2024 approval."
+d_ca24,x_precedent,supports,
+x_precedent,x_shared,bears_on,"The comparison: the 2024 project's study was public before its vote; the 2026 measure's note, SUM analysis and SIM opinion are withheld before its vote."
+x_precedent,x_consulted,bears_on,A public session open to all residents in 2023; one Zoom with the APC in 2026.
+d_dec12_2025,x_precedent,bears_on,The mayor's office's own standard of dialogue from the start.

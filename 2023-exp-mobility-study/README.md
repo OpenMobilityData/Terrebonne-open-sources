@@ -16,3 +16,5 @@ The mobility study commissioned by the borough before the 2024 reconfiguration o
 ## Why it is here
 
 The 2026 record released under access request 2026-581 (see the companion repository) refers to this study's traffic projections and to the "two mandates" question: the 2023 study was a feasibility and design study for a project the borough had decided to pursue, and the 2026 note was commissioned to recommend a change to that project. Readers of either analysis should be able to open the 2023 study itself.
+
+**Publication and public meeting (from the release itself):** the release of October 30, 2023 states « Aujourd'hui, l'arrondissement publie les résultats de l'étude et dévoile le scénario choisi », and announces exchanges with institutional partners in the week of November 20 and « le 30 novembre, lors d'une rencontre citoyenne s'adressant à la population générale ». The borough's decisional file for the February 5, 2024 approval (1246880002, section « Opération(s) de communication ») records: « Une séance d'information citoyenne a aussi été faite le 30 novembre 2023. »
