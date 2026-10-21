@@ -57,3 +57,9 @@ s_oct6_propose,e_dec7,precedes
 s_oct6_99,a_teodoresco,attributed_to
 s_cm_3,a_teodoresco,attributed_to
 s_db_40,a_teodoresco,attributed_to
+s_cm_fourmonths,a_teodoresco,attributed_to
+s_cm_fourmonths,s_db_window,matches
+s_cm_fourmonths,s_db_perm,refers_to
+s_cm_fourmonths,d_aug13,differs_from
+s_cm_fourmonths,d_aug20,differs_from
+s_cm_fourmonths,d_devoir,differs_from

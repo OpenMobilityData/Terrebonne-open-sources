@@ -55,6 +55,7 @@ subgraph cluster_statement { label="statements"; fontsize=11; color="#d9dcd8"; s
   s_cm_counter [label="City council 44:51: « le seul\ncompteur disponible … retiré du\ndomaine public »; \"30 … 40\npassages par jour\"\n[2026-10-19]", fillcolor="#fdf1f1", shape=box];
   s_cm_36 [label="City council 7:38:24: \"3.6 % of\noverall cycling traffic\"\n[2026-10-19]", fillcolor="#fdf1f1", shape=box];
   s_cm_sign [label="City council 7:10:02: no lane «\nqui ne va pas être signée par les\ningénieurs »; « très content de\ncette décision »\n[2026-10-19]", fillcolor="#fdf1f1", shape=box];
+  s_cm_fourmonths [label="City council 7:38:24: \"It's 3.6%\nthat we're talking about only for\nfour months, and then the rest we\nprotect and we keep as is\"\n[2026-10-19]", fillcolor="#fdf1f1", shape=box];
 }
 subgraph cluster_event { label="events"; fontsize=11; color="#d9dcd8"; style="rounded";
   e_dec7 [label="Borough council vote\n[2026-12-07]", fillcolor="#f3eefc", shape=hexagon];
@@ -117,4 +118,10 @@ s_oct6_propose -> e_dec7 [label="precedes", color="#9aa0a6", fontcolor="#9aa0a6"
 s_oct6_99 -> a_teodoresco [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid];
 s_cm_3 -> a_teodoresco [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid];
 s_db_40 -> a_teodoresco [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid];
+s_cm_fourmonths -> a_teodoresco [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid];
+s_cm_fourmonths -> s_db_window [label="matches", color="#1baf7a", fontcolor="#1baf7a", style=solid];
+s_cm_fourmonths -> s_db_perm [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_cm_fourmonths -> d_aug13 [label="differs from", color="#e34948", fontcolor="#e34948", style=dashed];
+s_cm_fourmonths -> d_aug20 [label="differs from", color="#e34948", fontcolor="#e34948", style=dashed];
+s_cm_fourmonths -> d_devoir [label="differs from", color="#e34948", fontcolor="#e34948", style=dashed];
 }
