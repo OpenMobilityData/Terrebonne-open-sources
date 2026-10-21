@@ -15,7 +15,7 @@ Every statement node quotes words checked by ear against the recording and gives
 | `agent` | who produced or said something |
 | `document` | a dated document, released, withheld or redacted |
 | `data` | a table or dataset, or a documented absence of one |
-| `calculation` | a number derived from data by a stated operation, shown in its label |
+| `numerical assertion` | a number put forward in the debate or derived here from the released data, with the operation that produces it shown in its label; the `states` edges say who put it forward, `computed_from` says what it rests on |
 | `assertion` | an unattributed proposition that the evidence bears on, worded so that it could be true or false (« The one-direction layout will become year-round »); never a conclusion about a person. Evidence links to it with `supports`, `undercuts` or `bears_on`; a statement or document that asserts it links with `states`. The graph shows what stands on each side and gives no verdict |
 | `statement` | a dated public statement, quoted, with its time stamp |
 | `event` | a dated step in the process |
