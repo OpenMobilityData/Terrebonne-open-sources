@@ -8,7 +8,7 @@
 
 Five numbered panels, each with its sources:
 
-1. **How many use it, month by month.** Median and mean bicycle passages per day for each month, August 2025 to July 2026, with motor vehicles per day, from the borough's counter at Kensington (access request 2026-581, bundle 01, pp. 74–81); the winter window (December 1 to March 31: 4,891 passages, 40 a day, no day without a bicycle).
+1. **How many use it, month by month.** Median and mean bicycle passages per day for each month, August 2025 to July 2026, with motor vehicles per day, from the borough's counter at Kensington (access request 2026-581, bundle 01, [pp. 74–81](https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=74)); the winter window (December 1 to March 31: 4,891 passages, 40 a day, no day without a bicycle).
 2. **Speeds on a 30 km/h street.** The 85th-percentile speed (V85) and the share of cars over 30 and over 40 km/h by season, from the two Telraam sensors at King Edward and Draper ([Terrebonne-telraam](https://github.com/OpenMobilityData/Terrebonne-telraam)); daylight hours with at least 20 cars.
 3. **What was said, and what the counter shows.** The figures given at council on October 6 and October 19, 2026 ("99 %", "8 … 4 cyclists", "3.6 %") beside the counter's figures (40 a day; 7.6 % of the rest-of-year daily rate; the share-of-year arithmetic), with the violin plot of the winter days.
 4. **The weather.** Last winter at Trudeau airport (Environment Canada station 7025251) and the day behind the "8", January 29, 2025, with the citizen sensors' counts that day.
