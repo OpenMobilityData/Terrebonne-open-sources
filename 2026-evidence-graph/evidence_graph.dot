@@ -73,7 +73,7 @@ subgraph cluster_figure { label="figures"; fontsize=11; color="#d9dcd8"; style="
   c_76 [label="7.6 % = 40.4 ÷ 534.4 per day\n(winter vs rest of year); 93 %\ndrop per day\n[2026-10-20]", fillcolor="#e6f6ef", shape=box];
 }
 subgraph cluster_assertion { label="assertions"; fontsize=11; color="#d9dcd8"; style="rounded";
-  x_yearround [label="Assertion: the removal of one\nprotected direction will not be\nlimited to winter but will become\nthe year-round layout\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
+  x_yearround [label="Assertion: the winter layout, with\none protected direction removed,\nwill not be reversed in spring but\nwill remain the year-round layout\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_99 [label="Assertion: bicycle traffic on\nTerrebonne falls by 99 % in winter\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_36rate [label="Assertion: the 3.6 % figure\nexpresses how much the lane is\nused in winter relative to the\nrest of the year\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_parking_measured [label="Assertion: the borough measured\nthe shortage of winter parking\nthat the conversion is meant to\nrelieve\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
@@ -89,6 +89,7 @@ subgraph cluster_assertion { label="assertions"; fontsize=11; color="#d9dcd8"; s
   x_entire [label="Assertion: the conversion applies\nto the full length of the lane,\nSt-Ignatius to Girouard\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_pass [label="Assertion: in the winter layout, a\ndriver can pass a cyclist in the\nsingle traffic lane while leaving\nthe metre the Code requires\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_double [label="Assertion: the borough would\nreconsider the measure if winter\nbicycle traffic doubled\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
+  x_bidir [label="Assertion: the lanes will be\nreplaced by a single bidirectional\nlane on one side of Terrebonne\nwith parking restored on the other\n(the layout of the August 13\nmandate and of Volet 2)\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
 }
 subgraph cluster_statement { label="statements"; fontsize=11; color="#d9dcd8"; style="rounded";
   s_oct6_99 [label="Oct 6 address: \"diminishes by 99\n% … from 700 … to 8 … that's 4\ncyclists\"\n[2026-10-06]", fillcolor="#fdf1f1", shape=box];
@@ -469,8 +470,8 @@ e_cm_nov16 -> e_dec7 [label="precedes", color="#9aa0a6", fontcolor="#9aa0a6", st
 t_lane_widths -> d_june10 [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="June 10: « une voie de circulation très étroite (moins de 4 mètres) », the June concept."];
 t_deck_p60 -> t_p62 [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="Five counts averaged for motor vehicles; one day for bicycles."];
 t_p85 -> t_p62 [label="same day", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, constraint=false];
-d_aug13 -> x_yearround [label="supports", color="#1baf7a", fontcolor="#1baf7a", style=solid, tooltip="Written mandate for a permanent one-side bidirectional lane with parking restored."];
-d_aug20 -> x_yearround [label="supports", color="#1baf7a", fontcolor="#1baf7a", style=solid, tooltip="Volet 2, the permanent reconfiguration, follows the transitional winter measure."];
+d_aug13 -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The mandate is for a permanent change, but of a different layout (bidirectional on one side); see the separate assertion."];
+d_aug20 -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Volet 2 is a permanent reconfiguration, of the bidirectional kind; the winter measure is named « transitoire »."];
 s_db_perm -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Ambiguous: every winter, or year-round."];
 s_cm_fourmonths -> x_yearround [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="« Only for four months, and then the rest we protect and we keep as is »."];
 s_devoir_window -> x_yearround [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="Lane kept « d'avril à décembre »."];
@@ -548,4 +549,13 @@ d_june10 -> x_pass [label="bears on", color="#eda100", fontcolor="#eda100", styl
 s_db_perm -> x_double [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="« If … winter traffic doubles for bikers »."];
 c_36 -> x_double [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Doubling 4,891 is about 7 % of the year under the share criterion."];
 t_counter -> x_double [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted];
+d_aug13 -> x_bidir [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="« Une piste cyclable bidirectionnelle d'un côté … et le retour du stationnement d'un côté de la rue »."];
+d_aug20 -> x_bidir [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="Volet 2, the permanent plan, after the transitional winter measure."];
+d_june10 -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="One of the two concepts sketched by the elected officials in June."];
+s_oct6_bidir -> x_bidir [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="« It was too complicated and no real upside for anyone » (spoken; no document withdraws Volet 2)."];
+s_zoom -> x_bidir [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="The engineers would not sign a bidirectional lane (his account at the Zoom)."];
+d_jun22 -> x_bidir [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="The SUM's « compromis importants … sécurité » covered both layouts studied in June."];
+s_oct6_bikeplan -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« A longer term, more sophisticated bike plan … for next year »: the only public hint of what follows the winter measure."];
+d_release -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Nothing in the 508 pages withdraws the mandate or Volet 2."];
+x_bidir -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Two different permanent end states; the mandate supports the first, the seasonal statements undercut the second."];
 }

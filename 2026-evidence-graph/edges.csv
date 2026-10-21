@@ -309,8 +309,8 @@ e_cm_nov16,e_dec7,precedes,
 t_lane_widths,d_june10,refers_to,"June 10: « une voie de circulation très étroite (moins de 4 mètres) », the June concept."
 t_deck_p60,t_p62,refers_to,Five counts averaged for motor vehicles; one day for bicycles.
 t_p85,t_p62,same_day,
-d_aug13,x_yearround,supports,Written mandate for a permanent one-side bidirectional lane with parking restored.
-d_aug20,x_yearround,supports,"Volet 2, the permanent reconfiguration, follows the transitional winter measure."
+d_aug13,x_yearround,bears_on,"The mandate is for a permanent change, but of a different layout (bidirectional on one side); see the separate assertion."
+d_aug20,x_yearround,bears_on,"Volet 2 is a permanent reconfiguration, of the bidirectional kind; the winter measure is named « transitoire »."
 s_db_perm,x_yearround,bears_on,"Ambiguous: every winter, or year-round."
 s_cm_fourmonths,x_yearround,undercuts,"« Only for four months, and then the rest we protect and we keep as is »."
 s_devoir_window,x_yearround,undercuts,Lane kept « d'avril à décembre ».
@@ -388,3 +388,12 @@ d_june10,x_pass,bears_on,« Une voie de circulation très étroite (moins de 4 m
 s_db_perm,x_double,states,« If … winter traffic doubles for bikers ».
 c_36,x_double,bears_on,"Doubling 4,891 is about 7 % of the year under the share criterion."
 t_counter,x_double,bears_on,
+d_aug13,x_bidir,states,« Une piste cyclable bidirectionnelle d'un côté … et le retour du stationnement d'un côté de la rue ».
+d_aug20,x_bidir,states,"Volet 2, the permanent plan, after the transitional winter measure."
+d_june10,x_bidir,bears_on,One of the two concepts sketched by the elected officials in June.
+s_oct6_bidir,x_bidir,undercuts,« It was too complicated and no real upside for anyone » (spoken; no document withdraws Volet 2).
+s_zoom,x_bidir,undercuts,The engineers would not sign a bidirectional lane (his account at the Zoom).
+d_jun22,x_bidir,undercuts,The SUM's « compromis importants … sécurité » covered both layouts studied in June.
+s_oct6_bikeplan,x_bidir,bears_on,"« A longer term, more sophisticated bike plan … for next year »: the only public hint of what follows the winter measure."
+d_release,x_bidir,bears_on,Nothing in the 508 pages withdraws the mandate or Volet 2.
+x_bidir,x_yearround,bears_on,"Two different permanent end states; the mandate supports the first, the seasonal statements undercut the second."
