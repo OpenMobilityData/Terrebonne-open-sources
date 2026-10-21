@@ -398,3 +398,9 @@ s_oct6_bikeplan,x_bidir,bears_on,"« A longer term, more sophisticated bike plan
 d_release,x_bidir,bears_on,Nothing in the 508 pages withdraws the mandate or Volet 2.
 x_bidir,x_yearround,bears_on,"Two different permanent end states; the mandate supports the first, the seasonal statements undercut the second."
 x_reopen,x_yearround,bears_on,The two assertions are complements: evidence for one is evidence against the other.
+d_petition,a_apc,attributed_to,
+d_petition,x_yearround,states,"""There is a real risk that the bike lane will not be reinstalled in the spring."""
+d_petition,t_counter,refers_to,"135,000 bicycle passages in the first year (the petition says ""trips"")."
+d_petition,s_oct6_sameside,matches,"The direction removed: the one running with traffic, eastbound east of Cavendish, westbound west of it."
+d_petition,e_dec7,precedes,To be handed to the borough council before the vote.
+d_petition,e_oct6,refers_to,"« Lors de la séance du conseil d'arrondissement du 6 octobre 2026, l'administration … a annoncé »."

@@ -47,6 +47,7 @@ subgraph cluster_document { label="documents"; fontsize=11; color="#d9dcd8"; sty
   d_reconsideration [label="The author's letter of October 15,\n2026 to the borough's access\nofficer asking reconsideration of\nthe s. 37/39 refusals, with a\nsupplement on October 20 citing «\ncette décision » and « aucun\nproblème à partager »; reply asked\nby November 20\n[2026-10-15]", fillcolor="#fff3e8", shape=note];
   d_r2026_634 [label="Access request 2026-634 to the\nborough for the final EXP note and\nthe October 6 material; answer due\nNovember 7, 2026\n[2026-10]", fillcolor="#fff3e8", shape=note];
   d_city_requests [label="Two access requests to the City's\nService du greffe, October 19,\n2026: the SUM technical note of\nJune 17 and the SIM opinion of\nJuly 13, with their working\ndocuments\n[2026-10-19]", fillcolor="#fff3e8", shape=note];
+  d_petition [label="Petition of the Association des\npiétons et cyclistes de NDG,\nlaunched October 21, 2026,\nreserved for CDN-NDG residents, to\nbe handed to the borough council:\nagainst the partial dismantling of\nthe lane; « Le risque que la voie\ncyclable ne soit pas réaménagée au\nprintemps est réel »; cites the\ncounter's 135,000 passages in the\nfirst year\n[2026-10-21]", fillcolor="#fff3e8", shape=note];
 }
 subgraph cluster_data { label="data"; fontsize=11; color="#d9dcd8"; style="rounded";
   t_p61 [label="Miovision, Grand, Sept 19 2024:\n707 bicycles, all four approaches,\n6 peak hours\n[2024-09-19]", fillcolor="#e8f1fb", shape=box];
@@ -559,4 +560,10 @@ s_oct6_bikeplan -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda10
 d_release -> x_bidir [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Nothing in the 508 pages withdraws the mandate or Volet 2."];
 x_bidir -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Two different permanent end states; the mandate supports the first, the seasonal statements undercut the second."];
 x_reopen -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The two assertions are complements: evidence for one is evidence against the other."];
+d_petition -> a_apc [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid, constraint=false];
+d_petition -> x_yearround [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="\"There is a real risk that the bike lane will not be reinstalled in the spring.\""];
+d_petition -> t_counter [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="135,000 bicycle passages in the first year (the petition says \"trips\")."];
+d_petition -> s_oct6_sameside [label="matches", color="#1baf7a", fontcolor="#1baf7a", style=solid, tooltip="The direction removed: the one running with traffic, eastbound east of Cavendish, westbound west of it."];
+d_petition -> e_dec7 [label="precedes", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="To be handed to the borough council before the vote."];
+d_petition -> e_oct6 [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="« Lors de la séance du conseil d'arrondissement du 6 octobre 2026, l'administration … a annoncé »."];
 }
