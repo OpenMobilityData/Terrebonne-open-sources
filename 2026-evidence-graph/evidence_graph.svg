@@ -1708,10 +1708,10 @@
 <g id="node51" class="node">
 <title>t_telraam</title>
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M133.75,-675.45C133.75,-675.45 12,-675.45 12,-675.45 6,-675.45 0,-669.45 0,-663.45 0,-663.45 0,-640.45 0,-640.45 0,-634.45 6,-628.45 12,-628.45 12,-628.45 133.75,-628.45 133.75,-628.45 139.75,-628.45 145.75,-634.45 145.75,-640.45 145.75,-640.45 145.75,-663.45 145.75,-663.45 145.75,-669.45 139.75,-675.45 133.75,-675.45"/>
-<text text-anchor="middle" x="72.88" y="-662.9" font-family="Helvetica,sans-Serif" font-size="9.00">Telraam sensors (King Edward,</text>
-<text text-anchor="middle" x="72.88" y="-653.15" font-family="Helvetica,sans-Serif" font-size="9.00">Draper): daylight counts, Jan 29</text>
-<text text-anchor="middle" x="72.88" y="-643.4" font-family="Helvetica,sans-Serif" font-size="9.00">2025 = 21 and 57 bicycles</text>
-<text text-anchor="middle" x="72.88" y="-633.65" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;01&#45;29]</text>
+<text text-anchor="middle" x="72.87" y="-662.9" font-family="Helvetica,sans-Serif" font-size="9.00">Telraam sensors (King Edward,</text>
+<text text-anchor="middle" x="72.87" y="-653.15" font-family="Helvetica,sans-Serif" font-size="9.00">Draper): daylight counts, Jan 29</text>
+<text text-anchor="middle" x="72.87" y="-643.4" font-family="Helvetica,sans-Serif" font-size="9.00">2025 = 21 and 57 bicycles</text>
+<text text-anchor="middle" x="72.87" y="-633.65" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;01&#45;29]</text>
 </g>
 <!-- t_telraam&#45;&gt;t_p62 -->
 <g id="edge22" class="edge">
