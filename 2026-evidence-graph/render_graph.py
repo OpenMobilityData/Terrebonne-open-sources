@@ -39,6 +39,8 @@ def validate(nodes, edges):
             problems.append(f"document without release status: {n['id']}")
         if t == 'data' and not n['source']: problems.append(f"data without source: {n['id']}")
         if t in ('statement', 'document', 'data', 'event') and not n['date']: problems.append(f"undated {t}: {n['id']}")
+    nolink = [n['id'] for n in nodes if n['type'] in ('statement', 'document', 'data') and not n.get('url')]
+    if nolink: print(f'note: {len(nolink)} statement/document/data node(s) without a link to their source: ' + ', '.join(nolink))
     for e in edges:
         if e['relation'] in ('differs_from', 'unsupported_by', 'does_not_include', 'same_data_other_denominator') and not e.get('note'):
             problems.append(f"difference without note: {e['from']} -> {e['to']}")
@@ -73,7 +75,8 @@ for t in order:
     for n in nodes:
         if n['type'] == t:
             lab = wrap(n['label']) + (f'\\n[{n["date"]}]' if n['date'] else '')
-            dot.append(f'  {n["id"]} [label="{lab}", fillcolor="{fill}", shape={shape}];')
+            href = f', URL="{n["url"]}", target="_blank"' if n.get('url') else ''
+            dot.append(f'  {n["id"]} [label="{lab}", fillcolor="{fill}", shape={shape}{href}];')
     dot.append('}')
 for e in edges:
     col, sty = EDGE.get(e['relation'], ('#9aa0a6', 'solid'))
@@ -85,7 +88,7 @@ open(os.path.join(HERE, 'evidence_graph.dot'), 'w', encoding='utf-8').write('\n'
 # Cytoscape.js page (data embedded; cdnjs, pinned version). Short titles on the nodes, full text in the side panel.
 COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'numerical assertion': '#1baf7a', 'assertion': '#eda100', 'statement': '#e34948', 'event': '#6250d6'}
 ORDER = ['agent', 'document', 'data', 'numerical assertion', 'assertion', 'statement', 'event']
-els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source'], 'aliases': n.get('aliases', '')}} for n in nodes] + \
+els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source'], 'aliases': n.get('aliases', ''), 'url': n.get('url', '')}} for n in nodes] + \
       [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' '), 'note': e.get('note', '')}} for i, e in enumerate(edges)]
 # swimlane positions: one column per type, nodes ordered by date (undated last)
 # swimlanes: one column per type, except statements, which get one column per event they were made at (events in date order)
@@ -115,7 +118,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .leg span{{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px}}.leg div{{margin:2px 0;font-size:12px}}#info{{margin-top:12px;font-size:13px}}#info b{{display:block;margin-bottom:4px}}#info ul{{padding-left:16px;margin:6px 0 0}}#info li{{margin:2px 0;font-size:12px}}
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
-<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data, numerical assertions and assertions, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, numerical assertions, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
+<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data, numerical assertions and assertions, with factual relations only. Click a node for its full text, source and links; double-click to open the source itself (the page of the bundle, the moment in the webcast, the file); drag to rearrange; scroll to zoom. Columns: agents, documents, data, numerical assertions, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
 <div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><input id="q" type="search" placeholder="Find a node (words, phrases, aliases)…" style="width:100%;font:13px -apple-system,&quot;Helvetica Neue&quot;,Arial,sans-serif;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)"><div id="hits" class="muted" style="font-size:12px;margin-top:4px"></div></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
@@ -134,8 +137,9 @@ const cy=cytoscape({{container:document.getElementById('cy'),elements:{json.dump
 function focus(n){{cy.elements().removeClass('hl dim'); if(!n){{return;}} const nb=n.closedNeighborhood(); cy.elements().not(nb).addClass('dim'); nb.addClass('hl');}}
 cy.on('tap','node',e=>{{const n=e.target,d=n.data(); focus(n);
  const links=n.connectedEdges().map(ed=>{{const other=ed.source().id()===n.id()?ed.target():ed.source(); const dir=ed.source().id()===n.id()?'→':'←'; return '<li>'+dir+' '+ed.data('rel')+' <i>'+other.data('short').replace(/</g,'&lt;')+'</i>'+(ed.data('note')?'<br><span class="muted">'+ed.data('note').replace(/</g,'&lt;')+'</span>':'')+'</li>';}}).join('');
- document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+(d.aliases?'<br>Also said as: '+d.aliases.replace(/</g,'&lt;'):'')+'<ul>'+links+'</ul>';}});
+ document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+(d.aliases?'<br>Also said as: '+d.aliases.replace(/</g,'&lt;'):'')+(d.url?'<br><a href="'+d.url.replace(/"/g,'&quot;')+'" target="_blank" rel="noopener">Open source ↗</a> (or double-click the node)':'')+'<ul>'+links+'</ul>';}});
 cy.on('tap',e=>{{if(e.target===cy){{focus(null);document.getElementById('info').innerHTML='Nothing selected.';}}}});
+cy.on('dbltap','node',e=>{{const u=e.target.data('url');if(u)window.open(u,'_blank','noopener');}});
 const bl=document.getElementById('b_lanes'),bf=document.getElementById('b_force');
 bl.onclick=()=>{{setLabels(true);cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
 let labels=true; const bL=document.getElementById('b_labels');

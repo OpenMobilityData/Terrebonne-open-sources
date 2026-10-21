@@ -105,6 +105,7 @@
 <!-- d_june10 -->
 <g id="node12" class="node">
 <title>d_june10</title>
+<g id="a_node12"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=8" xlink:title="Jun 10 e&#45;mail: objective = restore\nthe parking lane; internal opinion\nalready given; external\n&quot;neutral&quot; opinion wanted\n[2026&#45;06&#45;10]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="2322.69,-1545.58 2177.69,-1545.58 2177.69,-1488.83 2328.69,-1488.83 2328.69,-1539.58 2322.69,-1545.58"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2322.69,-1545.58 2322.69,-1539.58"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2328.69,-1539.58 2322.69,-1539.58"/>
@@ -113,6 +114,8 @@
 <text text-anchor="middle" x="2253.19" y="-1513.53" font-family="Helvetica,sans-Serif" font-size="9.00">already given; external</text>
 <text text-anchor="middle" x="2253.19" y="-1503.78" font-family="Helvetica,sans-Serif" font-size="9.00">&quot;neutral&quot; opinion wanted</text>
 <text text-anchor="middle" x="2253.19" y="-1494.03" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;10]</text>
+</a>
+</g>
 </g>
 <!-- d_june10&#45;&gt;a_eng -->
 <g id="edge23" class="edge">
@@ -124,12 +127,15 @@
 <!-- d_sum -->
 <g id="node13" class="node">
 <title>d_sum</title>
+<g id="a_node13"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/README.md" xlink:title="SUM analysis of the two layouts\n(WITHHELD)\n[2026&#45;06&#45;17]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1961.49,-1789.46 1822.49,-1789.46 1822.49,-1752.21 1967.49,-1752.21 1967.49,-1783.46 1961.49,-1789.46"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1961.49,-1789.46 1961.49,-1783.46"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1967.49,-1783.46 1961.49,-1783.46"/>
 <text text-anchor="middle" x="1894.99" y="-1776.91" font-family="Helvetica,sans-Serif" font-size="9.00">SUM analysis of the two layouts</text>
 <text text-anchor="middle" x="1894.99" y="-1767.16" font-family="Helvetica,sans-Serif" font-size="9.00">(WITHHELD)</text>
 <text text-anchor="middle" x="1894.99" y="-1757.41" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;17]</text>
+</a>
+</g>
 </g>
 <!-- d_june10&#45;&gt;d_sum -->
 <g id="edge24" class="edge">
@@ -141,12 +147,15 @@
 <!-- d_release -->
 <g id="node21" class="node">
 <title>d_release</title>
+<g id="a_node21"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/README.md" xlink:title="Access release 2026&#45;581: 508\npages, three documents withheld\n[2026&#45;10&#45;09]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1628.95,-1542.69 1483.95,-1542.69 1483.95,-1505.44 1634.95,-1505.44 1634.95,-1536.69 1628.95,-1542.69"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1628.95,-1542.69 1628.95,-1536.69"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1634.95,-1536.69 1628.95,-1536.69"/>
 <text text-anchor="middle" x="1559.45" y="-1530.14" font-family="Helvetica,sans-Serif" font-size="9.00">Access release 2026&#45;581: 508</text>
 <text text-anchor="middle" x="1559.45" y="-1520.39" font-family="Helvetica,sans-Serif" font-size="9.00">pages, three documents withheld</text>
 <text text-anchor="middle" x="1559.45" y="-1510.64" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- d_june10&#45;&gt;d_release -->
 <g id="edge91" class="edge">
@@ -207,6 +216,7 @@
 <!-- d_jun22 -->
 <g id="node14" class="node">
 <title>d_jun22</title>
+<g id="a_node14"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=6" xlink:title="Borough summary of the SUM\nanalysis: « plusieurs compromis\nimportants … sécurité »\n[2026&#45;06&#45;22]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="2065.57,-1515.82 1925.07,-1515.82 1925.07,-1468.82 2071.57,-1468.82 2071.57,-1509.82 2065.57,-1515.82"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2065.57,-1515.82 2065.57,-1509.82"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2071.57,-1509.82 2065.57,-1509.82"/>
@@ -214,6 +224,8 @@
 <text text-anchor="middle" x="1998.32" y="-1493.52" font-family="Helvetica,sans-Serif" font-size="9.00">analysis: « plusieurs compromis</text>
 <text text-anchor="middle" x="1998.32" y="-1483.77" font-family="Helvetica,sans-Serif" font-size="9.00">importants … sécurité »</text>
 <text text-anchor="middle" x="1998.32" y="-1474.02" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;22]</text>
+</a>
+</g>
 </g>
 <!-- d_sum&#45;&gt;d_jun22 -->
 <g id="edge26" class="edge">
@@ -276,11 +288,14 @@
 <!-- d_sim -->
 <g id="node15" class="node">
 <title>d_sim</title>
+<g id="a_node15"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=5" xlink:title="SIM opinion (REDACTED)\n[2026&#45;07&#45;13]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1638.18,-2003.22 1520.93,-2003.22 1520.93,-1967.22 1644.18,-1967.22 1644.18,-1997.22 1638.18,-2003.22"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1638.18,-2003.22 1638.18,-1997.22"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1644.18,-1997.22 1638.18,-1997.22"/>
 <text text-anchor="middle" x="1582.56" y="-1986.42" font-family="Helvetica,sans-Serif" font-size="9.00">SIM opinion (REDACTED)</text>
 <text text-anchor="middle" x="1582.56" y="-1976.67" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;07&#45;13]</text>
+</a>
+</g>
 </g>
 <!-- d_sim&#45;&gt;a_sim -->
 <g id="edge28" class="edge">
@@ -299,6 +314,7 @@
 <!-- d_aug13 -->
 <g id="node16" class="node">
 <title>d_aug13</title>
+<g id="a_node16"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=1" xlink:title="Mayor&#39;s office mandate: permanent\nbidirectional lane one side,\nparking restored\n[2026&#45;08&#45;13]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1945.24,-921.53 1792.74,-921.53 1792.74,-874.53 1951.24,-874.53 1951.24,-915.53 1945.24,-921.53"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1945.24,-921.53 1945.24,-915.53"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1951.24,-915.53 1945.24,-915.53"/>
@@ -306,6 +322,8 @@
 <text text-anchor="middle" x="1871.99" y="-899.23" font-family="Helvetica,sans-Serif" font-size="9.00">bidirectional lane one side,</text>
 <text text-anchor="middle" x="1871.99" y="-889.48" font-family="Helvetica,sans-Serif" font-size="9.00">parking restored</text>
 <text text-anchor="middle" x="1871.99" y="-879.73" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;13]</text>
+</a>
+</g>
 </g>
 <!-- d_aug13&#45;&gt;a_mayor -->
 <g id="edge34" class="edge">
@@ -371,6 +389,7 @@
 <!-- d_aug20 -->
 <g id="node17" class="node">
 <title>d_aug20</title>
+<g id="a_node17"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=3" xlink:title="Service request: Volet 1 winter\nremoval « mesure transitoire\n2026&#45;2027 », Volet 2 permanent\n[2026&#45;08&#45;20]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1980.21,-1034.74 1838.96,-1034.74 1838.96,-987.74 1986.21,-987.74 1986.21,-1028.74 1980.21,-1034.74"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1980.21,-1034.74 1980.21,-1028.74"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1986.21,-1028.74 1980.21,-1028.74"/>
@@ -378,6 +397,8 @@
 <text text-anchor="middle" x="1912.59" y="-1012.44" font-family="Helvetica,sans-Serif" font-size="9.00">removal « mesure transitoire</text>
 <text text-anchor="middle" x="1912.59" y="-1002.69" font-family="Helvetica,sans-Serif" font-size="9.00">2026&#45;2027 », Volet 2 permanent</text>
 <text text-anchor="middle" x="1912.59" y="-992.94" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;20]</text>
+</a>
+</g>
 </g>
 <!-- d_aug20&#45;&gt;d_aug13 -->
 <g id="edge35" class="edge">
@@ -389,6 +410,7 @@
 <!-- d_offer -->
 <g id="node18" class="node">
 <title>d_offer</title>
+<g id="a_node18"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=9" xlink:title="EXP offer: $14,755, six weeks;\nstorm&#45;only closure among the\nscenarios\n[2026&#45;08&#45;25]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1958.7,-1386.24 1825.7,-1386.24 1825.7,-1339.24 1964.7,-1339.24 1964.7,-1380.24 1958.7,-1386.24"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1958.7,-1386.24 1958.7,-1380.24"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1964.7,-1380.24 1958.7,-1380.24"/>
@@ -396,6 +418,8 @@
 <text text-anchor="middle" x="1895.2" y="-1363.94" font-family="Helvetica,sans-Serif" font-size="9.00">storm&#45;only closure among the</text>
 <text text-anchor="middle" x="1895.2" y="-1354.19" font-family="Helvetica,sans-Serif" font-size="9.00">scenarios</text>
 <text text-anchor="middle" x="1895.2" y="-1344.44" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;25]</text>
+</a>
+</g>
 </g>
 <!-- d_aug20&#45;&gt;d_offer -->
 <g id="edge36" class="edge">
@@ -451,12 +475,15 @@
 <!-- d_note -->
 <g id="node19" class="node">
 <title>d_note</title>
+<g id="a_node19"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=167" xlink:title="EXP technical note (WITHHELD):\ndraft Sep 17, final due Oct 2\n[2026&#45;10&#45;02]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1855.55,-1441.29 1710.55,-1441.29 1710.55,-1404.04 1861.55,-1404.04 1861.55,-1435.29 1855.55,-1441.29"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1855.55,-1441.29 1855.55,-1435.29"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1861.55,-1435.29 1855.55,-1435.29"/>
 <text text-anchor="middle" x="1786.05" y="-1428.74" font-family="Helvetica,sans-Serif" font-size="9.00">EXP technical note (WITHHELD):</text>
 <text text-anchor="middle" x="1786.05" y="-1418.99" font-family="Helvetica,sans-Serif" font-size="9.00">draft Sep 17, final due Oct 2</text>
 <text text-anchor="middle" x="1786.05" y="-1409.24" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;02]</text>
+</a>
+</g>
 </g>
 <!-- d_offer&#45;&gt;d_note -->
 <g id="edge38" class="edge">
@@ -475,12 +502,15 @@
 <!-- d_po -->
 <g id="node32" class="node">
 <title>d_po</title>
+<g id="a_node32"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=15" xlink:title="Purchase order to EXP, August 26,\n2026 ($14,755)\n[2026&#45;08&#45;26]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1922.65,-1744.17 1772.4,-1744.17 1772.4,-1706.92 1928.65,-1706.92 1928.65,-1738.17 1922.65,-1744.17"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1922.65,-1744.17 1922.65,-1738.17"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1928.65,-1738.17 1922.65,-1738.17"/>
 <text text-anchor="middle" x="1850.53" y="-1731.62" font-family="Helvetica,sans-Serif" font-size="9.00">Purchase order to EXP, August 26,</text>
 <text text-anchor="middle" x="1850.53" y="-1721.87" font-family="Helvetica,sans-Serif" font-size="9.00">2026 ($14,755)</text>
 <text text-anchor="middle" x="1850.53" y="-1712.12" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;26]</text>
+</a>
+</g>
 </g>
 <!-- d_offer&#45;&gt;d_po -->
 <g id="edge198" class="edge">
@@ -546,9 +576,12 @@
 <!-- e_dec7 -->
 <g id="node137" class="node">
 <title>e_dec7</title>
+<g id="a_node137"><a xlink:href="https://montreal.ca/cote-des-neiges-notre-dame-de-grace" xlink:title="Borough council vote\n[2026&#45;12&#45;07]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M2318.24,-1001.11C2318.24,-1001.11 2297.63,-1012.2 2297.63,-1012.2 2292.34,-1015.04 2281.06,-1017.88 2275.06,-1017.88 2275.06,-1017.88 2215.57,-1017.88 2215.57,-1017.88 2209.57,-1017.88 2198.29,-1015.04 2193.01,-1012.2 2193.01,-1012.2 2172.4,-1001.11 2172.4,-1001.11 2167.11,-998.27 2167.11,-992.59 2172.4,-989.75 2172.4,-989.75 2193.01,-978.66 2193.01,-978.66 2198.29,-975.82 2209.57,-972.98 2215.57,-972.98 2215.57,-972.98 2275.06,-972.98 2275.06,-972.98 2281.06,-972.98 2292.34,-975.82 2297.63,-978.66 2297.63,-978.66 2318.24,-989.75 2318.24,-989.75 2323.52,-992.59 2323.52,-998.27 2318.24,-1001.11"/>
 <text text-anchor="middle" x="2245.32" y="-996.63" font-family="Helvetica,sans-Serif" font-size="9.00">Borough council vote</text>
 <text text-anchor="middle" x="2245.32" y="-986.88" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;12&#45;07]</text>
+</a>
+</g>
 </g>
 <!-- d_note&#45;&gt;e_dec7 -->
 <g id="edge89" class="edge">
@@ -563,12 +596,15 @@
 <!-- d_deck -->
 <g id="node20" class="node">
 <title>d_deck</title>
+<g id="a_node20"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=51" xlink:title="Presentation « MAJ 2025 » (counts\nslides)\n[2025&#45;09]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="890.88,-1608.67 738.38,-1608.67 738.38,-1571.42 896.88,-1571.42 896.88,-1602.67 890.88,-1608.67"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="890.88,-1608.67 890.88,-1602.67"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="896.88,-1602.67 890.88,-1602.67"/>
 <text text-anchor="middle" x="817.63" y="-1596.12" font-family="Helvetica,sans-Serif" font-size="9.00">Presentation « MAJ 2025 » (counts</text>
 <text text-anchor="middle" x="817.63" y="-1586.37" font-family="Helvetica,sans-Serif" font-size="9.00">slides)</text>
 <text text-anchor="middle" x="817.63" y="-1576.62" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- d_deck&#45;&gt;d_release -->
 <g id="edge8" class="edge">
@@ -620,12 +656,15 @@
 <!-- e_cm_oct19 -->
 <g id="node141" class="node">
 <title>e_cm_oct19</title>
+<g id="a_node141"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-19-city-council/README.md" xlink:title="City council of Montréal, October\n19, 2026: members&#39; and public\nquestion periods (four exchanges\non Terrebonne)\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M1527.96,-1122.27C1527.96,-1122.27 1484.95,-1154.28 1484.95,-1154.28 1480.14,-1157.86 1469.32,-1161.44 1463.32,-1161.44 1463.32,-1161.44 1362.81,-1161.44 1362.81,-1161.44 1356.81,-1161.44 1346,-1157.86 1341.18,-1154.28 1341.18,-1154.28 1298.18,-1122.27 1298.18,-1122.27 1293.36,-1118.69 1293.36,-1111.52 1298.18,-1107.94 1298.18,-1107.94 1341.18,-1075.93 1341.18,-1075.93 1346,-1072.35 1356.81,-1068.77 1362.81,-1068.77 1362.81,-1068.77 1463.32,-1068.77 1463.32,-1068.77 1469.32,-1068.77 1480.14,-1072.35 1484.95,-1075.93 1484.95,-1075.93 1527.96,-1107.94 1527.96,-1107.94 1532.77,-1111.52 1532.77,-1118.69 1527.96,-1122.27"/>
 <text text-anchor="middle" x="1413.07" y="-1130.93" font-family="Helvetica,sans-Serif" font-size="9.00">City council of Montréal, October</text>
 <text text-anchor="middle" x="1413.07" y="-1121.18" font-family="Helvetica,sans-Serif" font-size="9.00">19, 2026: members&#39; and public</text>
 <text text-anchor="middle" x="1413.07" y="-1111.43" font-family="Helvetica,sans-Serif" font-size="9.00">question periods (four exchanges</text>
 <text text-anchor="middle" x="1413.07" y="-1101.68" font-family="Helvetica,sans-Serif" font-size="9.00">on Terrebonne)</text>
 <text text-anchor="middle" x="1413.07" y="-1091.93" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- d_release&#45;&gt;e_cm_oct19 -->
 <g id="edge90" class="edge">
@@ -683,10 +722,13 @@
 <!-- t_parking -->
 <g id="node50" class="node">
 <title>t_parking</title>
+<g id="a_node50"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/README.md" xlink:title="No parking inventory or occupancy\ncount anywhere in the 508 pages\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M2032.66,-143.18C2032.66,-143.18 1898.91,-143.18 1898.91,-143.18 1892.91,-143.18 1886.91,-137.18 1886.91,-131.18 1886.91,-131.18 1886.91,-117.93 1886.91,-117.93 1886.91,-111.93 1892.91,-105.93 1898.91,-105.93 1898.91,-105.93 2032.66,-105.93 2032.66,-105.93 2038.66,-105.93 2044.66,-111.93 2044.66,-117.93 2044.66,-117.93 2044.66,-131.18 2044.66,-131.18 2044.66,-137.18 2038.66,-143.18 2032.66,-143.18"/>
 <text text-anchor="middle" x="1965.78" y="-130.63" font-family="Helvetica,sans-Serif" font-size="9.00">No parking inventory or occupancy</text>
 <text text-anchor="middle" x="1965.78" y="-120.88" font-family="Helvetica,sans-Serif" font-size="9.00">count anywhere in the 508 pages</text>
 <text text-anchor="middle" x="1965.78" y="-111.13" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- d_devoir&#45;&gt;t_parking -->
 <g id="edge52" class="edge">
@@ -701,6 +743,7 @@
 <!-- d_ca24 -->
 <g id="node24" class="node">
 <title>d_ca24</title>
+<g id="a_node24"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2024-project-approval/README.md" xlink:title="Borough council CA24 170018 (Feb\n5, 2024, 3–2) offering the project\nunder art. 85(2); City council\nCM24 0179 (Feb 19, 2024,\nunanimous) accepting it ($220,000\nBF Vélo); borough ordinance CA24\n170131 (June 3, 2024, unanimous)\nmaking Terrebonne one&#45;way for the\nlanes\n[2024&#45;02&#45;05]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="2678.06,-877.15 2521.06,-877.15 2521.06,-771.65 2684.06,-771.65 2684.06,-871.15 2678.06,-877.15"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2678.06,-877.15 2678.06,-871.15"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2684.06,-871.15 2678.06,-871.15"/>
@@ -714,6 +757,8 @@
 <text text-anchor="middle" x="2602.56" y="-796.35" font-family="Helvetica,sans-Serif" font-size="9.00">making Terrebonne one&#45;way for the</text>
 <text text-anchor="middle" x="2602.56" y="-786.6" font-family="Helvetica,sans-Serif" font-size="9.00">lanes</text>
 <text text-anchor="middle" x="2602.56" y="-776.85" font-family="Helvetica,sans-Serif" font-size="9.00">[2024&#45;02&#45;05]</text>
+</a>
+</g>
 </g>
 <!-- d_ca24&#45;&gt;a_city -->
 <g id="edge203" class="edge">
@@ -725,11 +770,14 @@
 <!-- e_oct6 -->
 <g id="node139" class="node">
 <title>e_oct6</title>
+<g id="a_node139"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Borough council sitting of October\n6, 2026: the councillor&#39;s address\nand the question period\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M1585.24,-1024.82C1585.24,-1024.82 1543.13,-1050.65 1543.13,-1050.65 1538.02,-1053.79 1526.9,-1056.92 1520.9,-1056.92 1520.9,-1056.92 1419.77,-1056.92 1419.77,-1056.92 1413.77,-1056.92 1402.66,-1053.79 1397.55,-1050.65 1397.55,-1050.65 1355.44,-1024.82 1355.44,-1024.82 1350.32,-1021.68 1350.32,-1015.41 1355.44,-1012.27 1355.44,-1012.27 1397.55,-986.45 1397.55,-986.45 1402.66,-983.31 1413.77,-980.17 1419.77,-980.17 1419.77,-980.17 1520.9,-980.17 1520.9,-980.17 1526.9,-980.17 1538.02,-983.31 1543.13,-986.45 1543.13,-986.45 1585.24,-1012.27 1585.24,-1012.27 1590.35,-1015.41 1590.35,-1021.68 1585.24,-1024.82"/>
 <text text-anchor="middle" x="1470.34" y="-1029.5" font-family="Helvetica,sans-Serif" font-size="9.00">Borough council sitting of October</text>
 <text text-anchor="middle" x="1470.34" y="-1019.75" font-family="Helvetica,sans-Serif" font-size="9.00">6, 2026: the councillor&#39;s address</text>
 <text text-anchor="middle" x="1470.34" y="-1010" font-family="Helvetica,sans-Serif" font-size="9.00">and the question period</text>
 <text text-anchor="middle" x="1470.34" y="-1000.25" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- d_ca24&#45;&gt;e_oct6 -->
 <g id="edge204" class="edge">
@@ -741,6 +789,7 @@
 <!-- d_exp2023 -->
 <g id="node25" class="node">
 <title>d_exp2023</title>
+<g id="a_node25"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2023-exp-mobility-study/README.md" xlink:title="Étude de mobilité – rue de\nTerrebonne (EXP, 2023, 351 pp.):\n2022 DJMA 6,300; 475 spaces on the\nstreet, 375 after clearances, 171\nin the retained design (p. 100);\nlane widths 2 × 3.3 m to 2024, 3.5\nm shared lane in the alternative\n[2023&#45;10&#45;30]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="2938.02,-1155.66 2775.02,-1155.66 2775.02,-1069.66 2944.02,-1069.66 2944.02,-1149.66 2938.02,-1155.66"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2938.02,-1155.66 2938.02,-1149.66"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2944.02,-1149.66 2938.02,-1149.66"/>
@@ -752,6 +801,8 @@
 <text text-anchor="middle" x="2859.52" y="-1094.36" font-family="Helvetica,sans-Serif" font-size="9.00">lane widths 2 × 3.3 m to 2024, 3.5</text>
 <text text-anchor="middle" x="2859.52" y="-1084.61" font-family="Helvetica,sans-Serif" font-size="9.00">m shared lane in the alternative</text>
 <text text-anchor="middle" x="2859.52" y="-1074.86" font-family="Helvetica,sans-Serif" font-size="9.00">[2023&#45;10&#45;30]</text>
+</a>
+</g>
 </g>
 <!-- d_exp2023&#45;&gt;a_exp -->
 <g id="edge205" class="edge">
@@ -770,6 +821,7 @@
 <!-- d_wc2021 -->
 <g id="node26" class="node">
 <title>d_wc2021</title>
+<g id="a_node26"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2020-2021-working-committee/README.md" xlink:title="Working committee note of June 13,\n2021: scenario 5 bis with a 4.1 m\nshared lane; unanimous\nrecommendation was a study, paired\nwith Somerled (p. 11)\n[2021&#45;06&#45;13]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="3113.32,-1363.8 2953.32,-1363.8 2953.32,-1297.3 3119.32,-1297.3 3119.32,-1357.8 3113.32,-1363.8"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="3113.32,-1363.8 3113.32,-1357.8"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="3119.32,-1357.8 3113.32,-1357.8"/>
@@ -779,6 +831,8 @@
 <text text-anchor="middle" x="3036.32" y="-1322" font-family="Helvetica,sans-Serif" font-size="9.00">recommendation was a study, paired</text>
 <text text-anchor="middle" x="3036.32" y="-1312.25" font-family="Helvetica,sans-Serif" font-size="9.00">with Somerled (p. 11)</text>
 <text text-anchor="middle" x="3036.32" y="-1302.5" font-family="Helvetica,sans-Serif" font-size="9.00">[2021&#45;06&#45;13]</text>
+</a>
+</g>
 </g>
 <!-- d_wc2021&#45;&gt;d_exp2023 -->
 <g id="edge207" class="edge">
@@ -790,6 +844,7 @@
 <!-- d_citynote_nov2025 -->
 <g id="node27" class="node">
 <title>d_citynote_nov2025</title>
+<g id="a_node27"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2025-12847/README.md" xlink:title="City of Montréal note of November\n10, 2025 (released under access\nrequest 2025&#45;12847, p. 1): « Aucun\naudit de sécurité n&#39;a été réalisé\nà proprement parler pour\nl&#39;ensemble du réseau »; monitoring\nof new lanes by the SUM over a set\nperiod\n[2025&#45;11&#45;10]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="3132.03,-377.95 2978.03,-377.95 2978.03,-282.2 3138.03,-282.2 3138.03,-371.95 3132.03,-377.95"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="3132.03,-377.95 3132.03,-371.95"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="3138.03,-371.95 3132.03,-371.95"/>
@@ -802,6 +857,8 @@
 <text text-anchor="middle" x="3058.03" y="-306.9" font-family="Helvetica,sans-Serif" font-size="9.00">of new lanes by the SUM over a set</text>
 <text text-anchor="middle" x="3058.03" y="-297.15" font-family="Helvetica,sans-Serif" font-size="9.00">period</text>
 <text text-anchor="middle" x="3058.03" y="-287.4" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;11&#45;10]</text>
+</a>
+</g>
 </g>
 <!-- d_citynote_nov2025&#45;&gt;a_city -->
 <g id="edge214" class="edge">
@@ -813,6 +870,7 @@
 <!-- d_r2025_12847 -->
 <g id="node41" class="node">
 <title>d_r2025_12847</title>
+<g id="a_node41"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2025-12847/README.md" xlink:title="City of Montréal&#39;s answer to\naccess request 2025&#45;12847: the\nNovember 10, 2025 note and the REV\nBellechasse follow&#45;up plan (a lane\naudit that measured parking)\n[2025&#45;12]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="2869.4,-280.56 2704.15,-280.56 2704.15,-214.06 2875.4,-214.06 2875.4,-274.56 2869.4,-280.56"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2869.4,-280.56 2869.4,-274.56"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2875.4,-274.56 2869.4,-274.56"/>
@@ -822,6 +880,8 @@
 <text text-anchor="middle" x="2789.78" y="-238.76" font-family="Helvetica,sans-Serif" font-size="9.00">Bellechasse follow&#45;up plan (a lane</text>
 <text text-anchor="middle" x="2789.78" y="-229.01" font-family="Helvetica,sans-Serif" font-size="9.00">audit that measured parking)</text>
 <text text-anchor="middle" x="2789.78" y="-219.26" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;12]</text>
+</a>
+</g>
 </g>
 <!-- d_citynote_nov2025&#45;&gt;d_r2025_12847 -->
 <g id="edge212" class="edge">
@@ -859,6 +919,7 @@
 <!-- d_feb10 -->
 <g id="node29" class="node">
 <title>d_feb10</title>
+<g id="a_node29"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-open-sources/2026-city-audit-and-plan-velo/raw/montreal_communique_2026-02-10_10-actions-en-100-jours_fr.pdf" xlink:title="« 10 actions en 100 jours »:\ntechnical review of four lanes\n(Meilleur, Rachel,\nCôte&#45;Sainte&#45;Catherine, de la\nCommune); new post&#45;implementation\nprocess at the SUM; « la Ville\ncollabore déjà avec plusieurs\narrondissements pour sécuriser\ncertains aménagements existants …\nnotamment sur les rues Hochelaga,\nTerrebonne et Gouin »\n[2026&#45;02&#45;10]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="2487.93,-964.52 2324.93,-964.52 2324.93,-839.52 2493.93,-839.52 2493.93,-958.52 2487.93,-964.52"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2487.93,-964.52 2487.93,-958.52"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2493.93,-958.52 2487.93,-958.52"/>
@@ -874,6 +935,8 @@
 <text text-anchor="middle" x="2409.43" y="-864.22" font-family="Helvetica,sans-Serif" font-size="9.00">notamment sur les rues Hochelaga,</text>
 <text text-anchor="middle" x="2409.43" y="-854.47" font-family="Helvetica,sans-Serif" font-size="9.00">Terrebonne et Gouin »</text>
 <text text-anchor="middle" x="2409.43" y="-844.72" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;02&#45;10]</text>
+</a>
+</g>
 </g>
 <!-- d_dec12_2025&#45;&gt;d_feb10 -->
 <g id="edge290" class="edge">
@@ -885,11 +948,14 @@
 <!-- s_oct6_propose -->
 <g id="node84" class="node">
 <title>s_oct6_propose</title>
+<g id="a_node84"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6: &quot;this is what we&#39;re going\nto propose&quot;; &quot;it&#39;s going to be a\ntest&quot;\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2349.93,-822.89C2349.93,-822.89 2234.93,-822.89 2234.93,-822.89 2228.93,-822.89 2222.93,-816.89 2222.93,-810.89 2222.93,-810.89 2222.93,-787.89 2222.93,-787.89 2222.93,-781.89 2228.93,-775.89 2234.93,-775.89 2234.93,-775.89 2349.93,-775.89 2349.93,-775.89 2355.93,-775.89 2361.93,-781.89 2361.93,-787.89 2361.93,-787.89 2361.93,-810.89 2361.93,-810.89 2361.93,-816.89 2355.93,-822.89 2349.93,-822.89"/>
 <text text-anchor="middle" x="2292.43" y="-810.34" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6: &quot;this is what we&#39;re going</text>
 <text text-anchor="middle" x="2292.43" y="-800.59" font-family="Helvetica,sans-Serif" font-size="9.00">to propose&quot;; &quot;it&#39;s going to be a</text>
 <text text-anchor="middle" x="2292.43" y="-790.84" font-family="Helvetica,sans-Serif" font-size="9.00">test&quot;</text>
 <text text-anchor="middle" x="2292.43" y="-781.09" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- d_dec12_2025&#45;&gt;s_oct6_propose -->
 <g id="edge291" class="edge">
@@ -904,6 +970,7 @@
 <!-- e_feb10 -->
 <g id="node144" class="node">
 <title>e_feb10</title>
+<g id="a_node144"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-city-audit-and-plan-velo/README.md" xlink:title="City press release of February 10,\n2026: review of four lanes, Plan\nvélo revision, post&#45;implementation\nfollow&#45;up at the SUM; Terrebonne\nnamed among streets being made\nsafer with boroughs\n[2026&#45;02&#45;10]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M2757.98,-1034.18C2757.98,-1034.18 2711.63,-1079.63 2711.63,-1079.63 2707.35,-1083.83 2697.06,-1088.03 2691.06,-1088.03 2691.06,-1088.03 2588.1,-1088.03 2588.1,-1088.03 2582.1,-1088.03 2571.81,-1083.83 2567.53,-1079.63 2567.53,-1079.63 2521.18,-1034.18 2521.18,-1034.18 2516.9,-1029.98 2516.9,-1021.57 2521.18,-1017.37 2521.18,-1017.37 2567.53,-971.92 2567.53,-971.92 2571.81,-967.72 2582.1,-963.52 2588.1,-963.52 2588.1,-963.52 2691.06,-963.52 2691.06,-963.52 2697.06,-963.52 2707.35,-967.72 2711.63,-971.92 2711.63,-971.92 2757.98,-1017.37 2757.98,-1017.37 2762.26,-1021.57 2762.26,-1029.98 2757.98,-1034.18"/>
 <text text-anchor="middle" x="2639.58" y="-1051.35" font-family="Helvetica,sans-Serif" font-size="9.00">City press release of February 10,</text>
 <text text-anchor="middle" x="2639.58" y="-1041.6" font-family="Helvetica,sans-Serif" font-size="9.00">2026: review of four lanes, Plan</text>
@@ -912,6 +979,8 @@
 <text text-anchor="middle" x="2639.58" y="-1012.35" font-family="Helvetica,sans-Serif" font-size="9.00">named among streets being made</text>
 <text text-anchor="middle" x="2639.58" y="-1002.6" font-family="Helvetica,sans-Serif" font-size="9.00">safer with boroughs</text>
 <text text-anchor="middle" x="2639.58" y="-992.85" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;02&#45;10]</text>
+</a>
+</g>
 </g>
 <!-- d_dec12_2025&#45;&gt;e_feb10 -->
 <g id="edge216" class="edge">
@@ -930,12 +999,15 @@
 <!-- t_counter -->
 <g id="node48" class="node">
 <title>t_counter</title>
+<g id="a_node48"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=74" xlink:title="Kensington loop counter, daily\ntable Jul 26 2025 – Aug 31 2026\n(135,276 in the first year; 4,891\nDec–Mar)\n[2026&#45;08&#45;31]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M1134.42,-984.59C1134.42,-984.59 1009.67,-984.59 1009.67,-984.59 1003.67,-984.59 997.67,-978.59 997.67,-972.59 997.67,-972.59 997.67,-939.84 997.67,-939.84 997.67,-933.84 1003.67,-927.84 1009.67,-927.84 1009.67,-927.84 1134.42,-927.84 1134.42,-927.84 1140.42,-927.84 1146.42,-933.84 1146.42,-939.84 1146.42,-939.84 1146.42,-972.59 1146.42,-972.59 1146.42,-978.59 1140.42,-984.59 1134.42,-984.59"/>
 <text text-anchor="middle" x="1072.04" y="-972.04" font-family="Helvetica,sans-Serif" font-size="9.00">Kensington loop counter, daily</text>
 <text text-anchor="middle" x="1072.04" y="-962.29" font-family="Helvetica,sans-Serif" font-size="9.00">table Jul 26 2025 – Aug 31 2026</text>
 <text text-anchor="middle" x="1072.04" y="-952.54" font-family="Helvetica,sans-Serif" font-size="9.00">(135,276 in the first year; 4,891</text>
 <text text-anchor="middle" x="1072.04" y="-942.79" font-family="Helvetica,sans-Serif" font-size="9.00">Dec–Mar)</text>
 <text text-anchor="middle" x="1072.04" y="-933.04" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;31]</text>
+</a>
+</g>
 </g>
 <!-- d_feb10&#45;&gt;t_counter -->
 <g id="edge292" class="edge">
@@ -957,6 +1029,7 @@
 <!-- d_june10_ps -->
 <g id="node30" class="node">
 <title>d_june10_ps</title>
+<g id="a_node30"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=8" xlink:title="Postscript of the June 10, 2026\ne&#45;mail: the borough&#39;s engineers\noffer the Eco&#45;Counter data to the\nCity\n[2026&#45;06&#45;10]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1761.09,-1392.93 1619.09,-1392.93 1619.09,-1336.18 1767.09,-1336.18 1767.09,-1386.93 1761.09,-1392.93"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1761.09,-1392.93 1761.09,-1386.93"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1767.09,-1386.93 1761.09,-1386.93"/>
@@ -965,6 +1038,8 @@
 <text text-anchor="middle" x="1693.09" y="-1360.88" font-family="Helvetica,sans-Serif" font-size="9.00">offer the Eco&#45;Counter data to the</text>
 <text text-anchor="middle" x="1693.09" y="-1351.13" font-family="Helvetica,sans-Serif" font-size="9.00">City</text>
 <text text-anchor="middle" x="1693.09" y="-1341.38" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;10]</text>
+</a>
+</g>
 </g>
 <!-- d_june10_ps&#45;&gt;d_june10 -->
 <g id="edge194" class="edge">
@@ -993,6 +1068,7 @@
 <!-- d_aug18 -->
 <g id="node31" class="node">
 <title>d_aug18</title>
+<g id="a_node31"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=21" xlink:title="Borough staff to EXP, August 18,\n2026: « l&#39;objectif de nos élus est\nde pouvoir agir sur vos\nconclusions pour un horizon début\noctobre »\n[2026&#45;08&#45;18]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1999.33,-1698.38 1848.33,-1698.38 1848.33,-1631.88 2005.33,-1631.88 2005.33,-1692.38 1999.33,-1698.38"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1999.33,-1698.38 1999.33,-1692.38"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="2005.33,-1692.38 1999.33,-1692.38"/>
@@ -1002,6 +1078,8 @@
 <text text-anchor="middle" x="1926.83" y="-1656.58" font-family="Helvetica,sans-Serif" font-size="9.00">conclusions pour un horizon début</text>
 <text text-anchor="middle" x="1926.83" y="-1646.83" font-family="Helvetica,sans-Serif" font-size="9.00">octobre »</text>
 <text text-anchor="middle" x="1926.83" y="-1637.08" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;18]</text>
+</a>
+</g>
 </g>
 <!-- d_aug18&#45;&gt;d_offer -->
 <g id="edge197" class="edge">
@@ -1027,12 +1105,15 @@
 <!-- d_kickoff -->
 <g id="node34" class="node">
 <title>d_kickoff</title>
+<g id="a_node34"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=26" xlink:title="Kick&#45;off meeting with EXP,\nSeptember 3, 2026\n[2026&#45;09&#45;03]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1781.35,-1958.09 1665.6,-1958.09 1665.6,-1920.84 1787.35,-1920.84 1787.35,-1952.09 1781.35,-1958.09"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1781.35,-1958.09 1781.35,-1952.09"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1787.35,-1952.09 1781.35,-1952.09"/>
 <text text-anchor="middle" x="1726.47" y="-1945.54" font-family="Helvetica,sans-Serif" font-size="9.00">Kick&#45;off meeting with EXP,</text>
 <text text-anchor="middle" x="1726.47" y="-1935.79" font-family="Helvetica,sans-Serif" font-size="9.00">September 3, 2026</text>
 <text text-anchor="middle" x="1726.47" y="-1926.04" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;09&#45;03]</text>
+</a>
+</g>
 </g>
 <!-- d_po&#45;&gt;d_kickoff -->
 <g id="edge199" class="edge">
@@ -1044,6 +1125,7 @@
 <!-- d_aug28 -->
 <g id="node33" class="node">
 <title>d_aug28</title>
+<g id="a_node33"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=19" xlink:title="E&#45;mail of August 28, 2026\ntransmitting the Kensington\ncounter&#39;s table to EXP\n[2026&#45;08&#45;28]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1098.63,-1533.48 977.63,-1533.48 977.63,-1486.48 1104.63,-1486.48 1104.63,-1527.48 1098.63,-1533.48"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1098.63,-1533.48 1098.63,-1527.48"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1104.63,-1527.48 1098.63,-1527.48"/>
@@ -1051,6 +1133,8 @@
 <text text-anchor="middle" x="1041.13" y="-1511.18" font-family="Helvetica,sans-Serif" font-size="9.00">transmitting the Kensington</text>
 <text text-anchor="middle" x="1041.13" y="-1501.43" font-family="Helvetica,sans-Serif" font-size="9.00">counter&#39;s table to EXP</text>
 <text text-anchor="middle" x="1041.13" y="-1491.68" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;08&#45;28]</text>
+</a>
+</g>
 </g>
 <!-- d_aug28&#45;&gt;d_release -->
 <g id="edge188" class="edge">
@@ -1079,6 +1163,7 @@
 <!-- d_draft -->
 <g id="node36" class="node">
 <title>d_draft</title>
+<g id="a_node36"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=167" xlink:title="Draft of the EXP note transmitted\nSeptember 17, 2026; withheld (s.\n9, drafts)\n[2026&#45;09&#45;17]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1719.49,-1808.15 1575.24,-1808.15 1575.24,-1761.15 1725.49,-1761.15 1725.49,-1802.15 1719.49,-1808.15"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1719.49,-1808.15 1719.49,-1802.15"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1725.49,-1802.15 1719.49,-1802.15"/>
@@ -1086,6 +1171,8 @@
 <text text-anchor="middle" x="1650.37" y="-1785.85" font-family="Helvetica,sans-Serif" font-size="9.00">September 17, 2026; withheld (s.</text>
 <text text-anchor="middle" x="1650.37" y="-1776.1" font-family="Helvetica,sans-Serif" font-size="9.00">9, drafts)</text>
 <text text-anchor="middle" x="1650.37" y="-1766.35" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;09&#45;17]</text>
+</a>
+</g>
 </g>
 <!-- d_kickoff&#45;&gt;d_draft -->
 <g id="edge200" class="edge">
@@ -1097,6 +1184,7 @@
 <!-- d_sep10 -->
 <g id="node35" class="node">
 <title>d_sep10</title>
+<g id="a_node35"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=23" xlink:title="Borough staff to EXP, September\n10, 2026: the draft needed by the\n18th « pour respecter notre\ncalendrier du Conseil\nd&#39;arrondissement du 5 octobre »\n[2026&#45;09&#45;10]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1820.56,-1524.13 1676.31,-1524.13 1676.31,-1457.63 1826.56,-1457.63 1826.56,-1518.13 1820.56,-1524.13"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1820.56,-1524.13 1820.56,-1518.13"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1826.56,-1518.13 1820.56,-1518.13"/>
@@ -1106,6 +1194,8 @@
 <text text-anchor="middle" x="1751.44" y="-1482.33" font-family="Helvetica,sans-Serif" font-size="9.00">calendrier du Conseil</text>
 <text text-anchor="middle" x="1751.44" y="-1472.58" font-family="Helvetica,sans-Serif" font-size="9.00">d&#39;arrondissement du 5 octobre »</text>
 <text text-anchor="middle" x="1751.44" y="-1462.83" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;09&#45;10]</text>
+</a>
+</g>
 </g>
 <!-- d_sep10&#45;&gt;d_release -->
 <g id="edge190" class="edge">
@@ -1148,12 +1238,15 @@
 <!-- d_deck_feb2025 -->
 <g id="node37" class="node">
 <title>d_deck_feb2025</title>
+<g id="a_node37"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=27" xlink:title="Earlier presentation of February\n2025 with the count slides\n[2025&#45;02]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1128.47,-1816.77 989.47,-1816.77 989.47,-1779.52 1134.47,-1779.52 1134.47,-1810.77 1128.47,-1816.77"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1128.47,-1816.77 1128.47,-1810.77"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1134.47,-1810.77 1128.47,-1810.77"/>
 <text text-anchor="middle" x="1061.97" y="-1804.22" font-family="Helvetica,sans-Serif" font-size="9.00">Earlier presentation of February</text>
 <text text-anchor="middle" x="1061.97" y="-1794.47" font-family="Helvetica,sans-Serif" font-size="9.00">2025 with the count slides</text>
 <text text-anchor="middle" x="1061.97" y="-1784.72" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;02]</text>
+</a>
+</g>
 </g>
 <!-- d_deck_feb2025&#45;&gt;d_deck -->
 <g id="edge238" class="edge">
@@ -1186,11 +1279,14 @@
 <!-- s_oct6_safety -->
 <g id="node104" class="node">
 <title>s_oct6_safety</title>
+<g id="a_node104"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: « we can keep the\nsame capacity, the same level of\nsafety for … »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1847.74,-1326.2C1847.74,-1326.2 1720.74,-1326.2 1720.74,-1326.2 1714.74,-1326.2 1708.74,-1320.2 1708.74,-1314.2 1708.74,-1314.2 1708.74,-1291.2 1708.74,-1291.2 1708.74,-1285.2 1714.74,-1279.2 1720.74,-1279.2 1720.74,-1279.2 1847.74,-1279.2 1847.74,-1279.2 1853.74,-1279.2 1859.74,-1285.2 1859.74,-1291.2 1859.74,-1291.2 1859.74,-1314.2 1859.74,-1314.2 1859.74,-1320.2 1853.74,-1326.2 1847.74,-1326.2"/>
 <text text-anchor="middle" x="1784.24" y="-1313.65" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: « we can keep the</text>
 <text text-anchor="middle" x="1784.24" y="-1303.9" font-family="Helvetica,sans-Serif" font-size="9.00">same capacity, the same level of</text>
 <text text-anchor="middle" x="1784.24" y="-1294.15" font-family="Helvetica,sans-Serif" font-size="9.00">safety for … »</text>
 <text text-anchor="middle" x="1784.24" y="-1284.4" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- d_gazette&#45;&gt;s_oct6_safety -->
 <g id="edge221" class="edge">
@@ -1243,6 +1339,7 @@
 <!-- d_r2025_697 -->
 <g id="node39" class="node">
 <title>d_r2025_697</title>
+<g id="a_node39"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2025-697/README.md" xlink:title="Access request 2025&#45;697 (answered\nDec 19, 2025): hourly directional\nworkbook of the Kensington\ncounter, July 26 – Nov 15, 2025;\nthe counter&#39;s first appearance in\npublic\n[2025&#45;12&#45;19]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="411.56,-1069.37 251.56,-1069.37 251.56,-993.12 417.56,-993.12 417.56,-1063.37 411.56,-1069.37"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="411.56,-1069.37 411.56,-1063.37"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="417.56,-1063.37 411.56,-1063.37"/>
@@ -1253,6 +1350,8 @@
 <text text-anchor="middle" x="334.56" y="-1017.82" font-family="Helvetica,sans-Serif" font-size="9.00">the counter&#39;s first appearance in</text>
 <text text-anchor="middle" x="334.56" y="-1008.07" font-family="Helvetica,sans-Serif" font-size="9.00">public</text>
 <text text-anchor="middle" x="334.56" y="-998.32" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;12&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- d_r2025_697&#45;&gt;t_counter -->
 <g id="edge222" class="edge">
@@ -1287,6 +1386,7 @@
 <!-- d_r2026_300 -->
 <g id="node40" class="node">
 <title>d_r2026_300</title>
+<g id="a_node40"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-300/README.md" xlink:title="Access request 2026&#45;300: hourly\ndirectional workbook, July 26,\n2025 – May 11, 2026; basis of the\nwinter exposure analysis\n[2026&#45;06&#45;04]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="925.47,-1338.37 779.72,-1338.37 779.72,-1281.62 931.47,-1281.62 931.47,-1332.37 925.47,-1338.37"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="925.47,-1338.37 925.47,-1332.37"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="931.47,-1332.37 925.47,-1332.37"/>
@@ -1295,6 +1395,8 @@
 <text text-anchor="middle" x="855.6" y="-1306.32" font-family="Helvetica,sans-Serif" font-size="9.00">2025 – May 11, 2026; basis of the</text>
 <text text-anchor="middle" x="855.6" y="-1296.57" font-family="Helvetica,sans-Serif" font-size="9.00">winter exposure analysis</text>
 <text text-anchor="middle" x="855.6" y="-1286.82" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;04]</text>
+</a>
+</g>
 </g>
 <!-- d_r2026_300&#45;&gt;t_counter -->
 <g id="edge223" class="edge">
@@ -1306,6 +1408,7 @@
 <!-- t_counter_hourly -->
 <g id="node54" class="node">
 <title>t_counter_hourly</title>
+<g id="a_node54"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-300/README.md" xlink:title="Kensington counter, hourly\ndirectional record (2026&#45;300):\nweekday means in the City&#39;s winter\nperiod, 7.9 an hour at 08:00 and\n6.3 at 16:00; no daytime hour\nbelow 2.3; 1.68 an hour over 24 h\nfor Dec 1 – Mar 31\n[2026&#45;05&#45;11]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M653.98,-1399.6C653.98,-1399.6 519.48,-1399.6 519.48,-1399.6 513.48,-1399.6 507.48,-1393.6 507.48,-1387.6 507.48,-1387.6 507.48,-1325.6 507.48,-1325.6 507.48,-1319.6 513.48,-1313.6 519.48,-1313.6 519.48,-1313.6 653.98,-1313.6 653.98,-1313.6 659.98,-1313.6 665.98,-1319.6 665.98,-1325.6 665.98,-1325.6 665.98,-1387.6 665.98,-1387.6 665.98,-1393.6 659.98,-1399.6 653.98,-1399.6"/>
 <text text-anchor="middle" x="586.73" y="-1387.05" font-family="Helvetica,sans-Serif" font-size="9.00">Kensington counter, hourly</text>
 <text text-anchor="middle" x="586.73" y="-1377.3" font-family="Helvetica,sans-Serif" font-size="9.00">directional record (2026&#45;300):</text>
@@ -1315,6 +1418,8 @@
 <text text-anchor="middle" x="586.73" y="-1338.3" font-family="Helvetica,sans-Serif" font-size="9.00">below 2.3; 1.68 an hour over 24 h</text>
 <text text-anchor="middle" x="586.73" y="-1328.55" font-family="Helvetica,sans-Serif" font-size="9.00">for Dec 1 – Mar 31</text>
 <text text-anchor="middle" x="586.73" y="-1318.8" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;05&#45;11]</text>
+</a>
+</g>
 </g>
 <!-- d_r2026_300&#45;&gt;t_counter_hourly -->
 <g id="edge224" class="edge">
@@ -1400,11 +1505,14 @@
 <!-- s_cm_share -->
 <g id="node95" class="node">
 <title>s_cm_share</title>
+<g id="a_node95"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-19-city-council/derived/2026-10-19_01.md" xlink:title="City council 41:44: « On n&#39;a aucun\nproblème à partager nos documents\n»\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1794.8,-1597.21C1794.8,-1597.21 1655.05,-1597.21 1655.05,-1597.21 1649.05,-1597.21 1643.05,-1591.21 1643.05,-1585.21 1643.05,-1585.21 1643.05,-1562.21 1643.05,-1562.21 1643.05,-1556.21 1649.05,-1550.21 1655.05,-1550.21 1655.05,-1550.21 1794.8,-1550.21 1794.8,-1550.21 1800.8,-1550.21 1806.8,-1556.21 1806.8,-1562.21 1806.8,-1562.21 1806.8,-1585.21 1806.8,-1585.21 1806.8,-1591.21 1800.8,-1597.21 1794.8,-1597.21"/>
 <text text-anchor="middle" x="1724.92" y="-1584.66" font-family="Helvetica,sans-Serif" font-size="9.00">City council 41:44: « On n&#39;a aucun</text>
 <text text-anchor="middle" x="1724.92" y="-1574.91" font-family="Helvetica,sans-Serif" font-size="9.00">problème à partager nos documents</text>
 <text text-anchor="middle" x="1724.92" y="-1565.16" font-family="Helvetica,sans-Serif" font-size="9.00">»</text>
 <text text-anchor="middle" x="1724.92" y="-1555.41" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- d_reconsideration&#45;&gt;s_cm_share -->
 <g id="edge228" class="edge">
@@ -1419,12 +1527,15 @@
 <!-- s_cm_sign -->
 <g id="node98" class="node">
 <title>s_cm_sign</title>
+<g id="a_node98"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-19-city-council/derived/2026-10-19_02.md" xlink:title="City council 7:10:02: no lane «\nqui ne va pas être signée par les\ningénieurs »; « très content de\ncette décision »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1462.85,-1563.45C1462.85,-1563.45 1338.1,-1563.45 1338.1,-1563.45 1332.1,-1563.45 1326.1,-1557.45 1326.1,-1551.45 1326.1,-1551.45 1326.1,-1518.7 1326.1,-1518.7 1326.1,-1512.7 1332.1,-1506.7 1338.1,-1506.7 1338.1,-1506.7 1462.85,-1506.7 1462.85,-1506.7 1468.85,-1506.7 1474.85,-1512.7 1474.85,-1518.7 1474.85,-1518.7 1474.85,-1551.45 1474.85,-1551.45 1474.85,-1557.45 1468.85,-1563.45 1462.85,-1563.45"/>
 <text text-anchor="middle" x="1400.47" y="-1550.9" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:10:02: no lane «</text>
 <text text-anchor="middle" x="1400.47" y="-1541.15" font-family="Helvetica,sans-Serif" font-size="9.00">qui ne va pas être signée par les</text>
 <text text-anchor="middle" x="1400.47" y="-1531.4" font-family="Helvetica,sans-Serif" font-size="9.00">ingénieurs »; « très content de</text>
 <text text-anchor="middle" x="1400.47" y="-1521.65" font-family="Helvetica,sans-Serif" font-size="9.00">cette décision »</text>
 <text text-anchor="middle" x="1400.47" y="-1511.9" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- d_reconsideration&#45;&gt;s_cm_sign -->
 <g id="edge229" class="edge">
@@ -1521,6 +1632,7 @@
 <!-- d_petition -->
 <g id="node45" class="node">
 <title>d_petition</title>
+<g id="a_node45"><a xlink:href="https://actionnetwork.org/petitions/gardons-la-piste-terrebonne-toute-lannee-pour-la-securite-de-nos-enfants" xlink:title="Petition « Gardons la piste\nTerrebonne toute l&#39;année pour la\nsécurité de nos enfants »,\nAssociation des piétons et\ncyclistes de NDG, launched October\n21, 2026, addressed to the\nArrondissement de\nCôte&#45;des&#45;Neiges–Notre&#45;Dame&#45;de&#45;Grâce,\nreserved for its residents, to be\nhanded to the borough council:\nagainst the partial dismantling of\nthe lane; « Le risque que la voie\ncyclable ne soit pas réaménagée au\nprintemps est réel »; cites the\ncounter&#39;s 135,000 passages in the\nfirst year\n[2026&#45;10&#45;21]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="1602.17,-857.14 1423.42,-857.14 1423.42,-683.39 1608.17,-683.39 1608.17,-851.14 1602.17,-857.14"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1602.17,-857.14 1602.17,-851.14"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="1608.17,-851.14 1602.17,-851.14"/>
@@ -1541,6 +1653,8 @@
 <text text-anchor="middle" x="1515.8" y="-708.09" font-family="Helvetica,sans-Serif" font-size="9.00">counter&#39;s 135,000 passages in the</text>
 <text text-anchor="middle" x="1515.8" y="-698.34" font-family="Helvetica,sans-Serif" font-size="9.00">first year</text>
 <text text-anchor="middle" x="1515.8" y="-688.59" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;21]</text>
+</a>
+</g>
 </g>
 <!-- d_petition&#45;&gt;a_apc -->
 <g id="edge400" class="edge">
@@ -1572,6 +1686,7 @@
 <!-- s_oct6_sameside -->
 <g id="node112" class="node">
 <title>s_oct6_sameside</title>
+<g id="a_node112"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=8779s" xlink:title="Oct 6 Q&amp;A, clip 05 @ 7:03–7:22:\none side kept « untouched », the\nremoved one « with the same … side\nof traffic »; « not deterred »\n(7:22)\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1281.27,-565.13C1281.27,-565.13 1138.52,-565.13 1138.52,-565.13 1132.52,-565.13 1126.52,-559.13 1126.52,-553.13 1126.52,-553.13 1126.52,-510.63 1126.52,-510.63 1126.52,-504.63 1132.52,-498.63 1138.52,-498.63 1138.52,-498.63 1281.27,-498.63 1281.27,-498.63 1287.27,-498.63 1293.27,-504.63 1293.27,-510.63 1293.27,-510.63 1293.27,-553.13 1293.27,-553.13 1293.27,-559.13 1287.27,-565.13 1281.27,-565.13"/>
 <text text-anchor="middle" x="1209.9" y="-552.58" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 05 @ 7:03–7:22:</text>
 <text text-anchor="middle" x="1209.9" y="-542.83" font-family="Helvetica,sans-Serif" font-size="9.00">one side kept « untouched », the</text>
@@ -1579,6 +1694,8 @@
 <text text-anchor="middle" x="1209.9" y="-523.33" font-family="Helvetica,sans-Serif" font-size="9.00">of traffic »; « not deterred »</text>
 <text text-anchor="middle" x="1209.9" y="-513.58" font-family="Helvetica,sans-Serif" font-size="9.00">(7:22)</text>
 <text text-anchor="middle" x="1209.9" y="-503.83" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- d_petition&#45;&gt;s_oct6_sameside -->
 <g id="edge403" class="edge">
@@ -1613,11 +1730,14 @@
 <!-- t_p61 -->
 <g id="node46" class="node">
 <title>t_p61</title>
+<g id="a_node46"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=61" xlink:title="Miovision, Grand, Sept 19 2024:\n707 bicycles, all four approaches,\n6 peak hours\n[2024&#45;09&#45;19]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M448.99,-1471.82C448.99,-1471.82 320.49,-1471.82 320.49,-1471.82 314.49,-1471.82 308.49,-1465.82 308.49,-1459.82 308.49,-1459.82 308.49,-1436.82 308.49,-1436.82 308.49,-1430.82 314.49,-1424.82 320.49,-1424.82 320.49,-1424.82 448.99,-1424.82 448.99,-1424.82 454.99,-1424.82 460.99,-1430.82 460.99,-1436.82 460.99,-1436.82 460.99,-1459.82 460.99,-1459.82 460.99,-1465.82 454.99,-1471.82 448.99,-1471.82"/>
 <text text-anchor="middle" x="384.74" y="-1459.27" font-family="Helvetica,sans-Serif" font-size="9.00">Miovision, Grand, Sept 19 2024:</text>
 <text text-anchor="middle" x="384.74" y="-1449.52" font-family="Helvetica,sans-Serif" font-size="9.00">707 bicycles, all four approaches,</text>
 <text text-anchor="middle" x="384.74" y="-1439.77" font-family="Helvetica,sans-Serif" font-size="9.00">6 peak hours</text>
 <text text-anchor="middle" x="384.74" y="-1430.02" font-family="Helvetica,sans-Serif" font-size="9.00">[2024&#45;09&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- t_p61&#45;&gt;d_deck -->
 <g id="edge6" class="edge">
@@ -1629,11 +1749,14 @@
 <!-- t_p62 -->
 <g id="node47" class="node">
 <title>t_p62</title>
+<g id="a_node47"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=62" xlink:title="Miovision, Grand, Jan 29 2025: 8\nbicycles on the Terrebonne axis, 6\npeak hours, weather&#45;advisory day\n[2025&#45;01&#45;29]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M759.61,-1305.57C759.61,-1305.57 628.86,-1305.57 628.86,-1305.57 622.86,-1305.57 616.86,-1299.57 616.86,-1293.57 616.86,-1293.57 616.86,-1270.57 616.86,-1270.57 616.86,-1264.57 622.86,-1258.57 628.86,-1258.57 628.86,-1258.57 759.61,-1258.57 759.61,-1258.57 765.61,-1258.57 771.61,-1264.57 771.61,-1270.57 771.61,-1270.57 771.61,-1293.57 771.61,-1293.57 771.61,-1299.57 765.61,-1305.57 759.61,-1305.57"/>
 <text text-anchor="middle" x="694.23" y="-1293.02" font-family="Helvetica,sans-Serif" font-size="9.00">Miovision, Grand, Jan 29 2025: 8</text>
 <text text-anchor="middle" x="694.23" y="-1283.27" font-family="Helvetica,sans-Serif" font-size="9.00">bicycles on the Terrebonne axis, 6</text>
 <text text-anchor="middle" x="694.23" y="-1273.52" font-family="Helvetica,sans-Serif" font-size="9.00">peak hours, weather&#45;advisory day</text>
 <text text-anchor="middle" x="694.23" y="-1263.77" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;01&#45;29]</text>
+</a>
+</g>
 </g>
 <!-- t_p62&#45;&gt;d_deck -->
 <g id="edge7" class="edge">
@@ -1736,11 +1859,14 @@
 <!-- t_portal -->
 <g id="node49" class="node">
 <title>t_portal</title>
+<g id="a_node49"><a xlink:href="https://donnees.montreal.ca/dataset/velos-comptage" xlink:title="City open&#45;data portal: no\nKensington counter; only a City\ndetector at Girouard, westbound\n[2026&#45;10&#45;16]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M623.36,-1231.43C623.36,-1231.43 500.86,-1231.43 500.86,-1231.43 494.86,-1231.43 488.86,-1225.43 488.86,-1219.43 488.86,-1219.43 488.86,-1196.43 488.86,-1196.43 488.86,-1190.43 494.86,-1184.43 500.86,-1184.43 500.86,-1184.43 623.36,-1184.43 623.36,-1184.43 629.36,-1184.43 635.36,-1190.43 635.36,-1196.43 635.36,-1196.43 635.36,-1219.43 635.36,-1219.43 635.36,-1225.43 629.36,-1231.43 623.36,-1231.43"/>
 <text text-anchor="middle" x="562.11" y="-1218.88" font-family="Helvetica,sans-Serif" font-size="9.00">City open&#45;data portal: no</text>
 <text text-anchor="middle" x="562.11" y="-1209.13" font-family="Helvetica,sans-Serif" font-size="9.00">Kensington counter; only a City</text>
 <text text-anchor="middle" x="562.11" y="-1199.38" font-family="Helvetica,sans-Serif" font-size="9.00">detector at Girouard, westbound</text>
 <text text-anchor="middle" x="562.11" y="-1189.63" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;16]</text>
+</a>
+</g>
 </g>
 <!-- t_portal&#45;&gt;t_counter -->
 <g id="edge20" class="edge">
@@ -1772,12 +1898,15 @@
 <!-- t_snow -->
 <g id="node51" class="node">
 <title>t_snow</title>
+<g id="a_node51"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-300/derived/exposure_tables.txt" xlink:title="City snow&#45;loading data: 30 loading\ndays in sector CDN&#45;301 last\nwinter; 72 % of eastbound winter\npassages on unconstrained days\n[2026&#45;03&#45;31]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M1264.62,-1208.2C1264.62,-1208.2 1130.87,-1208.2 1130.87,-1208.2 1124.87,-1208.2 1118.87,-1202.2 1118.87,-1196.2 1118.87,-1196.2 1118.87,-1163.45 1118.87,-1163.45 1118.87,-1157.45 1124.87,-1151.45 1130.87,-1151.45 1130.87,-1151.45 1264.62,-1151.45 1264.62,-1151.45 1270.62,-1151.45 1276.62,-1157.45 1276.62,-1163.45 1276.62,-1163.45 1276.62,-1196.2 1276.62,-1196.2 1276.62,-1202.2 1270.62,-1208.2 1264.62,-1208.2"/>
 <text text-anchor="middle" x="1197.75" y="-1195.65" font-family="Helvetica,sans-Serif" font-size="9.00">City snow&#45;loading data: 30 loading</text>
 <text text-anchor="middle" x="1197.75" y="-1185.9" font-family="Helvetica,sans-Serif" font-size="9.00">days in sector CDN&#45;301 last</text>
 <text text-anchor="middle" x="1197.75" y="-1176.15" font-family="Helvetica,sans-Serif" font-size="9.00">winter; 72 % of eastbound winter</text>
 <text text-anchor="middle" x="1197.75" y="-1166.4" font-family="Helvetica,sans-Serif" font-size="9.00">passages on unconstrained days</text>
 <text text-anchor="middle" x="1197.75" y="-1156.65" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;03&#45;31]</text>
+</a>
+</g>
 </g>
 <!-- t_snow&#45;&gt;d_r2026_300 -->
 <g id="edge225" class="edge">
@@ -1799,11 +1928,14 @@
 <!-- t_telraam -->
 <g id="node52" class="node">
 <title>t_telraam</title>
+<g id="a_node52"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-telraam" xlink:title="Telraam sensors (King Edward,\nDraper): daylight counts, Jan 29\n2025 = 21 and 57 bicycles\n[2025&#45;01&#45;29]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M133.75,-1159.09C133.75,-1159.09 12,-1159.09 12,-1159.09 6,-1159.09 0,-1153.09 0,-1147.09 0,-1147.09 0,-1124.09 0,-1124.09 0,-1118.09 6,-1112.09 12,-1112.09 12,-1112.09 133.75,-1112.09 133.75,-1112.09 139.75,-1112.09 145.75,-1118.09 145.75,-1124.09 145.75,-1124.09 145.75,-1147.09 145.75,-1147.09 145.75,-1153.09 139.75,-1159.09 133.75,-1159.09"/>
 <text text-anchor="middle" x="72.88" y="-1146.54" font-family="Helvetica,sans-Serif" font-size="9.00">Telraam sensors (King Edward,</text>
 <text text-anchor="middle" x="72.88" y="-1136.79" font-family="Helvetica,sans-Serif" font-size="9.00">Draper): daylight counts, Jan 29</text>
 <text text-anchor="middle" x="72.88" y="-1127.04" font-family="Helvetica,sans-Serif" font-size="9.00">2025 = 21 and 57 bicycles</text>
 <text text-anchor="middle" x="72.88" y="-1117.29" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;01&#45;29]</text>
+</a>
+</g>
 </g>
 <!-- t_telraam&#45;&gt;t_p62 -->
 <g id="edge22" class="edge">
@@ -1825,6 +1957,7 @@
 <!-- t_exp_spaces -->
 <g id="node53" class="node">
 <title>t_exp_spaces</title>
+<g id="a_node53"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2023-exp-mobility-study/README.md" xlink:title="EXP 2023: 475 spaces on\nTerrebonne, 375 after 5 m\nclearances, 171 in the retained\ndesign (p. 100); no as&#45;built count\nin the record\n[2023&#45;10&#45;30]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M2632.91,-761.33C2632.91,-761.33 2507.41,-761.33 2507.41,-761.33 2501.41,-761.33 2495.41,-755.33 2495.41,-749.33 2495.41,-749.33 2495.41,-706.83 2495.41,-706.83 2495.41,-700.83 2501.41,-694.83 2507.41,-694.83 2507.41,-694.83 2632.91,-694.83 2632.91,-694.83 2638.91,-694.83 2644.91,-700.83 2644.91,-706.83 2644.91,-706.83 2644.91,-749.33 2644.91,-749.33 2644.91,-755.33 2638.91,-761.33 2632.91,-761.33"/>
 <text text-anchor="middle" x="2570.16" y="-748.78" font-family="Helvetica,sans-Serif" font-size="9.00">EXP 2023: 475 spaces on</text>
 <text text-anchor="middle" x="2570.16" y="-739.03" font-family="Helvetica,sans-Serif" font-size="9.00">Terrebonne, 375 after 5 m</text>
@@ -1832,6 +1965,8 @@
 <text text-anchor="middle" x="2570.16" y="-719.53" font-family="Helvetica,sans-Serif" font-size="9.00">design (p. 100); no as&#45;built count</text>
 <text text-anchor="middle" x="2570.16" y="-709.78" font-family="Helvetica,sans-Serif" font-size="9.00">in the record</text>
 <text text-anchor="middle" x="2570.16" y="-700.03" font-family="Helvetica,sans-Serif" font-size="9.00">[2023&#45;10&#45;30]</text>
+</a>
+</g>
 </g>
 <!-- t_exp_spaces&#45;&gt;d_exp2023 -->
 <g id="edge208" class="edge">
@@ -1850,12 +1985,15 @@
 <!-- t_p85 -->
 <g id="node55" class="node">
 <title>t_p85</title>
+<g id="a_node55"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=85" xlink:title="Miovision tables: the twelve&#45;hour\ncount at Grand on January 29, 2025\nwas 12 bicycles (p. 85); the slide\ngives 10 at Cavendish\n[2025&#45;01&#45;29]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M709.61,-1629.83C709.61,-1629.83 571.36,-1629.83 571.36,-1629.83 565.36,-1629.83 559.36,-1623.83 559.36,-1617.83 559.36,-1617.83 559.36,-1585.08 559.36,-1585.08 559.36,-1579.08 565.36,-1573.08 571.36,-1573.08 571.36,-1573.08 709.61,-1573.08 709.61,-1573.08 715.61,-1573.08 721.61,-1579.08 721.61,-1585.08 721.61,-1585.08 721.61,-1617.83 721.61,-1617.83 721.61,-1623.83 715.61,-1629.83 709.61,-1629.83"/>
 <text text-anchor="middle" x="640.48" y="-1617.28" font-family="Helvetica,sans-Serif" font-size="9.00">Miovision tables: the twelve&#45;hour</text>
 <text text-anchor="middle" x="640.48" y="-1607.53" font-family="Helvetica,sans-Serif" font-size="9.00">count at Grand on January 29, 2025</text>
 <text text-anchor="middle" x="640.48" y="-1597.78" font-family="Helvetica,sans-Serif" font-size="9.00">was 12 bicycles (p. 85); the slide</text>
 <text text-anchor="middle" x="640.48" y="-1588.03" font-family="Helvetica,sans-Serif" font-size="9.00">gives 10 at Cavendish</text>
 <text text-anchor="middle" x="640.48" y="-1578.28" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;01&#45;29]</text>
+</a>
+</g>
 </g>
 <!-- t_p85&#45;&gt;d_deck -->
 <g id="edge235" class="edge">
@@ -1874,12 +2012,15 @@
 <!-- t_deck_p60 -->
 <g id="node56" class="node">
 <title>t_deck_p60</title>
+<g id="a_node56"><a xlink:href="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=60" xlink:title="The borough&#39;s deck averages five\ncounts for motor vehicles (p. 60)\nand relies on a single day for\nbicycles\n[2025&#45;09]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M660.87,-1564.63C660.87,-1564.63 531.62,-1564.63 531.62,-1564.63 525.62,-1564.63 519.62,-1558.63 519.62,-1552.63 519.62,-1552.63 519.62,-1519.88 519.62,-1519.88 519.62,-1513.88 525.62,-1507.88 531.62,-1507.88 531.62,-1507.88 660.87,-1507.88 660.87,-1507.88 666.87,-1507.88 672.87,-1513.88 672.87,-1519.88 672.87,-1519.88 672.87,-1552.63 672.87,-1552.63 672.87,-1558.63 666.87,-1564.63 660.87,-1564.63"/>
 <text text-anchor="middle" x="596.24" y="-1552.08" font-family="Helvetica,sans-Serif" font-size="9.00">The borough&#39;s deck averages five</text>
 <text text-anchor="middle" x="596.24" y="-1542.33" font-family="Helvetica,sans-Serif" font-size="9.00">counts for motor vehicles (p. 60)</text>
 <text text-anchor="middle" x="596.24" y="-1532.58" font-family="Helvetica,sans-Serif" font-size="9.00">and relies on a single day for</text>
 <text text-anchor="middle" x="596.24" y="-1522.83" font-family="Helvetica,sans-Serif" font-size="9.00">bicycles</text>
 <text text-anchor="middle" x="596.24" y="-1513.08" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- t_deck_p60&#45;&gt;d_deck -->
 <g id="edge236" class="edge">
@@ -1901,12 +2042,15 @@
 <!-- t_exp_djma -->
 <g id="node57" class="node">
 <title>t_exp_djma</title>
+<g id="a_node57"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2023-exp-mobility-study/README.md" xlink:title="2022 DJMA of 6,300 between\nCavendish and Grand (EXP 2023, p.\n41); 1,375 a day in the counter&#39;s\nfirst year\n[2022&#45;10&#45;04]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M2751.72,-1173.99C2751.72,-1173.99 2611.22,-1173.99 2611.22,-1173.99 2605.22,-1173.99 2599.22,-1167.99 2599.22,-1161.99 2599.22,-1161.99 2599.22,-1129.24 2599.22,-1129.24 2599.22,-1123.24 2605.22,-1117.24 2611.22,-1117.24 2611.22,-1117.24 2751.72,-1117.24 2751.72,-1117.24 2757.72,-1117.24 2763.72,-1123.24 2763.72,-1129.24 2763.72,-1129.24 2763.72,-1161.99 2763.72,-1161.99 2763.72,-1167.99 2757.72,-1173.99 2751.72,-1173.99"/>
 <text text-anchor="middle" x="2681.47" y="-1161.44" font-family="Helvetica,sans-Serif" font-size="9.00">2022 DJMA of 6,300 between</text>
 <text text-anchor="middle" x="2681.47" y="-1151.69" font-family="Helvetica,sans-Serif" font-size="9.00">Cavendish and Grand (EXP 2023, p.</text>
 <text text-anchor="middle" x="2681.47" y="-1141.94" font-family="Helvetica,sans-Serif" font-size="9.00">41); 1,375 a day in the counter&#39;s</text>
 <text text-anchor="middle" x="2681.47" y="-1132.19" font-family="Helvetica,sans-Serif" font-size="9.00">first year</text>
 <text text-anchor="middle" x="2681.47" y="-1122.44" font-family="Helvetica,sans-Serif" font-size="9.00">[2022&#45;10&#45;04]</text>
+</a>
+</g>
 </g>
 <!-- t_exp_djma&#45;&gt;d_exp2023 -->
 <g id="edge209" class="edge">
@@ -1918,6 +2062,7 @@
 <!-- t_lane_widths -->
 <g id="node58" class="node">
 <title>t_lane_widths</title>
+<g id="a_node58"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2023-exp-mobility-study/README.md" xlink:title="2024 design plans: driving lane\n3.0 to 4.0 m; EXP 2023\nalternative: 3.5 m shared lane\nbetween parking lanes (fig. 6&#45;6,\np. 72); working committee 5 bis:\n4.1 m\n[2024]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M2779.7,-1512.78C2779.7,-1512.78 2659.45,-1512.78 2659.45,-1512.78 2653.45,-1512.78 2647.45,-1506.78 2647.45,-1500.78 2647.45,-1500.78 2647.45,-1448.53 2647.45,-1448.53 2647.45,-1442.53 2653.45,-1436.53 2659.45,-1436.53 2659.45,-1436.53 2779.7,-1436.53 2779.7,-1436.53 2785.7,-1436.53 2791.7,-1442.53 2791.7,-1448.53 2791.7,-1448.53 2791.7,-1500.78 2791.7,-1500.78 2791.7,-1506.78 2785.7,-1512.78 2779.7,-1512.78"/>
 <text text-anchor="middle" x="2719.57" y="-1500.23" font-family="Helvetica,sans-Serif" font-size="9.00">2024 design plans: driving lane</text>
 <text text-anchor="middle" x="2719.57" y="-1490.48" font-family="Helvetica,sans-Serif" font-size="9.00">3.0 to 4.0 m; EXP 2023</text>
@@ -1926,6 +2071,8 @@
 <text text-anchor="middle" x="2719.57" y="-1461.23" font-family="Helvetica,sans-Serif" font-size="9.00">p. 72); working committee 5 bis:</text>
 <text text-anchor="middle" x="2719.57" y="-1451.48" font-family="Helvetica,sans-Serif" font-size="9.00">4.1 m</text>
 <text text-anchor="middle" x="2719.57" y="-1441.73" font-family="Helvetica,sans-Serif" font-size="9.00">[2024]</text>
+</a>
+</g>
 </g>
 <!-- t_lane_widths&#45;&gt;d_june10 -->
 <g id="edge308" class="edge">
@@ -1964,6 +2111,7 @@
 <!-- t_portal_girouard -->
 <g id="node59" class="node">
 <title>t_portal_girouard</title>
+<g id="a_node59"><a xlink:href="https://donnees.montreal.ca/dataset/velos-comptage" xlink:title="City open&#45;data detector det&#45;00118\nat Girouard: its only Terrebonne\nchannel counts westbound, from\nOctober 23, 2025; Jan 22.6, Feb\n29.1, Mar 24.7 a day (2026)\n[2025&#45;10&#45;23]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M341.07,-1288.49C341.07,-1288.49 211.07,-1288.49 211.07,-1288.49 205.07,-1288.49 199.07,-1282.49 199.07,-1276.49 199.07,-1276.49 199.07,-1233.99 199.07,-1233.99 199.07,-1227.99 205.07,-1221.99 211.07,-1221.99 211.07,-1221.99 341.07,-1221.99 341.07,-1221.99 347.07,-1221.99 353.07,-1227.99 353.07,-1233.99 353.07,-1233.99 353.07,-1276.49 353.07,-1276.49 353.07,-1282.49 347.07,-1288.49 341.07,-1288.49"/>
 <text text-anchor="middle" x="276.07" y="-1275.94" font-family="Helvetica,sans-Serif" font-size="9.00">City open&#45;data detector det&#45;00118</text>
 <text text-anchor="middle" x="276.07" y="-1266.19" font-family="Helvetica,sans-Serif" font-size="9.00">at Girouard: its only Terrebonne</text>
@@ -1971,6 +2119,8 @@
 <text text-anchor="middle" x="276.07" y="-1246.69" font-family="Helvetica,sans-Serif" font-size="9.00">October 23, 2025; Jan 22.6, Feb</text>
 <text text-anchor="middle" x="276.07" y="-1236.94" font-family="Helvetica,sans-Serif" font-size="9.00">29.1, Mar 24.7 a day (2026)</text>
 <text text-anchor="middle" x="276.07" y="-1227.19" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;10&#45;23]</text>
+</a>
+</g>
 </g>
 <!-- t_portal_girouard&#45;&gt;t_portal -->
 <g id="edge237" class="edge">
@@ -1989,6 +2139,7 @@
 <!-- t_csr -->
 <g id="node60" class="node">
 <title>t_csr</title>
+<g id="a_node60"><a xlink:href="https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-24.2" xlink:title="Code de la sécurité routière: art.\n341, a driver must leave at least\n1 m when passing a cyclist where\nthe limit is 50 km/h or less; art.\n487, cyclists ride as near as\npracticable to the right « en\ntenant compte de l&#39;état de la\nchaussée et des risques\nd&#39;emportiérage »\n[2018]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M2854.76,-2031.56C2854.76,-2031.56 2726.26,-2031.56 2726.26,-2031.56 2720.26,-2031.56 2714.26,-2025.56 2714.26,-2019.56 2714.26,-2019.56 2714.26,-1938.06 2714.26,-1938.06 2714.26,-1932.06 2720.26,-1926.06 2726.26,-1926.06 2726.26,-1926.06 2854.76,-1926.06 2854.76,-1926.06 2860.76,-1926.06 2866.76,-1932.06 2866.76,-1938.06 2866.76,-1938.06 2866.76,-2019.56 2866.76,-2019.56 2866.76,-2025.56 2860.76,-2031.56 2854.76,-2031.56"/>
 <text text-anchor="middle" x="2790.51" y="-2019.01" font-family="Helvetica,sans-Serif" font-size="9.00">Code de la sécurité routière: art.</text>
 <text text-anchor="middle" x="2790.51" y="-2009.26" font-family="Helvetica,sans-Serif" font-size="9.00">341, a driver must leave at least</text>
@@ -2000,6 +2151,8 @@
 <text text-anchor="middle" x="2790.51" y="-1950.76" font-family="Helvetica,sans-Serif" font-size="9.00">chaussée et des risques</text>
 <text text-anchor="middle" x="2790.51" y="-1941.01" font-family="Helvetica,sans-Serif" font-size="9.00">d&#39;emportiérage »</text>
 <text text-anchor="middle" x="2790.51" y="-1931.26" font-family="Helvetica,sans-Serif" font-size="9.00">[2018]</text>
+</a>
+</g>
 </g>
 <!-- t_csr&#45;&gt;x_pass -->
 <g id="edge384" class="edge">
@@ -2011,10 +2164,13 @@
 <!-- c_99 -->
 <g id="node61" class="node">
 <title>c_99</title>
+<g id="a_node61"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/derived/Terrebonne_2026-581_summary_points_en.pdf" xlink:title="&quot;99 %&quot; = 8 ÷ 707 (two different\nslides; like&#45;for&#45;like 97–98 %)\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#e6f6ef" stroke="#9aa0a6" stroke-width="0.6" d="M280.14,-1118C280.14,-1118 165.89,-1118 165.89,-1118 159.89,-1118 153.89,-1112 153.89,-1106 153.89,-1106 153.89,-1092.75 153.89,-1092.75 153.89,-1086.75 159.89,-1080.75 165.89,-1080.75 165.89,-1080.75 280.14,-1080.75 280.14,-1080.75 286.14,-1080.75 292.14,-1086.75 292.14,-1092.75 292.14,-1092.75 292.14,-1106 292.14,-1106 292.14,-1112 286.14,-1118 280.14,-1118"/>
 <text text-anchor="middle" x="223.02" y="-1105.45" font-family="Helvetica,sans-Serif" font-size="9.00">&quot;99 %&quot; = 8 ÷ 707 (two different</text>
 <text text-anchor="middle" x="223.02" y="-1095.7" font-family="Helvetica,sans-Serif" font-size="9.00">slides; like&#45;for&#45;like 97–98 %)</text>
 <text text-anchor="middle" x="223.02" y="-1085.95" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- c_99&#45;&gt;t_p61 -->
 <g id="edge4" class="edge">
@@ -2043,9 +2199,12 @@
 <!-- c_4 -->
 <g id="node62" class="node">
 <title>c_4</title>
+<g id="a_node62"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/derived/Terrebonne_2026-581_summary_points_en.pdf" xlink:title="&quot;4 cyclists&quot; = 8 passages ÷ 2\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#e6f6ef" stroke="#9aa0a6" stroke-width="0.6" d="M603.62,-871.62C603.62,-871.62 496.87,-871.62 496.87,-871.62 490.87,-871.62 484.87,-865.62 484.87,-859.62 484.87,-859.62 484.87,-847.62 484.87,-847.62 484.87,-841.62 490.87,-835.62 496.87,-835.62 496.87,-835.62 603.62,-835.62 603.62,-835.62 609.62,-835.62 615.62,-841.62 615.62,-847.62 615.62,-847.62 615.62,-859.62 615.62,-859.62 615.62,-865.62 609.62,-871.62 603.62,-871.62"/>
 <text text-anchor="middle" x="550.25" y="-854.82" font-family="Helvetica,sans-Serif" font-size="9.00">&quot;4 cyclists&quot; = 8 passages ÷ 2</text>
 <text text-anchor="middle" x="550.25" y="-845.07" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- c_4&#45;&gt;t_p62 -->
 <g id="edge5" class="edge">
@@ -2057,10 +2216,13 @@
 <!-- c_40 -->
 <g id="node63" class="node">
 <title>c_40</title>
+<g id="a_node63"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/derived/figures/kensington-violins/kensington_daily_violin_winter_en.png" xlink:title="40 a day = 4,891 ÷ 121 days; no\nday under 2\n[2026&#45;10&#45;20]" target="_blank">
 <path fill="#e6f6ef" stroke="#9aa0a6" stroke-width="0.6" d="M758.19,-847.89C758.19,-847.89 635.69,-847.89 635.69,-847.89 629.69,-847.89 623.69,-841.89 623.69,-835.89 623.69,-835.89 623.69,-822.64 623.69,-822.64 623.69,-816.64 629.69,-810.64 635.69,-810.64 635.69,-810.64 758.19,-810.64 758.19,-810.64 764.19,-810.64 770.19,-816.64 770.19,-822.64 770.19,-822.64 770.19,-835.89 770.19,-835.89 770.19,-841.89 764.19,-847.89 758.19,-847.89"/>
 <text text-anchor="middle" x="696.94" y="-835.34" font-family="Helvetica,sans-Serif" font-size="9.00">40 a day = 4,891 ÷ 121 days; no</text>
 <text text-anchor="middle" x="696.94" y="-825.59" font-family="Helvetica,sans-Serif" font-size="9.00">day under 2</text>
 <text text-anchor="middle" x="696.94" y="-815.84" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;20]</text>
+</a>
+</g>
 </g>
 <!-- c_40&#45;&gt;t_counter -->
 <g id="edge10" class="edge">
@@ -2072,10 +2234,13 @@
 <!-- c_36 -->
 <g id="node64" class="node">
 <title>c_36</title>
+<g id="a_node64"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/derived/figures/kensington-monthly/kensington_monthly_2025-26_en.png" xlink:title="3.6 % = 4,891 ÷ 135,276 (winter&#39;s\nshare of the year)\n[2026&#45;10&#45;20]" target="_blank">
 <path fill="#e6f6ef" stroke="#9aa0a6" stroke-width="0.6" d="M642.68,-678.17C642.68,-678.17 514.93,-678.17 514.93,-678.17 508.93,-678.17 502.93,-672.17 502.93,-666.17 502.93,-666.17 502.93,-652.92 502.93,-652.92 502.93,-646.92 508.93,-640.92 514.93,-640.92 514.93,-640.92 642.68,-640.92 642.68,-640.92 648.68,-640.92 654.68,-646.92 654.68,-652.92 654.68,-652.92 654.68,-666.17 654.68,-666.17 654.68,-672.17 648.68,-678.17 642.68,-678.17"/>
 <text text-anchor="middle" x="578.81" y="-665.62" font-family="Helvetica,sans-Serif" font-size="9.00">3.6 % = 4,891 ÷ 135,276 (winter&#39;s</text>
 <text text-anchor="middle" x="578.81" y="-655.87" font-family="Helvetica,sans-Serif" font-size="9.00">share of the year)</text>
 <text text-anchor="middle" x="578.81" y="-646.12" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;20]</text>
+</a>
+</g>
 </g>
 <!-- c_36&#45;&gt;t_counter -->
 <g id="edge11" class="edge">
@@ -2117,11 +2282,14 @@
 <!-- c_76 -->
 <g id="node65" class="node">
 <title>c_76</title>
+<g id="a_node65"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2026-581/derived/figures/kensington-histograms/kensington_daily_histogram_rel_en.png" xlink:title="7.6 % = 40.4 ÷ 534.4 per day\n(winter vs rest of year); 93 %\ndrop per day\n[2026&#45;10&#45;20]" target="_blank">
 <path fill="#e6f6ef" stroke="#9aa0a6" stroke-width="0.6" d="M445.83,-840.75C445.83,-840.75 336.83,-840.75 336.83,-840.75 330.83,-840.75 324.83,-834.75 324.83,-828.75 324.83,-828.75 324.83,-805.75 324.83,-805.75 324.83,-799.75 330.83,-793.75 336.83,-793.75 336.83,-793.75 445.83,-793.75 445.83,-793.75 451.83,-793.75 457.83,-799.75 457.83,-805.75 457.83,-805.75 457.83,-828.75 457.83,-828.75 457.83,-834.75 451.83,-840.75 445.83,-840.75"/>
 <text text-anchor="middle" x="391.33" y="-828.2" font-family="Helvetica,sans-Serif" font-size="9.00">7.6 % = 40.4 ÷ 534.4 per day</text>
 <text text-anchor="middle" x="391.33" y="-818.45" font-family="Helvetica,sans-Serif" font-size="9.00">(winter vs rest of year); 93 %</text>
 <text text-anchor="middle" x="391.33" y="-808.7" font-family="Helvetica,sans-Serif" font-size="9.00">drop per day</text>
 <text text-anchor="middle" x="391.33" y="-798.95" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;20]</text>
+</a>
+</g>
 </g>
 <!-- c_76&#45;&gt;t_counter -->
 <g id="edge12" class="edge">
@@ -2199,11 +2367,14 @@
 <!-- s_oct6_99 -->
 <g id="node83" class="node">
 <title>s_oct6_99</title>
+<g id="a_node83"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: &quot;diminishes by 99\n% … from 700 … to 8 … that&#39;s 4\ncyclists&quot;\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M792.43,-927.79C792.43,-927.79 667.68,-927.79 667.68,-927.79 661.68,-927.79 655.68,-921.79 655.68,-915.79 655.68,-915.79 655.68,-892.79 655.68,-892.79 655.68,-886.79 661.68,-880.79 667.68,-880.79 667.68,-880.79 792.43,-880.79 792.43,-880.79 798.43,-880.79 804.43,-886.79 804.43,-892.79 804.43,-892.79 804.43,-915.79 804.43,-915.79 804.43,-921.79 798.43,-927.79 792.43,-927.79"/>
 <text text-anchor="middle" x="730.06" y="-915.24" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: &quot;diminishes by 99</text>
 <text text-anchor="middle" x="730.06" y="-905.49" font-family="Helvetica,sans-Serif" font-size="9.00">% … from 700 … to 8 … that&#39;s 4</text>
 <text text-anchor="middle" x="730.06" y="-895.74" font-family="Helvetica,sans-Serif" font-size="9.00">cyclists&quot;</text>
 <text text-anchor="middle" x="730.06" y="-885.99" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_99&#45;&gt;a_teodoresco -->
 <g id="edge56" class="edge">
@@ -2264,12 +2435,15 @@
 <!-- s_oct6_decision -->
 <g id="node85" class="node">
 <title>s_oct6_decision</title>
+<g id="a_node85"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=4963s" xlink:title="Oct 6 Q&amp;A: « le dernier rapport\nqui nous permettait de prendre une\ndécision en consensus la semaine\npassée »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1358.25,-1439.93C1358.25,-1439.93 1223,-1439.93 1223,-1439.93 1217,-1439.93 1211,-1433.93 1211,-1427.93 1211,-1427.93 1211,-1395.18 1211,-1395.18 1211,-1389.18 1217,-1383.18 1223,-1383.18 1223,-1383.18 1358.25,-1383.18 1358.25,-1383.18 1364.25,-1383.18 1370.25,-1389.18 1370.25,-1395.18 1370.25,-1395.18 1370.25,-1427.93 1370.25,-1427.93 1370.25,-1433.93 1364.25,-1439.93 1358.25,-1439.93"/>
 <text text-anchor="middle" x="1290.62" y="-1427.38" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A: « le dernier rapport</text>
 <text text-anchor="middle" x="1290.62" y="-1417.63" font-family="Helvetica,sans-Serif" font-size="9.00">qui nous permettait de prendre une</text>
 <text text-anchor="middle" x="1290.62" y="-1407.88" font-family="Helvetica,sans-Serif" font-size="9.00">décision en consensus la semaine</text>
 <text text-anchor="middle" x="1290.62" y="-1398.13" font-family="Helvetica,sans-Serif" font-size="9.00">passée »</text>
 <text text-anchor="middle" x="1290.62" y="-1388.38" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_decision&#45;&gt;a_teodoresco -->
 <g id="edge97" class="edge">
@@ -2295,11 +2469,14 @@
 <!-- s_db_final -->
 <g id="node92" class="node">
 <title>s_db_final</title>
+<g id="a_node92"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 00:38: &quot;the final study\n… still need to be submitted to\nus&quot;\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1470.68,-1327.97C1470.68,-1327.97 1349.68,-1327.97 1349.68,-1327.97 1343.68,-1327.97 1337.68,-1321.97 1337.68,-1315.97 1337.68,-1315.97 1337.68,-1292.97 1337.68,-1292.97 1337.68,-1286.97 1343.68,-1280.97 1349.68,-1280.97 1349.68,-1280.97 1470.68,-1280.97 1470.68,-1280.97 1476.68,-1280.97 1482.68,-1286.97 1482.68,-1292.97 1482.68,-1292.97 1482.68,-1315.97 1482.68,-1315.97 1482.68,-1321.97 1476.68,-1327.97 1470.68,-1327.97"/>
 <text text-anchor="middle" x="1410.18" y="-1315.42" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 00:38: &quot;the final study</text>
 <text text-anchor="middle" x="1410.18" y="-1305.67" font-family="Helvetica,sans-Serif" font-size="9.00">… still need to be submitted to</text>
 <text text-anchor="middle" x="1410.18" y="-1295.92" font-family="Helvetica,sans-Serif" font-size="9.00">us&quot;</text>
 <text text-anchor="middle" x="1410.18" y="-1286.17" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_decision&#45;&gt;s_db_final -->
 <g id="edge41" class="edge">
@@ -2321,11 +2498,14 @@
 <!-- s_oct6_bidir -->
 <g id="node86" class="node">
 <title>s_oct6_bidir</title>
+<g id="a_node86"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6: bidirectional option &quot;too\ncomplicated and no real upside for\nanyone&quot;\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1922.36,-976.89C1922.36,-976.89 1789.36,-976.89 1789.36,-976.89 1783.36,-976.89 1777.36,-970.89 1777.36,-964.89 1777.36,-964.89 1777.36,-941.89 1777.36,-941.89 1777.36,-935.89 1783.36,-929.89 1789.36,-929.89 1789.36,-929.89 1922.36,-929.89 1922.36,-929.89 1928.36,-929.89 1934.36,-935.89 1934.36,-941.89 1934.36,-941.89 1934.36,-964.89 1934.36,-964.89 1934.36,-970.89 1928.36,-976.89 1922.36,-976.89"/>
 <text text-anchor="middle" x="1855.86" y="-964.34" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6: bidirectional option &quot;too</text>
 <text text-anchor="middle" x="1855.86" y="-954.59" font-family="Helvetica,sans-Serif" font-size="9.00">complicated and no real upside for</text>
 <text text-anchor="middle" x="1855.86" y="-944.84" font-family="Helvetica,sans-Serif" font-size="9.00">anyone&quot;</text>
 <text text-anchor="middle" x="1855.86" y="-935.09" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_bidir&#45;&gt;a_teodoresco -->
 <g id="edge83" class="edge">
@@ -2482,11 +2662,14 @@
 <!-- s_db_40 -->
 <g id="node88" class="node">
 <title>s_db_40</title>
+<g id="a_node88"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 07:03: the 8 = six rush\nhours; &quot;from 40 a day to 30 a day\nduring December to March&quot;\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M860.65,-997.81C860.65,-997.81 735.15,-997.81 735.15,-997.81 729.15,-997.81 723.15,-991.81 723.15,-985.81 723.15,-985.81 723.15,-962.81 723.15,-962.81 723.15,-956.81 729.15,-950.81 735.15,-950.81 735.15,-950.81 860.65,-950.81 860.65,-950.81 866.65,-950.81 872.65,-956.81 872.65,-962.81 872.65,-962.81 872.65,-985.81 872.65,-985.81 872.65,-991.81 866.65,-997.81 860.65,-997.81"/>
 <text text-anchor="middle" x="797.9" y="-985.26" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 07:03: the 8 = six rush</text>
 <text text-anchor="middle" x="797.9" y="-975.51" font-family="Helvetica,sans-Serif" font-size="9.00">hours; &quot;from 40 a day to 30 a day</text>
 <text text-anchor="middle" x="797.9" y="-965.76" font-family="Helvetica,sans-Serif" font-size="9.00">during December to March&quot;</text>
 <text text-anchor="middle" x="797.9" y="-956.01" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_40&#45;&gt;a_teodoresco -->
 <g id="edge58" class="edge">
@@ -2532,11 +2715,14 @@
 <!-- s_oct6_perhour -->
 <g id="node109" class="node">
 <title>s_oct6_perhour</title>
+<g id="a_node109"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=8538s" xlink:title="Oct 6 Q&amp;A, clip 05 @ 3:02,\nanswering the author: « Per hour.\nHeure de pointe. »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1125.66,-1263.54C1125.66,-1263.54 997.91,-1263.54 997.91,-1263.54 991.91,-1263.54 985.91,-1257.54 985.91,-1251.54 985.91,-1251.54 985.91,-1228.54 985.91,-1228.54 985.91,-1222.54 991.91,-1216.54 997.91,-1216.54 997.91,-1216.54 1125.66,-1216.54 1125.66,-1216.54 1131.66,-1216.54 1137.66,-1222.54 1137.66,-1228.54 1137.66,-1228.54 1137.66,-1251.54 1137.66,-1251.54 1137.66,-1257.54 1131.66,-1263.54 1125.66,-1263.54"/>
 <text text-anchor="middle" x="1061.78" y="-1250.99" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 05 @ 3:02,</text>
 <text text-anchor="middle" x="1061.78" y="-1241.24" font-family="Helvetica,sans-Serif" font-size="9.00">answering the author: « Per hour.</text>
 <text text-anchor="middle" x="1061.78" y="-1231.49" font-family="Helvetica,sans-Serif" font-size="9.00">Heure de pointe. »</text>
 <text text-anchor="middle" x="1061.78" y="-1221.74" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_db_40&#45;&gt;s_oct6_perhour -->
 <g id="edge251" class="edge">
@@ -2548,12 +2734,15 @@
 <!-- e_daybreak -->
 <g id="node140" class="node">
 <title>e_daybreak</title>
+<g id="a_node140"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="CBC Daybreak interview with the\ncouncillor, October 9, 2026 (the\nday the access request was\nanswered)\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M1405.53,-902.3C1405.53,-902.3 1363.34,-934.17 1363.34,-934.17 1358.55,-937.79 1347.76,-941.4 1341.76,-941.4 1341.76,-941.4 1243.08,-941.4 1243.08,-941.4 1237.08,-941.4 1226.3,-937.79 1221.51,-934.17 1221.51,-934.17 1179.32,-902.3 1179.32,-902.3 1174.53,-898.68 1174.53,-891.45 1179.32,-887.83 1179.32,-887.83 1221.51,-855.96 1221.51,-855.96 1226.3,-852.35 1237.08,-848.73 1243.08,-848.73 1243.08,-848.73 1341.76,-848.73 1341.76,-848.73 1347.76,-848.73 1358.55,-852.35 1363.34,-855.96 1363.34,-855.96 1405.53,-887.83 1405.53,-887.83 1410.31,-891.45 1410.31,-898.68 1405.53,-902.3"/>
 <text text-anchor="middle" x="1292.42" y="-910.89" font-family="Helvetica,sans-Serif" font-size="9.00">CBC Daybreak interview with the</text>
 <text text-anchor="middle" x="1292.42" y="-901.14" font-family="Helvetica,sans-Serif" font-size="9.00">councillor, October 9, 2026 (the</text>
 <text text-anchor="middle" x="1292.42" y="-891.39" font-family="Helvetica,sans-Serif" font-size="9.00">day the access request was</text>
 <text text-anchor="middle" x="1292.42" y="-881.64" font-family="Helvetica,sans-Serif" font-size="9.00">answered)</text>
 <text text-anchor="middle" x="1292.42" y="-871.89" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_40&#45;&gt;e_daybreak -->
 <g id="edge70" class="edge">
@@ -2565,11 +2754,14 @@
 <!-- s_db_source -->
 <g id="node89" class="node">
 <title>s_db_source</title>
+<g id="a_node89"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 07:03: &quot;source of truth\n… open data website … connected\ndirectly to Eco&#45;Counter&quot;\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M703.07,-982.84C703.07,-982.84 568.57,-982.84 568.57,-982.84 562.57,-982.84 556.57,-976.84 556.57,-970.84 556.57,-970.84 556.57,-947.84 556.57,-947.84 556.57,-941.84 562.57,-935.84 568.57,-935.84 568.57,-935.84 703.07,-935.84 703.07,-935.84 709.07,-935.84 715.07,-941.84 715.07,-947.84 715.07,-947.84 715.07,-970.84 715.07,-970.84 715.07,-976.84 709.07,-982.84 703.07,-982.84"/>
 <text text-anchor="middle" x="635.82" y="-970.29" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 07:03: &quot;source of truth</text>
 <text text-anchor="middle" x="635.82" y="-960.54" font-family="Helvetica,sans-Serif" font-size="9.00">… open data website … connected</text>
 <text text-anchor="middle" x="635.82" y="-950.79" font-family="Helvetica,sans-Serif" font-size="9.00">directly to Eco&#45;Counter&quot;</text>
 <text text-anchor="middle" x="635.82" y="-941.04" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_source&#45;&gt;a_teodoresco -->
 <g id="edge99" class="edge">
@@ -2612,11 +2804,14 @@
 <!-- s_db_perm -->
 <g id="node90" class="node">
 <title>s_db_perm</title>
+<g id="a_node90"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 12:22: &quot;for now, we&#39;re\nlooking at it in a way that will\nmake it permanent&quot; (ambiguous)\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1408.63,-620.17C1408.63,-620.17 1283.88,-620.17 1283.88,-620.17 1277.88,-620.17 1271.88,-614.17 1271.88,-608.17 1271.88,-608.17 1271.88,-585.17 1271.88,-585.17 1271.88,-579.17 1277.88,-573.17 1283.88,-573.17 1283.88,-573.17 1408.63,-573.17 1408.63,-573.17 1414.63,-573.17 1420.63,-579.17 1420.63,-585.17 1420.63,-585.17 1420.63,-608.17 1420.63,-608.17 1420.63,-614.17 1414.63,-620.17 1408.63,-620.17"/>
 <text text-anchor="middle" x="1346.25" y="-607.62" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 12:22: &quot;for now, we&#39;re</text>
 <text text-anchor="middle" x="1346.25" y="-597.87" font-family="Helvetica,sans-Serif" font-size="9.00">looking at it in a way that will</text>
 <text text-anchor="middle" x="1346.25" y="-588.12" font-family="Helvetica,sans-Serif" font-size="9.00">make it permanent&quot; (ambiguous)</text>
 <text text-anchor="middle" x="1346.25" y="-578.37" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_perm&#45;&gt;a_teodoresco -->
 <g id="edge100" class="edge">
@@ -2655,10 +2850,13 @@
 <!-- s_db_window -->
 <g id="node93" class="node">
 <title>s_db_window</title>
+<g id="a_node93"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 03:11: &quot;December to\nMarch&quot;\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1539.36,-539.97C1539.36,-539.97 1423.61,-539.97 1423.61,-539.97 1417.61,-539.97 1411.61,-533.97 1411.61,-527.97 1411.61,-527.97 1411.61,-514.72 1411.61,-514.72 1411.61,-508.72 1417.61,-502.72 1423.61,-502.72 1423.61,-502.72 1539.36,-502.72 1539.36,-502.72 1545.36,-502.72 1551.36,-508.72 1551.36,-514.72 1551.36,-514.72 1551.36,-527.97 1551.36,-527.97 1551.36,-533.97 1545.36,-539.97 1539.36,-539.97"/>
 <text text-anchor="middle" x="1481.49" y="-527.42" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 03:11: &quot;December to</text>
 <text text-anchor="middle" x="1481.49" y="-517.67" font-family="Helvetica,sans-Serif" font-size="9.00">March&quot;</text>
 <text text-anchor="middle" x="1481.49" y="-507.92" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_perm&#45;&gt;s_db_window -->
 <g id="edge48" class="edge">
@@ -2677,10 +2875,13 @@
 <!-- s_db_spaces -->
 <g id="node91" class="node">
 <title>s_db_spaces</title>
+<g id="a_node91"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 01:08: &quot;at least 50 to\n60&quot; spaces, &quot;a bit too early&quot;\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1728.22,-390.29C1728.22,-390.29 1611.72,-390.29 1611.72,-390.29 1605.72,-390.29 1599.72,-384.29 1599.72,-378.29 1599.72,-378.29 1599.72,-365.04 1599.72,-365.04 1599.72,-359.04 1605.72,-353.04 1611.72,-353.04 1611.72,-353.04 1728.22,-353.04 1728.22,-353.04 1734.22,-353.04 1740.22,-359.04 1740.22,-365.04 1740.22,-365.04 1740.22,-378.29 1740.22,-378.29 1740.22,-384.29 1734.22,-390.29 1728.22,-390.29"/>
 <text text-anchor="middle" x="1669.97" y="-377.74" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 01:08: &quot;at least 50 to</text>
 <text text-anchor="middle" x="1669.97" y="-367.99" font-family="Helvetica,sans-Serif" font-size="9.00">60&quot; spaces, &quot;a bit too early&quot;</text>
 <text text-anchor="middle" x="1669.97" y="-358.24" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_spaces&#45;&gt;a_teodoresco -->
 <g id="edge101" class="edge">
@@ -2795,11 +2996,14 @@
 <!-- s_cm_3 -->
 <g id="node94" class="node">
 <title>s_cm_3</title>
+<g id="a_node94"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-19-city-council/derived/2026-10-19_01.md" xlink:title="City council 41:44: « on passe à 3\n% d&#39;usage … décembre, janvier,\nfévrier et mars »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M906.5,-759.23C906.5,-759.23 777.25,-759.23 777.25,-759.23 771.25,-759.23 765.25,-753.23 765.25,-747.23 765.25,-747.23 765.25,-724.23 765.25,-724.23 765.25,-718.23 771.25,-712.23 777.25,-712.23 777.25,-712.23 906.5,-712.23 906.5,-712.23 912.5,-712.23 918.5,-718.23 918.5,-724.23 918.5,-724.23 918.5,-747.23 918.5,-747.23 918.5,-753.23 912.5,-759.23 906.5,-759.23"/>
 <text text-anchor="middle" x="841.88" y="-746.68" font-family="Helvetica,sans-Serif" font-size="9.00">City council 41:44: « on passe à 3</text>
 <text text-anchor="middle" x="841.88" y="-736.93" font-family="Helvetica,sans-Serif" font-size="9.00">% d&#39;usage … décembre, janvier,</text>
 <text text-anchor="middle" x="841.88" y="-727.18" font-family="Helvetica,sans-Serif" font-size="9.00">février et mars »</text>
 <text text-anchor="middle" x="841.88" y="-717.43" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_3&#45;&gt;a_teodoresco -->
 <g id="edge57" class="edge">
@@ -2874,12 +3078,15 @@
 <!-- s_cm_counter -->
 <g id="node96" class="node">
 <title>s_cm_counter</title>
+<g id="a_node96"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-19-city-council/derived/2026-10-19_01.md" xlink:title="City council 44:51: « le seul\ncompteur disponible … retiré du\ndomaine public »; &quot;30 … 40\npassages par jour&quot;\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M704.42,-1150.09C704.42,-1150.09 581.92,-1150.09 581.92,-1150.09 575.92,-1150.09 569.92,-1144.09 569.92,-1138.09 569.92,-1138.09 569.92,-1105.34 569.92,-1105.34 569.92,-1099.34 575.92,-1093.34 581.92,-1093.34 581.92,-1093.34 704.42,-1093.34 704.42,-1093.34 710.42,-1093.34 716.42,-1099.34 716.42,-1105.34 716.42,-1105.34 716.42,-1138.09 716.42,-1138.09 716.42,-1144.09 710.42,-1150.09 704.42,-1150.09"/>
 <text text-anchor="middle" x="643.17" y="-1137.54" font-family="Helvetica,sans-Serif" font-size="9.00">City council 44:51: « le seul</text>
 <text text-anchor="middle" x="643.17" y="-1127.79" font-family="Helvetica,sans-Serif" font-size="9.00">compteur disponible … retiré du</text>
 <text text-anchor="middle" x="643.17" y="-1118.04" font-family="Helvetica,sans-Serif" font-size="9.00">domaine public »; &quot;30 … 40</text>
 <text text-anchor="middle" x="643.17" y="-1108.29" font-family="Helvetica,sans-Serif" font-size="9.00">passages par jour&quot;</text>
 <text text-anchor="middle" x="643.17" y="-1098.54" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_counter&#45;&gt;a_teodoresco -->
 <g id="edge105" class="edge">
@@ -2932,10 +3139,13 @@
 <!-- s_cm_36 -->
 <g id="node97" class="node">
 <title>s_cm_36</title>
+<g id="a_node97"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-19-city-council/derived/2026-10-19_04.md" xlink:title="City council 7:38:24: &quot;3.6 % of\noverall cycling traffic&quot;\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M932.32,-685.11C932.32,-685.11 819.57,-685.11 819.57,-685.11 813.57,-685.11 807.57,-679.11 807.57,-673.11 807.57,-673.11 807.57,-659.86 807.57,-659.86 807.57,-653.86 813.57,-647.86 819.57,-647.86 819.57,-647.86 932.32,-647.86 932.32,-647.86 938.32,-647.86 944.32,-653.86 944.32,-659.86 944.32,-659.86 944.32,-673.11 944.32,-673.11 944.32,-679.11 938.32,-685.11 932.32,-685.11"/>
 <text text-anchor="middle" x="875.95" y="-672.56" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:38:24: &quot;3.6 % of</text>
 <text text-anchor="middle" x="875.95" y="-662.81" font-family="Helvetica,sans-Serif" font-size="9.00">overall cycling traffic&quot;</text>
 <text text-anchor="middle" x="875.95" y="-653.06" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_36&#45;&gt;a_teodoresco -->
 <g id="edge106" class="edge">
@@ -3013,12 +3223,15 @@
 <!-- s_cm_fourmonths -->
 <g id="node99" class="node">
 <title>s_cm_fourmonths</title>
+<g id="a_node99"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=27504s" xlink:title="City council 7:38:24: &quot;It&#39;s 3.6%\nthat we&#39;re talking about only for\nfour months, and then the rest we\nprotect and we keep as is&quot;\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1755.2,-705.82C1755.2,-705.82 1628.2,-705.82 1628.2,-705.82 1622.2,-705.82 1616.2,-699.82 1616.2,-693.82 1616.2,-693.82 1616.2,-661.07 1616.2,-661.07 1616.2,-655.07 1622.2,-649.07 1628.2,-649.07 1628.2,-649.07 1755.2,-649.07 1755.2,-649.07 1761.2,-649.07 1767.2,-655.07 1767.2,-661.07 1767.2,-661.07 1767.2,-693.82 1767.2,-693.82 1767.2,-699.82 1761.2,-705.82 1755.2,-705.82"/>
 <text text-anchor="middle" x="1691.7" y="-693.27" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:38:24: &quot;It&#39;s 3.6%</text>
 <text text-anchor="middle" x="1691.7" y="-683.52" font-family="Helvetica,sans-Serif" font-size="9.00">that we&#39;re talking about only for</text>
 <text text-anchor="middle" x="1691.7" y="-673.77" font-family="Helvetica,sans-Serif" font-size="9.00">four months, and then the rest we</text>
 <text text-anchor="middle" x="1691.7" y="-664.02" font-family="Helvetica,sans-Serif" font-size="9.00">protect and we keep as is&quot;</text>
 <text text-anchor="middle" x="1691.7" y="-654.27" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_fourmonths&#45;&gt;a_teodoresco -->
 <g id="edge59" class="edge">
@@ -3098,11 +3311,14 @@
 <!-- s_oct6_official -->
 <g id="node100" class="node">
 <title>s_oct6_official</title>
+<g id="a_node100"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: « if we looked at\nthe official data provided by the\nborough »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M998.83,-1140.38C998.83,-1140.38 880.08,-1140.38 880.08,-1140.38 874.08,-1140.38 868.08,-1134.38 868.08,-1128.38 868.08,-1128.38 868.08,-1105.38 868.08,-1105.38 868.08,-1099.38 874.08,-1093.38 880.08,-1093.38 880.08,-1093.38 998.83,-1093.38 998.83,-1093.38 1004.83,-1093.38 1010.83,-1099.38 1010.83,-1105.38 1010.83,-1105.38 1010.83,-1128.38 1010.83,-1128.38 1010.83,-1134.38 1004.83,-1140.38 998.83,-1140.38"/>
 <text text-anchor="middle" x="939.45" y="-1127.83" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: « if we looked at</text>
 <text text-anchor="middle" x="939.45" y="-1118.08" font-family="Helvetica,sans-Serif" font-size="9.00">the official data provided by the</text>
 <text text-anchor="middle" x="939.45" y="-1108.33" font-family="Helvetica,sans-Serif" font-size="9.00">borough »</text>
 <text text-anchor="middle" x="939.45" y="-1098.58" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_official&#45;&gt;a_teodoresco -->
 <g id="edge108" class="edge">
@@ -3141,12 +3357,15 @@
 <!-- s_oct6_3years -->
 <g id="node101" class="node">
 <title>s_oct6_3years</title>
+<g id="a_node101"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: « now having data\nfor 3 years in a row, that no,\nlike 99% less traffic is going\nthere »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M977.3,-934.49C977.3,-934.49 849.55,-934.49 849.55,-934.49 843.55,-934.49 837.55,-928.49 837.55,-922.49 837.55,-922.49 837.55,-889.74 837.55,-889.74 837.55,-883.74 843.55,-877.74 849.55,-877.74 849.55,-877.74 977.3,-877.74 977.3,-877.74 983.3,-877.74 989.3,-883.74 989.3,-889.74 989.3,-889.74 989.3,-922.49 989.3,-922.49 989.3,-928.49 983.3,-934.49 977.3,-934.49"/>
 <text text-anchor="middle" x="913.43" y="-921.94" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: « now having data</text>
 <text text-anchor="middle" x="913.43" y="-912.19" font-family="Helvetica,sans-Serif" font-size="9.00">for 3 years in a row, that no,</text>
 <text text-anchor="middle" x="913.43" y="-902.44" font-family="Helvetica,sans-Serif" font-size="9.00">like 99% less traffic is going</text>
 <text text-anchor="middle" x="913.43" y="-892.69" font-family="Helvetica,sans-Serif" font-size="9.00">there »</text>
 <text text-anchor="middle" x="913.43" y="-882.94" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_3years&#45;&gt;a_teodoresco -->
 <g id="edge110" class="edge">
@@ -3182,11 +3401,14 @@
 <!-- s_oct6_30meetings -->
 <g id="node102" class="node">
 <title>s_oct6_30meetings</title>
+<g id="a_node102"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: « more than 30\nmeetings on this topic with the\nservices »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1149.49,-919.84C1149.49,-919.84 1035.24,-919.84 1035.24,-919.84 1029.24,-919.84 1023.24,-913.84 1023.24,-907.84 1023.24,-907.84 1023.24,-884.84 1023.24,-884.84 1023.24,-878.84 1029.24,-872.84 1035.24,-872.84 1035.24,-872.84 1149.49,-872.84 1149.49,-872.84 1155.49,-872.84 1161.49,-878.84 1161.49,-884.84 1161.49,-884.84 1161.49,-907.84 1161.49,-907.84 1161.49,-913.84 1155.49,-919.84 1149.49,-919.84"/>
 <text text-anchor="middle" x="1092.37" y="-907.29" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: « more than 30</text>
 <text text-anchor="middle" x="1092.37" y="-897.54" font-family="Helvetica,sans-Serif" font-size="9.00">meetings on this topic with the</text>
 <text text-anchor="middle" x="1092.37" y="-887.79" font-family="Helvetica,sans-Serif" font-size="9.00">services »</text>
 <text text-anchor="middle" x="1092.37" y="-878.04" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_30meetings&#45;&gt;a_teodoresco -->
 <g id="edge112" class="edge">
@@ -3198,12 +3420,15 @@
 <!-- s_db_doors -->
 <g id="node118" class="node">
 <title>s_db_doors</title>
+<g id="a_node118"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 01:53: « I&#39;ve knocked on\n4,000 doors during the campaign »;\n02:37: « we logged more than 40\nmeetings and work sessions »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1182.23,-1143.43C1182.23,-1143.43 1045.48,-1143.43 1045.48,-1143.43 1039.48,-1143.43 1033.48,-1137.43 1033.48,-1131.43 1033.48,-1131.43 1033.48,-1098.68 1033.48,-1098.68 1033.48,-1092.68 1039.48,-1086.68 1045.48,-1086.68 1045.48,-1086.68 1182.23,-1086.68 1182.23,-1086.68 1188.23,-1086.68 1194.23,-1092.68 1194.23,-1098.68 1194.23,-1098.68 1194.23,-1131.43 1194.23,-1131.43 1194.23,-1137.43 1188.23,-1143.43 1182.23,-1143.43"/>
 <text text-anchor="middle" x="1113.85" y="-1130.88" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 01:53: « I&#39;ve knocked on</text>
 <text text-anchor="middle" x="1113.85" y="-1121.13" font-family="Helvetica,sans-Serif" font-size="9.00">4,000 doors during the campaign »;</text>
 <text text-anchor="middle" x="1113.85" y="-1111.38" font-family="Helvetica,sans-Serif" font-size="9.00">02:37: « we logged more than 40</text>
 <text text-anchor="middle" x="1113.85" y="-1101.63" font-family="Helvetica,sans-Serif" font-size="9.00">meetings and work sessions »</text>
 <text text-anchor="middle" x="1113.85" y="-1091.88" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_30meetings&#45;&gt;s_db_doors -->
 <g id="edge244" class="edge">
@@ -3225,11 +3450,14 @@
 <!-- s_oct6_promise -->
 <g id="node103" class="node">
 <title>s_oct6_promise</title>
+<g id="a_node103"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: « we have made a\ncommitment and we have to act on\nthis promise »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1409.63,-675.21C1409.63,-675.21 1276.63,-675.21 1276.63,-675.21 1270.63,-675.21 1264.63,-669.21 1264.63,-663.21 1264.63,-663.21 1264.63,-640.21 1264.63,-640.21 1264.63,-634.21 1270.63,-628.21 1276.63,-628.21 1276.63,-628.21 1409.63,-628.21 1409.63,-628.21 1415.63,-628.21 1421.63,-634.21 1421.63,-640.21 1421.63,-640.21 1421.63,-663.21 1421.63,-663.21 1421.63,-669.21 1415.63,-675.21 1409.63,-675.21"/>
 <text text-anchor="middle" x="1343.13" y="-662.66" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: « we have made a</text>
 <text text-anchor="middle" x="1343.13" y="-652.91" font-family="Helvetica,sans-Serif" font-size="9.00">commitment and we have to act on</text>
 <text text-anchor="middle" x="1343.13" y="-643.16" font-family="Helvetica,sans-Serif" font-size="9.00">this promise »</text>
 <text text-anchor="middle" x="1343.13" y="-633.41" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_promise&#45;&gt;a_teodoresco -->
 <g id="edge114" class="edge">
@@ -3286,6 +3514,7 @@
 <!-- s_oct6_orientation -->
 <g id="node105" class="node">
 <title>s_oct6_orientation</title>
+<g id="a_node105"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: « we&#39;re now ready\nto give our orientation to the\nservices, and the services will\ntell you how the mechanics of what\nthe adjustment will happen during\nthis winter »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1637.12,-1311.81C1637.12,-1311.81 1503.37,-1311.81 1503.37,-1311.81 1497.37,-1311.81 1491.37,-1305.81 1491.37,-1299.81 1491.37,-1299.81 1491.37,-1247.56 1491.37,-1247.56 1491.37,-1241.56 1497.37,-1235.56 1503.37,-1235.56 1503.37,-1235.56 1637.12,-1235.56 1637.12,-1235.56 1643.12,-1235.56 1649.12,-1241.56 1649.12,-1247.56 1649.12,-1247.56 1649.12,-1299.81 1649.12,-1299.81 1649.12,-1305.81 1643.12,-1311.81 1637.12,-1311.81"/>
 <text text-anchor="middle" x="1570.24" y="-1299.26" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: « we&#39;re now ready</text>
 <text text-anchor="middle" x="1570.24" y="-1289.51" font-family="Helvetica,sans-Serif" font-size="9.00">to give our orientation to the</text>
@@ -3294,6 +3523,8 @@
 <text text-anchor="middle" x="1570.24" y="-1260.26" font-family="Helvetica,sans-Serif" font-size="9.00">the adjustment will happen during</text>
 <text text-anchor="middle" x="1570.24" y="-1250.51" font-family="Helvetica,sans-Serif" font-size="9.00">this winter »</text>
 <text text-anchor="middle" x="1570.24" y="-1240.76" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_orientation&#45;&gt;a_teodoresco -->
 <g id="edge118" class="edge">
@@ -3329,10 +3560,13 @@
 <!-- s_oct6_bikeplan -->
 <g id="node106" class="node">
 <title>s_oct6_bikeplan</title>
+<g id="a_node106"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk" xlink:title="Oct 6 address: a longer&#45;term bike\nplan announced for next year\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1747.29,-1100.03C1747.29,-1100.03 1620.29,-1100.03 1620.29,-1100.03 1614.29,-1100.03 1608.29,-1094.03 1608.29,-1088.03 1608.29,-1088.03 1608.29,-1074.78 1608.29,-1074.78 1608.29,-1068.78 1614.29,-1062.78 1620.29,-1062.78 1620.29,-1062.78 1747.29,-1062.78 1747.29,-1062.78 1753.29,-1062.78 1759.29,-1068.78 1759.29,-1074.78 1759.29,-1074.78 1759.29,-1088.03 1759.29,-1088.03 1759.29,-1094.03 1753.29,-1100.03 1747.29,-1100.03"/>
 <text text-anchor="middle" x="1683.79" y="-1087.48" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 address: a longer&#45;term bike</text>
 <text text-anchor="middle" x="1683.79" y="-1077.73" font-family="Helvetica,sans-Serif" font-size="9.00">plan announced for next year</text>
 <text text-anchor="middle" x="1683.79" y="-1067.98" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_bikeplan&#45;&gt;a_teodoresco -->
 <g id="edge120" class="edge">
@@ -3371,6 +3605,7 @@
 <!-- s_oct6_consult -->
 <g id="node107" class="node">
 <title>s_oct6_consult</title>
+<g id="a_node107"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=4426s" xlink:title="Oct 6 Q&amp;A, clip 02 (webcast\n1:13:46): the consultation and\naccess&#45;to&#45;information exchange;\nthe Zoom with the APC cited as\nconsultation\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1461.57,-494.45C1461.57,-494.45 1336.82,-494.45 1336.82,-494.45 1330.82,-494.45 1324.82,-488.45 1324.82,-482.45 1324.82,-482.45 1324.82,-439.95 1324.82,-439.95 1324.82,-433.95 1330.82,-427.95 1336.82,-427.95 1336.82,-427.95 1461.57,-427.95 1461.57,-427.95 1467.57,-427.95 1473.57,-433.95 1473.57,-439.95 1473.57,-439.95 1473.57,-482.45 1473.57,-482.45 1473.57,-488.45 1467.57,-494.45 1461.57,-494.45"/>
 <text text-anchor="middle" x="1399.19" y="-481.9" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 02 (webcast</text>
 <text text-anchor="middle" x="1399.19" y="-472.15" font-family="Helvetica,sans-Serif" font-size="9.00">1:13:46): the consultation and</text>
@@ -3378,6 +3613,8 @@
 <text text-anchor="middle" x="1399.19" y="-452.65" font-family="Helvetica,sans-Serif" font-size="9.00">the Zoom with the APC cited as</text>
 <text text-anchor="middle" x="1399.19" y="-442.9" font-family="Helvetica,sans-Serif" font-size="9.00">consultation</text>
 <text text-anchor="middle" x="1399.19" y="-433.15" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_consult&#45;&gt;a_teodoresco -->
 <g id="edge122" class="edge">
@@ -3420,6 +3657,7 @@
 <!-- s_oct6_8for4 -->
 <g id="node108" class="node">
 <title>s_oct6_8for4</title>
+<g id="a_node108"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=6396s" xlink:title="Oct 6 Q&amp;A, clip 04 @ 3:49–4:00: «\nc&#39;est huit comptages pour quatre\ncyclistes, je pense que c&#39;est\nraisonnable »; « on va le tester\ncette année »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1072.72,-759.67C1072.72,-759.67 942.72,-759.67 942.72,-759.67 936.72,-759.67 930.72,-753.67 930.72,-747.67 930.72,-747.67 930.72,-705.17 930.72,-705.17 930.72,-699.17 936.72,-693.17 942.72,-693.17 942.72,-693.17 1072.72,-693.17 1072.72,-693.17 1078.72,-693.17 1084.72,-699.17 1084.72,-705.17 1084.72,-705.17 1084.72,-747.67 1084.72,-747.67 1084.72,-753.67 1078.72,-759.67 1072.72,-759.67"/>
 <text text-anchor="middle" x="1007.72" y="-747.12" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 04 @ 3:49–4:00: «</text>
 <text text-anchor="middle" x="1007.72" y="-737.37" font-family="Helvetica,sans-Serif" font-size="9.00">c&#39;est huit comptages pour quatre</text>
@@ -3427,6 +3665,8 @@
 <text text-anchor="middle" x="1007.72" y="-717.87" font-family="Helvetica,sans-Serif" font-size="9.00">raisonnable »; « on va le tester</text>
 <text text-anchor="middle" x="1007.72" y="-708.12" font-family="Helvetica,sans-Serif" font-size="9.00">cette année »</text>
 <text text-anchor="middle" x="1007.72" y="-698.37" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_8for4&#45;&gt;a_teodoresco -->
 <g id="edge124" class="edge">
@@ -3483,11 +3723,14 @@
 <!-- s_oct6_decision_slides -->
 <g id="node110" class="node">
 <title>s_oct6_decision_slides</title>
+<g id="a_node110"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=8587s" xlink:title="Oct 6 Q&amp;A, clip 05 @ 3:51: « we\nmade a decision for what&#39;s going\nto … based on those slides »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1077.08,-1376.98C1077.08,-1376.98 951.58,-1376.98 951.58,-1376.98 945.58,-1376.98 939.58,-1370.98 939.58,-1364.98 939.58,-1364.98 939.58,-1341.98 939.58,-1341.98 939.58,-1335.98 945.58,-1329.98 951.58,-1329.98 951.58,-1329.98 1077.08,-1329.98 1077.08,-1329.98 1083.08,-1329.98 1089.08,-1335.98 1089.08,-1341.98 1089.08,-1341.98 1089.08,-1364.98 1089.08,-1364.98 1089.08,-1370.98 1083.08,-1376.98 1077.08,-1376.98"/>
 <text text-anchor="middle" x="1014.33" y="-1364.43" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 05 @ 3:51: « we</text>
 <text text-anchor="middle" x="1014.33" y="-1354.68" font-family="Helvetica,sans-Serif" font-size="9.00">made a decision for what&#39;s going</text>
 <text text-anchor="middle" x="1014.33" y="-1344.93" font-family="Helvetica,sans-Serif" font-size="9.00">to … based on those slides »</text>
 <text text-anchor="middle" x="1014.33" y="-1335.18" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_decision_slides&#45;&gt;a_teodoresco -->
 <g id="edge128" class="edge">
@@ -3537,6 +3780,7 @@
 <!-- s_oct6_readjust -->
 <g id="node111" class="node">
 <title>s_oct6_readjust</title>
+<g id="a_node111"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=8751s" xlink:title="Oct 6 Q&amp;A, clip 05 @ 6:35–6:50: «\nOnce we do test this new\nconfiguration, we will collect\ndata and we&#39;ll make sure that we\ncan readjust as well if there is a\nneed »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1241.64,-804.46C1241.64,-804.46 1111.64,-804.46 1111.64,-804.46 1105.64,-804.46 1099.64,-798.46 1099.64,-792.46 1099.64,-792.46 1099.64,-740.21 1099.64,-740.21 1099.64,-734.21 1105.64,-728.21 1111.64,-728.21 1111.64,-728.21 1241.64,-728.21 1241.64,-728.21 1247.64,-728.21 1253.64,-734.21 1253.64,-740.21 1253.64,-740.21 1253.64,-792.46 1253.64,-792.46 1253.64,-798.46 1247.64,-804.46 1241.64,-804.46"/>
 <text text-anchor="middle" x="1176.64" y="-791.91" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 05 @ 6:35–6:50: «</text>
 <text text-anchor="middle" x="1176.64" y="-782.16" font-family="Helvetica,sans-Serif" font-size="9.00">Once we do test this new</text>
@@ -3545,6 +3789,8 @@
 <text text-anchor="middle" x="1176.64" y="-752.91" font-family="Helvetica,sans-Serif" font-size="9.00">can readjust as well if there is a</text>
 <text text-anchor="middle" x="1176.64" y="-743.16" font-family="Helvetica,sans-Serif" font-size="9.00">need »</text>
 <text text-anchor="middle" x="1176.64" y="-733.41" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_readjust&#45;&gt;a_teodoresco -->
 <g id="edge130" class="edge">
@@ -3566,11 +3812,14 @@
 <!-- s_db_reopen -->
 <g id="node126" class="node">
 <title>s_db_reopen</title>
+<g id="a_node126"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 13:08, asked when the\nclosed side would reopen: by « the\ndata and the weather »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1756.35,-978.18C1756.35,-978.18 1622.6,-978.18 1622.6,-978.18 1616.6,-978.18 1610.6,-972.18 1610.6,-966.18 1610.6,-966.18 1610.6,-943.18 1610.6,-943.18 1610.6,-937.18 1616.6,-931.18 1622.6,-931.18 1622.6,-931.18 1756.35,-931.18 1756.35,-931.18 1762.35,-931.18 1768.35,-937.18 1768.35,-943.18 1768.35,-943.18 1768.35,-966.18 1768.35,-966.18 1768.35,-972.18 1762.35,-978.18 1756.35,-978.18"/>
 <text text-anchor="middle" x="1689.47" y="-965.63" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 13:08, asked when the</text>
 <text text-anchor="middle" x="1689.47" y="-955.88" font-family="Helvetica,sans-Serif" font-size="9.00">closed side would reopen: by « the</text>
 <text text-anchor="middle" x="1689.47" y="-946.13" font-family="Helvetica,sans-Serif" font-size="9.00">data and the weather »</text>
 <text text-anchor="middle" x="1689.47" y="-936.38" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_readjust&#45;&gt;s_db_reopen -->
 <g id="edge259" class="edge">
@@ -3603,6 +3852,7 @@
 <!-- s_db_entire -->
 <g id="node122" class="node">
 <title>s_db_entire</title>
+<g id="a_node122"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 08:54–09:01: host « it&#39;ll\nbe the entire stretch of\nTerrebonne, whichever side you\npick »; « Yeah. We&#39;re aiming for\nit to optimize safety and also\ncomfort »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1329.92,-415.88C1329.92,-415.88 1202.17,-415.88 1202.17,-415.88 1196.17,-415.88 1190.17,-409.88 1190.17,-403.88 1190.17,-403.88 1190.17,-351.63 1190.17,-351.63 1190.17,-345.63 1196.17,-339.63 1202.17,-339.63 1202.17,-339.63 1329.92,-339.63 1329.92,-339.63 1335.92,-339.63 1341.92,-345.63 1341.92,-351.63 1341.92,-351.63 1341.92,-403.88 1341.92,-403.88 1341.92,-409.88 1335.92,-415.88 1329.92,-415.88"/>
 <text text-anchor="middle" x="1266.04" y="-403.33" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 08:54–09:01: host « it&#39;ll</text>
 <text text-anchor="middle" x="1266.04" y="-393.58" font-family="Helvetica,sans-Serif" font-size="9.00">be the entire stretch of</text>
@@ -3611,6 +3861,8 @@
 <text text-anchor="middle" x="1266.04" y="-364.33" font-family="Helvetica,sans-Serif" font-size="9.00">it to optimize safety and also</text>
 <text text-anchor="middle" x="1266.04" y="-354.58" font-family="Helvetica,sans-Serif" font-size="9.00">comfort »</text>
 <text text-anchor="middle" x="1266.04" y="-344.83" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_sameside&#45;&gt;s_db_entire -->
 <g id="edge260" class="edge">
@@ -3629,6 +3881,7 @@
 <!-- s_oct6_mayor_study -->
 <g id="node113" class="node">
 <title>s_oct6_mayor_study</title>
+<g id="a_node113"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=8809s" xlink:title="Oct 6 Q&amp;A, clip 05 @ 7:33–7:50,\nthe borough mayor: « with regards\nto the study, once it&#39;s available,\nif we can make it available … »;\ncommunication pledge\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2502.91,-1163.34C2502.91,-1163.34 2371.41,-1163.34 2371.41,-1163.34 2365.41,-1163.34 2359.41,-1157.34 2359.41,-1151.34 2359.41,-1151.34 2359.41,-1108.84 2359.41,-1108.84 2359.41,-1102.84 2365.41,-1096.84 2371.41,-1096.84 2371.41,-1096.84 2502.91,-1096.84 2502.91,-1096.84 2508.91,-1096.84 2514.91,-1102.84 2514.91,-1108.84 2514.91,-1108.84 2514.91,-1151.34 2514.91,-1151.34 2514.91,-1157.34 2508.91,-1163.34 2502.91,-1163.34"/>
 <text text-anchor="middle" x="2437.16" y="-1150.79" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 05 @ 7:33–7:50,</text>
 <text text-anchor="middle" x="2437.16" y="-1141.04" font-family="Helvetica,sans-Serif" font-size="9.00">the borough mayor: « with regards</text>
@@ -3636,6 +3889,8 @@
 <text text-anchor="middle" x="2437.16" y="-1121.54" font-family="Helvetica,sans-Serif" font-size="9.00">if we can make it available … »;</text>
 <text text-anchor="middle" x="2437.16" y="-1111.79" font-family="Helvetica,sans-Serif" font-size="9.00">communication pledge</text>
 <text text-anchor="middle" x="2437.16" y="-1102.04" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_mayor_study&#45;&gt;a_valenzuela -->
 <g id="edge136" class="edge">
@@ -3664,12 +3919,15 @@
 <!-- s_oct6_three -->
 <g id="node114" class="node">
 <title>s_oct6_three</title>
+<g id="a_node114"><a xlink:href="https://www.youtube.com/watch?v=0k_KZf9uxTk&amp;t=8824s" xlink:title="Oct 6 Q&amp;A, clip 06 (webcast\n2:27:04): « only three cyclists in\nthe winter »; « we&#39;ll do that this\nwinter if the schedule … »\n[2026&#45;10&#45;06]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1031.05,-824.44C1031.05,-824.44 911.55,-824.44 911.55,-824.44 905.55,-824.44 899.55,-818.44 899.55,-812.44 899.55,-812.44 899.55,-779.69 899.55,-779.69 899.55,-773.69 905.55,-767.69 911.55,-767.69 911.55,-767.69 1031.05,-767.69 1031.05,-767.69 1037.05,-767.69 1043.05,-773.69 1043.05,-779.69 1043.05,-779.69 1043.05,-812.44 1043.05,-812.44 1043.05,-818.44 1037.05,-824.44 1031.05,-824.44"/>
 <text text-anchor="middle" x="971.3" y="-811.89" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 Q&amp;A, clip 06 (webcast</text>
 <text text-anchor="middle" x="971.3" y="-802.14" font-family="Helvetica,sans-Serif" font-size="9.00">2:27:04): « only three cyclists in</text>
 <text text-anchor="middle" x="971.3" y="-792.39" font-family="Helvetica,sans-Serif" font-size="9.00">the winter »; « we&#39;ll do that this</text>
 <text text-anchor="middle" x="971.3" y="-782.64" font-family="Helvetica,sans-Serif" font-size="9.00">winter if the schedule … »</text>
 <text text-anchor="middle" x="971.3" y="-772.89" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;06]</text>
+</a>
+</g>
 </g>
 <!-- s_oct6_three&#45;&gt;a_teodoresco -->
 <g id="edge134" class="edge">
@@ -3708,6 +3966,7 @@
 <!-- s_db_lessthanone -->
 <g id="node115" class="node">
 <title>s_db_lessthanone</title>
+<g id="a_node115"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 03:11–03:33: host « Less\nthan one cyclist per hour is using\nthe bike path on either side? »; «\nIndeed. Yeah. And we have the data\nfor many years »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M842.92,-1084.16C842.92,-1084.16 704.67,-1084.16 704.67,-1084.16 698.67,-1084.16 692.67,-1078.16 692.67,-1072.16 692.67,-1072.16 692.67,-1029.66 692.67,-1029.66 692.67,-1023.66 698.67,-1017.66 704.67,-1017.66 704.67,-1017.66 842.92,-1017.66 842.92,-1017.66 848.92,-1017.66 854.92,-1023.66 854.92,-1029.66 854.92,-1029.66 854.92,-1072.16 854.92,-1072.16 854.92,-1078.16 848.92,-1084.16 842.92,-1084.16"/>
 <text text-anchor="middle" x="773.79" y="-1071.61" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 03:11–03:33: host « Less</text>
 <text text-anchor="middle" x="773.79" y="-1061.86" font-family="Helvetica,sans-Serif" font-size="9.00">than one cyclist per hour is using</text>
@@ -3715,6 +3974,8 @@
 <text text-anchor="middle" x="773.79" y="-1042.36" font-family="Helvetica,sans-Serif" font-size="9.00">Indeed. Yeah. And we have the data</text>
 <text text-anchor="middle" x="773.79" y="-1032.61" font-family="Helvetica,sans-Serif" font-size="9.00">for many years »</text>
 <text text-anchor="middle" x="773.79" y="-1022.86" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_lessthanone&#45;&gt;a_teodoresco -->
 <g id="edge138" class="edge">
@@ -3750,10 +4011,13 @@
 <!-- s_db_manyyears -->
 <g id="node116" class="node">
 <title>s_db_manyyears</title>
+<g id="a_node116"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 03:33: « we have the data\nfor many years to … »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M929.31,-869.7C929.31,-869.7 790.31,-869.7 790.31,-869.7 784.31,-869.7 778.31,-863.7 778.31,-857.7 778.31,-857.7 778.31,-844.45 778.31,-844.45 778.31,-838.45 784.31,-832.45 790.31,-832.45 790.31,-832.45 929.31,-832.45 929.31,-832.45 935.31,-832.45 941.31,-838.45 941.31,-844.45 941.31,-844.45 941.31,-857.7 941.31,-857.7 941.31,-863.7 935.31,-869.7 929.31,-869.7"/>
 <text text-anchor="middle" x="859.81" y="-857.15" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 03:33: « we have the data</text>
 <text text-anchor="middle" x="859.81" y="-847.4" font-family="Helvetica,sans-Serif" font-size="9.00">for many years to … »</text>
 <text text-anchor="middle" x="859.81" y="-837.65" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_manyyears&#45;&gt;a_teodoresco -->
 <g id="edge140" class="edge">
@@ -3796,12 +4060,15 @@
 <!-- s_db_250 -->
 <g id="node117" class="node">
 <title>s_db_250</title>
+<g id="a_node117"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 01:08: « if you go back\nto 2023, when they configured the\n… removed about 250 parking spots\n»\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2165.06,-780.21C2165.06,-780.21 2025.31,-780.21 2025.31,-780.21 2019.31,-780.21 2013.31,-774.21 2013.31,-768.21 2013.31,-768.21 2013.31,-735.46 2013.31,-735.46 2013.31,-729.46 2019.31,-723.46 2025.31,-723.46 2025.31,-723.46 2165.06,-723.46 2165.06,-723.46 2171.06,-723.46 2177.06,-729.46 2177.06,-735.46 2177.06,-735.46 2177.06,-768.21 2177.06,-768.21 2177.06,-774.21 2171.06,-780.21 2165.06,-780.21"/>
 <text text-anchor="middle" x="2095.18" y="-767.66" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 01:08: « if you go back</text>
 <text text-anchor="middle" x="2095.18" y="-757.91" font-family="Helvetica,sans-Serif" font-size="9.00">to 2023, when they configured the</text>
 <text text-anchor="middle" x="2095.18" y="-748.16" font-family="Helvetica,sans-Serif" font-size="9.00">… removed about 250 parking spots</text>
 <text text-anchor="middle" x="2095.18" y="-738.41" font-family="Helvetica,sans-Serif" font-size="9.00">»</text>
 <text text-anchor="middle" x="2095.18" y="-728.66" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_250&#45;&gt;a_teodoresco -->
 <g id="edge142" class="edge">
@@ -3854,11 +4121,14 @@
 <!-- s_db_adjust -->
 <g id="node119" class="node">
 <title>s_db_adjust</title>
+<g id="a_node119"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 04:49: « We&#39;ll adjust\nthis bike path for now, and we&#39;ll\nsee … »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1099.49,-531.31C1099.49,-531.31 981.49,-531.31 981.49,-531.31 975.49,-531.31 969.49,-525.31 969.49,-519.31 969.49,-519.31 969.49,-496.31 969.49,-496.31 969.49,-490.31 975.49,-484.31 981.49,-484.31 981.49,-484.31 1099.49,-484.31 1099.49,-484.31 1105.49,-484.31 1111.49,-490.31 1111.49,-496.31 1111.49,-496.31 1111.49,-519.31 1111.49,-519.31 1111.49,-525.31 1105.49,-531.31 1099.49,-531.31"/>
 <text text-anchor="middle" x="1040.49" y="-518.76" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 04:49: « We&#39;ll adjust</text>
 <text text-anchor="middle" x="1040.49" y="-509.01" font-family="Helvetica,sans-Serif" font-size="9.00">this bike path for now, and we&#39;ll</text>
 <text text-anchor="middle" x="1040.49" y="-499.26" font-family="Helvetica,sans-Serif" font-size="9.00">see … »</text>
 <text text-anchor="middle" x="1040.49" y="-489.51" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_adjust&#45;&gt;a_teodoresco -->
 <g id="edge146" class="edge">
@@ -3884,6 +4154,7 @@
 <!-- s_db_age -->
 <g id="node120" class="node">
 <title>s_db_age</title>
+<g id="a_node120"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 05:36: « if you say to a\nresident of a certain age in the\narea, well, look, lady, you don&#39;t\nneed parking spots there because\nthe data shows that we have only\n60% of the parking used … she\ncan&#39;t park her car two blocks away\nand walk in winter with ice »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1240.06,-1374.59C1240.06,-1374.59 1109.31,-1374.59 1109.31,-1374.59 1103.31,-1374.59 1097.31,-1368.59 1097.31,-1362.59 1097.31,-1362.59 1097.31,-1290.84 1097.31,-1290.84 1097.31,-1284.84 1103.31,-1278.84 1109.31,-1278.84 1109.31,-1278.84 1240.06,-1278.84 1240.06,-1278.84 1246.06,-1278.84 1252.06,-1284.84 1252.06,-1290.84 1252.06,-1290.84 1252.06,-1362.59 1252.06,-1362.59 1252.06,-1368.59 1246.06,-1374.59 1240.06,-1374.59"/>
 <text text-anchor="middle" x="1174.68" y="-1362.04" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 05:36: « if you say to a</text>
 <text text-anchor="middle" x="1174.68" y="-1352.29" font-family="Helvetica,sans-Serif" font-size="9.00">resident of a certain age in the</text>
@@ -3894,6 +4165,8 @@
 <text text-anchor="middle" x="1174.68" y="-1303.54" font-family="Helvetica,sans-Serif" font-size="9.00">can&#39;t park her car two blocks away</text>
 <text text-anchor="middle" x="1174.68" y="-1293.79" font-family="Helvetica,sans-Serif" font-size="9.00">and walk in winter with ice »</text>
 <text text-anchor="middle" x="1174.68" y="-1284.04" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_age&#45;&gt;a_teodoresco -->
 <g id="edge148" class="edge">
@@ -3922,6 +4195,7 @@
 <!-- s_db_route -->
 <g id="node121" class="node">
 <title>s_db_route</title>
+<g id="a_node121"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 08:19: « we vote here at\nthe borough, then a vote at the\nConseil Municipal, then it comes\nback to the borough. So, it&#39;s very\ntight. What we committed to was to\nimplement those changes before\nChristmas »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2283.3,-928.85C2283.3,-928.85 2151.8,-928.85 2151.8,-928.85 2145.8,-928.85 2139.8,-922.85 2139.8,-916.85 2139.8,-916.85 2139.8,-854.85 2139.8,-854.85 2139.8,-848.85 2145.8,-842.85 2151.8,-842.85 2151.8,-842.85 2283.3,-842.85 2283.3,-842.85 2289.3,-842.85 2295.3,-848.85 2295.3,-854.85 2295.3,-854.85 2295.3,-916.85 2295.3,-916.85 2295.3,-922.85 2289.3,-928.85 2283.3,-928.85"/>
 <text text-anchor="middle" x="2217.55" y="-916.3" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 08:19: « we vote here at</text>
 <text text-anchor="middle" x="2217.55" y="-906.55" font-family="Helvetica,sans-Serif" font-size="9.00">the borough, then a vote at the</text>
@@ -3931,6 +4205,8 @@
 <text text-anchor="middle" x="2217.55" y="-867.55" font-family="Helvetica,sans-Serif" font-size="9.00">implement those changes before</text>
 <text text-anchor="middle" x="2217.55" y="-857.8" font-family="Helvetica,sans-Serif" font-size="9.00">Christmas »</text>
 <text text-anchor="middle" x="2217.55" y="-848.05" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_route&#45;&gt;a_teodoresco -->
 <g id="edge150" class="edge">
@@ -3966,6 +4242,7 @@
 <!-- e_cm_dec -->
 <g id="node142" class="node">
 <title>e_cm_dec</title>
+<g id="a_node142"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="City council sitting of December\n14–15, 2026: the step the\ncouncillor described after the\nborough vote (&quot;then a vote at the\nConseil Municipal, then it comes\nback to the borough&quot;, Daybreak\n08:19)\n[2026&#45;12&#45;14]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M2649.15,-597.48C2649.15,-597.48 2604.39,-649.5 2604.39,-649.5 2600.47,-654.05 2590.56,-658.6 2584.56,-658.6 2584.56,-658.6 2487.72,-658.6 2487.72,-658.6 2481.72,-658.6 2471.8,-654.05 2467.89,-649.5 2467.89,-649.5 2423.12,-597.48 2423.12,-597.48 2419.21,-592.93 2419.21,-583.83 2423.12,-579.29 2423.12,-579.29 2467.89,-527.26 2467.89,-527.26 2471.8,-522.71 2481.72,-518.16 2487.72,-518.16 2487.72,-518.16 2584.56,-518.16 2584.56,-518.16 2590.56,-518.16 2600.47,-522.71 2604.39,-527.26 2604.39,-527.26 2649.15,-579.29 2649.15,-579.29 2653.07,-583.83 2653.07,-592.93 2649.15,-597.48"/>
 <text text-anchor="middle" x="2536.14" y="-618.83" font-family="Helvetica,sans-Serif" font-size="9.00">City council sitting of December</text>
 <text text-anchor="middle" x="2536.14" y="-609.08" font-family="Helvetica,sans-Serif" font-size="9.00">14–15, 2026: the step the</text>
@@ -3975,6 +4252,8 @@
 <text text-anchor="middle" x="2536.14" y="-570.08" font-family="Helvetica,sans-Serif" font-size="9.00">back to the borough&quot;, Daybreak</text>
 <text text-anchor="middle" x="2536.14" y="-560.33" font-family="Helvetica,sans-Serif" font-size="9.00">08:19)</text>
 <text text-anchor="middle" x="2536.14" y="-550.58" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;12&#45;14]</text>
+</a>
+</g>
 </g>
 <!-- s_db_route&#45;&gt;e_cm_dec -->
 <g id="edge269" class="edge">
@@ -4017,6 +4296,7 @@
 <!-- s_db_kids -->
 <g id="node123" class="node">
 <title>s_db_kids</title>
+<g id="a_node123"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 09:22–10:14: « I&#39;ve very,\nvery, very rarely seen any kids\nuse it during winter »; « it&#39;s\nquite safe as it is »; vehicle\ntraffic reduced « by two&#45;thirds »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1593.15,-1402.47C1593.15,-1402.47 1460.15,-1402.47 1460.15,-1402.47 1454.15,-1402.47 1448.15,-1396.47 1448.15,-1390.47 1448.15,-1390.47 1448.15,-1347.97 1448.15,-1347.97 1448.15,-1341.97 1454.15,-1335.97 1460.15,-1335.97 1460.15,-1335.97 1593.15,-1335.97 1593.15,-1335.97 1599.15,-1335.97 1605.15,-1341.97 1605.15,-1347.97 1605.15,-1347.97 1605.15,-1390.47 1605.15,-1390.47 1605.15,-1396.47 1599.15,-1402.47 1593.15,-1402.47"/>
 <text text-anchor="middle" x="1526.65" y="-1389.92" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 09:22–10:14: « I&#39;ve very,</text>
 <text text-anchor="middle" x="1526.65" y="-1380.17" font-family="Helvetica,sans-Serif" font-size="9.00">very, very rarely seen any kids</text>
@@ -4024,6 +4304,8 @@
 <text text-anchor="middle" x="1526.65" y="-1360.67" font-family="Helvetica,sans-Serif" font-size="9.00">quite safe as it is »; vehicle</text>
 <text text-anchor="middle" x="1526.65" y="-1350.92" font-family="Helvetica,sans-Serif" font-size="9.00">traffic reduced « by two&#45;thirds »</text>
 <text text-anchor="middle" x="1526.65" y="-1341.17" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_kids&#45;&gt;a_teodoresco -->
 <g id="edge154" class="edge">
@@ -4069,11 +4351,14 @@
 <!-- s_db_twothirds -->
 <g id="node124" class="node">
 <title>s_db_twothirds</title>
+<g id="a_node124"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 09:56: « we&#39;ve been able\nto reduce vehicle traffic by\ntwo&#45;thirds »\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2199.82,-1072.93C2199.82,-1072.93 2063.82,-1072.93 2063.82,-1072.93 2057.82,-1072.93 2051.82,-1066.93 2051.82,-1060.93 2051.82,-1060.93 2051.82,-1037.93 2051.82,-1037.93 2051.82,-1031.93 2057.82,-1025.93 2063.82,-1025.93 2063.82,-1025.93 2199.82,-1025.93 2199.82,-1025.93 2205.82,-1025.93 2211.82,-1031.93 2211.82,-1037.93 2211.82,-1037.93 2211.82,-1060.93 2211.82,-1060.93 2211.82,-1066.93 2205.82,-1072.93 2199.82,-1072.93"/>
 <text text-anchor="middle" x="2131.82" y="-1060.38" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 09:56: « we&#39;ve been able</text>
 <text text-anchor="middle" x="2131.82" y="-1050.63" font-family="Helvetica,sans-Serif" font-size="9.00">to reduce vehicle traffic by</text>
 <text text-anchor="middle" x="2131.82" y="-1040.88" font-family="Helvetica,sans-Serif" font-size="9.00">two&#45;thirds »</text>
 <text text-anchor="middle" x="2131.82" y="-1031.13" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_twothirds&#45;&gt;a_teodoresco -->
 <g id="edge156" class="edge">
@@ -4102,12 +4387,15 @@
 <!-- s_db_15m -->
 <g id="node125" class="node">
 <title>s_db_15m</title>
+<g id="a_node125"><a xlink:href="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-cbc-daybreak-interview/derived/2026-10-09_CBC_Daybreak_Teodoresco_transcript_en.md" xlink:title="Daybreak 10:52: « we&#39;re investing\n$1.5 million over the next two\nyears » (school zones; not in the\nOct 6 budget document)\n[2026&#45;10&#45;09]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1403.26,-1272.96C1403.26,-1272.96 1273.26,-1272.96 1273.26,-1272.96 1267.26,-1272.96 1261.26,-1266.96 1261.26,-1260.96 1261.26,-1260.96 1261.26,-1228.21 1261.26,-1228.21 1261.26,-1222.21 1267.26,-1216.21 1273.26,-1216.21 1273.26,-1216.21 1403.26,-1216.21 1403.26,-1216.21 1409.26,-1216.21 1415.26,-1222.21 1415.26,-1228.21 1415.26,-1228.21 1415.26,-1260.96 1415.26,-1260.96 1415.26,-1266.96 1409.26,-1272.96 1403.26,-1272.96"/>
 <text text-anchor="middle" x="1338.26" y="-1260.41" font-family="Helvetica,sans-Serif" font-size="9.00">Daybreak 10:52: « we&#39;re investing</text>
 <text text-anchor="middle" x="1338.26" y="-1250.66" font-family="Helvetica,sans-Serif" font-size="9.00">$1.5 million over the next two</text>
 <text text-anchor="middle" x="1338.26" y="-1240.91" font-family="Helvetica,sans-Serif" font-size="9.00">years » (school zones; not in the</text>
 <text text-anchor="middle" x="1338.26" y="-1231.16" font-family="Helvetica,sans-Serif" font-size="9.00">Oct 6 budget document)</text>
 <text text-anchor="middle" x="1338.26" y="-1221.41" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;09]</text>
+</a>
+</g>
 </g>
 <!-- s_db_15m&#45;&gt;a_teodoresco -->
 <g id="edge158" class="edge">
@@ -4170,12 +4458,15 @@
 <!-- s_cm_250 -->
 <g id="node127" class="node">
 <title>s_cm_250</title>
+<g id="a_node127"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=2504s" xlink:title="City council 41:44: « une\nopération où on a enfoncé dans la\ngorge des résidents une perte de\n250 places de stationnement »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2109.55,-909.24C2109.55,-909.24 1978.05,-909.24 1978.05,-909.24 1972.05,-909.24 1966.05,-903.24 1966.05,-897.24 1966.05,-897.24 1966.05,-864.49 1966.05,-864.49 1966.05,-858.49 1972.05,-852.49 1978.05,-852.49 1978.05,-852.49 2109.55,-852.49 2109.55,-852.49 2115.55,-852.49 2121.55,-858.49 2121.55,-864.49 2121.55,-864.49 2121.55,-897.24 2121.55,-897.24 2121.55,-903.24 2115.55,-909.24 2109.55,-909.24"/>
 <text text-anchor="middle" x="2043.8" y="-896.69" font-family="Helvetica,sans-Serif" font-size="9.00">City council 41:44: « une</text>
 <text text-anchor="middle" x="2043.8" y="-886.94" font-family="Helvetica,sans-Serif" font-size="9.00">opération où on a enfoncé dans la</text>
 <text text-anchor="middle" x="2043.8" y="-877.19" font-family="Helvetica,sans-Serif" font-size="9.00">gorge des résidents une perte de</text>
 <text text-anchor="middle" x="2043.8" y="-867.44" font-family="Helvetica,sans-Serif" font-size="9.00">250 places de stationnement »</text>
 <text text-anchor="middle" x="2043.8" y="-857.69" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_250&#45;&gt;a_teodoresco -->
 <g id="edge162" class="edge">
@@ -4208,12 +4499,15 @@
 <!-- s_cm_counters50 -->
 <g id="node128" class="node">
 <title>s_cm_counters50</title>
+<g id="a_node128"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=2691s" xlink:title="City council 44:51: « on a annoncé\ntrès tôt dans le mandat 50\nnouveaux compteurs de nouvelle\ngénération »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M960.73,-1239.78C960.73,-1239.78 827.73,-1239.78 827.73,-1239.78 821.73,-1239.78 815.73,-1233.78 815.73,-1227.78 815.73,-1227.78 815.73,-1195.03 815.73,-1195.03 815.73,-1189.03 821.73,-1183.03 827.73,-1183.03 827.73,-1183.03 960.73,-1183.03 960.73,-1183.03 966.73,-1183.03 972.73,-1189.03 972.73,-1195.03 972.73,-1195.03 972.73,-1227.78 972.73,-1227.78 972.73,-1233.78 966.73,-1239.78 960.73,-1239.78"/>
 <text text-anchor="middle" x="894.23" y="-1227.23" font-family="Helvetica,sans-Serif" font-size="9.00">City council 44:51: « on a annoncé</text>
 <text text-anchor="middle" x="894.23" y="-1217.48" font-family="Helvetica,sans-Serif" font-size="9.00">très tôt dans le mandat 50</text>
 <text text-anchor="middle" x="894.23" y="-1207.73" font-family="Helvetica,sans-Serif" font-size="9.00">nouveaux compteurs de nouvelle</text>
 <text text-anchor="middle" x="894.23" y="-1197.98" font-family="Helvetica,sans-Serif" font-size="9.00">génération »</text>
 <text text-anchor="middle" x="894.23" y="-1188.23" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_counters50&#45;&gt;a_teodoresco -->
 <g id="edge164" class="edge">
@@ -4239,6 +4533,7 @@
 <!-- s_cm_doors -->
 <g id="node129" class="node">
 <title>s_cm_doors</title>
+<g id="a_node129"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=27504s" xlink:title="City council 7:38:24: « We went\ndoor to door, 4,000 doors »; «\nyesterday at Café Citoyens where\n40 of my residents were able to\ndiscuss »; « years of daily\ncounting data from counters across\nthe borough and the city »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M1027.17,-1078.66C1027.17,-1078.66 892.67,-1078.66 892.67,-1078.66 886.67,-1078.66 880.67,-1072.66 880.67,-1066.66 880.67,-1066.66 880.67,-1004.66 880.67,-1004.66 880.67,-998.66 886.67,-992.66 892.67,-992.66 892.67,-992.66 1027.17,-992.66 1027.17,-992.66 1033.17,-992.66 1039.17,-998.66 1039.17,-1004.66 1039.17,-1004.66 1039.17,-1066.66 1039.17,-1066.66 1039.17,-1072.66 1033.17,-1078.66 1027.17,-1078.66"/>
 <text text-anchor="middle" x="959.92" y="-1066.11" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:38:24: « We went</text>
 <text text-anchor="middle" x="959.92" y="-1056.36" font-family="Helvetica,sans-Serif" font-size="9.00">door to door, 4,000 doors »; «</text>
@@ -4248,6 +4543,8 @@
 <text text-anchor="middle" x="959.92" y="-1017.36" font-family="Helvetica,sans-Serif" font-size="9.00">counting data from counters across</text>
 <text text-anchor="middle" x="959.92" y="-1007.61" font-family="Helvetica,sans-Serif" font-size="9.00">the borough and the city »</text>
 <text text-anchor="middle" x="959.92" y="-997.86" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_cm_doors&#45;&gt;a_teodoresco -->
 <g id="edge166" class="edge">
@@ -4283,6 +4580,7 @@
 <!-- s_desousa_share -->
 <g id="node130" class="node">
 <title>s_desousa_share</title>
+<g id="a_node130"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=25669s" xlink:title="City council 7:07:49, Alan DeSousa\nto Hannah Bunty: « je pense qu&#39;ils\nvont partager cette information\navec nous. Et puis, on vise\nd&#39;amener ça au conseil municipal »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2103.29,-1460.79C2103.29,-1460.79 1967.29,-1460.79 1967.29,-1460.79 1961.29,-1460.79 1955.29,-1454.79 1955.29,-1448.79 1955.29,-1448.79 1955.29,-1406.29 1955.29,-1406.29 1955.29,-1400.29 1961.29,-1394.29 1967.29,-1394.29 1967.29,-1394.29 2103.29,-1394.29 2103.29,-1394.29 2109.29,-1394.29 2115.29,-1400.29 2115.29,-1406.29 2115.29,-1406.29 2115.29,-1448.79 2115.29,-1448.79 2115.29,-1454.79 2109.29,-1460.79 2103.29,-1460.79"/>
 <text text-anchor="middle" x="2035.29" y="-1448.24" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:07:49, Alan DeSousa</text>
 <text text-anchor="middle" x="2035.29" y="-1438.49" font-family="Helvetica,sans-Serif" font-size="9.00">to Hannah Bunty: « je pense qu&#39;ils</text>
@@ -4290,6 +4588,8 @@
 <text text-anchor="middle" x="2035.29" y="-1418.99" font-family="Helvetica,sans-Serif" font-size="9.00">avec nous. Et puis, on vise</text>
 <text text-anchor="middle" x="2035.29" y="-1409.24" font-family="Helvetica,sans-Serif" font-size="9.00">d&#39;amener ça au conseil municipal »</text>
 <text text-anchor="middle" x="2035.29" y="-1399.49" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_desousa_share&#45;&gt;a_desousa -->
 <g id="edge168" class="edge">
@@ -4315,6 +4615,7 @@
 <!-- s_desousa_review -->
 <g id="node131" class="node">
 <title>s_desousa_review</title>
+<g id="a_node131"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=26293s" xlink:title="City council 7:18:13, to David\nGamper: « I initiated discussions\nwith the different boroughs, of\nwhich Côte&#45;des&#45;Neiges&#45;NDG was one\n»; the borough « will be sharing\nit with us … after which we will\nbe presenting a final file to\nCouncil »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2333.65,-1242.61C2333.65,-1242.61 2185.65,-1242.61 2185.65,-1242.61 2179.65,-1242.61 2173.65,-1236.61 2173.65,-1230.61 2173.65,-1230.61 2173.65,-1158.86 2173.65,-1158.86 2173.65,-1152.86 2179.65,-1146.86 2185.65,-1146.86 2185.65,-1146.86 2333.65,-1146.86 2333.65,-1146.86 2339.65,-1146.86 2345.65,-1152.86 2345.65,-1158.86 2345.65,-1158.86 2345.65,-1230.61 2345.65,-1230.61 2345.65,-1236.61 2339.65,-1242.61 2333.65,-1242.61"/>
 <text text-anchor="middle" x="2259.65" y="-1230.06" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:18:13, to David</text>
 <text text-anchor="middle" x="2259.65" y="-1220.31" font-family="Helvetica,sans-Serif" font-size="9.00">Gamper: « I initiated discussions</text>
@@ -4325,6 +4626,8 @@
 <text text-anchor="middle" x="2259.65" y="-1171.56" font-family="Helvetica,sans-Serif" font-size="9.00">be presenting a final file to</text>
 <text text-anchor="middle" x="2259.65" y="-1161.81" font-family="Helvetica,sans-Serif" font-size="9.00">Council »</text>
 <text text-anchor="middle" x="2259.65" y="-1152.06" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_desousa_review&#45;&gt;a_desousa -->
 <g id="edge170" class="edge">
@@ -4350,6 +4653,7 @@
 <!-- s_desousa_notbefore -->
 <g id="node132" class="node">
 <title>s_desousa_notbefore</title>
+<g id="a_node132"><a xlink:href="https://www.youtube.com/watch?v=rii3nUTuKRE&amp;t=26393s" xlink:title="City council 7:19:53: the four\nreviews&#39; findings « in all\nlikelihood, will be as soon as\npossible, but it may not be before\nthat »; « will not necessarily …\nbe immediately exportable or\nrelevant … to Terrebonne »\n[2026&#45;10&#45;19]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M2319.85,-1336.74C2319.85,-1336.74 2193.6,-1336.74 2193.6,-1336.74 2187.6,-1336.74 2181.6,-1330.74 2181.6,-1324.74 2181.6,-1324.74 2181.6,-1262.74 2181.6,-1262.74 2181.6,-1256.74 2187.6,-1250.74 2193.6,-1250.74 2193.6,-1250.74 2319.85,-1250.74 2319.85,-1250.74 2325.85,-1250.74 2331.85,-1256.74 2331.85,-1262.74 2331.85,-1262.74 2331.85,-1324.74 2331.85,-1324.74 2331.85,-1330.74 2325.85,-1336.74 2319.85,-1336.74"/>
 <text text-anchor="middle" x="2256.72" y="-1324.19" font-family="Helvetica,sans-Serif" font-size="9.00">City council 7:19:53: the four</text>
 <text text-anchor="middle" x="2256.72" y="-1314.44" font-family="Helvetica,sans-Serif" font-size="9.00">reviews&#39; findings « in all</text>
@@ -4359,6 +4663,8 @@
 <text text-anchor="middle" x="2256.72" y="-1275.44" font-family="Helvetica,sans-Serif" font-size="9.00">be immediately exportable or</text>
 <text text-anchor="middle" x="2256.72" y="-1265.69" font-family="Helvetica,sans-Serif" font-size="9.00">relevant … to Terrebonne »</text>
 <text text-anchor="middle" x="2256.72" y="-1255.94" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;10&#45;19]</text>
+</a>
+</g>
 </g>
 <!-- s_desousa_notbefore&#45;&gt;a_desousa -->
 <g id="edge172" class="edge">
@@ -4401,6 +4707,7 @@
 <!-- s_mayor_nov2025 -->
 <g id="node133" class="node">
 <title>s_mayor_nov2025</title>
+<g id="a_node133"><a xlink:href="https://www.youtube.com/watch?v=gdUFR41SvLY&amp;t=4430s" xlink:title="Borough council November 26, 2025,\nthe mayor: « l&#39;audit qui a été\nfait par le SUM, qui a été demandé\npar la dernière administration »;\n« Je ne peux pas vous dire\naujourd&#39;hui si cette piste\ncyclable va être démantelée »; «\nWe inherited this bike path »\n(machine transcript; one sentence\nquoted in request 2025&#45;12847)\n[2025&#45;11&#45;26]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M3332.02,-595.67C3332.02,-595.67 3187.77,-595.67 3187.77,-595.67 3181.77,-595.67 3175.77,-589.67 3175.77,-583.67 3175.77,-583.67 3175.77,-492.42 3175.77,-492.42 3175.77,-486.42 3181.77,-480.42 3187.77,-480.42 3187.77,-480.42 3332.02,-480.42 3332.02,-480.42 3338.02,-480.42 3344.02,-486.42 3344.02,-492.42 3344.02,-492.42 3344.02,-583.67 3344.02,-583.67 3344.02,-589.67 3338.02,-595.67 3332.02,-595.67"/>
 <text text-anchor="middle" x="3259.9" y="-583.12" font-family="Helvetica,sans-Serif" font-size="9.00">Borough council November 26, 2025,</text>
 <text text-anchor="middle" x="3259.9" y="-573.37" font-family="Helvetica,sans-Serif" font-size="9.00">the mayor: « l&#39;audit qui a été</text>
@@ -4413,6 +4720,8 @@
 <text text-anchor="middle" x="3259.9" y="-505.12" font-family="Helvetica,sans-Serif" font-size="9.00">(machine transcript; one sentence</text>
 <text text-anchor="middle" x="3259.9" y="-495.37" font-family="Helvetica,sans-Serif" font-size="9.00">quoted in request 2025&#45;12847)</text>
 <text text-anchor="middle" x="3259.9" y="-485.62" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;11&#45;26]</text>
+</a>
+</g>
 </g>
 <!-- s_mayor_nov2025&#45;&gt;a_valenzuela -->
 <g id="edge174" class="edge">
@@ -4434,11 +4743,14 @@
 <!-- e_cm_nov26_2025 -->
 <g id="node143" class="node">
 <title>e_cm_nov26_2025</title>
+<g id="a_node143"><a xlink:href="https://www.youtube.com/watch?v=gdUFR41SvLY&amp;t=4430s" xlink:title="Borough council sitting of\nNovember 26, 2025: the mayor&#39;s\nanswer on the City&#39;s audit\n[2025&#45;11&#45;26]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M3157.48,-533.83C3157.48,-533.83 3117.32,-559.34 3117.32,-559.34 3112.26,-562.56 3101.19,-565.78 3095.19,-565.78 3095.19,-565.78 2998.35,-565.78 2998.35,-565.78 2992.35,-565.78 2981.28,-562.56 2976.22,-559.34 2976.22,-559.34 2936.06,-533.83 2936.06,-533.83 2930.99,-530.62 2930.99,-524.18 2936.06,-520.97 2936.06,-520.97 2976.22,-495.46 2976.22,-495.46 2981.28,-492.24 2992.35,-489.03 2998.35,-489.03 2998.35,-489.03 3095.19,-489.03 3095.19,-489.03 3101.19,-489.03 3112.26,-492.24 3117.32,-495.46 3117.32,-495.46 3157.48,-520.97 3157.48,-520.97 3162.55,-524.18 3162.55,-530.62 3157.48,-533.83"/>
 <text text-anchor="middle" x="3046.77" y="-538.35" font-family="Helvetica,sans-Serif" font-size="9.00">Borough council sitting of</text>
 <text text-anchor="middle" x="3046.77" y="-528.6" font-family="Helvetica,sans-Serif" font-size="9.00">November 26, 2025: the mayor&#39;s</text>
 <text text-anchor="middle" x="3046.77" y="-518.85" font-family="Helvetica,sans-Serif" font-size="9.00">answer on the City&#39;s audit</text>
 <text text-anchor="middle" x="3046.77" y="-509.1" font-family="Helvetica,sans-Serif" font-size="9.00">[2025&#45;11&#45;26]</text>
+</a>
+</g>
 </g>
 <!-- s_mayor_nov2025&#45;&gt;e_cm_nov26_2025 -->
 <g id="edge175" class="edge">
@@ -4710,11 +5022,14 @@
 <!-- e_cm_nov16 -->
 <g id="node147" class="node">
 <title>e_cm_nov16</title>
+<g id="a_node147"><a xlink:href="https://montreal.ca/conseil-municipal" xlink:title="City council sitting of November\n16–17, 2026 (next public question\nperiod)\n[2026&#45;11&#45;16]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M2907.62,-597.39C2907.62,-597.39 2864.96,-623.3 2864.96,-623.3 2859.83,-626.42 2848.7,-629.53 2842.7,-629.53 2842.7,-629.53 2740.35,-629.53 2740.35,-629.53 2734.35,-629.53 2723.22,-626.42 2718.09,-623.3 2718.09,-623.3 2675.43,-597.39 2675.43,-597.39 2670.3,-594.27 2670.3,-588.04 2675.43,-584.93 2675.43,-584.93 2718.09,-559.01 2718.09,-559.01 2723.22,-555.9 2734.35,-552.78 2740.35,-552.78 2740.35,-552.78 2842.7,-552.78 2842.7,-552.78 2848.7,-552.78 2859.83,-555.9 2864.96,-559.01 2864.96,-559.01 2907.62,-584.93 2907.62,-584.93 2912.75,-588.04 2912.75,-594.27 2907.62,-597.39"/>
 <text text-anchor="middle" x="2791.52" y="-602.11" font-family="Helvetica,sans-Serif" font-size="9.00">City council sitting of November</text>
 <text text-anchor="middle" x="2791.52" y="-592.36" font-family="Helvetica,sans-Serif" font-size="9.00">16–17, 2026 (next public question</text>
 <text text-anchor="middle" x="2791.52" y="-582.61" font-family="Helvetica,sans-Serif" font-size="9.00">period)</text>
 <text text-anchor="middle" x="2791.52" y="-572.86" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;11&#45;16]</text>
+</a>
+</g>
 </g>
 <!-- e_cm_nov16&#45;&gt;e_dec7 -->
 <g id="edge307" class="edge">
