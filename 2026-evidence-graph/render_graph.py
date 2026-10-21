@@ -65,7 +65,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
 <div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, statements, event; newest at the bottom.</p>
-<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button></div>
+<div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
 const COL={json.dumps(COL)}; const POS={json.dumps(pos)};
@@ -87,6 +87,10 @@ const bl=document.getElementById('b_lanes'),bf=document.getElementById('b_force'
 bl.onclick=()=>{{cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
 bf.onclick=()=>{{cy.layout({{name:'cose',animate:true,nodeRepulsion:()=>40000,idealEdgeLength:()=>160,edgeElasticity:()=>60,gravity:0.3,padding:30}}).run();bf.classList.add('on');bl.classList.remove('on');}};
 document.getElementById('b_fit').onclick=()=>cy.fit(30);
+function shot(){{return cy.png({{full:false,scale:2,bg:bg}});}}
+function say(m){{const s=document.getElementById('msg');s.textContent=m;setTimeout(()=>s.textContent='',3000);}}
+document.getElementById('b_copy').onclick=async()=>{{try{{const blob=await (await fetch(shot())).blob();await navigator.clipboard.write([new ClipboardItem({{'image/png':blob}})]);say('Copied to the clipboard.');}}catch(e){{say('Clipboard not available here; use Save PNG.');}}}};
+document.getElementById('b_save').onclick=()=>{{const a=document.createElement('a');a.href=shot();a.download='terrebonne-evidence-graph-'+new Date().toISOString().slice(0,10)+'.png';a.click();say('Saved.');}};
 </script></body></html>'''
 open(os.path.join(HERE, 'evidence_graph.html'), 'w', encoding='utf-8').write(page)
 print('nodes', len(nodes), 'edges', len(edges), '-> evidence_graph.{svg,png,html,dot}')
