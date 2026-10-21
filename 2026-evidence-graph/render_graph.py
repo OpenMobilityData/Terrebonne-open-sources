@@ -82,14 +82,24 @@ ORDER = ['agent', 'document', 'data', 'figure', 'statement', 'event']
 els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source']}} for n in nodes] + \
       [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' '), 'note': e.get('note', '')}} for i, e in enumerate(edges)]
 # swimlane positions: one column per type, nodes ordered by date (undated last)
-lanes = {}
-for n in sorted(nodes, key=lambda n: (n['date'] or '9999')):
-    lanes.setdefault(n['type'], []).append(n['id'])
+# swimlanes: one column per type, except statements, which get one column per event they were made at (events in date order)
+made_at = {e['from']: e['to'] for e in edges if e['relation'] == 'made_at'}
+ev_date = {n['id']: (n['date'] or '9999') for n in nodes if n['type'] == 'event'}
+by_date = lambda n: (n['date'] or '9999')
+lanes = []   # list of (title, [ids])
+for t in ORDER:
+    if t != 'statement':
+        lanes.append((t, [n['id'] for n in sorted((n for n in nodes if n['type'] == t), key=by_date)]))
+    else:
+        groups = {}
+        for n in sorted((n for n in nodes if n['type'] == 'statement'), key=by_date):
+            groups.setdefault(made_at.get(n['id'], 'other'), []).append(n['id'])
+        for ev in sorted(groups, key=lambda e: ev_date.get(e, '9999')):
+            lanes.append((f'statements: {ev}', groups[ev]))
 pos = {}
-for ci, t in enumerate(ORDER):
-    col = lanes.get(t, [])
+for ci, (title, col) in enumerate(lanes):
     for ri, nid in enumerate(col):
-        pos[nid] = {'x': 80 + ci * 300, 'y': 60 + ri * 46}
+        pos[nid] = {'x': 80 + ci * 280, 'y': 60 + ri * 46}
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terrebonne evidence graph</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape-svg@0.4.0/cytoscape-svg.js"></script>
@@ -99,7 +109,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .leg span{{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px}}.leg div{{margin:2px 0;font-size:12px}}#info{{margin-top:12px;font-size:13px}}#info b{{display:block;margin-bottom:4px}}#info ul{{padding-left:16px;margin:6px 0 0}}#info li{{margin:2px 0;font-size:12px}}
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
-<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, statements, events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
+<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
 <div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
