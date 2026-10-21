@@ -155,9 +155,13 @@ open(os.path.join(HERE, 'evidence_graph.html'), 'w', encoding='utf-8').write(pag
 ok = True
 for fmt in ('svg', 'png'):
     dotfile = os.path.join(HERE, 'evidence_graph.dot'); outp = os.path.join(HERE, f'evidence_graph.{fmt}'); dpi = '-Gdpi=110' if fmt == 'png' else '-Gdpi=72'
-    for cmd in (['dot', dpi], ['dot', dpi, '-Gclusterrank=none'], ['sfdp', dpi, '-Goverlap=prism', '-Gsplines=true']):
+    attempts = (['dot', dpi], ['dot', dpi, '-Gsplines=polyline'], ['dot', dpi, '-Gclusterrank=none', '-Gsplines=line'],
+                ['sfdp', dpi, '-Goverlap=prism', '-Gsplines=false'], ['sfdp', dpi, '-Goverlap=scale', '-Gsplines=line'])
+    for cmd in attempts:
         r = subprocess.run(cmd + [f'-T{fmt}', dotfile, '-o', outp], capture_output=True)
-        if r.returncode == 0: break
+        if r.returncode == 0 and os.path.getsize(outp) > 0:
+            if cmd != attempts[0]: print(f'{fmt}: drawn with', ' '.join(cmd[0:1] + cmd[2:]))
+            break
     else:
         ok = False; print('graphviz failed for', fmt, r.stderr.decode()[-200:])
 print('nodes', len(nodes), 'edges', len(edges), '-> evidence_graph.html, .dot' + (', .svg, .png' if ok else ' (svg/png NOT updated)'))
