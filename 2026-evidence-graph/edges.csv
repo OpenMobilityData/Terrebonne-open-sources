@@ -309,3 +309,82 @@ e_cm_nov16,e_dec7,precedes,
 t_lane_widths,d_june10,refers_to,"June 10: « une voie de circulation très étroite (moins de 4 mètres) », the June concept."
 t_deck_p60,t_p62,refers_to,Five counts averaged for motor vehicles; one day for bicycles.
 t_p85,t_p62,same_day,
+d_aug13,x_yearround,supports,Written mandate for a permanent one-side bidirectional lane with parking restored.
+d_aug20,x_yearround,supports,"Volet 2, the permanent reconfiguration, follows the transitional winter measure."
+s_db_perm,x_yearround,bears_on,"Ambiguous: every winter, or year-round."
+s_cm_fourmonths,x_yearround,undercuts,"« Only for four months, and then the rest we protect and we keep as is »."
+s_devoir_window,x_yearround,undercuts,Lane kept « d'avril à décembre ».
+s_oct6_bidir,x_yearround,undercuts,The bidirectional option « too complicated and no real upside » (spoken; no document withdraws Volet 2).
+s_oct6_99,x_99,states,
+c_99,x_99,supports,8 ÷ 707 from two different slides.
+t_counter,x_99,undercuts,"40 a day against 534: a 92 % drop per day, from the borough's own counter."
+c_76,x_99,undercuts,
+s_db_40,x_99,undercuts,"His own later figure, 30 to 40 a day."
+s_cm_3,x_36rate,states,
+s_cm_36,x_36rate,states,
+c_36,x_36rate,undercuts,3.6 % is winter's share of the year's passages; the same formula gives 33 % with constant use.
+c_76,x_36rate,undercuts,"Per day, winter is 7.6 % of the rest of the year."
+s_db_spaces,x_parking_measured,states,
+s_devoir_window,x_parking_measured,states,
+s_zoom,x_parking_measured,states,
+t_parking,x_parking_measured,undercuts,"No inventory, occupancy count or survey in the 508 pages."
+d_r2025_12847,x_parking_measured,bears_on,The City's own example of a lane audit (REV Bellechasse) measured parking block by block.
+t_exp_spaces,x_parking_measured,bears_on,
+s_oct6_decision,x_decided,states,
+s_oct6_decision_slides,x_decided,states,
+s_cm_sign,x_decided,states,« très content de cette décision ».
+d_card,x_decided,states,« One thing is certain: residents will see changes before Christmas 2026 ».
+s_db_final,x_decided,undercuts,« The final study … still need to be submitted to us ».
+s_oct6_orientation,x_decided,undercuts,"« Orientation », « propose », « test »."
+d_note,x_decided,bears_on,Withheld under s. 39 « until a decision is made on the recommendation ».
+d_reconsideration,x_decided,bears_on,
+s_cm_sign,x_safety_addressed,states,
+s_db_kids,x_safety_addressed,states,« It's quite safe as it is ».
+s_oct6_safety,x_safety_addressed,states,
+d_jun22,x_safety_addressed,undercuts,The borough's own summary of the SUM's « compromis importants … sécurité ».
+d_release,x_safety_addressed,undercuts,No document in the release answers the SUM's reservations; the SUM analysis and SIM opinion are withheld.
+d_city_requests,x_safety_addressed,bears_on,
+s_db_source,x_portal,states,
+s_cm_counter,x_portal,states,« Retiré du domaine public »: it was never on the portal.
+t_portal,x_portal,undercuts,
+t_portal_girouard,x_portal,undercuts,
+d_r2025_697,x_portal,undercuts,The data reached the public through access requests.
+s_devoir_window,x_reopen,states,
+s_cm_fourmonths,x_reopen,states,
+s_db_reopen,x_reopen,states,By « the data and the weather »; no date.
+s_db_window,x_reopen,states,
+d_aug13,x_reopen,undercuts,
+d_aug20,x_reopen,bears_on,"« Mesure transitoire pour l'hiver 2026-2027 »: one winter named, then Volet 2."
+s_oct6_3years,x_manyyears,states,
+s_db_manyyears,x_manyyears,states,
+s_cm_doors,x_manyyears,states,« Years of daily counting data from counters across the borough and the city ».
+t_counter,x_manyyears,undercuts,"Continuous counting on Terrebonne began July 26, 2025."
+t_p62,x_manyyears,undercuts,Before that: single-day camera counts.
+t_telraam,x_manyyears,bears_on,"Citizen sensors from August 2024, daylight only."
+s_zoom,x_stormonly,states,Ruled out because residents could not be informed (said at the Zoom).
+d_offer,x_stormonly,bears_on,Listed among the scenarios in EXP's mandate; the assessment is in the withheld note.
+t_snow,x_stormonly,bears_on,30 loading days in the sector; 72 % of eastbound winter passages on unconstrained days.
+d_note,x_stormonly,bears_on,
+s_cm_share,x_shared,states,
+s_oct6_mayor_study,x_shared,states,"« Once it's available, if we can make it available »."
+d_release,x_shared,undercuts,"The Oct 9 refusal (ss. 37, 39)."
+s_desousa_notbefore,x_shared,undercuts,The City's reviews « may not be before » the vote.
+d_reconsideration,x_shared,bears_on,Reply asked by November 20.
+d_r2026_634,x_shared,bears_on,Answer due November 7.
+d_city_requests,x_shared,bears_on,
+s_oct6_consult,x_consulted,states,
+s_zoom,x_consulted,states,
+e_zoom,x_consulted,bears_on,"One Zoom meeting, scheduled shortly before the Oct 6 sitting, first planned as a bike ride."
+a_apc,x_consulted,bears_on,
+s_oct6_sameside,x_sameside,states,
+s_db_window,x_sameside,supports,
+t_counter,x_sameside,bears_on,The counter's loop for that direction lies under the parked cars.
+s_db_entire,x_entire,states,
+s_db_spaces,x_entire,bears_on,50 to 60 spaces over 2.45 km: about one per 40–50 m of lane removed.
+t_lane_widths,x_pass,undercuts,"3.5 m between two parking lanes: a cyclist clear of the doors (0.75 m) plus 1 m clearance leaves about 1.75 m, less than any car sold in Canada."
+t_csr,x_pass,undercuts,
+d_jun22,x_pass,bears_on,
+d_june10,x_pass,bears_on,« Une voie de circulation très étroite (moins de 4 mètres) » (the June concept).
+s_db_perm,x_double,states,« If … winter traffic doubles for bikers ».
+c_36,x_double,bears_on,"Doubling 4,891 is about 7 % of the year under the share criterion."
+t_counter,x_double,bears_on,

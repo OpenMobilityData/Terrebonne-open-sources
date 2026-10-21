@@ -16,6 +16,9 @@ assert not bad, f'edges to unknown nodes: {bad}'
 
 # ---- structural checks (printed at every build; the report is also written to validation_report.txt)
 def validate(nodes, edges):
+    qp0 = os.path.join(HERE, 'questions.csv'); q_nodes = set()
+    if os.path.exists(qp0):
+        for q in csv.DictReader(open(qp0, encoding='utf-8')): q_nodes |= {x.strip() for x in q['nodes'].split(';') if x.strip()}
     out_rel = {}; in_rel = {}; deg = {n['id']: 0 for n in nodes}
     for e in edges:
         out_rel.setdefault(e['from'], set()).add(e['relation']); in_rel.setdefault(e['to'], set()).add(e['relation'])
@@ -29,6 +32,9 @@ def validate(nodes, edges):
             if 'attributed_to' not in o: problems.append(f"statement without attributed_to: {n['id']}")
             if not n['source']: problems.append(f"statement without source: {n['id']}")
         if t == 'figure' and 'computed_from' not in o: problems.append(f"figure without computed_from: {n['id']}")
+        if t == 'assertion':
+            if not (i & {'states', 'supports', 'undercuts', 'bears_on'}): problems.append(f"assertion without evidence: {n['id']}")
+            if n['id'] not in q_nodes: problems.append(f"assertion not attached to a question: {n['id']}")
         if t == 'document' and n['source'].startswith('2026-581') and not (o & {'released_in', 'withheld_in', 'redacted_in', 'contained_in'}) and n['id'] != 'd_release':
             problems.append(f"document without release status: {n['id']}")
         if t == 'data' and not n['source']: problems.append(f"data without source: {n['id']}")
@@ -36,7 +42,6 @@ def validate(nodes, edges):
     for e in edges:
         if e['relation'] in ('differs_from', 'unsupported_by', 'does_not_include', 'same_data_other_denominator') and not e.get('note'):
             problems.append(f"difference without note: {e['from']} -> {e['to']}")
-    # questions.csv: every question's premises must be nodes
     qp = os.path.join(HERE, 'questions.csv')
     if os.path.exists(qp):
         for q in csv.DictReader(open(qp, encoding='utf-8')):
@@ -48,10 +53,11 @@ problems = validate(nodes, edges)
 open(os.path.join(HERE, 'validation_report.txt'), 'w', encoding='utf-8').write(f"{len(nodes)} nodes, {len(edges)} edges; {len(problems)} problem(s)\n" + '\n'.join(problems) + '\n')
 print(f"validation: {len(problems)} problem(s)" + (': ' + '; '.join(problems[:12]) + (' …' if len(problems) > 12 else '') if problems else ''))
 STYLE = {'agent': ('#e9ebee', 'ellipse'), 'document': ('#fff3e8', 'note'), 'data': ('#e8f1fb', 'box'),
-         'figure': ('#e6f6ef', 'box'), 'statement': ('#fdf1f1', 'box'), 'event': ('#f3eefc', 'hexagon')}
+         'figure': ('#e6f6ef', 'box'), 'assertion': ('#fff8e1', 'octagon'), 'statement': ('#fdf1f1', 'box'), 'event': ('#f3eefc', 'hexagon')}
 EDGE = {'differs_from': ('#e34948', 'dashed'), 'same_data_other_denominator': ('#e34948', 'dashed'), 'unsupported_by': ('#e34948', 'dotted'),
         'does_not_include': ('#e34948', 'dotted'), 'withheld_in': ('#7a7a7a', 'dashed'), 'redacted_in': ('#7a7a7a', 'dashed'),
-        'computed_from': ('#2a78d6', 'solid'), 'states': ('#2a78d6', 'solid'), 'matches': ('#1baf7a', 'solid'), 'attributed_to': ('#b0b4b9', 'solid')}
+        'computed_from': ('#2a78d6', 'solid'), 'states': ('#2a78d6', 'solid'), 'matches': ('#1baf7a', 'solid'), 'attributed_to': ('#b0b4b9', 'solid'),
+        'supports': ('#1baf7a', 'solid'), 'undercuts': ('#e34948', 'solid'), 'bears_on': ('#eda100', 'dotted')}
 def wrap(s, w=34):
     s = s.replace('\\', '/').replace('"', '\\"')
     out, line = [], ''
@@ -60,7 +66,7 @@ def wrap(s, w=34):
         else: line = (line + ' ' + word).strip()
     out.append(line); return '\\n'.join(out)
 dot = ['digraph G {', 'rankdir=LR; newrank=true; splines=spline; nodesep=0.25; ranksep=0.9; fontname="Helvetica"; node [fontname="Helvetica", fontsize=9, style="filled,rounded", penwidth=0.6, color="#9aa0a6"]; edge [fontname="Helvetica", fontsize=7.5, color="#9aa0a6", arrowsize=0.6];']
-order = ['agent', 'document', 'data', 'figure', 'statement', 'event']
+order = ['agent', 'document', 'data', 'figure', 'assertion', 'statement', 'event']
 for t in order:
     fill, shape = STYLE[t]
     dot.append(f'subgraph cluster_{t} {{ label="{t if t == "data" else t + "s"}"; fontsize=11; color="#d9dcd8"; style="rounded";')
@@ -77,8 +83,8 @@ for e in edges:
 dot.append('}')
 open(os.path.join(HERE, 'evidence_graph.dot'), 'w', encoding='utf-8').write('\n'.join(dot))
 # Cytoscape.js page (data embedded; cdnjs, pinned version). Short titles on the nodes, full text in the side panel.
-COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'figure': '#1baf7a', 'statement': '#e34948', 'event': '#6250d6'}
-ORDER = ['agent', 'document', 'data', 'figure', 'statement', 'event']
+COL = {'agent': '#9aa0a6', 'document': '#eb6834', 'data': '#2a78d6', 'figure': '#1baf7a', 'assertion': '#eda100', 'statement': '#e34948', 'event': '#6250d6'}
+ORDER = ['agent', 'document', 'data', 'figure', 'assertion', 'statement', 'event']
 els = [{'data': {'id': n['id'], 'short': n['short'], 'label': n['label'], 'type': n['type'], 'date': n['date'], 'source': n['source']}} for n in nodes] + \
       [{'data': {'id': f'e{i}', 'source': e['from'], 'target': e['to'], 'rel': e['relation'].replace('_', ' '), 'note': e.get('note', '')}} for i, e in enumerate(edges)]
 # swimlane positions: one column per type, nodes ordered by date (undated last)
@@ -109,7 +115,7 @@ html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1
 .leg span{{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px}}.leg div{{margin:2px 0;font-size:12px}}#info{{margin-top:12px;font-size:13px}}#info b{{display:block;margin-bottom:4px}}#info ul{{padding-left:16px;margin:6px 0 0}}#info li{{margin:2px 0;font-size:12px}}
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
-<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
+<div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data and derived figures, with factual relations only. Click a node for its full text, source and links; drag to rearrange; scroll to zoom. Columns: agents, documents, data, figures, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
 <div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
 <div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
@@ -120,6 +126,7 @@ const cy=cytoscape({{container:document.getElementById('cy'),elements:{json.dump
         {{selector:'edge',style:{{'width':1,'line-color':'#b0b4b9','target-arrow-color':'#b0b4b9','target-arrow-shape':'triangle','arrow-scale':0.7,'curve-style':'bezier','label':'','font-size':8,'color':'#5f6b74','text-rotation':'autorotate','text-background-color':bg,'text-background-opacity':0.85,'text-background-padding':1}}}},
         {{selector:'edge[rel = "differs from"], edge[rel = "same data other denominator"], edge[rel = "unsupported by"], edge[rel = "does not include"]',style:{{'line-color':'#e34948','target-arrow-color':'#e34948','line-style':'dashed'}}}},
         {{selector:'edge[rel = "withheld in"], edge[rel = "redacted in"]',style:{{'line-style':'dashed'}}}},
+        {{selector:'edge[rel = "supports"]',style:{{'line-color':'#1baf7a','target-arrow-color':'#1baf7a'}}}},{{selector:'edge[rel = "undercuts"]',style:{{'line-color':'#e34948','target-arrow-color':'#e34948'}}}},{{selector:'edge[rel = "bears on"]',style:{{'line-color':'#eda100','target-arrow-color':'#eda100','line-style':'dotted'}}}},
         {{selector:'.dim',style:{{'opacity':0.15}}}},{{selector:'.hl',style:{{'width':2,'label':'data(rel)','opacity':1}}}},{{selector:'node.hl',style:{{'width':22,'height':22,'font-size':11,'opacity':1,'label':'data(short)'}}}},
         {{selector:'node.nolabel',style:{{'label':''}}}},{{selector:'node.hover',style:{{'label':'data(short)','z-index':9}}}},
         {{selector:':selected',style:{{'border-width':3,'border-color':fg}}}}],
