@@ -22,10 +22,10 @@ The borough's announced winter conversion of one direction of the Terrebonne bik
 
 | File | Content |
 |---|---|
-| [`derived/2026-10-19_01.md`](derived/2026-10-19_01.md) | Peter McQueen's question to Alexandre Teodoresco and the answers (members' question period, from 39:36 of the recording; French) |
-| [`derived/2026-10-19_02.md`](derived/2026-10-19_02.md) | Hannah Bunty's question and complementary question, answered by Alan DeSousa and Alexandre Teodoresco (from 7:06:03; French) |
-| [`derived/2026-10-19_03.md`](derived/2026-10-19_03.md) | David Gamper's question and complementary question, answered by Alan DeSousa (from 7:16:42; French then English) |
-| [`derived/2026-10-19_04.md`](derived/2026-10-19_04.md) | James Bugden's question, answered by Alexandre Teodoresco (from 7:36:50; English) |
+| [`derived/2026-10-19_01.md`](derived/2026-10-19_01.md) | Peter McQueen's question to Alexandre Teodoresco and the answers (members' question period, from [39:36](https://www.youtube.com/watch?v=rii3nUTuKRE&t=2376s) of the recording; French) |
+| [`derived/2026-10-19_02.md`](derived/2026-10-19_02.md) | Hannah Bunty's question and complementary question, answered by Alan DeSousa and Alexandre Teodoresco (from [7:06:03](https://www.youtube.com/watch?v=rii3nUTuKRE&t=25563s); French) |
+| [`derived/2026-10-19_03.md`](derived/2026-10-19_03.md) | David Gamper's question and complementary question, answered by Alan DeSousa (from [7:16:42](https://www.youtube.com/watch?v=rii3nUTuKRE&t=26202s); French then English) |
+| [`derived/2026-10-19_04.md`](derived/2026-10-19_04.md) | James Bugden's question, answered by Alexandre Teodoresco (from [7:36:50](https://www.youtube.com/watch?v=rii3nUTuKRE&t=27410s); English) |
 | [`derived/README.md`](derived/README.md) | How the transcripts were made; passages kept per segment |
 
 ## How the transcripts were made
