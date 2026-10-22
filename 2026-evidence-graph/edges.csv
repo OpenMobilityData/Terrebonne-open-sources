@@ -484,3 +484,5 @@ d_ecocompteur,d_seao_bc1721642,refers_to,Nine CITIX-AI Evo cameras had been boug
 t_opendata_method,t_portal_girouard,refers_to,The Girouard detector belongs to the pole-mounted series.
 d_seao_25_21195,t_opendata_method,refers_to,Lot 2 of the tender supplies the pedestrian and bicycle detectors.
 s_cm_counter,d_rc_counters,refers_to,On Oct 19 the councillor said the only available counter had been removed from the public domain by the previous administration; on May 29 he was quoted on the counts being put back online.
+c_petition2024,d_r2025_081,computed_from,
+d_r2025_081,a_author,attributed_to,Request filed by the author; release by the borough.
