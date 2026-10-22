@@ -60,6 +60,7 @@ subgraph cluster_document { label="documents"; fontsize=11; color="#d9dcd8"; sty
   d_cm26_0337 [label="City council resolution CM26 0337,\nMarch 23, 2026 (file 1268848001,\nunanimous): lot 1 to Tacel\n($1,642,809), lot 2 « Détecteurs\npour piétons et vélos » to\nÉco-Compteur ($559,756), lot 3 to\nTacel; purpose « détecteurs de\ncirculation multimodaux …\nvéhicules motorisés, cyclistes et\npiétons … comptage et\nclassification »\n[2026-03-23]", fillcolor="#fff3e8", shape=note, URL="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-city-bike-counters/README.md", target="_blank"];
   d_seao_bc1721642 [label="SEAO notice BC:1721642: direct\ncontract with Éco-Compteur,\n$125,443.47, signed June 4, 2025:\nnine CITIX AI EVO cameras,\nservices, five infrared (PYRO-BOX)\ncounters\n[2025-06-04]", fillcolor="#fff3e8", shape=note, URL="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-city-bike-counters/README.md", target="_blank"];
   d_r2025_081 [label="Access request 2025-081 (answered\nMarch 6, 2025): the petitions\nagainst the Terrebonne lane as\ntabled with the borough on\nFebruary 2, 2024, 87 pages, names,\nsignatures and addresses blacked\nout, postal codes visible; the\norganizers' letter claims 1,138\nsignatures (796 on paper, 342\nonline)\n[2025-03-06]", fillcolor="#fff3e8", shape=note, URL="https://github.com/OpenMobilityData/Terrebonne-access-requests/blob/main/2025-081/README.md", target="_blank"];
+  d_transcript_oct6 [label="Checked transcripts of the borough\ncouncil sitting of October 6,\n2026: the councillor's address\n(from 35:50) and the questions of\nLouis-Eric Trudeau, Shannon\nJoutel, Raúl Garate, Katherine\nLund, Rick Hoge and Steven Jazz\nwith the answers; every passage\nchecked by ear; each turn linked\nto its moment of the webcast;\nhesitation sounds removed, nothing\nelse\n[2026-10-22]", fillcolor="#fff3e8", shape=note, URL="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-10-06-borough-council/README.md", target="_blank"];
 }
 subgraph cluster_data { label="data"; fontsize=11; color="#d9dcd8"; style="rounded";
   t_p61 [label="Miovision, Grand, Sept 19 2024:\n707 bicycles, all four approaches,\n6 peak hours\n[2024-09-19]", fillcolor="#e8f1fb", shape=box, URL="https://openmobilitydata.github.io/Terrebonne-access-requests/2026-581/raw/01_emails_mandate_counts.pdf#page=61", target="_blank"];
@@ -172,6 +173,7 @@ subgraph cluster_statement { label="statements"; fontsize=11; color="#d9dcd8"; s
   s_cm_campaign [label="City council 7:10:02: « c'est ce\nqu'on s'est engagé à faire en\ncampagne et tout de suite après\nqu'on est arrivé à la mairie, de\nrevoir la configuration pour\nessayer, un, de garder le maximum\nde capacité de protection pour nos\nenfants et de ramener une mobilité\net un confort pour les résidents »\n[2026-10-19]", fillcolor="#fdf1f1", shape=box, URL="https://www.youtube.com/watch?v=rii3nUTuKRE&t=25802s", target="_blank"];
   s_eco_teo [label="« Mieux comprendre les\ndéplacements des cyclistes, grâce\nà une nouvelle génération de\ncompteurs non intrusifs et à une\nnouvelle plateforme de données\nouverte, nous permet de mieux\nrépondre aux besoins des\ncitoyennes et des citoyens. C'est\nun levier concret pour améliorer\nnotre performance et concevoir des\nmilieux de vie plus sécuritaires\net adaptés. » — Alexandre\nTeodoresco, quoted with his\nexecutive-committee title\n[2026-06-04]", fillcolor="#fdf1f1", shape=box, URL="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-city-bike-counters/README.md", target="_blank"];
   s_rc_teo [label="« Ça ne fait aucun sens de perdre\ndes données. » and « On n'a plus\nbesoin de passer par une tierce\npartie. » — Alexandre Teodoresco,\nexecutive committee member for\noptimization, municipal\nperformance and innovation, to\nRadio-Canada, May 29, 2026\n[2026-05-29]", fillcolor="#fdf1f1", shape=box, URL="https://github.com/OpenMobilityData/Terrebonne-open-sources/blob/main/2026-city-bike-counters/README.md", target="_blank"];
+  s_oct6_mayor_juste_milieu [label="« par rapport à la piste\nTerrebonne, par exemple, d'un\ncôté, il y a des gens qui veulent\nqu'on l'enlève carrément. Puis, ce\nn'est pas où nous voulons aller\ncomme administration. Nous\nessayons de trouver un juste\nmilieu qui fait en sorte qu'on\npeut réellement répondre à des\nbesoins, par exemple, au niveau de\nl'hiver et au niveau opérationnel\net aussi au niveau de la sécurité\nde nos résidents. » — the borough\nmayor, answering Louis-Eric\nTrudeau, Oct 6, 2026, webcast\n50:53\n[2026-10-06]", fillcolor="#fdf1f1", shape=box, URL="https://www.youtube.com/watch?v=0k_KZf9uxTk&t=3053s", target="_blank"];
 }
 subgraph cluster_event { label="events"; fontsize=11; color="#d9dcd8"; style="rounded";
   e_dec7 [label="Borough council vote\n[2026-12-07]", fillcolor="#f3eefc", shape=hexagon, URL="https://montreal.ca/cote-des-neiges-notre-dame-de-grace", target="_blank"];
@@ -677,4 +679,30 @@ d_seao_25_21195 -> t_opendata_method [label="refers to", color="#9aa0a6", fontco
 s_cm_counter -> d_rc_counters [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="On Oct 19 the councillor said the only available counter had been removed from the public domain by the previous administration; on May 29 he was quoted on the counts being put back online."];
 c_petition2024 -> d_r2025_081 [label="computed from", color="#2a78d6", fontcolor="#2a78d6", style=solid];
 d_r2025_081 -> a_author [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid, constraint=false, tooltip="Request filed by the author; release by the borough."];
+s_oct6_99 -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_propose -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_decision -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_bidir -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_official -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_3years -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_30meetings -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_promise -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_safety -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_orientation -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_bikeplan -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_consult -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_8for4 -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_perhour -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_decision_slides -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_readjust -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_sameside -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_three -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_mayor_study -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_sinceoffice -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+d_transcript_oct6 -> e_oct6 [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="The checked transcripts of the sitting."];
+d_transcript_oct6 -> a_author [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid, constraint=false, tooltip="Recorded, drafted and checked by the author."];
+s_oct6_mayor_juste_milieu -> e_oct6 [label="made at", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, constraint=false];
+s_oct6_mayor_juste_milieu -> d_transcript_oct6 [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
+s_oct6_mayor_juste_milieu -> a_valenzuela [label="attributed to", color="#b0b4b9", fontcolor="#b0b4b9", style=solid, constraint=false];
+s_oct6_mayor_juste_milieu -> x_yearround [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The mayor distinguishes the administration's position from those who want the lane removed outright; she does not say what happens in spring."];
 }

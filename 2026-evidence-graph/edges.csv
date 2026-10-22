@@ -486,3 +486,29 @@ d_seao_25_21195,t_opendata_method,refers_to,Lot 2 of the tender supplies the ped
 s_cm_counter,d_rc_counters,refers_to,On Oct 19 the councillor said the only available counter had been removed from the public domain by the previous administration; on May 29 he was quoted on the counts being put back online.
 c_petition2024,d_r2025_081,computed_from,
 d_r2025_081,a_author,attributed_to,Request filed by the author; release by the borough.
+s_oct6_99,d_transcript_oct6,contained_in,
+s_oct6_propose,d_transcript_oct6,contained_in,
+s_oct6_decision,d_transcript_oct6,contained_in,
+s_oct6_bidir,d_transcript_oct6,contained_in,
+s_oct6_official,d_transcript_oct6,contained_in,
+s_oct6_3years,d_transcript_oct6,contained_in,
+s_oct6_30meetings,d_transcript_oct6,contained_in,
+s_oct6_promise,d_transcript_oct6,contained_in,
+s_oct6_safety,d_transcript_oct6,contained_in,
+s_oct6_orientation,d_transcript_oct6,contained_in,
+s_oct6_bikeplan,d_transcript_oct6,contained_in,
+s_oct6_consult,d_transcript_oct6,contained_in,
+s_oct6_8for4,d_transcript_oct6,contained_in,
+s_oct6_perhour,d_transcript_oct6,contained_in,
+s_oct6_decision_slides,d_transcript_oct6,contained_in,
+s_oct6_readjust,d_transcript_oct6,contained_in,
+s_oct6_sameside,d_transcript_oct6,contained_in,
+s_oct6_three,d_transcript_oct6,contained_in,
+s_oct6_mayor_study,d_transcript_oct6,contained_in,
+s_oct6_sinceoffice,d_transcript_oct6,contained_in,
+d_transcript_oct6,e_oct6,refers_to,The checked transcripts of the sitting.
+d_transcript_oct6,a_author,attributed_to,"Recorded, drafted and checked by the author."
+s_oct6_mayor_juste_milieu,e_oct6,made_at,
+s_oct6_mayor_juste_milieu,d_transcript_oct6,contained_in,
+s_oct6_mayor_juste_milieu,a_valenzuela,attributed_to,
+s_oct6_mayor_juste_milieu,x_yearround,bears_on,The mayor distinguishes the administration's position from those who want the lane removed outright; she does not say what happens in spring.
