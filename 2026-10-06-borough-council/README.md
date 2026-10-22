@@ -6,10 +6,10 @@ Recordings: clips 01 to 06 were recorded by the author from the webcast on Octob
 
 | File | Segment | Webcast | Passages kept | Unchecked (gaps) |
 |---|---|---|---|---|
-| `2026-10-06_01.md` | Oct 6, 2026 — address by Councillor Teodoresco | 0k_KZf9uxTk from 35:50 | 19 | none |
-| `2026-10-06_02.md` | Oct 6, 2026 — question period, clip 02 (FR) — question by Shannon Joutel | 0k_KZf9uxTk from 1:13:46 | 12 | none |
-| `2026-10-06_03.md` | Oct 6, 2026 — question period, clip 03 (FR) — question by Raúl Garate | 0k_KZf9uxTk from 1:17:31 | 27 | none |
-| `2026-10-06_04.md` | Oct 6, 2026 — question period, clip 04 (EN question, FR answer) — question by Katherine Lund | 0k_KZf9uxTk from 1:42:47 | 24 | none |
-| `2026-10-06_05.md` | Oct 6, 2026 — question period, clip 05 (EN), Rick Hoge's question | 0k_KZf9uxTk from 2:19:16 | 29 | none |
-| `2026-10-06_06.md` | Oct 6, 2026 — question period, clip 06 (EN) — question by Steven Jazz | 0k_KZf9uxTk from 2:27:21 | 22 | none |
-| `2026-10-06_07.md` | Oct 6, 2026 — question period, Louis-Eric Trudeau (FR), webcast 49:50 | 0k_KZf9uxTk from 50:00 | 9 | none |
+| [`2026-10-06_01.md`](2026-10-06_01.md) | Oct 6, 2026 — address by Councillor Teodoresco | 0k_KZf9uxTk from 35:50 | 19 | none |
+| [`2026-10-06_02.md`](2026-10-06_02.md) | Oct 6, 2026 — question period, clip 02 (FR) — question by Shannon Joutel | 0k_KZf9uxTk from 1:13:46 | 12 | none |
+| [`2026-10-06_03.md`](2026-10-06_03.md) | Oct 6, 2026 — question period, clip 03 (FR) — question by Raúl Garate | 0k_KZf9uxTk from 1:17:31 | 27 | none |
+| [`2026-10-06_04.md`](2026-10-06_04.md) | Oct 6, 2026 — question period, clip 04 (EN question, FR answer) — question by Katherine Lund | 0k_KZf9uxTk from 1:42:47 | 24 | none |
+| [`2026-10-06_05.md`](2026-10-06_05.md) | Oct 6, 2026 — question period, clip 05 (EN), Rick Hoge's question | 0k_KZf9uxTk from 2:19:16 | 29 | none |
+| [`2026-10-06_06.md`](2026-10-06_06.md) | Oct 6, 2026 — question period, clip 06 (EN) — question by Steven Jazz | 0k_KZf9uxTk from 2:27:21 | 22 | none |
+| [`2026-10-06_07.md`](2026-10-06_07.md) | Oct 6, 2026 — question period, Louis-Eric Trudeau (FR), webcast 49:50 | 0k_KZf9uxTk from 50:00 | 9 | none |
