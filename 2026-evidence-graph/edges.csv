@@ -474,3 +474,13 @@ s_eco_teo,d_ecocompteur,contained_in,
 d_ecocompteur,t_portal,refers_to,The City's counter network and its open-data platform; the borough's Kensington loop is not part of that network.
 d_ecocompteur,x_portal,bears_on,The release concerns the City's own counters; it does not place the Kensington counter on the portal.
 s_cm_counter,s_eco_teo,refers_to,On Oct 19 the councillor spoke of the counters as an administration file; the June 4 release quotes him on the new counters with his executive-committee title.
+s_rc_teo,ev_rc_may29,made_at,
+s_rc_teo,a_teodoresco,attributed_to,
+s_rc_teo,d_rc_counters,contained_in,
+d_rc_counters,t_portal,refers_to,The City's network and platform; the borough's Kensington loop is not part of it.
+d_cm26_0337,d_seao_25_21195,refers_to,Award of the tender.
+d_ecocompteur,d_cm26_0337,refers_to,"The « processus d'appel d'offres concurrentiel » of the release is tender 25-21195, awarded March 23, 2026."
+d_ecocompteur,d_seao_bc1721642,refers_to,Nine CITIX-AI Evo cameras had been bought directly a year earlier.
+t_opendata_method,t_portal_girouard,refers_to,The Girouard detector belongs to the pole-mounted series.
+d_seao_25_21195,t_opendata_method,refers_to,Lot 2 of the tender supplies the pedestrian and bicycle detectors.
+s_cm_counter,d_rc_counters,refers_to,On Oct 19 the councillor said the only available counter had been removed from the public domain by the previous administration; on May 29 he was quoted on the counts being put back online.

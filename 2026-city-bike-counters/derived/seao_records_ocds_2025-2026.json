@@ -1,0 +1,675 @@
+{
+ "25-21000": {
+  "ocid": "ocds-ec9k95-20067477",
+  "id": "20260618053031",
+  "date": "2025-04-30T11:06:08-04:00",
+  "tag": [
+   "tenderCancellation"
+  ],
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Ville de Montréal",
+    "id": "OP-36518",
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "municipal": "1"
+    }
+   },
+   {
+    "name": "SÉCURMAX, SYSTÈMES INTÉGRÉS DE SÉCURITÉ INC.",
+    "id": "FO-1145764511",
+    "address": {
+     "streetAddress": "5654 Thimens,St-Laurent",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H4R2K9",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1145764511"
+    }
+   },
+   {
+    "name": "TACEL LIMITÉE",
+    "id": "FO-1147386263",
+    "address": {
+     "streetAddress": "8008 Jarry ,",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H1J1H5",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1147386263"
+    }
+   },
+   {
+    "name": "PALADIN TECHNOLOGIES INC.",
+    "id": "FO-1179343992",
+    "address": {
+     "streetAddress": "4983 rue levy,",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H4R2N9",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1179343992"
+    }
+   },
+   {
+    "name": "ORANGE TRAFIC INC.",
+    "id": "FO-1169862571",
+    "address": {
+     "streetAddress": "18195 R. J.-A.-Bombardier,",
+     "locality": "Mirabel",
+     "region": "QC",
+     "postalCode": "J7J0E7",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1169862571"
+    }
+   },
+   {
+    "name": "SOLUTIONS DE STATIONNEMENT INTELLIGENT INC.",
+    "id": "FO-1173297681",
+    "address": {
+     "streetAddress": "2600 CROIS ALLEN,",
+     "locality": "Brossard",
+     "region": "QC",
+     "postalCode": "J4Z3C2",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1173297681"
+    }
+   }
+  ],
+  "buyer": {
+   "name": "Ville de Montréal - Service de l'approvisionnement",
+   "id": "OP-36518"
+  },
+  "tender": {
+   "id": "25-21000",
+   "title": "Acquisition de caméra de surveillance pour système de feux de circulation et de transport intelligent",
+   "status": "cancelled",
+   "procuringEntity": {
+    "name": "Ville de Montréal - Service de l'approvisionnement",
+    "id": "OP-36518"
+   },
+   "items": [
+    {
+     "id": "G14",
+     "description": "G14 - Équipement de lutte contre l’incendie, de sécurité et de protection",
+     "classification": {
+      "scheme": "UNSPSC",
+      "id": "46170000",
+      "description": "Sécurité, surveillance et détection"
+     },
+     "additionalClassifications": [
+      {
+       "scheme": "UNSPSC",
+       "id": "46161500",
+       "description": "Régulation du trafic"
+      },
+      {
+       "scheme": "UNSPSC",
+       "id": "46161504",
+       "description": "Feux de circulation"
+      }
+     ]
+    }
+   ],
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Avis d’appel d’offres",
+   "mainProcurementCategory": "goods",
+   "additionalProcurementCategories": [
+    "Approvisionnement (biens)"
+   ],
+   "tenderPeriod": {
+    "startDate": "2025-04-30T11:06:08-04:00",
+    "endDate": "2025-06-17T13:30:00-04:00",
+    "durationInDay": 48
+   },
+   "numberOfTenderers": 5,
+   "tenderers": [
+    {
+     "id": "FO-1145764511",
+     "name": "SÉCURMAX, SYSTÈMES INTÉGRÉS DE SÉCURITÉ INC."
+    },
+    {
+     "id": "FO-1147386263",
+     "name": "TACEL LIMITÉE"
+    },
+    {
+     "id": "FO-1179343992",
+     "name": "PALADIN TECHNOLOGIES INC."
+    },
+    {
+     "id": "FO-1169862571",
+     "name": "ORANGE TRAFIC INC."
+    },
+    {
+     "id": "FO-1173297681",
+     "name": "SOLUTIONS DE STATIONNEMENT INTELLIGENT INC."
+    }
+   ],
+   "documents": [
+    {
+     "url": "https://seao.gouv.qc.ca/avis-resultat-recherche/consulter?ItemId=1815216b-b974-42fd-acbc-137c3245931e"
+    }
+   ]
+  },
+  "bids": [
+   {
+    "id": "FO-1145764511",
+    "value": 707421.51,
+    "valueUnit": "1"
+   },
+   {
+    "id": "FO-1147386263",
+    "value": 460819.8,
+    "valueUnit": "1"
+   },
+   {
+    "id": "FO-1179343992",
+    "value": 777240.31,
+    "valueUnit": "1"
+   },
+   {
+    "id": "FO-1169862571",
+    "value": 319630.5,
+    "valueUnit": "1"
+   },
+   {
+    "id": "FO-1173297681",
+    "value": 287578.86,
+    "valueUnit": "1"
+   }
+  ],
+  "language": "fr"
+ },
+ "25-21046": {
+  "ocid": "ocds-ec9k95-20073975",
+  "id": "20260709053056",
+  "date": "2025-05-28T13:59:04-04:00",
+  "tag": [
+   "tenderUpdate"
+  ],
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Ville de Montréal",
+    "id": "OP-36518",
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "municipal": "1"
+    }
+   },
+   {
+    "name": "Miovision Technologies",
+    "id": "FO-20002734",
+    "address": {
+     "streetAddress": "148 Manitou Dr, Suite 101,",
+     "region": "ON",
+     "postalCode": "N2C1L3",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ]
+   },
+   {
+    "name": "INNOVATION MI-8 INC.",
+    "id": "FO-1170478268",
+    "address": {
+     "streetAddress": "207A, rue des Alouettes,",
+     "locality": "Saint-Alphonse-de-Granby",
+     "region": "QC",
+     "postalCode": "J0E2A0",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1170478268"
+    }
+   },
+   {
+    "name": "TACEL LIMITÉE",
+    "id": "FO-1147386263",
+    "address": {
+     "streetAddress": "8008 Jarry ,",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H1J1H5",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1147386263"
+    }
+   }
+  ],
+  "buyer": {
+   "name": "Ville de Montréal - Service de l'approvisionnement",
+   "id": "OP-36518"
+  },
+  "tender": {
+   "id": "25-21046",
+   "title": "Acquisition d'un système d'analyse de la sécurité et de la mobilité à l'intersection",
+   "status": "complete",
+   "procuringEntity": {
+    "name": "Ville de Montréal - Service de l'approvisionnement",
+    "id": "OP-36518"
+   },
+   "items": [
+    {
+     "id": "G14",
+     "description": "G14 - Équipement de lutte contre l’incendie, de sécurité et de protection",
+     "classification": {
+      "scheme": "UNSPSC",
+      "id": "46170000",
+      "description": "Sécurité, surveillance et détection"
+     },
+     "additionalClassifications": [
+      {
+       "scheme": "UNSPSC",
+       "id": "46161500",
+       "description": "Régulation du trafic"
+      },
+      {
+       "scheme": "UNSPSC",
+       "id": "46171610",
+       "description": "Caméras de sécurité"
+      }
+     ]
+    }
+   ],
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Avis d’appel d’offres",
+   "mainProcurementCategory": "goods",
+   "additionalProcurementCategories": [
+    "Approvisionnement (biens)"
+   ],
+   "tenderPeriod": {
+    "startDate": "2025-05-28T13:59:04-04:00",
+    "endDate": "2025-07-08T13:30:00-04:00",
+    "durationInDay": 40
+   },
+   "numberOfTenderers": 3,
+   "tenderers": [
+    {
+     "id": "FO-20002734",
+     "name": "Miovision Technologies"
+    },
+    {
+     "id": "FO-1170478268",
+     "name": "INNOVATION MI-8 INC."
+    },
+    {
+     "id": "FO-1147386263",
+     "name": "TACEL LIMITÉE"
+    }
+   ],
+   "documents": [
+    {
+     "url": "https://seao.gouv.qc.ca/avis-resultat-recherche/consulter?ItemId=1caad94f-d8ca-4af5-a9bc-248ca37cbb3d"
+    }
+   ]
+  },
+  "bids": [
+   {
+    "id": "FO-20002734",
+    "value": 1173832.66,
+    "valueUnit": "1"
+   },
+   {
+    "id": "FO-1170478268",
+    "value": 6412179.89,
+    "valueUnit": "1"
+   },
+   {
+    "id": "FO-1147386263",
+    "value": 2216551.29,
+    "valueUnit": "1"
+   }
+  ],
+  "language": "fr"
+ },
+ "25-21195": {
+  "ocid": "ocds-ec9k95-20104682",
+  "id": "20251222142300",
+  "date": "2025-11-10T09:49:00-05:00",
+  "tag": [
+   "tender"
+  ],
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Ville de Montréal",
+    "id": "OP-36518",
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "municipal": "1"
+    }
+   },
+   {
+    "name": "ELECTROMEGA LIMITÉE",
+    "id": "FO-1143177658",
+    "address": {
+     "streetAddress": "105 Avenue Liberté,",
+     "locality": "Candiac",
+     "region": "QC",
+     "postalCode": "J5R3X8",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1143177658"
+    }
+   },
+   {
+    "name": "TACEL LIMITÉE",
+    "id": "FO-1147386263",
+    "address": {
+     "streetAddress": "8008 Jarry ,",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H1J1H5",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1147386263"
+    }
+   },
+   {
+    "name": "Eco-Compteur Inc",
+    "id": "FO-1166404781",
+    "address": {
+     "streetAddress": "3981-604 Boulevard Saint Laurent,",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H2W1Y5",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "tenderer"
+    ],
+    "details": {
+     "neq": "1166404781"
+    }
+   }
+  ],
+  "buyer": {
+   "name": "Ville de Montréal - Service de l'approvisionnement",
+   "id": "OP-36518"
+  },
+  "tender": {
+   "id": "25-21195",
+   "title": "Acquisition de détecteurs véhiculaires pour le système de feux de circulation et de transport intelligent",
+   "status": "active",
+   "procuringEntity": {
+    "name": "Ville de Montréal - Service de l'approvisionnement",
+    "id": "OP-36518"
+   },
+   "items": [
+    {
+     "id": "G14",
+     "description": "G14 - Équipement de lutte contre l’incendie, de sécurité et de protection",
+     "classification": {
+      "scheme": "UNSPSC",
+      "id": "46170000",
+      "description": "Sécurité, surveillance et détection"
+     },
+     "additionalClassifications": [
+      {
+       "scheme": "UNSPSC",
+       "id": "46161500",
+       "description": "Régulation du trafic"
+      },
+      {
+       "scheme": "UNSPSC",
+       "id": "46161504",
+       "description": "Feux de circulation"
+      }
+     ]
+    }
+   ],
+   "procurementMethod": "open",
+   "procurementMethodDetails": "Avis d’appel d’offres",
+   "mainProcurementCategory": "goods",
+   "additionalProcurementCategories": [
+    "Approvisionnement (biens)"
+   ],
+   "tenderPeriod": {
+    "startDate": "2025-11-10T09:49:00-05:00",
+    "endDate": "2025-12-16T13:30:00-05:00",
+    "durationInDay": 36
+   },
+   "numberOfTenderers": 3,
+   "tenderers": [
+    {
+     "id": "FO-1143177658",
+     "name": "ELECTROMEGA LIMITÉE"
+    },
+    {
+     "id": "FO-1147386263",
+     "name": "TACEL LIMITÉE"
+    },
+    {
+     "id": "FO-1166404781",
+     "name": "Eco-Compteur Inc"
+    }
+   ],
+   "documents": [
+    {
+     "url": "https://seao.gouv.qc.ca/avis-resultat-recherche/consulter?ItemId=fbe87638-066b-48fc-ab58-fdce41239de8"
+    }
+   ],
+   "lots": [
+    {
+     "id": "20024232",
+     "title": "Lot 01",
+     "status": "active"
+    },
+    {
+     "id": "20024234",
+     "title": "Lot 03",
+     "status": "active"
+    },
+    {
+     "id": "20024233",
+     "title": "Lot 02",
+     "status": "active"
+    }
+   ]
+  },
+  "bids": [
+   {
+    "id": "FO-1143177658",
+    "value": 2594916.77,
+    "valueUnit": "1",
+    "relatedLots": [
+     "20024233"
+    ]
+   },
+   {
+    "id": "FO-1147386263",
+    "value": 1825343.1,
+    "valueUnit": "1",
+    "relatedLots": [
+     "20024232"
+    ]
+   },
+   {
+    "id": "FO-1166404781",
+    "value": 559755.79,
+    "valueUnit": "1",
+    "relatedLots": [
+     "20024233"
+    ]
+   },
+   {
+    "id": "FO-1147386263",
+    "value": 929411.91,
+    "valueUnit": "1",
+    "relatedLots": [
+     "20024233"
+    ]
+   },
+   {
+    "id": "FO-1147386263",
+    "value": 172462.5,
+    "valueUnit": "1",
+    "relatedLots": [
+     "20024234"
+    ]
+   }
+  ],
+  "language": "fr"
+ },
+ "BC:1721642": {
+  "ocid": "ocds-ec9k95-20077304",
+  "id": "20260612053102",
+  "date": "2025-06-11T11:34:21-04:00",
+  "tag": [
+   "tenderUpdate"
+  ],
+  "initiationType": "tender",
+  "parties": [
+   {
+    "name": "Ville de Montréal",
+    "id": "OP-59082",
+    "roles": [
+     "buyer"
+    ],
+    "details": {
+     "municipal": "1"
+    }
+   },
+   {
+    "name": "ÉCO-COMPTEUR INC.",
+    "id": "FO-1166404781",
+    "address": {
+     "streetAddress": "604-3981 boul. Saint-Laurent ,",
+     "locality": "Montréal",
+     "region": "QC",
+     "postalCode": "H2W1Y5",
+     "countryName": "CAN"
+    },
+    "roles": [
+     "supplier"
+    ],
+    "details": {
+     "neq": "1166404781"
+    }
+   }
+  ],
+  "buyer": {
+   "name": "Ville de Montréal - Service du développement économique",
+   "id": "OP-59082"
+  },
+  "tender": {
+   "id": "BC:1721642",
+   "title": "contrat de  biens et services, ECO-COMPTEUR INC.",
+   "status": "complete",
+   "procuringEntity": {
+    "name": "Ville de Montréal - Service du développement économique",
+    "id": "OP-59082"
+   },
+   "items": [
+    {
+     "id": "O1",
+     "description": "O1 - Indéterminé",
+     "classification": {
+      "scheme": "UNSPSC",
+      "id": "32151800",
+      "description": "Dispositif de controle de securite"
+     }
+    }
+   ],
+   "procurementMethod": "direct",
+   "procurementMethodDetails": "Contrat de gré à gré",
+   "additionalProcurementCategories": [
+    "Autres"
+   ],
+   "tenderPeriod": {
+    "startDate": "2025-06-11T11:34:21-04:00"
+   },
+   "numberOfTenderers": 1,
+   "tenderers": [
+    {
+     "id": "FO-1166404781",
+     "name": "ÉCO-COMPTEUR INC."
+    }
+   ],
+   "documents": [
+    {
+     "url": "https://seao.gouv.qc.ca/avis-resultat-recherche/consulter?ItemId=5786b808-acd9-49a9-9203-39b75206ae8e"
+    }
+   ]
+  },
+  "awards": [
+   {
+    "id": "20074292",
+    "status": "active",
+    "date": "2025-06-04T00:00:00-04:00",
+    "value": {
+     "amount": 125443.47,
+     "currency": "CAD"
+    },
+    "suppliers": [
+     {
+      "name": "ÉCO-COMPTEUR INC.",
+      "id": "FO-1166404781"
+     }
+    ]
+   }
+  ],
+  "contracts": [
+   {
+    "id": "20074292",
+    "awardID": "20074292",
+    "status": "active",
+    "value": {
+     "amount": 125443.47,
+     "currency": "CAD"
+    },
+    "dateSigned": "2025-06-04T00:00:00-04:00"
+   }
+  ],
+  "language": "fr"
+ }
+}
