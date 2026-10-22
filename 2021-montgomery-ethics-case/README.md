@@ -30,3 +30,19 @@ Public documents, not obtained under the Act, on the proceedings between the Cit
 | `raw/lapresse_2023-09-28_reglement_amiable.pdf` | La Presse, September 28, 2023 | Settlement of the damages claims |
 
 Captured with headless Chrome on October 21, 2026 (four pages refused the capture that night and are linked instead); paywalled pages are captured as served to a non-subscriber. Wayback snapshots requested October 21–22, 2026.
+
+## Wayback snapshots (requested October 22, 2026)
+
+- https://ici.radio-canada.ca/nouvelle/1858156/mairesse-cdn-ndg-montreal-suspension-cmq-juge-pless → https://web.archive.org/web/20261022025310/https://ici.radio-canada.ca/nouvelle/1858156/mairesse-cdn-ndg-montreal-suspension-cmq-juge-pless
+- https://ici.radio-canada.ca/nouvelle/1811986/commission-municipale-quebec-cmq-decision-cdn-ndg → https://web.archive.org/web/20261022025354/https://ici.radio-canada.ca/nouvelle/1811986/commission-municipale-quebec-cmq-decision-cdn-ndg
+- https://ici.radio-canada.ca/nouvelle/1522479/sue-montgomery-cote-des-neiges-notre-dame-de-grace-climat-travail → https://web.archive.org/web/20261022025452/https://ici.radio-canada.ca/nouvelle/1522479/sue-montgomery-cote-des-neiges-notre-dame-de-grace-climat-travail
+- https://ici.radio-canada.ca/nouvelle/1867848/commission-municipale-quebec-appel-mairesse-cdn-ndg → https://web.archive.org/web/20261022025539/https://ici.radio-canada.ca/nouvelle/1867848/commission-municipale-quebec-appel-mairesse-cdn-ndg
+- https://ici.radio-canada.ca/nouvelle/1690085/mairesse-cdn-ndg-cmq → https://web.archive.org/web/20261022025629/https://ici.radio-canada.ca/nouvelle/1690085/mairesse-cdn-ndg-cmq
+- https://www.cbc.ca/news/canada/montreal/former-borough-mayor-sue-montgomery-wins-court-case-1.6332528 → https://web.archive.org/web/20261022025711/https://www.cbc.ca/news/canada/montreal/former-borough-mayor-sue-montgomery-wins-court-case-1.6332528
+- https://www.cbc.ca/news/canada/montreal/montgomery-municipal-commission-no-contest-1.6379727 → https://web.archive.org/web/20261022025755/https://www.cbc.ca/news/canada/montreal/montgomery-municipal-commission-no-contest-1.6379727
+- https://www.ledevoir.com/politique/montreal/585142/montreal-a-verse-130-000-aux-avocats-de-sue-montgomery → https://web.archive.org/web/20261022025941/https://www.ledevoir.com/politique/montreal/585142/montreal-a-verse-130-000-aux-avocats-de-sue-montgomery
+- https://journalmetro.com/actualites/politique/2660381/sue-montgomery-reconnue-coupable-11-manquements-ethique/ → https://web.archive.org/web/20261022030112/https://journalmetro.com/actualites/politique/2660381/sue-montgomery-reconnue-coupable-11-manquements-ethique/
+- https://fqm.ca/chronique-sam/montgomery-c-ville-de-montreal-2020-qccs-4278-la-portee-des-pouvoirs-devolus-au-maire-en-vertu-de-larticle-52-lcv/ → https://web.archive.org/web/20261022030304/https://fqm.ca/chronique-sam/montgomery-c-ville-de-montreal-2020-qccs-4278-la-portee-des-pouvoirs-devolus-au-maire-en-vertu-de-larticle-52-lcv/
+- https://www.administrativelawmatters.com/blog/2022/03/10/independence-impartiality-and-municipal-morality-montgomery-c-commission-municipale-du-quebec-2022-qccs-199/ → https://web.archive.org/web/20261022030346/https://www.administrativelawmatters.com/blog/2022/03/10/independence-impartiality-and-municipal-morality-montgomery-c-commission-municipale-du-quebec-2022-qccs-199/
+
+Not archived that night: https://www.lapresse.ca/actualites/grand-montreal/2020-03-11/la-mairesse-sue-montgomery-deboutee-en-cour (520); https://www.lapresse.ca/actualites/grand-montreal/2023-09-28/reglement-a-l-amiable-entre-sue-montgomery-et-la-ville-de-montreal.php (520)
