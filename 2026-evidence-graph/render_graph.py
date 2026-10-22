@@ -113,6 +113,12 @@ for ci, (title, col) in enumerate(lanes):
     top = 60 + (tallest - len(col)) * 23   # half a row step per missing row
     for ri, nid in enumerate(col):
         pos[nid] = {'x': 80 + ci * 280, 'y': top + ri * 46}
+import collections as _c
+REL_STYLE = {'supports': ('#1baf7a', 'solid'), 'undercuts': ('#e34948', 'solid'), 'bears on': ('#eda100', 'dotted'),
+             'differs from': ('#e34948', 'dashed'), 'same data other denominator': ('#e34948', 'dashed'), 'unsupported by': ('#e34948', 'dashed'), 'does not include': ('#e34948', 'dashed'),
+             'withheld in': ('#b0b4b9', 'dashed'), 'redacted in': ('#b0b4b9', 'dashed')}
+rel_counts = _c.Counter(e['relation'].replace('_', ' ') for e in edges)
+rel_legend = ''.join(f'<div class="rel" data-rel="{r}"><i class="line" style="border-top:2px {REL_STYLE.get(r, ("#b0b4b9", "solid"))[1]} {REL_STYLE.get(r, ("#b0b4b9", "solid"))[0]}"></i>{r} <i class="muted" style="font-style:normal">· {n}</i></div>' for r, n in sorted(rel_counts.items(), key=lambda x: (-x[1], x[0])))
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terrebonne evidence graph</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape-svg@0.4.0/cytoscape-svg.js"></script>
@@ -120,11 +126,12 @@ page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name
 html,body{{margin:0;height:100%;background:var(--bg);color:var(--fg);font:14px/1.4 -apple-system,"Helvetica Neue",Arial,sans-serif}}#cy{{position:absolute;inset:0;right:360px}}
 #side{{position:absolute;top:0;right:0;width:360px;height:100%;overflow:auto;border-left:1px solid var(--line);padding:14px 16px;box-sizing:border-box;background:var(--panel)}}h1{{font-size:16px;margin:0 0 6px}}.muted{{color:var(--muted);font-size:12px}}
 .leg span{{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:4px}}.leg div{{margin:2px 0;font-size:12px}}#info{{margin-top:12px;font-size:13px}}#info b{{display:block;margin-bottom:4px}}#info ul{{padding-left:16px;margin:6px 0 0}}#info li{{margin:2px 0;font-size:12px}}
+.rel{{cursor:pointer;font-size:12px;margin:2px 0}}.rel.on{{font-weight:600}}.rel i.line{{display:inline-block;width:18px;height:0;margin-right:6px;vertical-align:middle}}#rels{{margin-top:10px}}
 .btns{{margin:10px 0}}button{{font:12px -apple-system,"Helvetica Neue",Arial,sans-serif;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin-right:6px;cursor:pointer}}button.on{{border-color:var(--fg)}}
 @media (max-width:700px){{#cy{{right:0;bottom:42%}}#side{{top:58%;width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}}}}</style></head><body>
 <div id="cy"></div><div id="side"><h1>Terrebonne evidence graph</h1><p class="muted">Public statements, documents, data, numerical assertions and assertions, with factual relations only. Click a node for its full text, source and links; double-click to open the source itself (the page of the bundle, the moment in the webcast, the file); drag to rearrange; scroll to zoom. Columns: agents, documents, data, numerical assertions, assertions (the propositions the evidence bears on: green = supports, red = undercuts, amber dotted = bears on), then the statements in one column per sitting or interview, then events; oldest at the top. In the force layout the labels are off; hover or click a node to read them, or turn them back on.</p>
 <div class="btns"><button id="b_lanes" class="on">Columns by type</button><button id="b_force">Force layout</button><button id="b_fit">Fit</button><button id="b_reset">Reset view</button><button id="b_labels">Labels: on</button></div><div class="btns"><input id="q" type="search" placeholder="Find a node (words, phrases, aliases)…" style="width:100%;font:13px -apple-system,&quot;Helvetica Neue&quot;,Arial,sans-serif;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)"><div id="hits" class="muted" style="font-size:12px;margin-top:4px"></div></div><div class="btns"><button id="b_copy">Copy image</button><button id="b_save">Save PNG</button><button id="b_svg">Save SVG</button> <span id="msg" class="muted"></span></div>
-<div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="info" class="muted">Nothing selected.</div></div>
+<div class="leg">{''.join(f'<div><span style="background:{c}"></span>{t}</div>' for t, c in COL.items())}</div><div id="rels" class="leg"><div class="muted">Relations — click one to show only its lines (click again or Reset to clear; link with #rel=…)</div>{rel_legend}</div><div id="info" class="muted">Nothing selected.</div></div>
 <script>
 const COL={json.dumps(COL)}; const POS={json.dumps(pos)};
 const fg=getComputedStyle(document.documentElement).getPropertyValue('--fg').trim()||'#1f2428', bg=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()||'#fcfcfb';
@@ -134,15 +141,22 @@ const cy=cytoscape({{container:document.getElementById('cy'),elements:{json.dump
         {{selector:'edge[rel = "differs from"], edge[rel = "same data other denominator"], edge[rel = "unsupported by"], edge[rel = "does not include"]',style:{{'line-color':'#e34948','target-arrow-color':'#e34948','line-style':'dashed'}}}},
         {{selector:'edge[rel = "withheld in"], edge[rel = "redacted in"]',style:{{'line-style':'dashed'}}}},
         {{selector:'edge[rel = "supports"]',style:{{'line-color':'#1baf7a','target-arrow-color':'#1baf7a'}}}},{{selector:'edge[rel = "undercuts"]',style:{{'line-color':'#e34948','target-arrow-color':'#e34948'}}}},{{selector:'edge[rel = "bears on"]',style:{{'line-color':'#eda100','target-arrow-color':'#eda100','line-style':'dotted'}}}},
-        {{selector:'.dim',style:{{'opacity':0.15}}}},{{selector:'.hl',style:{{'width':2,'label':'data(rel)','opacity':1}}}},{{selector:'node.hl',style:{{'width':22,'height':22,'font-size':11,'opacity':1,'label':'data(short)'}}}},
+        {{selector:'.dim',style:{{'opacity':0.15}}}},{{selector:'.hl',style:{{'width':2,'label':'data(rel)','opacity':1}}}},{{selector:'edge.hlrel',style:{{'width':2.5,'opacity':1}}}},{{selector:'node.hlrel',style:{{'width':20,'height':20,'opacity':1,'label':'data(short)'}}}},{{selector:'node.hl',style:{{'width':22,'height':22,'font-size':11,'opacity':1,'label':'data(short)'}}}},
         {{selector:'node.nolabel',style:{{'label':''}}}},{{selector:'node.found',style:{{'border-width':3,'border-color':'#eda100','label':'data(short)','z-index':8}}}},{{selector:'node.hover',style:{{'label':'data(short)','z-index':9}}}},
         {{selector:':selected',style:{{'border-width':3,'border-color':fg}}}}],
  layout:{{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30}}}});
-function focus(n){{cy.elements().removeClass('hl dim'); if(!n){{return;}} const nb=n.closedNeighborhood(); cy.elements().not(nb).addClass('dim'); nb.addClass('hl');}}
+let curRel=null;
+function clearRel(){{curRel=null;cy.elements().removeClass('hlrel');document.querySelectorAll('#rels .rel').forEach(d=>d.classList.remove('on'));}}
+function focus(n){{cy.elements().removeClass('hl dim'); clearRel(); if(!n){{return;}} const nb=n.closedNeighborhood(); cy.elements().not(nb).addClass('dim'); nb.addClass('hl');}}
+function focusRel(rel){{cy.elements().removeClass('hl dim hlrel'); cy.elements().unselect(); document.querySelectorAll('#rels .rel').forEach(d=>d.classList.toggle('on',d.dataset.rel===rel)); curRel=rel; if(!rel){{document.getElementById('info').innerHTML='Nothing selected.';return;}}
+ const es=cy.edges().filter(e=>e.data('rel')===rel), ns=es.connectedNodes(); cy.elements().not(es).not(ns).addClass('dim'); es.addClass('hlrel'); ns.addClass('hlrel');
+ document.getElementById('info').innerHTML='<b>'+rel+'</b>'+es.length+' relation'+(es.length===1?'':'s')+' shown, '+ns.length+' nodes. Other lines are dimmed; click a node for its text, Reset to clear.'; if(history.replaceState)history.replaceState(null,'','#rel='+encodeURIComponent(rel));}}
+document.querySelectorAll('#rels .rel').forEach(d=>d.onclick=()=>focusRel(curRel===d.dataset.rel?null:d.dataset.rel));
+if(location.hash.startsWith('#rel=')){{const r=decodeURIComponent(location.hash.slice(5)); if(cy.edges().some(e=>e.data('rel')===r)) setTimeout(()=>focusRel(r),50);}}
 cy.on('tap','node',e=>{{const n=e.target,d=n.data(); focus(n);
  const links=n.connectedEdges().map(ed=>{{const other=ed.source().id()===n.id()?ed.target():ed.source(); const dir=ed.source().id()===n.id()?'→':'←'; return '<li>'+dir+' '+ed.data('rel')+' <i>'+other.data('short').replace(/</g,'&lt;')+'</i>'+(ed.data('note')?'<br><span class="muted">'+ed.data('note').replace(/</g,'&lt;')+'</span>':'')+'</li>';}}).join('');
  document.getElementById('info').innerHTML='<b>'+d.label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</b>'+(d.date?d.date+'<br>':'')+'Type: '+d.type+'<br>Source: '+(d.source||'—')+(d.aliases?'<br>Also said as: '+d.aliases.replace(/</g,'&lt;'):'')+(d.url?'<br><a href="'+d.url.replace(/"/g,'&quot;')+'" target="_blank" rel="noopener">Open source ↗</a> (or double-click the node)':'')+'<ul>'+links+'</ul>';}});
-cy.on('tap',e=>{{if(e.target===cy){{focus(null);document.getElementById('info').innerHTML='Nothing selected.';}}}});
+cy.on('tap',e=>{{if(e.target===cy){{focus(null);document.getElementById('info').innerHTML='Nothing selected.';if(history.replaceState)history.replaceState(null,'',location.pathname);}}}});
 cy.on('dbltap','node',e=>{{const u=e.target.data('url');if(u)window.open(u,'_blank','noopener');}});
 const bl=document.getElementById('b_lanes'),bf=document.getElementById('b_force');
 bl.onclick=()=>{{setLabels(true);cy.layout({{name:'preset',positions:n=>POS[n.id()],fit:true,padding:30,animate:true}}).run();bl.classList.add('on');bf.classList.remove('on');}};
