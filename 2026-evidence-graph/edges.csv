@@ -468,3 +468,9 @@ c_revisions,d_r2026_300,computed_from,
 c_revisions,d_eco_oct21,computed_from,
 c_revisions,c_36,refers_to,3.6 % stays 3.6 % at one decimal once the May gap is filled; the denominator grows.
 c_revisions,t_snow,refers_to,"Eastbound Dec–Mar becomes about 2,716; the 72 % outside constraint days is unchanged at the rounding."
+s_eco_teo,ev_ecocompteur,made_at,
+s_eco_teo,a_teodoresco,attributed_to,
+s_eco_teo,d_ecocompteur,contained_in,
+d_ecocompteur,t_portal,refers_to,The City's counter network and its open-data platform; the borough's Kensington loop is not part of that network.
+d_ecocompteur,x_portal,bears_on,The release concerns the City's own counters; it does not place the Kensington counter on the portal.
+s_cm_counter,s_eco_teo,refers_to,On Oct 19 the councillor spoke of the counters as an administration file; the June 4 release quotes him on the new counters with his executive-committee title.
