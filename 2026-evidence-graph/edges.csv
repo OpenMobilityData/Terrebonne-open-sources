@@ -132,8 +132,6 @@ s_oct6_readjust,a_teodoresco,attributed_to,
 s_oct6_readjust,e_oct6,made_at,
 s_oct6_sameside,a_teodoresco,attributed_to,
 s_oct6_sameside,e_oct6,made_at,
-s_oct6_three,a_teodoresco,attributed_to,
-s_oct6_three,e_oct6,made_at,
 s_oct6_mayor_study,a_valenzuela,attributed_to,
 s_oct6_mayor_study,e_oct6,made_at,
 s_db_lessthanone,a_teodoresco,attributed_to,
@@ -252,14 +250,12 @@ s_db_40,t_p62,refers_to,His explanation of the 8 as a six-hour sum matches the s
 s_db_40,s_oct6_perhour,echoes,
 s_oct6_perhour,t_p62,refers_to,
 s_oct6_8for4,c_4,states,
-s_oct6_three,c_4,refers_to,"Three, four: the same six-hour count."
 s_oct6_decision_slides,t_p62,refers_to,
 s_oct6_decision_slides,s_oct6_decision,echoes,
 s_oct6_decision_slides,s_db_final,differs_from,Oct 6: a decision based on the slides; Oct 9: the final study still to be submitted.
 s_oct6_readjust,t_counter,refers_to,Data collection promised; the counter's loop for the removed direction lies under the parked cars.
 s_oct6_readjust,s_db_reopen,echoes,
 s_oct6_sameside,s_db_entire,refers_to,
-s_oct6_three,t_counter,differs_from,No winter day under 2 bicycles; 40 a day.
 s_db_250,t_exp_spaces,refers_to,"EXP 2023: 475 → 171 (−304), or 375 → 171 after clearances (−204); no as-built count. The 2020 temporary lanes: 250 reported removed."
 s_cm_250,s_db_250,matches,
 s_cm_250,t_exp_spaces,refers_to,
@@ -442,7 +438,6 @@ d_dec12_2025,x_since_jan,bears_on,"December 12, 2025: the review to proceed in d
 d_feb10,x_since_jan,bears_on,"February 10, 2026: Terrebonne named among streets the City is working with boroughs to make safer; the SUM's follow-up process announced."
 e_zoom,x_since_jan,bears_on,The first exchange with residents' representatives on the measure came shortly before October 6.
 x_campaign,x_since_jan,bears_on,"Both are about when the change was first communicated; neither is supported by a document before June 10, 2026."
-s_oct6_mayor_study,x_info_coming,supports,"« Once it's available, if we can make it available »."
 d_card,x_info_coming,bears_on,"« Residents will see changes before Christmas 2026 »: changes announced, not information."
 d_dec12_2025,x_info_coming,bears_on,The office's own standard: dialogue from the start to avoid later modifications.
 e_nov30_2023,x_info_coming,bears_on,The 2023 precedent: a public session before the vote.
@@ -503,7 +498,6 @@ s_oct6_perhour,d_transcript_oct6,contained_in,
 s_oct6_decision_slides,d_transcript_oct6,contained_in,
 s_oct6_readjust,d_transcript_oct6,contained_in,
 s_oct6_sameside,d_transcript_oct6,contained_in,
-s_oct6_three,d_transcript_oct6,contained_in,
 s_oct6_mayor_study,d_transcript_oct6,contained_in,
 s_oct6_sinceoffice,d_transcript_oct6,contained_in,
 d_transcript_oct6,e_oct6,refers_to,The checked transcripts of the sitting.
@@ -512,3 +506,150 @@ s_oct6_mayor_juste_milieu,e_oct6,made_at,
 s_oct6_mayor_juste_milieu,d_transcript_oct6,contained_in,
 s_oct6_mayor_juste_milieu,a_valenzuela,attributed_to,
 s_oct6_mayor_juste_milieu,x_yearround,bears_on,The mayor distinguishes the administration's position from those who want the lane removed outright; she does not say what happens in spring.
+s_oct6_oneside_winter,a_teodoresco,attributed_to,
+s_oct6_oneside_winter,e_oct6,made_at,
+s_oct6_oneside_winter,d_transcript_oct6,contained_in,
+s_oct6_oneside_winter,x_reopen,supports,"« Seasonal », « during the winter months »; no month named at the sitting."
+s_oct6_oneside_winter,x_window4,bears_on,No dates in the address.
+s_oct6_doors,a_teodoresco,attributed_to,
+s_oct6_doors,e_oct6,made_at,
+s_oct6_doors,d_transcript_oct6,contained_in,
+s_oct6_doors,s_db_doors,echoes,
+s_oct6_doors,x_parking_measured,bears_on,The need cited rests on door-knocking; the released file holds no parking measurement.
+s_oct6_counters,a_teodoresco,attributed_to,
+s_oct6_counters,e_oct6,made_at,
+s_oct6_counters,d_transcript_oct6,contained_in,
+s_oct6_counters,t_counter,refers_to,"The borough's continuous counter at Kensington (from July 26, 2025; daily table pp. 74–81, released October 9, 2026) was not the figure cited: the 700 and 8 are single-day camera counts."
+s_oct6_counters,s_oct6_official,echoes,
+s_oct6_joutel_apc,a_joutel,attributed_to,
+s_oct6_joutel_apc,e_oct6,made_at,
+s_oct6_joutel_apc,d_transcript_oct6,contained_in,
+s_oct6_joutel_apc,x_consulted,bears_on,The question that drew the answers at 1:15:12 and 1:21:44.
+s_oct6_joutel_apc,a_apc,refers_to,
+s_oct6_noconsult,a_teodoresco,attributed_to,
+s_oct6_noconsult,e_oct6,made_at,
+s_oct6_noconsult,d_transcript_oct6,contained_in,
+s_oct6_noconsult,x_consulted,bears_on,"No new public consultation, by his own account; the contact with the APC is a separate statement (1:21:44)."
+s_oct6_noconsult,x_precedent,bears_on,"No public session before the winter measure; the 2024 project had one on November 30, 2023."
+s_oct6_consensus_wc,a_teodoresco,attributed_to,
+s_oct6_consensus_wc,e_oct6,made_at,
+s_oct6_consensus_wc,d_transcript_oct6,contained_in,
+s_oct6_consensus_wc,d_wc2021,refers_to,"The working committee's note of June 13, 2021 (p. 11) records a recommendation to study option 5 bis paired with Somerled (« 5bis+A2 »)."
+s_oct6_dayafterday,a_teodoresco,attributed_to,
+s_oct6_dayafterday,e_oct6,made_at,
+s_oct6_dayafterday,d_transcript_oct6,contained_in,
+s_oct6_dayafterday,s_oct6_official,echoes,
+s_oct6_dayafterday,t_p62,differs_from,"The 700 and 8 of the address are single-day camera counts (September 19, 2024 and January 29, 2025; bundle 01 pp. 61–62); the record collected day after day, the Kensington counter (pp. 74–81), was not cited at the sitting."
+s_oct6_seasonal_fr,a_teodoresco,attributed_to,
+s_oct6_seasonal_fr,e_oct6,made_at,
+s_oct6_seasonal_fr,d_transcript_oct6,contained_in,
+s_oct6_seasonal_fr,x_reopen,supports,« Un accommodement saisonnal ».
+s_oct6_seasonal_fr,t_parking,unsupported_by,"« Qui en a vraiment besoin »: no parking inventory, occupancy count or survey in the 508 released pages."
+s_oct6_garate_bidir,a_garate,attributed_to,
+s_oct6_garate_bidir,e_oct6,made_at,
+s_oct6_garate_bidir,d_transcript_oct6,contained_in,
+s_oct6_garate_bidir,x_bidir,bears_on,"The questioner's words, not the councillor's."
+s_oct6_700_300_100_8,a_teodoresco,attributed_to,
+s_oct6_700_300_100_8,e_oct6,made_at,
+s_oct6_700_300_100_8,d_transcript_oct6,contained_in,
+s_oct6_700_300_100_8,t_p61,refers_to,"Six-hour camera counts in the released file (October 9, 2026): 707 = all four approaches at Grand, September 19, 2024 (p. 61); on the Terrebonne axis at Grand, 283 (July 17, 2024, p. 92), 452 (September 19, 2024, p. 127) and 154 (November 20, 2024, p. 134)."
+s_oct6_700_300_100_8,t_p62,refers_to,"The 8: Terrebonne axis at Grand, January 29, 2025, six peak hours (p. 62)."
+s_oct6_700_300_100_8,x_99,states,
+s_oct6_700_300_100_8,s_oct6_99,echoes,
+s_oct6_dixmois,a_teodoresco,attributed_to,
+s_oct6_dixmois,e_oct6,made_at,
+s_oct6_dixmois,d_transcript_oct6,contained_in,
+s_oct6_dixmois,x_window4,bears_on,"« Les autres 10 mois de l'année » (October 6); « December to March » (Daybreak 03:11); « quatre mois » (City council, October 19)."
+s_oct6_premier_conseil,a_teodoresco,attributed_to,
+s_oct6_premier_conseil,e_oct6,made_at,
+s_oct6_premier_conseil,d_transcript_oct6,contained_in,
+s_oct6_premier_conseil,x_campaign,states,
+s_oct6_premier_conseil,x_since_jan,supports,« Le premier conseil d'arrondissement » (November 2025).
+s_oct6_malfaite,a_teodoresco,attributed_to,
+s_oct6_malfaite,e_oct6,made_at,
+s_oct6_malfaite,d_transcript_oct6,contained_in,
+s_oct6_malfaite,x_precedent,bears_on,"The councillor's characterization of the 2024 process; the record: study published October 30, 2023, information session November 30, 2023, votes of February 5 and 19, 2024."
+s_oct6_voie_mitoyenne,a_teodoresco,attributed_to,
+s_oct6_voie_mitoyenne,e_oct6,made_at,
+s_oct6_voie_mitoyenne,d_transcript_oct6,contained_in,
+s_oct6_voie_mitoyenne,s_oct6_mayor_juste_milieu,echoes,
+s_oct6_lund_petition,a_lund,attributed_to,
+s_oct6_lund_petition,e_oct6,made_at,
+s_oct6_lund_petition,d_transcript_oct6,contained_in,
+s_oct6_lund_quatre,a_lund,attributed_to,
+s_oct6_lund_quatre,e_oct6,made_at,
+s_oct6_lund_quatre,d_transcript_oct6,contained_in,
+s_oct6_lund_quatre,c_4,refers_to,The « eight people » read as four at the sitting.
+s_oct6_huit_journees,a_teodoresco,attributed_to,
+s_oct6_huit_journees,e_oct6,made_at,
+s_oct6_huit_journees,d_transcript_oct6,contained_in,
+s_oct6_huit_journees,t_p62,refers_to,
+s_oct6_huit_journees,s_oct6_perhour,differs_from,"1:44:57: « des journées où il y a huit personnes qui l'utilisent » (eight in a day); 2:22:16, to the author: « Per hour. Heure de pointe »."
+s_oct6_huit_journees,x_99,bears_on,The 8 framed as a day's users.
+s_oct6_100pct,a_teodoresco,attributed_to,
+s_oct6_100pct,e_oct6,made_at,
+s_oct6_100pct,d_transcript_oct6,contained_in,
+s_oct6_100pct,x_reopen,supports,« Pendant tous les mois où elle est effectivement utilisée ».
+s_oct6_snow_rationale,a_teodoresco,attributed_to,
+s_oct6_snow_rationale,e_oct6,made_at,
+s_oct6_snow_rationale,d_transcript_oct6,contained_in,
+s_oct6_snow_rationale,t_snow,refers_to,
+s_oct6_snow_rationale,x_stormonly,bears_on,"The snow-removal constraint is the reason given for the whole season; a closure during snow removal only was within EXP's mandate (offer, p. 10)."
+s_oct6_engagement,a_teodoresco,attributed_to,
+s_oct6_engagement,e_oct6,made_at,
+s_oct6_engagement,d_transcript_oct6,contained_in,
+s_oct6_engagement,x_campaign,states,
+s_oct6_engagement,s_oct6_promise,echoes,
+s_oct6_engagement,d_platform,refers_to,"The written platform of October 16, 2025 does not mention Terrebonne."
+s_oct6_minor,a_teodoresco,attributed_to,
+s_oct6_minor,e_oct6,made_at,
+s_oct6_minor,d_transcript_oct6,contained_in,
+s_oct6_minor,x_entire,bears_on,"Described as minor; the stretch concerned is the whole lane (Daybreak 09:01), one direction for the winter."
+s_oct6_hoge_40,a_author,attributed_to,
+s_oct6_hoge_40,e_oct6,made_at,
+s_oct6_hoge_40,d_transcript_oct6,contained_in,
+s_oct6_hoge_40,c_40,states,
+s_oct6_hoge_40,t_counter,matches,
+s_oct6_hoge_40,d_r2026_300,refers_to,
+s_oct6_12and8,a_teodoresco,attributed_to,
+s_oct6_12and8,e_oct6,made_at,
+s_oct6_12and8,d_transcript_oct6,contained_in,
+s_oct6_12and8,t_p61,refers_to,"The 12: p. 61 (Grand, all four approaches, January 29, 2025)."
+s_oct6_12and8,t_p62,refers_to,"The 8: p. 62 (Grand, Terrebonne axis, January 29, 2025)."
+s_oct6_12and8,c_40,refers_to,« Maybe that's your 40 a day ».
+s_oct6_12and8,a_author,refers_to,Answer to the author's question.
+s_oct6_12and8,s_oct6_official,echoes,
+s_oct6_scenarios,a_teodoresco,attributed_to,
+s_oct6_scenarios,e_oct6,made_at,
+s_oct6_scenarios,d_transcript_oct6,contained_in,
+s_oct6_scenarios,x_stormonly,bears_on,"A dozen scenarios studied; which ones is not said; a closure during snow removal only was within EXP's mandate (offer, p. 10)."
+s_oct6_scenarios,x_info_coming,bears_on,No further consultation before implementation; informing parents is a separate pledge by the mayor (2:26:50).
+s_oct6_internal_doc,a_teodoresco,attributed_to,
+s_oct6_internal_doc,e_oct6,made_at,
+s_oct6_internal_doc,d_transcript_oct6,contained_in,
+s_oct6_internal_doc,d_note,refers_to,
+s_oct6_internal_doc,x_shared,bears_on,« I'm not sure that we can do that ».
+s_oct6_internal_doc,s_db_final,differs_from,October 6: « we have the study … an internal working document »; October 9: « the final study … still need to be submitted to us ».
+s_oct6_mayor_inform,a_valenzuela,attributed_to,
+s_oct6_mayor_inform,e_oct6,made_at,
+s_oct6_mayor_inform,d_transcript_oct6,contained_in,
+s_oct6_mayor_inform,x_info_coming,supports,« Everyone will be aware of the changes ».
+s_oct6_twothirds,a_teodoresco,attributed_to,
+s_oct6_twothirds,e_oct6,made_at,
+s_oct6_twothirds,d_transcript_oct6,contained_in,
+s_oct6_twothirds,s_db_twothirds,echoes,
+s_oct6_twothirds,t_counter,refers_to,"Motor vehicles in the counter's first year: 1,375 a day (table released October 9, 2026); 2022 DJMA 6,300 (EXP 2023)."
+s_oct6_timeline,a_teodoresco,attributed_to,
+s_oct6_timeline,e_oct6,made_at,
+s_oct6_timeline,d_transcript_oct6,contained_in,
+s_oct6_timeline,s_oct6_readjust,echoes,
+s_oct6_timeline,x_dec7,bears_on,"« If the schedule, the timeline allows »: no sitting named."
+s_oct6_jazz_three,a_jazz,attributed_to,
+s_oct6_jazz_three,e_oct6,made_at,
+s_oct6_jazz_three,d_transcript_oct6,contained_in,
+s_oct6_jazz_three,c_4,refers_to,"Three, four: the same six-hour count, as heard in the room."
+s_oct6_jazz_three,t_counter,differs_from,"No winter day under 2 bicycles; 40 a day December 1–March 31, 2025-26 (table released October 9, 2026)."
+s_oct6_network,a_teodoresco,attributed_to,
+s_oct6_network,e_oct6,made_at,
+s_oct6_network,d_transcript_oct6,contained_in,
+s_oct6_network,s_oct6_safety,differs_from,"Address, 39:33: « keep the same capacity, the same level of safety »; 2:32:49: « keep some capacity all across the network »."
