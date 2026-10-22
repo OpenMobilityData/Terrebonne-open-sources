@@ -106,9 +106,13 @@ for t in ORDER:
         for ev in sorted(groups, key=lambda e: ev_date.get(e, '9999')):
             lanes.append((f'statements: {ev}', groups[ev]))
 pos = {}
+# each column is centred on the same horizontal midline (the tallest column sets the height), so the
+# edges fan out from the middle instead of bunching along the top edge
+tallest = max(len(col) for _, col in lanes)
 for ci, (title, col) in enumerate(lanes):
+    top = 60 + (tallest - len(col)) * 23   # half a row step per missing row
     for ri, nid in enumerate(col):
-        pos[nid] = {'x': 80 + ci * 280, 'y': 60 + ri * 46}
+        pos[nid] = {'x': 80 + ci * 280, 'y': top + ri * 46}
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Terrebonne evidence graph</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.2/cytoscape.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape-svg@0.4.0/cytoscape-svg.js"></script>
