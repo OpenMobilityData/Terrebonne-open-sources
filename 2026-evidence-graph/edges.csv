@@ -653,3 +653,18 @@ s_oct6_network,a_teodoresco,attributed_to,
 s_oct6_network,e_oct6,made_at,
 s_oct6_network,d_transcript_oct6,contained_in,
 s_oct6_network,s_oct6_safety,differs_from,"Address, 39:33: « keep the same capacity, the same level of safety »; 2:32:49: « keep some capacity all across the network »."
+d_apc_letter,a_apc,attributed_to,
+d_apc_letter,a_valenzuela,refers_to,Addressed to the borough mayor.
+d_apc_letter,d_aug13,refers_to,« The mandate of August 13 came from your chief of staff ».
+d_apc_letter,d_devoir,refers_to,
+d_apc_letter,d_dec12_2025,refers_to,
+d_apc_letter,s_oct6_mayor_study,refers_to,
+d_apc_letter,s_cm_share,refers_to,
+d_apc_letter,d_sum,refers_to,
+d_apc_letter,d_sim,refers_to,
+d_apc_letter,d_note,refers_to,
+d_apc_letter,d_rel2023,refers_to,The 2023 precedent: study published and public session before the vote.
+d_apc_letter,x_shared,bears_on,The release of the three documents is requested before the vote.
+d_apc_letter,x_window4,bears_on,Asks which window applies and whether it recurs every winter.
+d_apc_letter,x_info_coming,bears_on,Asks for a public information session with the services present.
+d_apc_letter,e_dec7,precedes,
