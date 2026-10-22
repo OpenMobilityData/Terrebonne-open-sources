@@ -100,19 +100,50 @@ for t in ORDER:
     if t != 'statement':
         lanes.append((t, [n['id'] for n in sorted((n for n in nodes if n['type'] == t), key=by_date)]))
     else:
+        # one column per sitting or interview; the Oct 6 sitting is split by exchange (address, then one column per
+        # questioner, in webcast order), each column ordered by the first time stamp in the node's source
+        import re as _re
+        OCT6 = {'01': 'address', '07': 'Trudeau', '02': 'Joutel', '03': 'Garate', '04': 'Lund', '05': 'Hoge', '06': 'Jazz'}
+        OCT6_ORDER = ['01', '07', '02', '03', '04', '05', '06']
+        def tsecs(src):
+            m = _re.search(r'(\d+):(\d\d)(?::(\d\d))?', src or '')
+            if not m: return 10**9
+            h, mi, se = m.group(1), m.group(2), m.group(3)
+            return (int(h) * 3600 + int(mi) * 60 + int(se)) if se else (int(h) * 60 + int(mi))
         groups = {}
         for n in sorted((n for n in nodes if n['type'] == 'statement'), key=by_date):
-            groups.setdefault(made_at.get(n['id'], 'other'), []).append(n['id'])
-        for ev in sorted(groups, key=lambda e: ev_date.get(e, '9999')):
-            lanes.append((f'statements: {ev}', groups[ev]))
+            ev = made_at.get(n['id'], 'other')
+            m = _re.search(r'2026-10-06_(0\d)\.md', n.get('source', '')) if ev == 'e_oct6' else None
+            groups.setdefault((ev, m.group(1) if m else ''), []).append(n)
+        def lane_key(k):
+            ev, part = k
+            return (ev_date.get(ev, '9999'), ev, OCT6_ORDER.index(part) if part in OCT6_ORDER else 99)
+        for k in sorted(groups, key=lane_key):
+            ev, part = k
+            col = groups[k]
+            if ev == 'e_oct6':
+                col = sorted(col, key=lambda n: tsecs(n.get('source', '')))
+            lanes.append((f'statements: {ev}' + (f' ({OCT6[part]})' if part in OCT6 else ''), [n['id'] for n in col]))
 pos = {}
-# each column is centred on the same horizontal midline (the tallest column sets the height), so the
-# edges fan out from the middle instead of bunching along the top edge
-tallest = max(len(col) for _, col in lanes)
+# row spacing follows each label's wrapped height (font 10, wrap at 130 px: about 26 characters a line), so labels
+# never overlap inside a column; each column is centred on the same horizontal midline (the tallest column sets
+# the height), so the edges fan out from the middle instead of bunching along the top edge
+import math as _m
+short_of = {n['id']: n['short'] for n in nodes}
+def row_h(nid):
+    words = short_of[nid].split(); lines, cur = 1, 0
+    for w in words:
+        if cur and cur + 1 + len(w) > 26: lines += 1; cur = len(w)
+        else: cur += (1 if cur else 0) + len(w)
+    return 16 + 3 + lines * 12 + 14
+col_h = {ci: sum(row_h(nid) for nid in col) for ci, (_, col) in enumerate(lanes)}
+tallest = max(col_h.values())
 for ci, (title, col) in enumerate(lanes):
-    top = 60 + (tallest - len(col)) * 23   # half a row step per missing row
-    for ri, nid in enumerate(col):
-        pos[nid] = {'x': 80 + ci * 280, 'y': top + ri * 46}
+    y = 60 + (tallest - col_h[ci]) / 2
+    for nid in col:
+        h = row_h(nid)
+        pos[nid] = {'x': 80 + ci * 280, 'y': round(y + 8)}
+        y += h
 import collections as _c
 REL_STYLE = {'supports': ('#1baf7a', 'solid'), 'undercuts': ('#e34948', 'solid'), 'bears on': ('#eda100', 'dotted'),
              'differs from': ('#e34948', 'dashed'), 'same data other denominator': ('#e34948', 'dashed'), 'unsupported by': ('#e34948', 'dashed'), 'does not include': ('#e34948', 'dashed'),

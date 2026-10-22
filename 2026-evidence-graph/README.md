@@ -2,7 +2,7 @@
 
 **Issuer:** the repository's author (a resident of Côte-des-Neiges–Notre-Dame-de-Grâce), from public records. **Date:** started October 20, 2026; updated as the record grows. **Status:** a working map, not a finished document.
 
-**Browse it:** https://openmobilitydata.github.io/Terrebonne-open-sources/2026-evidence-graph/evidence_graph.html (click a node for its full text, its source and its links, each with an arrow to the other end's source; double-click a node or a line to open the source it rests on; "Columns by type" orders each column by date; "Force layout" shows the clusters). Static drawing: [`evidence_graph.svg`](evidence_graph.svg) / [`evidence_graph.png`](evidence_graph.png).
+**Browse it:** https://openmobilitydata.github.io/Terrebonne-open-sources/2026-evidence-graph/evidence_graph.html (click a node for its full text, its source and its links, each with an arrow to the other end's source; double-click a node or a line to open the source it rests on; "Columns by type" orders each column by date, with the October 6 statements in one column per exchange (the address, then each questioner in webcast order) and rows spaced to each label's height; "Force layout" shows the clusters). Static drawing: [`evidence_graph.svg`](evidence_graph.svg) / [`evidence_graph.png`](evidence_graph.png).
 
 ## What it is
 
