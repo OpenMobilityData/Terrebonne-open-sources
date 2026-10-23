@@ -28,6 +28,8 @@ The graph is meant to be exhaustive for the question at hand: every checked quot
 
 Rule for additions: a newly checked quotation or newly filed document gets its node and relations in the same commit as the transcript or file.
 
+Added October 23, 2026: the parish of St Monica (question 3.14, assertion `x_hardship`: « The bike lane has caused financial hardship to St Monica's parish »): the 17 T3010 returns and the 2024 return, the key-line table, the parish's own statements 2017–March 2023, the 519 bulletins and the count of the 117 issues since the lane, the Facebook page and its four posts on the lane (2020, 2024), the RNS article of August 13, 2024, the returns of the twelve other parishes of the area, the peer comparison, the detection thresholds, and four numerical assertions (deficits in 7 of 17 years; the 2024 change; the difference from the peers; the detectable effect). Sources: folder `2024-st-monica-cra-t3010/`.
+
 ## Sources
 
 Access request 2026-581 (bundle 01 page numbers) and 2026-300: [Terrebonne-access-requests](https://github.com/OpenMobilityData/Terrebonne-access-requests). Council recordings: borough council of October 6, 2026 (webcast 0k_KZf9uxTk; transcripts in [`../2026-10-06-borough-council/`](../2026-10-06-borough-council/)) and City council of October 19, 2026 (rii3nUTuKRE; transcripts in [`../2026-10-19-city-council/`](../2026-10-19-city-council/)). CBC *Daybreak*, October 9, 2026 ([`../2026-cbc-daybreak-interview/`](../2026-cbc-daybreak-interview/)). *Le Devoir*, October 19, 2026. Telraam sensors: [Terrebonne-telraam](https://github.com/OpenMobilityData/Terrebonne-telraam). The APC Zoom meeting node rests on the association's minutes of the meeting the councillor cited at council as his consultation.
