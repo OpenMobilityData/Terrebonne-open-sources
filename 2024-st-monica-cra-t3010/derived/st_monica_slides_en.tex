@@ -1,8 +1,8 @@
 \documentclass[aspectratio=169,11pt]{beamer}
 \usetheme{default}\usecolortheme{default}
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
-\usepackage{booktabs}\usepackage{graphicx}\usepackage{xcolor}
-\newcommand{\docversion}{2026-10-23-11-15-49} % set by build.py (America/Toronto)
+\usepackage{booktabs}\usepackage{array}\usepackage{graphicx}\usepackage{xcolor}
+\newcommand{\docversion}{2026-10-23-11-22-18} % set by build.py (America/Toronto)
 \definecolor{ink}{HTML}{0B0B0B}\definecolor{ink2}{HTML}{52514E}\definecolor{accent}{HTML}{2A78D6}\definecolor{orange}{HTML}{EB6834}
 \setbeamercolor{normal text}{fg=ink}\setbeamercolor{frametitle}{fg=ink}\setbeamercolor{title}{fg=ink}\setbeamercolor{itemize item}{fg=accent}\setbeamercolor{itemize subitem}{fg=accent}
 \setbeamertemplate{navigation symbols}{}
@@ -70,6 +70,20 @@
 \chart{Total revenue, indexed}{peers_revenue_index}
 \chart{Change from 2023 to 2024, by parish}{peers_change_2024}
 
+\begin{frame}{Parking and street conditions around the churches}
+\begin{itemize}
+\item Sources: the City's bike network today and its 2019--20 and 2024 surveys; the City's parking-sign inventory (October 23, 2026; not Westmount or Côte-Saint-Luc); off-street lots on aerial imagery. No count of spaces.
+\item The lane changed parking on the church's own frontage: since \B{July 2, 2024} the church's side of Terrebonne is « no stopping at any time »; nine frontage poles got such a sign that month. The church has no off-street lot.
+\item \B{None} of the twelve neighbours had a lane built on its street in 2019--2024: the peer comparison is with parishes whose street conditions did not change. Five of them, like Sainte-Monique, have no lot.
+\item Sunday morning (10:00--12:00): \B{37~\%} of the curb within 150~m of Sainte-Monique is closed to a visitor without a residents' permit, in the middle of the nine neighbours with City data (\B{5 to 48~\%}); Saint-Antonin, also without a lot, \B{48~\%}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sunday morning: the curb a visitor can use within 150~m}
+\framesubtitle{Share of curb length closed to a visitor without a residents' permit, Sunday 10:00--12:00, from the City's sign inventory; faces with no sign counted open}
+\centering\small\resizebox{0.92\textwidth}{!}{\input{peer_streets_sunday_table_en.tex}}
+\end{frame}
+
 \begin{frame}{What this record could detect}
 \begin{itemize}
 \item Noise: the standard deviation of the eight pre-lane year-to-year changes (2015--2023), with and without the three pandemic transitions. Threshold: two standard deviations. A gauge with eight observations, not a test.
@@ -106,6 +120,7 @@
 \item No figure in the 2024 return stands apart from the parish's own 2019--2023 variation or from its neighbours' changes.
 \item The deficits of 2022 and 2023 precede the lane; the gap to the neighbouring parishes opened in 2023.
 \item The revenue lines nearest the claims (gifts, loose gifts, rentals, the former funerals-and-weddings line) are within or above their recent range in 2024.
+\item Sunday street parking at the church today is within the range its neighbours operate under; none of them had a lane built on its street, so the peer comparison is not a with-lane test.
 \item A measurable impact is \B{neither established nor excluded}: it would have had to be of the order of a quarter of a year's gifts to show in a seven-month return.
 \item What would test it: the \B{2025} return read against the peers; monthly figures, which the parish stopped publishing in 2023; counts of weddings and funerals, which no public source holds.
 \end{itemize}
