@@ -11,3 +11,4 @@ question,title,nodes
 3.10,The meetings and the door-to-door,s_cm_counter;e_zoom;x_consulted;s_oct6_joutel_apc;s_oct6_noconsult;s_oct6_consult;s_oct6_doors
 3.11,The City's follow-up,e_cm_oct19;x_shared;x_precedent;x_since_jan;x_campaign;s_oct6_engagement;s_oct6_premier_conseil;s_oct6_mayor_inform
 3.12,Residents' mobility,s_db_spaces;x_parking_measured
+3.13,The designated roadway,d_exp2023;d_june10;d_wc2021;t_csr;t_mtq;x_pass

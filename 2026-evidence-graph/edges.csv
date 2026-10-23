@@ -668,3 +668,6 @@ d_apc_letter,x_shared,bears_on,The release of the three documents is requested b
 d_apc_letter,x_window4,bears_on,Asks which window applies and whether it recurs every winter.,
 d_apc_letter,x_info_coming,bears_on,Asks for a public information session with the services present.,
 d_apc_letter,e_dec7,precedes,,
+t_mtq,x_pass,bears_on,"The designated roadway is a shared lane by definition; the Code's art. 341 (pass only if safe, otherwise stay behind) applies on it as on any street.",
+d_exp2023,t_mtq,refers_to,"Aménagement A labels its 3.5 m shared lane a « chaussée désignée » (Figure 6-6, p. 72).",
+t_csr,t_mtq,refers_to,The Code names no « chaussée désignée »; art. 341 applies on any lane.,
