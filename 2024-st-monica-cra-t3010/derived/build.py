@@ -375,7 +375,7 @@ if years:
         r = subprocess.run([sys.executable, os.path.join(HERE, 'parish_statements.py')], capture_output=True, text=True, errors='replace')
         log('Parish statements: ' + ('done (statements_vs_returns_*.tex, figures/parish_*)' if r.returncode == 0 else 'FAILED ' + r.stderr[-800:]))
     stamp = datetime.datetime.now(zoneinfo.ZoneInfo('America/Toronto')).strftime('%Y-%m-%d-%H-%M-%S')
-    for tex in [os.path.join(HERE, f'st_monica_t3010_note_{lang}.tex') for lang in ('en', 'fr')]:
+    for tex in [os.path.join(HERE, f) for f in ('st_monica_t3010_note_en.tex', 'st_monica_t3010_note_fr.tex', 'st_monica_executive_summary_en.tex', 'st_monica_slides_en.tex')]:
         if not (os.path.exists(tex) and shutil.which('pdflatex')):
             continue
         s = open(tex, encoding='utf-8').read()

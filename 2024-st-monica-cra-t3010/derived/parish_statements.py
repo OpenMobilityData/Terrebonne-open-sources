@@ -91,7 +91,7 @@ if plt:
         ax.bar(xs, onl, width=0.8, bottom=sun, color=PAL[3], label=t['onl'], edgecolor='white', linewidth=0.6)
         ax.set_xticks([(y - 2017) * 12 for y in years]); ax.set_xticklabels([str(y) for y in years])
         ax.set_xlim(-1, 7 * 12); ax.set_ylabel(t['k'], color=INK2, fontsize=9)
-        ax.legend(frameon=False, fontsize=8, loc='upper right', labelcolor=INK)
+        ax.legend(frameon=False, fontsize=8, loc='upper left', labelcolor=INK)
         finish(fig, lang, 'parish_monthly_collections')
         # 2. YTD revenue and expenses by year.
         fig, ax = plt.subplots(figsize=(9, 5))

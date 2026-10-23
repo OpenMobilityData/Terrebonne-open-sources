@@ -1,0 +1,114 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{default}\usecolortheme{default}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\usepackage{booktabs}\usepackage{graphicx}\usepackage{xcolor}
+\newcommand{\docversion}{2026-10-23-09-51-53} % set by build.py (America/Toronto)
+\definecolor{ink}{HTML}{0B0B0B}\definecolor{ink2}{HTML}{52514E}\definecolor{accent}{HTML}{2A78D6}\definecolor{orange}{HTML}{EB6834}
+\setbeamercolor{normal text}{fg=ink}\setbeamercolor{frametitle}{fg=ink}\setbeamercolor{title}{fg=ink}\setbeamercolor{itemize item}{fg=accent}\setbeamercolor{itemize subitem}{fg=accent}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle}{\vspace{0.4em}\textbf{\large\insertframetitle}\par\vspace{-0.2em}{\color{ink2}\footnotesize\insertframesubtitle}\par\vspace{0.2em}}
+\setbeamertemplate{footline}{\hfill{\tiny\color{ink2}St Monica's parish finances and the Terrebonne bike lane -- v.\,\docversion\ -- \insertframenumber/\inserttotalframenumber}\hspace{0.4em}\vspace{0.3em}}
+\setbeamertemplate{itemize item}{\textbullet}\setbeamertemplate{itemize subitem}{--}
+\setbeamerfont{frametitle}{size=\large}
+\newcommand{\B}[1]{\textbf{#1}}
+\newcommand{\chart}[2]{\begin{frame}{#1}\centering\includegraphics[height=0.78\textheight]{figures/#2_en.pdf}\end{frame}}
+\hypersetup{pdftitle={St Monica's parish finances and the Terrebonne bike lane: slides},pdfsubject={version \docversion}}
+\begin{document}
+
+\begin{frame}
+\vspace{1.5em}{\LARGE\bfseries St Monica's parish finances\\and the Terrebonne bike lane}\par\bigskip
+{\large What the public record shows, 2008--2024}\par\bigskip
+{\small A resident of Côte-des-Neiges--Notre-Dame-de-Grâce, from public records.\\Data note, tables, charts and scripts: github.com/OpenMobilityData/Terrebonne-open-sources, folder \texttt{2024-st-monica-cra-t3010}.\\Version \docversion.}
+\end{frame}
+
+\begin{frame}{The question and the record}
+\begin{itemize}
+\item \B{Hypothesis heard in the debate}: the protected lane built on rue de Terrebonne in May--June 2024 hurt the parish's finances (a first deficit, fewer weddings and funerals, parking).
+\item \B{Record}: the public financial section of the parish's \B{17} T3010 returns, 2008--2024 (CRA data request, then the CRA's open-data files); the parish's own statements from its bulletins (2017--March 2023); all \B{519} bulletins of its website (2014--Oct 2026); the returns of the \B{12} other Catholic parishes of the same postal areas; the parish's Facebook page.
+\item \B{Limits}: fiscal years are calendar years; the 2024 return holds seven months with the lane; the 2025 return (first full year) is not yet published; the returns give totals, not counts of weddings or funerals, and attribute nothing to any cause.
+\item \B{Method}: everything is built by scripts from the raw files; no figure is typed by hand; every quotation is from a dated public document.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Headline numbers, fiscal 2024}
+\begin{itemize}
+\item Total revenue \B{\$250,718}: \B{$-$6~\%} on 2023, \B{$-$4~\%} on 2022, above 2020--2021; inside the 2019--2023 range.
+\item Receipted gifts \B{\$201,562} ($-$2~\%); gifts without receipt \B{\$18,311}; rental income \B{\$15,339} (level); « other revenue » \B{\$15,506}: faith-education fees and vigil lights, not funerals or weddings.
+\item Expenditures \B{\$269,373}; revenue less expenditures \B{$-$\$18,655}: the third deficit in a row (2022 \B{$-$\$31,771}, 2023 \B{$-$\$8,240}) and the seventh of 17 years. Compensation rose by \B{\$15,783}, more than the deficit's increase (\$10,415).
+\item Cash \B{\$197,111} and liabilities \B{\$180,109}, both at a series high; the return does not say why.
+\end{itemize}
+\end{frame}
+
+\chart{Revenue and expenditures, 2008--2024}{revenue_and_expenditures}
+\chart{Revenue by line}{revenue_by_line}
+\chart{Expenditures by line}{expenditures_by_line}
+\chart{Assets by line, liabilities as markers}{assets_by_line}
+
+\begin{frame}{Weddings and funerals: what the return can and cannot show}
+\begin{itemize}
+\item No line of the return is for weddings or funerals.
+\item The line the parish labelled « masses, funeral, weddings » in 2011 carried \B{\$32,913 to \$63,217} a year in 2008--2014; it has been nearly empty since 2015, the year a line of unreceipted gifts (\B{\$24,600}) first appeared.
+\item The parish's own statements put hall rentals, bequests, funerals and weddings in one « other income » line: \B{\$83,157} in 2019, \B{\$66,260} in 2020, while the return's line 4650 was empty.
+\item A sum paid at a wedding or funeral can sit on four different lines (receipted gift, unreceipted gift, rental, other revenue) by the parish's own practice; the CRA does not require receipts, and anonymous cash cannot be receipted.
+\item No public source counts the parish's weddings or funerals.
+\end{itemize}
+\end{frame}
+
+\chart{The line that named masses, funerals and weddings}{other_revenue_4650}
+
+\begin{frame}{The twelve neighbouring parishes}
+\begin{itemize}
+\item The other Catholic parishes (fabriques) of Côte-des-Neiges, Snowdon, Westmount, NDG and Côte-Saint-Luc, from the CRA's 2024 identification file; their returns 2015--2024 from the same open-data files.
+\item Gifts compared as both gift lines added, because the receipted share runs from \B{39~\% to 100~\%} across parishes (92~\% at Sainte-Monique). Each parish indexed to its own 2017--2019 mean.
+\item 2023 to 2024: Sainte-Monique's gifts \B{$-$6.1~\%} vs the peers' median \B{$+$0.8~\%} (rank \B{10 of 13}); total revenue \B{$-$6.0~\%} vs \B{$+$5.0~\%} (rank 9). Seven peers rose, five fell, three by more.
+\item Above the peers' median in 2022, below from 2023: the gap opened \B{before the lane}.
+\item Caveats: twelve parishes, some with large movements of their own; the returns say nothing of what happened at any of them.
+\end{itemize}
+\end{frame}
+
+\chart{Gifts, indexed to each parish's 2017--2019 mean}{peers_gifts_index}
+\chart{Total revenue, indexed}{peers_revenue_index}
+\chart{Change from 2023 to 2024, by parish}{peers_change_2024}
+
+\begin{frame}{What this record could detect}
+\begin{itemize}
+\item Noise: the standard deviation of the eight pre-lane year-to-year changes (2015--2023), with and without the three pandemic transitions. Threshold: two standard deviations. A gauge with eight observations, not a test.
+\item Parish alone, gifts: threshold \B{15 to 26~\%} of a year's gifts. Against the peers' median: \B{14 to 16 points}.
+\item The lane covered seven of twelve months of 2024: a lane effect would have had to remove \B{25 to 45~\%} of the parish's full-year gifts (21 to 50~\% of total revenue) to stand apart in the 2024 return.
+\item Observed in 2024: \B{$-$6~\%} on gifts, \B{$-$7 points} against the peers.
+\item The 2025 return (a full year) lowers the detectable effect to \B{14 to 26~\%}; two full years to \B{10 to 18~\%}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The parish's own statements}
+\begin{itemize}
+\item Published in the weekly bulletins: monthly statements 2017--2019 and January 2020, the 2020 vs 2019 balance sheet and income statement (approved October 2021), the twelve months of 2022, January--March 2023. \B{None since March 2023}.
+\item Cross-check: year-end statements and returns agree \B{to the dollar} for 2019, 2020 and 2022; the 2020 balance sheet matches every asset and liability line of the return.
+\item The statements add what the return lacks: the parish's own revenue categories, the wage subsidy and the \$30,000 emergency loan of 2020, the month-by-month pattern (a 2022 deficit of \B{\$80,813} at end November, closed to \$31,770 by December's collections).
+\item The series ends fourteen months before the lane; no monthly figure exists for 2024 or 2025.
+\end{itemize}
+\end{frame}
+
+\chart{Monthly collections, as published in the bulletins}{parish_monthly_collections}
+\chart{Year-to-date revenue and expenses, by year}{parish_ytd}
+
+\begin{frame}{The bulletins and the Facebook page since the lane}
+\begin{itemize}
+\item In the \B{117} bulletins dated July 1, 2024 to October 18, 2026: \B{0} references to the bike lane, \B{0} to financial difficulties linked to it, \B{0} to parking difficulties. Across all 519 issues since 2014, « bike » occurs once (a 2019 green-church note).
+\item The same bulletins are not confined to spiritual matters: a municipal-election appeal (October 2025), petitions and legislation campaigns, the MacKay Center weekend-parking passes (announced \B{October 15, 2023}, seven months before the lane), a 75th-anniversary repairs campaign (\B{\$163,858} raised in 2024--25; columns restored, windows replaced by 2026).
+\item A « Save St.~Monica's » rally was announced for \B{November 24, 2024} without any reason given; no bulletin reports its result.
+\item The Facebook page campaigned against the \B{2020} temporary lane (petition, council questions); since the 2024 lane it has shared one article (August 14, 2024). It has never stated a financial effect.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item No figure in the 2024 return stands apart from the parish's own 2019--2023 variation or from its neighbours' changes.
+\item The deficits of 2022 and 2023 precede the lane; the gap to the neighbouring parishes opened in 2023.
+\item The revenue lines nearest the claims (gifts, loose gifts, rentals, the former funerals-and-weddings line) are within or above their recent range in 2024.
+\item A measurable impact is \B{neither established nor excluded}: it would have had to be of the order of a quarter of a year's gifts to show in a seven-month return.
+\item What would test it: the \B{2025} return read against the peers; monthly figures, which the parish stopped publishing in 2023; counts of weddings and funerals, which no public source holds.
+\end{itemize}
+\end{frame}
+
+\end{document}
