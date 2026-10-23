@@ -669,5 +669,6 @@ d_apc_letter,x_window4,bears_on,Asks which window applies and whether it recurs 
 d_apc_letter,x_info_coming,bears_on,Asks for a public information session with the services present.,
 d_apc_letter,e_dec7,precedes,,
 t_mtq,x_pass,bears_on,"The designated roadway is a shared lane by definition; the Code's art. 341 (pass only if safe, otherwise stay behind) applies on it as on any street.",
-d_exp2023,t_mtq,refers_to,"Aménagement A labels its 3.5 m shared lane a « chaussée désignée » (Figure 6-6, p. 72).",
+d_exp2023,t_mtq,refers_to,"Before 2024 Terrebonne « comporte présentement une voie cyclable partagée dans chaque direction, soit une chaussée désignée marquée au sol » (p. 3; Figure 2-8, p. 13); Aménagement A gives the status back to its 3.5 m shared lane (Figure 6-6, p. 72) and the estimate counts 58 chevron symbols to paint and 72 to erase (p. 349).",https://openmobilitydata.github.io/Terrebonne-open-sources/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf#page=3
 t_csr,t_mtq,refers_to,The Code names no « chaussée désignée »; art. 341 applies on any lane.,
+d_ca24,t_mtq,refers_to,The 2024 decisional file (1246880002): the existing facility « se limite à une chaussée désignée et la circulation véhiculaire est permise dans les 2 directions ».,

@@ -897,6 +897,7 @@ d_apc_letter -> x_window4 [label="bears on", color="#eda100", fontcolor="#eda100
 d_apc_letter -> x_info_coming [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Asks for a public information session with the services present."];
 d_apc_letter -> e_dec7 [label="precedes", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
 t_mtq -> x_pass [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The designated roadway is a shared lane by definition; the Code's art. 341 (pass only if safe, otherwise stay behind) applies on it as on any street."];
-d_exp2023 -> t_mtq [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="Aménagement A labels its 3.5 m shared lane a « chaussée désignée » (Figure 6-6, p. 72)."];
+d_exp2023 -> t_mtq [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="Before 2024 Terrebonne « comporte présentement une voie cyclable partagée dans chaque direction, soit une chaussée désignée marquée au sol » (p. 3; Figure 2-8, p. 13); Aménagement A gives the status back to its 3.5 m shared lane (Figure 6-6, p. 72) and the estimate counts 58 chevron symbols to paint and 72 to erase (p. 349)."];
 t_csr -> t_mtq [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="The Code names no « chaussée désignée »; art. 341 applies on any lane."];
+d_ca24 -> t_mtq [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="The 2024 decisional file (1246880002): the existing facility « se limite à une chaussée désignée et la circulation véhiculaire est permise dans les 2 directions »."];
 }
