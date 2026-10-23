@@ -214,7 +214,7 @@ T = {
             r4500='Tax-receipted gifts (4500)', r4530='Other gifts, no receipt (4530)', r4650='Other revenue (4650)', r4610='Rental income (4610)', rgov='Governments (4540–4560)', rother='Other lines',
             e4880='Compensation (4880)', e4850='Occupancy (4850)', e4840='Office (4840)', e4860='Professional fees (4860)', e4920='Other expenditures (4920)', eother='Other lines',
             a4100='Cash and short-term (4100)', a4140='Long-term investments (4140)', aland='Land and buildings (4155)', aother='Other assets', liab='Total liabilities (4350)',
-            o4650='Other revenue (line 4650), the line that named masses, funerals and weddings', o4650sub='Line 4650 of Schedule 6; the parish\'s own description (line 4655) where filed. The 2023 and 2024 amounts are described as recovered expenses, faith-education fees and votive candles, not funerals or weddings',
+            o4650='Other revenue (line 4650), the line that named masses, funerals and weddings', o4650sub='Line 4650, $ thousand, with the parish\'s description (line 4655) where filed; 2023 and 2024: not funerals or weddings',
             onone='none'),
  'fr': dict(rev='Revenus et dépenses', revsub='Total des revenus (ligne 4700) et total des dépenses (ligne 5100), par exercice',
             revcat='Revenus par ligne', revcatsub='Lignes de la section D / annexe 6 du formulaire T3010; « autres » = le total moins les lignes montrées',
@@ -225,7 +225,7 @@ T = {
             r4500='Dons avec reçu (4500)', r4530='Autres dons, sans reçu (4530)', r4650='Autres revenus (4650)', r4610='Revenus de location (4610)', rgov='Gouvernements (4540–4560)', rother='Autres lignes',
             e4880='Rémunération (4880)', e4850='Occupation (4850)', e4840='Bureau (4840)', e4860='Honoraires (4860)', e4920='Autres dépenses (4920)', eother='Autres lignes',
             a4100='Encaisse et court terme (4100)', a4140='Placements à long terme (4140)', aland='Terrains et immeubles (4155)', aother='Autres actifs', liab='Total du passif (4350)',
-            o4650='Autres revenus (ligne 4650), la ligne qui nommait messes, funérailles et mariages', o4650sub='Ligne 4650 de l\'annexe 6; la description de la paroisse (ligne 4655) lorsqu\'elle existe. Les montants de 2023 et 2024 sont décrits comme dépenses récupérées, frais de catéchèse et lampions, non comme funérailles ou mariages',
+            o4650='Autres revenus (ligne 4650), la ligne qui nommait messes, funérailles et mariages', o4650sub='Ligne 4650, k$, avec la description de la paroisse (ligne 4655) lorsqu\'elle existe; 2023 et 2024 : ni funérailles ni mariages',
             onone='aucune'),
 }
 
