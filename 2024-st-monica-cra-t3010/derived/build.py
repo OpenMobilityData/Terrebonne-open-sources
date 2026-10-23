@@ -14,7 +14,7 @@ Inputs (all under ../raw/):
 Outputs (in ../derived/):
   t3010_lines.csv       long table: fiscal_year, line, value, form_id, source, as_of
   t3010_summary.csv     wide table of the checked lines by year
-  figures/*.svg|png|pdf the charts, EN and FR
+  figures/*.svg|png|pdf the charts, EN and FR (incl. the peer comparison, by peer_comparison.py)
   summary_table_{en,fr}.tex  the table of the notes
   st_monica_t3010_note_{en,fr}.pdf  the notes, version-stamped and compiled
   build_report.txt      what was read, what was skipped, consistency checks
@@ -362,6 +362,10 @@ if years:
     if plt:
         pass
     import subprocess, shutil
+    # Peer comparison (peer_parishes.csv + raw/open-canada-peers/): tables and three more charts.
+    if os.path.exists(os.path.join(RAW, 'open-canada-peers', 'SOURCES.tsv')):
+        r = subprocess.run([sys.executable, os.path.join(HERE, 'peer_comparison.py')], capture_output=True, text=True, errors='replace')
+        log('Peer comparison: ' + ('done (peer_comparison_*.csv, figures/peers_*)' if r.returncode == 0 else 'FAILED ' + r.stderr[-800:]))
     stamp = datetime.datetime.now(zoneinfo.ZoneInfo('America/Toronto')).strftime('%Y-%m-%d-%H-%M-%S')
     for tex in [os.path.join(HERE, f'st_monica_t3010_note_{lang}.tex') for lang in ('en', 'fr')]:
         if not (os.path.exists(tex) and shutil.which('pdflatex')):
