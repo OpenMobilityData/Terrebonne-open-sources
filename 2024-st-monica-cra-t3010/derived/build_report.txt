@@ -10,11 +10,22 @@ E-mailed CRA files (reply of Dec 6, 2024):
   2016: Financial Section.csv: 25 fields
   2017: Financial Section.csv: 22 fields
   2018: Financial Section.csv: 22 fields
-Open Canada extracts: none yet (raw/open-canada/SOURCES.tsv absent)
-Manual entries: 120
-Fiscal years covered: 2008–2023 (16 years)
+Open Canada extracts:
+  2019: 2019/financial_d_and_schedule_6_2019_updated.csv: 27 fields
+  2019: 2019/financial_section_a_b_and_c_2019_updated.csv: 17 fields
+  2020: 2020/financial_d_and_schedule_6_2020_updated.csv: 27 fields
+  2020: 2020/financial_section_a_b_and_c_2020_updated.csv: 20 fields
+  2021: 2021/financial_d_and_schedule_6_2021_updated.csv: 26 fields
+  2021: 2021/financial_section_a_b_and_c_2021_updated.csv: 19 fields
+  2022: 2022/financial_d_and_schedule_6_2022_updated.csv: 26 fields
+  2022: 2022/financial_section_a_b_and_c_2022_updated.csv: 19 fields
+  2023: 2023/financial_d_and_schedule_6_2023_updated.csv: 32 fields
+  2023: 2023/financial_section_a_b_and_c_2023_updated.csv: 20 fields
+  2024: 2024/financial_d_and_schedule_6_2024_updated.csv: 29 fields
+  2024: 2024/financial_section_a_b_and_c_2024_updated.csv: 20 fields
+Manual entries: 0
+Fiscal years covered: 2008–2024 (17 years)
   check: 2018 asset lines sum to 750031, line 4200 is 750051
-  check: 2019 asset lines sum to 732120, line 4200 is 741843
-  check: 2020 asset lines sum to 794250, line 4200 is 794350
-Charts written to figures/ for 16 years
-Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-06-55-02
+Charts written to figures/ for 17 years
+Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-07-20-47
+Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-07-20-47

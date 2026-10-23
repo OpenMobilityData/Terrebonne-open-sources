@@ -10,9 +10,16 @@ Usage:
   python3 fetch_open_data.py                 # every year marked to_fetch in open_canada_datasets.csv
   python3 fetch_open_data.py 2023 2024       # these years only
   python3 fetch_open_data.py --list 2024     # only list the dataset's resources (no download)
+  python3 fetch_open_data.py --search        # list every « <year> List of charities » dataset on the portal
+
+Hand-downloaded files: if the portal refuses the script, download a year's financial
+CSV in a browser (the dataset page lists it as « Financial data »), then run
+  python3 fetch_open_data.py --extract 2024 /path/to/financial_d_and_schedule_6_2024_updated.csv
+which keeps the parish's rows the same way (source_url recorded as the dataset page).
 
 For each dataset the script asks the portal's CKAN API (package_show) for the
-resource list, downloads every CSV whose name contains one of KEEP (financial,
+resource list (the /download URLs answer with a redirect to the portal's blob storage,
+signed for one hour, which urllib follows), downloads every CSV whose name contains one of KEEP (financial,
 general information, identification, programs) to a scratch folder, keeps the
 parish's rows and deletes nothing else. Files about directors, trustees or like
 officials are never downloaded (names). If the API is refused, it falls back to
@@ -25,7 +32,7 @@ OUT = os.path.join(HERE, '..', 'raw', 'open-canada')
 CFG = os.path.join(HERE, 'open_canada_datasets.csv')
 BN = '130341852RR0001'
 KEEP = ('financial', 'general', 'ident', 'program')
-SKIP = ('director', 'trustee', 'official', 'donee', 'country', 'countries')
+SKIP = ('director', 'trustee', 'official', 'donee', 'country', 'countries', 'outside canada', 'compensation', 'political')
 UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 
 def get(url, binary=False, timeout=600):
@@ -34,9 +41,31 @@ def get(url, binary=False, timeout=600):
         data = r.read()
     return data if binary else data.decode('utf-8', 'replace')
 
+API_BASES = ('https://open.canada.ca/data/en/api/3/action/', 'https://open.canada.ca/data/api/3/action/')
+
+def api(action, query):
+    """The portal's CKAN API. The /data/en/api/ path answered on Oct 23, 2026 while the
+    /data/api/ path returned 504 all day; try the first, then the second."""
+    last = None
+    for base in API_BASES:
+        try:
+            return json.loads(get(f'{base}{action}?{query}', timeout=120))
+        except Exception as e:
+            last = e
+    raise last
+
+def search_datasets():
+    """List every « <year> List of charities » dataset the portal knows (id, title, modified)."""
+    d = api('package_search', 'q=%22list+of+charities%22&rows=100')
+    out = []
+    for p in d['result']['results']:
+        t = p['title']; t = t.get('en', '') if isinstance(t, dict) else t
+        if 'list of charities' in t.lower():
+            out.append((t, p['id'], p.get('metadata_modified', '')[:10]))
+    return sorted(out)
+
 def resources(dataset_id):
-    api = f'https://open.canada.ca/data/api/3/action/package_show?id={dataset_id}'
-    d = json.loads(get(api))
+    d = api('package_show', f'id={dataset_id}')
     p = d['result']
     out = []
     for r in p['resources']:
@@ -62,6 +91,22 @@ def extract(data, year, fname, url, modified, log):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     list_only = '--list' in sys.argv
+    if '--extract' in sys.argv:
+        i = sys.argv.index('--extract'); y = int(sys.argv[i + 1]); path = sys.argv[i + 2]
+        cfg = list(csv.DictReader(open(CFG, encoding='utf-8')))
+        row = next((r for r in cfg if int(r['year']) == y), {})
+        os.makedirs(OUT, exist_ok=True)
+        srcp = os.path.join(OUT, 'SOURCES.tsv')
+        log = list(csv.DictReader(open(srcp, encoding='utf-8'), delimiter='\t')) if os.path.exists(srcp) else []
+        fname = os.path.basename(path)
+        log = [l for l in log if not (l['year'] == str(y) and l['local_file'] == f'{y}/{fname}')]
+        extract(open(path, 'rb').read(), y, fname, row.get('dataset_url', '') + ' (downloaded by hand)', '', log)
+        write_sources(srcp, log)
+        return
+    if '--search' in sys.argv:
+        for t, i, m in search_datasets():
+            print(f'{t} | {i} | modified {m}')
+        return
     cfg = list(csv.DictReader(open(CFG, encoding='utf-8')))
     years = [int(a) for a in args] or [int(r['year']) for r in cfg if r['status'] == 'to_fetch']
     os.makedirs(OUT, exist_ok=True)
@@ -100,6 +145,9 @@ def main():
                 print(f'  FAILED: {e}'); continue
             log = [l for l in log if not (l['year'] == str(y) and l['local_file'] == f'{y}/{fname}')]
             extract(data, y, fname, url, modified, log)
+    write_sources(srcp, log)
+
+def write_sources(srcp, log):
     with open(srcp, 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=['year', 'local_file', 'source_url', 'full_file_bytes', 'full_file_sha256', 'rows_kept', 'dataset_modified', 'downloaded_utc'], delimiter='\t')
         w.writeheader(); w.writerows(sorted(log, key=lambda l: (str(l['year']), l['local_file'])))

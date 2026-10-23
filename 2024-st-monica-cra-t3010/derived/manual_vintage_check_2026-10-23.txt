@@ -1,0 +1,31 @@
+Check of the interim transcription (fiscal years 2019–2023) against the CRA open-data files, October 23, 2026
+
+Transcription: owner's Numbers table (Summary Plots 2), typed from the CRA Charities Listings quick view (November–December 2024); 120 values, kept in manual_entries.csv until this check.
+Files: raw/open-canada/<year>/financial_d_and_schedule_6_<year>_updated.csv (extracts of the « <year> List of charities » datasets, modified 2026-10-04, fetched 2026-10-23; see SOURCES.tsv).
+After this check the transcription was removed from manual_entries.csv; every 2019–2024 figure in the folder comes from the files.
+
+Identical values: 113 of 120.
+
+Different values (year, line: transcription -> file):
+  2019 4850: 57,267 -> 57,262
+  2020 4100: 159,474 -> 159,574
+  2020 4580: 710 -> 701
+  2021 4200: 814,638 -> 246,995
+  2023 4300: 2,131 -> 2,123
+  2023 4350: 2,131 -> 2,123
+  2021 4200: the file carries no land-and-buildings line (4155) in 2021 and its asset lines sum to its 4200 (246,995); the transcription carried 4155 = 567,643 and 4200 = 814,638 = 246,995 + 567,643.
+
+In the transcription only:
+  2021 4155: 567,643
+
+In the files only (lines the transcription did not carry):
+  2019 4170: 9,723
+  2019 4950: 277,716
+  2020 4950: 198,279
+  2021 4950: 201,549
+  2022 4950: 291,727
+  2023 4101: 31,528
+  2023 4576: 4,415
+  2023 4950: 274,890
+
+Effect on the earlier build checks: the 2019 gap (asset lines 732,120 vs 4200 741,843) was the missing line 4170 = 9,723; the 2020 gap (794,250 vs 794,350) was the 4100 typo (159,474 for 159,574). Both disappear with the files.

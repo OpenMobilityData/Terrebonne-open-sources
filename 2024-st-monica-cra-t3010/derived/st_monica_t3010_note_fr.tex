@@ -1,0 +1,152 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.9in,bottom=0.95in,left=1in,right=1in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-23-07-20-47} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion},pdftitle={Les déclarations de bienfaisance (T3010) de la paroisse St Monica, 2008 à 2024 : données, méthode et chiffres}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.03}
+\sloppy
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{gray}Paroisse St Monica, déclarations T3010 -- note de données -- page \thepage}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+\renewcommand{\tablename}{Tableau}
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\folder}{2024-st-monica-cra-t3010}
+\newcommand{\D}[1]{#1\,\$}
+
+\begin{document}
+
+{\LARGE\bfseries Les déclarations de bienfaisance (T3010) de la paroisse St Monica, 2008 à 2024}\par\medskip
+{\large Données, méthode et chiffres}\par\medskip
+{\small Un résident de Côte-des-Neiges--Notre-Dame-de-Grâce, à partir de documents publics. Version \docversion. Dépôt~: \href{\repourl}{\repourl}, dossier \texttt{\folder}. Version française de la note \texttt{st\_monica\_t3010\_note\_en.pdf}~; en cas d'écart, le texte anglais et les tables font foi.}
+
+\section{Objet et portée}
+
+La paroisse St Monica (La fabrique de la paroisse de Sainte-Monique, 6405, rue de Terrebonne) est un organisme de bienfaisance enregistré. Comme tout organisme enregistré au Canada, elle produit chaque année une déclaration de renseignements, le formulaire T3010, auprès de l'Agence du revenu du Canada (ARC), et la section financière de cette déclaration est publique. Le bâtiment de la paroisse se trouve sur la rue de Terrebonne, sur le tronçon où une piste cyclable protégée a été aménagée en 2024, et la situation de la paroisse a été évoquée dans le débat public sur cette piste. La présente note documente les déclarations de la paroisse telles que l'ARC les a communiquées, explique comment les tables et les graphiques du dossier en sont tirés, et lit les graphiques dans les termes de la déclaration elle-même. Elle n'attribue aucun chiffre à aucune cause~: les déclarations ne portent pas cette information.
+
+Les données couvrent les exercices clos le 31~décembre, de 2008 à 2024~: dix-sept déclarations. Les années 2008 à 2018 proviennent d'une demande de données à laquelle l'ARC a répondu le 6~décembre 2024~; les années 2019 à 2024 sont des extraits de lignes des fichiers de données ouvertes annuels de l'ARC, téléchargés le 23~octobre 2026 (section~\ref{sec:prov}). Une transcription des années 2019 à 2023, faite à la fin de 2024 à partir de l'«\,aperçu\,» de la Liste des organismes de bienfaisance de l'ARC, a servi de source provisoire jusque-là~; elle a été vérifiée contre les fichiers puis retirée (section~\ref{sec:interim}). La déclaration de 2024 est la première dont l'exercice comprend les mois qui suivent l'aménagement de la piste (mai--juin 2024)~; la déclaration de 2025 n'était pas encore publiée le 23~octobre 2026.
+
+\section{La déclaration T3010}
+
+Le formulaire T3010 comporte une section financière (section~D pour les organismes qui déclarent sur le formulaire abrégé, annexe~6 pour les autres) dont les entrées sont numérotées. Les numéros employés ici sont les numéros de ligne de l'ARC~; les libellés sont dans \texttt{derived/line\_labels.csv} avec une colonne de statut~: \emph{checked} lorsque le sens de la ligne est confirmé par les données en main (un total qui s'additionne, une ligne de texte qui nomme son contenu, un chiffre qui concorde avec le bilan publié par la paroisse), \emph{dictionary} lorsque le libellé est celui du dictionnaire de données de l'ARC (\emph{List of charities data dictionary}, version 2.0, conservé avec le jeu de données 2024 dans \texttt{raw/open-canada/references/}), \emph{quick\_view} lorsqu'il reprend le texte de la page de la Liste des organismes tel que transcrit en 2024, \emph{form} lorsque le libellé est pris du formulaire sans confirmation indépendante. L'ARC publie le formulaire et son guide (T4033) sur canada.ca. La version 27 du formulaire, employée pour les exercices 2023 et 2024, ajoute des sous-lignes qui reprennent une partie d'une ligne existante (4101, argent comptant et comptes bancaires inclus à la 4100~; 4157, terrains et immeubles utilisés pour les activités de l'organisme, inclus à la 4155~; 4576, revenus d'investissements d'impact inclus à la 4580)~; elles sont conservées dans la table longue et ne sont ajoutées à aucun total.
+
+Les lignes employées dans les figures sont~:
+\begin{itemize}[nosep,leftmargin=1.4em]
+\item \textbf{4700} total des revenus~; \textbf{4500} montant admissible total des dons pour lesquels l'organisme a délivré des reçus~; \textbf{4530} autres dons (sans reçu)~; \textbf{4650} autres revenus non compris ailleurs, que la ligne 4655 décrit en 2011 comme «\,Masses, funeral, weddings etc\,»~; \textbf{4610} revenu brut de location de terrains ou d'immeubles~; \textbf{4580} intérêts et revenus de placements~; \textbf{4540}, \textbf{4550}, \textbf{4560} revenus des gouvernements fédéral, provincial et municipal~;
+\item \textbf{5100} total des dépenses~; \textbf{4880} total de la rémunération~; \textbf{4850} frais d'occupation~; \textbf{4840} fournitures et frais de bureau~; \textbf{4860} honoraires professionnels et de consultation~; \textbf{4920} toutes les autres dépenses, que la ligne 4930 décrit en 2011 comme «\,Contributions to diocese GST \& QST\,» et en 2012 comme «\,GST \& QST\,»~;
+\item \textbf{4200} total de l'actif~; \textbf{4100} argent comptant, comptes bancaires et placements à court terme~; \textbf{4140} placements à long terme~; \textbf{4155} terrains et immeubles au Canada (sur le formulaire 2008, le même chiffre figure à la ligne 4160)~; \textbf{4350} total du passif, avec \textbf{4300} comptes créditeurs et \textbf{4310} revenus reportés~; \textbf{4950} total des dépenses à l'exception des dons aux donataires reconnus et \textbf{5050} ces dons, dont la somme est la ligne 5100.
+\end{itemize}
+
+\section{Provenance}\label{sec:prov}
+
+\subsection{Années 2008 à 2018~: la réponse de l'ARC du 6 décembre 2024}
+
+Le 10~novembre 2024, l'auteur a demandé à la Direction des organismes de bienfaisance de l'ARC, par le formulaire web «\,Request publicly available data from the List of charities\,», les données des déclarations de la paroisse (numéro d'entreprise 130341852RR0001) pour les années d'imposition 2008 à 2018 inclusivement~: renseignements généraux, programmes, renseignements financiers (section~D et annexe~6), annexe~5 et liste des administrateurs. La Direction a répondu par courriel le 6~décembre 2024 avec quatre fichiers zip de valeurs séparées par des virgules et cette indication des dates des données (en anglais dans la réponse)~:
+
+\begin{quote}\small
+«\,You will also find the publicly available Basic contact information, General information, New and ongoing programs, Financial information, Non-cash gifts / gifts in kind (Schedule 5) and Directors, trustees, and like officials listings (Form T1235) data from the registered charity information return (T3010) for 2008 tax years as of September 7, 2017, the 2009 tax year as of June 30, 2018, the 2010 to 2012 tax years as of April 30, 2019, for the 2013 to 2016 tax years as of April 30, 2024 and for 2017 to 2018 tax year, as of October 31, 2024.\,»
+\end{quote}
+
+et cet avertissement~:
+
+\begin{quote}\small
+«\,The information in this package contains data that the charitable organization sent to the Canada Revenue Agency (CRA). Please note that this data may have been manually entered by the CRA, and it has not necessarily been verified for accuracy or completeness by the CRA's Charities Directorate.\,»
+\end{quote}
+
+Les fichiers sont conservés tels quels dans \path{raw/cra-charities-listings-2024-12-06/<année>/}, avec les listes de codes de l'ARC dans \texttt{references/} et la fiche de l'organisme au 31~octobre 2024. Deux types de fichiers de la réponse ne sont pas reproduits~: les listes d'administrateurs (noms de personnes) et les fichiers de coordonnées de base (celui de 2008 nomme la personne-ressource de la paroisse). Les dates «\,as of\,» ci-dessus sont reportées dans chaque table dérivée, colonne \texttt{as\_of}.
+
+\subsection{Années 2019 à 2024~: les fichiers de données ouvertes de l'ARC}\label{sec:open}
+
+L'ARC publie les données T3010 de tous les organismes enregistrés sur le portail de données ouvertes du gouvernement du Canada, un jeu de données par exercice («\,\textless année\textgreater\ List of charities\,», Licence du gouvernement ouvert -- Canada), sous forme de fichiers CSV~: identification, renseignements généraux (sections A à C), programmes, section financière (section~D et annexe~6), annexes, listes d'administrateurs. Chaque fichier contient tous les organismes (le fichier financier 2024 fait 21~Mo). Le 23~octobre 2026, le portail affichait un jeu de données par année de 1990 à 2024 et aucun pour 2025~; les six jeux 2019--2024 avaient été modifiés pour la dernière fois le 4~octobre 2026. Leurs identifiants sont dans \texttt{derived/open\_canada\_datasets.csv}.
+
+Le script \texttt{derived/fetch\_open\_data.py} demande à l'API du portail la liste des fichiers d'un jeu de données, télécharge les fichiers financier, de renseignements généraux, d'identification et de programmes, garde l'en-tête et la ligne de la paroisse de chacun, et les range dans \path{raw/open-canada/<année>/} avec l'adresse, la taille, le condensé SHA-256, la date de modification et l'heure de téléchargement du fichier complet dans \texttt{SOURCES.tsv}~; les fichiers sur les administrateurs, fiduciaires et autres responsables ne sont jamais téléchargés. Ce sont des extraits d'un fichier plus vaste et ils sont étiquetés comme tels. Chaque extrait financier porte une ligne pour la paroisse, avec la fin de l'exercice, la version du formulaire (24 pour 2019--2020, 25 pour 2021--2022, 27 pour 2023--2024) et la section employée (annexe~6 chaque année). Le dictionnaire de données et la liste de codes de l'ARC, téléchargés du jeu de données 2024, sont dans \texttt{raw/open-canada/references/}. La date «\,as of\,» reportée dans les tables pour ces années est la date de modification du jeu de données.
+
+\subsection{La transcription provisoire et sa vérification}\label{sec:interim}
+
+Jusqu'au téléchargement des fichiers, les valeurs 2019--2023 du dossier étaient la transcription, par l'auteur, de l'«\,aperçu\,» de la Liste des organismes de bienfaisance de l'ARC (novembre--décembre 2024), conservée dans \texttt{derived/manual\_entries.csv} et marquée comme manuelle. Le 23~octobre 2026, la construction a comparé les 120 valeurs transcrites aux fichiers~: 113 étaient identiques~; six différaient (occupation 2019, 57\,267 pour 57\,262~; encaisse 2020, 159\,474 pour 159\,574, et intérêts 2020, 710 pour 701~; comptes créditeurs et total du passif 2023, 2\,131 pour 2\,123~; total de l'actif 2021, 814\,638 pour 246\,995, la transcription ayant porté une ligne de terrains et immeubles que le fichier 2021 n'a pas)~; une ligne n'était que dans la transcription (terrains et immeubles 2021) et huit n'étaient que dans les fichiers (autres actifs 2019, 9\,723~; la ligne 4950 de chaque année~; les sous-lignes 4101 et 4576 de 2023). Le relevé est \texttt{derived/manual\_vintage\_check\_2026-10-23.txt}~; la transcription a ensuite été retirée et chaque chiffre du dossier provient d'un fichier de l'ARC. Le mécanisme demeure~: une valeur saisie depuis l'aperçu va dans \texttt{manual\_entries.csv} avec sa date, la construction préfère le fichier lorsque les deux existent et signale chaque écart.
+
+\section{Méthode}\label{sec:method}
+
+\texttt{derived/build.py} fait tout à partir des fichiers bruts~:
+\begin{enumerate}[nosep,leftmargin=1.6em]
+\item lit chaque champ numéroté des fichiers financiers (la réponse de 2008 est un seul fichier «\,T3010 Return\,»~; à partir de 2009 la section financière a son propre fichier) dans une table longue, \texttt{t3010\_lines.csv}~: exercice, ligne, valeur, texte (pour les lignes qui portent une description), version du formulaire, source, date «\,as of\,», fichier~;
+\item retient une valeur par exercice et par ligne, en préférant le fichier de l'ARC reçu par courriel, puis l'extrait de données ouvertes, puis une saisie manuelle s'il y en a, et signale tout désaccord entre les sources~;
+\item écrit \texttt{t3010\_summary.csv}, une ligne par exercice avec les lignes de la section~2, le chiffre des terrains et immeubles et la différence entre le total des revenus et le total des dépenses~;
+\item vérifie que la ligne 4950 plus la ligne 5050 égale la ligne 5100 et que les lignes d'actif s'additionnent à la ligne 4200, et consigne ce qu'elle trouve dans \texttt{build\_report.txt}~;
+\item trace les quatre graphiques en anglais et en français (SVG, PNG et PDF), écrit le tableau de la section~\ref{sec:figures} dans les deux langues, puis estampille la version des deux notes et les compile.
+\end{enumerate}
+
+Graphiques~: barres fines, ordre fixe de couleurs vérifié pour les déficiences de la vision des couleurs avec le validateur de la méthode de conception employée dans ces dépôts, légende sur chaque graphique à plus d'une série, un axe par graphique (milliers de dollars), ligne de source et date de construction sous chacun. Dans les graphiques empilés, «\,autres lignes\,» est la ligne de total moins les lignes montrées, de sorte que la hauteur de chaque barre est le total de la déclaration. Les vérifications trouvent un écart arithmétique dans les dix-sept déclarations~: en 2018, les quatre lignes d'actif présentes s'additionnent à \D{750\,031} alors que la ligne 4200 porte \D{750\,051}. Les deux écarts signalés pendant l'usage de la transcription (2019 et 2020) étaient des écarts de transcription et ont disparu (section~\ref{sec:interim}).
+
+\section{Les chiffres}\label{sec:figures}
+
+Le tableau~\ref{tab:summary} donne les lignes derrière les graphiques, en dollars tels que déclarés. Tous les montants sont ceux des déclarations~; aucun n'est ajusté pour les prix. Les paragraphes qui suivent décrivent les dix-sept années, 2008 à 2024, dans les termes de la déclaration.
+
+\begin{table}[h]\centering\small
+\caption{Lignes principales des déclarations T3010 de la paroisse, 2008--2024 (dollars tels que déclarés~; source et date «\,as of\,» par année dans \texttt{t3010\_summary.csv}).}\label{tab:summary}
+\resizebox{\textwidth}{!}{\input{summary_table_fr.tex}}
+\end{table}
+
+\subsection{Revenus et dépenses}
+
+\begin{center}\includegraphics[width=\textwidth]{figures/revenue_and_expenditures_fr.pdf}\end{center}
+
+Le total des revenus (ligne 4700) se situe entre \D{280\,506} (2009) et \D{305\,803} (2010) dans huit des onze années 2008--2018. Les exceptions sont 2011 (\D{711\,793}), 2012 (\D{383\,418}) et 2014 (\D{412\,231}). Le total des dépenses (ligne 5100) se situe entre \D{250\,879} (2017) et \D{305\,884} (2008) dans sept années~; les exceptions sont 2011 (\D{349\,750}), 2012 (\D{871\,127}), 2014 (\D{326\,842}) et 2015 (\D{389\,129}). Les revenus ont dépassé les dépenses en 2009, 2010, 2011, 2013, 2014, 2016, 2017 et 2018~; les dépenses ont dépassé les revenus en 2008 (de \D{13\,966}), 2012 (de \D{487\,709}) et 2015 (de \D{94\,529}).
+
+De 2019 à 2024, le total des revenus est de \D{276\,981} (2019), \D{211\,438} (2020), \D{202\,900} (2021), \D{259\,956} (2022), \D{266\,650} (2023) et \D{250\,718} (2024)~; 2020 et 2021 sont les deux valeurs les plus basses des dix-sept années. Le total des dépenses est de \D{277\,716}, \D{198\,279}, \D{201\,549}, \D{291\,727}, \D{274\,890} et \D{269\,373}. Les dépenses ont dépassé les revenus en 2019 (de \D{735}), 2022 (de \D{31\,771}), 2023 (de \D{8\,240}) et 2024 (de \D{18\,655})~; les revenus ont dépassé les dépenses en 2020 (de \D{13\,159}) et 2021 (de \D{1\,351}). Sur les dix-sept années, les revenus ont dépassé les dépenses dans dix et les dépenses ont dépassé les revenus dans sept.
+
+\subsection{Revenus par ligne}
+
+\begin{center}\includegraphics[width=\textwidth]{figures/revenue_by_line_fr.pdf}\end{center}
+
+Les dons avec reçu (ligne 4500) sont la ligne la plus importante chaque année~: de \D{225\,815} à \D{266\,956} en 2008--2010 et 2013--2018 sauf 2014 (\D{373\,427}), et \D{665\,140} en 2011. Les «\,autres revenus\,» (ligne 4650, décrits en 2011 comme messes, funérailles et mariages) vont de \D{32\,913} à \D{63\,217} de 2008 à 2014, puis \D{2\,387} en 2015 et \D{3\,365} en 2017, et sont absents en 2016 et 2018~; à partir de 2015, une ligne vide auparavant, les autres dons sans reçu (4530), porte de \D{24\,600} à \D{46\,244}. Les revenus de location (4610) vont de \D{2\,500} à \D{7\,687} dans les dix années où ils sont présents (aucun en 2017)~; les intérêts et revenus de placements (4580) sont de \D{6\,707} en 2008 et de \D{45} à \D{3\,278} ensuite~; aucun revenu des gouvernements n'est déclaré dans ces années.
+
+À partir de 2019, les dons avec reçu sont de \D{229\,425} (2019), \D{195\,512} (2020), \D{185\,599} (2021), \D{190\,139} (2022), \D{204\,950} (2023) et \D{201\,562} (2024)~; les valeurs de 2020 à 2024 sont les cinq plus basses des dix-sept années. Les autres dons sans reçu (4530) sont de \D{34\,530}, \D{6\,602}, \D{9\,277}, \D{44\,861}, \D{29\,266} et \D{18\,311}. Les revenus de location sont de \D{8\,925} en 2019, \D{1\,175} en 2020 et \D{3\,460} en 2021, puis \D{17\,490}, \D{15\,875} et \D{15\,339} en 2022--2024, au-dessus de chaque année antérieure. Les «\,autres revenus\,» (4650) sont absents de 2019 à 2022, de \D{4\,943} en 2023 (ligne 4655~: «\,recovery of expenses\,») et de \D{15\,506} en 2024 (ligne 4655, telle que déclarée~: «\,Faith First, Virgil lights\,»). Des revenus des gouvernements apparaissent pour la première fois~: \D{3\,781} en 2019 (fédéral \D{1\,636}, provincial \D{2\,145}), \D{7\,448} en 2020, \D{4\,428} en 2021, \D{6\,866} en 2022 (provincial seulement), \D{7\,201} en 2023 et aucun en 2024. Les intérêts et revenus de placements sont de \D{320}, \D{701}, \D{136}, \D{600} et \D{4\,415} de 2019 à 2023 et absents en 2024.
+
+\subsection{Dépenses par ligne}
+
+\begin{center}\includegraphics[width=\textwidth]{figures/expenditures_by_line_fr.pdf}\end{center}
+
+La rémunération (ligne 4880) est la ligne de dépenses la plus importante chaque année sauf 2012~: de \D{97\,314} (2017) à \D{147\,183} (2011). Les frais d'occupation (4850) vont de \D{50\,016} (2017) à \D{164\,999} (2015) dans dix années et atteignent \D{592\,737} en 2012, l'année du total le plus élevé. Les frais de bureau (4840) vont de \D{28\,196} à \D{92\,281}~; les honoraires professionnels (4860) de \D{5\,400} à \D{15\,428}~; la ligne «\,toutes les autres dépenses\,» (4920, décrite comme contributions au diocèse et taxes de vente) de \D{7\,245} à \D{50\,844} de 2008 à 2017. La déclaration de 2018 porte \D{261\,865} à la ligne 4920 et le même chiffre à la ligne 5100, et aucune valeur à la ligne 4950.
+
+À partir de 2019, la rémunération est de \D{126\,787} (2019), \D{72\,993} (2020) et \D{61\,370} (2021), les deux valeurs les plus basses de la série, puis \D{116\,820}, \D{127\,217} et \D{143\,000} en 2022--2024~; 2024 est la deuxième valeur la plus élevée après 2011. Les frais d'occupation sont de \D{57\,262}, \D{62\,123}, \D{58\,403}, \D{92\,477}, \D{49\,802} et \D{57\,319}~; 2023 est la valeur la plus basse des dix-sept années. Les frais de bureau passent de \D{40\,598} en 2019 à \D{11\,456} en 2024, la valeur la plus basse de la série~; les honoraires professionnels sont de \D{14\,736}, \D{12\,373}, \D{11\,995}, \D{15\,015}, \D{6\,000} et \D{6\,239}. La ligne «\,toutes les autres dépenses\,» est de \D{37\,634}, \D{19\,776}, \D{40\,604}, \D{39\,200}, \D{38\,757} et \D{22\,820}, décrite à la ligne 4930 comme éducation de la foi, taxes de vente et contribution diocésaine (2019), taxes de vente et contribution diocésaine (2020--2022), «\,worship expenses\,» (2023) et «\,Faith First, worship, Virgil lights\,» (2024, tel que déclaré). Deux lignes portent des valeurs importantes en 2023 et 2024 pour la première fois~: permis, adhésions et cotisations (4830), \D{25\,080} et \D{22\,219} après \D{35} à \D{37} de 2019 à 2022, et fournitures et biens achetés (4891), \D{3\,983} en 2023. La déclaration de 2024 est la première avec des dons aux donataires reconnus (5050), \D{5\,822}, de sorte que le total des dépenses (\D{269\,373}) dépasse la ligne 4950 (\D{263\,551}) de ce montant~; dans toutes les autres années où les deux lignes sont présentes, elles sont égales à deux dollars près.
+
+\subsection{Actif par ligne}
+
+\begin{center}\includegraphics[width=\textwidth]{figures/assets_by_line_fr.pdf}\end{center}
+
+Les terrains et immeubles sont de \D{567\,643} chaque année de 2009 à 2018 (\D{567\,642} en 2010 et 2013). Les placements à long terme (4140) sont de \D{160\,000} en 2008--2009, \D{130\,000} en 2010, \D{330\,000} en 2011, \D{26\,124} en 2012, \D{26\,385} en 2013, \D{151\,941} en 2014 et de \D{52\,436} à \D{53\,307} à partir de 2015. L'encaisse et les placements à court terme (4100) vont de \D{14\,765} (2012) à \D{231\,051} (2011)~; ils sont de \D{119\,181} en 2018. Le total du passif (4350, égal aux comptes créditeurs, ligne 4300, chaque année) va de \D{8} à \D{28\,711}.
+
+À partir de 2019, les terrains et immeubles sont de \D{567\,643} en 2019, 2020, 2022, 2023 et 2024~; la déclaration de 2021 ne porte aucune valeur à la ligne 4155, et son total de l'actif, \D{246\,995}, est la somme de ses autres lignes d'actif. Le total de l'actif est de \D{741\,843} (2019), \D{794\,350} (2020), \D{723\,035} (2022), \D{716\,315} (2023) et \D{881\,634} (2024), le plus élevé depuis 2011. Les placements à long terme sont de \D{53\,626} et \D{54\,326} en 2019--2020 et de \D{100\,000} à \D{105\,600} à partir de 2021. L'encaisse et les placements à court terme sont de \D{108\,466}, \D{159\,574}, \D{139\,938}, \D{42\,378}, \D{31\,528} et \D{197\,111}~; 2024 est la deuxième valeur la plus élevée de la série après 2011. Le total du passif est de \D{1\,414} (2019), \D{40\,762} (2020), \D{60\,000} (2021~: comptes créditeurs \D{40\,000} et revenus reportés \D{20\,000} à la ligne 4310, la seule année avec cette ligne), \D{268} (2022), \D{2\,123} (2023) et \D{180\,109} (2024), le plus élevé des dix-sept années~; dans les autres années, le total du passif égale les comptes créditeurs.
+
+\section{Ce que le dossier ne contient pas}
+
+La déclaration de l'exercice 2025 et des suivants~: l'ARC a publié le fichier de chaque année tard dans l'année suivante, et aucun jeu de données 2025 n'était sur le portail le 23~octobre 2026 (le script et la table d'identifiants sont prêts). Les états financiers de la paroisse elle-même, que ses bulletins hebdomadaires ont publiés mois par mois et année par année jusqu'en 2023, ne sont pas reproduits ici parce que les bulletins nomment des personnes. Les déclarations ne donnent que des totaux par année civile~: rien ici ne sépare 2024 en mois avant et après l'aménagement de la piste.
+
+\section{Reproduction}
+
+\texttt{python3 derived/build.py} reconstruit chaque table, chaque graphique et les deux notes à partir de \texttt{raw/}~; \texttt{python3 derived/fetch\_open\_data.py} ajoute les extraits de données ouvertes des années marquées \emph{to\_fetch} dans \texttt{open\_canada\_datasets.csv} (\texttt{--search} liste les jeux de données du portail, \texttt{--list} les fichiers d'un jeu, \texttt{--extract} prend un fichier téléchargé à la main). La date de construction et les dates «\,as of\,» des données sont imprimées sur chaque graphique~; la note porte sa version en pied de page.
+
+\end{document}

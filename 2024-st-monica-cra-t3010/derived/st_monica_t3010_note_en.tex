@@ -15,8 +15,8 @@
 \usepackage{textcomp}
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
-\newcommand{\docversion}{2026-10-23-06-55-02} % set by build.py (America/Toronto)
-\hypersetup{pdfsubject={version \docversion},pdftitle={The parish of St Monica's charity returns (T3010), 2008 onward: data, method and figures}}
+\newcommand{\docversion}{2026-10-23-07-20-47} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion},pdftitle={The parish of St Monica's charity returns (T3010), 2008 to 2024: data, method and figures}}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.5em}
@@ -36,7 +36,7 @@
 
 \begin{document}
 
-{\LARGE\bfseries The parish of St Monica's charity returns (T3010), 2008 onward}\par\medskip
+{\LARGE\bfseries The parish of St Monica's charity returns (T3010), 2008 to 2024}\par\medskip
 {\large Data, method and figures}\par\medskip
 {\small A resident of Côte-des-Neiges--Notre-Dame-de-Grâce, from public records. Version \docversion. Repository: \href{\repourl}{\repourl}, folder \texttt{\folder}.}
 
@@ -44,17 +44,17 @@
 
 The parish of St Monica (La fabrique de la paroisse de Sainte-Monique, 6405 rue de Terrebonne) is a registered charity. Like every registered charity in Canada it files a yearly information return, form T3010, with the Canada Revenue Agency (CRA), and the financial section of that return is public. The parish's building stands on rue de Terrebonne, on the stretch where a protected bike lane was built in 2024, and the parish's situation has been raised in the public debate on that lane. This note documents the parish's returns as the CRA released them, explains how the tables and charts in this folder are produced from them, and reads the charts in the terms of the return itself. It does not attribute any figure to any cause; the returns do not carry that information.
 
-The data cover fiscal years ending December 31. Years 2008 to 2018 are on file from a data request answered by the CRA on December 6, 2024 (section~\ref{sec:prov}). Years 2019 to 2023 appear in the charts and the table from an interim source: the figures the author transcribed from the CRA's Charities Listings « quick view » in November--December 2024 into a spreadsheet; they are marked as such (hatched bars, an asterisk in the table) and are to be replaced by the CRA's yearly open-data files, fetched by the script described in section~\ref{sec:method}. The descriptive paragraphs of section~\ref{sec:figures} concern the years on CRA file, 2008 to 2018.
+The data cover fiscal years ending December 31, from 2008 to 2024: seventeen returns. Years 2008 to 2018 are on file from a data request answered by the CRA on December 6, 2024; years 2019 to 2024 are row extracts of the CRA's yearly open-data files, fetched on October 23, 2026 (section~\ref{sec:prov}). A transcription of 2019--2023 made from the CRA's Charities Listings « quick view » in late 2024 served as an interim source until then; it was checked against the files and withdrawn (section~\ref{sec:interim}). The 2024 return is the first whose fiscal year includes the months after the lane was built (May--June 2024); the 2025 return was not yet published on October 23, 2026.
 
 \section{The T3010 return}
 
-Form T3010 has a financial section (Section~D for charities reporting on the short form, Schedule~6 for the others) whose entries are numbered. The numbers used here are the CRA's own line numbers; the labels are in \texttt{derived/line\_labels.csv} with a status column: \emph{checked} where the line's meaning is confirmed by the data on file (a total that sums, a text line that names its content, a figure that matches the parish's own published balance sheet), \emph{form} where the label is taken from the form and not independently confirmed, \emph{unverified} where the line's meaning has changed between form versions. The CRA publishes the form and its guide (T4033) on canada.ca, and a data dictionary with each open-data release.
+Form T3010 has a financial section (Section~D for charities reporting on the short form, Schedule~6 for the others) whose entries are numbered. The numbers used here are the CRA's own line numbers; the labels are in \texttt{derived/line\_labels.csv} with a status column: \emph{checked} where the line's meaning is confirmed by the data on file (a total that sums, a text line that names its content, a figure that matches the parish's own published balance sheet), \emph{dictionary} where the label is that of the CRA's \emph{List of charities data dictionary} (version 2.0, kept with the 2024 dataset in \texttt{raw/open-canada/references/}), \emph{quick\_view} where it is the wording of the Charities Listings page as transcribed in 2024, \emph{form} where the label is taken from the form and not independently confirmed. The CRA publishes the form and its guide (T4033) on canada.ca. Version 27 of the form, used for fiscal years 2023 and 2024, adds sub-lines that repeat part of an existing line (4101, cash and bank accounts included in 4100; 4157, land and buildings used for the charity's programs, included in 4155; 4576, income from impact investments included in 4580); they are kept in the long table and not added to any total.
 
 The lines used in the figures are:
 \begin{itemize}[nosep,leftmargin=1.4em]
 \item \textbf{4700} total revenue; \textbf{4500} the total eligible amount of gifts for which the charity issued tax receipts; \textbf{4530} other gifts (no receipt); \textbf{4650} other revenue not already included, which line 4655 describes in 2011 as « Masses, funeral, weddings etc »; \textbf{4610} gross income from the rental of land or buildings; \textbf{4580} interest and investment income; \textbf{4540}, \textbf{4550}, \textbf{4560} revenue from the federal, provincial and municipal governments;
 \item \textbf{5100} total expenditures; \textbf{4880} total compensation; \textbf{4850} occupancy costs; \textbf{4840} office supplies and expenses; \textbf{4860} professional and consulting fees; \textbf{4920} all other expenditures, which line 4930 describes in 2011 as « Contributions to diocese GST \& QST » and in 2012 as « GST \& QST »;
-\item \textbf{4200} total assets; \textbf{4100} cash, bank accounts and short-term investments; \textbf{4140} long-term investments; \textbf{4155} land and buildings in Canada (on the 2008 form the same figure sits on line 4160); \textbf{4350} total liabilities.
+\item \textbf{4200} total assets; \textbf{4100} cash, bank accounts and short-term investments; \textbf{4140} long-term investments; \textbf{4155} land and buildings in Canada (on the 2008 form the same figure sits on line 4160); \textbf{4350} total liabilities, with \textbf{4300} accounts payable and \textbf{4310} deferred revenue; \textbf{4950} total expenditures excluding gifts to qualified donees and \textbf{5050} those gifts, whose sum is line 5100.
 \end{itemize}
 
 \section{Provenance}\label{sec:prov}
@@ -75,30 +75,36 @@ and this disclaimer:
 
 The files are kept unchanged in \path{raw/cra-charities-listings-2024-12-06/<year>/}, with the CRA's code lists in \texttt{references/} and the charity's listing record of October 31, 2024. Two kinds of file from the reply are not reproduced: the directors' listings (names of individuals) and the basic contact files (the 2008 one names the parish's contact person). The « as of » dates above are carried into every derived table as the \texttt{as\_of} column.
 
-\subsection{Years 2019 and later: the CRA's open-data files}
+\subsection{Years 2019 to 2024: the CRA's open-data files}\label{sec:open}
 
-Since 2019 the CRA has published the T3010 data of every registered charity on the Government of Canada's open-data portal, one dataset per fiscal year (« \textless year\textgreater\ List of charities », Open Government Licence -- Canada), as a set of CSV files: identification, general information, programs, the financial section, and others. Each file holds every charity. The script \texttt{derived/fetch\_open\_data.py} downloads the financial, general-information, identification and program files of a year, keeps the header and the parish's rows, and stores them in \path{raw/open-canada/<year>/} with the full file's URL, size and SHA-256 hash in \texttt{SOURCES.tsv}; the files about directors, trustees and like officials are never downloaded. These are extracts of a larger file and are labelled as such. The dataset identifiers known so far are in \texttt{derived/open\_canada\_datasets.csv}. The CRA's Charities Listings web application also shows each year's return (« quick view »). Figures typed from it go in \texttt{derived/manual\_entries.csv} with their source and the date they were viewed, and the build marks them as manual: the 2019--2023 values there are the author's transcription of November--December 2024. The build prefers a CRA file to a manual entry whenever both exist and reports every difference in \texttt{build\_report.txt}; the manual rows are to be removed once the files are in.
+The CRA publishes the T3010 data of every registered charity on the Government of Canada's open-data portal, one dataset per fiscal year (« \textless year\textgreater\ List of charities », Open Government Licence -- Canada), as a set of CSV files: identification, general information (sections A to C), programs, the financial section (Section D and Schedule 6), the schedules, and the directors' listings. Each file holds every charity (the 2024 financial file is 21 MB). On October 23, 2026 the portal listed one dataset for each year from 1990 to 2024 and none for 2025; the six datasets 2019--2024 had last been modified on October 4, 2026. Their identifiers are in \texttt{derived/open\_canada\_datasets.csv}.
+
+The script \texttt{derived/fetch\_open\_data.py} asks the portal's API for a dataset's resources, downloads the financial, general-information, identification and program files, keeps the header and the parish's row of each, and stores them in \path{raw/open-canada/<year>/} with the full file's URL, size, SHA-256 hash, modification date and download time in \texttt{SOURCES.tsv}; the files about directors, trustees and like officials are never downloaded. These are extracts of a larger file and are labelled as such. Each financial extract carries one row for the parish, with the fiscal period end, the form version (24 for 2019--2020, 25 for 2021--2022, 27 for 2023--2024) and the section used (Schedule 6 every year). The CRA's data dictionary and code list, downloaded from the 2024 dataset, are in \texttt{raw/open-canada/references/}. The « as of » date carried into the tables for these years is the dataset's modification date.
+
+\subsection{The interim transcription and its check}\label{sec:interim}
+
+Until the files were fetched, the 2019--2023 values in this folder were the author's transcription of the CRA's Charities Listings « quick view » (November--December 2024), kept in \texttt{derived/manual\_entries.csv} and marked as manual. On October 23, 2026 the build compared the 120 transcribed values with the files: 113 were identical; six differed (2019 occupancy 57,267 for 57,262; 2020 cash 159,474 for 159,574 and interest 710 for 701; 2023 accounts payable and total liabilities 2,131 for 2,123; 2021 total assets 814,638 for 246,995, the transcription having carried a land-and-buildings line that the 2021 file does not have); one line was in the transcription only (2021 land and buildings) and eight were in the files only (2019 other assets 9,723; line 4950 of each year; the 2023 sub-lines 4101 and 4576). The record is \texttt{derived/manual\_vintage\_check\_2026-10-23.txt}; the transcription was then removed and every figure in the folder comes from a CRA file. The mechanism stays: a value typed from the quick view goes in \texttt{manual\_entries.csv} with its date, the build prefers a file whenever both exist and reports every difference.
 
 \section{Method}\label{sec:method}
 
 \texttt{derived/build.py} does everything from the raw files:
 \begin{enumerate}[nosep,leftmargin=1.6em]
 \item reads every numbered field of the financial files (the 2008 reply is a single « T3010 Return » file; from 2009 the financial section is its own file) into one long table, \texttt{t3010\_lines.csv}: fiscal year, line, value, text (for the lines that carry a description), form identifier, source, « as of » date, file;
-\item resolves one value per year and line, preferring the e-mailed CRA file, then the open-data extract, then a manual entry, and reports any disagreement between sources;
+\item resolves one value per year and line, preferring the e-mailed CRA file, then the open-data extract, then a manual entry if any, and reports any disagreement between sources;
 \item writes \texttt{t3010\_summary.csv}, one row per year with the lines listed in section~2, the land-and-buildings figure, and the difference between total revenue and total expenditures;
-\item checks that line 4950 equals line 5100 and that the asset lines sum to line 4200, and writes what it found in \texttt{build\_report.txt};
-\item draws the four charts in English and French (SVG and PNG) and writes the table of section~\ref{sec:figures} for this note, then stamps this note's version and compiles it.
+\item checks that line 4950 plus line 5050 equals line 5100 and that the asset lines sum to line 4200, and writes what it found in \texttt{build\_report.txt};
+\item draws the four charts in English and French (SVG, PNG and PDF) and writes the table of section~\ref{sec:figures} in both languages, then stamps the version of this note and of its French version and compiles them.
 \end{enumerate}
 
-Charts: thin bars, a fixed order of colours checked for colour-vision deficiency with the validator of the chart-design method used across these repositories, a legend on every chart with more than one series, one axis per chart (thousands of dollars), the source line and the build date printed under each. In the stacked charts, « other lines » is the total line less the lines shown, so that each bar's height is the return's own total. The checks found one arithmetic gap in the data on file: in 2018 the four asset lines present sum to \$750,031 while line 4200 reads \$750,051.
+Charts: thin bars, a fixed order of colours checked for colour-vision deficiency with the validator of the chart-design method used across these repositories, a legend on every chart with more than one series, one axis per chart (thousands of dollars), the source line and the build date printed under each. In the stacked charts, « other lines » is the total line less the lines shown, so that each bar's height is the return's own total. The checks find one arithmetic gap in the seventeen returns: in 2018 the four asset lines present sum to \$750,031 while line 4200 reads \$750,051. The two gaps reported while the transcription was in use (2019 and 2020) were transcription gaps and are gone (section~\ref{sec:interim}).
 
 \section{The figures}\label{sec:figures}
 
-Table~\ref{tab:summary} gives the lines behind the charts, in dollars as filed; the years marked with an asterisk are from the interim transcription. All amounts are those of the returns; none is adjusted for prices. The paragraphs below describe the years on CRA file, 2008 to 2018.
+Table~\ref{tab:summary} gives the lines behind the charts, in dollars as filed. All amounts are those of the returns; none is adjusted for prices. The paragraphs below describe the seventeen years, 2008 to 2024, in the return's own terms.
 
 \begin{table}[h]\centering\small
-\caption{Key lines of the parish's T3010 returns (dollars as filed; * = interim transcription from the quick view, pending the CRA files; source and « as of » date per year in \texttt{t3010\_summary.csv}).}\label{tab:summary}
-\resizebox{\textwidth}{!}{\input{summary_table.tex}}
+\caption{Key lines of the parish's T3010 returns, 2008--2024 (dollars as filed; source and « as of » date per year in \texttt{t3010\_summary.csv}).}\label{tab:summary}
+\resizebox{\textwidth}{!}{\input{summary_table_en.tex}}
 \end{table}
 
 \subsection{Revenue and expenditures}
@@ -107,17 +113,23 @@ Table~\ref{tab:summary} gives the lines behind the charts, in dollars as filed; 
 
 Total revenue (line 4700) lies between \$280,506 (2009) and \$305,803 (2010) in eight of the eleven years. The exceptions are 2011 (\$711,793), 2012 (\$383,418) and 2014 (\$412,231). Total expenditures (line 5100) lie between \$250,879 (2017) and \$305,884 (2008) in seven years; the exceptions are 2011 (\$349,750), 2012 (\$871,127), 2014 (\$326,842) and 2015 (\$389,129). Revenue exceeded expenditures in 2009, 2010, 2011, 2013, 2014, 2016, 2017 and 2018; expenditures exceeded revenue in 2008 (by \$13,966), 2012 (by \$487,709) and 2015 (by \$94,529).
 
+From 2019 to 2024 total revenue is \$276,981 (2019), \$211,438 (2020), \$202,900 (2021), \$259,956 (2022), \$266,650 (2023) and \$250,718 (2024); 2020 and 2021 are the two lowest values of the seventeen years. Total expenditures are \$277,716, \$198,279, \$201,549, \$291,727, \$274,890 and \$269,373. Expenditures exceeded revenue in 2019 (by \$735), 2022 (by \$31,771), 2023 (by \$8,240) and 2024 (by \$18,655); revenue exceeded expenditures in 2020 (by \$13,159) and 2021 (by \$1,351). Over the seventeen years, revenue exceeded expenditures in ten and expenditures exceeded revenue in seven.
+
 \subsection{Revenue by line}
 
 \begin{center}\includegraphics[width=\textwidth]{figures/revenue_by_line_en.pdf}\end{center}
 
 Tax-receipted gifts (line 4500) are the largest line every year: \$225,815 to \$266,956 in 2008--2010 and 2013--2018 except 2014 (\$373,427), and \$665,140 in 2011. « Other revenue » (line 4650, described in 2011 as masses, funerals and weddings) is \$32,913 to \$63,217 from 2008 to 2014, then \$2,387 in 2015 and \$3,365 in 2017, and absent in 2016 and 2018; from 2015 a line that was empty before, other gifts without receipt (4530), carries \$24,600 to \$46,244. Rental income (4610) is \$2,500 to \$7,687 in the ten years where it is present (none in 2017); interest and investment income (4580) is \$6,707 in 2008 and \$45 to \$3,278 afterwards; no revenue from governments is reported in these years.
 
+From 2019 tax-receipted gifts are \$229,425 (2019), \$195,512 (2020), \$185,599 (2021), \$190,139 (2022), \$204,950 (2023) and \$201,562 (2024); the 2020 to 2024 values are the five lowest of the seventeen years. Other gifts without receipt (4530) are \$34,530, \$6,602, \$9,277, \$44,861, \$29,266 and \$18,311. Rental income is \$8,925 in 2019, \$1,175 in 2020 and \$3,460 in 2021, then \$17,490, \$15,875 and \$15,339 in 2022--2024, above every earlier year. « Other revenue » (4650) is absent from 2019 to 2022, \$4,943 in 2023 (line 4655: « recovery of expenses ») and \$15,506 in 2024 (line 4655, as filed: « Faith First, Virgil lights »). Revenue from governments appears for the first time: \$3,781 in 2019 (federal \$1,636, provincial \$2,145), \$7,448 in 2020, \$4,428 in 2021, \$6,866 in 2022 (provincial only), \$7,201 in 2023 and none in 2024. Interest and investment income is \$320, \$701, \$136, \$600 and \$4,415 from 2019 to 2023 and absent in 2024.
+
 \subsection{Expenditures by line}
 
 \begin{center}\includegraphics[width=\textwidth]{figures/expenditures_by_line_en.pdf}\end{center}
 
-Compensation (line 4880) is the largest expenditure line in every year but 2012: \$97,314 (2017) to \$147,183 (2011). Occupancy costs (4850) are \$50,016 (2017) to \$164,999 (2015) in ten years and \$592,737 in 2012, the year of the largest total. Office expenses (4840) are \$28,196 to \$92,281; professional fees (4860) \$5,400 to \$15,428; the « all other » line (4920, described as contributions to the diocese and sales taxes) \$7,245 to \$50,844. The 2018 return carries no value on line 4950 and \$261,865 on line 5100.
+Compensation (line 4880) is the largest expenditure line in every year but 2012: \$97,314 (2017) to \$147,183 (2011). Occupancy costs (4850) are \$50,016 (2017) to \$164,999 (2015) in ten years and \$592,737 in 2012, the year of the largest total. Office expenses (4840) are \$28,196 to \$92,281; professional fees (4860) \$5,400 to \$15,428; the « all other » line (4920, described as contributions to the diocese and sales taxes) \$7,245 to \$50,844 from 2008 to 2017. The 2018 return carries \$261,865 on line 4920 and the same figure on line 5100, and no value on line 4950.
+
+From 2019 compensation is \$126,787 (2019), \$72,993 (2020) and \$61,370 (2021), the two lowest values of the series, then \$116,820, \$127,217 and \$143,000 in 2022--2024; 2024 is the second-highest after 2011. Occupancy costs are \$57,262, \$62,123, \$58,403, \$92,477, \$49,802 and \$57,319; 2023 is the lowest of the seventeen years. Office expenses fall from \$40,598 in 2019 to \$11,456 in 2024, the lowest of the series; professional fees are \$14,736, \$12,373, \$11,995, \$15,015, \$6,000 and \$6,239. The « all other » line is \$37,634, \$19,776, \$40,604, \$39,200, \$38,757 and \$22,820, described on line 4930 as faith education, sales taxes and diocesan contribution (2019), sales taxes and diocesan contribution (2020--2022), « worship expenses » (2023) and « Faith First, worship, Virgil lights » (2024, as filed). Two lines carry substantial values in 2023 and 2024 for the first time: licences, memberships and dues (4830), \$25,080 and \$22,219 after \$35 to \$37 from 2019 to 2022, and purchased supplies and assets (4891), \$3,983 in 2023. The 2024 return is the first with gifts to qualified donees (5050), \$5,822, so that total expenditures (\$269,373) exceed line 4950 (\$263,551) by that amount; in every other year where both lines are present they are equal within two dollars.
 
 \subsection{Assets by line}
 
@@ -125,12 +137,14 @@ Compensation (line 4880) is the largest expenditure line in every year but 2012:
 
 Land and buildings are \$567,643 in every year (\$567,642 in 2010 and 2013). Long-term investments (4140) are \$160,000 in 2008--2009, \$130,000 in 2010, \$330,000 in 2011, \$26,124 in 2012, \$26,385 in 2013, \$151,941 in 2014 and \$52,436 to \$53,307 from 2015. Cash and short-term investments (4100) range from \$14,765 (2012) to \$231,051 (2011); they are \$119,181 in 2018. Total liabilities (4350, equal to accounts payable, line 4300, in every year) are \$8 to \$28,711.
 
+From 2019 land and buildings are \$567,643 in 2019, 2020, 2022, 2023 and 2024; the 2021 return carries no value on line 4155, and its total assets, \$246,995, are the sum of its other asset lines. Total assets are \$741,843 (2019), \$794,350 (2020), \$723,035 (2022), \$716,315 (2023) and \$881,634 (2024), the highest since 2011. Long-term investments are \$53,626 and \$54,326 in 2019--2020 and \$100,000 to \$105,600 from 2021. Cash and short-term investments are \$108,466, \$159,574, \$139,938, \$42,378, \$31,528 and \$197,111; 2024 is the second-highest of the series after 2011. Total liabilities are \$1,414 (2019), \$40,762 (2020), \$60,000 (2021: accounts payable \$40,000 and deferred revenue \$20,000 on line 4310, the only year with that line), \$268 (2022), \$2,123 (2023) and \$180,109 (2024), the highest of the seventeen years; in the other years total liabilities equal accounts payable.
+
 \section{What the folder does not contain}
 
-The returns for 2019 and later (to be added as described in section~\ref{sec:prov}); the parish's own financial statements, which its weekly bulletins carried month by month and year by year until 2023 and which are not reproduced here because the bulletins name individuals; any figure for the period after the lane was built in May--June 2024, which will come with the 2024 and 2025 returns once the CRA publishes them.
+The return for fiscal 2025 and later: the CRA has published each year's file late in the following year, and no 2025 dataset was on the portal on October 23, 2026 (the script and the identifier table are ready for it). The parish's own financial statements, which its weekly bulletins carried month by month and year by year until 2023, are not reproduced here because the bulletins name individuals. The returns give calendar-year totals only: nothing here splits 2024 into the months before and after the lane was built.
 
 \section{Reproduction}
 
-\texttt{python3 derived/build.py} rebuilds every table, chart and this note from \texttt{raw/}; \texttt{python3 derived/fetch\_open\_data.py} adds the open-data extracts. The build date and the data's « as of » dates are printed on each chart; this note carries its version in the footer.
+\texttt{python3 derived/build.py} rebuilds every table, chart and both notes from \texttt{raw/}; \texttt{python3 derived/fetch\_open\_data.py} adds the open-data extracts of the years marked \emph{to\_fetch} in \texttt{open\_canada\_datasets.csv} (\texttt{--search} lists the portal's datasets, \texttt{--list} a dataset's files, \texttt{--extract} takes a file downloaded by hand). The build date and the data's « as of » dates are printed on each chart; this note carries its version in the footer.
 
 \end{document}

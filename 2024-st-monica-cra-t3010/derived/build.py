@@ -14,7 +14,9 @@ Inputs (all under ../raw/):
 Outputs (in ../derived/):
   t3010_lines.csv       long table: fiscal_year, line, value, form_id, source, as_of
   t3010_summary.csv     wide table of the checked lines by year
-  figures/*.svg|png     the charts, EN and FR
+  figures/*.svg|png|pdf the charts, EN and FR
+  summary_table_{en,fr}.tex  the table of the notes
+  st_monica_t3010_note_{en,fr}.pdf  the notes, version-stamped and compiled
   build_report.txt      what was read, what was skipped, consistency checks
 
 Run:  python3 build.py   (from any directory; needs matplotlib)
@@ -184,8 +186,8 @@ with open(os.path.join(HERE, 't3010_summary.csv'), 'w', newline='', encoding='ut
 
 # Consistency checks.
 for y in years:
-    if has(y, 4950) and has(y, 5100) and abs(val(y, 4950) - val(y, 5100)) > 5:
-        log(f'  check: {y} 4950 {val(y,4950):.0f} != 5100 {val(y,5100):.0f}')
+    if has(y, 4950) and has(y, 5100) and abs(val(y, 4950) + val(y, 5050) - val(y, 5100)) > 5:
+        log(f'  check: {y} 4950 {val(y,4950):.0f} + 5050 {val(y,5050):.0f} != 5100 {val(y,5100):.0f}')
     assets = sum(val(y, ln) for ln in (4100, 4110, 4120, 4130, 4140, 4150, 4155, 4160, 4165, 4170))
     if has(y, 4200) and abs(assets - val(y, 4200)) > 5:
         log(f'  check: {y} asset lines sum to {assets:.0f}, line 4200 is {val(y,4200):.0f}')
@@ -316,34 +318,41 @@ if plt and years:
 if years:
     def money_tex(v):
         return f'{v:,.0f}'.replace(',', '\\,')
-    with open(os.path.join(HERE, 'summary_table.tex'), 'w', encoding='utf-8') as f:
-        f.write('\\begin{tabular}{@{}l' + 'r' * len(years) + '@{}}\\toprule\n')
-        f.write('Line & ' + ' & '.join((str(y) + ('*' if best.get((y, 4700), {}).get('source', '').startswith('manual') else '')) for y in years) + ' \\\\\\midrule\n')
-        for lab, ln in [('4700 Total revenue', 4700), ('4500 Tax-receipted gifts', 4500), ('4530 Other gifts', 4530), ('4610 Rental income', 4610),
-                        ('4650 Other revenue', 4650), ('5100 Total expenditures', 5100), ('4880 Compensation', 4880),
-                        ('4850 Occupancy', 4850), ('4200 Total assets', 4200), ('4100 Cash and short-term', 4100),
-                        ('4140 Long-term investments', 4140), ('4350 Total liabilities', 4350)]:
-            f.write(lab + ' & ' + ' & '.join(money_tex(val(y, ln)) if has(y, ln) else '--' for y in years) + ' \\\\\n')
-        f.write('Revenue less expenditures & ' + ' & '.join(money_tex(val(y, 4700) - val(y, 5100)) for y in years) + ' \\\\\\bottomrule\n')
-        f.write('\\end{tabular}\n')
+    TABLE = {'en': [('Line', None), ('4700 Total revenue', 4700), ('4500 Tax-receipted gifts', 4500), ('4530 Other gifts', 4530), ('4610 Rental income', 4610),
+                    ('4650 Other revenue', 4650), ('5100 Total expenditures', 5100), ('4880 Compensation', 4880),
+                    ('4850 Occupancy', 4850), ('4200 Total assets', 4200), ('4100 Cash and short-term', 4100),
+                    ('4140 Long-term investments', 4140), ('4155 Land and buildings', 4155), ('4350 Total liabilities', 4350), ('Revenue less expenditures', 'diff')],
+             'fr': [('Ligne', None), ('4700 Total des revenus', 4700), ('4500 Dons avec reçu', 4500), ('4530 Autres dons', 4530), ('4610 Revenus de location', 4610),
+                    ('4650 Autres revenus', 4650), ('5100 Total des dépenses', 5100), ('4880 Rémunération', 4880),
+                    ('4850 Occupation', 4850), ('4200 Total de l\'actif', 4200), ('4100 Encaisse et court terme', 4100),
+                    ('4140 Placements à long terme', 4140), ('4155 Terrains et immeubles', 4155), ('4350 Total du passif', 4350), ('Revenus moins dépenses', 'diff')]}
+    for lang, rows_ in TABLE.items():
+        with open(os.path.join(HERE, f'summary_table_{lang}.tex'), 'w', encoding='utf-8') as f:
+            f.write('\\begin{tabular}{@{}l' + 'r' * len(years) + '@{}}\\toprule\n')
+            f.write(rows_[0][0] + ' & ' + ' & '.join((str(y) + ('*' if best.get((y, 4700), {}).get('source', '').startswith('manual') else '')) for y in years) + ' \\\\\\midrule\n')
+            for lab, ln in rows_[1:-1]:
+                f.write(lab + ' & ' + ' & '.join(money_tex(val(y, ln)) if has(y, ln) else '--' for y in years) + ' \\\\\n')
+            f.write(rows_[-1][0] + ' & ' + ' & '.join(money_tex(val(y, 4700) - val(y, 5100)) for y in years) + ' \\\\\\bottomrule\n')
+            f.write('\\end{tabular}\n')
     if plt:
         pass
     import subprocess, shutil
-    tex = os.path.join(HERE, 'st_monica_t3010_note_en.tex')
-    if os.path.exists(tex) and shutil.which('pdflatex'):
-        stamp = datetime.datetime.now(zoneinfo.ZoneInfo('America/Toronto')).strftime('%Y-%m-%d-%H-%M-%S')
+    stamp = datetime.datetime.now(zoneinfo.ZoneInfo('America/Toronto')).strftime('%Y-%m-%d-%H-%M-%S')
+    for tex in [os.path.join(HERE, f'st_monica_t3010_note_{lang}.tex') for lang in ('en', 'fr')]:
+        if not (os.path.exists(tex) and shutil.which('pdflatex')):
+            continue
         s = open(tex, encoding='utf-8').read()
         s = re.sub(r'\\newcommand\{\\docversion\}\{[^}]*\}', '\\\\newcommand{\\\\docversion}{' + stamp + '}', s)
         open(tex, 'w', encoding='utf-8').write(s)
-        for _ in range(2):
-            r = subprocess.run(['pdflatex', '-interaction=nonstopmode', '-halt-on-error', os.path.basename(tex)], cwd=HERE, capture_output=True, text=True)
+        for _ in range(3):
+            r = subprocess.run(['pdflatex', '-interaction=nonstopmode', '-halt-on-error', os.path.basename(tex)], cwd=HERE, capture_output=True, text=True, errors='replace')
         if r.returncode == 0:
             log(f'Note compiled: {os.path.basename(tex)[:-4]}.pdf, version {stamp}')
             for ext in ('aux', 'log', 'out'):
                 p = os.path.join(HERE, os.path.basename(tex)[:-4] + '.' + ext)
                 if os.path.exists(p): os.remove(p)
         else:
-            log('LaTeX failed: ' + r.stdout[-1500:])
+            log(f'LaTeX failed ({os.path.basename(tex)}): ' + r.stdout[-1500:])
 
 with open(os.path.join(HERE, 'build_report.txt'), 'w', encoding='utf-8') as f:
     f.write('\n'.join(report) + '\n')
