@@ -145,6 +145,7 @@ subgraph cluster_assertion { label="assertions"; fontsize=11; color="#d9dcd8"; s
   x_info_coming [label="Assertion: the borough will\ncommunicate detailed information\non the winter change to residents\nbefore the council votes (the\nborough's stated intention, in\ncorrespondence seen by the author,\nis « au cours des prochaines\nsemaines », with no date and no\nsession named)\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_window4 [label="Assertion: the conversion of one\ndirection lasts about four months\neach winter (December to March),\nas opposed to the three months\nimplied by « d'avril à décembre »\n[2026-10-21]", fillcolor="#fff8e1", shape=octagon];
   x_hardship [label="Assertion: the protected lane\nbuilt on Terrebonne in 2024 has\ncaused a measurable loss of\nrevenue, or a deficit, at the\nparish of St Monica (fewer\nweddings and funerals, lost\nparking, « a first deficit in its\nhistory »)\n[2026-10-23]", fillcolor="#fff8e1", shape=octagon];
+  x_done_deal [label="Assertion: the planned winter\nreconfiguration of rue de\nTerrebonne is certain to happen,\nwhatever the remaining steps\n(borough council vote, City\ncouncil vote, consultation, the\nwithheld studies). Distinct from\nx_decided (whether the elected\nofficials have decided): this one\nconcerns the outcome\n[2026-10-23]", fillcolor="#fff8e1", shape=octagon];
 }
 subgraph cluster_statement { label="statements"; fontsize=11; color="#d9dcd8"; style="rounded";
   s_oct6_99 [label="Oct 6 address, 39:33–40:49: «\nwe're able to see that in winter,\nthe volume of traffic diminishes\nby 99%. We go from 700 during the\ngood months to 8. That's 8\npassage, right? So that's 4\ncyclists, right? Including me,\nright? »\n[2026-10-06]", fillcolor="#fdf1f1", shape=box, URL="https://www.youtube.com/watch?v=0k_KZf9uxTk&t=2373s", target="_blank"];
@@ -1021,4 +1022,15 @@ c_frontage_signs -> x_hardship [label="bears on", color="#eda100", fontcolor="#e
 c_sunday_curb -> d_city_signs [label="computed from", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="Each sign read for days, hours and months at Sunday 10:00–12:00 (peer_streets.py, sunday())."];
 c_sunday_curb -> t_peer_streets [label="contained in", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
 c_sunday_curb -> x_hardship [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="Sainte-Monique's Sunday street parking today sits in the middle of its neighbours'; Saint-Antonin, also without a lot, and the Mile End reference church operate with less."];
+d_card -> x_done_deal [label="states", color="#2a78d6", fontcolor="#2a78d6", style=solid, tooltip="« One thing is certain: residents will see changes before Christmas 2026 »; the same card: « several steps remain … borough council and City Council »."];
+s_oct6_promise -> x_done_deal [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« we have made a commitment and we have to act on this promise »: a commitment, not a statement that the outcome is settled."];
+s_oct6_engagement -> x_done_deal [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« notre devoir de respecter notre promesse »."];
+s_cm_sign -> x_done_deal [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="« très content de cette décision » (City council, Oct 19)."];
+s_oct6_propose -> x_done_deal [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="« this is what we're going to propose »; « It's going to be a test »."];
+s_oct6_readjust -> x_done_deal [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="« we'll make sure that we can readjust as well if there is a need »."];
+s_db_route -> x_done_deal [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="Three votes described as still to come: borough, City council, borough."];
+d_note -> x_done_deal [label="undercuts", color="#e34948", fontcolor="#e34948", style=solid, tooltip="Withheld under s. 39, which applies only « until a decision is made on the recommendation »: the borough's own position at Oct 9 is that the decision is pending."];
+e_dec7 -> x_done_deal [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The vote that would make it so."];
+e_cm_dec -> x_done_deal [label="bears on", color="#eda100", fontcolor="#eda100", style=dotted, tooltip="The City council step the councillor described after the borough vote."];
+x_done_deal -> x_decided [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="Outcome vs decision: the two are argued from the same statements but are not the same proposition."];
 }

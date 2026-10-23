@@ -1,6 +1,6 @@
 question,title,nodes
 3.1,The documents,s_cm_share;d_sum;d_sim;d_note;d_june10;d_release;x_shared;x_precedent;x_info_coming;s_oct6_internal_doc;s_oct6_mayor_study
-3.2,The decision,d_note;s_oct6_decision;s_cm_sign;s_db_final;e_dec7;x_decided;x_dec7;s_oct6_decision_slides;s_oct6_timeline
+3.2,The decision,d_note;s_oct6_decision;s_cm_sign;s_db_final;e_dec7;x_decided;x_dec7;s_oct6_decision_slides;s_oct6_timeline;x_done_deal
 3.3,The dates,d_devoir;s_cm_3;s_cm_fourmonths;d_card;s_db_perm;s_db_window;d_aug13;d_aug20;x_yearround;x_reopen;x_entire;x_bidir;x_window4;s_oct6_oneside_winter;s_oct6_dixmois;s_oct6_garate_bidir
 3.4,The criterion,s_cm_36;s_db_perm;t_counter;c_36;c_76;c_40;x_36rate;x_double
 3.5,The counter,s_cm_counter;s_db_source;t_portal;t_counter;x_portal;x_sameside
