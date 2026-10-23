@@ -1,0 +1,55 @@
+year,month,bulletin_date,bulletin_file,budget_estimate_year,monthly_goal,sunday_collections,online_collections,ytd_revenue,ytd_expenses,ytd_balance_printed,ytd_balance_computed,note
+2017,1,2017-02-05,"5th Sunday in OT Feb 4-5, 2017.pdf",369960.00,30830.00,23211.40,603.14,23814.54,23294.79,519.75,519.75,
+2017,2,2017-03-05,"1st Sunday of Lent March 5, 2017.pdf",369960.00,30830.00,16648.80,449.94,40913.28,42519.17,-1605.89,-1605.89,
+2017,3,2017-04-09,"Palm Sunday April 9, 2017.pdf",369960.00,30830.00,17163.90,1148.47,59226.65,62490.20,-3270.45,-3263.55,bulletin prints (3
+2017,4,2017-05-07,"4th Sunday of Easter May 7, 2017.pdf",369960.00,30830.00,21853.00,1130.00,82218.00,83625.00,-1407.00,-1407.00,
+2017,5,,,,,,,,,,,no bulletin with a May 2017 statement found
+2017,6,2017-08-20,"20th Sunday in OT Aug 19-20, 2017.pdf",369960.00,30830.00,14164.35,651.39,120976.71,133057.02,-12080.31,-12080.31,
+2017,7,2017-08-20,"20th Sunday in OT Aug 19-20, 2017.pdf",369960.00,30830.00,17025.17,776.84,138880.05,143340.28,-4460.23,-4460.23,
+2017,8,,,,,,,,,,,no bulletin with an August 2017 statement found
+2017,9,2017-11-18,33rd-Sunday-OT-Nov18-2017.pdf,,30830.00,17874.15,714.12,172774.10,175633.78,-2859.68,-2859.68,
+2017,10,2017-11-18,33rd-Sunday-OT-Nov18-2017.pdf,,30830.00,28505.72,545.24,201810.06,200519.63,1290.43,1290.43,
+2017,11,2017-12-10,2nd-Sunday-Advent-Dec-10-2017.pdf,369960.00,30830.00,20931.25,847.21,223588.52,224048.39,-459.87,-459.87,"bulletin heading reads « Financial Report for November 2018 »; the budget line (369,960 = 2017) and the date make it November 2017"
+2017,12,,,,,,,,,,,no year-end 2017 statement found
+2018,1,2018-02-11,Bulletin10-11Feb2018.pdf,316200,26350,22315,809,23124,24218,-1094,-1094,
+2018,2,2018-03-04,Bulletin3-4March2018.pdf,316200,26350,15265,801,38940,46101,-7160,-7161,bulletin prints (7
+2018,3,2018-04-15,Bulletin-April 14-15-2018.pdf,316200,26350,39028,1462,86430,72462,13968,13968,
+2018,4,2018-05-20,"Bulletin May19-20, 2018.pdf",316200,26350,25234,1710,105989,88576,17413,17413,
+2018,5,2018-06-10,"Bulletin June9-10, 2018.pdf",316200,26350,10890,1995,131553,109709,21844,21844,month inferred from the YTD progression (the extract window cut the heading)
+2018,6,,,,,,,,,,,no bulletin with a June 2018 statement found
+2018,7,,,,,,,,,,,no bulletin with a July 2018 statement found
+2018,8,2018-09-16,Bulletin-Sept-15-16-2018.pdf,316200,26350,8851,1008,184680,169424,15256,15256,"the Sept 8-9, 2018 bulletin printed the same month with « Year to date ALL Revenues $169,424 » (the expenses figure) and no expenses line; corrected the next week"
+2018,9,2018-10-14,Bulletin Oct-14-2018.pdf,316200,26350,9725,1008,205453,187569,17884,17884,
+2018,10,2018-11-11,Bulletin-Nov-11-2018.pdf,316200,26350,13344,1391,228963,211937,17026,17026,
+2018,11,2019-01-06,Bulletin-Jan-6-2019.pdf,316200,26350,12202,922,248425,235206,13219,13219,
+2018,12,2019-01-20,Bulletin-Jan-20-2019.pdf,316200,26350,43662,3255,296581,264954,31627,31627,year-end 2018 per the bulletin; CRA 2018: revenue 296
+2019,1,2019-02-24,Bulletin-Feb-24-2019.pdf,290600,23440,10155.45,2080.00,14221,17809,-3588,-3588,
+2019,2,,,,,,,,,,,no bulletin with a February 2019 statement found
+2019,3,2019-04-14,Bulletin-April-14-2019.pdf,290600,23440,12225,1533,54816,64510,-9694,-9694,
+2019,4,2019-05-19,Bulletin May-19-2019.pdf,290600,23400,16865,1196,78901,86965,-8064,-8064,
+2019,5,,,,,,,,,,,no bulletin with a May 2019 statement found
+2019,6,2019-09-01,Bulletin Aug. 31-Sep 8 2019.pdf,290600,23440,10075,2451,119433,140698,-21265,-21265,bulletin prints the deficit without parentheses
+2019,7,2019-09-01,Bulletin Aug. 31-Sep 8 2019.pdf,290600,23440,11535,1216,142340,160225,-17885,-17885,bulletin prints the deficit without parentheses
+2019,8,2019-09-15,Bulletin-Sept-15-2019.pdf,290600,23440,9215,2533,157014,187074,-26060,-30060,"bulletin prints ($26,060.00); 157,014 - 187,074 = -30,060"
+2019,9,2019-10-13,Bulletin-20191013.pdf,290600,23440,13772,1399,175479,199614,-24135,-24135,
+2019,10,2019-11-17,Bulletin-20191117.pdf,290600,23440,11566,1370,193587,228431,-34844,-34844,
+2019,11,2019-12-15,Bulletin-20191215.pdf,290600,23440,11794,1583,216617,255361,-38744,-38744,"NOVEMBER 2019, not December: a December 15 bulletin cannot carry December's month, and the YTD follows October's (193,587 -> 216,617)"
+2019,12,2021-11-14,Bulletin-20211114.pdf,,,,,276980.95,277715.92,-734.97,-734.97,"FY 2019 column of the Income and Expenses Report FY 2020 vs 2019 (approved by the wardens Oct 11, 2021): weekend collections 154,574.96; sub-total offerings 193,823.96; other income 83,156.99; CRA 2019: 4700 = 276,981, 5100 = 277,716 (match to the dollar)"
+2020,1,2020-02-23,Bulletin-20200223.pdf,278100,23175,10446,4170,21158,24886,-3728,-3728,last monthly statement before the 2020 closures
+2020,12,2021-11-14,Bulletin-20211114.pdf,,,,,211437.53,198278.76,13158.77,13158.77,"FY 2020 column of the same report: weekend collections 119,872.25; sub-total offerings 145,178.00; other income 66,259.53; TOTAL EXPENSES 198,278.76 is net of the CEWS reimbursement (12,262.92); CRA 2020: 4700 = 211,438, 5100 = 198,279 (the net); the same bulletin's balance sheet (total assets 794,349.56 and 741,842.89; cash 159,573.59 / 108,465.70; GICs 54,325.56 / 53,626.51; receivables 4,598.06 / 2,385.08; prepaid 8,209.40 / 9,722.65; capital assets 567,642.95; liabilities 40,761.55 / 1,413.65, incl. CEBA loan 30,000 in 2020) matches the CRA's 2020 and 2019 asset and liability lines to the dollar"
+2021,,,,,,,,,,,,no monthly or yearly statement for 2021 in any bulletin
+2022,1,2023-02-05,Bulletin-20230205.pdf,238580,19882,10289,4446,15335,19931,-4596,-4596,"FY 2022 table (Feb 5, 2023), monthly columns; the collections row is « Current Month Collections », with online « included in the above »"
+2022,2,2023-02-05,Bulletin-20230205.pdf,238580,19882,10182,2595,28112,43466,-15354,-15354,
+2022,3,2023-02-05,Bulletin-20230205.pdf,238580,19882,9216,3960,41288,65283,-23995,-23995,
+2022,4,2023-02-05,Bulletin-20230205.pdf,238580,19882,18384,4273,63945,84797,-20852,-20852,
+2022,5,2023-02-05,Bulletin-20230205.pdf,238580,19882,8705,3678,76328,104853,-28525,-28525,
+2022,6,2023-02-05,Bulletin-20230205.pdf,238580,19882,12936,3036,91699,122099,-30400,-30400,
+2022,7,2023-02-05,Bulletin-20230205.pdf,238580,19882,16269,3484,111452,143558,-32106,-32106,
+2022,8,2023-02-05,Bulletin-20230205.pdf,238580,19882,8973,3307,123733,168711,-44978,-44978,
+2022,9,2023-02-05,Bulletin-20230205.pdf,238580,19882,12753,3508,136486,202218,-65732,-65732,"the Nov 6, 2022 quarterly report gives Jan-Sep 2022 regular collections 107,707 (= the sum of the nine monthly collections) PLUS online 32,287 (= the sum of the nine online figures) = total collections 139,994; the yearly table says online is included in the monthly figure; the two reports cannot both be right (with online added, the year's collections would exceed the year's total revenue); recorded, not resolved"
+2022,10,2023-02-05,Bulletin-20230205.pdf,238580,19882,16032,5230,152518,229055,-76537,-76537,
+2022,11,2023-02-05,Bulletin-20230205.pdf,238580,19882,28257,3624,180680,261493,-80813,-80813,
+2022,12,2023-02-05,Bulletin-20230205.pdf,238580,19882,79277,13481,259957,291726,-31770,-31769,"bulletin prints (31,770.00); 259,957 - 291,726 = -31,769; CRA 2022: 4700 = 259,956, 5100 = 291,727 (within a dollar)"
+2023,1,2023-04-16,Bulletin-20230416.pdf,292450,24371,19742,5475,25217,28293,-3076,-3076,"table of Jan-Mar 2023 (repeated Apr 23, 2023): columns are the MONTHS, not year-to-date, despite the row labels; a total column gives 57,748 / 75,039 / (17,291); revenue = collections + online exactly"
+2023,2,2023-04-16,Bulletin-20230416.pdf,292450,24371,12167,3611,15778,20640,-4862,-4862,monthly figure
+2023,3,2023-04-16,Bulletin-20230416.pdf,292450,24371,13950,2803,16753,26106,-9353,-9353,"monthly figure; last financial statement in any bulletin (none from April 2023 to October 18, 2026)"
