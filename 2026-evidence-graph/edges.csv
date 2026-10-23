@@ -832,3 +832,5 @@ s_oct6m_window,s_db_window,echoes,"Daybreak 03:11, three days later: « December
 s_oct6m_ops,x_decided,bears_on,« il fallait qu'on prenne des décisions … faisable au niveau opération et budgétaire ».,
 s_oct6m_ops,x_stormonly,bears_on,The storm days are named (« pendant la journée où la tempête tombe ») as the days the crews work elsewhere; the storm-only option is not mentioned.,
 s_oct6m_lines,x_safety_addressed,bears_on,"The reason given for not widening the remaining lane is operations, budget and the regulations; safety is not mentioned.",
+s_oct6m_exact,s_db_perm,differs_from,"Oct 6: one side, winter only, back in summer (« Exact. C'est exactement ça. »); Daybreak, Oct 9: « for now, we're looking at it in a way that will make it permanent » (ambiguous: the seasonal measure every winter, or the one-side layout).",
+s_oct6m_exact,d_aug13,differs_from,"The mayor's office mandate of August 13 asks for a permanent bidirectional lane on one side and parking restored (bundle 01, pp. 1–2); the winter-only measure is its « Volet 1 … mesure transitoire » (Aug 20).",
