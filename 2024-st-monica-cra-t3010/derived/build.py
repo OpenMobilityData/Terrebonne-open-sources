@@ -374,6 +374,16 @@ if years:
     if os.path.exists(os.path.join(HERE, 'parish_statements_monthly.csv')):
         r = subprocess.run([sys.executable, os.path.join(HERE, 'parish_statements.py')], capture_output=True, text=True, errors='replace')
         log('Parish statements: ' + ('done (statements_vs_returns_*.tex, figures/parish_*)' if r.returncode == 0 else 'FAILED ' + r.stderr[-800:]))
+    # Streets around the churches (City open data and OpenStreetMap extracts kept outside the repository, see
+    # peer_streets.py): runs only where those files are on the machine; otherwise the committed tables stand.
+    import peer_streets
+    if all(os.path.exists(p) for p, _, _ in peer_streets.FILES.values()) and os.path.isdir(peer_streets.OSM):
+        r = subprocess.run([sys.executable, os.path.join(HERE, 'peer_streets.py')], capture_output=True, text=True, errors='replace')
+        if r.returncode == 0:
+            r = subprocess.run([sys.executable, os.path.join(HERE, 'peer_streets_map.py')], capture_output=True, text=True, errors='replace')
+        log('Streets around the churches: ' + ('done (peer_streets*.csv, peer_streets_table_*.tex, figures/peer_streets_map_*)' if r.returncode == 0 else 'FAILED ' + r.stderr[-800:]))
+    else:
+        log('Streets around the churches: source files not on this machine; committed peer_streets* files kept')
     stamp = datetime.datetime.now(zoneinfo.ZoneInfo('America/Toronto')).strftime('%Y-%m-%d-%H-%M-%S')
     for tex in [os.path.join(HERE, f) for f in ('st_monica_t3010_note_en.tex', 'st_monica_t3010_note_fr.tex', 'st_monica_executive_summary_en.tex', 'st_monica_slides_en.tex')]:
         if not (os.path.exists(tex) and shutil.which('pdflatex')):
