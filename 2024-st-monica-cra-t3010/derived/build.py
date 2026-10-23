@@ -213,7 +213,9 @@ T = {
             src='Source: Canada Revenue Agency, registered charity information returns (T3010) of the Fabrique de la paroisse de Sainte-Monique, BN 130341852RR0001, as released ',
             r4500='Tax-receipted gifts (4500)', r4530='Other gifts, no receipt (4530)', r4650='Other revenue (4650)', r4610='Rental income (4610)', rgov='Governments (4540–4560)', rother='Other lines',
             e4880='Compensation (4880)', e4850='Occupancy (4850)', e4840='Office (4840)', e4860='Professional fees (4860)', e4920='Other expenditures (4920)', eother='Other lines',
-            a4100='Cash and short-term (4100)', a4140='Long-term investments (4140)', aland='Land and buildings (4155)', aother='Other assets', liab='Total liabilities (4350)'),
+            a4100='Cash and short-term (4100)', a4140='Long-term investments (4140)', aland='Land and buildings (4155)', aother='Other assets', liab='Total liabilities (4350)',
+            o4650='Other revenue (line 4650), the line that named masses, funerals and weddings', o4650sub='Line 4650 of Schedule 6, $ thousand; the description filed on line 4655 where there is one; « none » = no value filed',
+            onone='none'),
  'fr': dict(rev='Revenus et dépenses', revsub='Total des revenus (ligne 4700) et total des dépenses (ligne 5100), par exercice',
             revcat='Revenus par ligne', revcatsub='Lignes de la section D / annexe 6 du formulaire T3010; « autres » = le total moins les lignes montrées',
             expcat='Dépenses par ligne', expcatsub='Lignes de la section D / annexe 6 du formulaire T3010; « autres » = le total moins les lignes montrées',
@@ -222,7 +224,9 @@ T = {
             src='Source : Agence du revenu du Canada, déclarations de renseignements des organismes de bienfaisance (T3010) de la Fabrique de la paroisse de Sainte-Monique, NE 130341852RR0001, telles que communiquées ',
             r4500='Dons avec reçu (4500)', r4530='Autres dons, sans reçu (4530)', r4650='Autres revenus (4650)', r4610='Revenus de location (4610)', rgov='Gouvernements (4540–4560)', rother='Autres lignes',
             e4880='Rémunération (4880)', e4850='Occupation (4850)', e4840='Bureau (4840)', e4860='Honoraires (4860)', e4920='Autres dépenses (4920)', eother='Autres lignes',
-            a4100='Encaisse et court terme (4100)', a4140='Placements à long terme (4140)', aland='Terrains et bâtiments (4155)', aother='Autres actifs', liab='Total du passif (4350)'),
+            a4100='Encaisse et court terme (4100)', a4140='Placements à long terme (4140)', aland='Terrains et immeubles (4155)', aother='Autres actifs', liab='Total du passif (4350)',
+            o4650='Autres revenus (ligne 4650), la ligne qui nommait messes, funérailles et mariages', o4650sub='Ligne 4650 de l\'annexe 6, k$; la description déclarée à la ligne 4655 lorsqu\'il y en a une; « aucune » = aucune valeur déclarée',
+            onone='aucune'),
 }
 
 def srcline(lang):
@@ -311,7 +315,28 @@ if plt and years:
         ax.plot(years, [val(y, 4350) for y in years], linestyle='none', marker='D', markersize=5, color=INK, label=t['liab'])
         ax.legend(frameon=False, fontsize=8, loc='upper right', ncol=2, labelcolor=INK)
         finish(fig, ax, lang, 'assets_by_line')
-    log(f'Charts written to figures/ for {len(years)} years')
+        # 5. Line 4650 on its own, with the text of line 4655 where filed.
+        fig, ax = plt.subplots(figsize=(9, 4.8))
+        style(ax, lang, t['o4650'], t['o4650sub'])
+        vals = [val(y, 4650) for y in years]
+        ax.bar(years, vals, width=0.72, color=PAL[2], edgecolor='white', linewidth=1.2)
+        top = max(vals) if vals else 0
+        for y, v in zip(years, vals):
+            if has(y, 4650):
+                ax.text(y, v + top * 0.015, f'{v/1000:,.1f}'.replace(',', ' ' if lang == 'fr' else ','), ha='center', va='bottom', fontsize=7, color=INK2)
+            else:
+                ax.text(y, top * 0.015, t['onone'], ha='center', va='bottom', fontsize=7, color=INK2, rotation=90)
+        k = 0
+        for y in years:
+            txt = best.get((y, 4655), {}).get('text', '').strip()
+            if txt:
+                v = val(y, 4650)
+                ax.annotate(f'{y}: « ' + ' '.join(txt.split()).rstrip('-').strip() + ' »', xy=(y, v + top * 0.07), xytext=(y - (1.5 if y > years[-3] else 0), top * (1.17 + 0.1 * (k % 2))), textcoords='data',
+                            ha='center', va='bottom', fontsize=7, color=INK, arrowprops=dict(arrowstyle='-', color=INK2, lw=0.6))
+                k += 1
+        ax.set_ylim(0, top * 1.4)
+        finish(fig, ax, lang, 'other_revenue_4650')
+    log(f'Charts written to figures/ for {len(years)} years (five charts, EN and FR)')
 
 
 # ---------------------------------------------------------------- LaTeX note
