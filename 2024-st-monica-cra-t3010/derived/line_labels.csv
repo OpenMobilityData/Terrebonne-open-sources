@@ -1,0 +1,61 @@
+line,group,label_en,label_fr,status,note
+4100,asset,"Cash, bank accounts and short-term investments","Encaisse, comptes bancaires et placements à court terme",checked,"2020 value matches the parish's balance sheet (bulletin, Oct 2021): total cash 159,573.59; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4110,asset,Receivables from non-arms-length persons,Montants à recevoir de personnes ayant un lien de dépendance,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4120,asset,Receivables,Montants à recevoir de toutes les autres personnes,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4130,asset,Investments in non-arm's length persons,Placements dans des personnes ayant un lien de dépendance,form,
+4140,asset,Long-Term Investments,Placements à long terme,checked,"2020 value matches the balance sheet's GICs (54,325.56); wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4150,asset,Inventories,Stocks,form,
+4155,asset,Land and Buildings,Terrains et bâtiments au Canada,checked,"567,643 every year 2009–2018 = the balance sheet's « Church, Rectory Land » 567,642.95; the 2008 return carries the same value on line 4160; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4160,asset,Other capital assets in Canada (2008 form: the capital-assets line carrying land and buildings),Autres immobilisations au Canada (formulaire 2008 : ligne des immobilisations portant terrains et bâtiments),checked,"2008 only: 567,643, the same figure as 4155 in later years"
+4165,asset,Capital assets outside Canada,Immobilisations à l'extérieur du Canada,form,
+4166,asset,Accumulated amortization of capital assets,Amortissement cumulé des immobilisations,form,
+4170,asset,Other Assets,Autres actifs,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4180,asset,Ten-year gifts (included above),Dons assujettis à une période de dix ans (inclus ci-dessus),form,
+4200,asset,Total Assets,Total de l'actif,checked,"sum of the asset lines in every year on disk; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4300,liability,Accounts payable and accrued liabilities,Comptes créditeurs et charges à payer,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4310,liability,Deferred revenue,Revenus reportés,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4320,liability,Amounts owing to non-arm's length persons,Montants dus à des personnes ayant un lien de dépendance,form,
+4330,liability,Other liabilities,Autres passifs,form,
+4350,liability,Total Liabilities,Total du passif,checked,"equals 4300 in every year where both are present; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4500,revenue,Donations with tax receipts,Montant admissible total des dons pour lesquels des reçus ont été délivrés,checked,"the first revenue line of every form version; the largest revenue line every year; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4505,revenue,Ten-year gifts included in 4500,Dons de dix ans inclus dans 4500,form,
+4510,revenue,Total amount received from other registered charities,Montant total reçu d'autres organismes de bienfaisance enregistrés,form,
+4530,revenue,Donations without tax receipts,Total des autres dons (sans reçu),quick_view,"present 2015–2018 (24,600 to 46,244); wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4540,revenue,Total revenue received from federal government,Revenus du gouvernement fédéral,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4550,revenue,Total revenue received from provincial/territorial governments,Revenus des gouvernements provinciaux ou territoriaux,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4560,revenue,Revenue from municipal or regional governments,Revenus des administrations municipales ou régionales,form,
+4565,revenue,Revenue from governments (line of the 2019 and later forms),Revenus des gouvernements (ligne des formulaires 2019 et suivants),unverified,label to be confirmed against the CRA data dictionary before use
+4570,revenue,Revenue line whose meaning differs by form version,Ligne de revenus dont le sens varie selon la version du formulaire,unverified,not labelled on the quick-view transcription; check the CRA data dictionary
+4571,revenue,Gross proceeds from disposition of assets,Produit brut de la disposition d'actifs,form,
+4575,revenue,Net proceeds from disposition of assets,Produit net de la disposition d'actifs,form,
+4580,revenue,Interest and Investment Income,Intérêts et revenus de placements,quick_view,quick view: « Total interest and investment income »; 2018 value 239 identical in the CRA CSV and the quick-view transcription
+4590,revenue,Revenue line whose meaning differs by form version,Ligne de revenus dont le sens varie selon la version du formulaire,unverified,not labelled on the quick-view transcription; check the CRA data dictionary
+4600,revenue,Revenue line whose meaning differs by form version,Ligne de revenus dont le sens varie selon la version du formulaire,unverified,not labelled on the quick-view transcription; check the CRA data dictionary
+4610,revenue,Building/Land Rental,Revenus bruts de location de terrains ou de bâtiments,quick_view,"quick view: « Gross income received from rental of land and/or buildings »; 2018 value 6,435 identical in the CRA CSV and the transcription"
+4620,revenue,Revenue line whose meaning differs by form version,Ligne de revenus dont le sens varie selon la version du formulaire,unverified,not labelled on the quick-view transcription; check the CRA data dictionary
+4630,revenue,Membership and association fees without tax receipts,Revenus sans reçu (ligne du formulaire; sens selon la version),quick_view,"382 to 11,883; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4640,revenue,Revenue line whose meaning differs by form version,Ligne de revenus dont le sens varie selon la version du formulaire,unverified,not labelled on the quick-view transcription; check the CRA data dictionary
+4650,revenue,"Other revenues (masses, funerals, weddings, etc)",Autres revenus non inclus ailleurs,checked,"line 4655 names it in 2011: « Masses, funeral, weddings etc »; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4655,revenue,Specify type(s) of revenue included in the amount reported at 4650,Description des revenus de 4650,checked,"text line; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4700,revenue,"Total revenue (add lines 4500, 4510 to 4560, 4575, 4580, and 4600 to 4650)",Total des revenus,checked,"the revenue total of every form version; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4800,expenditure,Advertising and promotion,Publicité et promotion,form,
+4810,expenditure,Travel and vehicle expenses,Frais de déplacement et de véhicule,form,
+4820,expenditure,Interest and Bank Charges,Intérêts et frais bancaires,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4830,expenditure,"Licences, memberships, and dues","Permis, adhésions et cotisations",quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4840,expenditure,Office Supplies & Expenses,Fournitures et frais de bureau,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4850,expenditure,Occupancy Costs,Frais d'occupation,checked,"592,737 in 2012, the year of the parish's largest expenditures; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4860,expenditure,Professional Fees,Honoraires professionnels et de consultation,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4870,expenditure,Staff Training,Formation du personnel et des bénévoles,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4880,expenditure,Salaries,Total des dépenses de rémunération,checked,"2011: equals the total of Schedule 3 (147,183); wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4890,expenditure,Fair market value of donated goods used in charitable activities,Juste valeur marchande des biens donnés utilisés,form,
+4891,expenditure,purchased supplies and assets,Fournitures et actifs achetés,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4900,expenditure,Amortization of capitalized assets,Amortissement des immobilisations,form,
+4910,expenditure,Research grants and scholarships,Subventions de recherche et bourses,form,
+4920,expenditure,Contribution to Diocese etc,Toutes les autres dépenses non incluses ailleurs,checked,"line 4930 names it: « Contributions to diocese GST & QST » (2011), « GST & QST » (2012); wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4930,expenditure,Specify type(s) of expenditures included in the amount reported at 4920,Description des dépenses de 4920,checked,"text line; wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+4950,expenditure,Total expenditures before qualifying disbursements,Total des dépenses avant les dons aux donataires reconnus,checked,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+5000,expenditure,Total Expenditures on charitable activities,Dépenses consacrées aux activités de bienfaisance,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+5010,expenditure,Total Expenditures on management and administration,Dépenses de gestion et d'administration,quick_view,"wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"
+5020,expenditure,Expenditures on fundraising,Dépenses de collecte de fonds,form,
+5050,expenditure,Total gifts to qualified donees,Total des dons aux donataires reconnus,form,
+5100,expenditure,Total expenditures (add lines 4950 and 5050),Total des dépenses,checked,"equals 4950 in every year on disk (within 2 dollars of rounding in 2014–2015); wording of the CRA's Charities Listings quick view, as transcribed in the owner's Numbers table (Dec 2024)"

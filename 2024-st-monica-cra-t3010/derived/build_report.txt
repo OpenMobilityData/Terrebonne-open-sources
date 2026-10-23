@@ -1,0 +1,20 @@
+E-mailed CRA files (reply of Dec 6, 2024):
+  2008: T3010 Return.csv: 46 fields
+  2009: Financial Section.csv: 23 fields
+  2010: Financial Section.csv: 24 fields
+  2011: Financial Section.csv: 25 fields
+  2012: Financial Section.csv: 22 fields
+  2013: Financial Section.csv: 22 fields
+  2014: Financial Section D and Schedule 6.csv: 24 fields
+  2015: Financial Section.csv: 25 fields
+  2016: Financial Section.csv: 25 fields
+  2017: Financial Section.csv: 22 fields
+  2018: Financial Section.csv: 22 fields
+Open Canada extracts: none yet (raw/open-canada/SOURCES.tsv absent)
+Manual entries: 120
+Fiscal years covered: 2008–2023 (16 years)
+  check: 2018 asset lines sum to 750031, line 4200 is 750051
+  check: 2019 asset lines sum to 732120, line 4200 is 741843
+  check: 2020 asset lines sum to 794250, line 4200 is 794350
+Charts written to figures/ for 16 years
+Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-06-55-02

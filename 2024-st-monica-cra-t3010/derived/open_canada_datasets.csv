@@ -1,0 +1,8 @@
+year,dataset_id,dataset_url,financial_resource_url,status,note
+2019,,https://search.open.canada.ca/opendata/?search_text=list+of+charities,,to_find,"dataset id not yet located (search the portal for « 2019 List of charities »)"
+2020,5577f7aa-7a96-4c59-bc01-47ad54203930,https://open.canada.ca/data/en/dataset/5577f7aa-7a96-4c59-bc01-47ad54203930,,to_fetch,
+2021,3e8a4d9f-9a12-4498-9a0b-a5c81d3281b4,https://open.canada.ca/data/en/dataset/3e8a4d9f-9a12-4498-9a0b-a5c81d3281b4,,to_fetch,
+2022,b2acb3be-c720-4329-a8c0-d4d36c8db61e,https://open.canada.ca/data/en/dataset/b2acb3be-c720-4329-a8c0-d4d36c8db61e,,to_fetch,
+2023,05b3abd0-e70f-4b3b-a9c5-acc436bd15b6,https://open.canada.ca/data/en/dataset/05b3abd0-e70f-4b3b-a9c5-acc436bd15b6,https://open.canada.ca/data/dataset/05b3abd0-e70f-4b3b-a9c5-acc436bd15b6/resource/0b9b4b01-5cb6-4981-b007-ae88f48cc799/download,to_fetch,"resource 0b9b4b01… is titled « Financial data » on the portal (seen in a search result Oct 23, 2026; the /download form of the URL not yet tested)"
+2024,80c00cdb-1358-415c-bb8b-0de7f12675b8,https://open.canada.ca/data/en/dataset/80c00cdb-1358-415c-bb8b-0de7f12675b8,https://open.canada.ca/data/dataset/80c00cdb-1358-415c-bb8b-0de7f12675b8/resource/e545170c-3689-4833-b2a8-e9e83100ab59/download/financial_d_and_schedule_6_2024_updated.csv,to_fetch,"URL answered a range request on Oct 23, 2026 (HTTP 206, text/csv; header BN,FPE,Form ID,Section Used,4020,…)"
+2025,,https://search.open.canada.ca/opendata/?search_text=list+of+charities,,to_find,"check whether a 2025 edition exists (returns with a fiscal period ending in 2025)"
