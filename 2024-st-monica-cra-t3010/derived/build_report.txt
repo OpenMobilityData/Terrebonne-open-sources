@@ -27,5 +27,5 @@ Manual entries: 0
 Fiscal years covered: 2008–2024 (17 years)
   check: 2018 asset lines sum to 750031, line 4200 is 750051
 Charts written to figures/ for 17 years
-Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-07-20-47
-Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-07-20-47
+Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-07-25-50
+Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-07-25-50
