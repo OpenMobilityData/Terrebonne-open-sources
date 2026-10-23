@@ -31,7 +31,7 @@ Peer comparison: done (peer_comparison_*.csv, figures/peers_*)
 Detection threshold: done (detection_threshold.csv, detection_threshold_*.tex, detection_sentence_*.tex)
 Parish statements: done (statements_vs_returns_*.tex, figures/parish_*)
 Streets around the churches: done (peer_streets*.csv, peer_streets_table_*.tex, figures/peer_streets_map_*)
-Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-10-58-02
-Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-10-58-02
-Note compiled: st_monica_executive_summary_en.pdf, version 2026-10-23-10-58-02
-Note compiled: st_monica_slides_en.pdf, version 2026-10-23-10-58-02
+Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-11-15-49
+Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-11-15-49
+Note compiled: st_monica_executive_summary_en.pdf, version 2026-10-23-11-15-49
+Note compiled: st_monica_slides_en.pdf, version 2026-10-23-11-15-49

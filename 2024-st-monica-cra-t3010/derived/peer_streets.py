@@ -43,7 +43,12 @@ CHURCH = {'130341852RR0001': '159503777', '107362766RR0001': '158242591', '10736
           '131324782RR0001': '190139125', '107362659RR0001': '47332072', '118910025RR0001': '47332072',
           '131158727RR0001': '504323370', '119232247RR0001': '47331997', '107359119RR0001': '208178604',
           '118994094RR0001': '47331733'}
-SHORT = {'130341852RR0001': 'Sainte-Monique', '107362766RR0001': 'Notre-Dame-des-Neiges', '107369068RR0001': 'Saint-Kevin',
+# A reference church outside the comparison (no T3010 figures used): the owner's suggestion of Oct 23, 2026, a church
+# with large Sunday turnouts, no off-street lot and no assured street parking (Mile End, Le Plateau-Mont-Royal).
+REFERENCE = [dict(bn='ref_st_michael', legal_name="Saint Michael's and Saint Anthony's (reference)", address='105 RUE SAINT-VIATEUR OUEST',
+                  city='MONTREAL', role='reference', lonlat=(-73.59997, 45.52465))]
+CHURCH['ref_st_michael'] = '353024298'
+SHORT = {'ref_st_michael': "Saint Michael's and Saint Anthony's", '130341852RR0001': 'Sainte-Monique', '107362766RR0001': 'Notre-Dame-des-Neiges', '107369068RR0001': 'Saint-Kevin',
          '107362980RR0001': 'Saint-Antonin', '119232296RR0001': 'Saint-Malachie', '130365521RR0001': 'Saint-Léon',
          '131324782RR0001': 'Ascension of Our Lord', '107362659RR0001': 'Notre-Dame-de-Grâce', '118910025RR0001': 'Saint Augustine of Canterbury',
          '131158727RR0001': 'Saint-Raymond', '119232247RR0001': 'Saint-Ignace-de-Loyola', '107359119RR0001': 'Sainte-Catherine-de-Sienne',
@@ -55,6 +60,7 @@ ALONG = 0.6           # a lane piece lies along a segment when this share of its
 PARALLEL = 0.85       # ... and runs in the same direction (|cos| of the angle between the two)
 FRONT_POLE_M = 80     # a pole on a frontage segment farther than this from the church counts with the adjacent blocks
 CHANGE_YEARS = range(2019, 2025)
+SUNDAY_M = 150       # radius of the Sunday-morning curb measure, metres from the church's outline
 LATER_YEARS = range(2025, 2027)
 
 
@@ -145,6 +151,54 @@ def classify(desc):
     return 'other'
 
 
+DAYS = ['LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM', 'DIM']
+MONTHS = {'JANV': 1, 'FEV': 2, 'FÉV': 2, 'MARS': 3, 'AVRIL': 4, 'AVR': 4, 'MAI': 5, 'JUIN': 6, 'JUIL': 7, 'AOUT': 8, 'AOÛT': 8,
+          'SEPT': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12, 'DÉC': 12}
+
+
+def sunday(desc, month, t0=10.0, t1=12.0):
+    """What a sign means for a visitor without a permit on a Sunday between 10:00 and 12:00 in the given month:
+    'excluded' (no stopping or parking, residents' permit only, or reserved for others), 'limited' (a time limit
+    under two hours), or 'open' (the sign does not apply then). Read from the sign's text (the City's RPA
+    description): days (none named = every day; « jours d'école » = weekdays), hours (none = all day), months."""
+    import re
+    d = desc.upper().replace('.', ' ').replace('  ', ' ')
+    ban, lim = d.startswith('\\A') or d.startswith('\\P'), d.startswith('P ')
+    if not (ban or lim):
+        return 'open'
+    m = re.search(r'(\d+)\s*(JANV|FEV|FÉV|MARS|AVRIL|AVR|MAI|JUIN|JUIL|AOUT|AOÛT|SEPT|OCT|NOV|DEC|DÉC)\w*\s+(?:AU|A)\s+(\d+)?\s*(JANV|FEV|FÉV|MARS|AVRIL|AVR|MAI|JUIN|JUIL|AOUT|AOÛT|SEPT|OCT|NOV|DEC|DÉC)', d) \
+        or re.search(r'()(SEPT|OCT|NOV)\w*\s+A\s+()(JUIN)', d)
+    if m:
+        a, b = MONTHS[m.group(2)], MONTHS[m.group(4)]
+        inside = a <= month <= b if a <= b else (month >= a or month <= b)
+        if not inside:
+            return 'open'
+    days = set()
+    for x, y in re.findall(r'\b(LUN|MAR|MER|JEU|VEN|SAM|DIM)\w*\s+(?:AU|A)\s+(LUN|MAR|MER|JEU|VEN|SAM|DIM)', d):
+        days |= set(DAYS[DAYS.index(x):DAYS.index(y) + 1])
+    for w in re.findall(r'\b(LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE|LUN|MAR|MER|JEU|VEN|SAM|DIM)\b', d):
+        days.add(w[:3])
+    if "JOURS D'ECOLE" in d or 'JOURS DE CLASSE' in d:
+        days |= set(DAYS[:5])
+    if days and 'DIM' not in days:
+        return 'open'
+    hours = re.findall(r'(\d{1,2})\s*H?\s*(\d{2})?\s*-\s*(\d{1,2})\s*H\s*(\d{2})?', d)
+    if hours:
+        hit = False
+        for h0, m0, h1, m1 in hours:
+            a, b = int(h0) + int(m0 or 0) / 60, int(h1) + int(m1 or 0) / 60
+            hit |= (a < t1 and b > t0) if a < b else (b > t0 or a < t1)  # overnight spans
+        if not hit:
+            return 'open'
+    if ban:
+        return 'excluded'
+    if 'RESERVE' in d or 'SEULEMENT' in d:
+        return 'excluded'
+    mm = re.search(r'P\s+(\d+)\s*MIN', d); hh = re.search(r'P\s+0?(\d)\s*H\b', d)
+    minutes = int(mm.group(1)) if mm else (int(hh.group(1)) * 60 if hh else 999)
+    return 'limited' if minutes < 120 else 'open'
+
+
 def address_point(G, address):
     """Interpolate the filed civic number on its géobase segment (the matching side's range)."""
     import re, unicodedata
@@ -165,7 +219,7 @@ def address_point(G, address):
 
 
 def main():
-    peers = list(csv.DictReader(open(os.path.join(HERE, 'peer_parishes.csv'), encoding='utf-8')))
+    peers = list(csv.DictReader(open(os.path.join(HERE, 'peer_parishes.csv'), encoding='utf-8'))) + REFERENCE
     G = json.load(open(FILES['geobase'][0], encoding='utf-8'))['features']
     for f in G:
         f['xy'] = [xy(*c) for c in f['geometry']['coordinates']]
@@ -178,14 +232,14 @@ def main():
     S20, S24 = gpkg_lines(FILES['survey2020'][0]), gpkg_lines(FILES['survey2024'][0])
     signs = []
     for r in csv.DictReader(open(FILES['signs'][0], encoding='utf-8-sig')):
-        if r['Latitude'] and 45.44 < float(r['Latitude']) < 45.51 and -73.68 < float(r['Longitude']) < -73.58:
+        if r['Latitude'] and 45.44 < float(r['Latitude']) < 45.54 and -73.68 < float(r['Longitude']) < -73.58:
             r['xy'] = xy(float(r['Longitude']), float(r['Latitude'])); signs.append(r)
     imagery = {r['bn']: r for r in csv.DictReader(open(os.path.join(HERE, 'peer_streets_imagery_check.csv'), encoding='utf-8'))} \
         if os.path.exists(os.path.join(HERE, 'peer_streets_imagery_check.csv')) else {}
 
     rows, sign_rows, geo = [], [], {}
     for p in peers:
-        bn = p['bn']; lonlat = address_point(G, p['address'])
+        bn = p['bn']; lonlat = p.get('lonlat') or address_point(G, p['address'])
         nodes, ways, shape = osm_extract(bn, lonlat)
         C = shape(CHURCH[bn]); cc = centroid(C)
         near = [f for f in G if math.dist(f['xy'][0], cc) < 800]
@@ -259,7 +313,10 @@ def main():
             sign_rows.append(dict(bn=bn, parish=SHORT[bn], street=fp['ODONYME'].strip(), segment=tid, where=where, pole=r['POTEAU_ID_POT'],
                                   panel=r['PANNEAU_ID_PAN'], text=r['DESCRIPTION_RPA'], code=r['CODE_RPA'], reading=cls, arrow=r['FLECHE_PAN'],
                                   status=r['DESCRIPTION_REP'], pole_version_date=r['DATE_CONCEPTION_POT'], action=r['DESCRIPTION_RAC'],
-                                  action_date=r['DATE_EXECUTION_ACT'], lon=r['Longitude'], lat=r['Latitude']))
+                                  action_date=r['DATE_EXECUTION_ACT'], lon=r['Longitude'], lat=r['Latitude'],
+                                  face=f"{tid}{'L' if side > 0 else 'R'}", church_side_of_street='yes' if side == line_dist(cc, f['xy'])[1] else 'no',
+                                  dist_church_m=f"{line_dist(r['xy'], C)[0]:.0f}",
+                                  sunday_june=sunday(r['DESCRIPTION_RPA'], 6), sunday_february=sunday(r['DESCRIPTION_RPA'], 2)))
             if r['DESCRIPTION_REP'] == 'Réel':
                 by_side.setdefault(where, {}).setdefault(cls, set()).add(r['POTEAU_ID_POT'])
         def summary(where):
@@ -281,6 +338,35 @@ def main():
         sign_change, sign_later = changes(CHANGE_YEARS), changes(LATER_YEARS)
         in_city_signs = any(r for r in signs if math.dist(r['xy'], cc) < 300)
 
+        # Sunday morning, 10:00-12:00: every street face (segment x side) within SUNDAY_M of the church. A face is closed
+        # to a visitor when every pole on it carries a sign excluding a visitor then, or when a residents' permit sign
+        # (S3R) applies then; open otherwise (a face with no sign is open under the general rules). Length-weighted.
+        sunday_cols = {}
+        if in_city_signs:
+            zone = [f for f in near if not (f['properties']['ODONYME'] or '').startswith('Autoroute') and lines_dist(C, f['xy']) <= SUNDAY_M]
+            poles = {}
+            for r in signs:
+                if r['DESCRIPTION_REP'] != 'Réel' or min(math.dist(r['xy'], f['xy'][0]) for f in zone) > 500:
+                    continue
+                (dmin, side), f = min(((line_dist(r['xy'], g['xy']), g) for g in near), key=lambda x: x[0][0])
+                if dmin <= POLE_M and f in zone:
+                    poles.setdefault((f['properties']['ID_TRC'], side), {}).setdefault(r['POTEAU_ID_POT'], []).append(r['DESCRIPTION_RPA'])
+            for month, tag in ((6, 'june'), (2, 'february')):
+                total = closed = permit = 0.0
+                for f in zone:
+                    L = sum(math.dist(f['xy'][i], f['xy'][i + 1]) for i in range(len(f['xy']) - 1))
+                    for side in (1, -1):
+                        P = poles.get((f['properties']['ID_TRC'], side), {})
+                        st = {pid: [sunday(t, month) for t in texts] for pid, texts in P.items()}
+                        is_permit = any('S3R' in t.upper() and sunday(t, month) == 'excluded' for texts in P.values() for t in texts)
+                        all_closed = bool(st) and all('excluded' in v for v in st.values())
+                        total += L
+                        if is_permit or all_closed:
+                            closed += L
+                            permit += L if is_permit else 0
+                sunday_cols[f'sunday_{tag}_curb_closed_pct'] = f'{100 * closed / total:.0f}' if total else ''
+                sunday_cols[f'sunday_{tag}_curb_permit_pct'] = f'{100 * permit / total:.0f}' if total else ''
+            sunday_cols['sunday_curb_m'] = f'{total:.0f}'
         lots = []
         for w, (nds, t) in ways.items():
             if t.get('amenity') == 'parking' and len(nds) > 2:
@@ -305,7 +391,7 @@ def main():
             sign_changes_frontage_2025_2026=sign_later or ('none on record' if in_city_signs else 'not in the City dataset (another municipality)'),
             parking_lot_osm=' | '.join(lots) or 'none mapped within 30 m',
             parking_lot_imagery=im.get('seen', 'not checked'), imagery_checked=im.get('checked', ''), imagery_source=im.get('source', ''),
-            note=im.get('note', '')))
+            note=im.get('note', ''), **{k: sunday_cols.get(k, 'not in the City dataset') for k in ('sunday_curb_m', 'sunday_june_curb_closed_pct', 'sunday_june_curb_permit_pct', 'sunday_february_curb_closed_pct', 'sunday_february_curb_permit_pct')}))
         r = rows[-1]
         protected = 'protected all year: Oui' in r['lane_on_frontage_now']
         r['frontage_lane'] = 'protected' if protected else ('painted or shared' if r['lane_on_frontage_now'] != 'none' else 'none')
@@ -340,6 +426,12 @@ TT = {'en': dict(head=['', 'Parish', 'Lane on the frontage today', '2024 / 2019-
                  none='aucune', nr='--', yes='oui', no='non', other='hors données de la Ville', same='idem', lot={'yes': 'oui', 'no': 'non', 'not checked': 'non vérifié'})}
 
 
+SU = {'en': dict(head=['Church', 'Lane on the frontage', 'Off-street lot', 'Curb within 150~m (m)', 'Closed to a visitor', 'of which residents\' permit'],
+                 prot='protected', paint='painted', new=' (new)', ref='(reference, outside the comparison)'),
+      'fr': dict(head=['Église', 'Voie en façade', 'Stationnement hors rue', 'Bordure à moins de 150~m (m)', 'Fermée à un visiteur', 'dont vignette de résident'],
+                 prot='protégée', paint='bande', new=' (nouvelle)', ref='(référence, hors comparaison)')}
+
+
 def tex_escape(x):
     return x.replace('&', '\\&').replace('%', '\\%').replace('_', '\\_')
 
@@ -351,7 +443,7 @@ def write_tables(rows, sign_rows):
         t = TT[lang]; k = KIND[lang]
         out = ['\\begin{tabular}{@{}r>{\\raggedright\\arraybackslash}p{3.4cm}>{\\raggedright\\arraybackslash}p{4.2cm}>{\\raggedright\\arraybackslash}p{4.4cm}>{\\raggedright\\arraybackslash}p{1.7cm}r@{}}\\toprule', ' & '.join(t['head']) + ' \\\\\\midrule']
         i = 0
-        for r in rows:
+        for r in [r for r in rows if r['role'] != 'reference']:
             i += 0 if r['bn'] == '118910025RR0001' else 1  # same church as Notre-Dame-de-Grâce: same number as on the map
             def lanes(field):
                 if r[field] in ('none', 'none recorded'):
@@ -375,6 +467,21 @@ def write_tables(rows, sign_rows):
             out.append(' & '.join([str(i), name, tex_escape('; '.join(now) or t['none']), tex_escape(surveys), t['lot'][r['off_street_lot']], poles_s]) + ' \\\\')
         out.append('\\bottomrule\n\\end{tabular}')
         open(os.path.join(HERE, f'peer_streets_table_{lang}.tex'), 'w', encoding='utf-8').write('\n'.join(out) + '\n')
+        # the Sunday-morning table: every row with the measure, the reference church last
+        u = SU[lang]
+        out = ['\\begin{tabular}{@{}>{\\raggedright\\arraybackslash}p{4.6cm}>{\\raggedright\\arraybackslash}p{2.6cm}>{\\raggedright\\arraybackslash}p{1.7cm}rrr@{}}\\toprule', ' & '.join(u['head']) + ' \\\\\\midrule']
+        lane = {'protected': u['prot'], 'painted or shared': u['paint'], 'none': t['none']}
+        for r in sorted([r for r in rows if r['role'] != 'reference' and r['sunday_curb_m'][:1].isdigit() and r['bn'] != '118910025RR0001'],
+                        key=lambda r: -int(r['sunday_june_curb_closed_pct'])) + [r for r in rows if r['role'] == 'reference']:
+            name = r['parish'] + (' ' + u['ref'] if r['role'] == 'reference' else '') + (' (+ St Augustine)' if r['bn'] == '107362659RR0001' else '')
+            if r['role'] == 'subject':
+                name = '\\textbf{' + name + '}'
+            if r['role'] == 'reference':
+                out.append('\\midrule')
+            out.append(' & '.join([name, lane[r['frontage_lane']] + (u['new'] if r['frontage_lane_new_since_2024_survey'] == 'yes' else ''), t['lot'][r['off_street_lot']],
+                                   f"{int(r['sunday_curb_m']):,}".replace(',', '\\,'), r['sunday_june_curb_closed_pct'] + '~\\%', r['sunday_june_curb_permit_pct'] + '~\\%']) + ' \\\\')
+        out.append('\\bottomrule\n\\end{tabular}')
+        open(os.path.join(HERE, f'peer_streets_sunday_table_{lang}.tex'), 'w', encoding='utf-8').write('\n'.join(out) + '\n')
 
 
 if __name__ == '__main__':

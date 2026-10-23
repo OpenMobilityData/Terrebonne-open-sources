@@ -37,7 +37,7 @@ T = {'en': dict(title='Bike lanes and off-street parking at the thirteen parish 
 
 def main():
     rows = list(csv.DictReader(open(os.path.join(HERE, 'peer_streets.csv'), encoding='utf-8')))
-    rows = [r for r in rows if r['bn'] != '118910025RR0001']  # same church as Notre-Dame-de-Grâce
+    rows = [r for r in rows if r['bn'] != '118910025RR0001' and r['role'] != 'reference']  # same church as Notre-Dame-de-Grâce; the reference church is in the tables only
     G = [[ps.xy(*c) for c in f['geometry']['coordinates']] for f in json.load(open(ps.FILES['geobase'][0], encoding='utf-8'))['features']]
     NET = []
     for f in json.load(open(ps.FILES['network'][0], encoding='utf-8'))['features']:
