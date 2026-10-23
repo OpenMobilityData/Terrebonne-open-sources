@@ -366,6 +366,10 @@ if years:
     if os.path.exists(os.path.join(RAW, 'open-canada-peers', 'SOURCES.tsv')):
         r = subprocess.run([sys.executable, os.path.join(HERE, 'peer_comparison.py')], capture_output=True, text=True, errors='replace')
         log('Peer comparison: ' + ('done (peer_comparison_*.csv, figures/peers_*)' if r.returncode == 0 else 'FAILED ' + r.stderr[-800:]))
+    # Detection threshold (needs peer_comparison_long.csv): table and the abstract's sentence, EN and FR.
+    if os.path.exists(os.path.join(HERE, 'peer_comparison_long.csv')):
+        r = subprocess.run([sys.executable, os.path.join(HERE, 'detection_threshold.py')], capture_output=True, text=True, errors='replace')
+        log('Detection threshold: ' + ('done (detection_threshold.csv, detection_threshold_*.tex, detection_sentence_*.tex)' if r.returncode == 0 else 'FAILED ' + r.stderr[-800:]))
     # The parish's own statements (parish_statements_monthly.csv): two charts and the cross-check table.
     if os.path.exists(os.path.join(HERE, 'parish_statements_monthly.csv')):
         r = subprocess.run([sys.executable, os.path.join(HERE, 'parish_statements.py')], capture_output=True, text=True, errors='replace')

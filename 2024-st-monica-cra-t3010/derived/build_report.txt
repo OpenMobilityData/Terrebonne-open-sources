@@ -28,6 +28,7 @@ Fiscal years covered: 2008–2024 (17 years)
   check: 2018 asset lines sum to 750031, line 4200 is 750051
 Charts written to figures/ for 17 years (five charts, EN and FR)
 Peer comparison: done (peer_comparison_*.csv, figures/peers_*)
+Detection threshold: done (detection_threshold.csv, detection_threshold_*.tex, detection_sentence_*.tex)
 Parish statements: done (statements_vs_returns_*.tex, figures/parish_*)
-Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-08-09-39
-Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-08-09-39
+Note compiled: st_monica_t3010_note_en.pdf, version 2026-10-23-08-21-15
+Note compiled: st_monica_t3010_note_fr.pdf, version 2026-10-23-08-21-15
