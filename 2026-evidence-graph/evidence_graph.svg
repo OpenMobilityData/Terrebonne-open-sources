@@ -2487,7 +2487,7 @@
 <!-- t_portal -->
 <g id="node84" class="node">
 <title>t_portal</title>
-<g id="a_node84"><a xlink:href="https://donnees.montreal.ca/dataset/velos-comptage" xlink:title="City open&#45;data portal: no\nKensington counter; only a City\ndetector at Girouard, westbound\n[2026&#45;10&#45;16]" target="_blank">
+<g id="a_node84"><a xlink:href="https://donnees.montreal.ca/dataset/cyclistes" xlink:title="City open&#45;data portal: no\nKensington counter; only a City\ndetector at Girouard, westbound\n[2026&#45;10&#45;16]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M4039.61,-2576.81C4039.61,-2576.81 3917.11,-2576.81 3917.11,-2576.81 3911.11,-2576.81 3905.11,-2570.81 3905.11,-2564.81 3905.11,-2564.81 3905.11,-2541.81 3905.11,-2541.81 3905.11,-2535.81 3911.11,-2529.81 3917.11,-2529.81 3917.11,-2529.81 4039.61,-2529.81 4039.61,-2529.81 4045.61,-2529.81 4051.61,-2535.81 4051.61,-2541.81 4051.61,-2541.81 4051.61,-2564.81 4051.61,-2564.81 4051.61,-2570.81 4045.61,-2576.81 4039.61,-2576.81"/>
 <text text-anchor="middle" x="3978.36" y="-2564.26" font-family="Helvetica,sans-Serif" font-size="9.00">City open&#45;data portal: no</text>
 <text text-anchor="middle" x="3978.36" y="-2554.51" font-family="Helvetica,sans-Serif" font-size="9.00">Kensington counter; only a City</text>
@@ -3692,7 +3692,7 @@
 <!-- t_portal_girouard -->
 <g id="node94" class="node">
 <title>t_portal_girouard</title>
-<g id="a_node94"><a xlink:href="https://donnees.montreal.ca/dataset/velos-comptage" xlink:title="City open&#45;data detector det&#45;00118\nat Girouard: its only Terrebonne\nchannel counts westbound, from\nOctober 23, 2025; Jan 22.6, Feb\n29.1, Mar 24.7 a day (2026)\n[2025&#45;10&#45;23]" target="_blank">
+<g id="a_node94"><a xlink:href="https://donnees.montreal.ca/dataset/cyclistes" xlink:title="City open&#45;data detector det&#45;00118\nat Girouard: its only Terrebonne\nchannel counts westbound, from\nOctober 23, 2025; Jan 22.6, Feb\n29.1, Mar 24.7 a day (2026)\n[2025&#45;10&#45;23]" target="_blank">
 <path fill="#e8f1fb" stroke="#9aa0a6" stroke-width="0.6" d="M3975.91,-2747.49C3975.91,-2747.49 3845.91,-2747.49 3845.91,-2747.49 3839.91,-2747.49 3833.91,-2741.49 3833.91,-2735.49 3833.91,-2735.49 3833.91,-2692.99 3833.91,-2692.99 3833.91,-2686.99 3839.91,-2680.99 3845.91,-2680.99 3845.91,-2680.99 3975.91,-2680.99 3975.91,-2680.99 3981.91,-2680.99 3987.91,-2686.99 3987.91,-2692.99 3987.91,-2692.99 3987.91,-2735.49 3987.91,-2735.49 3987.91,-2741.49 3981.91,-2747.49 3975.91,-2747.49"/>
 <text text-anchor="middle" x="3910.91" y="-2734.94" font-family="Helvetica,sans-Serif" font-size="9.00">City open&#45;data detector det&#45;00118</text>
 <text text-anchor="middle" x="3910.91" y="-2725.19" font-family="Helvetica,sans-Serif" font-size="9.00">at Girouard: its only Terrebonne</text>
@@ -11326,7 +11326,7 @@
 <!-- e_cm_nov16 -->
 <g id="node271" class="node">
 <title>e_cm_nov16</title>
-<g id="a_node271"><a xlink:href="https://montreal.ca/conseil-municipal" xlink:title="City council sitting of November\n16–17, 2026 (next public question\nperiod)\n[2026&#45;11&#45;16]" target="_blank">
+<g id="a_node271"><a xlink:href="https://montreal.ca/conseils-decisionnels/conseil-municipal" xlink:title="City council sitting of November\n16–17, 2026 (next public question\nperiod)\n[2026&#45;11&#45;16]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M1986.74,-682.25C1986.74,-682.25 1944.08,-708.17 1944.08,-708.17 1938.95,-711.28 1927.82,-714.4 1921.82,-714.4 1921.82,-714.4 1819.47,-714.4 1819.47,-714.4 1813.47,-714.4 1802.34,-711.28 1797.22,-708.17 1797.22,-708.17 1754.55,-682.25 1754.55,-682.25 1749.42,-679.14 1749.42,-672.91 1754.55,-669.79 1754.55,-669.79 1797.22,-643.88 1797.22,-643.88 1802.34,-640.76 1813.47,-637.65 1819.47,-637.65 1819.47,-637.65 1921.82,-637.65 1921.82,-637.65 1927.82,-637.65 1938.95,-640.76 1944.08,-643.88 1944.08,-643.88 1986.74,-669.79 1986.74,-669.79 1991.87,-672.91 1991.87,-679.14 1986.74,-682.25"/>
 <text text-anchor="middle" x="1870.65" y="-686.97" font-family="Helvetica,sans-Serif" font-size="9.00">City council sitting of November</text>
 <text text-anchor="middle" x="1870.65" y="-677.22" font-family="Helvetica,sans-Serif" font-size="9.00">16–17, 2026 (next public question</text>
