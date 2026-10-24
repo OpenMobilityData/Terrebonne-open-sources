@@ -7,12 +7,12 @@ Recordings: clips 01 to 06 were recorded by the author from the webcast on Octob
 | File | Segment | Webcast (link to the start) | Passages kept | Unchecked (gaps) |
 |---|---|---|---|---|
 | [`2026-10-06_01.md`](2026-10-06_01.md) | Oct 6, 2026 — address by Councillor Teodoresco | 0k_KZf9uxTk from [35:50](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=2150s) | 19 | none |
+| [`2026-10-06_07.md`](2026-10-06_07.md) | Oct 6, 2026 — question period, Louis-Eric Trudeau (FR), webcast 49:50 | 0k_KZf9uxTk from [50:00](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=3000s) | 9 | none |
 | [`2026-10-06_02.md`](2026-10-06_02.md) | Oct 6, 2026 — question period, clip 02 (FR) — question by Shannon Joutel | 0k_KZf9uxTk from [1:13:36](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=4416s) | 12 | none |
 | [`2026-10-06_03.md`](2026-10-06_03.md) | Oct 6, 2026 — question period, clip 03 (FR) — question by Raúl Garate | 0k_KZf9uxTk from [1:17:21](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=4641s) | 27 | none |
 | [`2026-10-06_04.md`](2026-10-06_04.md) | Oct 6, 2026 — question period, clip 04 (EN question, FR answer) — question by Katherine Lund | 0k_KZf9uxTk from [1:42:37](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=6157s) | 24 | none |
 | [`2026-10-06_05.md`](2026-10-06_05.md) | Oct 6, 2026 — question period, clip 05 (EN), Rick Hoge's question | 0k_KZf9uxTk from [2:19:06](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=8346s) | 29 | none |
 | [`2026-10-06_06.md`](2026-10-06_06.md) | Oct 6, 2026 — question period, clip 06 (EN) — question by Steven Jazz | 0k_KZf9uxTk from [2:27:11](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=8831s) | 22 | none |
-| [`2026-10-06_07.md`](2026-10-06_07.md) | Oct 6, 2026 — question period, Louis-Eric Trudeau (FR), webcast 49:50 | 0k_KZf9uxTk from [50:00](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=3000s) | 9 | none |
 | [`2026-10-06_08.md`](2026-10-06_08.md) | Oct 6, 2026 — council members' question period (item 10.07), clip 08 (FR, some EN) — Peter McQueen's two questions, Councillor Teodoresco's answer | 0k_KZf9uxTk from [2:48:05](https://www.youtube.com/watch?v=0k_KZf9uxTk&t=10085s) | 10 | none |
 
 ## Clip 08: the council members' question period (added October 23, 2026)
