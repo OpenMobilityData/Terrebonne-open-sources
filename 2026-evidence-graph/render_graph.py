@@ -4,56 +4,25 @@
 Node types: agent, document, data, numerical assertion (a number put forward or derived, with the operation that produces it from the data), assertion, statement (a dated public statement), event.
 Relations are factual verbs only (computed_from, states, matches, refers_to, withheld_in, differs_from, ...); none carries a judgment.
 Outputs: evidence_graph.svg/.png (dot, left-to-right by type), evidence_graph.html (Cytoscape.js, click a node for its source).
+Also writes the SQLite query copy evidence_graph.sqlite (git-ignored; see query_graph.py) and validation_report.txt.
 Usage: python3 render_graph.py   (needs Graphviz `dot`)
 """
 import csv, os, subprocess, json, html
 HERE = os.path.dirname(os.path.abspath(__file__))
-nodes = list(csv.DictReader(open(os.path.join(HERE, 'nodes.csv'), encoding='utf-8')))
-edges = list(csv.DictReader(open(os.path.join(HERE, 'edges.csv'), encoding='utf-8')))
+from graph_lib import load, validate, write_report, write_sqlite, time_secs
+nodes, edges, questions = load()
 ids = {n['id'] for n in nodes}
 bad = [(e['from'], e['to']) for e in edges if e['from'] not in ids or e['to'] not in ids]
 assert not bad, f'edges to unknown nodes: {bad}'
 
-# ---- structural checks (printed at every build; the report is also written to validation_report.txt)
-def validate(nodes, edges):
-    qp0 = os.path.join(HERE, 'questions.csv'); q_nodes = set()
-    if os.path.exists(qp0):
-        for q in csv.DictReader(open(qp0, encoding='utf-8')): q_nodes |= {x.strip() for x in q['nodes'].split(';') if x.strip()}
-    out_rel = {}; in_rel = {}; deg = {n['id']: 0 for n in nodes}
-    for e in edges:
-        out_rel.setdefault(e['from'], set()).add(e['relation']); in_rel.setdefault(e['to'], set()).add(e['relation'])
-        deg[e['from']] += 1; deg[e['to']] += 1
-    problems = []
-    for n in nodes:
-        o = out_rel.get(n['id'], set()); i = in_rel.get(n['id'], set()); t = n['type']
-        if deg[n['id']] == 0: problems.append(f"orphan: {n['id']}")
-        if t == 'statement':
-            if 'made_at' not in o: problems.append(f"statement without made_at: {n['id']}")
-            if 'attributed_to' not in o: problems.append(f"statement without attributed_to: {n['id']}")
-            if not n['source']: problems.append(f"statement without source: {n['id']}")
-        if t == 'numerical assertion' and 'computed_from' not in o: problems.append(f"numerical assertion without computed_from: {n['id']}")
-        if t == 'assertion':
-            if not (i & {'states', 'supports', 'undercuts', 'bears_on'}): problems.append(f"assertion without evidence: {n['id']}")
-            if n['id'] not in q_nodes: problems.append(f"assertion not attached to a question: {n['id']}")
-        if t == 'document' and n['source'].startswith('2026-581') and not (o & {'released_in', 'withheld_in', 'redacted_in', 'contained_in'}) and n['id'] != 'd_release':
-            problems.append(f"document without release status: {n['id']}")
-        if t == 'data' and not n['source']: problems.append(f"data without source: {n['id']}")
-        if t in ('statement', 'document', 'data', 'event') and not n['date']: problems.append(f"undated {t}: {n['id']}")
-    nolink = [n['id'] for n in nodes if n['type'] in ('statement', 'document', 'data') and not n.get('url')]
-    if nolink: print(f'note: {len(nolink)} statement/document/data node(s) without a link to their source: ' + ', '.join(nolink))
-    for e in edges:
-        if e['relation'] in ('differs_from', 'unsupported_by', 'does_not_include', 'same_data_other_denominator') and not e.get('note'):
-            problems.append(f"difference without note: {e['from']} -> {e['to']}")
-    qp = os.path.join(HERE, 'questions.csv')
-    if os.path.exists(qp):
-        for q in csv.DictReader(open(qp, encoding='utf-8')):
-            for nid in [x.strip() for x in q['nodes'].split(';') if x.strip()]:
-                if nid not in ids: problems.append(f"question {q['question']} cites unknown node: {nid}")
-            if not q['nodes'].strip(): problems.append(f"question {q['question']} has no nodes")
-    return problems
-problems = validate(nodes, edges)
-open(os.path.join(HERE, 'validation_report.txt'), 'w', encoding='utf-8').write(f"{len(nodes)} nodes, {len(edges)} edges; {len(problems)} problem(s)\n" + '\n'.join(problems) + '\n')
+# ---- structural checks (graph_lib.validate; printed at every build, the report also written to validation_report.txt)
+problems = validate(nodes, edges, questions)
+write_report(nodes, edges, problems)
 print(f"validation: {len(problems)} problem(s)" + (': ' + '; '.join(problems[:12]) + (' …' if len(problems) > 12 else '') if problems else ''))
+nolink = [n['id'] for n in nodes if n['type'] in ('statement', 'document', 'data') and not n.get('url')]
+if nolink: print(f'note: {len(nolink)} statement/document/data node(s) without a link to their source: ' + ', '.join(nolink))
+# ---- the SQLite query copy (git-ignored; queries in queries/, run with query_graph.py)
+write_sqlite(nodes, edges, questions)
 STYLE = {'agent': ('#e9ebee', 'ellipse'), 'document': ('#fff3e8', 'note'), 'data': ('#e8f1fb', 'box'),
          'numerical assertion': ('#e6f6ef', 'box'), 'assertion': ('#fff8e1', 'octagon'), 'statement': ('#fdf1f1', 'box'), 'event': ('#f3eefc', 'hexagon')}
 EDGE = {'differs_from': ('#e34948', 'dashed'), 'same_data_other_denominator': ('#e34948', 'dashed'), 'unsupported_by': ('#e34948', 'dotted'),
@@ -122,7 +91,7 @@ for t in ORDER:
             ev, part = k
             col = groups[k]
             if ev == 'e_oct6':
-                col = sorted(col, key=lambda n: tsecs(n.get('source', '')))
+                col = sorted(col, key=lambda n: time_secs(n) if time_secs(n) is not None else tsecs(n.get('source', '')))
             lanes.append((f'statements: {ev}' + (f' ({OCT6[part]})' if part in OCT6 else ''), [n['id'] for n in col]))
 pos = {}
 # row spacing follows each label's wrapped height (font 10, wrap at 130 px: about 26 characters a line), so labels

@@ -34,6 +34,22 @@ Added October 23, 2026: the parish of St Monica (question 3.14, assertion `x_har
 
 Access request 2026-581 (bundle 01 page numbers) and 2026-300: [Terrebonne-access-requests](https://github.com/OpenMobilityData/Terrebonne-access-requests). Council recordings: borough council of October 6, 2026 (webcast 0k_KZf9uxTk; transcripts in [`../2026-10-06-borough-council/`](../2026-10-06-borough-council/)) and City council of October 19, 2026 (rii3nUTuKRE; transcripts in [`../2026-10-19-city-council/`](../2026-10-19-city-council/)). CBC *Daybreak*, October 9, 2026 ([`../2026-cbc-daybreak-interview/`](../2026-cbc-daybreak-interview/)). *Le Devoir*, October 19, 2026. Telraam sensors: [Terrebonne-telraam](https://github.com/OpenMobilityData/Terrebonne-telraam). The APC Zoom meeting node rests on the association's minutes of the meeting the councillor cited at council as his consultation.
 
+## Querying and adding (tools, October 23, 2026)
+
+The CSV files stay the source of truth; the tools read and write them and nothing else.
+
+- **Columns `time` and `lang`** (nodes.csv, added October 23): `time` is the moment in the recording that the node's link opens (webcast time `H:MM:SS`, or the *Daybreak* audio time `MM:SS`), filled for the 94 statements whose link or source carries one; it is the start of the turn or passage, so it can precede the quoted sentence by a few seconds (the label gives the quoted moment). `lang` is the language of the quoted words (`fr`, `en`, or `fr, en`), filled for the 60 statements added since October 22.
+- **SQLite copy.** Every run of `render_graph.py` also writes `evidence_graph.sqlite` (not committed; regenerated from the CSVs, never edited): tables `nodes` (the CSV columns plus `time_s`, seconds into the recording), `edges` (plus `row`, the line in edges.csv), `questions` and `question_nodes`.
+- **Saved queries** in [`queries/`](queries/), run with `python3 query_graph.py <name> [value | key=value]` (rebuilds the copy first if the CSVs are newer; `--csv` for CSV output, `--full` for uncut cells; with no argument it lists the queries; `--sql "…"` runs an ad hoc query):
+  - `statements_by_agent [agent=…]`: statements by agent and date (an agent id or part of its name);
+  - `assertion <id>`: everything that states, supports, undercuts or bears on one assertion (e.g. `x_done_deal`, `x_decided`, `x_reopen`), with the notes;
+  - `assertions`: every assertion with the count on each side and its questions;
+  - `differs_from [relation=…]`: every `differs_from` pair with its note (or another difference relation);
+  - `sitting <event>`: the statements of one sitting or interview in recording order (`e_oct6`, `e_sept8`, `e_agglo_oct22`, `e_daybreak`);
+  - `question [<number>]`: the nodes of each question in `questions.csv`;
+  - `node <id>`: one node and all its relations.
+- **Adding.** `python3 graph_add.py statement --id … --short … --label … --date … --source … --url … --speaker <agent> --event <event> --transcript <document> [--lang …] [--edge RELATION:TARGET[:NOTE]]` adds a statement with its `attributed_to`, `made_at` and `contained_in` relations in one command (`time` taken from the link's `&t=`); `graph_add.py node --type …` adds any other node with its edges; `graph_add.py edge FROM TO RELATION [--note …] [--url …]` adds one relation. It refuses an id already present, an unknown node or relation, an edge already present, a difference relation without a note, and any addition that would leave a new validation problem; nothing is written unless every check passes (`--dry-run` shows the rows). The validator then runs; `render_graph.py` redraws the page.
+
 ## Reproduce
 
-`python3 render_graph.py` in this folder (needs Graphviz `dot`). The page loads Cytoscape.js 3.30.2 from cdnjs and has its data embedded; nothing else is fetched.
+`python3 render_graph.py` in this folder (needs Graphviz `dot`). Structure checks and the SQLite copy are in [`graph_lib.py`](graph_lib.py). The page loads Cytoscape.js 3.30.2 from cdnjs and has its data embedded; nothing else is fetched.

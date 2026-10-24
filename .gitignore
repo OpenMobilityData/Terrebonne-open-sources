@@ -3,3 +3,5 @@
 *.log
 *.out
 __pycache__/
+evidence_graph.sqlite
+evidence_graph.sqlite.tmp
