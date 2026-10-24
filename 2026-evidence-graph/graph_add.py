@@ -8,7 +8,8 @@ Writes nodes.csv / edges.csv (the source of truth) only when every check passes,
       [--edge RELATION:TARGET[:NOTE]] …
   python3 graph_add.py node --id d_x --type document --short … --label … --date … --source … [--url …] [--edge …] [--in RELATION:SOURCE[:NOTE]]
   python3 graph_add.py edge FROM TO RELATION [--note "…"] [--url "…"]
-  add --dry-run to any command to see the rows without writing them.
+  add --dry-run to any command to see the rows without writing them; --allow-orphan (node, statement) accepts a new
+  node with no relation yet, for a new agent whose first statement is added in the next command.
 
 A statement gets attributed_to (speaker), made_at (event) and contained_in (transcript document) in the same command;
 --time defaults to the &t=…s of a YouTube --url. Refused: an id already in nodes.csv, an unknown target or relation, an
@@ -42,6 +43,7 @@ def main():
         p.add_argument('--edge', action='append', default=[], metavar='RELATION:TARGET[:NOTE]', help='an outgoing edge (repeatable)')
         p.add_argument('--in', dest='inc', action='append', default=[], metavar='RELATION:SOURCE[:NOTE]', help='an incoming edge (repeatable)')
         p.add_argument('--dry-run', action='store_true')
+        p.add_argument('--allow-orphan', action='store_true', help='accept the new node as an orphan for now (e.g. a new agent whose statement is added next)')
         if name == 'statement':
             p.add_argument('--speaker', required=True, help='agent id (attributed_to)')
             p.add_argument('--event', required=True, help='event id: the sitting, interview or meeting (made_at)')
@@ -102,6 +104,8 @@ def main():
     if not errors:
         after = validate(nodes + new_nodes, edges + new_edges, questions)
         added = [p for p in after if p not in before]
+        if getattr(a, 'allow_orphan', False):
+            added = [p for p in added if p != f'orphan: {a.id}']
         if added: errors += [f'would add a validation problem: {p}' for p in added]
     if errors:
         print('refused, nothing written:\n  ' + '\n  '.join(dict.fromkeys(errors)), file=sys.stderr); return 1
