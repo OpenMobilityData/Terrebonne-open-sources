@@ -5,6 +5,7 @@
 | File | Pages | Content |
 |---|---|---|
 | [`raw/CDN-NDG_Plan_local_de_deplacements_2024-2034.pdf`](raw/CDN-NDG_Plan_local_de_deplacements_2024-2034.pdf) | 102 | « Plan local de déplacements 2024 à 2034 », as received (file renamed); printed page numbers are the PDF's |
+| [`raw/CA_Cdn_PV_ORDI_2024-05-06_19h00_FR.pdf`](raw/CA_Cdn_PV_ORDI_2024-05-06_19h00_FR.pdf) | — | Minutes of the borough council sitting of May 6, 2024: resolution CA24 170089, « Adoption – Plan local de déplacements », moved by the borough mayor (Gracia Kasoki Katahwa), seconded by Magda Popeanu, « ADOPTÉE À L'UNANIMITÉ », with Stephanie Valenzuela, Peter McQueen, Sonny Moroz, Despina Sourias and Magda Popeanu present (item 12.01, file 1248894001); fetched from the City's council archive October 25, 2026 |
 | [`raw/montreal-ca_pld-cdn-ndg_page_2026-10-23.pdf`](raw/montreal-ca_pld-cdn-ndg_page_2026-10-23.pdf) | 3 | The borough's page « Plan local de déplacements de CDN-NDG – 2024-2034 », as it stood on October 23, 2026 |
 | [`raw/montreal-ca_communique_pld_2024-05-10_captured_2026-10-23.pdf`](raw/montreal-ca_communique_pld_2024-05-10_captured_2026-10-23.pdf) | 3 | Press release « Un Plan local de déplacements visionnaire pour un avenir durable à CDN-NDG », May 10, 2024 |
 
@@ -22,4 +23,4 @@ The plan does not name rue de Terrebonne. Its survey results include, among the 
 
 ## Why they are here
 
-The borough's page on the plan was updated April 14, 2026 and the plan is presented there as the borough's mobility plan for 2024–2034; it is the borough's own statement of objectives against which a winter change to a protected lane can be read. Read alongside the City's Vision Zéro plans ([`../2016-vision-zero/`](../2016-vision-zero/)).
+**Adoption.** The plan was adopted unanimously on May 6, 2024 (CA24 170089), by a council on which sat the present borough mayor (Stephanie Valenzuela, then councillor for Darlington) and the present councillor for Snowdon (Sonny Moroz), both of Ensemble Montréal; the plan is therefore the borough's, not one party's. The borough's page on the plan was updated April 14, 2026 and the plan is presented there as the borough's mobility plan for 2024–2034; it is the borough's own statement of objectives against which a winter change to a protected lane can be read. Read alongside the City's Vision Zéro plans ([`../2016-vision-zero/`](../2016-vision-zero/)).
