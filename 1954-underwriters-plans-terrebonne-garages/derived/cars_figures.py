@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Parked cars, panel by panel along the street: for each of the five panels of the maps, the
-Gouvernement du Québec aerial imagery (daytime, after June 2024) above the City's 2015 night
+Gouvernement du Québec aerial imagery (daytime, undated, before the 2024 lane) above the City's 2015 night
 LiDAR as height above ground, in the same street frame, with every object the detector counted
 as a car drawn on the LiDAR row (red square: at a Terrebonne curb; orange: on a private lot;
 grey: on a cross street) and the by-eye count of cars on the optical row written per block
@@ -49,11 +49,14 @@ def lidar_img(lon, lat):
     dXdl = (mtm8(lon0 + e, lat0)[0] - X0) / e; dXda = (mtm8(lon0, lat0 + e)[0] - X0) / e; dYdl = (mtm8(lon0 + e, lat0)[1] - Y0) / e; dYda = (mtm8(lon0, lat0 + e)[1] - Y0) / e
     X = X0 + dXdl * (lon - lon0) + dXda * (lat - lat0); Y = Y0 + dYdl * (lon - lon0) + dYda * (lat - lat0)
     h = L.sample(L.NDSM, L.G1, X, Y); hs = L.sample(L.HS, L.G1, X, Y); return L.colorize_ndsm(h, hs)
-def street_labels(ax, u0, u1):
+def street_labels(ax, u0, u1, vmax=None):
+    vmax = VMAX if vmax is None else vmax
+    """cross-street names as upright boxed labels at the top of the panel, and the street's own name on its axis"""
     for name, us in STREET_U.items():
         if u0 - 2 < us < u1 + 2:
             short = name.replace('Avenue ', '').replace('Boulevard ', '').replace('de ', '').replace("d'", '')
-            ax.text(us, VMAX + 1.5, short, rotation=90, ha='center', va='bottom', fontsize=5.5, color='#52514e')
+            ax.text(us, vmax - 2, short, ha='center', va='top', fontsize=8, color='#1a1a19', bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1.5), zorder=20)
+    ax.text(u0 + (u1 - u0) * 0.5, 0, 'rue de Terrebonne', ha='center', va='center', fontsize=8, color='#1a1a19', style='italic', bbox=dict(facecolor='white', edgecolor='none', alpha=0.75, pad=1.2), zorder=20)
 def strips(lang):
     fig, axes = plt.subplots(2 * NP, 1, figsize=(12, 2 * NP * 1.85 + 1.4))
     for k in range(NP):
@@ -67,7 +70,7 @@ def strips(lang):
                     kk = int(b['block']); um = (CUM[kk] + CUM[kk + 1]) / 2
                     if u0 < um < u1 and CUM[kk + 1] - CUM[kk] > 30:
                         ax.text(um, -VMAX + 3, f"{b['optical_N']} | {b['optical_S']}", fontsize=5.5, ha='center', va='bottom', bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1))
-                ax.text(u0 + 2, VMAX - 2, ('Aerial imagery, daytime, after June 2024; by-eye count of cars on Terrebonne per block: north | south' if lang == 'en' else 'Imagerie aérienne, de jour, après juin 2024; compte à l’œil des voitures sur Terrebonne par îlot : nord | sud'), fontsize=5.5, ha='left', va='top', bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1))
+                ax.text(u0 + 2, VMAX - 2, ('Aerial imagery, daytime, undated, before the 2024 lane; by-eye count of cars on Terrebonne per block: north | south' if lang == 'en' else 'Imagerie aérienne, de jour, non datée, avant la piste de 2024; compte à l’œil des voitures sur Terrebonne par îlot : nord | sud'), fontsize=5.5, ha='left', va='top', bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1))
             else:
                 for cls, col in COL.items():
                     pts = [c for c in cars if c['class'] == cls and u0 < c['u'] < u1 and abs(c['v']) < VMAX]

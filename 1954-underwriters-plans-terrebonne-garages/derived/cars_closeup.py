@@ -63,9 +63,9 @@ def block_figure(lang, k):
             if any(u0 - 5 < u < u1 + 5 and -V < v < V for u, v in pts): ax.plot([p[0] for p in pts] + [pts[0][0]], [p[1] for p in pts] + [pts[0][1]], color='#00d4ff', linewidth=0.5, alpha=0.8)
         maps.draw_conversion(ax, u0, u1, lw=1.6)
         for vv in (2.2, 7.0, -2.2, -7.0): ax.axhline(vv, color='white', linewidth=0.5, linestyle=':', alpha=0.9)
-    CF.street_labels(axo, u0, u1) if hasattr(CF, 'street_labels') else None
+    CF.street_labels(axo, u0, u1, V)
     draw_boxes(axl, u0, u1, -V, V); draw_boxes(axo, u0, u1, -V, V, lw=0.8)
-    axo.text(u0 + 2, -V + 2, 'Aerial imagery, daytime, after June 2024; boxes = the night LiDAR detections, for position only' if lang == 'en' else 'Imagerie aérienne, de jour, après juin 2024; boîtes = détections du LiDAR de nuit, pour la position seulement', fontsize=6.5, bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1.5))
+    axo.text(u0 + 2, -V + 2, 'Aerial imagery, daytime, undated (before the 2024 lane); boxes = the night LiDAR detections, for position only' if lang == 'en' else 'Imagerie aérienne, de jour, non datée (avant la piste de 2024); boîtes = détections du LiDAR de nuit, pour la position seulement', fontsize=6.5, bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1.5))
     axl.text(u0 + 2, -V + 2, 'City LiDAR 2015, night: height above ground; each box has the measured length and width of the object; dotted lines: the curb band 2.2–7 m from the street axis' if lang == 'en' else 'LiDAR 2015 de la Ville, nuit : hauteur au-dessus du sol; chaque boîte a la longueur et la largeur mesurées de l’objet; pointillés : bande de bordure à 2,2–7 m de l’axe', fontsize=6.5, bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1.5))
     for col_i, (c, title) in enumerate(((curb, 'at the Terrebonne curb' if lang == 'en' else 'à la bordure de Terrebonne'), (lot, 'on a private lot (driveway)' if lang == 'en' else 'sur un lot privé (entrée)'))):
         ax = fig.add_subplot(gs[2, col_i])

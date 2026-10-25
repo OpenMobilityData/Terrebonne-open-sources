@@ -70,10 +70,12 @@ def overlay(ax, u0, u1, vmax, labels, msize):
         pts = [r for r in rows if r['cat_today'] == key and u0 - 3 < r['u'] < u1 + 3 and abs(r['v']) < vmax]
         if pts: ax.scatter([r['u'] for r in pts], [r['v'] for r in pts], s=msize, c=col, marker=mk, edgecolors='black', linewidths=0.5, zorder=10)
 def street_labels(ax, u0, u1, vmax):
+    """cross-street names as upright boxed labels at the top of the panel, and the street's own name on its axis"""
     for name, us in STREET_U.items():
         if u0 - 2 < us < u1 + 2:
             short = name.replace('Avenue ', '').replace('Boulevard ', '').replace('de ', '').replace("d'", '')
-            ax.text(us, vmax + 1.5, short, rotation=90, ha='center', va='bottom', fontsize=5.5, color='#52514e')
+            ax.text(us, vmax - 2, short, ha='center', va='top', fontsize=8, color='#1a1a19', bbox=dict(facecolor='white', edgecolor='none', alpha=0.85, pad=1.5), zorder=20)
+    ax.text(u0 + (u1 - u0) * 0.5, 0, 'rue de Terrebonne', ha='center', va='center', fontsize=8, color='#1a1a19', style='italic', bbox=dict(facecolor='white', edgecolor='none', alpha=0.75, pad=1.2), zorder=20)
 SRC = {'en': ['Aerial imagery, Gouvernement du Québec (Imagerie_GQ, fetched Oct 25, 2026)', 'City of Montréal LiDAR 2015: height above ground (amber 0.5–3.5 m: cars, garages, fences; blue-grey: houses; green: trees)', "Underwriters' Survey Bureau, 1954–55 (BAnQ notice 0000174390), georeferenced"],
        'fr': ['Imagerie aérienne, Gouvernement du Québec (Imagerie_GQ, consultée le 25 oct. 2026)', 'LiDAR 2015 de la Ville de Montréal : hauteur au-dessus du sol (ambre 0,5–3,5 m : voitures, garages, clôtures; gris-bleu : maisons; vert : arbres)', 'Underwriters’ Survey Bureau, 1954–1955 (BAnQ, notice 0000174390), géoréférencé']}
 def figure(ranges, vmax, ppm, labels, msize, name, title, fig_w):

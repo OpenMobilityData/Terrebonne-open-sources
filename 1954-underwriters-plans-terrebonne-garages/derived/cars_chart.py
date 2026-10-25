@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cars parked on rue de Terrebonne itself, block by block and by side, in the two acquisitions:
 the Gouvernement du Québec aerial imagery (daytime, leaf-off spring, lane markings present so
-after June 2024; counted by eye on the block strips) and the City's 2015 LiDAR (flown at night,
+undated, before the 2024 lane; counted by eye on the block strips) and the City's 2015 LiDAR (flown at night,
 00:00–04:00 local by the GPS times, leaf-on; car-sized objects 0.9–2.3 m above ground detected by
 lidar_cars.py). North side bars up, south side down. Usage: python3 cars_chart.py [en|fr]"""
 import csv, os, sys
@@ -15,7 +15,7 @@ from maps import CAV, CONV_SHORT
 HERE = os.path.dirname(os.path.abspath(__file__)); LANG = sys.argv[1] if len(sys.argv) > 1 else 'en'
 rows = list(csv.DictReader(open(os.path.join(HERE, 'on_street_cars_by_block.csv'), encoding='utf-8')))
 fig, axes = plt.subplots(2, 1, figsize=(12, 6.2))
-spec = [('optical', '#2a78d6', 'A. Aerial imagery, daytime, spring (after June 2024: the lane markings are visible); counted by eye' if LANG == 'en' else 'A. Imagerie aérienne, de jour, au printemps (après juin 2024 : le marquage de la piste est visible); compté à l’œil'),
+spec = [('optical', '#2a78d6', 'A. Aerial imagery, daytime, leaf-off spring, undated by the service but before the 2024 lane (cars still at both curbs, no markings); counted by eye' if LANG == 'en' else 'A. Imagerie aérienne, de jour, au printemps, non datée par le service mais avant la piste de 2024 (voitures encore aux deux bordures, aucun marquage); compté à l’œil'),
         ('lidar_by_eye', '#b9b0f0', 'B. City LiDAR 2015, two weeknights (Sun–Mon west of Walkley, Mon–Tue east; 00:00–03:50 local), before the lane: car-shaped objects counted by eye on the height raster (light), of which found by the automatic detector (dark)' if LANG == 'en' else 'B. LiDAR 2015 de la Ville, deux nuits de semaine (dim.–lun. à l’ouest de Walkley, lun.–mar. à l’est; 0 h–3 h 50 locale), avant la piste : objets en forme de voiture comptés à l’œil sur le raster de hauteur (clair), dont trouvés par le détecteur automatique (foncé)')]
 for ax, (key, col, title) in zip(axes, spec):
     for r in rows:
