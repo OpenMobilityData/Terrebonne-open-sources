@@ -77,6 +77,9 @@ for i, sl in enumerate(objs, 1):
       cx = x0 + cxm + 0.5 * dx; cy = y0 + cym - 0.5 * dy
       length, area = plen, parea
       lon, lat = mtm_to_lonlat(cx, cy); E, N = to_EN(lon, lat); u, v = to_uv(E, N)
+      # long axis in E,N: ax_ is in raster (x, -y) = (E, N) orientation; street direction at u
+      E1, N1 = from_uv(u + 1, v); sd = math.atan2(N1 - N, E1 - E); ad = math.atan2(ax_[1], ax_[0])
+      ang = (math.degrees(ad - sd) + 90) % 180 - 90
       if u < -5 or u > LENGTH + 5 or abs(v) > 45: continue
       h = float(np.nanmean(np.where(MEAN[sl][sub] > -9000, MEAN[sl][sub], np.nan)))
       if 2.2 < abs(v) < 7.0 and 0 <= u <= LENGTH: cls = 'terrebonne_curb'
@@ -85,7 +88,7 @@ for i, sl in enumerate(objs, 1):
       else: cls = 'lot'
       k = block_of(u)
       out.append({'u_m': round(u, 1), 'v_m': round(v, 1), 'lon': round(lon, 6), 'lat': round(lat, 6), 'area_m2': round(area, 1), 'length_m': round(length, 1), 'width_m': round(width, 1),
-                  'mean_height_m': round(h, 2), 'class': cls, 'block': k, 'block_name': (names[k] + '–' + names[k + 1]) if 0 <= k < len(names) - 1 else '', 'side': 'N' if v > 0 else 'S'})
+                  'mean_height_m': round(h, 2), 'axis_deg_from_street': round(ang, 1), 'class': cls, 'block': k, 'block_name': (names[k] + '–' + names[k + 1]) if 0 <= k < len(names) - 1 else '', 'side': 'N' if v > 0 else 'S'})
 w = csv.DictWriter(open(os.path.join(HERE, 'lidar_cars.csv'), 'w', encoding='utf-8'), fieldnames=list(out[0].keys())); w.writeheader(); w.writerows(out)
 import collections
 tot = collections.Counter(o['class'] for o in out); print('objects kept', len(out), dict(tot))
