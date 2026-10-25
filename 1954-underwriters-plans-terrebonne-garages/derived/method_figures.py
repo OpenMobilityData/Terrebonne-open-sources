@@ -92,7 +92,7 @@ def figure(ranges, vmax, ppm, labels, msize, name, title, fig_w):
     handles = [Line2D([], [], marker=mk, color='none', markerfacecolor=col, markeredgecolor='black', markersize=6, label=(en if LANG == 'en' else fr)) for key, en, fr, col, mk in maps.CATS_TODAY]
     handles.append(Line2D([], [], marker='s', color='none', markerfacecolor='none', markeredgecolor='#e34948', markersize=7, label=('Car-sized object detected in the LiDAR (0.9–2.3 m), flown at night' if LANG == 'en' else 'Objet de la taille d’une voiture détecté au LiDAR (0,9–2,3 m), vol de nuit'))); handles.append(maps.conversion_handle(LANG)); fig.legend(handles=handles, loc='lower center', ncol=2, fontsize=6.5, frameon=False, bbox_to_anchor=(0.5, 0.0))
     fig.subplots_adjust(top=0.93, bottom=0.10, left=0.04, right=0.99, hspace=0.05)
-    base = os.path.join(HERE, 'figures', f'{name}_{LANG}'); fig.savefig(base + '.png', dpi=200); fig.savefig(base + '.pdf'); plt.close(fig); print('wrote', base)
+    base = os.path.join(HERE, 'figures', f'{name}_{LANG}'); fig.savefig(base + '.png', dpi=110); fig.savefig(base + '.pdf'); plt.close(fig); print('wrote', base)
 if __name__ == '__main__':
     half = LENGTH / 2
     figure([(0, half), (half, LENGTH)], 42, 2.5, False, 9, 'method_overview',
