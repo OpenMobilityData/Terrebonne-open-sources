@@ -1,0 +1,162 @@
+sheet,side,block,cross_streets,civic_numbers,building_type,addressed_on,corner_lot,garage_1954,garage_kind,garage_access_presumed,owner_star,confidence,notes
+789-12,N,8787,Belmore-Coronation,7027,semi,Terrebonne,no,no,,,no,high,pair with 7025 (WD / 2D)
+789-12,N,8787,Belmore-Coronation,7025,semi,Terrebonne,no,no,,,no,high,
+789-12,N,8787,Belmore-Coronation,7005,single,Terrebonne,yes (Coronation),yes,attached 1P Auto,Terrebonne or Coronation,yes,high,1.5-storey D with attached garage at the Coronation corner
+789-12,N,8787,Belmore-Coronation,4505 Belmore,single,Belmore,yes (Belmore),no,,,no,high,corner building addressed on Belmore (2D)
+789-13,N,8788,Coronation-Mayfair,6985,semi,Terrebonne,yes (Coronation),no,,,no,high,
+789-13,N,8788,Coronation-Mayfair,6975,semi,Terrebonne,no,no,,,no,high,
+789-13,N,8788,Coronation-Mayfair,6969,semi,Terrebonne,no,no,,,no,medium,1P C.BLK outbuilding 969A behind it carries no Auto word; not counted (owner did not star it)
+789-13,N,8788,Coronation-Mayfair,6963,semi,Terrebonne,no,no,,,no,high,
+789-13,N,8788,Coronation-Mayfair,6957,semi,Terrebonne,no,no,,,no,high,
+789-13,N,8788,Coronation-Mayfair,6951,semi,Terrebonne,yes (Mayfair),no,,,no,high,
+789-13,N,8789,Mayfair-Mariette,4501 Mayfair,duplex,Mayfair,yes (Mayfair),yes,detached 1P Auto 501A,Mayfair,yes,high,no building addressed on Terrebonne in this block
+789-13,N,8789,Mayfair-Mariette,4500 Mariette,duplex,Mariette,yes (Mariette),no,,,no,high,
+789-13,N,8790,Mariette-Rosedale,6871,duplex,Terrebonne,no,yes,detached 1P Auto 871A,Terrebonne (driveway beside house),yes,high,
+789-13,N,8790,Mariette-Rosedale,6865,duplex,Terrebonne,no,yes,attached 1P Auto,Terrebonne,yes,high,
+789-13,N,8790,Mariette-Rosedale,4501 Mariette,duplex,Mariette,yes (Mariette),no,,,no,medium,garage 505B belongs to 4505 Mariette
+789-13,N,8790,Mariette-Rosedale,4500 Rosedale,single,Rosedale,yes (Rosedale),yes,Auto 1st (garage in building),Rosedale,yes,high,
+789-14,N,8791,Rosedale-King Edward,6847,duplex,Terrebonne,yes (Rosedale),yes,detached 1P Auto 847A,Terrebonne or Rosedale,yes,high,garage 847A in the block interior behind the house
+789-14,N,8791,Rosedale-King Edward,6845,semi,Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+789-14,N,8791,Rosedale-King Edward,6835,semi,Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+789-14,N,8791,Rosedale-King Edward,6825,row,Terrebonne,no,no,,,no,medium,left part of a three-part building 1P/2P/1P
+789-14,N,8791,Rosedale-King Edward,6815,row,Terrebonne,yes (King Edward),yes,Auto 1st,Terrebonne or King Edward,yes,medium,right part of the same building
+789-14,N,8792,King Edward-Montclair,6799,semi,Terrebonne,yes (King Edward),no,,,no,medium,pair drawn in dashed outline (under construction 1954)
+789-14,N,8792,King Edward-Montclair,6737,semi,Terrebonne,no,yes,detached 1P M.C. Auto 737A,Terrebonne,yes,medium,
+789-14,N,8792,King Edward-Montclair,4505 King Edward,duplex,King Edward,yes (King Edward),yes,detached 1P Auto 505,King Edward,yes,medium,
+789-14,N,8792,King Edward-Montclair,4500 Montclair,duplex,Montclair,yes (Montclair),yes,attached 1P Auto,Montclair,yes,high,
+789-14,N,8793,Montclair-Walkley,6685,semi,Terrebonne,no,no,,,no,high,
+789-14,N,8793,Montclair-Walkley,6675,semi,Terrebonne,no,yes,detached 1P Auto 675A,Terrebonne,yes,high,
+789-14,N,8793,Montclair-Walkley,6655,apartment (24),Terrebonne,yes (Walkley),no,,,no,high,« Aparts (24) » 4 storeys; no Auto mark
+789-14,N,8793,Montclair-Walkley,4505 Montclair,duplex,Montclair,yes (Montclair),yes,Auto 1st 2P annex,Montclair,yes,high,
+789-15,N,8794,Walkley-Prince of Wales,6645,apartment (22),Terrebonne,yes (Walkley),yes,Autos Bt (basement),Terrebonne or Walkley,yes,high,« 22 Apts; Autos Bt »
+789-15,N,8794,Walkley-Prince of Wales,6625,semi,Terrebonne,no,yes,Auto Bt (basement),Terrebonne,yes,high,
+789-15,N,8794,Walkley-Prince of Wales,6615,semi,Terrebonne,yes (Prince of Wales),yes,Auto Bt (basement),Terrebonne,yes,high,
+789-15,N,8795,Prince of Wales-Cumberland,4505 Prince of Wales,duplex,Prince of Wales,yes (Prince of Wales),yes,detached 1P Auto 505A,Prince of Wales,yes,high,no building addressed on Terrebonne in this block
+789-15,N,8795,Prince of Wales-Cumberland,4500 Cumberland,duplex,Cumberland,yes (Cumberland),yes,attached 1P Auto,Cumberland,yes,high,
+789-15,N,8796,Cumberland-Cavendish,6505,semi,Terrebonne,no,yes,Auto Bt (basement),Terrebonne,yes,high,
+789-15,N,8796,Cumberland-Cavendish,6503,semi,Terrebonne,yes (Cavendish),yes,Auto Bt (basement),Terrebonne,yes,high,
+789-15,N,8796,Cumberland-Cavendish,4505 Cumberland,single,Cumberland,yes (Cumberland),no,,,no,high,2.5-storey D with small P annex (no Auto word)
+789-16,N,8797,Cavendish-Bessborough,6497,semi,Terrebonne,yes (Cavendish),no,,,no,high,
+789-16,N,8797,Cavendish-Bessborough,6495,semi,Terrebonne,no,no,,,no,high,
+789-16,N,8797,Cavendish-Bessborough,6465,semi,Terrebonne,no,no,,,no,high,
+789-16,N,8797,Cavendish-Bessborough,6455,semi,Terrebonne,yes (Bessborough),no,,,no,high,
+789-16,N,8798,Bessborough-Benny,6445,semi,Terrebonne,yes (Bessborough),no,,,no,high,
+789-16,N,8798,Bessborough-Benny,6435,semi,Terrebonne,no,no,,,no,high,
+789-16,N,8798,Bessborough-Benny,6425,institutional (presbytery),Terrebonne,no,yes,attached 1P Auto,Terrebonne,no,high,St Monica presbytery; garage not starred by the owner (institutional)
+789-16,N,8798,Bessborough-Benny,6405,institutional (church),Terrebonne,yes (Benny),no,,,no,high,St Monica's Church
+798-3,N,8975,Benny-Madison,6307 (a),semi,Terrebonne,no,yes,detached 1P C.BLK Auto,Terrebonne,yes,medium,pair labelled with one number only; two D halves each with its own garage
+798-3,N,8975,Benny-Madison,6307 (b),semi,Terrebonne,yes (Madison),yes,detached 1P C.BLK Auto,Terrebonne or Madison,yes,medium,
+798-3,N,8976,Madison-Kensington,6271,semi,Terrebonne,no,no,,,no,high,rear annexes 71B/69B are 2-storey and carry no Auto word; the Autos building 503B belongs to 4503 Madison
+798-3,N,8976,Madison-Kensington,6269,semi,Terrebonne,no,no,,,no,high,
+798-3,N,8976,Madison-Kensington,6257 (a),semi,Terrebonne,no,no,,,no,medium,pair labelled with one number only
+798-3,N,8976,Madison-Kensington,6257 (b),semi,Terrebonne,yes (Kensington),no,,,no,medium,
+798-3,N,8976,Madison-Kensington,4501 Madison,duplex,Madison,yes (Madison),no,,,no,high,
+798-3,N,8976,Madison-Kensington,4500 Kensington,duplex,Kensington,yes (Kensington),yes,attached 1P Auto,Kensington,yes,high,
+798-3,N,8977,Kensington-Grand,6241,duplex (2.5 st),Terrebonne,yes (Kensington),yes,Autos (garages beside),Terrebonne or Kensington,yes,high,E-shaped 2.5-storey duplex
+798-3,N,8977,Kensington-Grand,4500 Grand,apartment (3.5 st),Grand,yes (Grand),yes,Auto Bt (basement),Grand,yes,high,« 3&½ Bt Apts; Auto Bt »
+787-5,N,8978,Grand-Beaconsfield,6187,apartment,Terrebonne,yes (Grand),yes,Garage Bt (basement),Terrebonne or Grand,yes,high,« Aparts; Garage Bt »; 8-in C.BLKS 4-in brick faced
+787-5,N,8978,Grand-Beaconsfield,6165-6161,duplex,Terrebonne,no,no,,,no,high,
+787-5,N,8978,Grand-Beaconsfield,6157-6159,semi (duplex half),Terrebonne,no,no,,,no,high,
+787-5,N,8978,Grand-Beaconsfield,6155-6153,semi (duplex half),Terrebonne,yes (Beaconsfield),no,,,no,high,
+787-5,N,8979,Beaconsfield-Hingston,6133-6135,semi (duplex half),Terrebonne,yes (Beaconsfield),yes,Auto Bt (basement),Terrebonne,yes,high,
+787-5,N,8979,Beaconsfield-Hingston,6129-6131,semi (duplex half),Terrebonne,no,no,,,no,medium,« Auto Bt » written over the left half only
+787-5,N,8979,Beaconsfield-Hingston,6123-6125,semi (duplex half),Terrebonne,no,yes,detached 1P Autos 123A/125A (two bays),Terrebonne,yes,high,one bay per flat
+787-5,N,8979,Beaconsfield-Hingston,6119-6121,semi (duplex half),Terrebonne,no,yes,detached 1P Autos 119A/121A (two bays),Terrebonne,yes,high,
+787-5,N,8979,Beaconsfield-Hingston,6107-6109,semi (duplex half),Terrebonne,no,yes,Auto Bt (basement),Terrebonne,yes,high,
+787-5,N,8979,Beaconsfield-Hingston,6101-6103,semi (duplex half),Terrebonne,yes (Hingston),yes,Auto Bt (basement),Terrebonne,yes,high,
+787-5,N,8979,Beaconsfield-Hingston,4508-4510 Hingston,duplex (2.5 st),Hingston,no,yes,Auto Bt (basement),Hingston,yes,high,second building from the corner; listed for the cross-street comparison only
+787-5,N,8980,Hingston-Hampton,6091-6085 (a),semi (duplex half),Terrebonne,yes (Hingston),yes,Autos Bast (basement),Terrebonne,yes,high,"row of five buildings all ""Autos Bast"""
+787-5,N,8980,Hingston-Hampton,6091-6085 (b),semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6081-6075 (a),semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6081-6075 (b),semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6071-6065 (a),semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6071-6065 (b),semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6061-6063,duplex,Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6057-6051 (a),semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,6057-6051 (b),semi (duplex half),Terrebonne,yes (Hampton),yes,Autos Bast (basement),Terrebonne,yes,high,
+787-5,N,8980,Hingston-Hampton,4515-4517 Hingston,duplex (2.5 st),Hingston,no,yes,Auto Bt (basement),Hingston,yes,high,second building from the corner; cross-street comparison only
+787-6,N,8785,Hampton-Royal,5995-5997,duplex,Terrebonne,yes (Hampton),yes,detached 1P Auto 995A,Terrebonne or Hampton,yes,high,
+787-6,N,8785,Hampton-Royal,5983-5989 (a),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785,Hampton-Royal,5983-5989 (b),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785,Hampton-Royal,5975-5977,semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,medium,« Autos Bt » written across the pair
+787-6,N,8785,Hampton-Royal,5971-5973,semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,medium,
+787-6,N,8785,Hampton-Royal,5967 (a),semi (duplex half),Terrebonne,no,no,,,no,high,2P rear annexes carry no Auto word
+787-6,N,8785,Hampton-Royal,5967-5961 (b),semi (duplex half),Terrebonne,no,no,,,no,high,
+787-6,N,8785,Hampton-Royal,4500-4502 Royal,duplex,Royal,yes (Royal),yes,Auto Bt + detached 1P Auto 1st 500B,Royal,yes,high,
+787-6,N,8785A,Royal-Draper,5873-5879 (a),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785A,Royal-Draper,5873-5879 (b),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785A,Royal-Draper,5861-5867 (a),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785A,Royal-Draper,5861-5867 (b),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785A,Royal-Draper,5851-5857 (a),semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785A,Royal-Draper,5851-5857 (b),semi (duplex half),Terrebonne,yes (Draper),yes,Autos Bt (basement),Terrebonne,yes,high,
+787-6,N,8785A,Royal-Draper,4501-4503 Royal,duplex (2.5 st),Royal,yes (Royal),no,,,no,high,corner building addressed on Royal
+787-6,N,8983,Draper-Melrose,5839-5841,semi (duplex half),Terrebonne,yes (Draper),yes,Autos Bast (basement),Terrebonne,yes,high,
+787-6,N,8983,Draper-Melrose,5835-5837,semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-6,N,8983,Draper-Melrose,5827-5829,semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-6,N,8983,Draper-Melrose,5823-5825,semi (duplex half),Terrebonne,no,yes,Autos Bast (basement),Terrebonne,yes,high,
+787-6,N,8983,Draper-Melrose,4506 Melrose,duplex,Melrose,yes (Melrose),no,,,no,medium,1P annex carries no Auto word
+739-2,N,8984,Melrose-Wilson,5751,duplex (2.5 st),Terrebonne,yes (Wilson),yes,Autos Bt (basement),Terrebonne,yes,high,E-shaped 2.5-storey duplex
+739-2,N,8984,Melrose-Wilson,4501-4507 Melrose,duplex (2.5 st),Melrose,yes (Melrose),yes,Autos Bast (basement),Melrose,yes,high,
+739-2,N,8968,Wilson-Harvard,5735,duplex (2.5 st),Terrebonne,yes (Wilson),yes,Autos Bt (basement),Terrebonne,yes,high,
+739-2,N,8968,Wilson-Harvard,5719-5721,duplex,Terrebonne,no,yes,detached 1P Auto 519,Terrebonne,yes,high,
+739-2,N,8968,Wilson-Harvard,5701,duplex (2.5 st),Terrebonne,yes (Harvard),no,,,no,high,also carries 4500 Harvard
+739-2,N,8970,Harvard-Oxford,5681,duplex (2.5 st),Terrebonne,yes (Harvard),yes,detached 1P Auto 501A,Terrebonne or Harvard,yes,medium,also 4501-4503 Harvard; garage 501A on the same lot
+739-2,N,8970,Harvard-Oxford,5657-5659,semi (duplex half),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+739-2,N,8970,Harvard-Oxford,5655,semi (duplex half),Terrebonne,yes (Oxford),yes,Autos Bt (basement),Terrebonne,yes,high,
+739-5,N,8138,Oxford-Marcil,5637,semi (duplex half),Terrebonne,yes (Oxford),no,,,no,medium,two unstarred 1P outbuildings labelled 585/583 in the lot behind; attribution unclear
+739-5,N,8138,Oxford-Marcil,5635,semi (duplex half),Terrebonne,no,no,,,no,medium,
+739-5,N,8138,Oxford-Marcil,5625-5627,duplex,Terrebonne,no,no,,,no,medium,
+739-5,N,8138,Oxford-Marcil,5605,duplex (2.5 st),Terrebonne,yes (Marcil),no,,,no,high,E-shaped; no Auto mark
+739-5,N,8139,Marcil-Old Orchard,5581,duplex (2.5 st),Terrebonne,yes (Marcil),yes,column of 1P Autos garages between the two rows,Terrebonne (bottom garage) ,yes,medium,shared garage column; attribution by position
+739-5,N,8139,Marcil-Old Orchard,5555,duplex (2.5 st),Terrebonne,yes (Old Orchard),yes,column of 1P Autos garages between the two rows,Terrebonne,yes,medium,
+739-5,N,8140A,Old Orchard-Hampstead apts,5535,duplex (2.5 st),Terrebonne,yes (Old Orchard),yes,detached 1P Auto beside,Terrebonne,yes,medium,also 4501-4505 Old Orchard
+739-5,N,8140A,Old Orchard-Girouard,5511,apartment (3.5 st; Hampshire and Hampstead),Terrebonne,no,yes,column of 1P Autos garages along the west side,Terrebonne,yes,medium,
+739-5,N,8140,"Girouard-Côte-Saint-Luc (east of Girouard, outside the lane)",5491-5485,apartment (3 st; Larchmont),Terrebonne,yes (Girouard),no,,,no,high,"« 3&½ conc Bt »; no Auto mark; east of Girouard, outside the lane: listed, not counted"
+784-1,S,8787S,west end-Belmore (south leg),(houses 3530-3562 on the cross street),semi/duplex row,cross street,yes,n/a,,,yes,high,"stadium block; every building addressed on the cross street (the 35xx numbers), none on Terrebonne"
+784-1,S,8788S,Belmore (south leg)-Coronation,4490 corner,duplex,cross street,yes,no,,,no,high,corner house with 1P annex and no Auto word; the 3545-3561 houses behind it face the cross street
+784-1,S,8789S,Coronation-Mayfair,6994,semi,Terrebonne,yes,no,,,no,medium,pair 6994-6990 with one « P Auto 1st » annex at the east end
+784-1,S,8789S,Coronation-Mayfair,6990,semi,Terrebonne,no,yes,attached 1P Auto 1st,Terrebonne,yes,medium,
+784-1,S,8789S,Coronation-Mayfair,6960,semi,Terrebonne,no,yes,Auto 1st (arrow to the west half),Terrebonne,yes,medium,pair 6960-6950; « Auto 1st » with an arrow to one half only
+784-1,S,8789S,Coronation-Mayfair,6950,semi,Terrebonne,yes,no,,,no,medium,
+784-2,S,8790S,Mayfair-Mariette,6922,single (2.5 conc Bt),Terrebonne,no,yes,P Auto (in building),Terrebonne,yes,high,drawn in dashed outline (under construction Nov 1954)
+784-2,S,8790S,Mayfair-Mariette,6910,single (2P),Terrebonne,no,no,,,no,high,
+784-2,S,8790S,Mayfair-Mariette,6900,single (2.5P),Terrebonne,yes (Mariette),yes,detached 1P Auto 900A,Mariette or Terrebonne,yes,high,garage 900A keyed to 6900
+784-2,S,8791S,Mariette-Rosedale,6880-6870,institutional (Rosedale United Church + hall),Terrebonne,yes,no,,,no,high,
+784-2,S,8791S,Mariette-Rosedale,6860,vacant lot,Terrebonne,no,n/a,,,no,high,number printed with no building
+784-2,S,8792S,Rosedale-King Edward,6840,single (2P),Terrebonne,no,no,,,no,high,
+784-2,S,8792S,Rosedale-King Edward,6830,single (1.5P),Terrebonne,no,no,,,no,medium,the Autos building 442A behind it is keyed to 4442 on the cross street
+785-1,S,8566S,King Edward-Montclair,6720,single (2.5 D),Terrebonne,no,yes,Auto (1P beside the house),Terrebonne,yes,medium,the block's top strip shows two Auto words
+785-1,S,8566S,King Edward-Montclair,(6710) small 1.5-storey house east of 6720,single,Terrebonne,no,yes,Auto annex,Terrebonne,yes,medium,civic number not printed
+785-1,S,8566S,King Edward-Montclair,4480 corner,duplex (C.BLK),cross street,yes,no,,,no,high,corner house addressed on the cross street
+785-1,S,8567S,Montclair-Walkley,6668,single (2P),Terrebonne,no,no,,,no,high,Catherine Booth hospital block; the garages behind are keyed to cross-street numbers
+785-1,S,8568S,Walkley-Prince of Wales,6610,semi (1.5),Terrebonne,no,yes,Auto (1P between the halves),Terrebonne,yes,high,
+785-1,S,8568S,Walkley-Prince of Wales,6600,semi (1.5),Terrebonne,no,yes,Auto (1P between the halves),Terrebonne,yes,high,
+785-1,S,8570S,Prince of Wales-Cumberland,6552,single (2P),Terrebonne,yes (Cumberland),yes,detached 1P Auto 552B,lane behind (Autos Bast row),yes,high,garages 552A/552B keyed to 6552
+785-1,S,8570S,Cumberland-Cavendish,6540,single (1.5P),Terrebonne,no,no,,,no,high,
+785-1,S,8570S,Cumberland-Cavendish,6530,single (1.5P),Terrebonne,no,no,,,no,high,
+785-1,S,8570S,Cumberland-Cavendish,6510,single (2P),Terrebonne,yes (Cavendish),no,,,no,high,
+775,S,8571S,Cavendish-Madison,6324,single (1.5),Terrebonne,no,no,,,no,medium,the garages 462A/458A in the same dashed enclosure are keyed to 4462/4458 on the cross street
+775,S,8572S,Madison-Kensington,6282,duplex (2 D|D P),Terrebonne,no,no,,,no,high,
+775,S,8572S,Madison-Kensington,6256,semi (2 st; stone-faced),Terrebonne,no,yes,Auto 1st,Terrebonne,yes,high,
+775,S,8572S,Madison-Kensington,6254,semi (2 st; brick-faced),Terrebonne,yes (Kensington),yes,Auto Bt (basement),Terrebonne,yes,high,
+775,S,8573S,Kensington-Grand,(none),vacant,Terrebonne,n/a,n/a,,,no,high,75-ft frontage with garages 451B-451D only (keyed to 4451 on the cross street); the apartment buildings there today are later
+787-7,S,8978S,Grand-Beaconsfield,6194-6188,duplex (2 st; E-shaped),Terrebonne,yes (Grand),no,,,no,high,"the ""Auto conc 192A"" garage behind is keyed to 4492 (apartments on the cross street)"
+787-7,S,8978S,Grand-Beaconsfield,6184-6178,duplex (2),Terrebonne,no,no,,,no,high,
+787-7,S,8978S,Grand-Beaconsfield,6158-6152,duplex (2.5 C.BLK Bt),Terrebonne,yes (Beaconsfield),yes,Autos Bt (basement),Terrebonne,yes,high,
+787-7,S,8979S,Beaconsfield-Hingston,6124-6122,duplex (2),Terrebonne,yes (Beaconsfield),yes,Autos Bt (basement),Terrebonne,yes,high,« Autos Bt » written between the three buildings
+787-7,S,8979S,Beaconsfield-Hingston,6120-6118,duplex (2),Terrebonne,no,yes,Autos Bt (basement),Terrebonne,yes,high,
+787-7,S,8979S,Beaconsfield-Hingston,6118-6116,duplex (2),Terrebonne,yes (Hingston),yes,Autos Bt (basement),Terrebonne,yes,high,
+787-7,S,8980S,Hingston-Hampton,6094-6088,duplex (2.5 conc Bt),Terrebonne,yes (Hingston),yes,Autos Bt (basement),Terrebonne,yes,high,
+787-7,S,8980S,Hingston-Hampton,6076-6070,duplex (2),Terrebonne,no,no,,,no,high,
+787-7,S,8980S,Hingston-Hampton,6064-6058,duplex (2.5 conc Bt),Terrebonne,yes (Hampton),yes,Autos Bt (basement),Terrebonne,yes,high,
+787-8,S,(sheet missing),Hampton-Melrose (Royal and Draper blocks),(unknown),,,,unknown,,,,none,sheet 787-8 is missing from every copy; the north side opposite (787-6) is 24 buildings with 19 garages
+739-4,S,8984S,Melrose-Wilson,(4481-4483 corner),duplex,cross street,yes,n/a,,,no,high,no Terrebonne number on this block face; the corner duplex faces the cross street (garage 801A keyed to it)
+739-4,S,8968S,Wilson-Harvard,(4480-4482 corner),duplex,cross street,yes,n/a,,,no,high,no Terrebonne number on this block face
+739-4,S,8970S,Harvard-Oxford west,(4479-4481 and 4474-4480 corners),duplex,cross street,yes,n/a,,,no,high,no Terrebonne number on this block face
+739-4,S,8971S,west cross street-Oxford,5680,duplex (2.5 conc Bt),Terrebonne,yes,yes,Auto Bt (basement),Terrebonne,yes,high,
+739-4,S,8971S,west cross street-Oxford,5670-5668,single (2P; long),Terrebonne,no,no,,,no,high,
+739-4,S,8971S,west cross street-Oxford,5654,duplex (2.5 st conc Bt; office Bt),Terrebonne,yes (Oxford),no,,,no,high,
+739-5,S,8141S,Oxford-Marcil,5604,duplex (2 st; E-shaped),Terrebonne,yes (Marcil),no,,,no,high,garages 575/573 behind are keyed to 4475/4473 on the cross street
+739-5,S,8142S,Marcil-Old Orchard,(4493-4495 and 4474-4480 corners),duplex,cross street,yes,n/a,,,no,high,no Terrebonne number on this block face
+739-5,S,8143S,Old Orchard-Girouard (west corner),(4477-4479 corner),duplex,cross street,yes,n/a,,,no,high,no Terrebonne number on this block face
+739-5,S,8144S,Old Orchard-Girouard,5510-5512,duplex (2.5 st Bt; E-shaped),Terrebonne,yes (Girouard),no,,,no,medium,the 1P C.BLK Auto beside it is keyed 477A (4477 on the cross street)

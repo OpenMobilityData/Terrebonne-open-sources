@@ -1,0 +1,402 @@
+{
+ "buildings_terrebonne": 126,
+ "with_garage": 75,
+ "pct": 59.5,
+ "side_N": {
+  "buildings": 90,
+  "with_garage": 57,
+  "pct": 63.3
+ },
+ "side_S": {
+  "buildings": 36,
+  "with_garage": 18,
+  "pct": 50.0
+ },
+ "high_confidence": {
+  "buildings": 97,
+  "with_garage": 60,
+  "pct": 61.9
+ },
+ "corner_cross_street": {
+  "buildings": 28,
+  "with_garage": 13
+ },
+ "non_residential_or_vacant": 5,
+ "garage_access": {
+  "either street (corner)": 10,
+  "Terrebonne": 64,
+  "lane": 1
+ },
+ "garage_kind": {
+  "attached or in an annex": 15,
+  "detached": 14,
+  "basement": 46
+ },
+ "by_sheet": [
+  {
+   "side": "N",
+   "sheet": "789-12",
+   "extent": "Belmore-Coronation",
+   "buildings": 3,
+   "with_garage": 1,
+   "pct": 33.3
+  },
+  {
+   "side": "N",
+   "sheet": "789-13",
+   "extent": "Coronation-Mayfair",
+   "buildings": 6,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-13",
+   "extent": "Mariette-Rosedale",
+   "buildings": 2,
+   "with_garage": 2,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-14",
+   "extent": "Rosedale-King Edward",
+   "buildings": 5,
+   "with_garage": 4,
+   "pct": 80.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-14",
+   "extent": "King Edward-Montclair",
+   "buildings": 2,
+   "with_garage": 1,
+   "pct": 50.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-14",
+   "extent": "Montclair-Walkley",
+   "buildings": 3,
+   "with_garage": 1,
+   "pct": 33.3
+  },
+  {
+   "side": "N",
+   "sheet": "789-15",
+   "extent": "Walkley-Prince of Wales",
+   "buildings": 3,
+   "with_garage": 3,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-15",
+   "extent": "Cumberland-Cavendish",
+   "buildings": 2,
+   "with_garage": 2,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-16",
+   "extent": "Cavendish-Bessborough",
+   "buildings": 4,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "N",
+   "sheet": "789-16",
+   "extent": "Bessborough-Benny",
+   "buildings": 2,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "N",
+   "sheet": "798-3",
+   "extent": "Benny-Madison",
+   "buildings": 2,
+   "with_garage": 2,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "798-3",
+   "extent": "Madison-Kensington",
+   "buildings": 4,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "N",
+   "sheet": "798-3",
+   "extent": "Kensington-Grand",
+   "buildings": 1,
+   "with_garage": 1,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "787-5",
+   "extent": "Grand-Beaconsfield",
+   "buildings": 4,
+   "with_garage": 1,
+   "pct": 25.0
+  },
+  {
+   "side": "N",
+   "sheet": "787-5",
+   "extent": "Beaconsfield-Hingston",
+   "buildings": 6,
+   "with_garage": 5,
+   "pct": 83.3
+  },
+  {
+   "side": "N",
+   "sheet": "787-5",
+   "extent": "Hingston-Hampton",
+   "buildings": 9,
+   "with_garage": 9,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "787-6",
+   "extent": "Hampton-Royal",
+   "buildings": 7,
+   "with_garage": 5,
+   "pct": 71.4
+  },
+  {
+   "side": "N",
+   "sheet": "787-6",
+   "extent": "Royal-Draper",
+   "buildings": 6,
+   "with_garage": 6,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "787-6",
+   "extent": "Draper-Melrose",
+   "buildings": 4,
+   "with_garage": 4,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "739-2",
+   "extent": "Melrose-Wilson",
+   "buildings": 1,
+   "with_garage": 1,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "739-2",
+   "extent": "Wilson-Harvard",
+   "buildings": 3,
+   "with_garage": 2,
+   "pct": 66.7
+  },
+  {
+   "side": "N",
+   "sheet": "739-2",
+   "extent": "Harvard-Oxford",
+   "buildings": 3,
+   "with_garage": 3,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "739-5",
+   "extent": "Oxford-Marcil",
+   "buildings": 4,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "N",
+   "sheet": "739-5",
+   "extent": "Marcil-Old Orchard",
+   "buildings": 2,
+   "with_garage": 2,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "739-5",
+   "extent": "Old Orchard-Hampstead apts",
+   "buildings": 1,
+   "with_garage": 1,
+   "pct": 100.0
+  },
+  {
+   "side": "N",
+   "sheet": "739-5",
+   "extent": "Old Orchard-Girouard",
+   "buildings": 1,
+   "with_garage": 1,
+   "pct": 100.0
+  },
+  {
+   "side": "S",
+   "sheet": "784-1",
+   "extent": "Coronation-Mayfair",
+   "buildings": 4,
+   "with_garage": 2,
+   "pct": 50.0
+  },
+  {
+   "side": "S",
+   "sheet": "784-2",
+   "extent": "Mayfair-Mariette",
+   "buildings": 3,
+   "with_garage": 2,
+   "pct": 66.7
+  },
+  {
+   "side": "S",
+   "sheet": "784-2",
+   "extent": "Rosedale-King Edward",
+   "buildings": 2,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "S",
+   "sheet": "785-1",
+   "extent": "King Edward-Montclair",
+   "buildings": 2,
+   "with_garage": 2,
+   "pct": 100.0
+  },
+  {
+   "side": "S",
+   "sheet": "785-1",
+   "extent": "Montclair-Walkley",
+   "buildings": 1,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "S",
+   "sheet": "785-1",
+   "extent": "Walkley-Prince of Wales",
+   "buildings": 2,
+   "with_garage": 2,
+   "pct": 100.0
+  },
+  {
+   "side": "S",
+   "sheet": "785-1",
+   "extent": "Prince of Wales-Cumberland",
+   "buildings": 1,
+   "with_garage": 1,
+   "pct": 100.0
+  },
+  {
+   "side": "S",
+   "sheet": "785-1",
+   "extent": "Cumberland-Cavendish",
+   "buildings": 3,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "S",
+   "sheet": "775",
+   "extent": "Cavendish-Madison",
+   "buildings": 1,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "S",
+   "sheet": "775",
+   "extent": "Madison-Kensington",
+   "buildings": 3,
+   "with_garage": 2,
+   "pct": 66.7
+  },
+  {
+   "side": "S",
+   "sheet": "787-7",
+   "extent": "Grand-Beaconsfield",
+   "buildings": 3,
+   "with_garage": 1,
+   "pct": 33.3
+  },
+  {
+   "side": "S",
+   "sheet": "787-7",
+   "extent": "Beaconsfield-Hingston",
+   "buildings": 3,
+   "with_garage": 3,
+   "pct": 100.0
+  },
+  {
+   "side": "S",
+   "sheet": "787-7",
+   "extent": "Hingston-Hampton",
+   "buildings": 3,
+   "with_garage": 2,
+   "pct": 66.7
+  },
+  {
+   "side": "S",
+   "sheet": "739-4",
+   "extent": "west cross street-Oxford",
+   "buildings": 3,
+   "with_garage": 1,
+   "pct": 33.3
+  },
+  {
+   "side": "S",
+   "sheet": "739-5",
+   "extent": "Oxford-Marcil",
+   "buildings": 1,
+   "with_garage": 0,
+   "pct": 0.0
+  },
+  {
+   "side": "S",
+   "sheet": "739-5",
+   "extent": "Old Orchard-Girouard",
+   "buildings": 1,
+   "with_garage": 0,
+   "pct": 0.0
+  }
+ ],
+ "roll": {
+  "buildings_matched": 121,
+  "dwellings": 324,
+  "dwellings_in_buildings_with_garage": 192,
+  "pct_dwellings": 59.3
+ },
+ "construction_years": {
+  "n": 121,
+  "min": 1910,
+  "median": 1932,
+  "max": 2002,
+  "by_decade": {
+   "1910s": 1,
+   "1920s": 29,
+   "1930s": 44,
+   "1940s": 15,
+   "1950s": 29,
+   "1960s": 1,
+   "2000s": 2
+  },
+  "after_1955": 3
+ },
+ "types": {
+  "semi": 38,
+  "single": 15,
+  "duplex": 67,
+  "row": 2,
+  "apartment": 4
+ }
+}

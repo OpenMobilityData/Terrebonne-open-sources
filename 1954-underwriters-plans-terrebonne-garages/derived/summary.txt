@@ -1,0 +1,56 @@
+Residential buildings addressed on rue de Terrebonne, west end of the lane to Girouard, sheets available: 126
+  with a garage as built (1954-55 plans): 75 = 59.5 %
+  N side: 57 of 90 = 63.3 %
+  S side: 18 of 36 = 50.0 %
+  high-confidence readings only: 60 of 97 = 61.9 %
+Corner buildings on the Terrebonne block faces addressed on the cross street (not in the share): 28 (13 with a garage)
+Churches, presbytery, vacant frontages: 5
+Garage access (presumed from the plan): {'either street (corner)': 10, 'Terrebonne': 64, 'lane': 1}
+Garage kind: {'attached or in an annex': 15, 'detached': 14, 'basement': 46}
+Dwellings (City roll, 121 buildings matched): 324, of which in buildings with a garage 192 = 59.3 %
+Construction years (City roll): {'n': 121, 'min': 1910, 'median': 1932, 'max': 2002, 'by_decade': {'1910s': 1, '1920s': 29, '1930s': 44, '1940s': 15, '1950s': 29, '1960s': 1, '2000s': 2}, 'after_1955': 3}
+Building types (plan): {'semi': 38, 'single': 15, 'duplex': 67, 'row': 2, 'apartment': 4}
+
+By block face:
+  N 789-12  Belmore-Coronation                 1 /   3  33.3 %
+  N 789-13  Coronation-Mayfair                 0 /   6  0.0 %
+  N 789-13  Mariette-Rosedale                  2 /   2  100.0 %
+  N 789-14  Rosedale-King Edward               4 /   5  80.0 %
+  N 789-14  King Edward-Montclair              1 /   2  50.0 %
+  N 789-14  Montclair-Walkley                  1 /   3  33.3 %
+  N 789-15  Walkley-Prince of Wales            3 /   3  100.0 %
+  N 789-15  Cumberland-Cavendish               2 /   2  100.0 %
+  N 789-16  Cavendish-Bessborough              0 /   4  0.0 %
+  N 789-16  Bessborough-Benny                  0 /   2  0.0 %
+  N 798-3   Benny-Madison                      2 /   2  100.0 %
+  N 798-3   Madison-Kensington                 0 /   4  0.0 %
+  N 798-3   Kensington-Grand                   1 /   1  100.0 %
+  N 787-5   Grand-Beaconsfield                 1 /   4  25.0 %
+  N 787-5   Beaconsfield-Hingston              5 /   6  83.3 %
+  N 787-5   Hingston-Hampton                   9 /   9  100.0 %
+  N 787-6   Hampton-Royal                      5 /   7  71.4 %
+  N 787-6   Royal-Draper                       6 /   6  100.0 %
+  N 787-6   Draper-Melrose                     4 /   4  100.0 %
+  N 739-2   Melrose-Wilson                     1 /   1  100.0 %
+  N 739-2   Wilson-Harvard                     2 /   3  66.7 %
+  N 739-2   Harvard-Oxford                     3 /   3  100.0 %
+  N 739-5   Oxford-Marcil                      0 /   4  0.0 %
+  N 739-5   Marcil-Old Orchard                 2 /   2  100.0 %
+  N 739-5   Old Orchard-Hampstead apts         1 /   1  100.0 %
+  N 739-5   Old Orchard-Girouard               1 /   1  100.0 %
+  S 784-1   Coronation-Mayfair                 2 /   4  50.0 %
+  S 784-2   Mayfair-Mariette                   2 /   3  66.7 %
+  S 784-2   Rosedale-King Edward               0 /   2  0.0 %
+  S 785-1   King Edward-Montclair              2 /   2  100.0 %
+  S 785-1   Montclair-Walkley                  0 /   1  0.0 %
+  S 785-1   Walkley-Prince of Wales            2 /   2  100.0 %
+  S 785-1   Prince of Wales-Cumberland         1 /   1  100.0 %
+  S 785-1   Cumberland-Cavendish               0 /   3  0.0 %
+  S 775     Cavendish-Madison                  0 /   1  0.0 %
+  S 775     Madison-Kensington                 2 /   3  66.7 %
+  S 787-7   Grand-Beaconsfield                 1 /   3  33.3 %
+  S 787-7   Beaconsfield-Hingston              3 /   3  100.0 %
+  S 787-7   Hingston-Hampton                   2 /   3  66.7 %
+  S 739-4   west cross street-Oxford           1 /   3  33.3 %
+  S 739-5   Oxford-Marcil                      0 /   1  0.0 %
+  S 739-5   Old Orchard-Girouard               0 /   1  0.0 %
