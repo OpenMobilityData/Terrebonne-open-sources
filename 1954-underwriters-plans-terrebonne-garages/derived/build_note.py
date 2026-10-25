@@ -36,13 +36,13 @@ The plans show garages as built, not driveways: a driveway without a garage leav
 
 \begin{landscape}
 \begin{figure}[H]\centering
-\includegraphics[width=\linewidth]{figures/panels/today_en_p1.pdf}\\[2pt]
-\includegraphics[width=\linewidth]{figures/panels/today_en_p2.pdf}\\[2pt]
-\includegraphics[width=\linewidth]{figures/panels/today_en_p3.pdf}
+\includegraphics[width=\linewidth,height=0.29\textheight,keepaspectratio]{figures/panels/today_en_p1.pdf}\\[2pt]
+\includegraphics[width=\linewidth,height=0.29\textheight,keepaspectratio]{figures/panels/today_en_p2.pdf}\\[2pt]
+\includegraphics[width=\linewidth,height=0.29\textheight,keepaspectratio]{figures/panels/today_en_p3.pdf}
 \caption{Overview map, west half: garage as built (1954--55) and driveway or apron today, one marker per building, on the City's parcels (continued on the next page; legend at the end).}\end{figure}
 \begin{figure}[H]\centering
-\includegraphics[width=\linewidth]{figures/panels/today_en_p4.pdf}\\[2pt]
-\includegraphics[width=\linewidth]{figures/panels/today_en_p5.pdf}\\[2pt]
+\includegraphics[width=\linewidth,height=0.29\textheight,keepaspectratio]{figures/panels/today_en_p4.pdf}\\[2pt]
+\includegraphics[width=\linewidth,height=0.29\textheight,keepaspectratio]{figures/panels/today_en_p5.pdf}\\[2pt]
 \includegraphics[width=\linewidth]{figures/panels/today_en_legend.pdf}
 \caption{Overview map, east half, and the legend.}\end{figure}
 \end{landscape}
