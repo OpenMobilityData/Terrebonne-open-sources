@@ -43,6 +43,8 @@ The full sheets are not copied here: BAnQ serves all 273 files of volume 7 at th
 
 Of the 75 garages: 46 basement, 14 detached, 15 attached or in an annex; the door opens on Terrebonne for 64, on either street for 10 corner lots, on a rear lane for 1. Also on the block faces: 28 corner buildings addressed on the cross street (13 with a garage), 2 churches, the presbytery, 2 vacant frontages. Years of construction from the roll: 118 of 121 matched buildings date from 1955 or earlier (median 1932).
 
+**Checks on the method** (note, section « Checks on the method »): georeferencing residuals under 3.3 m on 14 of 16 sheets (4.3 m and one 7.0 m point on the other two), checked against the City's parcels on every sheet; the 1954–55 reading agrees with the author's independent June 2024 marks on all 126 buildings; the present-day reading is one reader's, graded row by row, re-readable from public imagery, and was made before the conversion side was drawn on any figure; the LiDAR car detector, checked by eye on four blocks, found 34 of 45 car-shaped objects at the curbs (`derived/lidar_detector_check.csv`), so the night count is a lower bound; 150 of 161 rows matched to the roll; a census of the frontage, not a sample; every number scripted from public inputs.
+
 **Caveats:** garages, not driveways (the 1954–55 figure is a lower bound for "driveway or garage as built"); as built, not as used: the present-day reading sees aprons, driveways and parked vehicles from above but not what a garage holds inside, so neither figure is the share of households that park off-street today; old garages may be too small for today's larger vehicles; buildings, not households; one sheet missing in 1954–55; readings graded medium or unclear are flagged row by row.
 
 ## Files

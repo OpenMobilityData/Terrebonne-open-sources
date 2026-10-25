@@ -10,7 +10,7 @@ table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1rem 0}th,td{t
 td:nth-child(n+4),th:nth-child(n+4){text-align:right}img{max-width:100%;height:auto;border:1px solid var(--rule)}
 details{margin:1rem 0}a{color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:1rem 0}.tile{border:1px solid var(--rule);border-radius:8px;padding:12px}</style></head><body><main>
 <h1>Off-street parking on rue de Terrebonne as built: the 1954–55 fire-insurance plans</h1>
-<p class="muted">Terrebonne-open-sources · built 2026-10-25-14-25-45 · <a href="derived/terrebonne_garages_1954_note_en.pdf">note (PDF)</a> · <a href="derived/terrebonne_garages_deck_en.pdf">slides (PDF)</a> · <a href="derived/terrebonne_garages_deck_fr.pdf">diapositives (PDF)</a> · <a href="derived/buildings_geo.csv">table (CSV)</a> · <a href="https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/1954-underwriters-plans-terrebonne-garages">repository folder</a></p>
+<p class="muted">Terrebonne-open-sources · built 2026-10-25-14-27-50 · <a href="derived/terrebonne_garages_1954_note_en.pdf">note (PDF)</a> · <a href="derived/terrebonne_garages_deck_en.pdf">slides (PDF)</a> · <a href="derived/terrebonne_garages_deck_fr.pdf">diapositives (PDF)</a> · <a href="derived/buildings_geo.csv">table (CSV)</a> · <a href="https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/1954-underwriters-plans-terrebonne-garages">repository folder</a></p>
 <div class="grid">
 <div class="tile"><div class="big">60 %</div><div>of the 126 residential buildings with a Terrebonne address were built with a garage (75 buildings)</div></div>
 <div class="tile"><div class="big">63 % · 50 %</div><div>north side (57 of 90) · south side (18 of 36; one sheet missing)</div></div>
@@ -79,6 +79,15 @@ details{margin:1rem 0}a{color:var(--accent)}.grid{display:grid;grid-template-col
 <tr><td>S</td><td>739-4</td><td>west cross street-Oxford</td><td>3</td><td>1</td><td>33 %</td></tr>
 <tr><td>S</td><td>739-5</td><td>Oxford-Marcil</td><td>1</td><td>0</td><td>0 %</td></tr>
 <tr><td>S</td><td>739-5</td><td>Old Orchard-Girouard</td><td>1</td><td>0</td><td>0 %</td></tr></tbody></table></details>
+<h2>Checks on the method</h2>
+<ul>
+<li><strong>Georeferencing.</strong> Each sheet fitted on its Terrebonne intersections; residuals under 3.3 m on fourteen sheets, 4.3 m and 7.0 m (one point) on the other two; checked by drawing the City's parcels over every sheet. A few metres cannot move a building to another lot or side.</li>
+<li><strong>The 1954–55 reading against an earlier, independent one.</strong> The author's June 2024 marks of every « Auto » on the same sheets, made for another purpose before this question was put, agree with the present reading on all 126 buildings addressed on Terrebonne.</li>
+<li><strong>The present-day reading</strong> is one reader's reading of public imagery, graded row by row, re-readable from the regenerated strips; made before the conversion side was drawn on any figure.</li>
+<li><strong>The LiDAR car detector</strong>, checked by eye on four blocks, found 34 of 45 car-shaped objects at the curbs (<a href="derived/lidar_detector_check.csv">lidar_detector_check.csv</a>): the night count of 85 is a lower bound, roughly 110 after correcting for recall (stated, not applied).</li>
+<li><strong>Join to the roll:</strong> 150 of 161 rows matched; the unmatched carry no dwelling count.</li>
+<li><strong>A census, not a sample;</strong> every number scripted from public inputs; the two readings are the only hand-made inputs, one row per building each.</li>
+</ul>
 <h2>Caveats</h2>
 <ul><li><strong>Garages, not driveways.</strong> A driveway or parking pad without a garage leaves no mark on the plans; the figure is a lower bound for "driveway or garage as built".</li>
 <li><strong>As built, not as used.</strong> The 1954–55 figure counts structures; the present-day reading sees aprons, driveways and parked vehicles from above but not what a garage holds inside (a workshop, storage, living space). Neither is the share of households that park off-street today. A garage of 1930 or 1950 may also be too small for a large vehicle of today.</li>
