@@ -1,0 +1,159 @@
+sheet,civic_numbers,driveway_today,vehicle_or_pad_on_lot,garage_door_visible,access_today,confidence,notes
+789-12,7027,no,no,no,-,high,lawn and walkway only
+789-12,7025,no,no,no,-,high,lawn and walkway only
+789-12,7005,yes,no,attached garage faces Coronation,Coronation,high,paved apron from Coronation to the attached garage
+789-12,4505 Belmore,unclear,no,no,Terrebonne?,low,"a paved strip between 4505 Belmore and 7027, width uncertain"
+784-1,4490 corner,yes,no,no,Coronation,medium,paved driveway on the Coronation side
+784-1,(houses 3530-3562 on the cross street),n/a,n/a,n/a,-,-,"cross-street houses, not read"
+789-13,6985,yes,yes,no,Terrebonne,high,paved strip along the west side to a car parked at the rear
+789-13,6975,no,no,no,-,medium,lawn; the paved strip east of it belongs to 6969
+789-13,6969,yes,yes,no,Terrebonne,medium,paved strip between 6975 and 6969 with a car parked on it
+789-13,6963,no,no,no,-,high,lawn and walkway
+789-13,6957,no,no,no,-,high,lawn and walkway
+789-13,6951,no,no,no,-,high,lawn and walkway (Mayfair corner)
+784-1,6994,unclear,no,no,Coronation?,low,"light patch on the Coronation side, width uncertain"
+784-1,6990,no,no,no,-,medium,the car east of it is on the 6980 lot (a building absent in 1954)
+784-1,6960,yes,yes,no,Terrebonne,high,car parked in the front yard on the west side
+784-1,6950,no,no,no,-,high,lawn
+789-13,4501 Mayfair,yes,no,no,Mayfair,high,paved yard along Mayfair
+789-13,4500 Mariette,yes,no,no,Mariette,medium,paved strip on the Mariette side
+784-2,6922,yes,yes,no,Terrebonne,high,paved apron across the whole front
+784-2,6910,yes,yes,no,Terrebonne,medium,car parked on the west side of the front
+784-2,6900,yes,yes,no,Mariette,high,paved strip along Mariette with a car parked
+789-13,4501 Mariette,unclear,no,no,Mariette?,low,
+789-13,6871,yes,no,no,Terrebonne,high,paved strip from Terrebonne along the west side
+789-13,6865,yes,no,no,Terrebonne,high,paved across the front (ramp to the garage)
+789-13,4500 Rosedale,yes,no,no,Rosedale,high,paved strip along Rosedale
+784-2,6880-6870,n/a,n/a,n/a,-,-,church and hall
+784-2,6860,n/a,n/a,n/a,-,-,church grounds today
+789-14,6847,yes,no,no,Terrebonne,medium,paved strip on the east side of the house toward the rear garage
+789-14,6845,yes,yes,no,Terrebonne,high,"paved apron, car parked in front of the basement garage"
+789-14,6835,yes,yes,no,Terrebonne,high,"paved apron, car parked in front of the basement garage"
+789-14,6825,no,no,no,-,medium,walkway only
+789-14,6815,yes,no,no,Terrebonne,medium,paved strip along the west side of the building
+789-14,6799,n/a,n/a,n/a,-,-,building not found in the roll at that number (now 6739?); not read
+789-14,6737,yes,yes,no,Terrebonne,high,car parked on a paved strip between 6739 and 6735-37
+789-14,4505 King Edward,n/a,n/a,n/a,-,-,not matched; not read
+789-14,4500 Montclair,yes,no,no,Montclair,medium,paved yard on the Montclair side (shared lot with 4510)
+789-14,6685,no,no,no,-,high,walkway only
+789-14,6675,yes,yes,no,Terrebonne,high,"paved strip on the east side, car parked"
+789-14,6655,no,no,no,-,high,"apartment block, lawn to the sidewalk; cars on the street"
+789-14,4505 Montclair,no,no,no,-,medium,lawn and walkway
+789-15,6645,no,no,no,-,high,"apartment block, front lawn; no visible drive"
+789-15,6625,yes,no,no,Terrebonne,medium,paved apron across the front
+789-15,6615,yes,yes,no,Terrebonne,high,"paved apron, car parked in front"
+784-2,6840,no,no,no,-,medium,walkway only; the car is on the 4450 King-Edward lot
+784-2,6830,no,no,no,-,high,walkway only
+785-1,6720,yes,yes,no,Terrebonne,high,car parked on a strip on the west side of the house
+785-1,(6710) small 1.5-storey house east of 6720,n/a,n/a,n/a,-,-,no building there today (4480 Montclair lot)
+785-1,4480 corner,yes,no,no,Montclair,medium,paved yard along Montclair
+785-1,6668,n/a,n/a,n/a,-,-,"the lot is now 6680, an apartment block (1960s); 6668 gone"
+785-1,6610,yes,yes,no,Terrebonne,high,paved strip on the west side with a car; now numbered 6640
+785-1,6600,yes,yes,no,Terrebonne,high,paved strip on the west side with a car; now 6630/6620
+789-15,4505 Prince of Wales,no,no,no,-,medium,lawn to the sidewalk; detached garage of 1954 not visible as a parking use
+789-15,4500 Cumberland,yes,no,no,Cumberland,medium,paved strip on the Cumberland side
+789-15,6505,yes,no,no,Terrebonne,high,paved apron across the front down to the basement garage
+789-15,6503,yes,yes,no,Terrebonne,high,paved apron with a car parked in front of the basement garage
+789-15,4505 Cumberland,no,no,no,-,high,lawn and walkway
+785-1,6552,no,no,no,Terrebonne,high,walkway only in front; rear access from the lane not visible
+785-1,6540,no,no,no,-,high,walkway only
+785-1,6530,no,no,no,-,high,walkway only
+785-1,6510,no,no,no,-,high,lawn
+789-16,6497,yes,no,no,Terrebonne,high,paved strip along the east side of the house
+789-16,6495,yes,no,no,Terrebonne,medium,paved strip on the east side toward the rear
+789-16,6465,yes,yes,no,Terrebonne,high,car parked on a paved strip between 6465 and 6455
+789-16,6455,yes,no,no,Terrebonne,medium,paved strip on the east side of the house
+789-16,6445,yes,yes,no,Terrebonne,high,car parked on a paved strip between 6445 and 6435
+789-16,6435,yes,yes,no,Terrebonne,high,car parked on a paved strip on the east side
+789-16,6425,n/a,n/a,n/a,-,-,presbytery; paved access from Terrebonne
+789-16,6405,n/a,n/a,n/a,-,-,church
+798-3,6307 (a),yes,no,no,Terrebonne,medium,the 4514 Madison lot behind holds the former pair; a paved strip on the Madison side
+798-3,6307 (b),yes,no,no,Madison,medium,now 4500 Madison; paved yard on the Madison side
+798-3,6271,no,no,no,-,high,walkway only
+798-3,6269,no,no,no,-,high,walkway only
+798-3,6257 (a),no,no,no,-,high,walkway only
+798-3,6257 (b),no,no,no,-,high,now 4500 Kensington; lawn on both frontages
+798-3,4501 Madison,no,no,no,-,medium,lawn
+798-3,4500 Kensington,no,no,no,-,medium,the 1954 garage lot is 6257 (b) today; no drive visible
+775,6324,no,no,no,-,medium,the Terrebonne frontage here is lawn; vehicles parked at the rear from Madison
+775,6282,no,no,no,-,high,walkway only
+775,6256,yes,yes,no,Terrebonne,high,car parked on a paved strip on the west side
+775,6254,no,no,no,-,medium,lawn on the Kensington corner; the basement garage door of 1954 not visible
+798-3,6241,yes,yes,no,Terrebonne,high,now 4501 Kensington / 4507-09: paved aprons with vehicles in front of the side garages
+798-3,4500 Grand,yes,no,no,Grand,medium,apartment block; paved access on the Grand side
+787-5,6187,no,no,no,-,medium,apartment block; no drive on Terrebonne; basement garage door presumably on Grand (not visible)
+787-5,6165-6161,no,no,no,-,high,walkway and lawn
+787-5,6157-6159,yes,yes,no,Terrebonne,high,"paved apron, two vehicles in front"
+787-5,6155-6153,yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-7,6194-6188,no,no,no,-,high,walkway only
+787-7,6184-6178,no,no,no,-,high,walkway only
+787-7,6158-6152,no,no,no,-,medium,walkway; the basement-garage ramp of 1954 not visible from above
+787-5,6133-6135,yes,no,no,Terrebonne,medium,paved apron on the east side
+787-5,6129-6131,yes,yes,no,Terrebonne,high,"paved apron, vehicle parked (orange) in front of the basement garage"
+787-5,6123-6125,no,no,no,-,medium,"walkway; the detached rear garages of 1954 reached through the lot, no front drive"
+787-5,6119-6121,no,no,no,-,medium,walkway only
+787-5,6107-6109,yes,no,no,Terrebonne,medium,paved apron across the front
+787-5,6101-6103,yes,no,no,Terrebonne,medium,paved apron across the front
+787-5,4508-4510 Hingston,n/a,n/a,n/a,-,-,"cross-street comparison row, not read"
+787-7,6124-6122,yes,no,no,Terrebonne,medium,paved apron on the east side
+787-7,6120-6118,yes,no,no,Terrebonne,medium,paved apron
+787-7,6118-6116,yes,no,no,Terrebonne,medium,paved apron on the west side
+787-5,6091-6085 (a),yes,yes,no,Terrebonne,high,"paved apron, vehicle in front of the basement garage"
+787-5,6091-6085 (b),yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-5,6081-6075 (a),yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-5,6081-6075 (b),yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-5,6071-6065 (a),yes,no,no,Terrebonne,high,paved apron down to the garage
+787-5,6071-6065 (b),yes,no,no,Terrebonne,high,paved apron
+787-5,6061-6063,yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-5,6057-6051 (a),yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-5,6057-6051 (b),yes,no,no,Terrebonne,high,paved apron
+787-5,4515-4517 Hingston,n/a,n/a,n/a,-,-,"cross-street comparison row, not read"
+787-7,6094-6088,yes,no,no,Terrebonne,medium,paved apron on the west side
+787-7,6076-6070,yes,no,no,Terrebonne,medium,paved strip between the two buildings
+787-7,6064-6058,yes,no,no,Terrebonne,medium,paved apron to the basement garage on the east side
+787-6,5995-5997,yes,no,no,Terrebonne,medium,paved strip on the west side toward the rear garage
+787-6,5983-5989 (a),yes,no,no,Terrebonne,high,paved apron down to the basement garage
+787-6,5983-5989 (b),yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+787-6,5975-5977,yes,no,no,Terrebonne,high,paved apron
+787-6,5971-5973,yes,no,no,Terrebonne,high,paved apron
+787-6,5967 (a),yes,yes,no,Terrebonne,high,vehicle parked in front (red)
+787-6,5967-5961 (b),yes,no,no,Terrebonne,medium,paved apron
+787-6,4500-4502 Royal,no,no,no,-,medium,no front drive on either street visible
+787-6,5873-5879 (a),yes,no,no,Terrebonne,high,paved apron to the basement garage
+787-6,5873-5879 (b),yes,no,no,Terrebonne,high,paved apron
+787-6,5861-5867 (a),yes,no,no,Terrebonne,high,paved apron
+787-6,5861-5867 (b),yes,no,no,Terrebonne,high,paved apron
+787-6,5851-5857 (a),yes,no,no,Terrebonne,high,paved apron
+787-6,5851-5857 (b),yes,no,no,Terrebonne,high,paved apron
+787-6,4501-4503 Royal,yes,yes,no,Royal,high,paved yard on the Royal side with a vehicle
+787-6,5839-5841,yes,no,no,Terrebonne,high,paved apron down to the basement garage
+787-6,5835-5837,yes,no,no,Terrebonne,high,paved apron
+787-6,5827-5829,yes,no,no,Terrebonne,high,paved apron
+787-6,5823-5825,yes,no,no,Terrebonne,high,paved apron
+787-6,4506 Melrose,yes,no,no,Melrose,medium,paved strip on the Melrose side
+739-4,(4481-4483 corner),n/a,n/a,n/a,-,-,cross-street corner; not read
+739-4,(4480-4482 corner),n/a,n/a,n/a,-,-,cross-street corner; not read
+739-4,(4479-4481 and 4474-4480 corners),n/a,n/a,n/a,-,-,cross-street corners; not read
+739-2,5751,yes,no,no,Terrebonne,medium,now 4501-03 Melrose; paved strip on the Terrebonne side of the lot
+739-2,4501-4507 Melrose,yes,no,no,Melrose,medium,paved strip on the Melrose side
+739-2,5735,yes,no,no,Terrebonne,medium,now 4504 Wilson; paved apron on the Terrebonne frontage with the lot's drive
+739-2,5719-5721,yes,yes,no,Terrebonne,high,"paved apron, vehicle in front"
+739-2,5701,no,no,no,-,medium,now 4500 Harvard; lawn; vehicle seen is on the 5719-21 apron
+739-2,5681,yes,no,no,Terrebonne,medium,now 4501 Harvard; paved strip on the east side of the lot
+739-2,5657-5659,no,no,no,-,medium,walkway only
+739-2,5655,yes,no,no,Terrebonne,medium,paved strip on the west side toward the rear garage
+739-4,5680,no,no,no,-,medium,now 4468 d'Oxford; walkway only
+739-4,5670-5668,no,no,no,-,high,walkway only
+739-4,5654,no,no,no,-,medium,now 4464-66 d'Oxford; walkway only
+739-5,5637,no,no,no,-,high,lawn and walkway (lot 5625-37)
+739-5,5635,no,no,no,-,high,
+739-5,5625-5627,no,no,no,-,high,
+739-5,5605,no,no,no,-,medium,now 4502 Marcil; walkway only
+739-5,5604,no,no,no,-,medium,now 4484 Marcil; walkway only
+739-5,5581,yes,yes,no,Terrebonne,high,now 4503 Marcil; paved strip on the east side with a vehicle
+739-5,5555,yes,no,no,Terrebonne,medium,now 4500 Old Orchard; paved strip on the west side of the lot
+739-5,(4493-4495 and 4474-4480 corners),n/a,n/a,n/a,-,-,cross-street corners; not read
+739-5,5535,yes,yes,no,Terrebonne,high,now 4501 Old Orchard; paved apron with a vehicle on the east side
+739-5,5511,yes,no,no,Terrebonne,medium,4500 Girouard apartment block; paved access on the west side
+739-5,(4477-4479 corner),n/a,n/a,n/a,-,-,cross-street corner; not read
+739-5,5510-5512,no,no,no,-,high,lawn and walkway

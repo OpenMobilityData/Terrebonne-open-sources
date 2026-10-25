@@ -4,7 +4,7 @@
 \usepackage[hidelinks]{hyperref}\usepackage{caption}\captionsetup{font=small}
 \title{Off-street parking on rue de Terrebonne as built:\\ a reading of the 1954--55 fire-insurance plans}
 \author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}
-\date{October 25, 2026 \quad\small v2026-10-25-13-13-57}
+\date{October 25, 2026 \quad\small v2026-10-25-13-44-13}
 \begin{document}\maketitle
 \section*{Summary}
 Of the \textbf{126} residential buildings with a rue de Terrebonne address between the west end of the protected lane (Belmore) and avenue Girouard on the sixteen sheets available, \textbf{75} were built with a garage, that is \textbf{60\,\%} (north side 57 of 90, 63\,\%; south side 18 of 36, 50\,\%). Counting only the readings made with high confidence gives 62\,\%. Weighted by the dwellings the City's assessment roll lists in the same buildings, 59\,\% of the 324 dwellings are in a building that was built with a garage.
@@ -88,10 +88,31 @@ S & 739-5 & Old Orchard-Girouard & 1 & 0 & 0\,\% \\
 \begin{figure}[p]\centering\includegraphics[width=\textwidth]{figures/terrebonne_garages_1954_map_underwriters_en.png}
 \caption{On the 1954--55 sheets, georeferenced and straightened along the street.}\end{figure}
 
+\section{The frontages today}
+A check of each building's frontage on the Gouvernement du Qu\'ebec's continuous aerial imagery (service \emph{Imagerie\_GQ}, fetched October 25, 2026; leaf-off spring imagery, about 8~cm per pixel; the City's parcels overlaid) recorded, for 123 of the 126 buildings, whether a driveway, paved apron or parking pad is visible on the lot today, whether a vehicle was parked on it at the moment of the photograph, and from which street it is reached (\texttt{buildings\_geo.csv}, columns \texttt{driveway\_today}, \texttt{vehicle\_or\_pad\_on\_lot}, \texttt{access\_today}). What a garage holds inside cannot be seen from above, so the check measures the visible access, not the use.
+
+\begin{table}[h]\centering\small
+\begin{tabular}{lrr}\toprule
+ & Buildings & Share\\\midrule
+Checked & 123 & \\
+Driveway, apron or parking pad visible today & 79 & 64\,\%\\
+Garage as built (1954--55) \emph{or} driveway today & 89 & 72\,\%\\
+\quad north side & 70 of 89 & 79\,\%\\
+\quad south side & 19 of 34 & 56\,\%\\
+\quad by dwellings (City roll) & 221 of 303 & 73\,\%\\
+Garage of 1954--55 with its apron still visible & 64 & \\
+Garage of 1954--55 with no apron visible today & 10 & \\
+No garage in 1954--55, a driveway or pad today & 15 & \\
+A vehicle parked on the lot when photographed & 34 & \\\bottomrule
+\end{tabular}\caption{The frontages today (aerial imagery read October 25, 2026).}\end{table}
+
+\begin{figure}[p]\centering\includegraphics[width=\textwidth]{figures/terrebonne_garages_1954_map_today_en.pdf}
+\caption{Garage as built and driveway today, building by building.}\end{figure}
+
 \section{Caveats}
 \begin{itemize}
 \item \textbf{Garages, not driveways.} The plans mark structures. A driveway or parking pad without a garage leaves no mark, so the as-built share with a driveway or garage is a lower bound.
-\item \textbf{As built, not as used.} Garages converted to workshops, storage or living space, driveways turned into gardens, and front yards paved since 1955 are not recorded; a present-day check of each frontage would be the next step. A garage built in 1930 or 1950 may also be too small for a large vehicle of today.
+\item \textbf{As built, not as used.} The 1954--55 share counts structures; the present-day check sees aprons, driveways and parked vehicles from above but not what a garage holds inside (a workshop, storage, living space), so neither figure is the share of households that park off-street today. A garage built in 1930 or 1950 may also be too small for a large vehicle of today. Ten garages of 1954--55 show no apron today and one reading is unclear.
 \item \textbf{Buildings, not households.} The share by building and the share by dwelling happen to agree (60\,\% and 59\,\%), but a duplex pair has two to four flats and one or two garages, and three of the four apartment buildings have a basement garage of unrecorded capacity.
 \item \textbf{One sheet missing} (787-8) and 29 readings graded medium (noted row by row).
 \item \textbf{Corner lots.} Which street a corner building is addressed on changed in places between 1954 and the present roll; the table keeps the 1954 numbering and the join records the present unit.

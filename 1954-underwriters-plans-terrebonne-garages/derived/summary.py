@@ -43,6 +43,20 @@ dec = collections.Counter(f'{y // 10 * 10}s' for y in yrs)
 S['construction_years'] = {'n': len(yrs), 'min': yrs[0] if yrs else None, 'median': yrs[len(yrs) // 2] if yrs else None, 'max': yrs[-1] if yrs else None,
                            'by_decade': dict(sorted(dec.items())), 'after_1955': sum(y > 1955 for y in yrs)}
 S['types'] = dict(collections.Counter(('apartment' if 'apartment' in r['building_type'] else 'duplex' if 'duplex' in r['building_type'] else 'single' if 'single' in r['building_type'] else 'semi' if 'semi' in r['building_type'] else 'row' if 'row' in r['building_type'] else 'other') for r in front))
+# present-day check (Québec government aerial imagery, read Oct 25, 2026)
+chk = [r for r in front if r.get('driveway_today') in ('yes', 'no', 'unclear')]
+if chk:
+    dy = sum(r['driveway_today'] == 'yes' for r in chk); either = sum(r['driveway_today'] == 'yes' or r['garage_1954'] == 'yes' for r in chk)
+    g = [r for r in chk if r['garage_1954'] == 'yes']; n = [r for r in chk if r['garage_1954'] == 'no']
+    S['present_day'] = {'checked': len(chk), 'unclear': sum(r['driveway_today'] == 'unclear' for r in chk),
+        'driveway_or_apron_today': dy, 'pct_driveway_today': pct(dy, len(chk)),
+        'garage_1954_or_driveway_today': either, 'pct_either': pct(either, len(chk)),
+        'garage_1954_with_apron_today': sum(r['driveway_today'] == 'yes' for r in g), 'garage_1954_without_apron_today': sum(r['driveway_today'] == 'no' for r in g),
+        'no_garage_1954_with_driveway_today': sum(r['driveway_today'] == 'yes' for r in n), 'no_garage_1954_without': sum(r['driveway_today'] == 'no' for r in n),
+        'vehicle_on_lot_at_capture': sum(r['vehicle_or_pad_on_lot'] == 'yes' for r in chk),
+        'by_side': {side: {'checked': len([r for r in chk if r['side'] == side]), 'either': sum(r['driveway_today'] == 'yes' or r['garage_1954'] == 'yes' for r in chk if r['side'] == side)} for side in 'NS'},
+        'dwellings_either': sum(int(r['logements'] or 0) for r in chk if r['driveway_today'] == 'yes' or r['garage_1954'] == 'yes'), 'dwellings_checked': sum(int(r['logements'] or 0) for r in chk)}
+    S['present_day']['pct_dwellings_either'] = pct(S['present_day']['dwellings_either'], S['present_day']['dwellings_checked'])
 json.dump(S, open(os.path.join(HERE, 'summary.json'), 'w'), indent=1, ensure_ascii=False)
 with open(os.path.join(HERE, 'summary.txt'), 'w') as f:
     f.write(f"Residential buildings addressed on rue de Terrebonne, west end of the lane to Girouard, sheets available: {S['buildings_terrebonne']}\n")
@@ -53,6 +67,14 @@ with open(os.path.join(HERE, 'summary.txt'), 'w') as f:
     f.write(f"Churches, presbytery, vacant frontages: {S['non_residential_or_vacant']}\n")
     f.write(f"Garage access (presumed from the plan): {S['garage_access']}\nGarage kind: {S['garage_kind']}\n")
     f.write(f"Dwellings (City roll, {S['roll']['buildings_matched']} buildings matched): {S['roll']['dwellings']}, of which in buildings with a garage {S['roll']['dwellings_in_buildings_with_garage']} = {S['roll']['pct_dwellings']} %\n")
-    f.write(f"Construction years (City roll): {S['construction_years']}\nBuilding types (plan): {S['types']}\n\nBy block face:\n")
+    f.write(f"Construction years (City roll): {S['construction_years']}\nBuilding types (plan): {S['types']}\n")
+    if 'present_day' in S:
+        P = S['present_day']
+        f.write(f"\nPresent-day check (Québec government aerial imagery, read Oct 25, 2026; {P['checked']} of the buildings addressed on Terrebonne):\n")
+        f.write(f"  driveway or paved apron visible today: {P['driveway_or_apron_today']} = {P['pct_driveway_today']} %  (unclear: {P['unclear']})\n")
+        f.write(f"  garage as built (1954-55) OR driveway today: {P['garage_1954_or_driveway_today']} = {P['pct_either']} %  (N {P['by_side']['N']['either']}/{P['by_side']['N']['checked']}, S {P['by_side']['S']['either']}/{P['by_side']['S']['checked']}); by dwellings {P['dwellings_either']}/{P['dwellings_checked']} = {P['pct_dwellings_either']} %\n")
+        f.write(f"  garages of 1954-55: apron still visible {P['garage_1954_with_apron_today']}, none visible {P['garage_1954_without_apron_today']}; no garage in 1954-55 but a driveway today: {P['no_garage_1954_with_driveway_today']} (none: {P['no_garage_1954_without']})\n")
+        f.write(f"  a vehicle parked on the lot at the moment of the photo: {P['vehicle_on_lot_at_capture']}\n")
+    f.write("\nBy block face:\n")
     for b in S['by_sheet']: f.write(f"  {b['side']} {b['sheet']:7} {b['extent']:32} {b['with_garage']:3} / {b['buildings']:3}  {b['pct']} %\n")
 print(open(os.path.join(HERE, 'summary.txt')).read())

@@ -398,5 +398,31 @@
   "duplex": 67,
   "row": 2,
   "apartment": 4
+ },
+ "present_day": {
+  "checked": 123,
+  "unclear": 1,
+  "driveway_or_apron_today": 79,
+  "pct_driveway_today": 64.2,
+  "garage_1954_or_driveway_today": 89,
+  "pct_either": 72.4,
+  "garage_1954_with_apron_today": 64,
+  "garage_1954_without_apron_today": 10,
+  "no_garage_1954_with_driveway_today": 15,
+  "no_garage_1954_without": 33,
+  "vehicle_on_lot_at_capture": 34,
+  "by_side": {
+   "N": {
+    "checked": 89,
+    "either": 70
+   },
+   "S": {
+    "checked": 34,
+    "either": 19
+   }
+  },
+  "dwellings_either": 221,
+  "dwellings_checked": 303,
+  "pct_dwellings_either": 72.9
  }
 }

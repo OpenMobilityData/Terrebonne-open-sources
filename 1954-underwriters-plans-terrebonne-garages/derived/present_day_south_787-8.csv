@@ -1,0 +1,11 @@
+sheet,civic_numbers,driveway_today,vehicle_or_pad_on_lot,garage_door_visible,access_today,confidence,notes
+787-8,(unknown),n/a,n/a,n/a,-,-,sheet missing in 1954; today the south side Hampton–Melrose holds the Hampton–Royal duplex row (5996-5950) and the Royal–Draper apartment block; see present_day_south_787-8 rows
+787-8,5996-98 S,yes,no,no,Terrebonne,medium,"duplex row south side, Hampton–Royal, read today only: paved apron"
+787-8,5990-92 S,yes,no,no,Terrebonne,medium,paved apron
+787-8,5976-78 S,yes,yes,no,Terrebonne,high,vehicle in front
+787-8,5972-74 S,yes,no,no,Terrebonne,medium,paved apron
+787-8,5966-68 S,yes,no,no,Terrebonne,medium,paved apron
+787-8,5962-64 S,yes,no,no,Terrebonne,medium,paved apron
+787-8,5954-56 S,yes,no,no,Terrebonne,medium,paved apron
+787-8,5950-52 S,yes,no,no,Terrebonne,medium,paved apron
+787-8,Royal–Draper S apartment block,no,no,no,-,high,large apartment block set back behind trees; no drive on Terrebonne
