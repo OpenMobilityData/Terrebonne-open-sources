@@ -33,6 +33,8 @@ Of the \textbf{""" + f"{N}" + r"""} residential buildings with a rue de Terrebon
 
 The plans show garages as built, not driveways: a driveway without a garage leaves no mark, so the share of properties with a driveway or a garage as built is at least this figure. They show the stock of 1954--55, not of today; the City's roll dates """ + f"{S['construction_years']['n'] - S['construction_years']['after_1955']} of the {S['construction_years']['n']}" + r""" matched buildings to 1955 or earlier (median """ + f"{S['construction_years']['median']}" + r"""), so the frontage drawn is essentially the one standing today, but the use of each garage and driveway since then is not recorded here.
 
+A second reading, on the Gouvernement du Qu\'ebec's aerial imagery (leaf-off spring, after June 2024, about 8\,cm per pixel, with the City's parcels overlaid), found a driveway, paved apron or parking pad today on """ + f"{PD['driveway_or_apron_today']}" + r""" of the """ + f"{PD['checked']}" + r""" buildings checked (""" + pc(PD['pct_driveway_today']) + r"""). Counting a building if it either was built with a garage or shows a driveway today gives """ + f"{PD['garage_1954_or_driveway_today']}" + r""" of """ + f"{PD['checked']}" + r""", """ + pc(PD['pct_either']) + r""" (north """ + f"{PD['by_side']['N']['either']} of {PD['by_side']['N']['checked']}" + r""", south """ + f"{PD['by_side']['S']['either']} of {PD['by_side']['S']['checked']}" + r"""; by dwellings """ + pc(PD['pct_dwellings_either']) + r"""). What a garage holds inside cannot be seen from above.
+
 Both remote-sensing sources also show the cars parked on rue de Terrebonne itself. On the daytime imagery (spring, after June 2024, with the lane in place) there were """ + f"{OC['opt']}" + r""" cars at the Terrebonne curbs, """ + f"{OC['optical_N']}" + r""" on the north side and """ + f"{OC['optical_S']}" + r""" on the south. In the City's LiDAR, flown at night in 2015 before the lane, there were """ + f"{OC['eye']}" + r""" car-shaped objects at the curbs (north """ + f"{OC['lidar_by_eye_N']}" + r""", south """ + f"{OC['lidar_by_eye_S']}" + r"""), counted by eye on the height raster; an automatic detector finds """ + f"{OC['lid']}" + r""" of them. Figures~\ref{fig:carsmap} and \ref{fig:carstrips} show every object counted; the two moments are ten years and a redesign apart.
 
 \begin{figure}[H]\centering\includegraphics[width=\textwidth]{figures/terrebonne_garages_distribution_en.pdf}
@@ -184,6 +186,15 @@ A reader who doubts a figure should be able to see what would have to be wrong f
 \end{document}
 """
 open(os.path.join(HERE, 'terrebonne_garages_1954_note_en.tex'), 'w').write(tex)
+# plain-text summary (the Summary section, LaTeX markup stripped), for pasting
+import re as _re
+_sum = tex[tex.index('\\section*{Summary}') + len('\\section*{Summary}'):tex.index('\\begin{figure}[H]')]
+_sum = _re.sub(r'\\textbf\{([^}]*)\}', r'\1', _sum); _sum = _re.sub(r'\\emph\{([^}]*)\}', r'\1', _sum)
+_sum = _re.sub(r'Figures~\\ref\{[^}]*\} and \\ref\{[^}]*\} show every object counted; ', 'The figures show every object counted; ', _sum)
+_sum = _sum.replace('\\,\\%', ' %').replace('\\%', '%').replace('--', '–').replace('~', ' ').replace('\\,', ' ').replace("\\'e", 'é').replace('\\`e', 'è')
+_sum = '\n\n'.join(' '.join(par.split()) for par in _sum.strip().split('\n\n') if par.strip())
+head = 'Off-street parking on rue de Terrebonne as built: a reading of the 1954–55 fire-insurance plans. Summary (v' + STAMP + ').'
+open(os.path.join(HERE, 'summary_en.txt'), 'w', encoding='utf-8').write(head + '\n\n' + _sum + '\n')
 for _ in range(2): subprocess.run(['pdflatex', '-interaction=nonstopmode', '-halt-on-error', 'terrebonne_garages_1954_note_en.tex'], cwd=HERE, stdout=subprocess.DEVNULL)
 for ext in ('.aux', '.log', '.out'):
     try: os.remove(os.path.join(HERE, 'terrebonne_garages_1954_note_en' + ext))
@@ -201,7 +212,7 @@ table{{border-collapse:collapse;width:100%;font-size:.92rem;margin:1rem 0}}th,td
 td:nth-child(n+4),th:nth-child(n+4){{text-align:right}}img{{max-width:100%;height:auto;border:1px solid var(--rule)}}
 details{{margin:1rem 0}}a{{color:var(--accent)}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:1rem 0}}.tile{{border:1px solid var(--rule);border-radius:8px;padding:12px}}</style></head><body><main>
 <h1>Off-street parking on rue de Terrebonne as built: the 1954–55 fire-insurance plans</h1>
-<p class="muted">Terrebonne-open-sources · built {STAMP} · <a href="derived/terrebonne_garages_1954_note_en.pdf">note (PDF)</a> · <a href="derived/terrebonne_garages_deck_en.pdf">slides (PDF)</a> · <a href="derived/terrebonne_garages_deck_fr.pdf">diapositives (PDF)</a> · <a href="derived/buildings_geo.csv">table (CSV)</a> · <a href="https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/1954-underwriters-plans-terrebonne-garages">repository folder</a></p>
+<p class="muted">Terrebonne-open-sources · built {STAMP} · <a href="derived/terrebonne_garages_1954_note_en.pdf">note (PDF)</a> · <a href="derived/summary_en.txt">summary (text)</a> · <a href="derived/terrebonne_garages_deck_en.pdf">slides (PDF)</a> · <a href="derived/terrebonne_garages_deck_fr.pdf">diapositives (PDF)</a> · <a href="derived/buildings_geo.csv">table (CSV)</a> · <a href="https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/1954-underwriters-plans-terrebonne-garages">repository folder</a></p>
 <div class="grid">
 <div class="tile"><div class="big">{PCT:.0f} %</div><div>of the {N} residential buildings with a Terrebonne address were built with a garage ({Y} buildings)</div></div>
 <div class="tile"><div class="big">{S['side_N']['pct']:.0f} % · {S['side_S']['pct']:.0f} %</div><div>north side ({S['side_N']['with_garage']} of {S['side_N']['buildings']}) · south side ({S['side_S']['with_garage']} of {S['side_S']['buildings']}; one sheet missing)</div></div>
