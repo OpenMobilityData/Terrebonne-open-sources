@@ -1,0 +1,30 @@
+block,block_name,length_m,converted_side,optical_N,optical_S,optical_converted_side,lidar_N,lidar_S,lidar_converted_side,lidar_lots_N,lidar_lots_S,lidar_cross_street_within_block
+0,–Belmore,59,N,0,8,0,0,1,0,5,2,0
+1,Belmore–Belmore,23,N,0,1,0,0,0,0,0,1,2
+2,Belmore–Coronation,52,N,0,2,0,0,0,0,4,2,0
+3,Coronation–de Mayfair,79,N,0,4,0,1,1,1,3,3,0
+4,de Mayfair–Mariette,89,N,1,3,1,1,0,1,5,5,1
+5,Mariette–Rosedale,89,N,1,0,1,1,0,1,2,0,3
+6,Rosedale–King-Edward,89,N,0,4,0,0,0,0,5,5,0
+7,King-Edward–Montclair,92,N,1,7,1,3,2,3,3,8,1
+8,Montclair–Walkley,90,N,5,10,5,3,7,3,7,2,3
+9,Walkley–Prince-of-Wales,81,N,4,4,4,2,1,2,2,7,6
+10,Prince-of-Wales–Cumberland,72,N,0,4,0,1,1,1,11,11,2
+11,Cumberland–Cavendish,74,N,0,3,0,1,0,1,3,1,0
+12,Cavendish–Bessborough,73,S,1,0,0,1,0,0,5,1,1
+13,Bessborough–Benny,102,S,0,0,0,1,0,0,9,0,2
+14,Benny–Madison,159,S,0,6,6,0,2,2,5,4,3
+15,Madison–de Kensington,85,S,0,4,4,1,5,5,8,8,5
+16,de Kensington–Grand,84,S,3,9,9,1,2,2,5,0,1
+17,Grand–Beaconsfield,87,S,4,9,9,0,2,2,7,3,4
+18,Beaconsfield–Hingston,81,S,0,5,5,0,1,1,3,2,2
+19,Hingston–de Hampton,98,S,0,7,7,4,2,2,9,4,0
+20,de Hampton–Royal,98,S,1,6,6,3,6,6,8,4,7
+21,Royal–Draper,94,S,1,2,2,1,0,0,8,0,1
+22,Draper–de Melrose,87,S,1,4,4,3,1,1,7,12,9
+23,de Melrose–Wilson,83,S,1,2,2,1,2,2,5,5,4
+24,Wilson–Harvard,76,S,0,2,2,1,1,1,2,3,2
+25,Harvard–d'Oxford,78,S,0,4,4,2,2,2,7,3,2
+26,d'Oxford–Marcil,79,S,0,2,2,0,1,1,1,3,5
+27,Marcil–Old Orchard,78,S,3,4,4,3,1,1,1,6,3
+28,Old Orchard–Girouard,79,S,3,12,12,3,6,6,4,4,1

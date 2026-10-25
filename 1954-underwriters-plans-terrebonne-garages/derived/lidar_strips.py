@@ -12,7 +12,7 @@ import numpy as np, tifffile
 from PIL import Image, ImageDraw, ImageFont
 from frame import to_EN, from_EN, to_uv, from_uv, NODES, CUM
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from ortho_strips import mtm8
+from mtm import mtm8
 HERE = os.path.dirname(os.path.abspath(__file__))
 LD = os.path.expanduser('~/Terrebonne-data/third-party/montreal-opendata/lidar-aerien-2015/derived/')
 def load(name):
