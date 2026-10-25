@@ -16,7 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); LANG = sys.argv[1] if len(sys
 rows = list(csv.DictReader(open(os.path.join(HERE, 'on_street_cars_by_block.csv'), encoding='utf-8')))
 fig, axes = plt.subplots(2, 1, figsize=(12, 6.2))
 spec = [('optical', '#2a78d6', 'A. Aerial imagery, daytime, spring (after June 2024: the lane markings are visible); counted by eye' if LANG == 'en' else 'A. Imagerie aérienne, de jour, au printemps (après juin 2024 : le marquage de la piste est visible); compté à l’œil'),
-        ('lidar_by_eye', '#b9b0f0', 'B. City LiDAR 2015, flown at night (00:00–04:00 local), before the lane: car-shaped objects counted by eye on the height raster (light), of which found by the automatic detector (dark)' if LANG == 'en' else 'B. LiDAR 2015 de la Ville, vol de nuit (0 h–4 h locale), avant la piste : objets en forme de voiture comptés à l’œil sur le raster de hauteur (clair), dont trouvés par le détecteur automatique (foncé)')]
+        ('lidar_by_eye', '#b9b0f0', 'B. City LiDAR 2015, two weeknights (Sun–Mon west of Walkley, Mon–Tue east; 00:00–03:50 local), before the lane: car-shaped objects counted by eye on the height raster (light), of which found by the automatic detector (dark)' if LANG == 'en' else 'B. LiDAR 2015 de la Ville, deux nuits de semaine (dim.–lun. à l’ouest de Walkley, lun.–mar. à l’est; 0 h–3 h 50 locale), avant la piste : objets en forme de voiture comptés à l’œil sur le raster de hauteur (clair), dont trouvés par le détecteur automatique (foncé)')]
 for ax, (key, col, title) in zip(axes, spec):
     for r in rows:
         k = int(r['block']); x0, x1 = CUM[k] + 3, CUM[k + 1] - 3
