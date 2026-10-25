@@ -11,15 +11,18 @@ def norm(s):
     s = unicodedata.normalize('NFKD', s or '').encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 def centroid(geom):
+    """area-weighted centroid of the outer rings, computed in coordinates relative to the first vertex
+    (the shoelace formula in raw longitude/latitude loses precision on lots a few metres across)"""
     polys = geom['coordinates'] if geom['type'] == 'MultiPolygon' else [geom['coordinates']]
-    A = Cx = Cy = 0
+    x0, y0 = polys[0][0][0][0], polys[0][0][0][1]
+    A = Cx = Cy = 0.0
     for poly in polys:
-        ring = poly[0]
-        for (x0, y0), (x1, y1) in zip(ring, ring[1:] + ring[:1]):
-            c = x0 * y1 - x1 * y0; A += c; Cx += (x0 + x1) * c; Cy += (y0 + y1) * c
-    if abs(A) < 1e-12:
+        ring = [(p[0] - x0, p[1] - y0) for p in poly[0]]
+        for (ax, ay), (bx, by) in zip(ring, ring[1:] + ring[:1]):
+            c = ax * by - bx * ay; A += c; Cx += (ax + bx) * c; Cy += (ay + by) * c
+    if abs(A) < 1e-18:
         pts = [p for poly in polys for p in poly[0]]; return sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
-    return Cx / (3 * A), Cy / (3 * A)
+    return x0 + Cx / (3 * A), y0 + Cy / (3 * A)
 units = []
 for f in json.load(open(UEV))['features']:
     p = f['properties']
@@ -34,10 +37,16 @@ STREETS = {'terrebonne': 'terrebonne', 'belmore': 'belmore', 'coronation': 'coro
            'cavendish': 'cavendish', 'bessborough': 'bessborough', 'benny': 'benny', 'madison': 'madison', 'kensington': 'kensington', 'grand': 'grand',
            'beaconsfield': 'beaconsfield', 'hingston': 'hingston', 'hampton': 'hampton', 'royal': 'royal', 'draper': 'draper', 'melrose': 'melrose',
            'wilson': 'wilson', 'harvard': 'harvard', 'oxford': 'oxford', 'marcil': 'marcil', 'old orchard': 'old orchard', 'girouard': 'girouard'}
-def find(street, lo, hi):
+def find(street, lo, hi, side=None):
+    """roll units on `street` overlapping [lo, hi]; on Terrebonne the north side has the odd numbers and the
+    south side the even ones, so a row's side fixes the parity; every candidate must also lie on the row's side"""
     key = STREETS.get(street)
     if not key: return []
-    return [u for u in units if key in u['street'] and not (u['b'] < lo or u['a'] > hi)]
+    out = [u for u in units if key in u['street'] and not (u['b'] < lo or u['a'] > hi)]
+    if side:
+        if key == 'terrebonne': out = [u for u in out if (u['a'] % 2 == 1) == (side == 'N')]
+        out = [u for u in out if (UV[u['id']][1] > 0) == (side == 'N')]
+    return out
 UV = {}
 for u in units:
     E, N = to_EN(u['lon'], u['lat']); UV[u['id']] = to_uv(E, N)
@@ -76,10 +85,10 @@ for r in rows:
     street = norm(m.group(1)) if m and norm(m.group(1)) not in ('corner', 'small') else None
     if r['addressed_on'] != 'Terrebonne' and not street: street = norm(r['addressed_on'])
     if not street: street = 'terrebonne'
-    cands = find(street, min(nums), max(nums)) if nums else []
+    cands = find(street, min(nums), max(nums), r['side']) if nums else []
     half = re.search(r'\((a|b)\)', civ)
     rec = dict(r); rec.update({'match': '', 'uev_id': '', 'lon': '', 'lat': '', 'u_m': '', 'v_m': '', 'logements': '', 'annee': '', 'usage': ''})
-    if street == 'terrebonne' and 'outside the lane' in r['cross_streets']: cands = find('terrebonne', min(nums), max(nums))
+    if street == 'terrebonne' and 'outside the lane' in r['cross_streets']: cands = find('terrebonne', min(nums), max(nums), r['side'])
     if cands:
         cands.sort(key=lambda u: -u['b'])
         if half: pick = [cands[0] if half.group(1) == 'a' else cands[-1]]

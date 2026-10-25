@@ -7,13 +7,13 @@ Corner buildings on the Terrebonne block faces addressed on the cross street (no
 Churches, presbytery, vacant frontages: 5
 Garage access (presumed from the plan): {'either street (corner)': 10, 'Terrebonne': 64, 'lane': 1}
 Garage kind: {'attached or in an annex': 15, 'detached': 14, 'basement': 46}
-Dwellings (City roll, 121 buildings matched): 324, of which in buildings with a garage 192 = 59.3 %
-Construction years (City roll): {'n': 121, 'min': 1910, 'median': 1932, 'max': 2002, 'by_decade': {'1910s': 1, '1920s': 29, '1930s': 44, '1940s': 15, '1950s': 29, '1960s': 1, '2000s': 2}, 'after_1955': 3}
+Dwellings (City roll, 120 buildings matched): 289, of which in buildings with a garage 168 = 58.1 %
+Construction years (City roll): {'n': 120, 'min': 1910, 'median': 1932, 'max': 2002, 'by_decade': {'1910s': 1, '1920s': 27, '1930s': 45, '1940s': 13, '1950s': 31, '1960s': 1, '2000s': 2}, 'after_1955': 3}
 Building types (plan): {'semi': 38, 'single': 15, 'duplex': 67, 'row': 2, 'apartment': 4}
 
 Present-day check (Québec government aerial imagery, read Oct 25, 2026; 123 of the buildings addressed on Terrebonne):
   driveway or paved apron visible today: 79 = 64.2 %  (unclear: 1)
-  garage as built (1954-55) OR driveway today: 89 = 72.4 %  (N 70/89, S 19/34); by dwellings 221/303 = 72.9 %
+  garage as built (1954-55) OR driveway today: 89 = 72.4 %  (N 70/89, S 19/34); by dwellings 188/268 = 70.1 %
   garages of 1954-55: apron still visible 64, none visible 10; no garage in 1954-55 but a driveway today: 15 (none: 33)
   a vehicle parked on the lot at the moment of the photo: 34
 

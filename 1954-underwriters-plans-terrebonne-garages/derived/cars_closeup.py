@@ -15,7 +15,7 @@ from matplotlib import transforms
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from frame import from_EN, from_uv, CUM, NODES, STREET_U
 import maps, lidar_strips as L, cars_figures as CF
-HERE = os.path.dirname(os.path.abspath(__file__)); LANG = sys.argv[1] if len(sys.argv) > 1 else 'en'; BLOCK = int(sys.argv[2]) if len(sys.argv) > 2 else 19
+HERE = os.path.dirname(os.path.abspath(__file__)); LANG = sys.argv[1] if len(sys.argv) > 1 else 'en'; BLOCK = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 19
 names = [n.split(';')[0].replace('Avenue ', '').replace('Boulevard ', '') for _, _, n in NODES]
 cars = list(csv.DictReader(open(os.path.join(HERE, 'lidar_cars.csv'), encoding='utf-8')))
 for c in cars:

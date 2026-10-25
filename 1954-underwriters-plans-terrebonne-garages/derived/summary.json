@@ -371,22 +371,22 @@
   }
  ],
  "roll": {
-  "buildings_matched": 121,
-  "dwellings": 324,
-  "dwellings_in_buildings_with_garage": 192,
-  "pct_dwellings": 59.3
+  "buildings_matched": 120,
+  "dwellings": 289,
+  "dwellings_in_buildings_with_garage": 168,
+  "pct_dwellings": 58.1
  },
  "construction_years": {
-  "n": 121,
+  "n": 120,
   "min": 1910,
   "median": 1932,
   "max": 2002,
   "by_decade": {
    "1910s": 1,
-   "1920s": 29,
-   "1930s": 44,
-   "1940s": 15,
-   "1950s": 29,
+   "1920s": 27,
+   "1930s": 45,
+   "1940s": 13,
+   "1950s": 31,
    "1960s": 1,
    "2000s": 2
   },
@@ -421,8 +421,8 @@
     "either": 19
    }
   },
-  "dwellings_either": 221,
-  "dwellings_checked": 303,
-  "pct_dwellings_either": 72.9
+  "dwellings_either": 188,
+  "dwellings_checked": 268,
+  "pct_dwellings_either": 70.1
  }
 }
