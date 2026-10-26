@@ -1,0 +1,77 @@
+% Extract: the summary points of the fact check of the CBC Daybreak interview
+% of May 20, 2026, verbatim (filled by build.py).
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.8in,bottom=0.8in,left=0.9in,right=0.9in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-26-15-27-55} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.0}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{gray}CBC Daybreak, May 20, 2026 -- fact check, summary points -- \repourl}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+
+% ---- Links ----
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\repo}[1]{\href{\repourl}{#1}}
+\newcommand{\doc}[2]{\href{\repourl/blob/main/#1}{#2}}
+\newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
+\newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
+\newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+\newcommand{\octsix}[2]{\href{\repourl/blob/main/2026-10-06-borough-council/derived/#1}{\textsf{\small[Borough council, Oct 6, 2026, #2]}}}
+\newcommand{\septeight}[1]{\href{\repourl/blob/main/2026-09-08-borough-council/}{\textsf{\small[Borough council, Sept 8, 2026, #1]}}}
+\newcommand{\dbocttime}[1]{\href{\repourl/blob/main/2026-cbc-daybreak-interview/}{\textsf{\small[Daybreak, Oct 9, 2026, #1]}}}
+\newcommand{\cjad}[1]{\href{\repourl/blob/main/2025-08-20-cjad-valenzuela/derived/2025-08-20_CJAD_Valenzuela_transcript_en.md}{\textsf{\small[CJAD, Aug 20, 2025, #1]}}}
+\newcommand{\dbnov}[1]{\href{\repourl/blob/main/2025-11-06-cbc-daybreak-valenzuela/derived/2025-11-06_CBC_Daybreak_Valenzuela_transcript_en.md}{\textsf{\small[Daybreak, Nov 6, 2025, #1]}}}
+% \pg{pages}: page of bundle 01 of access request 2026-581, linked
+\newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
+\newcommand{\pg}[1]{\pgl{#1}{#1}}
+% \exp{page}: page of the 2023 EXP study (open-sources repository)
+\newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
+\newcommand{\wc}[1]{\href{\repourl/blob/main/2020-2021-working-committee/raw/Comite_de_travail_recommandations_2021-06-13.pdf}{\textsf{\small[committee note, June 13, 2021, p.~#1]}}}
+\newcommand{\tr}[1]{\href{\repourl/blob/main/2026-10-19-city-council/derived/2026-10-19_03.md}{\textsf{\small[City council, Oct 19, 2026, #1]}}}
+\newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
+
+\begin{document}
+
+{\large\bfseries CBC Daybreak, May 20, 2026: the borough mayor's statements on the Terrebonne bike path checked against the record}\hfill{\small October~26, 2026}
+
+\vspace{-0.2em}
+{\small Summary points of the fact check, verbatim. Full document, sources, page references and the transcript:\\ \href{\repourl/tree/main/2026-05-20-cbc-daybreak-valenzuela}{\repourl/tree/main/2026-05-20-cbc-daybreak-valenzuela}.}
+\vspace{0.4em}
+
+\begin{enumerate}[nosep,itemsep=0.3em,leftmargin=1.4em]
+\item \textbf{« Something that is long term as a solution » \cliptime{9:00}.} Asked what residents should expect, the mayor said the borough was « really working on finding something that is long term as a solution ». This is the first public statement on the record that a lasting change to the 2024 layout was being sought. It is consistent with what the file later shows: on August~13, 2026 the mayor's chief of staff set a permanent mandate (a bidirectional lane on one side, parking restored on the other, \pg{1}), and on October~9 the councillor for Loyola said « for now, we're looking at it in a way that will make it permanent » \dbocttime{12:22}. What the public was told on October~6 was a seasonal measure and « a test » \octsix{2026-10-06_01.md}{40:49}.
+\item \textbf{« Concrete scenarios that have been presented to us, and now we're just evaluating which ones we'll be putting in place » \cliptime{9:59}.} On May~20 scenarios already existed, before any outside study. The June~10, 2026 letter from the borough's engineering division to the City says the borough's engineers had already given a technical opinion on the two concepts sketched by the elected officials, whose objective was « de redonner la bande de stationnement qui avait été retranchée », and that the elected officials wanted « un avis officiel, neutre et externe » \pg{8}. On September~8 the councillor spoke of « a dozen or more of scenarios » \septeight{34:25} and on October~6 of « a dozen potential scenarios » \octsix{2026-10-06_05.md}{2:24:19}. No scenario has been published; the consultant's note and the City's analysis are withheld.
+\item \textbf{« A lack of consultation » \cliptime{9:00}, « presented as a fait accompli » \cliptime{9:18}.} The same account as on CJAD on August~20, 2025 (« implemented it without consulting the residents », \cjad{3:34}). It leaves out the borough's working committee on mobility on Terrebonne (eight meetings, November~2020 to May~2021, with the street's institutions, school boards and residents), the EXP study published with the chosen scenario on October~30, 2023, the public information session of November~30, 2023, and the two council votes of February~2024, at the first of which she voted against. The host's remark that « that conversation had been going on since well before 2020 » was answered « Yeah, but ». Whether those steps amounted to consultation is a judgement; the check records what the statement leaves out.
+\item \textbf{« We've taken the time over the last few months to really re-speak to all of the actors involved … but also to the bikers and to the pedestrians that do enjoy that bike path » \cliptime{9:41}.} The 508 pages released under request 2026-581 contain no record of any consultation, survey or meeting with residents or users. At the borough council of October~6, 2026, the Association des piétons et cyclistes de NDG asked why it had not been contacted \octsix{2026-10-06_02.md}{1:13:36}; the councillor answered that the association had been « en contact … avant, pendant, et juste avant que je vous parle » \octsix{2026-10-06_02.md}{1:21:34} and that there had been no « autres consultations publiques récemment » \octsix{2026-10-06_02.md}{1:15:02}; on October~9 he cited « 4,000 doors » and « more than 40 meetings » \dbocttime{01:53 and 02:37}. Which cyclists or pedestrians had been heard by May~20 is not on the record.
+\item \textbf{« I think there is a middle ground » \cliptime{9:59}.} The frame recurs: on September~8 the councillor said « si on arrive à frustrer les deux côtés en même temps, on va savoir qu'on a trouvé une voie de passage au milieu » \septeight{2:38:50}, and on October~6 the mayor spoke of a « juste milieu » \octsix{2026-10-06_07.md}{50:53}. On the middle itself the record holds two technical findings: the City's street-design service found on June~17 that the borough's options « présentent plusieurs compromis importants sur le plan de la sécurité, du confort des usagers vulnérables et de la cohérence du réseau cyclable » \pg{6}; and the 2023 EXP study had already set aside a bidirectional lane, the long-term option of the August~13 mandate, as « pas souhaitable dans le contexte de la rue de Terrebonne » \exppg{51}.
+\item \textbf{« We're actually coming up with a plan soon … bike paths … safety crossings » \cliptime{7:00}.} The borough has a mobility plan in force: the Plan local de déplacements 2024--2034, adopted unanimously on May~6, 2024 (CA24~170089) with her vote as councillor, with an internal review in 2027 and a public mid-term review in 2029 (\doc{2024-cdn-ndg-pld/}{documents}). On October~6 the councillor also announced « a longer term, more … sophisticated bike plan … for next year » \octsix{2026-10-06_01.md}{40:49}. Whether the plan announced is a new one or the 2027 review is not stated.
+\item \textbf{The host's premise, « as part of the review of some bike paths, the city plans to look at one on Terrebonne » \cliptime{8:45}.} The City's release of February~10, 2026 names Terrebonne among the streets where the City works with the borough on safety, but its technical review covers four other lanes; on October~19, 2026 the executive committee member for mobility said those four reviews were not necessarily « exportable » to Terrebonne \tr{7:19:53}. The mayor did not take up the audit in her answer; it is the first of her three interviews in which the audit is not mentioned.
+\end{enumerate}
+
+\end{document}

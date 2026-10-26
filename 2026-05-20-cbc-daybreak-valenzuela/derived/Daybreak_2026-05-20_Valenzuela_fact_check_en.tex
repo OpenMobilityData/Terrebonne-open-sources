@@ -1,0 +1,320 @@
+% Fact check of the CBC Daybreak interview of May 20, 2026 with Stéphanie
+% Valenzuela, borough mayor of Côte-des-Neiges–Notre-Dame-de-Grâce, on the
+% Terrebonne bike path. Compile with pdflatex (twice), or run build.py.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.9in,bottom=0.95in,left=1in,right=1in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-26-15-27-55} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.03}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{gray}CBC Daybreak, May 20, 2026 -- fact check -- page \thepage}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\repo}[1]{\href{\repourl}{#1}}
+\newcommand{\doc}[2]{\href{\repourl/blob/main/#1}{#2}}
+\newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
+\newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
+\newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+\newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
+\newcommand{\pg}[1]{\pgl{#1}{#1}}
+\newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
+\newcommand{\wc}[1]{\href{\repourl/blob/main/2020-2021-working-committee/raw/Comite_de_travail_recommandations_2021-06-13.pdf}{\textsf{\small[committee note, June 13, 2021, p.~#1]}}}
+\newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
+\newcommand{\tr}[1]{\href{\repourl/blob/main/2026-10-19-city-council/derived/2026-10-19_03.md}{\textsf{\small[City council, Oct 19, 2026, #1]}}}
+\newcommand{\octsix}[2]{\href{\repourl/blob/main/2026-10-06-borough-council/derived/#1}{\textsf{\small[Borough council, Oct 6, 2026, #2]}}}
+\newcommand{\septeight}[1]{\href{\repourl/blob/main/2026-09-08-borough-council/}{\textsf{\small[Borough council, Sept 8, 2026, #1]}}}
+\newcommand{\dbocttime}[1]{\href{\repourl/blob/main/2026-cbc-daybreak-interview/}{\textsf{\small[Daybreak, Oct 9, 2026, #1]}}}
+\newcommand{\cjad}[1]{\href{\repourl/blob/main/2025-08-20-cjad-valenzuela/derived/2025-08-20_CJAD_Valenzuela_transcript_en.md}{\textsf{\small[CJAD, Aug 20, 2025, #1]}}}
+\newcommand{\dbnov}[1]{\href{\repourl/blob/main/2025-11-06-cbc-daybreak-valenzuela/derived/2025-11-06_CBC_Daybreak_Valenzuela_transcript_en.md}{\textsf{\small[Daybreak, Nov 6, 2025, #1]}}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries CBC \emph{Daybreak}, May 20, 2026: the borough mayor's statements on the Terrebonne bike path checked against the record}\\[0.4em]
+{\large Fact check of the interview with Stéphanie Valenzuela}\\[0.6em]
+Richard Hoge, Côte-des-Neiges--Notre-Dame-de-Grâce -- October 26, 2026\\
+Published with the transcript at \repo{\repourl}
+\end{center}
+
+\section*{Summary}
+
+On May~20, 2026, on her return from maternity leave, the borough mayor of
+Côte-des-Neiges--Notre-Dame-de-Grâce, Stéphanie Valenzuela, was interviewed
+on CBC Radio's \emph{Daybreak} (Montréal). Mobility is discussed from 6:43
+and the Terrebonne bike path from 8:45 to 10:17. Those statements were
+compared with the public record, in particular the file released under access
+request 2026-581 (whose earliest document is dated three weeks after the
+interview) and her own earlier interviews of August~20 and November~6, 2025.
+In short:
+
+\begin{enumerate}[nosep]
+\item \textbf{« Something that is long term as a solution » \cliptime{9:00}.} Asked what residents should expect, the mayor said the borough was « really working on finding something that is long term as a solution ». This is the first public statement on the record that a lasting change to the 2024 layout was being sought. It is consistent with what the file later shows: on August~13, 2026 the mayor's chief of staff set a permanent mandate (a bidirectional lane on one side, parking restored on the other, \pg{1}), and on October~9 the councillor for Loyola said « for now, we're looking at it in a way that will make it permanent » \dbocttime{12:22}. What the public was told on October~6 was a seasonal measure and « a test » \octsix{2026-10-06_01.md}{40:49}.
+\item \textbf{« Concrete scenarios that have been presented to us, and now we're just evaluating which ones we'll be putting in place » \cliptime{9:59}.} On May~20 scenarios already existed, before any outside study. The June~10, 2026 letter from the borough's engineering division to the City says the borough's engineers had already given a technical opinion on the two concepts sketched by the elected officials, whose objective was « de redonner la bande de stationnement qui avait été retranchée », and that the elected officials wanted « un avis officiel, neutre et externe » \pg{8}. On September~8 the councillor spoke of « a dozen or more of scenarios » \septeight{34:25} and on October~6 of « a dozen potential scenarios » \octsix{2026-10-06_05.md}{2:24:19}. No scenario has been published; the consultant's note and the City's analysis are withheld.
+\item \textbf{« A lack of consultation » \cliptime{9:00}, « presented as a fait accompli » \cliptime{9:18}.} The same account as on CJAD on August~20, 2025 (« implemented it without consulting the residents », \cjad{3:34}). It leaves out the borough's working committee on mobility on Terrebonne (eight meetings, November~2020 to May~2021, with the street's institutions, school boards and residents), the EXP study published with the chosen scenario on October~30, 2023, the public information session of November~30, 2023, and the two council votes of February~2024, at the first of which she voted against. The host's remark that « that conversation had been going on since well before 2020 » was answered « Yeah, but ». Whether those steps amounted to consultation is a judgement; the check records what the statement leaves out.
+\item \textbf{« We've taken the time over the last few months to really re-speak to all of the actors involved … but also to the bikers and to the pedestrians that do enjoy that bike path » \cliptime{9:41}.} The 508 pages released under request 2026-581 contain no record of any consultation, survey or meeting with residents or users. At the borough council of October~6, 2026, the Association des piétons et cyclistes de NDG asked why it had not been contacted \octsix{2026-10-06_02.md}{1:13:36}; the councillor answered that the association had been « en contact … avant, pendant, et juste avant que je vous parle » \octsix{2026-10-06_02.md}{1:21:34} and that there had been no « autres consultations publiques récemment » \octsix{2026-10-06_02.md}{1:15:02}; on October~9 he cited « 4,000 doors » and « more than 40 meetings » \dbocttime{01:53 and 02:37}. Which cyclists or pedestrians had been heard by May~20 is not on the record.
+\item \textbf{« I think there is a middle ground » \cliptime{9:59}.} The frame recurs: on September~8 the councillor said « si on arrive à frustrer les deux côtés en même temps, on va savoir qu'on a trouvé une voie de passage au milieu » \septeight{2:38:50}, and on October~6 the mayor spoke of a « juste milieu » \octsix{2026-10-06_07.md}{50:53}. On the middle itself the record holds two technical findings: the City's street-design service found on June~17 that the borough's options « présentent plusieurs compromis importants sur le plan de la sécurité, du confort des usagers vulnérables et de la cohérence du réseau cyclable » \pg{6}; and the 2023 EXP study had already set aside a bidirectional lane, the long-term option of the August~13 mandate, as « pas souhaitable dans le contexte de la rue de Terrebonne » \exppg{51}.
+\item \textbf{« We're actually coming up with a plan soon … bike paths … safety crossings » \cliptime{7:00}.} The borough has a mobility plan in force: the Plan local de déplacements 2024--2034, adopted unanimously on May~6, 2024 (CA24~170089) with her vote as councillor, with an internal review in 2027 and a public mid-term review in 2029 (\doc{2024-cdn-ndg-pld/}{documents}). On October~6 the councillor also announced « a longer term, more … sophisticated bike plan … for next year » \octsix{2026-10-06_01.md}{40:49}. Whether the plan announced is a new one or the 2027 review is not stated.
+\item \textbf{The host's premise, « as part of the review of some bike paths, the city plans to look at one on Terrebonne » \cliptime{8:45}.} The City's release of February~10, 2026 names Terrebonne among the streets where the City works with the borough on safety, but its technical review covers four other lanes; on October~19, 2026 the executive committee member for mobility said those four reviews were not necessarily « exportable » to Terrebonne \tr{7:19:53}. The mayor did not take up the audit in her answer; it is the first of her three interviews in which the audit is not mentioned.
+\end{enumerate}
+
+\section{What was checked, and how}
+
+\textbf{The interview.} CBC Radio One, \emph{Daybreak} (Montréal), clip
+« Mayor Valenzuela is back in office from maternity leave », dated May~20,
+2026, 11~min~41~s; host Sean Henry. The transcript published with this
+document was drafted by machine and then checked passage by passage against
+the audio. Only the statements on mobility and the Terrebonne bike path
+(6:43 to 10:17) are examined; the Namur-Hippodrome site, the Cavendish
+extension, parental leave and international outreach are outside this
+check's scope.
+
+\textbf{Sources.} Access request 2026-581 (bundle~01, cited by page); the
+2020--2021 working committee documents; the EXP study of 2023 and its
+release; the 2024 council records and the PLD 2024--2034; the City's release
+of February~10, 2026; the borough councils of September~8 and October~6,
+2026 and the City council of October~19, 2026 (transcripts checked by ear,
+in this repository); the CJAD interview of August~20, 2025 and the
+\emph{Daybreak} interviews of November~6, 2025 and October~9, 2026 (same).
+
+\textbf{Terms.} \emph{Consistent} means the record supports the statement as
+made; \emph{leaves out} that the record holds facts on the same point that
+the statement does not mention; \emph{not on the record} that no document
+bears on it.
+
+\section{Findings in detail}
+
+\subsection{« Long term as a solution »}
+
+\cliptime{8:45} Host: « Still on the question of mobility, as part of the
+review of some bike paths, the city plans to look at one on Terrebonne in
+your borough. What should residents expect regarding specifically Terrebonne
+and that bike path? » \cliptime{9:00} Mayor: « Yeah, what they should expect
+is that we're really working on finding something that is long term as a
+solution. What we inherited as a reality from the previous administration
+was a lack of consultation, a lack of… »
+
+\textbf{Consistent with the file as it later developed.} The earliest
+document in the release under request 2026-581 is the June~10, 2026 letter
+\pg{8}. The mandate from the mayor's chief of staff of August~13 is for a
+permanent layout: « une piste cyclable bidirectionnelle d'un côté de la rue
+de Terrebonne … qui respecte les normes minimales prévues par la loi » and
+« le retour du stationnement d'un côté de la rue » \pg{1}; no winter measure
+appears in it. The service request of August~20 adds « Volet~1 … mesure
+transitoire pour l'hiver 2026-2027 » ahead of « Volet~2 », the permanent
+lane \pg{3}. On October~6 the councillor announced the winter measure as
+« seasonal » and « a test » \octsix{2026-10-06_01.md}{40:49}; on
+October~9 he said « for now, we're looking at it in a way that will make it
+permanent » \dbocttime{12:22}. The May~20 statement is therefore the
+earliest public indication that the borough was seeking a lasting change,
+five months before the winter measure was announced as a test.
+
+\subsection{« A lack of consultation … a fait accompli »}
+
+\cliptime{9:00} Host: « That had been going, that conversation had been
+going on since well before 2020. » \cliptime{9:18} Mayor: « Yeah, but the
+way that it was presented was there was no real openness to see what can be
+modified, right? So I think it was really presented as a fait accompli. And
+that was the grievance that was heightened really by the residents,
+especially those that were directly impacted. If they lived on Terrebonne
+and they were, you know, living the realization of this bike path, they just
+didn't feel heard. »
+
+\textbf{Leaves out the same steps as the August~2025 statement.} The
+record before the 2024 lanes: the borough council's resolution CA20~170210
+(2020) creating a working committee on mobility on Terrebonne, chaired by the
+councillor for Notre-Dame-de-Grâce, with borough staff, the school boards,
+the street's religious institutions, the HLM and residents, which met eight
+times from November~19, 2020 to May~19, 2021 and recommended that the City
+study a one-way scenario \wc{1}; the EXP mobility study commissioned by the
+City and published by the borough on October~30, 2023 with the chosen
+scenario, followed by exchanges with the institutional partners and a public
+information session on November~30, 2023
+(\doc{2023-exp-mobility-study/}{release}); the borough council vote of
+February~5, 2024 (CA24~170018, 3--2, the speaker among the two against) and
+the City council vote of February~19, 2024 (CM24~0179)
+(\doc{2024-project-approval/}{documents}). On CJAD on August~20, 2025 she
+had said the previous administration « implemented it without consulting the
+residents » and that the working group's work was « completely …
+disregarded » \cjad{3:34}; the committee's own note shows it recommended a
+study, not a layout, and that the 2024 project made the street one-way as
+the committee's unanimous recommendation had asked the City to study. That
+residents on the street « didn't feel heard » is reported as their grievance
+and is not checked here.
+
+\subsection{« Re-speak to all of the actors involved »}
+
+\cliptime{9:41} « And so we're taking the time and we've taken the time
+over the last few months to really re-speak to all of the actors involved,
+whether it's like the institutions, the church, the schools, the residents
+that are lacking, you know, parking space, et cetera. But also to the bikers
+and to the pedestrians that do enjoy that bike path. »
+
+\textbf{Not on the record for cyclists and pedestrians.} The 508 pages
+released on October~9, 2026 contain no minutes, survey, correspondence or
+summary of any consultation with residents or users; the only exchanges
+recorded are with the City's services, the fire department and the
+consultant. At the borough council of October~6, 2026 a representative of
+the Association des piétons et cyclistes de NDG asked « comment ça se fait
+que vous n'aviez pas communiqué avec l'Association » before the announcement
+\octsix{2026-10-06_02.md}{1:13:36}; the councillor answered that the
+association had been « en contact … avant, pendant, et juste avant que je
+vous parle » \octsix{2026-10-06_02.md}{1:21:34}, referring to a meeting held
+in the days before the sitting, and said there had been no « autres
+consultations publiques récemment », the file resting on « énormément de
+dossiers, de données, de rapports » \octsix{2026-10-06_02.md}{1:15:02}. On
+October~9 he cited « 4,000 doors » knocked on during the campaign and
+« more than 40 meetings » \dbocttime{01:53 and 02:37}, and on October~6
+« more than 30 meetings on this topic with the services »
+\octsix{2026-10-06_01.md}{38:16}. Which cyclists or pedestrians had been
+heard by May~20, 2026, and what they said, appears in no document.
+
+\subsection{« A middle ground »; « concrete scenarios »}
+
+\cliptime{9:59} Host: « Is there a middle ground in that conversation,
+though? » Mayor: « I think there is a middle ground, and that's what we're
+working on with our services and our engineers. We have concrete scenarios
+that have been presented to us, and now we're just evaluating which ones
+we'll be putting in place. »
+
+\textbf{Scenarios before the study.} Three weeks after the interview, the
+June~10 letter states that the elected officials wished to revisit the 2024
+layout « avec l'objectif de redonner la bande de stationnement qui avait été
+retranchée », that the lanes' width was « jugée disproportionnée par rapport
+au volume de cyclistes observé … selon les élus », that the borough's
+engineers had already issued a technical opinion on the two concepts the
+elected officials had sketched, and that the elected officials wanted « un
+avis officiel, neutre et externe » \pg{8}. The City's street-design service
+answered on June~17; the borough's summary of June~22 says the options
+« présentent plusieurs compromis importants sur le plan de la sécurité, du
+confort des usagers vulnérables et de la cohérence du réseau cyclable »
+\pg{6}; the analysis is withheld. The outside study was ordered on
+August~20 \pg{3}. On September~8 the councillor said the borough was « at
+the final stage of the study » with « a dozen or more of scenarios »
+\septeight{34:25}; on October~6, « a dozen potential scenarios »
+\octsix{2026-10-06_05.md}{2:24:19}. The scenarios, the consultant's note
+and the City's analysis are withheld under section~39 of the Access Act,
+« until a decision is made on the recommendation ».
+
+\textbf{The middle, as framed later.} On September~8: « si on arrive à
+frustrer les deux côtés en même temps, on va savoir qu'on a trouvé une voie
+de passage au milieu » \septeight{2:38:50}. On October~6 the mayor: « des
+gens qui veulent qu'on l'enlève carrément … ce n'est pas où nous voulons
+aller », a « juste milieu » \octsix{2026-10-06_07.md}{50:53}. On the
+technical content of the middle, the record holds the June~17 finding above
+and, for the long-term option of the August~13 mandate, the 2023 EXP
+study's position that « un aménagement bidirectionnel n'est pas souhaitable
+dans le contexte de la rue de Terrebonne … notamment avec la présence de
+nombreuses entrées charretières et avec la gestion de plusieurs
+intersections » \exppg{51}, none of its three concepts being a two-way lane.
+
+\subsection{« Coming up with a plan soon »}
+
+\cliptime{6:43} Host: « What is the borough's general plan when it comes to
+mobility and stuff like that in Côte-des-Neiges-NDG? » \cliptime{7:00}
+Mayor: « So when it comes to mobility and stuff like that in NDG, we're
+actually coming up with a plan soon that we're going to be working on to
+really integrate connectivity, whether it's for bike paths or for, you know,
+safety crossings that are important in our borough. … And we hope that we'll
+be able to announce something very soon. »
+
+\textbf{A plan is in force.} The borough's Plan local de déplacements
+2024--2034 was adopted unanimously on May~6, 2024 (CA24~170089, moved by the
+then mayor, with the speaker present and voting for); it provides an
+internal review in 2027 and a public mid-term review in 2029, and measure
+3.1.1 upgrades « chaussées désignées » to protected facilities
+(\doc{2024-cdn-ndg-pld/}{documents}). It does not name Terrebonne. On
+October~6 the councillor announced « a longer term, more … sophisticated
+bike plan … for next year » \octsix{2026-10-06_01.md}{40:49}. Whether the
+plan announced on May~20 is the 2027 review or a new document is not stated;
+nothing had been published by October~26, 2026.
+
+\subsection{The three interviews side by side}
+
+\begin{small}
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{6.2cm}>{\raggedright\arraybackslash}p{6.0cm}}
+\toprule
+Date & Said & Record \\
+\midrule
+\endhead
+Aug~20, 2025 (candidate) & an audit of the path's « security … implementation … impact on local residents » \cjad{3:34}; « without consulting the residents » & — \\
+Nov~6, 2025 (mayor-elect) & « we wait for the results. We keep what is there as a network » \dbnov{7:55}; an audit of our own if the existing one is not independent \dbnov{8:54} & Nov~10: City note, no safety audit of the network (2025-12847) \\
+Feb~10, 2026 & — & City review of four lanes launched; results at the end of 2026; Terrebonne named \\
+May~20, 2026 (mayor) & « something that is long term as a solution » \cliptime{9:00}; « a lack of consultation » \cliptime{9:00}; « concrete scenarios … presented to us » \cliptime{9:59}; « a middle ground »; the audit not mentioned & — \\
+Jun~10 -- 22, 2026 & — & objective: parking restored; engineers' opinion already given on the elected officials' two concepts; City analysis: « plusieurs compromis importants … sécurité », withheld (2026-581) \\
+Aug~13 -- 20, 2026 & — & permanent mandate (bidirectional, parking); winter removal added as « mesure transitoire » \\
+Sept~8, 2026 & councillor: « a dozen or more of scenarios »; « frustrer les deux côtés » & — \\
+Oct~6, 2026 & orientation: one direction to parking each winter, « a test »; mayor: « juste milieu » & before the City's review reported \\
+Oct~9, 2026 & councillor: « for now … permanent » & — \\
+Oct~19, 2026 & — & City (DeSousa): results « may not be before » the vote; the four reviews not « exportable » \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+\subsection{Other statements}
+
+\cliptime{7:16} « We're one borough that is surrounded by other
+municipalities, whether it's Côte Saint-Luc, Hampstead, Montreal West »:
+geography, consistent (Westmount is named at 8:19).
+
+\cliptime{3:15} « my colleague, Sonny Moroz, who was interim mayor » and
+\cliptime{2:03} « At the municipal level, we get 18 weeks »: not examined.
+
+\cliptime{6:43} Host: the decision « to scale back plans to add parking
+meters on and around Sherbrooke Street West »: outside this check's scope.
+
+\section{What this check does not establish}
+
+It compares statements with records. It does not establish why any statement
+was made and draws no conclusion about intent. The scenarios, the
+consultant's note and the City's analysis of June~2026 are withheld; the
+City's review had not reported when this check was written.
+
+\section{Sources}
+
+\begin{small}
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{10.6cm}}
+\toprule
+Source & Where \\
+\midrule
+\endhead
+Interview & CBC \emph{Daybreak}, May~20, 2026: \url{https://www.cbc.ca/listen/live-radio/1-15-daybreak-montreal/clip/16215928}; transcript: \doc{2026-05-20-cbc-daybreak-valenzuela/derived/2026-05-20_CBC_Daybreak_Valenzuela_transcript_en.md}{this folder} \\
+Earlier interviews & \doc{2025-08-20-cjad-valenzuela/}{CJAD, August~20, 2025}; \doc{2025-11-06-cbc-daybreak-valenzuela/}{Daybreak, November~6, 2025}; \doc{2026-cbc-daybreak-interview/}{Daybreak, October~9, 2026 (the councillor)} \\
+Request 2026-581 & Borough response of October~9, 2026, bundle 01: \href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf}{PDF} (pp.~1--4, 6, 8); summaries in the \href{\arurl/tree/main/2026-581}{access-requests repository} \\
+Working committee & \doc{2020-2021-working-committee/}{CA20~170210; note of June~13, 2021; file 1215284005} \\
+EXP study & \doc{2023-exp-mobility-study/}{Study (2023) and the release of October~30, 2023} \\
+2024 approvals; PLD & \doc{2024-project-approval/}{CA24~170018, CM24~0179, CA24~170131}; \doc{2024-cdn-ndg-pld/}{PLD 2024--2034, CA24~170089} \\
+City review & \doc{2026-city-audit-and-plan-velo/}{Release of February~10, 2026 and the Réalisons Montréal timeline} \\
+Borough councils & \doc{2026-09-08-borough-council/}{September~8, 2026} and \doc{2026-10-06-borough-council/}{October~6, 2026}, transcripts checked by ear \\
+City council, Oct~19, 2026 & \doc{2026-10-19-city-council/}{Transcripts checked by ear} (clip 03) \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+\end{document}
