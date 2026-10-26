@@ -5,7 +5,8 @@
 ## How the transcript was made
 
 - Audio retrieved from CBC Listen on October 26, 2026 (MP3, 11,573,289 bytes, SHA-256 `37d679ee05b42dfdc58cd273ee96105ad0274f764d14e0525abb929b6cdc3b15`; the clip's CBC Listen record kept with it).
-- Machine draft with Whisper (large-v3-turbo, English), then **every passage listened to and corrected by Rick Hoge** on the check page (October 26, 2026). Times are minutes:seconds from the start of the clip; a reply within a passage carries the passage's time. Hesitation sounds (uh, um) are removed; every other word is as spoken, repetitions and false starts included. A word that could not be made out is marked [?]. « GALOPH » (Groupe d'action pour le logement sur le site de l'Hippodrome) is written out where it is spoken as a word.
+- Machine draft with Whisper (large-v3-turbo, English), then **every passage listened to and corrected by Rick Hoge** on the check page (October 26, 2026). Times are minutes:seconds from the start of the clip; a reply within a passage carries the passage's time. Hesitation sounds (uh, um) are removed; every other word is as spoken, repetitions and false starts included. A word that could not be made out is marked [?].
+- Words in square brackets were not spoken; they are the transcriber's additions where needed for the sense: « Gallo [GALOPH] » renders the word as pronounced, with the acronym it stands for (Groupe d'action pour le logement sur le site de l'Hippodrome).
 
 ## Transcript
 
@@ -23,7 +24,7 @@
 
 **[01:54] Henry:** Let's talk about developing the housing stock. One of the places where that housing stock will be developed is in the Namur-Hippodrome site. Where do you think stand with that?
 
-**[02:12] Valenzuela:** So there was two social off-market projects that were adopted in the last council with the council that we had, you know, prior to the campaign and to the election. So that's already something that's on the table. It's clear that we need to continue discussions with all levels of government to see how the rest of the Namur-Hippodrome site will be developed. There was federal funding that came in just a few months ago. So there's a whole conversation. And, you know, Claude Pinard was elected in Saint-Jacques. There's potentially a lot of different scenarios that are going to come in with recounting across the city. But we have a plan and we have every intention of working with all the stakeholders, including the GALOPH and the local stakeholders that we have here in the borough.
+**[02:12] Valenzuela:** So there was two social off-market projects that were adopted in the last council with the council that we had, you know, prior to the campaign and to the election. So that's already something that's on the table. It's clear that we need to continue discussions with all levels of government to see how the rest of the Namur-Hippodrome site will be developed. There was federal funding that came in just a few months ago. So there's a whole conversation. And, you know, Claude Pinard was elected in Saint-Jacques. There's potentially a lot of different scenarios that are going to come in with recounting across the city. But we have a plan and we have every intention of working with all the stakeholders, including the Gallo [Gallo [GALOPH]] and the local stakeholders that we have here in the borough.
 
 **[03:08] Henry:** What about the existing stock in Côte-des-Neiges-NDG? I know that there are some buildings, some municipal housing buildings that are not being used right now. Are there any plans to do something about that?
 
