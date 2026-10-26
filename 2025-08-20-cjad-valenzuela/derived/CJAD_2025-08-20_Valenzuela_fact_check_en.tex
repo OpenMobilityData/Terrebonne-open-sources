@@ -1,0 +1,318 @@
+% Fact check of the CJAD 800 interview of August 20, 2025 with Stéphanie
+% Valenzuela (then councillor for Darlington, candidate for borough mayor)
+% on the Terrebonne bike path. Compile with pdflatex (twice), or run build.py.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.9in,bottom=0.95in,left=1in,right=1in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-26-12-38-56} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.03}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{gray}CJAD 800, August 20, 2025 -- fact check -- page \thepage}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\repo}[1]{\href{\repourl}{#1}}
+\newcommand{\doc}[2]{\href{\repourl/blob/main/#1}{#2}}
+\newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
+\newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
+\newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+\newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
+\newcommand{\pg}[1]{\pgl{#1}{#1}}
+\newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
+\newcommand{\wc}[1]{\href{\repourl/blob/main/2020-2021-working-committee/raw/Comite_de_travail_recommandations_2021-06-13.pdf}{\textsf{\small[committee note, June 13, 2021, p.~#1]}}}
+\newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries CJAD 800, August 20, 2025: the candidate's statements on the Terrebonne bike path checked against the record}\\[0.4em]
+{\large Fact check of the interview with Stéphanie Valenzuela}\\[0.6em]
+Richard Hoge, Côte-des-Neiges--Notre-Dame-de-Grâce -- October 26, 2026\\
+Published with the transcript at \repo{\repourl}
+\end{center}
+
+\section*{Summary}
+
+On August~20, 2025, CJAD~800's afternoon show interviewed Stéphanie
+Valenzuela, then city councillor for the Darlington district and Ensemble
+Montréal's candidate for borough mayor of Côte-des-Neiges--Notre-Dame-de-Grâce
+(elected November~2, 2025), about her priorities, the Terrebonne bike path and
+a McGill study published the week before. Each statement of fact about the
+bike path was compared with the public record. In short:
+
+\begin{enumerate}[nosep]
+\item \textbf{The working committee's recommendations were not « completely disregarded ».} The committee's mandate (resolution CA20~170210, 2020) was to recommend improvements to mobility on rue de Terrebonne, not to design a bike path. Its unanimous recommendation (note of June~13, 2021) was that the City \emph{study} scenario~5\,bis, a one-way eastbound Terrebonne between Girouard and Grand, Madison or Benny, together with the Somerled scenarios; it adopted no layout and was itself divided on the western half. The City then commissioned the EXP mobility study (counts in October 2022, report published October~30, 2023), and the 2024 project made Terrebonne one-way. Where the project follows the committee (a one-way street, studied first) and where it goes beyond it (the whole length to Belmore; protected lanes rather than the committee's 4.1~m shared lane) is in the documents. The candidate was not a member of the committee, which the councillor for Notre-Dame-de-Grâce chaired.
+\item \textbf{« Implemented … without consulting the residents » leaves out what the record shows.} Between the 2020 lanes and the 2024 project: the working committee's eight meetings with institutions, school boards and residents (November 2020 to May 2021); the EXP study and its public release of October~30, 2023; a public information session on November~30, 2023; the borough council's vote of February~5, 2024 (3--2, the candidate voting against) and the City council's of February~19, 2024. Whether that consultation was sufficient is a judgement; that there was none is not what the documents show.
+\item \textbf{The 2020 history is stated correctly:} temporary lanes installed in summer 2020 under the previous administration and removed that September (motion of September~8, 2020).
+\item \textbf{The audit.} In August 2025 the candidate described her party's proposed audit as looking at the path's « security, … implementation, … impact on local residents ». What followed is on the record: the City's own audit of the cycling network, launched February~10, 2026 under the principle « recueillir les données, analyser et corriger au besoin », with results due at the end of 2026 and Terrebonne named; and, in the borough, a process documented by access request 2026-581 in which the elected officials' objective of restoring the parking strip was set on June~10, 2026 before any study, the City's street-design service found « plusieurs compromis importants sur le plan de la sécurité » in the borough's options (June~22), no parking or resident data were collected, and the winter removal of one direction was announced on October~6, 2026, before the City's audit reported.
+\item \textbf{The McGill study is described in terms it does not use.} The study (Romm \emph{et al.}, \emph{Journal of Cycling and Micromobility Research}, 2025, open access) measures road space per traveller by mode and borough and models what doubling the micromobility lanes would do to that allocation; it finds that even then street space « remains biased in favour of automobiles ». It does not claim to measure « the actual reality of Montrealers when it comes to cycling », and it states its own limits (2018 trip data, borough-scale averages, multi-use paths excluded). The candidate gives no basis for calling it not comprehensive; the host's paraphrase, « double … and it still wouldn't be enough », is close to the study's conclusion.
+\item \textbf{« Put in different places where it's really questionable … a safe place », and cyclists who « constantly » report blind spots: no place and no source are given,} so the statements cannot be verified. For Terrebonne, the 2024 layout was designed through the EXP study; the City's safety concerns in the 2026 file concern the borough's 2026 options for restoring parking, not the 2024 layout; and the borough's counter recorded 135,276 bicycle passages at Kensington in the lane's first full year of counting (July~26, 2025 to July~25, 2026).
+\item \textbf{Framing, noted without judgement:} the needs listed are « bike paths or … your vehicle or … public transportation », and the audit is justified because « there \emph{are} people that use … scooters or bicycles » (stress as heard); the host calls Côte-des-Neiges and NDG « boroughs » and is not corrected (they are the two halves of one borough).
+\end{enumerate}
+
+\section{What was checked, and how}
+
+\textbf{The interview.} CJAD~800 (Bell Media), afternoon show, clip
+« Ensemble Montréal's Stephanie Valenzuela is running for CDN-NDG borough
+mayor », published August~20, 2025, 8~min~28~s; host Aaron Rand. The
+transcript published with this document was drafted by machine and then
+checked passage by passage against the audio.
+
+\textbf{Sources.} The 2020 council motions and the working committee's note
+of June~13, 2021 (\doc{2020-2021-working-committee/}{this repository}); the
+2023 EXP mobility study; the 2024 council records (CA24~170018, CM24~0179,
+CA24~170131); the City's release of February~10, 2026 on the cycling-network
+audit; access request 2026-581 (borough response of October~9, 2026,
+bundle~01, cited by page); the Kensington counter's daily table (2026-581,
+pp.~74--81); the McGill study (Romm \emph{et al.}, 2025); the 2021 Census.
+
+\textbf{Terms.} \emph{Consistent} means the record supports the statement as
+made; \emph{cannot be verified} that the record does not bear on it. A
+statement can be accurate in its terms and still leave out what the record
+also shows; the summary says what was left out.
+
+\section{Findings in detail}
+
+\subsection{The Terrebonne history and the working committee}
+
+\cliptime{03:34} « If anybody knows the history of Terrebonne, in the last
+mandate, under the last administration, they had implemented it and then they
+had removed it. »
+
+\textbf{Consistent.} Temporary lanes were installed on Terrebonne in the
+summer of 2020 under the « rues, secteurs et corridors à vocation familiale
+et active » programme (council file of June~22, 2020) and removed after the
+motion of September~8, 2020 (\doc{2020-temporary-lanes/}{documents}).
+
+\cliptime{03:34} « And they created this working group where you had
+institutions and people that were part of this discussion to see how can we
+put a bike path and how can we get it to work for the residents and for the
+people that want to use it. And it was completely, you know, disregarded when
+they decided to re-implement a bike path. »
+
+\textbf{Not what the record shows.} Resolution CA20~170210 (October~5, 2020)
+created « un groupe de travail … ayant pour mandat de proposer des
+recommandations qui visent l'amélioration de la mobilité sur la rue de
+Terrebonne », chaired by the councillor for Notre-Dame-de-Grâce, with borough
+staff, the school boards, the street's religious institutions, the HLM and
+residents; its mandate was mobility on the street, not « how can we put a bike
+path ». The committee met eight times from November~19, 2020 to May~19, 2021.
+Its note of June~13, 2021 \wc{5} recommends unanimously that the council ask
+the City to study scenario~5\,bis (rue de Terrebonne one-way eastbound between
+Girouard and, to the west, Grand, Madison or Benny, with the effect on
+neighbouring streets taken into account), « en conjonction et en complément »
+with the Somerled scenarios; by majority, that scenario~1 also be studied.
+Three members had serious reservations about any change west of Grand; three
+others and the chair wanted the lane to reach Benny. The committee recommended
+a study; it adopted no layout.
+
+What followed: the City commissioned EXP's mobility study, with counts at 17
+intersections in October 2022 and a report published on October~30, 2023
+(\doc{2023-exp-mobility-study/}{documents}); the borough council approved the
+2024 project on February~5, 2024 (CA24~170018, 3--2) and the City council on
+February~19, 2024 (CM24~0179); the ordinance of June~3, 2024 (OCA24~17042)
+made Terrebonne one-way « en vue d'ajouter un aménagement cyclable protégé »
+(\doc{2024-project-approval/}{documents}). The 2024 project follows the
+committee in making the street one-way after a study, and goes beyond it in
+extent (the whole length from Girouard to Belmore) and in form (protected
+one-way lanes on both sides rather than the 4.1~m shared lane of scenario
+5\,bis). The candidate was not a member of the committee.
+
+\subsection{« Without consulting the residents »}
+
+\cliptime{03:34} « And the real issue here is the way that the administration
+went about and implemented it without consulting the residents. »
+
+\textbf{Leaves out what the record shows.} The steps listed above: the
+committee (institutions, school boards, residents), the study and its public
+release, a public information session on November~30, 2023 (recorded in the
+borough's decisional file 1246880002), and two council votes. The candidate
+voted against the project at the borough council on February~5, 2024. Whether
+those steps amounted to adequate consultation is a judgement on which the
+record is silent.
+
+\subsection{The audit}
+
+\cliptime{03:34} « So there's a lot of work that needs to be done in the audit
+in terms of looking at its security, looking at its implementation, looking at
+its impact on local residents. And that's where we stand when it comes to at
+least the bike path on Terrebonne. » \cliptime{04:46} « … that's why we go
+back to the fact that we do need this audit … »
+
+\textbf{A statement of intent at the time; what followed is on the record.}
+The City's audit of the cycling network was launched by the new
+administration on February~10, 2026: a technical analysis led by the Service
+de l'urbanisme et de la mobilité, data collection and field observation
+through the peak season, results expected at the end of 2026, Terrebonne named
+among the streets where the City works with the borough on safety
+(\doc{2026-city-audit-and-plan-velo/}{release and timeline}). In the borough,
+the file released under access request 2026-581 shows: on June~10, 2026 the
+borough's engineering division wrote to the City that the elected officials
+wished to revisit the 2024 layout « avec l'objectif de redonner la bande de
+stationnement qui avait été retranchée » \pg{8}; the City's street-design
+service returned an express analysis on June~17, which the borough's own
+summary of June~22 describes as finding that the options « présentent
+plusieurs compromis importants sur le plan de la sécurité, du confort des
+usagers vulnérables et de la cohérence du réseau cyclable » \pg{6}; the
+analysis itself was withheld; no parking inventory, occupancy count or
+resident survey appears in the 508 pages; and on October~6, 2026 the borough
+announced the winter removal of one direction, before the City's audit
+reported. Looking at « security, implementation, impact on local residents »
+is what the audit was said to be for; the file shows the borough fixing the
+parking objective first and collecting no data on those three points.
+
+\subsection{The McGill study}
+
+\cliptime{04:46} Host: « that study from McGill … suggested Montreal could, in
+fact, double the number of bike paths we have, and it still wouldn't be
+enough. » Candidate: « I find it very interesting. You know, there's a lot of
+studies that come out that come in favor or that come against the
+implementation of bike paths. … I understand that the study came out
+recently, but I don't think it's a comprehensive study on the actual reality
+of Montrealers when it comes to cycling. »
+
+\textbf{The study, as published.} Daniel Romm, José Arturo Jasso Chávez, Lexi
+Kinman, Pegah Salsabilian, Grant McKenzie and Kevin Manaugh (Department of
+Geography, McGill University), « The cars are going to be alright: Examining
+micromobility infrastructure space allocation and potential improvement
+scenarios in Montréal », \emph{Journal of Cycling and Micromobility Research}
+5 (2025) 100071, \url{https://doi.org/10.1016/j.jcmr.2025.100071}, online
+June~7, 2025, open access (CC~BY-NC). It measures, per borough, the road space
+allocated to automobiles and to micromobility per traveller of each mode (trip
+data from the 2018 origin--destination survey, infrastructure of 2022), defines
+an Equal Infrastructure Allocation score with parity at zero, and models two
+scenarios: doubling the Bixi stations and doubling the area of dedicated
+micromobility lanes. Its conclusion: « even with MI improvements at a scale
+dramatically larger than anything now proposed, such as doubling all existing
+dedicated micromobility lanes, street space allocation remains biased in
+favour of automobiles » (p.~12), with « almost no discernable effect » on
+automobile space (p.~9). The host's paraphrase is close to that sentence. The
+study's own limitations section (4.4) lists borough-scale averages, 2018 trips
+against 2022 infrastructure, no separation of bus space, commercial transport
+omitted and multi-use paths excluded.
+
+\textbf{The candidate's assessment cannot be verified.} The study does not
+set out to measure « the actual reality of Montrealers when it comes to
+cycling »; it measures space allocation. No basis is given for calling it not
+comprehensive. « A lot of studies … in favor or … against the implementation
+of bike paths » is said of a study that takes no position on whether bike
+paths should exist. Press coverage: McGill Newsroom, « Study finds Montreal
+cycling infrastructure doesn't match demand »; CTV News Montreal, August~18,
+2025, « Should Montreal double its number of bike paths? One study says
+`yes' » (micromobility users about 5\,\% of commuters, their infrastructure
+about 2\,\% of road space).
+
+\subsection{Safety of the bike paths}
+
+\cliptime{04:46} « But the bike paths that have been put under this
+administration have been put in different places where it's really
+questionable to what extent it's actually a safe place to put them in. There's
+cyclists that tell us constantly that we don't use that bike path because it's
+actually really not safe. There's a lot of blind spots when you use that bike
+path. There's actually a lot of drivers that don't see us when we're passing
+by there. »
+
+\textbf{Cannot be verified:} no place, count or source is named. For
+Terrebonne, the 2024 layout followed the EXP study's design work
+\exppg{51}; the City's expressed safety concerns in the 2026 file bear on the
+borough's 2026 options for restoring parking (a designated roadway and a
+narrow bidirectional lane), not on the 2024 layout \pg{6}; the borough's
+counter at Kensington recorded 135,276 bicycle passages in the year from
+July~26, 2025 (2026-581, pp.~74--81), and the borough's own Plan local de
+déplacements 2024--2034, adopted unanimously on May~6, 2024 with the candidate
+present and voting, treats protected lanes as a safety measure for vulnerable
+users (\doc{2024-cdn-ndg-pld/}{documents}).
+
+\subsection{Other statements}
+
+\cliptime{01:44} « it's the most populous borough on the island of Montreal »:
+\textbf{consistent}; Côte-des-Neiges--Notre-Dame-de-Grâce is the most
+populous of the City's nineteen boroughs (2021 Census).
+
+\cliptime{01:44} Taxes « increased … significantly », services « diminishing »,
+rats, parks, permits, a tree « earmarked to be cut … four years »: outside the
+scope of this check (not about the bike path); not examined.
+
+\cliptime{06:10} Host: « in the Côte-des-Neiges borough … in the NDG
+borough »: Côte-des-Neiges and Notre-Dame-de-Grâce are the two halves of one
+borough, with five districts (Darlington, Côte-des-Neiges, Snowdon,
+Notre-Dame-de-Grâce, Loyola); the candidate answers without correcting the
+host. Noted without judgement.
+
+\subsection{Framing}
+
+Noted as observations on wording, not on intent. \cliptime{04:46} The
+mobility needs listed are « using bike paths or, you know, your vehicle or
+using public transportation »; the sentence addresses the listener as a car
+owner and leaves out households without a car and people who walk. City-wide
+in 2016, by main mode of commuting: 367,533 car drivers, 22,656 passengers,
+274,575 public transit, 57,390 walking, 30,278 bicycle (Census). \cliptime{04:46}
+« there \emph{are} people that use, you know, scooters or bicycles »: the
+stress, as heard on the audio, falls on « are ».
+
+\section{What followed}
+
+The candidate was elected borough mayor on November~2, 2025. On October~6,
+2026 the borough announced its orientation to convert one direction of the
+Terrebonne lane to parking each winter, with the vote expected on December~7,
+2026; the file behind it is the subject of access request 2026-581
+(\href{\arurl/tree/main/2026-581}{summaries and documents}). Her later radio
+statements (CBC \emph{Daybreak}, November~6, 2025 and May~20, 2026) are being
+transcribed and will be checked separately.
+
+\section{What this check does not establish}
+
+It compares statements with records. It does not establish why any statement
+was made, and it draws no conclusion about intent. The City's analysis of June
+2026 and the consultant's note are withheld; the City's audit had not reported
+when this check was written.
+
+\section{Sources}
+
+\begin{small}
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{10.6cm}}
+\toprule
+Source & Where \\
+\midrule
+\endhead
+Interview & CJAD~800, August~20, 2025: \href{https://omny.fm/shows/cjad-800/ensemble-montr-al-announces-their-c-te-des-neiges-notre-dame-de-gr-ce-team-headed-by-stephanie-valenzuela}{Omny clip page} (Montreal Now with Aaron Rand feed); transcript: \doc{2025-08-20-cjad-valenzuela/derived/2025-08-20_CJAD_Valenzuela_transcript_en.md}{this folder} \\
+2020 lanes & \doc{2020-temporary-lanes/}{Council file of June~22, 2020; motion of September~8, 2020} \\
+Working committee & \doc{2020-2021-working-committee/}{Resolution CA20~170210; note of June~13, 2021; file 1215284005; vote results} \\
+EXP 2023 & \doc{2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{Étude de mobilité -- rue de Terrebonne} (p.~51 on the bidirectional option) \\
+2024 approvals & \doc{2024-project-approval/}{CA24~170018, CM24~0179, CA24~170131}; public information session of November~30, 2023 (file 1246880002) \\
+PLD 2024--2034 & \doc{2024-cdn-ndg-pld/}{Plan local de déplacements} (CA24~170089, May~6, 2024) \\
+City audit & \doc{2026-city-audit-and-plan-velo/}{Release of February~10, 2026 and the Réalisons Montréal timeline} \\
+Request 2026-581 & Borough response of October~9, 2026, bundle 01: \href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf}{PDF} (pp.~6, 8, 74--81); summaries in the \href{\arurl/tree/main/2026-581}{access-requests repository} \\
+McGill study & Romm \emph{et al.}, 2025, \url{https://doi.org/10.1016/j.jcmr.2025.100071}; \href{https://www.mcgill.ca/newsroom/channels/news/study-finds-montreal-cycling-infrastructure-doesnt-match-demand-366423}{McGill Newsroom release}; \href{https://www.ctvnews.ca/montreal/article/montreal-should-double-its-number-of-bike-paths-study/}{CTV News Montreal, August~18, 2025} \\
+Census & Statistics Canada, Census of Population 2016 and 2021, Ville de Montréal, main mode of commuting; borough populations \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+\end{document}
