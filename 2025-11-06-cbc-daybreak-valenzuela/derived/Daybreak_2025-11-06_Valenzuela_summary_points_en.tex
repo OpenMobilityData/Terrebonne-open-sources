@@ -1,0 +1,72 @@
+% Extract: the summary points of the fact check of the CBC Daybreak interview
+% of November 6, 2025, verbatim (filled by build.py).
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[letterpaper,top=0.8in,bottom=0.8in,left=0.9in,right=0.9in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\newcommand{\docversion}{2026-10-26-13-34-06} % set by build.py (America/Toronto)
+\hypersetup{pdfsubject={version \docversion}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.0}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{0.6em}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{0.8em}{0.25em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{gray}CBC Daybreak, November 6, 2025 -- fact check, summary points -- \repourl}
+\fancyfoot[R]{\tiny\color{gray}v.\,\docversion}
+
+% ---- Links ----
+\newcommand{\repourl}{https://github.com/OpenMobilityData/Terrebonne-open-sources}
+\newcommand{\repo}[1]{\href{\repourl}{#1}}
+\newcommand{\doc}[2]{\href{\repourl/blob/main/#1}{#2}}
+\newcommand{\arurl}{https://github.com/OpenMobilityData/Terrebonne-access-requests}
+\newcommand{\pagesurl}{https://openmobilitydata.github.io/Terrebonne-access-requests}
+\newcommand{\cliptime}[1]{\textsf{\small[#1]}}
+% \pg{pages}: page of bundle 01 of access request 2026-581, linked
+\newcommand{\pgl}[2]{\href{\pagesurl/2026-581/raw/01_emails_mandate_counts.pdf\#page=#1}{\textsf{\small[2026-581, p.~#2]}}}
+\newcommand{\pg}[1]{\pgl{#1}{#1}}
+% \exp{page}: page of the 2023 EXP study (open-sources repository)
+\newcommand{\exppg}[1]{\href{\repourl/blob/main/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf}{\textsf{\small[EXP 2023, p.~#1]}}}
+\newcommand{\wc}[1]{\href{\repourl/blob/main/2020-2021-working-committee/raw/Comite_de_travail_recommandations_2021-06-13.pdf}{\textsf{\small[committee note, June 13, 2021, p.~#1]}}}
+\newcommand{\tr}[1]{\href{\repourl/blob/main/2026-10-19-city-council/derived/2026-10-19_03.md}{\textsf{\small[City council, Oct 19, 2026, #1]}}}
+\newcommand{\quot}[1]{\begin{quote}\small #1\end{quote}}
+
+\begin{document}
+
+{\large\bfseries CBC Daybreak, November 6, 2025: the borough mayor-elect's statements on the Terrebonne bike path and the audit checked against the record}\hfill{\small October~26, 2026}
+
+\vspace{-0.2em}
+{\small Summary points of the fact check, verbatim. Full document, sources, page references and the transcript:\\ \href{\repourl/tree/main/2025-11-06-cbc-daybreak-valenzuela}{\repourl/tree/main/2025-11-06-cbc-daybreak-valenzuela}.}
+\vspace{0.4em}
+
+\begin{enumerate}[nosep,itemsep=0.3em,leftmargin=1.4em]
+\item \textbf{The commitment, as stated: wait for the audit, keep the network.} Asked whether the Terrebonne path would stay open that winter, she said: « we're going to go into an audit. So until that audit is done … the current position for us is that we wait for the results. We keep what is there as a network. So the maintenance of the Terrebonne is still very much at play here » \cliptime{7:55}; and, if the existing audit « doesn't seem like it was truly done in an independent way, we have to take a look and see whether or not we have to go forward with our own audit » \cliptime{8:54}. The lanes stayed for the winter of 2025--26, as said.
+\item \textbf{« The audit that was already prepared by the administration » was not an audit of the network.} Four days later the City's note of November~10, 2025, released under access request 2025-12847, states: « Aucun audit de sécurité n'a été réalisé à proprement parler pour l'ensemble du réseau »; the City's street-design service monitors new lanes over a set period. On November~26, 2025 the mayor told the borough council she had learned the day before that her team had access to « ce rapport-là » and would look at its recommendations.
+\item \textbf{« Within the first 100 days »: kept as a launch.} The City's audit of the cycling network was announced on February~10, 2026, 100 days after the election: a technical analysis by the Service de l'urbanisme et de la mobilité with data collection and field observation through the peak season, results expected at the end of 2026, Terrebonne named among the streets concerned. The results were not due within the 100 days and had not been published by October 2026.
+\item \textbf{What the borough did before the results.} The file released under access request 2026-581 shows the borough's elected officials setting the objective of restoring the parking strip on June~10, 2026 (\pg{8}); the City's street-design service finding « plusieurs compromis importants sur le plan de la sécurité » in the borough's options (June~22, \pg{6}), the analysis withheld; no data collected on Terrebonne; a six-week consultant's note with the council date fixed in advance; and, on October~6, 2026, the announced orientation to convert one direction of the lane to parking each winter, vote expected December~7, 2026. The City's audit had not reported.
+\item \textbf{The City's answer when asked to wait.} At the City council of October~19, 2026, asked whether the City would ask the borough to wait for the review's results, the executive committee member for mobility answered that the four audits « will be made public as soon as we can compile the data », that « nothing precluded » the boroughs' own reviews and that CDN-NDG's elected officials « have done, over the past year, their review »; asked whether the findings would be published before the vote: « in all likelihood, will be as soon as possible, but it may not be before that », the four reviews being « specific to the particular bike paths » and not necessarily « exportable » to Terrebonne \tr{7:18:13 and 7:19:53}.
+\item \textbf{Side by side.} November~6, 2025: wait for the audit's results, keep the network, consider an independent audit if the existing one is not. October~6, 2026: one direction removed each winter, announced before the City's audit reported, on a file with no data collected and an unfavourable analysis withheld. The check records the two positions and the dates; it draws no conclusion about why.
+\item \textbf{Other statements:} the host's « three districts … Ensemble Montréal, two … Projet Montréal » is consistent with the result (with the mayor, four seats to two); « from two votes to six votes … recount » refers to the Côte-des-Neiges district; « the Projet Montréal era » for the 2024 lanes: the project was approved by the borough council on February~5, 2024 (3--2) and by the City council on February~19, 2024.
+\end{enumerate}
+
+\end{document}
