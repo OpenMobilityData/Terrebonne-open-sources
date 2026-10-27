@@ -13,3 +13,7 @@ Recordings: the archived webcast of the sitting (YouTube a0Q0veyhra0), audio dow
 Conseil d'agglomération de Montréal, regular sitting of Thursday, October 22, 2026, public question period, second question (webcast 29:39). The question was submitted online in writing by David Gamper, called by the chair as « M. David Gamper, l'Association des piétons et cyclistes de NDG », and read aloud by the chair. The reading was too halting to transcribe; the transcript gives the question **as submitted in writing**, provided by the questioner, and the check confirmed that it is the question the chair read (webcast 29:58–31:16). The questioner addressed it to the member of the executive committee responsible for public security; the chair gave the floor to Councillor Alexandre Teodoresco, who answered (31:18–32:48). The text is reproduced as submitted, including its lower-case « my question is » and the space before the last question mark.
 
 The minutes of the sitting were not yet published on October 23, 2026; the questioner's name is given as the chair called it.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

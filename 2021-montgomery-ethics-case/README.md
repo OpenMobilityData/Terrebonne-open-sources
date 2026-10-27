@@ -46,3 +46,7 @@ Captured with headless Chrome on October 21, 2026 (four pages refused the captur
 - https://www.administrativelawmatters.com/blog/2022/03/10/independence-impartiality-and-municipal-morality-montgomery-c-commission-municipale-du-quebec-2022-qccs-199/ → https://web.archive.org/web/20261022030346/https://www.administrativelawmatters.com/blog/2022/03/10/independence-impartiality-and-municipal-morality-montgomery-c-commission-municipale-du-quebec-2022-qccs-199/
 
 Not archived that night: https://www.lapresse.ca/actualites/grand-montreal/2020-03-11/la-mairesse-sue-montgomery-deboutee-en-cour (520); https://www.lapresse.ca/actualites/grand-montreal/2023-09-28/reglement-a-l-amiable-entre-sue-montgomery-et-la-ville-de-montreal.php (520)
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

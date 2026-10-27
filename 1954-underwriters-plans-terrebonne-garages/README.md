@@ -66,3 +66,7 @@ Of the 75 garages: 46 basement, 14 detached, 15 attached or in an annex; the doo
 | `derived/*.py` | `frame.py`, `georef.py`, `buildings.py`, `ortho_strips.py` (City 2022 orthophoto, 30 cm, used for a first pass), `ortho_strips_qc.py` (Québec imagery strips), `lidar_strips.py` (City LiDAR 2015 strips), `lidar_cars.py`, `merge_present_day.py`, `summary.py`, `maps.py`, `overview_chart.py`, `cars_chart.py`, `cars_figures.py` (parked-cars strips and detections map), `cars_closeup.py`, `cars_hero.py` (the standalone night image), `lidar_oblique_surface.py` (the lit LiDAR height surface of one block seen obliquely, with and without the trees; wires and poles filtered by a 1.2 m opening), `lidar_oblique.py` (the raw point cloud of the same block, as the explanatory aid), `method_figures.py`, `build_note.py`, `build_deck.py`, `mtm.py` (MTM zone 8 projection) |
 
 Third-party data are named with their licence (Ville de Montréal open data CC-BY 4.0: géobase, unités d'évaluation foncière, orthophoto 2022, LiDAR aérien 2015; Gouvernement du Québec aerial imagery: served by WMS, not redistributed); the scans are not redistributed. Counts and positions are the author's reading and may contain errors; the row-by-row table is meant to let anyone find them.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

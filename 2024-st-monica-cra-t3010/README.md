@@ -44,3 +44,7 @@ Two kinds of file from the CRA's reply are not reproduced: the directors, truste
 1. When the CRA publishes the next year's dataset (expected late in the following year), add its identifier to `open_canada_datasets.csv` with status `to_fetch` (`python3 derived/fetch_open_data.py --search` lists the portal's datasets) and run `python3 derived/fetch_open_data.py`.
 2. `python3 derived/build.py` rebuilds the tables, the charts and both notes, and reports any disagreement between sources and any arithmetic gap in the returns (one in seventeen years: 2018, asset lines 750,031 vs line 4200 750,051).
 3. Extend section 5 of both notes to the new year in the same descriptive style.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

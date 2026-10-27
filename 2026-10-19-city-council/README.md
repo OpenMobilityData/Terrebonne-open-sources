@@ -31,3 +31,7 @@ The borough's announced winter conversion of one direction of the Terrebonne bik
 ## How the transcripts were made
 
 Each section was drafted with Whisper (whisper.cpp, large-v3-turbo) forced to French and to English, then every passage of about 20 seconds was listened to and corrected by Rick Hoge on a check page showing the audio beside the text (October 19–20, 2026). Passages before a question began or after an answer ended were left out. Speakers are named as they presented themselves or were called by the chair; the chair's interjections appear as their own turns. `[inaudible]` marks a word that could not be made out. The written question submitted by Rick Hoge for the same sitting is not included here.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

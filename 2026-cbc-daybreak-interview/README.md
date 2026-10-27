@@ -23,3 +23,7 @@ The borough's plan to convert one direction of the protected bike lane on rue de
 | `derived/build.py` | Stamps a version tag, compiles the four `.tex` files, regenerates the extracts and `.txt` files |
 
 The fact check compares statements with records; it does not assess intent.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

@@ -31,3 +31,7 @@ Images 6–11 were not read. The context of the post is the period between the b
 The explainer video « How to Lie with Statistics: winter bike lane edition » (member-sponsored content; private repository `media/huff_video/`) shows image 5 as the example on the other side of the debate: « 400 bicycle crossings » are passages counted over six peak hours (6:30–9:30, 15:30–18:30) at one intersection on one day (409 at Terrebonne/Girouard, all approaches, October 4, 2022; EXP 2023, Tableau 2-3, p. 19), not « 400 cyclists » and not every day. The evidence graph (`2026-evidence-graph/`) holds the post as `d_fb_myths_2023` and the Myth #4 text as `s_fb_myth4`.
 
 This README describes and quotes; it does not evaluate the claims.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

@@ -18,3 +18,7 @@ Recordings: clips 01 to 06 were recorded by the author from the webcast on Octob
 ## Clip 08: the council members' question period (added October 23, 2026)
 
 Not in the hand recordings of October 6. Located on October 23, 2026 by a chunked Whisper pass over the archived webcast's audio (downloaded that day with `yt-dlp`) from 2:28 to the end: in the council members' question period (item 10.07), Peter McQueen put two questions on the Terrebonne lane to Councillor Teodoresco (2:47:56), answered to 2:51:00. Cut from the downloaded archive audio, so its times are archived-webcast times with no offset to correct. Checked by ear by Rick Hoge on October 23, 2026 (export of 2026-10-23T20:45:40); the chair's call and the next member's question (on Bixi) are out of scope. Within a turn, a short reply by the other speaker is printed as its own turn at the start time of the passage that holds it (e.g. « Exact. C'est exactement ça. », heard at about 2:49:50).
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

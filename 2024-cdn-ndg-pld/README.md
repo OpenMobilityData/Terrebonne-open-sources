@@ -24,3 +24,7 @@ The plan does not name rue de Terrebonne. Its survey results include, among the 
 ## Why they are here
 
 **Adoption.** The plan was adopted unanimously on May 6, 2024 (CA24 170089), by a council on which sat the present borough mayor (Stephanie Valenzuela, then councillor for Darlington) and the present councillor for Snowdon (Sonny Moroz), both of Ensemble Montréal; the plan is therefore the borough's, not one party's. The borough's page on the plan was updated April 14, 2026 and the plan is presented there as the borough's mobility plan for 2024–2034; it is the borough's own statement of objectives against which a winter change to a protected lane can be read. Read alongside the City's Vision Zéro plans ([`../2016-vision-zero/`](../2016-vision-zero/)).
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

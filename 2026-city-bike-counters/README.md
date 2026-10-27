@@ -40,3 +40,7 @@ The borough's winter figures for Terrebonne come from a borough-owned Eco-Counte
 - June 4, 2026: Eco-Compteur announces the renewed partnership and the CITIX-AI Evo system.
 
 Not in this folder: the tender documents of 25-21195 (the specifications DTI-6D-4718 and DTI-6D-4724), which SEAO serves to registered users; the La Presse articles of April 1 and May 29, 2026 (paywalled).
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

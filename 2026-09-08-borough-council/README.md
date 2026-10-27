@@ -23,3 +23,7 @@ Regular sitting of the borough council of Côte-des-Neiges–Notre-Dame-de-Grâc
 - Clip 02: the check page had prefilled the borough mayor as speaker for the whole clip; nine passages of Steven Jass's first question (webcast 1:02:43 to 1:05:07) were relabelled to him at the build. Labels only; no word was changed.
 - One passage at webcast 1:01:30 (the end of the previous answer, on housing) is left out, as out of scope.
 - The questioner's name is spelled as in the minutes (« Jass »); the October 6, 2026 transcripts in `2026-10-06-borough-council/` spell it « Jazz ».
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

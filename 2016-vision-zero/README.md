@@ -25,3 +25,7 @@ Neither plan names rue de Terrebonne.
 ## Why they are here
 
 The City's note of November 10, 2025 on the audits of the cycling network (request 2025-12847, [Terrebonne-access-requests](https://github.com/OpenMobilityData/Terrebonne-access-requests/tree/main/2025-12847)) places that work under Vision Zéro, and Vision Zéro was invoked in a question at City council on October 19, 2026 ([`../2026-10-19-city-council/`](../2026-10-19-city-council/), clip 02, 7:08:51). The borough's own local mobility plan, which cites the 2022–2024 plan, is in [`../2024-cdn-ndg-pld/`](../2024-cdn-ndg-pld/).
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

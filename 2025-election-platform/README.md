@@ -24,3 +24,7 @@ The councillor said at the borough council on October 6, 2026, « we have made a
 |---|---|
 | `raw/Ensemble-MTL-plateforme_2025-10.pdf` | The platform, 65 pp., as downloaded |
 | `raw/montreal.ca_les-amenagements-cyclables-cdn-ndg_fr_2026-10-21.pdf`, `…_en_…` | The borough's cycling page, FR and EN, as captured |
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

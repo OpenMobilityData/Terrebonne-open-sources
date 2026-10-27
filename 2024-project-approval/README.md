@@ -29,3 +29,7 @@ The sommaire décisionnel (file 1246880006, Division des études techniques, sig
 For the petitions tabled with the borough three days before the February 5 sitting, see the companion repository, access request 2025-081.
 
 **Communication before the vote (decisional file 1246880002, « Opération(s) de communication »):** « Le projet d'aménagement cyclable sur la rue de Terrebonne a été annoncé officiellement via un communiqué de presse le 30 octobre 2023. Une séance d'information citoyenne a aussi été faite le 30 novembre 2023. D'autres opérations seront planifiées avant le déploiement … » The study itself (351 pp.) was published by the borough with the October 30, 2023 release.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

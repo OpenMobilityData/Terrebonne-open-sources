@@ -19,3 +19,7 @@
 ## Why they are here
 
 The route described for the Terrebonne measure is a borough vote (expected December 7), a City council vote, then a return to the borough, with changes « before Christmas » (CBC *Daybreak*, October 9, 2026, 08:19, [`../2026-cbc-daybreak-interview/`](../2026-cbc-daybreak-interview/)); in 2024 the same route took three votes ([`../2024-project-approval/`](../2024-project-approval/)). These are the City council sittings between now and the end of the year, with the stated subject of the two extraordinary ones.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

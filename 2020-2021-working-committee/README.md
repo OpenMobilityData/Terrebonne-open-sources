@@ -25,3 +25,7 @@
 **Tabling.** The recommendations were tabled at the council sitting of June 21, 2021 as item 61.03, "Prendre acte du dépôt", signed by the borough director on June 15, 2021.
 
 For context on how this committee's work relates to the 2023 study and the 2024 project, see the companion repository's analyses; this README describes the documents only.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

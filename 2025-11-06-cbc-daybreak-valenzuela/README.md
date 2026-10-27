@@ -21,3 +21,7 @@ The election result and the campaign; priorities (basic services, housing, secur
 | `derived/build.py` | Stamps a version tag, compiles the `.tex` files, regenerates the extracts and `.txt` files (French versions to follow) |
 
 The fact check compares statements with records; it does not assess intent.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

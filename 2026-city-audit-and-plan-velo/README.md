@@ -17,3 +17,7 @@
 ## Why they are here
 
 Both are cited in the executive summaries of access request 2026-581 (section 4.4, "Against the City's own review method") and in the questions prepared for council. The City's own note of November 10, 2025 on the audits of the network, released under request 2025-12847, is in the companion repository.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

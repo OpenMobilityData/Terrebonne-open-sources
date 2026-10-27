@@ -42,3 +42,7 @@ Order after new data: rebuild the figures in the access-requests repository, run
 | `poster_terrebonne_winter_numbers_{en,fr}.png` | Preview image |
 | `build_poster.py`, `templates/`, `timeline.csv`, `manual_facts.json` | The build (see above) |
 | `poster_assets/` | The monthly chart and the winter violin plot (SVG, EN and FR), copied from the access-requests repository by the build |
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

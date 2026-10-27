@@ -55,3 +55,7 @@ The CSV files stay the source of truth; the tools read and write them and nothin
 ## Reproduce
 
 `python3 render_graph.py` in this folder (needs Graphviz `dot`). Structure checks and the SQLite copy are in [`graph_lib.py`](graph_lib.py). The page loads Cytoscape.js 3.30.2 from cdnjs and has its data embedded; nothing else is fetched.
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*

@@ -36,3 +36,7 @@ A recurring argument against the Terrebonne lanes is that no serious collision e
 | File | Content |
 |---|---|
 | [`derived/terrebonne_collisions_press_mosaic.png`](derived/terrebonne_collisions_press_mosaic.png) (+ `.jpg`) | Mosaic of the seven captures on rue de Terrebonne, each cropped to its top part, with captions; built by `derived/mosaic.py` |
+
+---
+
+*Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*
