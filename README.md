@@ -57,4 +57,8 @@ Two earlier repositories that held some of these files (`Terrebonne-EXP-Report`,
 
 ## Provenance and use
 
-Borough and City documents reproduced here are public records or publications; open data from the Ville de Montréal is under CC-BY 4.0. The READMEs are published under CC BY 4.0. The repository was assembled by Rick Hoge, a resident of the borough, as a personal project; it represents no position of any organization. Corrections are welcome through the issue tracker. Commits made with an AI assistant are marked as such in the commit log.
+Borough and City documents reproduced here are public records or publications; open data from the Ville de Montréal is under CC-BY 4.0. The READMEs are published under CC BY 4.0. The repository was assembled by Rick Hoge, a resident of the borough, as a personal project; it represents no position of any organization. Corrections are welcome through the issue tracker.
+
+## Use of AI
+
+Much of the code and many of the drafts in this repository were produced with an AI assistant, Anthropic's Claude, in interactive sessions directed by the author. The author chose the questions, supplied the sources, reviewed every output, and checked every quotation, page reference and figure against the documents; the author alone is responsible for the content. Commits to which the assistant contributed name it as co-author, so the division of work is visible in the history, and errors found in its work are corrected in the open like any other. Nothing in `raw/` is edited by anyone, human or machine.
