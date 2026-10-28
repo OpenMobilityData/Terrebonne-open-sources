@@ -4109,6 +4109,7 @@
 <!-- d_cbc_survey -->
 <g id="node104" class="node">
 <title>d_cbc_survey</title>
+<g id="a_node104"><a xlink:href="https://www.cbc.ca/news/canada/montreal/montreal-bike-paths-online-survey-9.7254304" xlink:title="CBC News article of July 1, 2026\non the City&#39;s online consultation\n« La place du vélo » (Cocoriko\nplatform): the survey disappeared\ndays after its June launch and\ncame back with an option to\nsuggest removing bike lanes, on\nthe form and on the interactive\nmap, and open to respondents\nwithout a Montréal postal code;\nrespondents&#39; full names, partial\npostal codes and in some cases\ne&#45;mail addresses were visible and\ndownloadable until the map was\nremoved; the City said the\ninformation was removed within 24\nhours and that unverified names\nare not confidential; the 1,613\nresponses to the original version\nto be included in the analysis;\nconsultation open until July 25,\n2026; a more in&#45;depth consultation\nplanned for the fall. Quotes\nNicolas Marcotte, Vélo Québec\n(Magali Bebronne), cyclists, and\nRick Hoge\n[2026&#45;07&#45;01]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="3922.56,-1478.43 3770.81,-1478.43 3770.81,-1207.18 3928.56,-1207.18 3928.56,-1472.43 3922.56,-1478.43"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="3922.56,-1478.43 3922.56,-1472.43"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="3928.56,-1472.43 3922.56,-1472.43"/>
@@ -4139,6 +4140,8 @@
 <text text-anchor="middle" x="3849.68" y="-1231.88" font-family="Helvetica,sans-Serif" font-size="9.00">(Magali Bebronne), cyclists, and</text>
 <text text-anchor="middle" x="3849.68" y="-1222.13" font-family="Helvetica,sans-Serif" font-size="9.00">Rick Hoge</text>
 <text text-anchor="middle" x="3849.68" y="-1212.38" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;07&#45;01]</text>
+</a>
+</g>
 </g>
 <!-- d_cbc_survey&#45;&gt;d_feb10 -->
 <g id="edge1032" class="edge">
@@ -4150,6 +4153,7 @@
 <!-- e_cbc_2026jul01 -->
 <g id="node351" class="node">
 <title>e_cbc_2026jul01</title>
+<g id="a_node351"><a xlink:href="https://www.cbc.ca/news/canada/montreal/montreal-bike-paths-online-survey-9.7254304" xlink:title="CBC News Montreal, July 1, 2026,\nPatricia Kozicka: « Montreal\ncyclists question objectivity,\nprivacy in city&#39;s survey on bike\nlanes »\n[2026&#45;07&#45;01]" target="_blank">
 <path fill="#f3eefc" stroke="#9aa0a6" stroke-width="0.6" d="M4240.19,-1256.73C4240.19,-1256.73 4194.95,-1295.43 4194.95,-1295.43 4190.39,-1299.33 4179.83,-1303.23 4173.83,-1303.23 4173.83,-1303.23 4070.86,-1303.23 4070.86,-1303.23 4064.86,-1303.23 4054.3,-1299.33 4049.74,-1295.43 4049.74,-1295.43 4004.5,-1256.73 4004.5,-1256.73 3999.94,-1252.83 3999.94,-1245.03 4004.5,-1241.13 4004.5,-1241.13 4049.74,-1202.43 4049.74,-1202.43 4054.3,-1198.53 4064.86,-1194.63 4070.86,-1194.63 4070.86,-1194.63 4173.83,-1194.63 4173.83,-1194.63 4179.83,-1194.63 4190.39,-1198.53 4194.95,-1202.43 4194.95,-1202.43 4240.19,-1241.13 4240.19,-1241.13 4244.75,-1245.03 4244.75,-1252.83 4240.19,-1256.73"/>
 <text text-anchor="middle" x="4122.35" y="-1269.63" font-family="Helvetica,sans-Serif" font-size="9.00">CBC News Montreal, July 1, 2026,</text>
 <text text-anchor="middle" x="4122.35" y="-1259.88" font-family="Helvetica,sans-Serif" font-size="9.00">Patricia Kozicka: « Montreal</text>
@@ -4157,6 +4161,8 @@
 <text text-anchor="middle" x="4122.35" y="-1240.38" font-family="Helvetica,sans-Serif" font-size="9.00">privacy in city&#39;s survey on bike</text>
 <text text-anchor="middle" x="4122.35" y="-1230.63" font-family="Helvetica,sans-Serif" font-size="9.00">lanes »</text>
 <text text-anchor="middle" x="4122.35" y="-1220.88" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;07&#45;01]</text>
+</a>
+</g>
 </g>
 <!-- d_cbc_survey&#45;&gt;e_cbc_2026jul01 -->
 <g id="edge1031" class="edge">
@@ -13621,6 +13627,7 @@
 <!-- s_cbc_mayor_allusers -->
 <g id="node314" class="node">
 <title>s_cbc_mayor_allusers</title>
+<g id="a_node314"><a xlink:href="https://www.cbc.ca/news/canada/montreal/montreal-bike-paths-online-survey-9.7254304" xlink:title="CBC News, July 1, 2026, Soraya\nMartinez Ferrada at a news\nconference the day before, on\nopening the survey to people\nwithout a Montréal postal code: «\nall users of our roads » should be\nat the table when the city&#39;s\nmobility is examined; « The\ndiversification of those voices,\nit&#39;s important. That&#39;s why the\nsurvey was enlarged in terms of\nthe outreach of who was surveyed.\n»\n[2026&#45;06&#45;30]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M3979.5,-1089.29C3979.5,-1089.29 3846.5,-1089.29 3846.5,-1089.29 3840.5,-1089.29 3834.5,-1083.29 3834.5,-1077.29 3834.5,-1077.29 3834.5,-956.79 3834.5,-956.79 3834.5,-950.79 3840.5,-944.79 3846.5,-944.79 3846.5,-944.79 3979.5,-944.79 3979.5,-944.79 3985.5,-944.79 3991.5,-950.79 3991.5,-956.79 3991.5,-956.79 3991.5,-1077.29 3991.5,-1077.29 3991.5,-1083.29 3985.5,-1089.29 3979.5,-1089.29"/>
 <text text-anchor="middle" x="3913" y="-1076.74" font-family="Helvetica,sans-Serif" font-size="9.00">CBC News, July 1, 2026, Soraya</text>
 <text text-anchor="middle" x="3913" y="-1066.99" font-family="Helvetica,sans-Serif" font-size="9.00">Martinez Ferrada at a news</text>
@@ -13636,6 +13643,8 @@
 <text text-anchor="middle" x="3913" y="-969.49" font-family="Helvetica,sans-Serif" font-size="9.00">the outreach of who was surveyed.</text>
 <text text-anchor="middle" x="3913" y="-959.74" font-family="Helvetica,sans-Serif" font-size="9.00">»</text>
 <text text-anchor="middle" x="3913" y="-949.99" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;30]</text>
+</a>
+</g>
 </g>
 <!-- s_cbc_mayor_allusers&#45;&gt;a_martinez_ferrada -->
 <g id="edge1033" class="edge">
@@ -13661,6 +13670,7 @@
 <!-- s_cbc_city_response -->
 <g id="node315" class="node">
 <title>s_cbc_city_response</title>
+<g id="a_node315"><a xlink:href="https://www.cbc.ca/news/canada/montreal/montreal-bike-paths-online-survey-9.7254304" xlink:title="CBC News, July 1, 2026, a City of\nMontréal spokesperson: survey\ncontributors&#39; information was\nremoved within 24 hours of the\nCity being informed; the City does\nnot consider a first and last name\nconfidential because the\ninformation was « not verified and\nauthenticated by the city »; the\nmap to be added back « as soon as\npossible »; the 1,613 responses to\nthe original survey will be\nincluded in the analysis;\nparticipation open until July 25;\na more in&#45;depth consultation\nplanned for the fall\n[2026&#45;06&#45;30]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M4053.86,-1660.3C4053.86,-1660.3 3917.11,-1660.3 3917.11,-1660.3 3911.11,-1660.3 3905.11,-1654.3 3905.11,-1648.3 3905.11,-1648.3 3905.11,-1498.55 3905.11,-1498.55 3905.11,-1492.55 3911.11,-1486.55 3917.11,-1486.55 3917.11,-1486.55 4053.86,-1486.55 4053.86,-1486.55 4059.86,-1486.55 4065.86,-1492.55 4065.86,-1498.55 4065.86,-1498.55 4065.86,-1648.3 4065.86,-1648.3 4065.86,-1654.3 4059.86,-1660.3 4053.86,-1660.3"/>
 <text text-anchor="middle" x="3985.48" y="-1647.75" font-family="Helvetica,sans-Serif" font-size="9.00">CBC News, July 1, 2026, a City of</text>
 <text text-anchor="middle" x="3985.48" y="-1638" font-family="Helvetica,sans-Serif" font-size="9.00">Montréal spokesperson: survey</text>
@@ -13679,6 +13689,8 @@
 <text text-anchor="middle" x="3985.48" y="-1511.25" font-family="Helvetica,sans-Serif" font-size="9.00">a more in&#45;depth consultation</text>
 <text text-anchor="middle" x="3985.48" y="-1501.5" font-family="Helvetica,sans-Serif" font-size="9.00">planned for the fall</text>
 <text text-anchor="middle" x="3985.48" y="-1491.75" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;06&#45;30]</text>
+</a>
+</g>
 </g>
 <!-- s_cbc_city_response&#45;&gt;a_city -->
 <g id="edge1036" class="edge">
@@ -13714,6 +13726,7 @@
 <!-- s_cbc_velo_quebec -->
 <g id="node316" class="node">
 <title>s_cbc_velo_quebec</title>
+<g id="a_node316"><a xlink:href="https://www.cbc.ca/news/canada/montreal/montreal-bike-paths-online-survey-9.7254304" xlink:title="CBC News, July 1, 2026, Magali\nBebronne, Vélo Québec: « We would\nnever ask citizens which libraries\nor public swimming pools should be\nclosed. Why, then, would a\nconsultation on a cycling plan ask\nwhich bike lanes should be\nremoved? »\n[2026&#45;07&#45;01]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M3975.31,-1193.11C3975.31,-1193.11 3832.56,-1193.11 3832.56,-1193.11 3826.56,-1193.11 3820.56,-1187.11 3820.56,-1181.11 3820.56,-1181.11 3820.56,-1109.36 3820.56,-1109.36 3820.56,-1103.36 3826.56,-1097.36 3832.56,-1097.36 3832.56,-1097.36 3975.31,-1097.36 3975.31,-1097.36 3981.31,-1097.36 3987.31,-1103.36 3987.31,-1109.36 3987.31,-1109.36 3987.31,-1181.11 3987.31,-1181.11 3987.31,-1187.11 3981.31,-1193.11 3975.31,-1193.11"/>
 <text text-anchor="middle" x="3903.94" y="-1180.56" font-family="Helvetica,sans-Serif" font-size="9.00">CBC News, July 1, 2026, Magali</text>
 <text text-anchor="middle" x="3903.94" y="-1170.81" font-family="Helvetica,sans-Serif" font-size="9.00">Bebronne, Vélo Québec: « We would</text>
@@ -13724,6 +13737,8 @@
 <text text-anchor="middle" x="3903.94" y="-1122.06" font-family="Helvetica,sans-Serif" font-size="9.00">which bike lanes should be</text>
 <text text-anchor="middle" x="3903.94" y="-1112.31" font-family="Helvetica,sans-Serif" font-size="9.00">removed? »</text>
 <text text-anchor="middle" x="3903.94" y="-1102.56" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;07&#45;01]</text>
+</a>
+</g>
 </g>
 <!-- s_cbc_velo_quebec&#45;&gt;a_velo_quebec -->
 <g id="edge1040" class="edge">
@@ -13749,6 +13764,7 @@
 <!-- s_cbc_hoge -->
 <g id="node317" class="node">
 <title>s_cbc_hoge</title>
+<g id="a_node317"><a xlink:href="https://www.cbc.ca/news/canada/montreal/montreal-bike-paths-online-survey-9.7254304" xlink:title="CBC News, July 1, 2026, Rick Hoge,\nquoted as a cyclist: on the\nsurvey&#39;s handling, « Has it been a\nlittle clumsy? Absolutely. At\nleast they&#39;re trying. I don&#39;t read\nanything into this. »; on\nrespondents&#39; names being visible,\n« I&#39;m not a lawyer … but I&#39;m not\nsure this would pass the smell\ntest in terms of Quebec&#39;s privacy\nprotection laws », and that\ninformed consent was not adequate\n[2026&#45;07&#45;01]" target="_blank">
 <path fill="#fdf1f1" stroke="#9aa0a6" stroke-width="0.6" d="M3884.84,-1759.07C3884.84,-1759.07 3744.34,-1759.07 3744.34,-1759.07 3738.34,-1759.07 3732.34,-1753.07 3732.34,-1747.07 3732.34,-1747.07 3732.34,-1636.32 3732.34,-1636.32 3732.34,-1630.32 3738.34,-1624.32 3744.34,-1624.32 3744.34,-1624.32 3884.84,-1624.32 3884.84,-1624.32 3890.84,-1624.32 3896.84,-1630.32 3896.84,-1636.32 3896.84,-1636.32 3896.84,-1747.07 3896.84,-1747.07 3896.84,-1753.07 3890.84,-1759.07 3884.84,-1759.07"/>
 <text text-anchor="middle" x="3814.59" y="-1746.52" font-family="Helvetica,sans-Serif" font-size="9.00">CBC News, July 1, 2026, Rick Hoge,</text>
 <text text-anchor="middle" x="3814.59" y="-1736.77" font-family="Helvetica,sans-Serif" font-size="9.00">quoted as a cyclist: on the</text>
@@ -13763,6 +13779,8 @@
 <text text-anchor="middle" x="3814.59" y="-1649.02" font-family="Helvetica,sans-Serif" font-size="9.00">protection laws », and that</text>
 <text text-anchor="middle" x="3814.59" y="-1639.27" font-family="Helvetica,sans-Serif" font-size="9.00">informed consent was not adequate</text>
 <text text-anchor="middle" x="3814.59" y="-1629.52" font-family="Helvetica,sans-Serif" font-size="9.00">[2026&#45;07&#45;01]</text>
+</a>
+</g>
 </g>
 <!-- s_cbc_hoge&#45;&gt;a_author -->
 <g id="edge1043" class="edge">
