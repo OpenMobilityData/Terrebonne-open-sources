@@ -59,7 +59,7 @@ Two earlier repositories that held some of these files (`Terrebonne-EXP-Report`,
 
 ## Provenance and use
 
-Borough and City documents reproduced here are public records or publications; open data from the Ville de Montréal is under CC-BY 4.0. The READMEs are published under CC BY 4.0. The repository was assembled by Rick Hoge, a resident of the borough, as a personal project; it represents no position of any organization. Corrections are welcome through the issue tracker.
+Borough and City documents reproduced here are public records or publications; open data from the Ville de Montréal is under CC-BY 4.0; other third-party material keeps its own terms. These documents (`raw/`) are not licensed here. The author's own work, the READMEs and the contents of the `derived/` folders (tables, transcripts, fact checks, figures, notes and the evidence graph), is published under CC BY 4.0 ([`LICENSE`](LICENSE)); code (scripts) under the MIT licence ([`LICENSE-CODE`](LICENSE-CODE)). The repository was assembled by Rick Hoge, a resident of the borough, as a personal project; it represents no position of any organization. Corrections are welcome through the issue tracker.
 
 ## Use of AI
 
