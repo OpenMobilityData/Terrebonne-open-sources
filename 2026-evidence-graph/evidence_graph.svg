@@ -4429,9 +4429,19 @@
 <!-- d_ca_1266880005&#45;&gt;d_ca24 -->
 <g id="edge1087" class="edge">
 <title>d_ca_1266880005&#45;&gt;d_ca24</title>
-<path fill="none" stroke="#9aa0a6" d="M4932.83,-1799.96C4967.02,-1605.97 5038.5,-1200.28 5065.38,-1047.74"/>
-<polygon fill="#9aa0a6" stroke="#9aa0a6" points="5067.39,-1048.44 5066.37,-1042.16 5063.26,-1047.71 5067.39,-1048.44"/>
-<text text-anchor="middle" x="4984.86" y="-1424.98" font-family="Helvetica,sans-Serif" font-size="7.50" fill="#9aa0a6">refers to</text>
+<path fill="none" stroke="#9aa0a6" d="M4937.44,-1799.85C4974.96,-1605.77 5046.11,-1200.12 5068.98,-1047.67"/>
+<polygon fill="#9aa0a6" stroke="#9aa0a6" points="5071,-1048.34 5069.81,-1042.1 5066.85,-1047.73 5071,-1048.34"/>
+<text text-anchor="middle" x="4988.96" y="-1416.63" font-family="Helvetica,sans-Serif" font-size="7.50" fill="#9aa0a6">refers to</text>
+</g>
+<!-- d_ca_1266880005&#45;&gt;d_ca24 -->
+<g id="edge1100" class="edge">
+<title>d_ca_1266880005&#45;&gt;d_ca24</title>
+<g id="a_edge1100"><a xlink:title="2024 file 1246880002 filled « Montréal 2030 » (active travel, « Améliorer la sécurité des clientèles vulnérables », « Apaiser la circulation »); the 2026 file leaves « Agir pour Montréal 2026&#45;2030 », « Test climat » and « Équité … » empty (p. 4).">
+<path fill="none" stroke="#e34948" stroke-dasharray="5,2" d="M4928.25,-1800.08C4959.08,-1606.16 5030.88,-1200.44 5061.75,-1047.81"/>
+<polygon fill="#e34948" stroke="#e34948" points="5063.75,-1048.52 5062.89,-1042.22 5059.64,-1047.68 5063.75,-1048.52"/>
+</a>
+</g>
+<text text-anchor="middle" x="4975.87" y="-1425.07" font-family="Helvetica,sans-Serif" font-size="7.50" fill="#e34948">differs from</text>
 </g>
 <!-- d_ca_1266880005&#45;&gt;x_yearround -->
 <g id="edge1090" class="edge">
