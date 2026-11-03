@@ -7,9 +7,9 @@
 | File | Pages | Content |
 |---|---|---|
 | [`raw/2026-11-02_APC-NDG_survey_results_fr_as_handed_over.pdf`](raw/2026-11-02_APC-NDG_survey_results_fr_as_handed_over.pdf) | 13 | French version as printed and handed over on November 2 |
-| [`raw/2026-11-02_APC-NDG_survey_results_fr_corrected_2026-11-03.pdf`](raw/2026-11-02_APC-NDG_survey_results_fr_corrected_2026-11-03.pdf) | 13 | French version corrected on November 3 (one sentence, below) and sent to the clerk |
+| [`raw/2026-11-02_APC-NDG_survey_results_fr.pdf`](raw/2026-11-02_APC-NDG_survey_results_fr.pdf) | 13 | French version, current (the sentence corrected on November 3, below, as sent to the clerk) |
 | [`raw/2026-11-02_APC-NDG_survey_results_en_as_handed_over.pdf`](raw/2026-11-02_APC-NDG_survey_results_en_as_handed_over.pdf) | 13 | English version, same date |
-| [`raw/2026-11-02_APC-NDG_survey_results_en_corrected_2026-11-03.pdf`](raw/2026-11-02_APC-NDG_survey_results_en_corrected_2026-11-03.pdf) | 13 | English version, corrected |
+| [`raw/2026-11-02_APC-NDG_survey_results_en.pdf`](raw/2026-11-02_APC-NDG_survey_results_en.pdf) | 13 | English version, current |
 
 ## What the document says
 
