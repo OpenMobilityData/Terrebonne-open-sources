@@ -1,0 +1,13 @@
+street,type_voie,separateur,saisons4,protege_4s,metres
+chabanel Ouest,Piste cyclable sur rue,Délinéateur,Oui,Oui,178
+legendre Est,Chaussée désignée,,Oui,Non,395
+legendre Est,Piste cyclable sur rue,Délinéateur,Oui,Oui,596
+legendre Ouest,Piste cyclable sur rue,Délinéateur,Oui,Oui,749
+meilleur,Bande cyclable,,Oui,Non,528
+meilleur,Piste cyclable sur rue,Délinéateur,Oui,Oui,518
+port-royal Est,Bande cyclable,,Non,Non,290
+port-royal Est,Chaussée désignée,,Non,Non,81
+port-royal Est,Piste cyclable sur rue,Marquage au sol,Oui,Non,72
+port-royal Ouest,Piste cyclable sur rue,Délinéateur,Oui,Oui,308
+tolhurst,Bande cyclable,,Oui,Non,1061
+tolhurst,Piste cyclable sur rue,Délinéateur,Oui,Oui,661
