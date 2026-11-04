@@ -17,3 +17,5 @@ The minutes of the sitting were not yet published on October 23, 2026; the quest
 ---
 
 *Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*
+
+**Raw machine drafts:** [`derived/whisper_drafts/`](derived/whisper_drafts/) holds the unchecked Whisper output (FR and EN, clip times) for inspection of what the check changed (owner, Nov 4, 2026).

@@ -1,0 +1,3 @@
+# Raw Whisper drafts (machine output, UNCHECKED)
+
+whisper.cpp large-v3-turbo, language forced (`-fr`, `-en`), one draft per clip and language, times are clip times (the clip start times in the webcast are in the folder README). Kept for inspection of what the check by ear changed; nothing here is a quotation. No checked transcript yet (the check page awaits the owner's export, Nov 4, 2026): these drafts are the only transcript of the sitting for now, published under the two-stage rule of Nov 4, 2026; clip boundaries and the webcast times of each clip are in the folder README's « At the sitting » section; residents' names are as in the clip titles.
