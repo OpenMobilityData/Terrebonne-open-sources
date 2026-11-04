@@ -1595,4 +1595,6 @@ t_petitions_shared_cells -> d_petitions_comparison [label="contained in", color=
 e_985_2026nov2 -> e_nov2_3002 [label="precedes", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="the interview aired at 08:16, the vote on item 30.02 came at about 22:30 the same day"];
 d_985_2026nov2 -> e_985_2026nov2 [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid];
 d_985_2026nov2 -> d_devoir_2026oct30 [label="echoes", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="the station's summary « sans volonté d'en démanteler » and the mayor's words on air repeat the position Le Devoir reported on Oct 30"];
+d_ahuntsic_district_central_notice -> d_feb10 [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="rue Meilleur, closed for the winter by the notice, is one of the four lanes of the audit announced in the release"];
+d_985_2026nov2 -> d_ahuntsic_district_central_notice [label="refers to", color="#9aa0a6", fontcolor="#9aa0a6", style=solid, tooltip="the mayor names Port-Royal in Ahuntsic as her example of a lane whose cohabitation is poor (draft, unchecked); the notice closes it for the winter"];
 }
