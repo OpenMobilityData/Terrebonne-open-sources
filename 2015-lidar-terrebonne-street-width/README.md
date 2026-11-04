@@ -9,12 +9,14 @@
 | File | Content |
 |---|---|
 | [`derived/terrebonne_street_width_note_en.pdf`](derived/terrebonne_street_width_note_en.pdf) | The note (3 pp.): question, data and method, results, the table by block, caveats |
-| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (8 slides, 16:9) |
+| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (10 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, figures, what it means, caveats |
 | [`derived/street_width_profile.csv`](derived/street_width_profile.csv) | Every station (every 2 m, 1207 stations): position, block, curb offsets north and south, curb-to-curb width, kept flag, right-of-way and sidewalk zones |
 | [`derived/street_width_by_block.csv`](derived/street_width_by_block.csv) | Per block: stations kept, curb-to-curb median, p10, p90, min, max; right-of-way; sidewalk zones |
 | [`derived/summary.json`](derived/summary.json) | The totals and the detector's parameters |
 | [`derived/figures/street_width_profile_en.png`](derived/figures/street_width_profile_en.png) / [`_fr.png`](derived/figures/street_width_profile_fr.png) | Width along the lane (stations, block medians, the 10.8 m of the 2023 drawing); right-of-way and sidewalk zones |
 | [`derived/figures/street_width_sections_en.png`](derived/figures/street_width_sections_en.png) / [`_fr.png`](derived/figures/street_width_sections_fr.png) | Six cross-sections with the curbs found |
+| [`derived/figures/street_width_overhead_en.png`](derived/figures/street_width_overhead_en.png) / [`_fr.png`](derived/figures/street_width_overhead_fr.png) | Review figure: the LiDAR ground surface in the street frame (hillshade) with every curb detection and every dropped station, six panels |
+| [`derived/figures/street_width_west_end_en.png`](derived/figures/street_width_west_end_en.png) / [`_fr.png`](derived/figures/street_width_west_end_fr.png) | The first 200 m at the Loyola campus end, widths written every 20 m |
 | [`derived/width_profile.py`](derived/width_profile.py) | The analysis (needs the ground raster built by pdal for the 1954–55 work, outside the repository, and the sibling folder's `frame.py` and `mtm.py`) |
 | [`derived/build_docs.py`](derived/build_docs.py) | Builds the note and the deck from the outputs |
 
@@ -59,6 +61,10 @@ The ground raster is the mean elevation of ground-class LiDAR returns on a 0.25 
 | d'Oxford – Marcil | 30/39 | 11.0 | 10.7–11.61 | 20.1 | 4.31 | 4.81 |
 | Marcil – Old Orchard | 24/39 | 11.0 | 10.56–11.37 | 20.1 | 4.4 | 4.69 |
 | Old Orchard – Girouard | 22/40 | 11.35 | 10.8–12.6 | 20.1 | 4.57 | 4.42 |
+
+## The west end
+
+The public street ends where the lane ends, at the Loyola campus boundary (the géobase's last segment, 1320365, ends there; beyond it the roadway is the campus's). The last public block, west end to Belmore, reads 11.0 m curb to curb (19 of 30 stations), a 20.09 m right-of-way and sidewalk zones of 4.4 m north and 4.7 m south: the same section as the rest of the street. It is two-way with no parking on either side. The 2015 surface and the pre-2024 imagery cannot measure the 2024 bike lanes themselves; an 11.0 m roadway holds, for example, two 2.0 m lanes with 0.5 m buffers and two 3.0 m travel lanes (arithmetic, not the marking plan).
 
 ## Caveats
 

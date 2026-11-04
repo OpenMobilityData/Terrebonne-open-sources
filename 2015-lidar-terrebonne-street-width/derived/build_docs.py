@@ -33,6 +33,11 @@ The City\textquoteright{}s 2015 airborne LiDAR (six 1 km tiles, NAD83(CSRS)/MTM 
 
 \begin{center}\includegraphics[width=\textwidth]{figures/street_width_profile_en.png}\end{center}
 \begin{center}\includegraphics[width=\textwidth]{figures/street_width_sections_en.png}\end{center}
+\begin{center}\includegraphics[width=\textwidth]{figures/street_width_overhead_en.png}\end{center}
+\begin{center}\includegraphics[width=\textwidth]{figures/street_width_west_end_en.png}\end{center}
+
+\section*{The west end}
+The public street ends where the lane ends, at the Loyola campus boundary (the City géobase\textquoteright{}s last segment, 1320365, ends there; beyond it the roadway is the campus\textquoteright{}s). The last public block, west end to Belmore, reads 11.0 m curb to curb (19 of 30 stations kept), a 20.09 m right-of-way and sidewalk zones of 4.4 m north and 4.7 m south: the same section as the rest of the street. It is two-way with no parking on either side; the 2015 surface and the pre-2024 imagery cannot measure the 2024 bike lanes, but an 11.0 m roadway holds, for example, two 2.0 m lanes with 0.5 m buffers and two 3.0 m travel lanes (arithmetic, not the marking plan).
 
 \section*{By block}
 {\small\begin{longtable}{@{}lrrrrrr@{}}\toprule Block (west to east) & kept/stations & curb--curb median (m) & p10--p90 & right-of-way (m) & sidewalk N (m) & sidewalk S (m)\\ \midrule
@@ -67,6 +72,8 @@ deck = r'''\documentclass[aspectratio=169,11pt]{beamer}\usetheme{default}\usecol
 \end{itemize}\end{frame}
 \begin{frame}{The roadway is 11.0 m wide, along the whole street}\centering\includegraphics[width=\textwidth]{figures/street_width_profile_en.png}\end{frame}
 \begin{frame}{What a cross-section looks like}\centering\includegraphics[width=\textwidth]{figures/street_width_sections_en.png}\end{frame}
+\begin{frame}{Review: every curb detection on the LiDAR surface}\centering\includegraphics[height=0.86\textheight]{figures/street_width_overhead_en.png}\\{\tiny Hillshade of the ground surface in the street frame; red = north curb, blue = south curb; grey ticks on the axis = stations dropped (a parked car or a tree hid a curb, or the width fell outside 9--13 m).}\end{frame}
+\begin{frame}{The west end, where the public street meets the Loyola campus}\centering\includegraphics[width=\textwidth]{figures/street_width_west_end_en.png}\\{\small The last public block (west end to Belmore) reads 11.0 m curb to curb (19 of 30 stations), a 20.09 m right-of-way and 4.4--4.7 m sidewalk zones: the same section as the rest of the street. Beyond the lane\textquoteright{}s end the roadway is the campus\textquoteright{}s, not the City\textquoteright{}s (géobase). The 2015 surface and the pre-2024 imagery cannot measure the 2024 bike lanes themselves; a two-way block with no parking fits 11.0 m as, for example, 2.0 + 0.5 + 3.0 + 3.0 + 0.5 + 2.0 (arithmetic, not the plan).}\end{frame}
 \begin{frame}{The figures}\begin{itemize}
 \item Curb to curb: median \textbf{''' + f"{C['median']}" + r''' m} (p10 ''' + f"{C['p10']}" + r''', p90 ''' + f"{C['p90']}" + r'''); block medians ''' + f"{min(meds)}" + r'''--''' + f"{max(meds)}" + r''' m.
 \item Right-of-way ''' + f"{R['median']}" + r''' m everywhere but the Belmore stub and three lots: the 66-foot standard.

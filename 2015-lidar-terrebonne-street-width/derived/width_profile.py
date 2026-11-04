@@ -21,6 +21,14 @@ from shapely.strtree import STRtree
 HERE = os.path.dirname(os.path.abspath(__file__)); FIG = os.path.join(HERE, 'figures'); os.makedirs(FIG, exist_ok=True)
 G54 = os.path.join(os.path.dirname(os.path.dirname(HERE)), '1954-underwriters-plans-terrebonne-garages', 'derived'); sys.path.insert(0, G54)
 import frame as FR; from mtm import mtm8
+U_WEST = 0.0   # the public street ends where the lane ends (géobase segment 1320365 ends at the campus boundary); beyond it is the campus's private roadway
+def from_uv(u, v):
+    P, CUM = FR.P, FR.CUM
+    if u < 0: a, b = P[0], P[1]; i = 0
+    else:
+        i = max(0, min(len(P) - 2, next((k for k in range(len(CUM) - 1) if CUM[k + 1] >= u), len(P) - 2))); a, b = P[i], P[i + 1]
+    dx, dy = b[0] - a[0], b[1] - a[1]; L = math.hypot(dx, dy); tt = (u - CUM[i]) / L; ex, ey = dx / L, dy / L
+    return a[0] + tt * dx - v * ey, a[1] + tt * dy + v * ex
 LD = os.path.expanduser('~/Terrebonne-data/third-party/montreal-opendata/lidar-aerien-2015/derived/')
 STEP, VMAX, DV = 2.0, 16.0, 0.1
 MIN_HALF, MAX_HALF, STEP_Z, WIN = 3.0, 8.0, 0.07, 0.5   # the curb lies 3–8 m from the axis on a 20 m right-of-way
@@ -51,6 +59,7 @@ def nm(i):
     n = NODES[i][2].split('; ')[0].replace('Avenue ', '').replace('Boulevard ', '').replace('de ', '')
     return n if n else 'west end'
 def block_of(u):
+    if u < 0: return -1, 'stub west of the lane (to the campus entrance)'
     for i in range(len(CUM) - 1):
         if CUM[i] <= u < CUM[i + 1]: return i, f"{nm(i)} – {nm(i + 1)}"
     return len(CUM) - 2, f"{nm(len(CUM) - 2)} – {nm(len(CUM) - 1)}"
@@ -77,14 +86,14 @@ def curb(v, z, side):
 
 rows = []
 v = np.arange(-VMAX, VMAX + 1e-9, DV)
-for u in np.arange(0, FR.LENGTH + 1e-9, STEP):
-    E, N = zip(*[FR.from_uv(u, vv) for vv in v]); E, N = np.array(E), np.array(N)
+for u in np.arange(U_WEST, FR.LENGTH + 1e-9, STEP):
+    E, N = zip(*[from_uv(u, vv) for vv in v]); E, N = np.array(E), np.array(N)
     lon, lat = zip(*[FR.from_EN(e, n) for e, n in zip(E, N)])
     X, Y = zip(*[mtm8(lo, la) for lo, la in zip(lon, lat)]); X, Y = np.array(X), np.array(Y)
     z = sample(X, Y)
     cn, cs = curb(v, z, +1), curb(v, z, -1)
     # right-of-way: nearest parcel on each side along the section line
-    E0, N0 = FR.from_uv(u, 0.0); line = LineString([FR.from_uv(u, -VMAX - 4), FR.from_uv(u, VMAX + 4)])
+    E0, N0 = from_uv(u, 0.0); line = LineString([from_uv(u, -VMAX - 4), from_uv(u, VMAX + 4)])
     rn = rs = None
     for j in tree.query(line, predicate='intersects'):
         inter = polys[j].intersection(line)
@@ -114,7 +123,7 @@ bl = []
 for (i, name), rs_ in sorted(blocks.items()):
     kept = [r for r in rs_ if r['kept']]
     sc = stats([r['width_curb_to_curb'] for r in kept]); sr = stats([r['right_of_way'] for r in rs_]); sn = stats([r['sidewalk_N'] for r in kept]); ss = stats([r['sidewalk_S'] for r in kept])
-    bl.append(dict(block_index=i, block=name, u_start=round(CUM[i], 1), u_end=round(CUM[i + 1] if i + 1 < len(CUM) else FR.LENGTH, 1), stations=len(rs_), stations_with_both_curbs=len(kept),
+    bl.append(dict(block_index=i, block=name, u_start=round(CUM[i] if i >= 0 else U_WEST, 1), u_end=round((CUM[i + 1] if i + 1 < len(CUM) else FR.LENGTH) if i >= 0 else 0.0, 1), stations=len(rs_), stations_with_both_curbs=len(kept),
                    curb_median=sc.get('median'), curb_p10=sc.get('p10'), curb_p90=sc.get('p90'), curb_min=sc.get('min'), curb_max=sc.get('max'),
                    row_median=sr.get('median'), row_p10=sr.get('p10'), row_p90=sr.get('p90'), sidewalk_N_median=sn.get('median'), sidewalk_S_median=ss.get('median')))
 with open(os.path.join(HERE, 'street_width_by_block.csv'), 'w', newline='', encoding='utf-8') as f:
@@ -144,7 +153,7 @@ for lang, L in LAB.items():
     a1.scatter(us, ws, s=7, color='#1f77b4', alpha=0.6, label=L['l_pts'], zorder=3)
     for b in bl:
         if b['curb_median'] is not None: a1.hlines(b['curb_median'], b['u_start'], b['u_end'], color='#d62728', lw=2.2, zorder=4)
-    a1.hlines(10.8, 0, FR.LENGTH, color='0.3', ls='--', lw=1, label=L['l_plan'])
+    a1.hlines(10.8, U_WEST, FR.LENGTH, color='0.3', ls='--', lw=1, label=L['l_plan']); a1.axvline(0, color='0.3', lw=1)
     a1.plot([], [], color='#d62728', lw=2.2, label=L['l_med'])
     for i, c in enumerate(CUM): a1.axvline(c, color='0.85', lw=0.7, zorder=1); a2.axvline(c, color='0.85', lw=0.7, zorder=1)
     for i in range(len(CUM)):
@@ -154,7 +163,7 @@ for lang, L in LAB.items():
     a2.plot(ur, rw, color='0.2', lw=1, label=L['l_row'])
     a2.plot([r['u'] for r in kept if r['sidewalk_N'] is not None], [r['sidewalk_N'] for r in kept if r['sidewalk_N'] is not None], '.', ms=3, color='#ff7f0e', label=L['l_sn'])
     a2.plot([r['u'] for r in kept if r['sidewalk_S'] is not None], [r['sidewalk_S'] for r in kept if r['sidewalk_S'] is not None], '.', ms=3, color='#2ca02c', label=L['l_ss'])
-    a2.set_ylim(0, 24); a2.set_ylabel(L['y2']); a2.set_xlabel(L['x']); a2.legend(loc='center right', fontsize=8); a2.set_xlim(0, FR.LENGTH)
+    a2.set_ylim(0, 24); a2.set_ylabel(L['y2']); a2.set_xlabel(L['x']); a2.legend(loc='center right', fontsize=8); a2.set_xlim(U_WEST, FR.LENGTH)
     fig.text(0.01, 0.005, L['src'], fontsize=7, color='0.35'); fig.tight_layout(rect=(0, 0.02, 1, 1))
     fig.savefig(os.path.join(FIG, f'street_width_profile_{lang}.png')); plt.close(fig)
     # cross-sections
@@ -162,7 +171,7 @@ for lang, L in LAB.items():
     fig, axes = plt.subplots(2, 3, figsize=(16, 7.5), dpi=150); axes = axes.ravel()
     for ax, f in zip(axes, picks):
         r = min(kept, key=lambda q: abs(q['u'] - f * FR.LENGTH)); u = r['u']
-        E, N = zip(*[FR.from_uv(u, vv) for vv in v]); lon, lat = zip(*[FR.from_EN(e, n) for e, n in zip(E, N)])
+        E, N = zip(*[from_uv(u, vv) for vv in v]); lon, lat = zip(*[FR.from_EN(e, n) for e, n in zip(E, N)])
         X, Y = zip(*[mtm8(lo, la) for lo, la in zip(lon, lat)]); z = sample(np.array(X), np.array(Y)); z0 = np.nanmedian(z[(v > -1) & (v < 1)])
         ax.plot(v, z - z0, color='#1f77b4', lw=1.2); ax.axvline(r['curb_N'], color='#d62728', ls='--', lw=1); ax.axvline(-r['curb_S'], color='#d62728', ls='--', lw=1)
         if r['row_N']: ax.axvline(r['row_N'], color='0.5', ls=':', lw=1)
@@ -171,3 +180,51 @@ for lang, L in LAB.items():
         ax.set_xlabel(L['xs'], fontsize=8); ax.set_ylabel(L['ys'], fontsize=8)
     fig.suptitle(L['t2'], fontsize=12); fig.tight_layout(rect=(0, 0, 1, 0.96)); fig.savefig(os.path.join(FIG, f'street_width_sections_{lang}.png')); plt.close(fig)
 print('figures written')
+
+# ---------- overhead review figure: the ground surface (hillshade) in the street frame with every curb detection
+def hill(z, dx=0.25):
+    zz = np.where(np.isnan(z), np.nanmedian(z), z); gy, gx = np.gradient(zz, dx); slope = np.arctan(np.hypot(gx, gy)); asp = np.arctan2(-gx, gy)
+    a, b = math.radians(315), math.radians(40)
+    return np.clip(math.sin(b) * np.cos(slope) + math.cos(b) * np.sin(slope) * np.cos(a - asp), 0, 1)
+def strip(u0, u1, vmax=10.0, du=0.25):
+    uu = np.arange(u0, u1, du); vv = np.arange(-vmax, vmax, du)
+    E = np.empty((len(vv), len(uu))); N = np.empty_like(E)
+    for j, u in enumerate(uu):
+        for i, v_ in enumerate(vv): E[i, j], N[i, j] = from_uv(u, v_)
+    lon, lat = np.vectorize(FR.from_EN)(E, N); X, Y = np.vectorize(mtm8)(lon, lat)
+    return uu, vv, sample(X, Y)
+OV = {'en': dict(t='Review figure: the LiDAR ground surface in the street frame (hillshade, 0.25 m) with every curb detection; red = north curb, blue = south curb, grey ticks on the axis = station dropped (no ground under a parked car or a tree, or a width outside 9–13 m)', x='distance along the lane (m)', y='offset (m; north up)'),
+      'fr': dict(t='Figure de contrôle : la surface du sol LiDAR dans le repère de la rue (ombrage, 0,25 m) avec chaque bordure détectée ; rouge = bordure nord, bleu = bordure sud, traits gris sur l\'axe = station rejetée (pas de sol sous une voiture stationnée ou un arbre, ou largeur hors 9–13 m)', x='distance le long de la piste (m)', y='décalage (m ; nord en haut)')}
+PANELS = [(0, 440), (440, 880), (880, 1320), (1320, 1760), (1760, 2200), (2200, FR.LENGTH)]
+strips = [strip(a, b) for a, b in PANELS]
+for lang, L in OV.items():
+    fig, axes = plt.subplots(len(PANELS), 1, figsize=(18, 2.3 * len(PANELS)), dpi=130)
+    for ax, (a, b), (uu, vv, z) in zip(axes, PANELS, strips):
+        ax.imshow(hill(z), cmap='gray', extent=(uu[0], uu[-1], vv[0], vv[-1]), origin='lower', aspect='equal', vmin=0.2, vmax=1.0)
+        kp = [r for r in rows if a <= r['u'] < b]
+        ax.plot([r['u'] for r in kp if r['kept']], [r['curb_N'] for r in kp if r['kept']], '.', ms=4, color='#d62728')
+        ax.plot([r['u'] for r in kp if r['kept']], [-r['curb_S'] for r in kp if r['kept']], '.', ms=4, color='#1f77b4')
+        ax.plot([r['u'] for r in kp if not r['kept']], [0] * sum(1 for r in kp if not r['kept']), '|', ms=6, color='0.6')
+        for i, c in enumerate(CUM):
+            if a <= c < b: ax.axvline(c, color='#ff7f0e', lw=0.6); ax.text(c, 9.0, nm(i), fontsize=6.5, color='#ff7f0e', ha='center', va='top')
+        if a <= 0 < b: ax.axvline(0, color='#ff7f0e', lw=0.6); ax.text(0, 9.0, 'west end of the lane' if lang == 'en' else 'extrémité ouest de la piste', fontsize=6.5, color='#ff7f0e', ha='center', va='top')
+        ax.set_xlim(a, b); ax.set_ylim(-10, 10); ax.set_ylabel(L['y'], fontsize=8); ax.tick_params(labelsize=7)
+    axes[-1].set_xlabel(L['x'], fontsize=8); fig.suptitle(L['t'], fontsize=9.5, y=0.995); fig.tight_layout(rect=(0, 0, 1, 0.985))
+    fig.savefig(os.path.join(FIG, f'street_width_overhead_{lang}.png')); plt.close(fig)
+# close-up of the west end (the stub and the first blocks)
+uu, vv, z = strip(0, 200, vmax=12.0, du=0.25)
+for lang, L in OV.items():
+    fig, ax = plt.subplots(figsize=(18, 5), dpi=150)
+    ax.imshow(hill(z), cmap='gray', extent=(uu[0], uu[-1], vv[0], vv[-1]), origin='lower', aspect='equal', vmin=0.2, vmax=1.0)
+    kp = [r for r in rows if 0 <= r['u'] < 200]
+    ax.plot([r['u'] for r in kp if r['kept']], [r['curb_N'] for r in kp if r['kept']], 'o', ms=4, color='#d62728'); ax.plot([r['u'] for r in kp if r['kept']], [-r['curb_S'] for r in kp if r['kept']], 'o', ms=4, color='#1f77b4')
+    for r in kp:
+        if r['kept'] and int(r['u']) % 20 == 0: ax.text(r['u'], 11.2, f"{r['width_curb_to_curb']:.1f}", fontsize=6.5, ha='center', color='0.1')
+    ax.plot([r['u'] for r in kp if not r['kept']], [0] * sum(1 for r in kp if not r['kept']), '|', ms=8, color='0.6')
+    for i, c in enumerate(CUM):
+        if 0 < c < 200: ax.axvline(c, color='#ff7f0e', lw=0.8); ax.text(c, -11.2, nm(i), fontsize=7.5, color='#ff7f0e', ha='center', va='top')
+    ax.axvline(0, color='#ff7f0e', lw=0.8); ax.text(0, -11.2, 'west end of the lane' if lang == 'en' else 'extrémité ouest de la piste', fontsize=7.5, color='#ff7f0e', ha='center', va='top')
+    ax.set_xlim(0, 200); ax.set_ylim(-12, 12); ax.set_xlabel(L['x']); ax.set_ylabel(L['y'])
+    ax.set_title(('The west end (the public street ends at the Loyola campus boundary): the first 200 m, curb-to-curb width written every 20 m' if lang == 'en' else 'L\'extrémité ouest : le tronçon vers l\'entrée du campus Loyola et les premiers tronçons ; largeur de bordure à bordure inscrite aux 20 m'), fontsize=10)
+    fig.tight_layout(); fig.savefig(os.path.join(FIG, f'street_width_west_end_{lang}.png')); plt.close(fig)
+print('overhead figures written')
