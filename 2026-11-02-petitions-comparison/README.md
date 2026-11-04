@@ -1,0 +1,25 @@
+# Two petitions on the Terrebonne bike lane, what is on record (as of November 2, 2026): the comparison sheet and the per-capita map on shared cells
+
+**Issued by:** the author of these repositories (see the root README, « About the author »), from two records: the 2024 petitions against the 2024 project as released by the borough under access request 2025-081 (Terrebonne-access-requests, `2025-081/`), and the 2026 petition « Gardons la piste Terrebonne toute l'année pour la sécurité de nos enfants » of the Association des piétons et cyclistes de NDG, as handed over to the borough council at its sitting of November 2, 2026, counted from its Action Network export of November 2, 2026, 12:00 (Montréal time) and its paper sheets.
+
+**Dates:** figures as of November 2, 2026 (the hand-over); sheet first built November 2, 2026 (private version), public version with the map built November 4, 2026.
+
+**What is public and what is not:** the 2024 petition's released scan and every derived table are public in Terrebonne-access-requests. The 2026 petition's signer list (names, e-mails, addresses) is not public; the sheet reads only the aggregate counts the pipeline writes from it (the same counts as the cover letter filed with the clerk), and the map shows merged cells of at least 5 signers of each petition and at least 300 residents, so no cell identifies anyone.
+
+| File | Content |
+|---|---|
+| [`derived/petitions_comparison_2026-11-02.pdf`](derived/petitions_comparison_2026-11-02.pdf) | Two pages: [p. 1](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-11-02-petitions-comparison/derived/petitions_comparison_2026-11-02.pdf#page=1) the comparison table (object, filing, source of the figures, days run, claimed counts, lines on file, repeats, location, districts, distance bands, the one-block corridor); [p. 2](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-11-02-petitions-comparison/derived/petitions_comparison_2026-11-02.pdf#page=2) the two petitions by signers per 1,000 residents on one set of cells |
+| [`derived/figures/maps/petition_compare_2024_2026_percapita_2026-11-02.png`](derived/figures/maps/petition_compare_2024_2026_percapita_2026-11-02.png) | The map of page 2 as a standalone image |
+| [`derived/petitions_shared_cells_2026-11-02.csv`](derived/petitions_shared_cells_2026-11-02.csv) | The 43 shared cells: signers of each petition, postal codes in the cell, area, estimated 2021 population, signers per 1,000 residents for each petition, the codes merged |
+| [`derived/build.py`](derived/build.py) | Builds the PDF from the public 2025-081 tables and the 2026 aggregate counts; copies the map, the cell table and the map script |
+| [`derived/map_script_copy.py`](derived/map_script_copy.py) | Copy of the map script (`scripts/petition_2026_map_merged.py` in the private repository); it needs the DMTI CanMap polygon cache and the signer list, so it does not run from this folder; kept for the method |
+
+## The map's rule (page 2)
+
+Six-character postal codes are merged into one set of cells shared by both petitions. Starting from the postal-code polygons inside the borough, codes with no signers join the nearest code with signers; then, taking the cell that fails a threshold with the fewest signers, the cell is merged with the touching cell that brings it to at least 5 signers of the 2024 petition, at least 5 signers of the 2026 petition and at least 300 residents with the least added area, until every cell meets all three; an island polygon with no touching neighbour is attached to the nearest cell. Residents are the Census 2021 populations of the dissemination areas apportioned to the postal-code polygons by area and summed by the merge, an estimate. The fill is signers per 1,000 residents, on the same scale in both panels; the label is the signer count; cells too narrow to hold a label are unlabelled. Signatures whose postal code has no polygon or lies outside the borough are attached to the nearest borough polygon when their point is inside the borough, and left out otherwise.
+
+Two totals differ by construction and both appear in the folder: the sheet's « live in CDN-NDG » for 2024 is 906 (the postal code's point inside the 2025 district polygons, as in the 2025-081 tables); the map's 2024 panel counts 921 (the postal-code polygon's representative point inside the borough, plus orphan codes attached to the nearest polygon). The 2026 figures are 1,128 and 1,047 for the same two reasons (the sheet also places paper signers by street address; the map uses postal codes only).
+
+## Third-party sources (named, not redistributed)
+
+Postal-code boundaries: DMTI Spatial Inc., CanMap Postal Code Suite v2024.3 (licensed to the author; maps drawn from it may be published with DMTI Spatial credited). Postal-code points: Service Objects, March 2024. Districts 2025 and the lane: Ville de Montréal open data (CC-BY). Population: Statistics Canada, Census of Population 2021, dissemination areas (Statistics Canada Open Licence).
