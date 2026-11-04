@@ -27,6 +27,7 @@ The City\textquoteright{}s 2015 airborne LiDAR (six 1 km tiles, NAD83(CSRS)/MTM 
 \begin{itemize}
 \item Curb to curb: median ''' + f"{C['median']}" + r''' m over the ''' + f"{C['n']}" + r''' stations kept; 10\,\% of stations read under ''' + f"{C['p10']}" + r''' m and 10\,\% over ''' + f"{C['p90']}" + r''' m (the high tail is aprons taken for curbs). The block medians run from ''' + f"{min(meds)}" + r''' to ''' + f"{max(meds)}" + r''' m: the roadway is the same width along the whole lane, within a few decimetres.
 \item Right-of-way: ''' + f"{R['median']}" + r''' m at every block but the Belmore stub and three lots (the 66-foot standard, 20.12 m); sidewalk zones about ''' + f"{S['sidewalk_N']['median']}" + r''' m on the north side and ''' + f"{S['sidewalk_S']['median']}" + r''' m on the south side (parcel line to curb, including the grass strip).
+\item EXP\textquoteright{}s own statement of the existing section (report p.~50, PDF p.~61): « L\textquoteright{}emprise fonctionnelle actuelle de la rue de Terrebonne est d\textquoteright{}environ 14,6 m, soit une chaussée d\textquoteright{}environ 11 m et deux trottoirs d\textquoteright{}environ 1,8 m. » The LiDAR\textquoteright{}s 11.0 m is EXP\textquoteright{}s « environ 11 m »; EXP\textquoteright{}s 14.6 m is roadway plus paved sidewalks, not the 20.1 m right-of-way, the difference being the grass strips.
 \item Against the 2023 drawing: 10.8 m of lanes and parking in an 11.0 m roadway. The winter layout fits with about 0.2 m to spare across the street. A shared lane wider than 3.5 m would have to come from the parking bands (2.4 m), the buffer (0.5 m) or the contraflow lane (2.0 m).
 \item Before 2024 the street was two-way with parking on both sides; two 3.3 m lanes (EXP 2023) and two parking bands of 2.2 m make the same 11.0 m.
 \end{itemize}
@@ -78,6 +79,7 @@ deck = r'''\documentclass[aspectratio=169,11pt]{beamer}\usetheme{default}\usecol
 \item Curb to curb: median \textbf{''' + f"{C['median']}" + r''' m} (p10 ''' + f"{C['p10']}" + r''', p90 ''' + f"{C['p90']}" + r'''); block medians ''' + f"{min(meds)}" + r'''--''' + f"{max(meds)}" + r''' m.
 \item Right-of-way ''' + f"{R['median']}" + r''' m everywhere but the Belmore stub and three lots: the 66-foot standard.
 \item Sidewalk zones, parcel line to curb: ''' + f"{S['sidewalk_N']['median']}" + r''' m north, ''' + f"{S['sidewalk_S']['median']}" + r''' m south.
+\item EXP 2023 itself (p.~50): « une chaussée d\textquoteright{}environ 11 m et deux trottoirs d\textquoteright{}environ 1,8 m », 14.6 m in all: the LiDAR reconciles with the study\textquoteright{}s own measure.
 \item Before 2024: two 3.3 m lanes and two 2.2 m parking bands = 11.0 m. Winter layout: 10.8 m of the 11.0 m.
 \end{itemize}\end{frame}
 \begin{frame}{What it means for the shared lane}\begin{itemize}

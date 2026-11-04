@@ -28,6 +28,7 @@ The ground raster is the mean elevation of ground-class LiDAR returns on a 0.25 
 
 - Curb to curb: median 11.0 m over the 759 stations kept; p10 10.7 m, p90 12.4 m (the high tail is aprons taken for curbs). Block medians from 10.8 to 11.35 m.
 - Right-of-way: 20.09 m at every block but the Belmore stub and three lots (the 66-foot standard, 20.12 m). Sidewalk zones, parcel line to curb: 4.4 m north, 4.73 m south.
+- Against EXP's own statement of the existing section ([report p. 50, PDF p. 61](https://openmobilitydata.github.io/Terrebonne-open-sources/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf#page=61)): « L'emprise fonctionnelle actuelle de la rue de Terrebonne est d'environ 14,6 m, soit une chaussée d'environ 11 m et deux trottoirs d'environ 1,8 m. » The LiDAR's 11.0 m curb to curb is EXP's « environ 11 m »; EXP's 14.6 m « emprise fonctionnelle » is the roadway plus the two paved sidewalks, not the 20.1 m right-of-way, whose difference (about 2.7 m a side) is the grass strip between sidewalk and curb, which the LiDAR's sidewalk zones (4.4 and 4.7 m from parcel line to curb) include.
 - Against the 2023 drawing: 10.8 m of lanes and parking in an 11.0 m roadway, about 0.2 m to spare across the street. Before 2024, two 3.3 m lanes (EXP 2023) and two parking bands of 2.2 m make the same 11.0 m.
 
 | Block (west to east) | kept/stations | curb–curb median (m) | p10–p90 | right-of-way (m) | sidewalk N (m) | sidewalk S (m) |
