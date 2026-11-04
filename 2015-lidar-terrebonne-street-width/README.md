@@ -9,7 +9,7 @@
 | File | Content |
 |---|---|
 | [`derived/terrebonne_street_width_note_en.pdf`](derived/terrebonne_street_width_note_en.pdf) | The note (3 pp.): question, data and method, results, the table by block, caveats |
-| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (10 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, figures, what it means, caveats |
+| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (14 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, EXP's 2023, built and winter sections with a comparison table, figures, what it means, caveats |
 | [`derived/street_width_profile.csv`](derived/street_width_profile.csv) | Every station (every 2 m, 1207 stations): position, block, curb offsets north and south, curb-to-curb width, kept flag, right-of-way and sidewalk zones |
 | [`derived/street_width_by_block.csv`](derived/street_width_by_block.csv) | Per block: stations kept, curb-to-curb median, p10, p90, min, max; right-of-way; sidewalk zones |
 | [`derived/summary.json`](derived/summary.json) | The totals and the detector's parameters |
@@ -17,6 +17,7 @@
 | [`derived/figures/street_width_sections_en.png`](derived/figures/street_width_sections_en.png) / [`_fr.png`](derived/figures/street_width_sections_fr.png) | Six cross-sections with the curbs found |
 | [`derived/figures/street_width_overhead_en.png`](derived/figures/street_width_overhead_en.png) / [`_fr.png`](derived/figures/street_width_overhead_fr.png) | Review figure: the LiDAR ground surface in the street frame (hillshade) with every curb detection and every dropped station, six panels |
 | [`derived/figures/street_width_west_end_en.png`](derived/figures/street_width_west_end_en.png) / [`_fr.png`](derived/figures/street_width_west_end_fr.png) | The first 200 m at the Loyola campus end, widths written every 20 m |
+| [`raw/exp2023_fig3-1_configuration_2023.png`](raw/exp2023_fig3-1_configuration_2023.png), [`raw/exp2023_fig6-6_amenagement_A.png`](raw/exp2023_fig6-6_amenagement_A.png), [`raw/exp2023_fig6-7_amenagement_B.png`](raw/exp2023_fig6-7_amenagement_B.png), [`raw/exp2023_fig6-8_amenagement_C.png`](raw/exp2023_fig6-8_amenagement_C.png) | EXP 2023's cross-sections, cropped from the published study (report pp. 25 and 72; PDF pp. 36 and 83): the 2023 street (2.2 + 3.3 + 3.3 + 2.2 = 11.0 m), Aménagement B as built (10.8 m), A (the winter layout's type, 10.8 m), C (10.8 m) |
 | [`derived/width_profile.py`](derived/width_profile.py) | The analysis (needs the ground raster built by pdal for the 1954–55 work, outside the repository, and the sibling folder's `frame.py` and `mtm.py`) |
 | [`derived/build_docs.py`](derived/build_docs.py) | Builds the note and the deck from the outputs |
 
@@ -28,6 +29,7 @@ The ground raster is the mean elevation of ground-class LiDAR returns on a 0.25 
 
 - Curb to curb: median 11.0 m over the 759 stations kept; p10 10.7 m, p90 12.4 m (the high tail is aprons taken for curbs). Block medians from 10.8 to 11.35 m.
 - Right-of-way: 20.09 m at every block but the Belmore stub and three lots (the 66-foot standard, 20.12 m). Sidewalk zones, parcel line to curb: 4.4 m north, 4.73 m south.
+- EXP's Figure 3-1 (report p. 25) draws the 2023 street as 1.8 + 2.2 + 3.3 + 3.3 + 2.2 + 1.8 m: 11.0 m curb to curb, the LiDAR's figure; Aménagement B as built (Fig. 6-7) and A, the winter layout's type (Fig. 6-6), both use 10.8 m of it.
 - Against EXP's own statement of the existing section ([report p. 50, PDF p. 61](https://openmobilitydata.github.io/Terrebonne-open-sources/2023-exp-mobility-study/raw/EXP_Etude_de_mobilite_rue_de_Terrebonne_2023.pdf#page=61)): « L'emprise fonctionnelle actuelle de la rue de Terrebonne est d'environ 14,6 m, soit une chaussée d'environ 11 m et deux trottoirs d'environ 1,8 m. » The LiDAR's 11.0 m curb to curb is EXP's « environ 11 m »; EXP's 14.6 m « emprise fonctionnelle » is the roadway plus the two paved sidewalks, not the 20.1 m right-of-way, whose difference (about 2.7 m a side) is the grass strip between sidewalk and curb, which the LiDAR's sidewalk zones (4.4 and 4.7 m from parcel line to curb) include.
 - Against the 2023 drawing: 10.8 m of lanes and parking in an 11.0 m roadway, about 0.2 m to spare across the street. Before 2024, two 3.3 m lanes (EXP 2023) and two parking bands of 2.2 m make the same 11.0 m.
 
