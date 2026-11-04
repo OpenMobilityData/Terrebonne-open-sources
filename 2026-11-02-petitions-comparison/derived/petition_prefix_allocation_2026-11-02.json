@@ -1,0 +1,61 @@
+{
+ "2024 handwritten": {
+  "entries": 890,
+  "located": 869,
+  "prefix_only": 18,
+  "unusable": 3,
+  "no_reference": 5,
+  "located_in_borough": 830,
+  "located_in_corridor_one_block_rule": 640,
+  "allocated_in_borough": 10.6,
+  "allocated_in_corridor": 7.4
+ },
+ "2024 online": {
+  "entries": 304,
+  "located": 106,
+  "prefix_only": 194,
+  "unusable": 4,
+  "no_reference": 41,
+  "located_in_borough": 76,
+  "located_in_corridor_one_block_rule": 49,
+  "allocated_in_borough": 130.6,
+  "allocated_in_corridor": 74.7
+ },
+ "2026 all": {
+  "entries": 1490,
+  "located": 1465,
+  "prefix_only": 15,
+  "unusable": 10,
+  "no_reference": 2,
+  "located_in_borough": 1128,
+  "located_in_corridor_one_block_rule": 464,
+  "allocated_in_borough": 5.0,
+  "allocated_in_corridor": 1.1
+ },
+ "2024": {
+  "entries": 1194,
+  "located": 975,
+  "prefix_only": 212,
+  "unusable": 7,
+  "no_reference": 46,
+  "located_in_borough": 906,
+  "located_in_corridor_one_block_rule": 689,
+  "allocated_in_borough": 141.2,
+  "allocated_in_corridor": 82.1,
+  "expected_in_borough": 1047,
+  "expected_in_corridor": 771
+ },
+ "2026": {
+  "entries": 1490,
+  "located": 1465,
+  "prefix_only": 15,
+  "unusable": 10,
+  "no_reference": 2,
+  "located_in_borough": 1128,
+  "located_in_corridor_one_block_rule": 464,
+  "allocated_in_borough": 5.0,
+  "allocated_in_corridor": 1.1,
+  "expected_in_borough": 1133,
+  "expected_in_corridor": 465
+ }
+}
