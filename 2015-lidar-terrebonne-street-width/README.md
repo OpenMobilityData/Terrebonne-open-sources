@@ -9,7 +9,7 @@
 | File | Content |
 |---|---|
 | [`derived/terrebonne_street_width_note_en.pdf`](derived/terrebonne_street_width_note_en.pdf) | The note: question, data and method, results, EXP's sections, the cross streets (figures and table by street), the table by block, caveats |
-| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (19 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, EXP's 2023, built and winter sections with a comparison table, the cross streets (five slides), figures, what it means, caveats |
+| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (20 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, EXP's 2023, built and winter sections with a comparison table, the cross streets (six slides, incl. the picture), figures, what it means, caveats |
 | [`derived/street_width_profile.csv`](derived/street_width_profile.csv) | Every station (every 2 m, 1207 stations): position, block, curb offsets north and south, curb-to-curb width, kept flag, right-of-way and sidewalk zones |
 | [`derived/street_width_by_block.csv`](derived/street_width_by_block.csv) | Per block: stations kept, curb-to-curb median, p10, p90, min, max; right-of-way; sidewalk zones |
 | [`derived/summary.json`](derived/summary.json) | The totals and the detector's parameters |
@@ -26,6 +26,9 @@
 | [`derived/figures/cross_street_widths_hist_en.png`](derived/figures/cross_street_widths_hist_en.png) / [`_fr.png`](derived/figures/cross_street_widths_hist_fr.png) | Every station kept: the local cross streets against Terrebonne |
 | [`derived/figures/cross_street_widths_review_en.png`](derived/figures/cross_street_widths_review_en.png) / [`_fr.png`](derived/figures/cross_street_widths_review_fr.png) | Review figure: the ground surface along every block with every curb detection |
 | [`derived/cross_street_widths.py`](derived/cross_street_widths.py) | The cross-street analysis (same raster and detector; the géobase for the cross streets' axes; the sign inventory) |
+| [`derived/figures/cross_street_boxes_en.png`](derived/figures/cross_street_boxes_en.png) / [`_fr.png`](derived/figures/cross_street_boxes_fr.png) | The comparison in one picture: Terrebonne and Kensington from above, three widths drawn to scale (Terrebonne curb to curb; the 8.5 m beside the contraflow lane and its buffer; Kensington curb to curb), the Terrebonne boxes repeated on Kensington |
+| [`derived/cross_street_boxes.py`](derived/cross_street_boxes.py) | Draws that picture for any cross street (`--street`), on the Gouvernement du Québec's aerial imagery (Imagerie_GQ, fetched at run time, kept outside the repository) or the LiDAR hillshade |
+| [`derived/cross_street_boxes_kensington.json`](derived/cross_street_boxes_kensington.json) | The widths drawn |
 | [`derived/build_docs.py`](derived/build_docs.py) | Builds the note and the deck from the outputs of both scripts |
 
 ## Method
@@ -122,6 +125,12 @@ Most frequent reading / median (m) and stations kept, first block north and sout
 | Marcil | one-way | 9.4 / 9.4 (90) | 3+6 (0) | 9.1 / 9.4 (76) | 10+6 (0) |
 | Old Orchard | one-way | 9.1 / 9.3 (65) | 5+7 (2) | 9.1 / 9.3 (71) | 9+8 (2) |
 | Girouard | two-way | 13.9 / 13.9 (30) | 4+2 (2) | – (3) | 0+0 (0) |
+
+**The comparison in one picture.** Terrebonne and Kensington from above, three widths to scale: Terrebonne from curb to curb (the block medians, 11.1 and 10.9 m), the 8.5 m that remain beside the contraflow lane and its buffer (2.5 m), where the December layout puts parking, the shared lane and parking, and Kensington from curb to curb (9.3 m, both blocks). The two Terrebonne boxes are repeated on Kensington: the 11 m box overshoots its curbs, the 8.5 m box leaves room to spare.
+
+![Terrebonne and Kensington: three widths to scale](derived/figures/cross_street_boxes_en.png)
+
+**What the cross streets show.** Riding on them is accepted practice: short blocks, used by drivers and cyclists to reach an address and, by cyclists, to move between the longer streets that carry bike lanes. In the best case for a passing driver (the cyclist against the parked cars, one metre of clearance), a shared lane of 4.2 to 4.6 m leaves 2.5 to 2.9 m for the car; with the cyclist 0.5 m from the doors, 2.0 to 2.4 m. The winter layout's 3.5 m leaves 1.75 m and 1.25 m. The lane the winter layout draws for Terrebonne is therefore tighter than the shared lane of 45 of the 46 local cross-street blocks measured, and it is meant for the length of the street, in winter, where the cross streets serve a block or two. (The author, who cycles them, finds a pass with the Code's metre marginal on them in summer.)
 
 **Caveats, for this part.** The cross streets' parking bands are not marked: cars park at the curb, and a parked car takes 2.0 to 2.2 m with its mirrors, so the 2.4 m band is the drawing's figure applied for comparison. Snow windrows narrow Terrebonne and its cross streets alike. Only the first block on each side is measured. The sign counts are an indicator of the parking regime, not a reading of the regulations.
 

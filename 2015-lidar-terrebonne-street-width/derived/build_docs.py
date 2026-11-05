@@ -26,6 +26,20 @@ max_tt = max(max(int(b['no_parking_any_time_poles_L']), int(b['no_parking_any_ti
 no_sign_blocks = [b for b in XL if int(b['sign_poles_L']) == 0 or int(b['sign_poles_R']) == 0]
 TS = X['terrebonne_stations']; W = X['winter_shared_without_contraflow']; T = X['terrebonne']
 sh_lo, sh_hi = round(lo - 4.8, 1), round(hi - 4.8, 1); d_lo, d_hi = round(sh_lo - 3.5, 1), round(sh_hi - 3.5, 1); t_lo, t_hi = round(T - hi, 1), round(T - lo, 1)
+best_lo, best_hi = round(sh_lo - 1.75, 1), round(sh_hi - 1.75, 1); door_lo, door_hi = round(sh_lo - 2.25, 1), round(sh_hi - 2.25, 1)   # the car's room: cyclist 0.75 m + 1 m clearance; + 0.5 m from the doors
+XBX = json.load(open(os.path.join(HERE, 'cross_street_boxes_kensington.json'))); n_better = sum(1 for b in loc if fl(b['curb_mode']) - 4.8 > 3.5)
+ARG = "Due to the width of the roads and the allocation of 2.5 metres to the bike lane and buffer zone, the shared lane along Terrebonne will be around a metre narrower than the lanes shared by drivers and cyclists on the smaller side streets intersecting with Terrebonne."
+NOTE_PIC = (r"""\textbf{The comparison in one picture.} Figure~\ref{fig:boxes} draws the three widths to scale on the aerial imagery of Terrebonne and Kensington: Terrebonne from curb to curb (the block medians, """ + f"{XBX['drawn']['terrebonne_west']:.1f} and {XBX['drawn']['terrebonne_east']:.1f} m), the {XBX['residual']:.1f} m that remain beside the contraflow lane and its buffer ({XBX['contraflow_plus_buffer']:.1f} m), where the December layout puts parking, the shared lane and parking, and Kensington from curb to curb ({XBX['drawn']['cross'][0]:.1f} m, both blocks). The two Terrebonne boxes are repeated on Kensington: the 11 m box overshoots its curbs, the {XBX['residual']:.1f} m box leaves room to spare." + r"""
+\begin{figure}[h]\centering\includegraphics[height=0.6\textheight]{figures/cross_street_boxes_en.png}\caption{Rue de Terrebonne and avenue Kensington, the three widths to scale (aerial imagery: Gouvernement du Québec, Imagerie\_GQ, before the 2024 lane; curbs and widths: City LiDAR 2015).}\label{fig:boxes}\end{figure}
+
+\textbf{What the cross streets show.} In one sentence: """ + esc(ARG) + r""" Riding on the cross streets is accepted practice: they are short blocks, used by drivers and cyclists to reach an address and, by cyclists, to move between the longer streets that carry bike lanes. The author, who cycles them, finds a pass with the Code\textquoteright{}s metre marginal on them in summer; the arithmetic agrees. In the best case for a passing driver, the cyclist against the parked cars and one metre of clearance, a shared lane of """ + f"{sh_lo:.1f} to {sh_hi:.1f} m leaves {best_lo:.1f} to {best_hi:.1f} m for the car; with the cyclist 0.5 m from the doors, {door_lo:.1f} to {door_hi:.1f} m. The winter layout" + r"""\textquoteright{}s 3.5 m leaves 1.75 m and 1.25 m. The lane the winter layout draws for Terrebonne is therefore tighter than the shared lane of """ + f"{n_better} of the {len(loc)} local cross-street blocks measured, and it is meant for the length of the street, in winter, where the cross streets serve a block or two." + r"""
+
+""")
+DECK_PIC = (r"""\begin{frame}{The comparison in one picture: Terrebonne and Kensington}\centering\includegraphics[height=0.9\textheight]{figures/cross_street_boxes_en.png}\end{frame}
+""")
+DECK_ARG = (r"""\item """ + esc(ARG) + r"""
+\item A pass on a cross street leaves the car """ + f"{best_lo:.1f}--{best_hi:.1f} m in the best case ({door_lo:.1f}--{door_hi:.1f} m with 0.5 m from the doors); the winter layout" + r"""\textquoteright{}s 3.5 m leaves 1.75 m (1.25 m). Tighter than """ + f"{n_better} of the {len(loc)} blocks measured; for the length of the street, in winter, where a cross street serves a block or two." + r"""
+""")
 def xcell(b):
     if b is None: return '--'
     if b['curb_mode'] in ('', None) or int(b['stations_with_both_curbs']) < 10: return f"-- ({b['stations_with_both_curbs']})"
@@ -130,12 +144,9 @@ Winter section, parking + shared lane + parking & 8.3 & 2.4 + 3.5 + 2.4 (EXP Fig
 Two-way boulevards & """ + esc(blvd_txt) + r"""\\ \bottomrule\end{tabular}\end{frame}
 \begin{frame}{Review: every curb detection on the cross streets}\centering\includegraphics[height=0.86\textheight]{figures/cross_street_widths_review_en.png}\\{\tiny Hillshade of the ground surface along the first block of every cross street, looking away from Terrebonne; red = left curb, blue = right curb; grey ticks = stations dropped. Every block\textquoteright{}s label gives its most frequent reading and the stations kept.}\end{frame}
 \begin{frame}{What the cross streets say about the shared lane}\begin{itemize}
-\item A local cross street is """ + f"{lo:.1f} to {hi:.1f} m curb to curb, {t_lo:.1f} to {t_hi:.1f} m narrower than Terrebonne." + r"""
-\item With the drawing\textquoteright{}s 2.4 m parking bands, it leaves """ + f"\\textbf{{{sh_lo:.1f} to {sh_hi:.1f} m}} for the lane cars and bicycles share. The winter layout leaves \\textbf{{3.5 m}} on Terrebonne: {d_lo:.1f} to {d_hi:.1f} m less." + r"""
-\item The difference is the contraflow lane and its buffer (2.5 m) less Terrebonne\textquoteright{}s extra width (""" + f"{t_lo:.1f} to {t_hi:.1f} m)." + r"""
-\item So the cross streets are not the winter layout\textquoteright{}s equivalent: they give the same arrangement about a metre more. A cyclist who finds them tight for a lawful pass will find the winter shared lane tighter.
+""" + DECK_ARG + r"""\item A local cross street is """ + f"{lo:.1f} to {hi:.1f} m curb to curb, {t_lo:.1f} to {t_hi:.1f} m narrower than Terrebonne; with the drawing" + r"""\textquoteright{}s 2.4 m parking bands it leaves """ + f"\\textbf{{{sh_lo:.1f} to {sh_hi:.1f} m}} for the shared lane, against \\textbf{{3.5 m}} on Terrebonne." + r"""
 \item Parking on both sides is the rule on every local block (sign inventory: at most """ + f"{max_tt}" + r""" « \textbackslash{}A EN TOUT TEMPS » poles per side, the corner clearances).
-\item Caveats: unmarked parking bands on the cross streets (a parked car takes 2.0--2.2 m); snow narrows both; first block each side; 2015 surface.
+\item Caveats: unmarked parking bands on the cross streets; snow narrows both; first block each side; 2015 surface.
 \end{itemize}\end{frame}
 """
 
@@ -190,6 +201,7 @@ C (Fig.~6-8), not built & 2.1 + 3.3 + 3.3 + 2.1 & 10.8 & two 3.3 m shared lanes\
 \end{document}
 '''
 note = note.replace(r'\section*{By block}', NOTE_X + '\n' + r'\section*{By block}'); deck = deck.replace(r'\begin{frame}{The figures}', DECK_X + '\n' + r'\begin{frame}{The figures}')
+note = note.replace(r'\textbf{Caveats, for this part.}', NOTE_PIC + r'\textbf{Caveats, for this part.}'); deck = deck.replace(r'\begin{frame}{What the cross streets say about the shared lane}\begin{itemize}', DECK_PIC + r'\begin{frame}{What the cross streets say about the shared lane}\begin{itemize}')
 for name, src in (('terrebonne_street_width_note_en', note), ('terrebonne_street_width_deck_en', deck)):
     open(os.path.join(HERE, name + '.tex'), 'w', encoding='utf-8').write(src)
     for _ in range(2): subprocess.run(['pdflatex', '-interaction=batchmode', name + '.tex'], cwd=HERE, capture_output=True)
