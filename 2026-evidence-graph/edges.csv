@@ -1177,3 +1177,6 @@ t_street_width,d_plans_1954,computed_from,the street frame and the parcel extrac
 t_cross_street_widths,d_lidar_street_width,contained_in,,
 t_cross_street_widths,t_street_width,computed_from,"the same ground raster and curb detector, the street frame's intersection nodes, the géobase for the cross streets' axes",
 t_cross_street_widths,t_lane_widths,bears_on,"the winter section leaves 8.3 m for parking, shared lane and parking (2.4 + 3.5 + 2.4); a 9.0–9.4 m cross street with the same parking bands leaves 4.2–4.6 m for its shared lane, 0.7–1.1 m more than the 3.5 m drawn for Terrebonne",
+e_nov2,e_daybreak_2026nov05,precedes,,
+d_daybreak_2026nov05,a_author,attributed_to,,
+d_daybreak_2026nov05,e_daybreak_2026nov05,refers_to,,

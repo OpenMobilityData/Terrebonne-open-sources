@@ -1,0 +1,1 @@
+Raw whisper.cpp output (large-v3-turbo, `-l en`) on the clip's MP3 (16 kHz mono conversion), November 5, 2026: .txt and .srt. Kept as produced, for inspection of what the check changes. The audio is CBC's and is not reproduced here.
