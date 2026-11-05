@@ -267,3 +267,25 @@ for lang, L in RV.items():
     fig.suptitle(L['t'], fontsize=10, y=0.998); fig.tight_layout(rect=(0, 0, 1, 0.99), h_pad=0.15)
     fig.savefig(os.path.join(FIG, f'cross_street_widths_review_{lang}.png')); plt.close(fig)
 print('figures written')
+
+# ---------- close-up of one cross street (both blocks), in the style of the west-end figure: hillshade, every curb found, widths written every 20 m
+CLOSE = 'Kensington'; CL = {'en': dict(t=f'Avenue {CLOSE} north and south of Terrebonne: the first 140 m of each block, curb-to-curb width written every 20 m (median of the stations kept within 10 m; the most frequent reading of the block in the corner)', x='distance from the Terrebonne axis (m)', y='offset (m)', n='north block (looking away from Terrebonne)', s='south block (looking away from Terrebonne)'),
+                           'fr': dict(t=f'Avenue {CLOSE} au nord et au sud de Terrebonne : les premiers 140 m de chaque tronçon, largeur de bordure à bordure inscrite aux 20 m (médiane des stations retenues à 10 m ; lecture la plus fréquente du tronçon dans le coin)', x='distance depuis l\'axe de Terrebonne (m)', y='décalage (m)', n='tronçon nord (en s\'éloignant de Terrebonne)', s='tronçon sud (en s\'éloignant de Terrebonne)')}
+cb = [b for b in blocks if b['street'] == CLOSE]
+for lang, L in CL.items():
+    fig, axes = plt.subplots(len(cb), 1, figsize=(18, 3.4 * len(cb)), dpi=150)
+    for ax, b in zip(np.atleast_1d(axes), cb):
+        s = segs[b['id_trc']]; dd, vv, Z = strip(s, 0, 140, vmax=9.0)
+        ax.imshow(hill(Z), cmap='gray', extent=(dd[0], dd[-1], vv[0], vv[-1]), origin='lower', aspect='equal', vmin=0.2, vmax=1.0)
+        rs = [r for r in rows if r['id_trc'] == b['id_trc'] and r['dist_from_terrebonne'] <= 140]
+        ax.plot([r['dist_from_terrebonne'] for r in rs if r['kept']], [r['curb_L'] for r in rs if r['kept']], 'o', ms=4, color='#d62728')
+        ax.plot([r['dist_from_terrebonne'] for r in rs if r['kept']], [-r['curb_R'] for r in rs if r['kept']], 'o', ms=4, color='#1f77b4')
+        ax.plot([r['dist_from_terrebonne'] for r in rs if not r['kept']], [0] * sum(1 for r in rs if not r['kept']), '|', ms=8, color='0.6')
+        for d0 in range(20, 141, 20):
+            w = [r['width_curb_to_curb'] for r in rs if r['kept'] and d0 - 10 <= r['dist_from_terrebonne'] < d0 + 10]
+            if w: ax.text(d0, 7.6, f"{float(np.median(w)):.1f}".replace('.', ',' if lang == 'fr' else '.'), fontsize=10, ha='center', color='0.1', bbox=dict(fc='white', ec='none', alpha=0.6, pad=1))
+        ax.axvline(CLEAR, color='#ff7f0e', lw=0.8); ax.text(CLEAR, -8.4, ('first station' if lang == 'en' else 'première station'), fontsize=7.5, color='#ff7f0e', ha='center', va='top')
+        ax.set_xlim(0, 140); ax.set_ylim(-9, 9); ax.set_ylabel(L['y']); ax.set_title(f"{L['n'] if b['side'] == 'N' else L['s']} · {'1-way' if b['one_way'] else '2-way'} · {str(b['curb_mode']).replace('.', ',' if lang == 'fr' else '.')} m (n={b['stations_with_both_curbs']})", fontsize=9.5, loc='left')
+    np.atleast_1d(axes)[-1].set_xlabel(L['x']); fig.suptitle(L['t'], fontsize=10.5, y=0.995); fig.tight_layout(rect=(0, 0, 1, 0.975), h_pad=0.6)
+    fig.savefig(os.path.join(FIG, f'cross_street_close_up_{lang}.png')); plt.close(fig)
+print('close-up written')

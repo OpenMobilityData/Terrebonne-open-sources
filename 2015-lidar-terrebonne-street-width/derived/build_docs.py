@@ -35,7 +35,8 @@ NOTE_PIC = (r"""\textbf{The comparison in one picture.} Figure~\ref{fig:boxes} d
 \textbf{What the cross streets show.} In one sentence: """ + esc(ARG) + r""" The author, who cycles the side streets, finds them already tight for a car to pass, even in summer; Terrebonne\textquoteright{}s shared lane for winter will be narrower still. Riding on the side streets is accepted practice: they are short blocks, used by drivers and cyclists to reach an address and, by cyclists, to move between the longer streets that carry bike lanes, so a driver held behind a cyclist is held for a block; Terrebonne is 2.4 km, and a driver held there is held for the length of the street. The arithmetic agrees with the experience. In the best case for a passing driver, the cyclist against the parked cars and one metre of clearance, a shared lane of """ + f"{sh_lo:.1f} to {sh_hi:.1f} m leaves {best_lo:.1f} to {best_hi:.1f} m for the car; with the cyclist 0.5 m from the doors, {door_lo:.1f} to {door_hi:.1f} m. The winter layout" + r"""\textquoteright{}s 3.5 m leaves 1.75 m and 1.25 m. The lane the winter layout draws for Terrebonne is therefore tighter than the shared lane of """ + f"{n_better} of the {len(loc)} local cross-street blocks measured, and it is meant for the length of the street, in winter, where the cross streets serve a block or two." + r"""
 
 """)
-DECK_PIC = (r"""\begin{frame}{The comparison in one picture: Terrebonne and Kensington}\centering\includegraphics[height=0.9\textheight]{figures/cross_street_boxes_en.png}\end{frame}
+DECK_PIC = (r"""\begin{frame}{Close-up: avenue Kensington, north and south of Terrebonne}\centering\includegraphics[width=\textwidth]{figures/cross_street_close_up_en.png}\\{\small The first 140 m of each block on the LiDAR ground surface, as on the west-end slide for Terrebonne: red = left curb, blue = right curb, grey ticks = stations dropped (parked cars, aprons, trees); the width written every 20 m is the median of the stations kept within 10 m. Both blocks read 9.3 m; the dark rectangles at the curbs are parked cars.}\end{frame}
+\begin{frame}{The comparison in one picture: Terrebonne and Kensington}\centering\includegraphics[height=0.9\textheight]{figures/cross_street_boxes_en.png}\end{frame}
 """)
 DECK_ARG = (r"""\item """ + esc(ARG) + r"""
 \item The side streets are already tight for a car to pass, even in summer (the author\textquoteright{}s experience of them); the winter shared lane will be narrower still. They are short, so a driver held behind a cyclist is held for a block; Terrebonne is 2.4 km.
@@ -122,6 +123,7 @@ NOTE_X = r"""\section*{The cross streets}
 \begin{center}\includegraphics[width=\textwidth]{figures/cross_street_widths_en.png}\end{center}
 \begin{center}\includegraphics[width=0.85\textwidth]{figures/cross_street_widths_hist_en.png}\end{center}
 \begin{center}\includegraphics[width=\textwidth]{figures/cross_street_widths_review_en.png}\end{center}
+\begin{center}\includegraphics[width=\textwidth]{figures/cross_street_close_up_en.png}\end{center}
 
 \textbf{By street.} Most frequent reading / median, in metres, and the number of stations kept, for the first block north and south of Terrebonne; * = fewer than half the stations within 0.5 m of the most frequent reading; signs = parking-sign poles left + right of the block\textquoteright{}s axis, with the number of « \textbackslash{}A EN TOUT TEMPS » poles in brackets.
 {\small\begin{longtable}{@{}llllll@{}}\toprule Street (west to east) & direction & north block & signs & south block & signs\\ \midrule
