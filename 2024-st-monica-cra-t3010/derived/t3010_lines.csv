@@ -561,3 +561,32 @@ fiscal_year,line,value,text,label_en,label_status,form_id,source,as_of,file
 2024,5840,,N,,,27,open_canada_2024,2026-10-04,open-canada/2024/financial_section_a_b_and_c_2024_updated.csv
 2024,5850,,N,,,27,open_canada_2024,2026-10-04,open-canada/2024/financial_section_a_b_and_c_2024_updated.csv
 2024,5860,,N,,,27,open_canada_2024,2026-10-04,open-canada/2024/financial_section_a_b_and_c_2024_updated.csv
+2025,4020,,,,,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4100,221051.00,,"Cash, bank accounts and short-term investments",checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4101,221051.00,,"Cash and bank accounts included in line 4100 (form version 27, fiscal 2023 onward)",dictionary,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4120,18586.00,,Receivables,quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4140,105600.00,,Long-Term Investments,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4155,567643.00,,Land and buildings in Canada,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4157,567643.00,,Land and buildings in Canada used for the charity's programs or administration (form version 27; included in line 4155),dictionary,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4200,912880.00,,Total Assets,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4300,194257.00,,Accounts payable and accrued liabilities,quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4350,194257.00,,Total Liabilities,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4500,222299.00,,Donations with tax receipts,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4530,5350.00,,Donations without tax receipts,quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4610,15422.00,,Rental income (land and buildings),dictionary,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4630,15900.00,,Total revenue from fundraising activities not reported above as gifts,dictionary,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4650,49999.00,,"Other income not already included in the amounts above (masses, funerals, weddings per line 4655 in 2011; « recovery of expenses » in 2023)",checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4655,,,Specify type(s) of revenue included in the amount reported at 4650,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4700,308970.00,,"Total revenue (add lines 4500, 4510 to 4560, 4575, 4580, and 4600 to 4650)",checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4820,151.00,,Interest and Bank Charges,quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4830,27341.00,,"Licences, memberships, and dues",quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4840,14503.00,,Office Supplies & Expenses,quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4850,70440.00,,Occupancy Costs,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4860,5856.00,,Professional Fees,quick_view,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4880,149726.00,,Salaries,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4920,23855.00,,Contribution to Diocese etc,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4930,,,Specify type(s) of expenditures included in the amount reported at 4920,checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,4950,291872.00,,Total expenditures excluding qualifying disbursements (gifts to qualified donees),checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,5000,271513.00,,Total charitable programs expenditures included in line 4950,dictionary,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,5010,20359.00,,Total management and administration expenditures included in line 4950,dictionary,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv
+2025,5100,291872.00,,Total expenditures (line 4950 plus line 5050),checked,,manual:cra_quick_view_2026-11-05,2026-11-05,manual_entries.csv

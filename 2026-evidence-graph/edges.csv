@@ -1180,3 +1180,5 @@ t_cross_street_widths,t_lane_widths,bears_on,"the winter section leaves 8.3 m fo
 e_nov2,e_daybreak_2026nov05,precedes,,
 d_daybreak_2026nov05,a_author,attributed_to,,
 d_daybreak_2026nov05,e_daybreak_2026nov05,refers_to,,
+d_t3010_2025,a_author,attributed_to,,
+d_t3010_2025,x_hardship,bears_on,"the first full fiscal year with the lane (2025) shows the parish's highest revenue since 2016 and a surplus of $17,098 after the 2024 deficit; rental income unchanged ($15,422 vs $15,339); the return does not measure parking or attendance",
