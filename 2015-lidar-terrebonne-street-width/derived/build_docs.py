@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Note (A4, pdflatex) and slide deck (beamer 16:9) in English from summary.json, street_width_by_block.csv and the figures.
+"""Note (A4, pdflatex) and slide deck (beamer 16:9) in English from summary.json, street_width_by_block.csv, cross_street_summary.json, cross_street_blocks.csv and the figures.
 Usage: python3 build_docs.py  (writes terrebonne_street_width_note_en.pdf and terrebonne_street_width_deck_en.pdf)"""
 import csv, json, os, subprocess, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); S = json.load(open(os.path.join(HERE, 'summary.json')))
@@ -7,6 +7,35 @@ B = list(csv.DictReader(open(os.path.join(HERE, 'street_width_by_block.csv'), en
 STAMP = datetime.datetime.now().strftime('%Y-%m-%d'); C = S['curb']; R = S['right_of_way']
 meds = [float(b['curb_median']) for b in B if b['curb_median']]
 esc = lambda s: s.replace('&', '\\&').replace('%', '\\%').replace("'", "\\textquoteright{}").replace('–', '--')
+
+# ---------- the cross streets (cross_street_widths.py)
+X = json.load(open(os.path.join(HERE, 'cross_street_summary.json'))); XB = list(csv.DictReader(open(os.path.join(HERE, 'cross_street_blocks.csv'), encoding='utf-8')))
+ART = set(X['params']['arterial']); fl = lambda x: None if x in ('', None) else float(x)
+XL = [b for b in XB if b['street'] not in ART]; loc = [b for b in XL if int(b['stations_with_both_curbs']) >= 10]
+BM = X['block_modes_local']; lo, hi = round(BM['p10'], 1), round(BM['p90'], 1)          # the typical band of the local blocks' most frequent readings
+in_band = [b for b in loc if 8.9 <= fl(b['curb_mode']) <= 9.6]
+exc = [b for b in loc if not (8.9 <= fl(b['curb_mode']) <= 9.6)]
+def side(b): return 'north' if b['side'] == 'N' else 'south'
+exc_txt = '; '.join(f"{b['street']} {side(b)} {fl(b['curb_mode']):.1f} m" + (f" ({b['stations_with_both_curbs']} of {b['stations']} stations kept, {int(round(100 * fl(b['core_share'])))}\\,\\% of them within 0.5 m of that reading: low confidence)" if fl(b['core_share']) < 0.5 else (f" (a {fl(b['block_length_m']):.0f} m stub, {b['stations_with_both_curbs']} stations)" if int(b['stations']) < 30 else '')) for b in exc)
+lowc = [b for b in loc if fl(b['core_share']) < 0.5]
+blvd = {}
+for b in XB:
+    if b['street'] in ART and int(b['stations_with_both_curbs']) >= 10: blvd.setdefault(b['street'], []).append(fl(b['curb_mode']))
+blvd_txt = ', '.join(f"{k} {min(v):.1f}" + (f"--{max(v):.1f}" if max(v) - min(v) >= 0.15 else '') + ' m' for k, v in blvd.items())
+max_tt = max(max(int(b['no_parking_any_time_poles_L']), int(b['no_parking_any_time_poles_R'])) for b in XL)
+no_sign_blocks = [b for b in XL if int(b['sign_poles_L']) == 0 or int(b['sign_poles_R']) == 0]
+TS = X['terrebonne_stations']; W = X['winter_shared_without_contraflow']; T = X['terrebonne']
+sh_lo, sh_hi = round(lo - 4.8, 1), round(hi - 4.8, 1); d_lo, d_hi = round(sh_lo - 3.5, 1), round(sh_hi - 3.5, 1); t_lo, t_hi = round(T - hi, 1), round(T - lo, 1)
+def xcell(b):
+    if b is None: return '--'
+    if b['curb_mode'] in ('', None) or int(b['stations_with_both_curbs']) < 10: return f"-- ({b['stations_with_both_curbs']})"
+    return f"{fl(b['curb_mode']):.1f} / {fl(b['curb_median']):.1f} ({b['stations_with_both_curbs']})" + ('*' if fl(b['core_share']) < 0.5 else '')
+def xsigns(b): return '--' if b is None else f"{b['sign_poles_L']}+{b['sign_poles_R']} ({int(b['no_parking_any_time_poles_L']) + int(b['no_parking_any_time_poles_R'])})"
+streets = []
+for b in sorted(XB, key=lambda b: int(b['order'])):
+    if b['street'] not in [s_[0] for s_ in streets]: streets.append((b['street'], {}))
+    dict(streets)[b['street']][b['side']] = b
+xrows = '\n'.join(f"{esc(st)} & {'one-way' if all(int(x['one_way']) for x in d.values()) else 'two-way'} & {xcell(d.get('N'))} & {xsigns(d.get('N'))} & {xcell(d.get('S'))} & {xsigns(d.get('S'))} \\\\" for st, d in streets)
 rows = '\n'.join(f"{esc(b['block'])} & {b['stations_with_both_curbs']}/{b['stations']} & {b['curb_median']} & {b['curb_p10']}--{b['curb_p90']} & {b['row_median']} & {b['sidewalk_N_median']} & {b['sidewalk_S_median']} \\\\" for b in B)
 URL = 'https://openmobilitydata.github.io/Terrebonne-open-sources/2015-lidar-terrebonne-street-width/'
 note = r'''\documentclass[11pt,a4paper]{article}
@@ -60,6 +89,56 @@ Every section EXP drew fits the measured 11.0 m with 0 to 0.2 m to spare; none h
 \end{itemize}
 \end{document}
 '''
+
+NOTE_X = r"""\section*{The cross streets}
+\textbf{Question.} Most of the streets that cross rue de Terrebonne between the lane\textquoteright{}s west end and Girouard are one-way local streets with parking on both sides and a single lane shared by cars and bicycles: the arrangement the winter layout gives the direction riding with traffic, without the contraflow lane (2.0 m) and its buffer (0.5 m). The winter section leaves 8.3 m for parking, shared lane and parking (2.4 + 3.5 + 2.4). How wide are the cross streets, and do they share a typical width?
+
+\textbf{Method.} The same ground raster and the same curb detector, applied to the first block of each cross street on each side of Terrebonne (the géobase segments that meet the intersection), from 20 m past the intersection (clear of the curb returns) to 240 m or the block\textquoteright{}s end: a cross-section every 2 m, 14 m each side; the curb window runs 2.5 to 8 m from the axis (11 m for the three two-way boulevards, Cavendish, Grand and Girouard); a station is kept when both curbs are found and the width lies between 5 and 13 m (22 m for the boulevards). """ + f"{X['blocks']} blocks at {X['streets']} streets, {X['stations']:,} stations, {X['kept']:,} kept." + r""" A lowered curb at a driveway apron, or a curb hidden under a tree, makes the detector read the next rise further out, so a block\textquoteright{}s readings have a tight core and a tail toward wider values, never narrower: the figure reported per block is the most frequent reading (0.2 m bins), with the median and the 10th--90th percentiles beside it. The City\textquoteright{}s parking-sign inventory gives, for each side of each block, the number of sign poles within 12 m of the axis and the number carrying « \textbackslash{}A EN TOUT TEMPS » (no parking at any time).
+
+\textbf{Results.}
+\begin{itemize}
+\item The local cross streets (""" + f"{len(XL)} blocks, all one-way; {len(loc)} with ten or more stations kept) read {lo:.1f} to {hi:.1f} m curb to curb: over all their stations the most frequent reading is {X['local']['mode']:.1f} m and the median {X['local']['median']:.1f} m; block by block, {len(in_band)} of {len(loc)} lie between 8.9 and 9.6 m. The others: {exc_txt}." + r"""
+\item Every local block has parking signs on both sides""" + (f" but {len(no_sign_blocks)}" if no_sign_blocks else '') + f", with at most {max_tt} « \\textbackslash{{}}A EN TOUT TEMPS » poles per side (the corner clearances): parking on both sides, under the time restrictions the signs give, is the rule." + r"""
+\item The three two-way boulevards are wider: """ + blvd_txt + r""".
+\item Rue de Terrebonne itself: """ + f"{T:.1f} m (most frequent reading {TS['mode']:.2f} m, median {TS['median']:.1f} m), {t_lo:.1f} to {t_hi:.1f} m wider than its local cross streets." + r"""
+\item The arithmetic. The winter section spends 2.5 m on the contraflow lane and its buffer and leaves 8.3 m for parking, shared lane and parking. A cross street of """ + f"{lo:.1f} to {hi:.1f} m with the same two 2.4 m parking bands leaves {sh_lo:.1f} to {sh_hi:.1f} m for its shared lane. The 3.5 m shared lane the winter layout draws on Terrebonne is {d_lo:.1f} to {d_hi:.1f} m narrower than the lane the cross streets give the same arrangement: the cross streets are not the equivalent of the winter layout; in the part that a cyclist riding with traffic uses, they are about a metre wider." + r"""
+\end{itemize}
+
+\begin{center}\includegraphics[width=\textwidth]{figures/cross_street_widths_en.png}\end{center}
+\begin{center}\includegraphics[width=0.85\textwidth]{figures/cross_street_widths_hist_en.png}\end{center}
+\begin{center}\includegraphics[width=\textwidth]{figures/cross_street_widths_review_en.png}\end{center}
+
+\textbf{By street.} Most frequent reading / median, in metres, and the number of stations kept, for the first block north and south of Terrebonne; * = fewer than half the stations within 0.5 m of the most frequent reading; signs = parking-sign poles left + right of the block\textquoteright{}s axis, with the number of « \textbackslash{}A EN TOUT TEMPS » poles in brackets.
+{\small\begin{longtable}{@{}llllll@{}}\toprule Street (west to east) & direction & north block & signs & south block & signs\\ \midrule
+""" + xrows + r"""
+\bottomrule\end{longtable}}
+
+\textbf{Caveats, for this part.} The cross streets\textquoteright{} parking bands are not marked: cars park at the curb, and a parked car takes 2.0 to 2.2 m with its mirrors, so the 2.4 m band is the drawing\textquoteright{}s figure applied for comparison. Snow windrows narrow Terrebonne and its cross streets alike. Only the first block on each side is measured; a street may change further from Terrebonne. The sign counts are an indicator of the parking regime, not a reading of the regulations. 2015 surface, as above.
+"""
+
+DECK_X = r"""\begin{frame}{The cross streets: the same arrangement, without the contraflow lane}\begin{itemize}
+\item Most cross streets of Terrebonne are one-way local streets with parking on both sides and one lane shared by cars and bicycles: what the winter layout gives the direction riding with traffic, less the contraflow lane (2.0 m) and its buffer (0.5 m).
+\item The winter section leaves \textbf{8.3 m} for parking, shared lane and parking (2.4 + 3.5 + 2.4). How wide are the cross streets?
+\item Same LiDAR surface, same curb detector, the first block of each cross street on each side of Terrebonne: """ + f"{X['blocks']} blocks at {X['streets']} streets, {X['kept']:,} stations kept." + r"""
+\item Driveway aprons and tree cover make the detector read wide, never narrow: per block, the most frequent reading is reported, with the median and the 10th--90th percentiles.
+\end{itemize}\end{frame}
+\begin{frame}{The local cross streets are """ + f"{lo:.1f} to {hi:.1f}" + r""" m wide; Terrebonne is 11.0 m}\centering\includegraphics[width=\textwidth]{figures/cross_street_widths_en.png}\end{frame}
+\begin{frame}{Every station: the cross streets against Terrebonne}\centering\includegraphics[width=0.78\textwidth]{figures/cross_street_widths_hist_en.png}\\[4pt]\scriptsize\begin{tabular}{lrl}\toprule & curb to curb (m) & \\ \midrule
+Local cross streets (one-way, parking both sides), """ + f"{len(loc)} blocks & {lo:.1f}--{hi:.1f} & most frequent readings per block; {len(in_band)} of {len(loc)} between 8.9 and 9.6 m" + r"""\\
+Terrebonne, along the lane & """ + f"{T:.1f} & most frequent reading {TS['mode']:.2f}, median {TS['median']:.1f}" + r"""\\
+Winter section, parking + shared lane + parking & 8.3 & 2.4 + 3.5 + 2.4 (EXP Fig.~6-6)\\
+Two-way boulevards & """ + esc(blvd_txt) + r"""\\ \bottomrule\end{tabular}\end{frame}
+\begin{frame}{Review: every curb detection on the cross streets}\centering\includegraphics[height=0.86\textheight]{figures/cross_street_widths_review_en.png}\\{\tiny Hillshade of the ground surface along the first block of every cross street, looking away from Terrebonne; red = left curb, blue = right curb; grey ticks = stations dropped. Every block\textquoteright{}s label gives its most frequent reading and the stations kept.}\end{frame}
+\begin{frame}{What the cross streets say about the shared lane}\begin{itemize}
+\item A local cross street is """ + f"{lo:.1f} to {hi:.1f} m curb to curb, {t_lo:.1f} to {t_hi:.1f} m narrower than Terrebonne." + r"""
+\item With the drawing\textquoteright{}s 2.4 m parking bands, it leaves """ + f"\\textbf{{{sh_lo:.1f} to {sh_hi:.1f} m}} for the lane cars and bicycles share. The winter layout leaves \\textbf{{3.5 m}} on Terrebonne: {d_lo:.1f} to {d_hi:.1f} m less." + r"""
+\item The difference is the contraflow lane and its buffer (2.5 m) less Terrebonne\textquoteright{}s extra width (""" + f"{t_lo:.1f} to {t_hi:.1f} m)." + r"""
+\item So the cross streets are not the winter layout\textquoteright{}s equivalent: they give the same arrangement about a metre more. A cyclist who finds them tight for a lawful pass will find the winter shared lane tighter.
+\item Parking on both sides is the rule on every local block (sign inventory: at most """ + f"{max_tt}" + r""" « \textbackslash{}A EN TOUT TEMPS » poles per side, the corner clearances).
+\item Caveats: unmarked parking bands on the cross streets (a parked car takes 2.0--2.2 m); snow narrows both; first block each side; 2015 surface.
+\end{itemize}\end{frame}
+"""
+
 deck = r'''\documentclass[aspectratio=169,11pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs}
 \title{How wide is rue de Terrebonne?}\subtitle{The roadway along the lane, measured on the City\textquoteright{}s 2015 LiDAR}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + STAMP + r'''}
@@ -110,6 +189,7 @@ C (Fig.~6-8), not built & 2.1 + 3.3 + 3.3 + 2.1 & 10.8 & two 3.3 m shared lanes\
 \end{itemize}\end{frame}
 \end{document}
 '''
+note = note.replace(r'\section*{By block}', NOTE_X + '\n' + r'\section*{By block}'); deck = deck.replace(r'\begin{frame}{The figures}', DECK_X + '\n' + r'\begin{frame}{The figures}')
 for name, src in (('terrebonne_street_width_note_en', note), ('terrebonne_street_width_deck_en', deck)):
     open(os.path.join(HERE, name + '.tex'), 'w', encoding='utf-8').write(src)
     for _ in range(2): subprocess.run(['pdflatex', '-interaction=batchmode', name + '.tex'], cwd=HERE, capture_output=True)

@@ -1,0 +1,112 @@
+{
+ "blocks": 53,
+ "streets": 28,
+ "stations": 5397,
+ "kept": 3749,
+ "all": {
+  "n": 3749,
+  "median": 9.4,
+  "mode": 9.06,
+  "core_share": 0.54,
+  "p10": 8.9,
+  "p90": 12.3,
+  "min": 7.6,
+  "max": 20.7
+ },
+ "one_way": {
+  "n": 3455,
+  "median": 9.4,
+  "mode": 9.06,
+  "core_share": 0.59,
+  "p10": 8.9,
+  "p90": 11.2,
+  "min": 7.6,
+  "max": 13.0
+ },
+ "two_way": {
+  "n": 294,
+  "median": 16.2,
+  "mode": 15.78,
+  "core_share": 0.44,
+  "p10": 15.5,
+  "p90": 18.3,
+  "min": 13.4,
+  "max": 20.7
+ },
+ "local": {
+  "n": 3455,
+  "median": 9.4,
+  "mode": 9.06,
+  "core_share": 0.59,
+  "p10": 8.9,
+  "p90": 11.2,
+  "min": 7.6,
+  "max": 13.0
+ },
+ "terrebonne_stations": {
+  "n": 759,
+  "median": 11.0,
+  "mode": 10.95,
+  "core_share": 0.81,
+  "p10": 10.7,
+  "p90": 12.4,
+  "min": 9.1,
+  "max": 13.0
+ },
+ "block_medians": {
+  "n": 51,
+  "median": 9.4,
+  "mode": 9.35,
+  "core_share": 0.8,
+  "p10": 9.2,
+  "p90": 11.0,
+  "min": 8.2,
+  "max": 16.7
+ },
+ "block_medians_local": {
+  "n": 46,
+  "median": 9.4,
+  "mode": 9.35,
+  "core_share": 0.89,
+  "p10": 9.2,
+  "p90": 9.68,
+  "min": 8.2,
+  "max": 11.0
+ },
+ "block_modes_local": {
+  "n": 46,
+  "median": 9.14,
+  "mode": 9.34,
+  "core_share": 0.91,
+  "p10": 8.98,
+  "p90": 9.36,
+  "min": 7.88,
+  "max": 12.54
+ },
+ "blocks_local_with_10": 46,
+ "blocks_one_way": 47,
+ "blocks_two_way": 6,
+ "winter_shared_without_contraflow": 8.3,
+ "terrebonne": 11.0,
+ "params": {
+  "step": 2.0,
+  "vmax": 14.0,
+  "dv": 0.1,
+  "min_half": 2.5,
+  "max_half": 8.0,
+  "step_z": 0.07,
+  "win": 0.5,
+  "wmin": 5.0,
+  "wmax": 13.0,
+  "arterial": [
+   "Cavendish",
+   "Girouard",
+   "Grand"
+  ],
+  "arterial_max_half": 11.0,
+  "arterial_wmax": 22.0,
+  "clear": 20.0,
+  "lmax": 240.0,
+  "node_r": 15.0
+ }
+}

@@ -4,12 +4,12 @@
 
 **Date:** analysis of November 4, 2026.
 
-**Question.** The winter layout adopted by the borough council on November 2, 2026 (file 1266880005) keeps the contraflow protected lane and turns the lane running with traffic into parking; the cross-section the borough's 2023 study drew for that type of layout (EXP 2023, Figure 6-6, p. 72) is 2.4 + 3.5 + 2.4 + 0.5 + 2.0 = 10.8 m from curb to curb. This folder measures the roadway's actual width along the whole lane.
+**Question.** The winter layout adopted by the borough council on November 2, 2026 (file 1266880005) keeps the contraflow protected lane and turns the lane running with traffic into parking; the cross-section the borough's 2023 study drew for that type of layout (EXP 2023, Figure 6-6, p. 72) is 2.4 + 3.5 + 2.4 + 0.5 + 2.0 = 10.8 m from curb to curb. This folder measures the roadway's actual width along the whole lane and, since the evening of November 4, the width of the cross streets, the one-way streets with parking on both sides and a shared lane that the winter layout resembles.
 
 | File | Content |
 |---|---|
-| [`derived/terrebonne_street_width_note_en.pdf`](derived/terrebonne_street_width_note_en.pdf) | The note (3 pp.): question, data and method, results, the table by block, caveats |
-| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (14 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, EXP's 2023, built and winter sections with a comparison table, figures, what it means, caveats |
+| [`derived/terrebonne_street_width_note_en.pdf`](derived/terrebonne_street_width_note_en.pdf) | The note: question, data and method, results, EXP's sections, the cross streets (figures and table by street), the table by block, caveats |
+| [`derived/terrebonne_street_width_deck_en.pdf`](derived/terrebonne_street_width_deck_en.pdf) | The slide deck (19 slides, 16:9): question, data and method, the profile, cross-sections, the review figure with every curb detection, the west end, EXP's 2023, built and winter sections with a comparison table, the cross streets (five slides), figures, what it means, caveats |
 | [`derived/street_width_profile.csv`](derived/street_width_profile.csv) | Every station (every 2 m, 1207 stations): position, block, curb offsets north and south, curb-to-curb width, kept flag, right-of-way and sidewalk zones |
 | [`derived/street_width_by_block.csv`](derived/street_width_by_block.csv) | Per block: stations kept, curb-to-curb median, p10, p90, min, max; right-of-way; sidewalk zones |
 | [`derived/summary.json`](derived/summary.json) | The totals and the detector's parameters |
@@ -19,7 +19,14 @@
 | [`derived/figures/street_width_west_end_en.png`](derived/figures/street_width_west_end_en.png) / [`_fr.png`](derived/figures/street_width_west_end_fr.png) | The first 200 m at the Loyola campus end, widths written every 20 m |
 | [`raw/exp2023_fig3-1_configuration_2023.png`](raw/exp2023_fig3-1_configuration_2023.png), [`raw/exp2023_fig6-6_amenagement_A.png`](raw/exp2023_fig6-6_amenagement_A.png), [`raw/exp2023_fig6-7_amenagement_B.png`](raw/exp2023_fig6-7_amenagement_B.png), [`raw/exp2023_fig6-8_amenagement_C.png`](raw/exp2023_fig6-8_amenagement_C.png) | EXP 2023's cross-sections, cropped from the published study (report pp. 25 and 72; PDF pp. 36 and 83): the 2023 street (2.2 + 3.3 + 3.3 + 2.2 = 11.0 m), Aménagement B as built (10.8 m), A (the winter layout's type, 10.8 m), C (10.8 m) |
 | [`derived/width_profile.py`](derived/width_profile.py) | The analysis (needs the ground raster built by pdal for the 1954–55 work, outside the repository, and the sibling folder's `frame.py` and `mtm.py`) |
-| [`derived/build_docs.py`](derived/build_docs.py) | Builds the note and the deck from the outputs |
+| [`derived/cross_street_blocks.csv`](derived/cross_street_blocks.csv) | The cross streets, per block (first block north and south of Terrebonne, 53 blocks at 28 streets): stations kept, most frequent reading, median, p10, p90, one-way status, block length, parking-sign poles per side and those with « \A EN TOUT TEMPS » |
+| [`derived/cross_street_profile.csv`](derived/cross_street_profile.csv) | The cross streets, every station (every 2 m from 20 to 240 m past the intersection): curb offsets left and right, width, kept flag, MTM 8 coordinates |
+| [`derived/cross_street_summary.json`](derived/cross_street_summary.json) | The totals for the cross streets (local one-way blocks, two-way boulevards, Terrebonne's own stations for comparison) and the detector's parameters |
+| [`derived/figures/cross_street_widths_en.png`](derived/figures/cross_street_widths_en.png) / [`_fr.png`](derived/figures/cross_street_widths_fr.png) | Width of the first block north and south of Terrebonne, street by street: most frequent reading, median, 10th–90th percentiles; Terrebonne's 11.0 m and the winter section's 8.3 m |
+| [`derived/figures/cross_street_widths_hist_en.png`](derived/figures/cross_street_widths_hist_en.png) / [`_fr.png`](derived/figures/cross_street_widths_hist_fr.png) | Every station kept: the local cross streets against Terrebonne |
+| [`derived/figures/cross_street_widths_review_en.png`](derived/figures/cross_street_widths_review_en.png) / [`_fr.png`](derived/figures/cross_street_widths_review_fr.png) | Review figure: the ground surface along every block with every curb detection |
+| [`derived/cross_street_widths.py`](derived/cross_street_widths.py) | The cross-street analysis (same raster and detector; the géobase for the cross streets' axes; the sign inventory) |
+| [`derived/build_docs.py`](derived/build_docs.py) | Builds the note and the deck from the outputs of both scripts |
 
 ## Method
 
@@ -68,6 +75,55 @@ The ground raster is the mean elevation of ground-class LiDAR returns on a 0.25 
 ## The west end
 
 The public street ends where the lane ends, at the Loyola campus boundary (the géobase's last segment, 1320365, ends there; beyond it the roadway is the campus's). The last public block, west end to Belmore, reads 11.0 m curb to curb (19 of 30 stations), a 20.09 m right-of-way and sidewalk zones of 4.4 m north and 4.7 m south: the same section as the rest of the street. It is two-way with no parking on either side. The 2015 surface and the pre-2024 imagery cannot measure the 2024 bike lanes themselves; an 11.0 m roadway holds, for example, two 2.0 m lanes with 0.5 m buffers and two 3.0 m travel lanes (arithmetic, not the marking plan).
+
+## The cross streets
+
+**Question (added November 4, 2026, evening).** Most of the streets that cross Terrebonne between the lane's west end and Girouard are one-way local streets with parking on both sides and a single lane shared by cars and bicycles: the arrangement the winter layout gives the direction riding with traffic, without the contraflow lane (2.0 m) and its buffer (0.5 m). The winter section leaves 8.3 m for parking, shared lane and parking (2.4 + 3.5 + 2.4). How wide are the cross streets, and do they share a typical width?
+
+**Method.** The same ground raster and the same curb detector, applied to the first block of each cross street on each side of Terrebonne (the géobase segments that meet the intersection), from 20 m past the intersection (clear of the curb returns) to 240 m or the block's end: a cross-section every 2 m, 14 m each side; the curb window 2.5 to 8 m from the axis (11 m for the three two-way boulevards, Cavendish, Grand and Girouard); a station kept when both curbs are found and the width lies between 5 and 13 m (22 m for the boulevards). 53 blocks at 28 streets, 5,397 stations, 3,749 kept. A lowered curb at a driveway apron, or a curb hidden under a tree, makes the detector read the next rise further out, so a block's readings have a tight core and a tail toward wider values, never narrower: the figure reported per block is the most frequent reading (0.2 m bins), with the median and the 10th–90th percentiles beside it. The City's parking-sign inventory (« Signalisation – Stationnement », October 23, 2026 copy) gives, for each side of each block, the number of sign poles within 12 m of the axis and the number carrying « \A EN TOUT TEMPS ».
+
+**Results.**
+
+- The local cross streets (47 blocks, all one-way; 46 with ten or more stations kept) read 9.0 to 9.4 m curb to curb: over all their stations the most frequent reading is 9.1 m and the median 9.4 m; block by block, 42 of 46 lie between 8.9 and 9.6 m. The others: Belmore south 8.8 m; Coronation south 7.9 m; Prince-of-Wales south 11.0 m (a 69 m stub, 10 stations); Madison north 12.5 m (42 of 110 stations kept, 33 % of them within 0.5 m of that reading: low confidence).
+- Every local block has parking signs on both sides, with at most 3 « \A EN TOUT TEMPS » poles per side (the corner clearances): parking on both sides, under the time restrictions the signs give, is the rule.
+- The three two-way boulevards are wider: Cavendish 16.5–16.6 m, Grand 15.8–15.9 m, Girouard 13.9 m.
+- Rue de Terrebonne itself: 11.0 m (most frequent reading 10.95 m, median 11.0 m), 1.6 to 2.0 m wider than its local cross streets.
+- The arithmetic: the winter section spends 2.5 m on the contraflow lane and its buffer and leaves 8.3 m for parking, shared lane and parking. A cross street of 9.0 to 9.4 m with the same two 2.4 m parking bands leaves 4.2 to 4.6 m for its shared lane. The 3.5 m shared lane the winter layout draws on Terrebonne is 0.7 to 1.1 m narrower than the lane the cross streets give the same arrangement. In the part that a cyclist riding with traffic uses, the cross streets are about a metre wider than the winter layout.
+
+Most frequent reading / median (m) and stations kept, first block north and south of Terrebonne; \* = fewer than half the stations within 0.5 m of the most frequent reading; signs = parking-sign poles left + right of the block's axis (« \A EN TOUT TEMPS » poles in brackets).
+
+| Street (west to east) | direction | north block | signs | south block | signs |
+|---|---|---|---|---|---|
+| Belmore | one-way | 9.2 / 9.3 (59) | 5+4 (0) | 8.8 / 9.0 (82) | 5+5 (0) |
+| Coronation | one-way | 9.3 / 9.4 (74) | 4+4 (1) | 7.9 / 8.2 (67) | 4+4 (1) |
+| Mayfair | one-way | 9.3 / 9.4 (76) | 6+3 (0) | 9.3 / 9.4 (71) | 3+3 (0) |
+| Mariette | one-way | 9.3 / 9.5 (74) | 4+7 (0) | 9.1 / 9.1 (78) | 5+4 (2) |
+| Rosedale | one-way | 9.6 / 9.7 (90) | 6+2 (0) | 9.3 / 9.6 (87) | 4+3 (0) |
+| King-Edward | one-way | 9.3 / 9.6 (66) | 3+6 (0) | 9.0 / 9.3 (79) | 5+6 (1) |
+| Montclair | one-way | 9.0 / 9.3 (79) | 3+3 (0) | 9.3 / 9.3 (79) | 4+2 (0) |
+| Walkley | one-way | – (3) | 3+2 (4) | 9.3 / 9.6 (69) | 0+0 (0) |
+| Prince-of-Wales | one-way | 9.3 / 9.4 (71) | 5+4 (0) | 11.0 / 11.0 (10) | 1+2 (0) |
+| Cumberland | one-way | 9.3 / 9.4 (61) | 4+3 (0) | – | – |
+| Cavendish | two-way | 16.5 / 16.7 (63) | 4+3 (0) | 16.6 / 16.6 (14) | 1+1 (0) |
+| Bessborough | one-way | 9.1 / 9.3 (32) | 4+5 (5) | – | – |
+| Benny | one-way | – | – | 9.0 / 9.3 (91) | 12+7 (2) |
+| Madison | one-way | 12.5 / 10.8 (42)\* | 3+3 (0) | 9.0 / 9.3 (78) | 4+3 (0) |
+| Kensington | one-way | 9.3 / 9.4 (81) | 4+4 (0) | 9.3 / 9.7 (80) | 3+4 (0) |
+| Grand | two-way | 15.9 / 16.1 (98) | 2+4 (0) | 15.8 / 15.9 (86) | 5+4 (0) |
+| Beaconsfield | one-way | 9.4 / 9.4 (84) | 5+5 (2) | 9.4 / 9.4 (104) | 7+7 (0) |
+| Hingston | one-way | 9.3 / 9.3 (75) | 5+5 (2) | 9.1 / 9.4 (68) | 4+5 (0) |
+| Hampton | one-way | 9.1 / 9.3 (78) | 4+3 (1) | 9.1 / 9.3 (86) | 7+6 (0) |
+| Royal | one-way | 9.3 / 9.3 (93) | 4+3 (0) | 9.1 / 9.3 (98) | 6+6 (0) |
+| Draper | one-way | 9.0 / 9.2 (57) | 3+4 (1) | 9.1 / 9.2 (77) | 3+5 (1) |
+| Melrose | one-way | 9.1 / 10.5 (80)\* | 3+5 (0) | 9.1 / 9.3 (88) | 5+3 (0) |
+| Wilson | one-way | 9.1 / 9.4 (60) | 3+4 (0) | 9.1 / 9.2 (96) | 4+4 (0) |
+| Harvard | one-way | 9.2 / 9.6 (93) | 4+4 (1) | 9.3 / 10.8 (79)\* | 4+4 (0) |
+| d'Oxford | one-way | 9.1 / 9.2 (77) | 4+3 (0) | 8.9 / 9.6 (81)\* | 5+3 (1) |
+| Marcil | one-way | 9.4 / 9.4 (90) | 3+6 (0) | 9.1 / 9.4 (76) | 10+6 (0) |
+| Old Orchard | one-way | 9.1 / 9.3 (65) | 5+7 (2) | 9.1 / 9.3 (71) | 9+8 (2) |
+| Girouard | two-way | 13.9 / 13.9 (30) | 4+2 (2) | – (3) | 0+0 (0) |
+
+**Caveats, for this part.** The cross streets' parking bands are not marked: cars park at the curb, and a parked car takes 2.0 to 2.2 m with its mirrors, so the 2.4 m band is the drawing's figure applied for comparison. Snow windrows narrow Terrebonne and its cross streets alike. Only the first block on each side is measured. The sign counts are an indicator of the parking regime, not a reading of the regulations.
 
 ## Caveats
 
