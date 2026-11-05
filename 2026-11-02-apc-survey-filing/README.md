@@ -10,8 +10,8 @@
 
 | File | Content |
 |---|---|
-| [`raw/2026-11-02_survey_bundle_fr.pdf`](raw/2026-11-02_survey_bundle_fr.pdf) | The French bundle as handed over (13 pp.): the association's letter with the results, the methods note in French, the methods note in English |
-| [`raw/2026-11-02_survey_bundle_en.pdf`](raw/2026-11-02_survey_bundle_en.pdf) | The English bundle, built from the same export (13 pp.): the letter in English, the methods note in English, the methods note in French |
+| [`raw/2026-11-02_survey_bundle_fr.pdf`](raw/2026-11-02_survey_bundle_fr.pdf) | The French bundle (8 pp.): the association's letter with the results and the methods note in French (the copy handed over also carried the English methods note, dropped here as a duplicate) |
+| [`raw/2026-11-02_survey_bundle_en.pdf`](raw/2026-11-02_survey_bundle_en.pdf) | The English bundle, built from the same export (8 pp.): the letter in English and the methods note in English |
 
 ## What the letter reports (its own figures)
 
