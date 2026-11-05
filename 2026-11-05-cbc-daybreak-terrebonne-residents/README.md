@@ -13,6 +13,7 @@
 | File | Content |
 |---|---|
 | [`derived/2026-11-05_CBC_Daybreak_Terrebonne_residents_transcript_en_DRAFT.md`](derived/2026-11-05_CBC_Daybreak_Terrebonne_residents_transcript_en_DRAFT.md) | The whole clip (12:08), machine draft, English, in ~20 s paragraphs with clip times |
+| [`derived/2026-11-05_CBC_Daybreak_Terrebonne_residents_transcript_en_DRAFT_by_speaker.md`](derived/2026-11-05_CBC_Daybreak_Terrebonne_residents_transcript_en_DRAFT_by_speaker.md) | The same draft arranged by speaker (turns assigned from the introductions and the content, not verified; two inferred turns named in its header) |
 | [`derived/whisper_drafts/`](derived/whisper_drafts/) | The raw whisper.cpp output (.txt, .srt) |
 | [`raw/cbc_listen_clip_16247525_api.json`](raw/cbc_listen_clip_16247525_api.json) | The clip's metadata from CBC Listen's API |
 
