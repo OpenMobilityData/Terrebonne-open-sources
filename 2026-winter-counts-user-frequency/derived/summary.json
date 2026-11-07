@@ -1,0 +1,1129 @@
+{
+ "coverage": [
+  {
+   "sensor": "Kensington loop (borough)",
+   "winter": "W1 2024-25",
+   "valid_days": 0,
+   "days": 121,
+   "first": "",
+   "last": "",
+   "passages": 0
+  },
+  {
+   "sensor": "Kensington loop (borough)",
+   "winter": "W2 2025-26",
+   "valid_days": 121,
+   "days": 121,
+   "first": "2025-12-01",
+   "last": "2026-03-31",
+   "passages": 4891
+  },
+  {
+   "sensor": "King Edward (Telraam)",
+   "winter": "W1 2024-25",
+   "valid_days": 119,
+   "days": 121,
+   "first": "2024-12-01",
+   "last": "2025-03-31",
+   "passages": 5422
+  },
+  {
+   "sensor": "King Edward (Telraam)",
+   "winter": "W2 2025-26",
+   "valid_days": 68,
+   "days": 121,
+   "first": "2025-12-01",
+   "last": "2026-03-31",
+   "passages": 3268
+  },
+  {
+   "sensor": "Draper (Telraam)",
+   "winter": "W1 2024-25",
+   "valid_days": 120,
+   "days": 121,
+   "first": "2024-12-01",
+   "last": "2025-03-31",
+   "passages": 5978
+  },
+  {
+   "sensor": "Draper (Telraam)",
+   "winter": "W2 2025-26",
+   "valid_days": 53,
+   "days": 121,
+   "first": "2025-12-01",
+   "last": "2026-01-24",
+   "passages": 1752
+  },
+  {
+   "sensor": "Girouard WB (City det-00118-01)",
+   "winter": "W1 2024-25",
+   "valid_days": 0,
+   "days": 121,
+   "first": "",
+   "last": "",
+   "passages": 0
+  },
+  {
+   "sensor": "Girouard WB (City det-00118-01)",
+   "winter": "W2 2025-26",
+   "valid_days": 115,
+   "days": 121,
+   "first": "2025-12-01",
+   "last": "2026-03-31",
+   "passages": 3150
+  }
+ ],
+ "direction_mapping": {
+  "King Edward": {
+   "n": 840,
+   "r_ab_eb": 0.578,
+   "r_ab_wb": 0.606,
+   "r_ba_eb": 0.624,
+   "r_ba_wb": 0.71,
+   "ab_share": 0.468,
+   "ken_eb_share": 0.522,
+   "ab_is": "EB"
+  },
+  "Draper": {
+   "n": 842,
+   "r_ab_eb": 0.614,
+   "r_ab_wb": 0.789,
+   "r_ba_eb": 0.541,
+   "r_ba_wb": 0.576,
+   "ab_share": 0.589,
+   "ken_eb_share": 0.522,
+   "ab_is": "WB"
+  }
+ },
+ "girouard_vs_kensington_wb": [
+  {
+   "month": "2025-11",
+   "days": 30,
+   "girouard_wb": 2535,
+   "ken_wb": 2930,
+   "ratio": 0.865
+  },
+  {
+   "month": "2025-12",
+   "days": 31,
+   "girouard_wb": 1007,
+   "ken_wb": 635,
+   "ratio": 1.586
+  },
+  {
+   "month": "2026-01",
+   "days": 21,
+   "girouard_wb": 518,
+   "ken_wb": 372,
+   "ratio": 1.392
+  },
+  {
+   "month": "2026-02",
+   "days": 26,
+   "girouard_wb": 780,
+   "ken_wb": 455,
+   "ratio": 1.714
+  }
+ ],
+ "girouard_profile_days": 56,
+ "snapshots": {
+  "2024-09-19": {
+   "grand_axis_6h": 452,
+   "grand_all_6h": 707,
+   "grand_axis_12h": 667,
+   "grand_all_12h": 1047,
+   "cav_axis_6h": 319,
+   "cav_all_6h": 354,
+   "cav_axis_12h": 503,
+   "cav_all_12h": 566,
+   "src": "2026-581 bundle 01 pp. 127 and 106 (miovision_counts_by_mode_2026-581.csv)",
+   "king_edward_peak6h": {
+    "ab": 173,
+    "ba": 182,
+    "hours": 6,
+    "uptime": 6.0
+   },
+   "king_edward_12h": {
+    "ab": 293,
+    "ba": 279,
+    "hours": 12,
+    "uptime": 12.0
+   },
+   "king_edward_day": {
+    "ab": 297,
+    "ba": 283,
+    "hours": 24,
+    "uptime": 24.0
+   },
+   "draper_peak6h": {
+    "ab": 0,
+    "ba": 0,
+    "hours": 0,
+    "uptime": 0
+   },
+   "draper_12h": {
+    "ab": 0,
+    "ba": 0,
+    "hours": 0,
+    "uptime": 0
+   },
+   "draper_day": {
+    "ab": 0,
+    "ba": 0,
+    "hours": 0,
+    "uptime": 0
+   },
+   "weather": {
+    "snow": 0.0,
+    "tmean": 22.2,
+    "tmin": 16.9,
+    "sog": null,
+    "precip": 0.0
+   }
+  },
+  "2025-01-29": {
+   "grand_axis_6h": 8,
+   "grand_all_6h": 12,
+   "grand_axis_12h": 12,
+   "grand_all_12h": null,
+   "grand_eb_6h": 8,
+   "grand_wb_6h": 0,
+   "cav_axis_6h": 10,
+   "cav_all_6h": 12,
+   "cav_axis_12h": 18,
+   "cav_all_12h": 20,
+   "cav_eb_6h": 5,
+   "cav_wb_6h": 5,
+   "src": "2026-581 bundle 01 pp. 85 and 155; 2026-634 workbooks B2 (by approach)",
+   "king_edward_peak6h": {
+    "ab": 3,
+    "ba": 7,
+    "hours": 6,
+    "uptime": 5.66
+   },
+   "king_edward_12h": {
+    "ab": 7,
+    "ba": 14,
+    "hours": 12,
+    "uptime": 11.57
+   },
+   "king_edward_day": {
+    "ab": 7,
+    "ba": 14,
+    "hours": 24,
+    "uptime": 22.06
+   },
+   "draper_peak6h": {
+    "ab": 13,
+    "ba": 7,
+    "hours": 6,
+    "uptime": 6.0
+   },
+   "draper_12h": {
+    "ab": 42,
+    "ba": 15,
+    "hours": 11,
+    "uptime": 9.83
+   },
+   "draper_day": {
+    "ab": 42,
+    "ba": 15,
+    "hours": 23,
+    "uptime": 21.83
+   },
+   "weather": {
+    "snow": 7.4,
+    "tmean": -11.5,
+    "tmin": -14.7,
+    "sog": 5.0,
+    "precip": 7.4
+   }
+  }
+ },
+ "ratios": [
+  {
+   "sensor": "King Edward",
+   "start": "2025-08-01",
+   "end": "2025-08-31",
+   "hours": "8-16",
+   "matched_hours": 278,
+   "days": 31,
+   "telraam_ab": 3813,
+   "telraam_ba": 3614,
+   "telraam": 7427,
+   "ken_eb": 6475,
+   "ken_wb": 5798,
+   "ken": 12273,
+   "ratio": 0.605
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2025-09-01",
+   "end": "2025-09-30",
+   "hours": "8-16",
+   "matched_hours": 263,
+   "days": 30,
+   "telraam_ab": 3931,
+   "telraam_ba": 4497,
+   "telraam": 8428,
+   "ken_eb": 7248,
+   "ken_wb": 6100,
+   "ken": 13348,
+   "ratio": 0.631
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2025-10-01",
+   "end": "2025-10-31",
+   "hours": "8-16",
+   "matched_hours": 279,
+   "days": 31,
+   "telraam_ab": 3179,
+   "telraam_ba": 3662,
+   "telraam": 6841,
+   "ken_eb": 5389,
+   "ken_wb": 4713,
+   "ken": 10102,
+   "ratio": 0.677
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2025-11-01",
+   "end": "2025-11-30",
+   "hours": "8-16",
+   "matched_hours": 269,
+   "days": 30,
+   "telraam_ab": 890,
+   "telraam_ba": 1280,
+   "telraam": 2170,
+   "ken_eb": 2247,
+   "ken_wb": 1863,
+   "ken": 4110,
+   "ratio": 0.528
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2025-12-01",
+   "end": "2025-12-31",
+   "hours": "8-16",
+   "matched_hours": 126,
+   "days": 15,
+   "telraam_ab": 106,
+   "telraam_ba": 141,
+   "telraam": 247,
+   "ken_eb": 203,
+   "ken_wb": 180,
+   "ken": 383,
+   "ratio": 0.645
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2026-01-01",
+   "end": "2026-01-31",
+   "hours": "8-16",
+   "matched_hours": 244,
+   "days": 28,
+   "telraam_ab": 147,
+   "telraam_ba": 160,
+   "telraam": 307,
+   "ken_eb": 293,
+   "ken_wb": 246,
+   "ken": 539,
+   "ratio": 0.57
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2026-03-01",
+   "end": "2026-03-31",
+   "hours": "8-16",
+   "matched_hours": 222,
+   "days": 25,
+   "telraam_ab": 875,
+   "telraam_ba": 1196,
+   "telraam": 2071,
+   "ken_eb": 636,
+   "ken_wb": 260,
+   "ken": 896,
+   "ratio": 2.311
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2026-04-01",
+   "end": "2026-04-30",
+   "hours": "8-16",
+   "matched_hours": 270,
+   "days": 30,
+   "telraam_ab": 2279,
+   "telraam_ba": 3011,
+   "telraam": 5290,
+   "ken_eb": 3120,
+   "ken_wb": 2061,
+   "ken": 5181,
+   "ratio": 1.021
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2025-09-01",
+   "end": "2025-10-31",
+   "hours": "8-16",
+   "matched_hours": 542,
+   "days": 61,
+   "telraam_ab": 7110,
+   "telraam_ba": 8159,
+   "telraam": 15269,
+   "ken_eb": 12637,
+   "ken_wb": 10813,
+   "ken": 23450,
+   "ratio": 0.651
+  },
+  {
+   "sensor": "King Edward",
+   "start": "2025-12-01",
+   "end": "2026-02-28",
+   "hours": "8-16",
+   "matched_hours": 370,
+   "days": 43,
+   "telraam_ab": 253,
+   "telraam_ba": 301,
+   "telraam": 554,
+   "ken_eb": 496,
+   "ken_wb": 426,
+   "ken": 922,
+   "ratio": 0.601
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-08-01",
+   "end": "2025-08-31",
+   "hours": "8-16",
+   "matched_hours": 264,
+   "days": 31,
+   "telraam_ab": 6451,
+   "telraam_ba": 4391,
+   "telraam": 10842,
+   "ken_eb": 6193,
+   "ken_wb": 5560,
+   "ken": 11753,
+   "ratio": 0.922
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-09-01",
+   "end": "2025-09-30",
+   "hours": "8-16",
+   "matched_hours": 260,
+   "days": 30,
+   "telraam_ab": 5838,
+   "telraam_ba": 3772,
+   "telraam": 9610,
+   "ken_eb": 7132,
+   "ken_wb": 6003,
+   "ken": 13135,
+   "ratio": 0.732
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-10-01",
+   "end": "2025-10-31",
+   "hours": "8-16",
+   "matched_hours": 279,
+   "days": 31,
+   "telraam_ab": 4576,
+   "telraam_ba": 3392,
+   "telraam": 7968,
+   "ken_eb": 5389,
+   "ken_wb": 4713,
+   "ken": 10102,
+   "ratio": 0.789
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-11-01",
+   "end": "2025-11-30",
+   "hours": "8-16",
+   "matched_hours": 259,
+   "days": 30,
+   "telraam_ab": 1621,
+   "telraam_ba": 1553,
+   "telraam": 3174,
+   "ken_eb": 2183,
+   "ken_wb": 1803,
+   "ken": 3986,
+   "ratio": 0.796
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-12-01",
+   "end": "2025-12-31",
+   "hours": "8-16",
+   "matched_hours": 256,
+   "days": 31,
+   "telraam_ab": 403,
+   "telraam_ba": 489,
+   "telraam": 892,
+   "ken_eb": 348,
+   "ken_wb": 312,
+   "ken": 660,
+   "ratio": 1.352
+  },
+  {
+   "sensor": "Draper",
+   "start": "2026-01-01",
+   "end": "2026-01-31",
+   "hours": "8-16",
+   "matched_hours": 156,
+   "days": 22,
+   "telraam_ab": 312,
+   "telraam_ba": 333,
+   "telraam": 645,
+   "ken_eb": 217,
+   "ken_wb": 172,
+   "ken": 389,
+   "ratio": 1.658
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-09-01",
+   "end": "2025-10-31",
+   "hours": "8-16",
+   "matched_hours": 539,
+   "days": 61,
+   "telraam_ab": 10414,
+   "telraam_ba": 7164,
+   "telraam": 17578,
+   "ken_eb": 12521,
+   "ken_wb": 10716,
+   "ken": 23237,
+   "ratio": 0.756
+  },
+  {
+   "sensor": "Draper",
+   "start": "2025-12-01",
+   "end": "2026-01-23",
+   "hours": "8-16",
+   "matched_hours": 410,
+   "days": 52,
+   "telraam_ab": 714,
+   "telraam_ba": 822,
+   "telraam": 1536,
+   "ken_eb": 565,
+   "ken_wb": 484,
+   "ken": 1049,
+   "ratio": 1.464
+  }
+ ],
+ "profile_days": {
+  "weekdays": 65,
+  "weekend": 25
+ },
+ "profile": {
+  "wd_eb": [
+   0.09,
+   0.15,
+   0.28,
+   0.23,
+   0.08,
+   0.17,
+   0.2,
+   2.17,
+   3.12,
+   1.4,
+   0.69,
+   0.68,
+   0.78,
+   1.18,
+   0.92,
+   1.71,
+   2.22,
+   1.54,
+   0.72,
+   0.55,
+   0.45,
+   0.78,
+   0.62,
+   0.31
+  ],
+  "wd_wb": [
+   0.05,
+   0.14,
+   0.14,
+   0.09,
+   0.15,
+   0.17,
+   1.28,
+   1.22,
+   2.75,
+   1.42,
+   0.88,
+   0.57,
+   0.62,
+   0.78,
+   0.74,
+   1.18,
+   2.02,
+   2.42,
+   1.58,
+   0.98,
+   0.28,
+   0.4,
+   0.6,
+   0.35
+  ],
+  "we_eb": [
+   0.12,
+   0.16,
+   0.2,
+   0.6,
+   0.36,
+   0.32,
+   0.04,
+   0.16,
+   0.52,
+   0.68,
+   0.6,
+   0.84,
+   0.48,
+   0.6,
+   0.76,
+   0.92,
+   0.6,
+   0.52,
+   0.4,
+   0.2,
+   0.2,
+   0.08,
+   0.76,
+   0.2
+  ],
+  "we_wb": [
+   0.0,
+   0.12,
+   0.12,
+   0.24,
+   0.32,
+   0.24,
+   0.0,
+   0.36,
+   0.16,
+   0.84,
+   0.6,
+   0.44,
+   0.6,
+   0.68,
+   0.84,
+   1.52,
+   0.84,
+   0.72,
+   0.32,
+   0.36,
+   0.12,
+   0.08,
+   0.4,
+   0.24
+  ]
+ },
+ "core": {
+  "start": "2025-12-01",
+  "end": "2026-02-28",
+  "days": 90,
+  "passages": 3232,
+  "eb": 1626,
+  "wb": 1606,
+  "weekday": {
+   "n": 65,
+   "mean": 41.8,
+   "median": 41.0,
+   "p10": 16.8,
+   "p25": 31.0,
+   "p75": 52.0,
+   "p90": 62.0,
+   "min": 6,
+   "max": 83
+  },
+  "weekend": {
+   "n": 25,
+   "mean": 20.5,
+   "median": 15.0,
+   "min": 2,
+   "max": 56
+  },
+  "pairs": {
+   "mean": 11.0,
+   "median": 11.0,
+   "p10": 1.0,
+   "p90": 20.0,
+   "share_of_weekday_passages": 0.526
+  },
+  "dark_share": 0.406,
+  "weekday_by_weather": {
+   "mild": {
+    "n": 28,
+    "mean": 50.6,
+    "min": 19
+   },
+   "harsh": {
+    "n": 27,
+    "mean": 40.1,
+    "min": 6
+   },
+   "holiday": {
+    "n": 10,
+    "mean": 22.0,
+    "min": 6
+   }
+  },
+  "weekend_by_weather": {
+   "mild": {
+    "n": 8,
+    "mean": 30.8
+   },
+   "harsh": {
+    "n": 17,
+    "mean": 15.6
+   }
+  }
+ },
+ "w2": {
+  "days": 121,
+  "passages": 4891,
+  "eb": 2783,
+  "wb": 2108,
+  "max_day": 129,
+  "max_day_date": "2026-03-30",
+  "min_day": 2,
+  "days_ge_40": 60
+ },
+ "nb_regression": {
+  "n": 90,
+  "terms": [
+   {
+    "term": "intercept",
+    "coef": 3.469,
+    "se": 0.044,
+    "effect": "mean on an average day: 32.1 passages"
+   },
+   {
+    "term": "weekend",
+    "coef": -0.6667,
+    "se": 0.1066,
+    "effect": "-49 %"
+   },
+   {
+    "term": "holiday",
+    "coef": -0.5283,
+    "se": 0.1635,
+    "effect": "-41 %"
+   },
+   {
+    "term": "snow_cm",
+    "coef": -0.0005,
+    "se": 0.0181,
+    "effect": "-0 % per unit"
+   },
+   {
+    "term": "tmean_c",
+    "coef": 0.033,
+    "se": 0.009,
+    "effect": "+3 % per unit"
+   },
+   {
+    "term": "snow_on_ground_cm",
+    "coef": -0.0223,
+    "se": 0.0134,
+    "effect": "-2 % per unit"
+   },
+   {
+    "term": "daylight_h",
+    "coef": 0.4187,
+    "se": 0.1596,
+    "effect": "+52 % per unit"
+   },
+   {
+    "term": "days_since_dec1",
+    "coef": -0.0126,
+    "se": 0.0045,
+    "effect": "-1 % per unit"
+   }
+  ],
+  "dispersion_r": 8.51,
+  "loglik": -354.5,
+  "note": "Negative-binomial (NB2) regression of daily passages at Kensington, Dec 1, 2025 to Feb 28, 2026, on calendar and ECCC weather; coefficients per unit of the raw variable; standard errors from the BFGS inverse Hessian (approximate).",
+  "lag1_autocorr_weekday_residuals": 0.182
+ },
+ "bounds": {
+  "kensington": {
+   "max_day": 129,
+   "date": "2026-03-30",
+   "people_ge_m2": 65,
+   "people_ge_m4": 33
+  },
+  "king_edward": {
+   "max_day": 307,
+   "date": "2026-03-09",
+   "people_ge_m2": 154,
+   "people_ge_m4": 77
+  },
+  "draper": {
+   "max_day": 115,
+   "date": "2026-01-10",
+   "people_ge_m2": 58,
+   "people_ge_m4": 29
+  },
+  "girouard_wb": {
+   "max_day": 67.0,
+   "date": "2026-01-09",
+   "people_ge_m2": 34,
+   "people_ge_m4": 17
+  },
+  "kensington_core": {
+   "max_day": 83,
+   "date": "2025-12-03",
+   "people_ge_m2": 42,
+   "people_ge_m4": 21
+  }
+ },
+ "band_fit": {
+  "base": {
+   "N": {
+    "daily": 16.0,
+    "regular": 0.0,
+    "occas": 208.8
+   },
+   "ci": {
+    "daily": [
+     13.396646245596042,
+     18.23364667482819
+    ],
+    "regular": [
+     0.0,
+     69.34403870119233
+    ],
+    "occas": [
+     41.48394561363329,
+     237.96819361381836
+    ]
+   },
+   "loglik": -598.8,
+   "passages_by_band": {
+    "daily": 1433,
+    "regular": 0,
+    "occas": 1842
+   },
+   "share_by_band": {
+    "daily": 0.438,
+    "regular": 0.0,
+    "occas": 0.562
+   },
+   "per_person_passages": {
+    "daily": 89.7,
+    "regular": 36.7,
+    "occas": 8.8
+   },
+   "riding_days_per_person": {
+    "daily": 44.9,
+    "regular": 18.3,
+    "occas": 5.9
+   },
+   "fitted_total": 3275,
+   "observed_total": 3232,
+   "dispersion": {
+    "y": 3.7,
+    "pairs": 2.54
+   },
+   "fitted_by_type": {
+    "weekday_mild": 56.9,
+    "weekday_harsh": 30.2,
+    "weekend": 19.6,
+    "holiday_weekday": 37.8
+   },
+   "observed_by_type": {
+    "weekday_mild": 50.6,
+    "weekday_harsh": 40.1,
+    "weekend": 20.5,
+    "holiday_weekday": 22.0
+   },
+   "desc": "daily: 80 % of mild weekdays, 65 % harsh, 40 % holiday weekdays, 5 % weekend days, 2 passages per riding day, 80 % as matched pairs; regular: 35 % / 16 % / 20 % / 15 %, 2 passages, 60 % paired; occasional: 10 % mild / 3 % harsh (weekday and weekend alike), 1.5 passages, 30 % paired"
+  },
+  "one_way": {
+   "N": {
+    "daily": 18.0,
+    "regular": 0.0,
+    "occas": 258.8
+   },
+   "ci": {
+    "daily": [
+     14.846425544526332,
+     20.206884081307074
+    ],
+    "regular": [
+     0.0,
+     69.34403870119233
+    ],
+    "occas": [
+     214.7301852548066,
+     292.26078352585057
+    ]
+   },
+   "loglik": -598.9,
+   "passages_by_band": {
+    "daily": 1452,
+    "regular": 0,
+    "occas": 1826
+   },
+   "share_by_band": {
+    "daily": 0.443,
+    "regular": 0.0,
+    "occas": 0.557
+   },
+   "per_person_passages": {
+    "daily": 80.7,
+    "regular": 29.3,
+    "occas": 7.1
+   },
+   "riding_days_per_person": {
+    "daily": 44.9,
+    "regular": 18.3,
+    "occas": 5.9
+   },
+   "fitted_total": 3278,
+   "observed_total": 3232,
+   "dispersion": {
+    "y": 3.71,
+    "pairs": 2.52
+   },
+   "fitted_by_type": {
+    "weekday_mild": 56.9,
+    "weekday_harsh": 30.4,
+    "weekend": 19.4,
+    "holiday_weekday": 37.8
+   },
+   "observed_by_type": {
+    "weekday_mild": 50.6,
+    "weekday_harsh": 40.1,
+    "weekend": 20.5,
+    "holiday_weekday": 22.0
+   },
+   "desc": "as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point)"
+  },
+  "weather_sensitive": {
+   "N": {
+    "daily": 14.7,
+    "regular": 17.1,
+    "occas": 213.1
+   },
+   "ci": {
+    "daily": [
+     7.231713270335784,
+     18.23364667482819
+    ],
+    "regular": [
+     0.0,
+     85.1649238324115
+    ],
+    "occas": [
+     0.0,
+     323.8891199077428
+    ]
+   },
+   "loglik": -621.3,
+   "passages_by_band": {
+    "daily": 1356,
+    "regular": 561,
+    "occas": 1669
+   },
+   "share_by_band": {
+    "daily": 0.378,
+    "regular": 0.156,
+    "occas": 0.465
+   },
+   "per_person_passages": {
+    "daily": 92.4,
+    "regular": 32.8,
+    "occas": 7.8
+   },
+   "riding_days_per_person": {
+    "daily": 46.2,
+    "regular": 16.4,
+    "occas": 5.2
+   },
+   "fitted_total": 3585,
+   "observed_total": 3232,
+   "dispersion": {
+    "y": 2.48,
+    "pairs": 2.13
+   },
+   "fitted_by_type": {
+    "weekday_mild": 67.4,
+    "weekday_harsh": 28.8,
+    "weekend": 19.2,
+    "holiday_weekday": 44.2
+   },
+   "observed_by_type": {
+    "weekday_mild": 50.6,
+    "weekday_harsh": 40.1,
+    "weekend": 20.5,
+    "holiday_weekday": 22.0
+   },
+   "desc": "as base, but the regular and occasional bands drop more on harsh days (regular 10 %, occasional 1.5 %) and the daily band less (70 %)"
+  },
+  "survey_literal": {
+   "N": {
+    "daily": 13.7,
+    "regular": 0.0,
+    "occas": 263.7
+   },
+   "ci": {
+    "daily": [
+     10.907983168620548,
+     16.453099336083664
+    ],
+    "regular": [
+     0.0,
+     12.088440418967423
+    ],
+    "occas": [
+     237.96819361381836,
+     292.26078352585057
+    ]
+   },
+   "loglik": -598.5,
+   "passages_by_band": {
+    "daily": 1390,
+    "regular": 0,
+    "occas": 1880
+   },
+   "share_by_band": {
+    "daily": 0.425,
+    "regular": 0.0,
+    "occas": 0.575
+   },
+   "per_person_passages": {
+    "daily": 101.7,
+    "regular": 39.9,
+    "occas": 7.1
+   },
+   "riding_days_per_person": {
+    "daily": 50.9,
+    "regular": 19.9,
+    "occas": 4.8
+   },
+   "fitted_total": 3270,
+   "observed_total": 3232,
+   "dispersion": {
+    "y": 3.75,
+    "pairs": 2.48
+   },
+   "fitted_by_type": {
+    "weekday_mild": 57.0,
+    "weekday_harsh": 30.4,
+    "weekend": 18.1,
+    "holiday_weekday": 40.0
+   },
+   "observed_by_type": {
+    "weekday_mild": 50.6,
+    "weekday_harsh": 40.1,
+    "weekend": 20.5,
+    "holiday_weekday": 22.0
+   },
+   "desc": "riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors as base"
+  }
+ },
+ "tail_table": [
+  {
+   "rides_per_winter": 2,
+   "passages_per_person": 3.0,
+   "people": 614
+  },
+  {
+   "rides_per_winter": 3,
+   "passages_per_person": 4.5,
+   "people": 409
+  },
+  {
+   "rides_per_winter": 4,
+   "passages_per_person": 6.0,
+   "people": 307
+  },
+  {
+   "rides_per_winter": 6,
+   "passages_per_person": 9.0,
+   "people": 205
+  },
+  {
+   "rides_per_winter": 8,
+   "passages_per_person": 12.0,
+   "people": 154
+  },
+  {
+   "rides_per_winter": 12,
+   "passages_per_person": 18.0,
+   "people": 102
+  }
+ ],
+ "year_over_year": {
+  "King Edward": {
+   "common_days": 66,
+   "w1": 4248,
+   "w2": 3250,
+   "ratio_w2_w1": 0.765
+  },
+  "Draper": {
+   "common_days": 53,
+   "w1": 2151,
+   "w2": 1752,
+   "ratio_w2_w1": 0.815
+  }
+ },
+ "corridor": {
+  "king_edward_over_kensington": 0.601,
+  "draper_over_kensington": 1.464,
+  "girouard_wb_over_kensington_wb": 1.577,
+  "trips_crossing_any_point_lower": 1.58,
+  "trips_crossing_any_point_upper": 4.64,
+  "note": "ratios of passages at each point to Kensington on matched hours (Telraam) or days (Girouard WB), winter core; trips crossing at least one point lie between the largest point and the sum of the points, in units of the Kensington count"
+ },
+ "survey": {
+  "responses": 205,
+  "kept": 161,
+  "winter_cyclists": 87,
+  "weekly": 36,
+  "less_than_weekly": 51,
+  "child_winter": 27,
+  "src": "Terrebonne-open-sources/2026-11-02-apc-survey-filing (public figures of the Nov 2, 2026 filing)"
+ },
+ "survey_implied": {
+  "passages_central": 2946,
+  "passages_low": 826,
+  "passages_high": 7447,
+  "counted_w2": 4891,
+  "counted_core": 3232,
+  "ratio_central": 0.6,
+  "ratio_low": 0.17,
+  "ratio_high": 1.52
+ },
+ "survey_coverage": {
+  "weekly_survey": 36,
+  "frequent_modelled_kensington": 16.0,
+  "frequent_ci": [
+   13,
+   88
+  ],
+  "occasional_survey": 51,
+  "occasional_modelled_kensington": 208.8,
+  "occasional_ci": [
+   41.48394561363329,
+   237.96819361381836
+  ],
+  "corridor_factor": [
+   1.58,
+   4.64
+  ]
+ },
+ "generated": "2026-11-07 09:22",
+ "templates": {
+  "base": "daily: 80 % of mild weekdays, 65 % harsh, 40 % holiday weekdays, 5 % weekend days, 2 passages per riding day, 80 % as matched pairs; regular: 35 % / 16 % / 20 % / 15 %, 2 passages, 60 % paired; occasional: 10 % mild / 3 % harsh (weekday and weekend alike), 1.5 passages, 30 % paired",
+  "one_way": "as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point)",
+  "weather_sensitive": "as base, but the regular and occasional bands drop more on harsh days (regular 10 %, occasional 1.5 %) and the daily band less (70 %)",
+  "survey_literal": "riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors as base"
+ }
+}

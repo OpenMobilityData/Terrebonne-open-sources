@@ -1,0 +1,7 @@
+band,people,riding_days_low,riding_days_central,riding_days_high,passages_per_riding_day,passages_low,passages_central,passages_high
+at least weekly (36),36,17,43,86,1.0,622,1556,3111
+at least weekly (36),36,17,43,86,1.5,933,2334,4667
+at least weekly (36),36,17,43,86,2.0,1245,3111,6223
+less than weekly (51),51,4,8,12,1.0,204,408,612
+less than weekly (51),51,4,8,12,1.5,306,612,918
+less than weekly (51),51,4,8,12,2.0,408,816,1224
