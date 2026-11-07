@@ -1,0 +1,411 @@
+{
+ "years": [
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024
+ ],
+ "congregations": {
+  "130341852RR0001": {
+   "short": "Sainte-Monique (St Monica)",
+   "cls": "terrebonne",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "base_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "fpe_2024": "2024-12-31",
+   "series": {
+    "2015": {
+     "revenue": 294600.0,
+     "gifts": 273679.0,
+     "receipted": 249079.0,
+     "rental": 7687.0,
+     "expenditures": 389129.0,
+     "surplus": -94529.0,
+     "assets": 673901.0
+    },
+    "2016": {
+     "revenue": 304834.0,
+     "gifts": 298326.0,
+     "receipted": 252082.0,
+     "rental": 6141.0,
+     "expenditures": 297851.0,
+     "surplus": 6983.0,
+     "assets": 680200.0
+    },
+    "2017": {
+     "revenue": 281819.0,
+     "gifts": 278190.0,
+     "receipted": 241808.0,
+     "rental": 0.0,
+     "expenditures": 250879.0,
+     "surplus": 30940.0,
+     "assets": 709620.0
+    },
+    "2018": {
+     "revenue": 296399.0,
+     "gifts": 289725.0,
+     "receipted": 254938.0,
+     "rental": 6435.0,
+     "expenditures": 261865.0,
+     "surplus": 34534.0,
+     "assets": 750051.0
+    },
+    "2019": {
+     "revenue": 276981.0,
+     "gifts": 263955.0,
+     "receipted": 229425.0,
+     "rental": 8925.0,
+     "expenditures": 277716.0,
+     "surplus": -735.0,
+     "assets": 741843.0
+    },
+    "2020": {
+     "revenue": 211438.0,
+     "gifts": 202114.0,
+     "receipted": 195512.0,
+     "rental": 1175.0,
+     "expenditures": 198279.0,
+     "surplus": 13159.0,
+     "assets": 794350.0
+    },
+    "2021": {
+     "revenue": 202900.0,
+     "gifts": 194876.0,
+     "receipted": 185599.0,
+     "rental": 3460.0,
+     "expenditures": 201549.0,
+     "surplus": 1351.0,
+     "assets": 246995.0
+    },
+    "2022": {
+     "revenue": 259956.0,
+     "gifts": 235000.0,
+     "receipted": 190139.0,
+     "rental": 17490.0,
+     "expenditures": 291727.0,
+     "surplus": -31771.0,
+     "assets": 723035.0
+    },
+    "2023": {
+     "revenue": 266650.0,
+     "gifts": 234216.0,
+     "receipted": 204950.0,
+     "rental": 15875.0,
+     "expenditures": 274890.0,
+     "surplus": -8240.0,
+     "assets": 716315.0
+    },
+    "2024": {
+     "revenue": 250718.0,
+     "gifts": 219873.0,
+     "receipted": 201562.0,
+     "rental": 15339.0,
+     "expenditures": 269373.0,
+     "surplus": -18655.0,
+     "assets": 881634.0
+    }
+   },
+   "revenue_base_mean": 243585.0,
+   "revenue_2024": 250718.0,
+   "revenue_2024_vs_base_pct": 2.9,
+   "revenue_base_min": 202900.0,
+   "revenue_base_max": 276981.0,
+   "revenue_2024_within_base_range": true,
+   "revenue_2023": 266650.0,
+   "revenue_2024_vs_2023_pct": -6.0,
+   "gifts_base_mean": 226032.2,
+   "gifts_2024": 219873.0,
+   "gifts_2024_vs_base_pct": -2.7,
+   "gifts_base_min": 194876.0,
+   "gifts_base_max": 263955.0,
+   "gifts_2024_within_base_range": true,
+   "gifts_2023": 234216.0,
+   "gifts_2024_vs_2023_pct": -6.1,
+   "expenditures_base_mean": 248832.2,
+   "expenditures_2024": 269373.0,
+   "expenditures_2024_vs_base_pct": 8.3,
+   "expenditures_base_min": 198279.0,
+   "expenditures_base_max": 291727.0,
+   "expenditures_2024_within_base_range": true,
+   "expenditures_2023": 274890.0,
+   "expenditures_2024_vs_2023_pct": -2.0
+  },
+  "843768433RR0002": {
+   "short": "Yuen Kwok Buddhist Temple",
+   "cls": "terrebonne",
+   "years": [
+    2022,
+    2023,
+    2024
+   ],
+   "base_years": [
+    2022,
+    2023
+   ],
+   "fpe_2024": "2024-12-31",
+   "series": {
+    "2022": {
+     "revenue": 168191.0,
+     "gifts": 168191.0,
+     "receipted": 101480.0,
+     "rental": 0.0,
+     "expenditures": 144526.0,
+     "surplus": 23665.0,
+     "assets": 1967633.0
+    },
+    "2023": {
+     "revenue": 168191.0,
+     "gifts": 168191.0,
+     "receipted": 101480.0,
+     "rental": 0.0,
+     "expenditures": 144526.0,
+     "surplus": 23665.0,
+     "assets": 1967633.0
+    },
+    "2024": {
+     "revenue": 179552.0,
+     "gifts": 179552.0,
+     "receipted": 107731.0,
+     "rental": 0.0,
+     "expenditures": 178213.0,
+     "surplus": 1339.0,
+     "assets": 1908123.0
+    }
+   },
+   "revenue_base_mean": 168191.0,
+   "revenue_2024": 179552.0,
+   "revenue_2024_vs_base_pct": 6.8,
+   "revenue_base_min": 168191.0,
+   "revenue_base_max": 168191.0,
+   "revenue_2024_within_base_range": false,
+   "revenue_2023": 168191.0,
+   "revenue_2024_vs_2023_pct": 6.8,
+   "gifts_base_mean": 168191.0,
+   "gifts_2024": 179552.0,
+   "gifts_2024_vs_base_pct": 6.8,
+   "gifts_base_min": 168191.0,
+   "gifts_base_max": 168191.0,
+   "gifts_2024_within_base_range": false,
+   "gifts_2023": 168191.0,
+   "gifts_2024_vs_2023_pct": 6.8,
+   "expenditures_base_mean": 144526.0,
+   "expenditures_2024": 178213.0,
+   "expenditures_2024_vs_base_pct": 23.3,
+   "expenditures_base_min": 144526.0,
+   "expenditures_base_max": 144526.0,
+   "expenditures_2024_within_base_range": false,
+   "expenditures_2023": 144526.0,
+   "expenditures_2024_vs_2023_pct": 23.3
+  },
+  "837788975RR0001": {
+   "short": "Deliverance Church of God 7th Day",
+   "cls": "terrebonne-address-only",
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "base_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "fpe_2024": "2024-09-30",
+   "series": {
+    "2015": {
+     "revenue": 11076.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 9283.0,
+     "surplus": 1793.0,
+     "assets": 5607.0
+    },
+    "2016": {
+     "revenue": 9121.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 8457.0,
+     "surplus": 664.0,
+     "assets": 6271.0
+    },
+    "2017": {
+     "revenue": 9690.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 8740.0,
+     "surplus": 950.0,
+     "assets": 7221.0
+    },
+    "2018": {
+     "revenue": 11365.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 8601.0,
+     "surplus": 2764.0,
+     "assets": 10002.0
+    },
+    "2019": {
+     "revenue": 9143.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 8052.0,
+     "surplus": 1091.0,
+     "assets": 11093.0
+    },
+    "2020": {
+     "revenue": 4933.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 7826.0,
+     "surplus": -2893.0,
+     "assets": 8200.0
+    },
+    "2021": {
+     "revenue": 7150.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 7104.0,
+     "surplus": 46.0,
+     "assets": 8246.0
+    },
+    "2022": {
+     "revenue": 6771.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 8925.0,
+     "surplus": -2154.0,
+     "assets": 6076.0
+    },
+    "2023": {
+     "revenue": 8127.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 8536.0,
+     "surplus": -409.0,
+     "assets": 5683.0
+    },
+    "2024": {
+     "revenue": 0.0,
+     "gifts": 0.0,
+     "receipted": 0.0,
+     "rental": 0.0,
+     "expenditures": 0.0,
+     "surplus": 0.0,
+     "assets": 0.0
+    }
+   },
+   "revenue_base_mean": 7224.8,
+   "revenue_2024": 0.0,
+   "revenue_2024_vs_base_pct": -100.0,
+   "revenue_base_min": 4933.0,
+   "revenue_base_max": 9143.0,
+   "revenue_2024_within_base_range": false,
+   "revenue_2023": 8127.0,
+   "revenue_2024_vs_2023_pct": -100.0,
+   "gifts_base_mean": 0.0,
+   "gifts_2024": 0.0,
+   "gifts_2024_vs_base_pct": null,
+   "gifts_base_min": 0.0,
+   "gifts_base_max": 0.0,
+   "gifts_2024_within_base_range": true,
+   "gifts_2023": 0.0,
+   "gifts_2024_vs_2023_pct": null,
+   "expenditures_base_mean": 8088.6,
+   "expenditures_2024": 0.0,
+   "expenditures_2024_vs_base_pct": -100.0,
+   "expenditures_base_min": 7104.0,
+   "expenditures_base_max": 8925.0,
+   "expenditures_2024_within_base_range": false,
+   "expenditures_2023": 8536.0,
+   "expenditures_2024_vs_2023_pct": -100.0
+  }
+ },
+ "peer_changes_header": [
+  "bn",
+  "parish",
+  "role",
+  "gifts_2023",
+  "gifts_2024",
+  "gifts_change_2023_2024_pct",
+  "gifts_2024_vs_2022_2023_mean_pct",
+  "revenue_2023",
+  "revenue_2024",
+  "revenue_change_2023_2024_pct",
+  "revenue_2024_vs_2022_2023_mean_pct",
+  "gifts_change_2023_2024_rank_of_13",
+  "gifts_2024_vs_2022_2023_mean_rank_of_13",
+  "revenue_change_2023_2024_rank_of_13",
+  "revenue_2024_vs_2022_2023_mean_rank_of_13"
+ ],
+ "fabriques_reference": {
+  "gifts_change_2023_2024": {
+   "median_pct": 0.8,
+   "n": 12,
+   "min": -49.6,
+   "max": 72.6
+  },
+  "gifts_2024_vs_2022_2023_mean": {
+   "median_pct": 5.8,
+   "n": 12,
+   "min": -31.0,
+   "max": 71.6
+  },
+  "gifts_subject_change_2023_2024_pct": "-6.1",
+  "gifts_subject_rank_of_13": "10",
+  "revenue_change_2023_2024": {
+   "median_pct": 5.0,
+   "n": 12,
+   "min": -12.4,
+   "max": 63.1
+  },
+  "revenue_2024_vs_2022_2023_mean": {
+   "median_pct": 5.1,
+   "n": 12,
+   "min": -7.9,
+   "max": 71.7
+  },
+  "revenue_subject_change_2023_2024_pct": "-6.0",
+  "revenue_subject_rank_of_13": "9"
+ },
+ "generated": "2026-11-07 12:47"
+}

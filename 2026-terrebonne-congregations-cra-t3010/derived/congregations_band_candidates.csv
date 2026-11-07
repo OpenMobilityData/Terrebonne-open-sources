@@ -1,0 +1,5 @@
+bn,short,address,postal_code,position,note
+107385957RR0001,First Church of Christ Scientist,5715 avenue de Monkland,H4A1E7,Monkland frontage (Marcil–Old Orchard),"not used in the note (the question is the street itself); returns 2015–2024 on file in raw/ from the first fetch were overwritten by the Terrebonne-only fetch"
+119027746RR0001,Madison Baptist Church,6297 avenue de Monkland,H4B1G8,Monkland frontage at Madison,"outside the roll extract's bounding box; placed by address"
+119202919RR0002,St. Thomas' Church (Anglican),6897 avenue Somerled,H4V1V2,Somerled frontage at Rosedale,
+108023375RR0001,St. John's Lutheran Church,4345 avenue Marcil,H4A2Z9,on Marcil between Terrebonne and Monkland,
