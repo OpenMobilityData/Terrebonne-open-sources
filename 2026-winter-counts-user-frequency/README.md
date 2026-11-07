@@ -8,9 +8,10 @@
 
 | File | Content |
 |---|---|
-| [`derived/winter_counts_user_frequency_note_en.pdf`](derived/winter_counts_user_frequency_note_en.pdf) | The note (12 pp.): technical abstract, lay summary, question, data and coverage, methods (matching the sensors, the structure of the winter at Kensington, model-free bounds, the frequency-band model, the corridor, the survey), results, discussion, reproducibility |
+| [`derived/winter_counts_user_frequency_note_en.pdf`](derived/winter_counts_user_frequency_note_en.pdf) | The note (12 pp.): technical abstract, short lay summary, question, data and coverage, methods (matching the sensors, the structure of the winter at Kensington, model-free bounds, the frequency-band model, the corridor, the survey), results, discussion, reproducibility |
 | [`derived/winter_counts_user_frequency_deck_en.pdf`](derived/winter_counts_user_frequency_deck_en.pdf) | The slide deck (16 slides, 16:9) |
-| [`derived/lay_abstract_en.txt`](derived/lay_abstract_en.txt) | The lay summary as plain text (one paragraph per line), the same text as in the note; written by `build_docs.py` with the numbers of `summary.json` |
+| [`derived/lay_abstract_en_short.txt`](derived/lay_abstract_en_short.txt) | The short lay summary (two paragraphs), the text printed in the note after the technical abstract; plain text, one paragraph per line; written by `build_docs.py` with the numbers of `summary.json` |
+| [`derived/lay_abstract_en_long.txt`](derived/lay_abstract_en_long.txt) | The long lay summary (five paragraphs), same source and numbers |
 | [`derived/summary.json`](derived/summary.json) | Every number quoted in the note and the deck: coverage, cross-sensor ratios (by month, by hour, by weather), direction mapping, Girouard against Kensington, the two snapshot days, the winter core at Kensington, the negative-binomial regression, the bounds, the band fits (four template sets, profile intervals), the corridor factors, year over year, the survey comparison |
 | [`derived/coverage.csv`](derived/coverage.csv) | Valid days, first and last day and passages per sensor and winter |
 | [`derived/cross_sensor_ratios.csv`](derived/cross_sensor_ratios.csv) | Telraam against the loop on matched hours (8–16 h, uptime ≥ 0.7), by month and for the autumn and winter-core periods |

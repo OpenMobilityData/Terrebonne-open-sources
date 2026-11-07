@@ -30,7 +30,7 @@ Can the winter bicycle counts on rue de Terrebonne (several sensors, overlapping
 ## Status
 - [x] Folder, raw extracts (Girouard det-00118 h/d rows; ECCC 2024), this plan — Nov 7, 2026
 - [x] winter_counts_analysis.py steps 1–8 (summary.json, CSVs, figures) — Nov 7 (snow-day ratio check and the frequent-core profile added the same day)
-- [x] build_docs.py, note (12 pp., technical abstract + lay summary) + deck (16 slides) + lay_abstract_en.txt — Nov 7
+- [x] build_docs.py, note (12 pp., technical abstract + lay summary) + deck (16 slides) + lay_abstract_en_short.txt (in the note) and lay_abstract_en_long.txt — Nov 7
 - [x] README, root README row — Nov 7
 - [ ] Owner's review of the note and deck (publication grade: wording, the template choices, the snow-day finding); then evidence-graph nodes (t_winter_counts_bands, t_snowday_ratio, t_corridor_gradient, t_distinct_users_floor) and the .github profile map
 - [ ] Open questions recorded in the note: the snow-day divergence (a side-by-side video check at the loop on a snow day); a passage-weighted intercept at the counting point; the Telraam direction split (unresolved); the Dec 1 survey report's finer frequency categories once public

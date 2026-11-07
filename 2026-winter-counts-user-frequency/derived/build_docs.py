@@ -43,8 +43,18 @@ How many people are behind the passages? Without knowing how often each person r
 
 The survey found 87 people who cycled on Terrebonne last winter, 36 of them at least weekly. The trips they describe amount to roughly {si['ratio_central']*100:.0f} per cent of the passages counted at Kensington, so the count and the survey are consistent. The survey reached a large share of the frequent riders and a small share of the occasional ones, which is what a voluntary survey of users does. The 87 are a floor under the number of people who cycle the street in winter, not a measure of it.
 """
-open(os.path.join(HERE, 'lay_abstract_en.txt'), 'w', encoding='utf-8').write(LAY.strip() + '\n')
-LAY_TEX = '\\section*{Lay summary}\n' + '\n\n'.join(esc(p) for p in LAY.strip().split('\n\n')[1:]) + '\n'
+LAY_SHORT = f"""Lay summary
+
+The borough's winter figures for rue de Terrebonne count passages at one point, Kensington: one bicycle crossing in one direction. They do not count people. This note uses four sensors along the street to ask how many people cycle it in winter and how often, and compares the answer with the APC-NDG survey of October and November 2026.
+
+From December 1, 2025 to February 28, 2026 Kensington recorded {co['passages']:,} passages, about {co['weekday']['mean']:.0f} on a weekday and {co['weekend']['mean']:.0f} on a weekend day; some {co['pairs']['mean']:.0f} a day are matched morning and evening trips, the mark of commuting. The street is busier at its east end: on dry days Draper counts {cr['draper_over_kensington']:.1f} times Kensington and Girouard {cr['girouard_wb_over_kensington_wb']:.1f} times. No counter gives a head count without knowing how often each person rides, but at least {bd['king_edward']['people_ge_m2']} different people cycled past King Edward on {pd(bd['king_edward']['date'])} and at least {bd['kensington_core']['people_ge_m2']} past Kensington on {pd(bd['kensington_core']['date'])}. The survey's 87 winter cyclists account for about {si['ratio_central']*100:.0f} per cent of the passages counted: consistent with the count, and a floor under the number of people, not a measure of it.
+"""
+open(os.path.join(HERE, 'lay_abstract_en_long.txt'), 'w', encoding='utf-8').write(LAY.strip() + '\n')
+open(os.path.join(HERE, 'lay_abstract_en_short.txt'), 'w', encoding='utf-8').write(LAY_SHORT.strip() + '\n')
+wc = lambda t: len(t.split()); lim = wc(' '.join(LAY.strip().split('\n\n')[1:3])); short_wc = wc(' '.join(LAY_SHORT.strip().split('\n\n')[1:]))
+assert short_wc <= lim, f'short lay summary {short_wc} words exceeds the limit of {lim}'
+print(f'lay summary: long {wc(LAY)} words, short {short_wc} words (limit {lim} = the long version\'s first two paragraphs)')
+LAY_TEX = '\\section*{Lay summary}\n' + '\n\n'.join(esc(p) for p in LAY_SHORT.strip().split('\n\n')[1:]) + '\n'
 
 NOTE = r'''\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
