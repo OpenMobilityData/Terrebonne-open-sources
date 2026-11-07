@@ -9,15 +9,12 @@
   "lidar"
  ],
  "frame_m": [
-  -248,
-  70,
-  -70,
-  192
+  -29,
+  50,
+  -41,
+  39
  ],
- "far_box": {
-  "dist_from_terrebonne": 210.0,
-  "width": 9.36
- },
+ "far_box": null,
  "terrebonne_curb_to_curb": 11.0,
  "residual": 8.5,
  "contraflow_plus_buffer": 2.5,
@@ -25,9 +22,7 @@
   "terrebonne_west": 11.0,
   "terrebonne_east": 11.0,
   "cross": [
-   9.36,
-   9.14,
-   9.36
+   9.14
   ]
  }
 }

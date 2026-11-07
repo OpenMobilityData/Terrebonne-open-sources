@@ -20,7 +20,8 @@ G54 = os.path.join(os.path.dirname(os.path.dirname(HERE)), '1954-underwriters-pl
 import frame as FR; from mtm import mtm8
 ap = argparse.ArgumentParser(); ap.add_argument('--street', default='Kensington'); ap.add_argument('--half', type=float, default=70.0)
 ap.add_argument('--mpp', type=float, default=0.08); ap.add_argument('--no-wms', action='store_true'); ap.add_argument('--bg', choices=['wms', 'lidar', 'both'], default='wms')
-ap.add_argument('--to-next', choices=['N', 'S'], default=None); ap.add_argument('--next-name', default=None, help='name of the street at the far end of the block (label)'); ap.add_argument('--contraflow', type=float, default=2.5, help='contraflow lane + buffer, m')
+ap.add_argument('--to-next', choices=['N', 'S'], default=None); ap.add_argument('--blocks', default='NS', help='which cross-street blocks get boxes (N, S or NS)')
+ap.add_argument('--fit', type=float, default=None, help='frame = the drawn boxes plus this margin, m'); ap.add_argument('--dpi', type=int, default=150); ap.add_argument('--suffix', default=''); ap.add_argument('--next-name', default=None, help='name of the street at the far end of the block (label)'); ap.add_argument('--contraflow', type=float, default=2.5, help='contraflow lane + buffer, m')
 A = ap.parse_args()
 if A.no_wms: A.bg = 'lidar'
 KINDS = ['wms', 'lidar'] if A.bg == 'both' else [A.bg]
@@ -70,7 +71,7 @@ for d_along, sign in ((-26.0, -1), (26.0, 1)):
     BOXES.append((rect(c2, tT, nT, RESID, 7.0), C_R, f'{RESID:.1f} m', 'T'))
     offs.append(cn + cs)
 # the cross street: north and south blocks, a station 30 m from the node, the curbs from its profile; then the two Terrebonne boxes repeated
-for b in blocks:
+for b in [b for b in blocks if b['side'] in A.blocks]:
     f = seg[int(b['id_trc'])]; cs_ = [FR.to_EN(c[0], c[1]) for c in f['geometry']['coordinates']]
     if math.hypot(cs_[-1][0] - E0, cs_[-1][1] - N0) < math.hypot(cs_[0][0] - E0, cs_[0][1] - N0): cs_ = cs_[::-1]
     tX = unit(cs_[0], cs_[1]); nX = (-tX[1], tX[0])    # along = away from Terrebonne; across = left of that
@@ -110,6 +111,9 @@ if A.to_next:
     if A.next_name: LABELS.append((*shift(shift(far, tF, 4.0), (-tF[1], tF[0]), -0.0), A.next_name, ang_of((-tF[1], tF[0]))))
     LABELS.append((*shift((80 * tT[0], 80 * tT[1]), nT, 10.0), 'rue de Terrebonne', ang_of(tT)))
 else: FAR_BOX = None
+if A.fit is not None:
+    xs = [c[0] for bx in BOXES for c in bx[0]]; ys = [c[1] for bx in BOXES for c in bx[0]]
+    xmin, xmax, ymin, ymax = min(xs) - A.fit, max(xs) + A.fit, min(ys) - A.fit, max(ys) + A.fit
 xmin, xmax, ymin, ymax = [round(v) for v in (xmin, xmax, ymin, ymax)]
 
 # ---------- backgrounds
@@ -167,10 +171,10 @@ for kind in KINDS:
   got = bg_wms() if kind == 'wms' else bg_lidar()
   if got is None: print('no background for', kind); continue
   img, origin, kw = got; src = kind; DRAWN.append(kind)
-  base = 'cross_street_boxes' + ('' if (A.street == 'Kensington' and not A.to_next) else '_' + slug) + ('' if kind == 'wms' else '_lidar')
+  base = 'cross_street_boxes' + ('' if (A.street == 'Kensington' and not A.to_next and A.fit is None) else '_' + slug) + A.suffix + ('' if kind == 'wms' else '_lidar')
   for lang, L in LAB.items():
     fw = 10.0; fh = (fw * (ymax - ymin) / (xmax - xmin) + 1.2) if (ymax - ymin) == (xmax - xmin) else 0.8 * fw * (ymax - ymin) / (xmax - xmin) + 1.9
-    fig, ax = plt.subplots(figsize=(fw, fh), dpi=150)
+    fig, ax = plt.subplots(figsize=(fw, fh), dpi=A.dpi)
     ax.imshow(img, extent=(xmin, xmax, ymin, ymax), origin=origin, interpolation='bilinear', **(kw or {}))
     for corners, col, lab, _k in BOXES:
         ax.add_patch(Polygon(corners, closed=True, fc=col, ec='white', lw=1.4, alpha=0.55))
@@ -181,14 +185,14 @@ for kind in KINDS:
         ax.text(cx, cy, lab.replace('.', ',') if lang == 'fr' else lab, color='white', fontsize=11, fontweight='bold', ha='center', va='center', rotation=ang, rotation_mode='anchor', path_effects=[pe.withStroke(linewidth=2.5, foreground='black')])
     ax.set_xlim(xmin, xmax); ax.set_ylim(ymin, ymax); ax.set_aspect('equal'); ax.set_xticks([]); ax.set_yticks([])
     # scale bar
-    ax.plot([xmin + 6, xmin + 26], [ymin + 6, ymin + 6], color='white', lw=3, path_effects=[pe.withStroke(linewidth=5, foreground='black')]); ax.text(xmin + 16, ymin + 8.5, '20 m', color='white', ha='center', fontsize=9, path_effects=[pe.withStroke(linewidth=2.5, foreground='black')])
+    SB = 10 if (xmax - xmin) < 120 else 20; ax.plot([xmin + 4, xmin + 4 + SB], [ymin + 4, ymin + 4], color='white', lw=3, path_effects=[pe.withStroke(linewidth=5, foreground='black')]); ax.text(xmin + 4 + SB / 2, ymin + 4 + 0.012 * (ymax - ymin), f'{SB} m', va='bottom', color='white', ha='center', fontsize=9, path_effects=[pe.withStroke(linewidth=2.5, foreground='black')])
     for x_, y_, txt, an in LABELS:
         ax.text(x_, y_, txt, color='white', fontsize=10, fontstyle='italic', ha='center', va='center', rotation=an, rotation_mode='anchor', path_effects=[pe.withStroke(linewidth=2.5, foreground='black')])
     from matplotlib.patches import Patch
     ax.legend(handles=[Patch(fc=C_T, ec='white', alpha=0.7, label=L['blue']), Patch(fc=C_R, ec='white', alpha=0.7, label=L['red']), Patch(fc=C_X, ec='white', alpha=0.7, label=L['green'])],
               loc='upper center', bbox_to_anchor=(0.5, -0.005), fontsize=8.6, frameon=False, ncol=1)
     ax.set_title(L['t'], fontsize=11.5); fig.text(0.5, 0.012, L['src'][src], fontsize=7.2, color='0.3', ha='center', wrap=True)
-    fig.tight_layout(rect=(0, 0.035, 1, 1)); fig.savefig(os.path.join(FIG, f'{base}_{lang}.png'), **(dict(bbox_inches='tight', pad_inches=0.15) if A.to_next else {})); print('wrote', f'{base}_{lang}.png'); plt.close(fig)
+    fig.tight_layout(rect=(0, 0.035, 1, 1)); fig.savefig(os.path.join(FIG, f'{base}_{lang}.png'), **(dict(bbox_inches='tight', pad_inches=0.15) if (A.to_next or A.fit is not None) else {})); print('wrote', f'{base}_{lang}.png'); plt.close(fig)
 json.dump(dict(street=A.street, node=[lon0, lat0], background=DRAWN, frame_m=[xmin, xmax, ymin, ymax], far_box=FAR_BOX, terrebonne_curb_to_curb=TERR_W, residual=RESID, contraflow_plus_buffer=A.contraflow,
                drawn=dict(terrebonne_west=round(offs[0], 2), terrebonne_east=round(offs[1], 2), cross=[round(o, 2) for o in offs[2:]])),
           open(os.path.join(HERE, f'cross_street_boxes_{A.street.lower()}.json'), 'w'), indent=1)
