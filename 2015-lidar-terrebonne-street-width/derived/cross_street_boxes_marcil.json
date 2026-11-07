@@ -1,0 +1,33 @@
+{
+ "street": "Marcil",
+ "node": [
+  -73.625946,
+  45.477132
+ ],
+ "background": [
+  "wms",
+  "lidar"
+ ],
+ "frame_m": [
+  -248,
+  70,
+  -70,
+  192
+ ],
+ "far_box": {
+  "dist_from_terrebonne": 210.0,
+  "width": 9.36
+ },
+ "terrebonne_curb_to_curb": 11.0,
+ "residual": 8.5,
+ "contraflow_plus_buffer": 2.5,
+ "drawn": {
+  "terrebonne_west": 11.0,
+  "terrebonne_east": 11.0,
+  "cross": [
+   9.36,
+   9.14,
+   9.36
+  ]
+ }
+}
