@@ -1,0 +1,5 @@
+group,respondents,vehicles_0,vehicles_1,vehicles_2,vehicles_3plus,vehicles_blank,with_vehicle,vehicles_total,offstreet_built_answered,offstreet_built_ge1,offstreet_built_share,offstreet_built_ci,offstreet_used_answered,offstreet_used_ge1,parked_own_offstreet,parked_terrebonne,parked_cross_within_block,parked_cross_farther,parked_somerled_monkland,parked_rented,parked_other,street_parkers,hardship_strict,hardship_loose,hardship_typical_evening,hardship_storm,street_parkers_no_offstreet,street_parkers_more_vehicles_than_places
+on Terrebonne,37,2,27,6,2,0,35,45,35,18,0.514,"(0.356, 0.67)",35,19,15,9,9,6,1,1,0,22,17,19,10,16,17,20
+within one block,72,13,35,20,4,0,59,87,59,43,0.729,"(0.604, 0.826)",59,39,25,6,32,3,2,0,2,38,18,28,14,13,16,25
+corridor (both),109,15,62,26,6,0,94,132,94,61,0.649,"(0.548, 0.738)",94,58,40,15,41,9,3,1,2,60,35,47,24,29,33,45
+all respondents,206,49,112,39,6,0,157,208,156,106,0.679,"(0.603, 0.748)",156,102,75,16,56,15,3,3,8,82,43,64,28,37,45,60

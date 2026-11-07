@@ -1,0 +1,489 @@
+{
+ "exp": {
+  "stated": {
+   "terrebonne_wb": 230,
+   "terrebonne_eb": 248,
+   "terrebonne": 478,
+   "stubs_north": 328,
+   "stubs_south": 301,
+   "stubs": 629,
+   "page_supply": 40,
+   "table71": {
+    "current": 475,
+    "standards": 375,
+    "scenario1": 161,
+    "scenario2": 172,
+    "scenario3": 171,
+    "page": 88
+   }
+  },
+  "derived_supply": {
+   "residential west / direction west": 92,
+   "residential west / direction east": 97,
+   "institutional / direction west": 41,
+   "institutional / direction east": 42,
+   "residential east / direction west": 109,
+   "residential east / direction east": 115,
+   "residential west / cross streets north": 112,
+   "residential west / cross streets south": 113,
+   "institutional / cross streets north": 43,
+   "institutional / cross streets south": 29,
+   "residential east / cross streets north": 162,
+   "residential east / cross streets south": 152
+  },
+  "derived_total_terrebonne": 496,
+  "derived_total_stubs": 610,
+  "survey_days": "Thursday, September 29, 2022 (7:30\u20138:30, 12:30\u201313:30, 18:30\u201319:30) and Saturday, October 1, 2022 (8:00\u20139:00, 12:30\u201313:30, 18:30\u201319:30); works between Walkley and Cumberland at the time (report p. 4)",
+  "by_period": [
+   {
+    "period": "Thu AM",
+    "label": "Thu 7:30\u20138:30",
+    "terrebonne_occupied": 276,
+    "terrebonne_vacant": 221,
+    "terrebonne_occupancy": 0.555,
+    "stubs_occupied": 320,
+    "stubs_vacant": 283,
+    "stubs_occupancy": 0.531,
+    "residential west_terrebonne_occupied": 100,
+    "residential west_terrebonne_vacant": 92,
+    "institutional_terrebonne_occupied": 41,
+    "institutional_terrebonne_vacant": 41,
+    "residential east_terrebonne_occupied": 135,
+    "residential east_terrebonne_vacant": 88
+   },
+   {
+    "period": "Thu noon",
+    "label": "Thu 12:30\u201313:30",
+    "terrebonne_occupied": 309,
+    "terrebonne_vacant": 188,
+    "terrebonne_occupancy": 0.622,
+    "stubs_occupied": 346,
+    "stubs_vacant": 267,
+    "stubs_occupancy": 0.564,
+    "residential west_terrebonne_occupied": 120,
+    "residential west_terrebonne_vacant": 76,
+    "institutional_terrebonne_occupied": 48,
+    "institutional_terrebonne_vacant": 30,
+    "residential east_terrebonne_occupied": 142,
+    "residential east_terrebonne_vacant": 82
+   },
+   {
+    "period": "Thu PM",
+    "label": "Thu 18:30\u201319:30",
+    "terrebonne_occupied": 247,
+    "terrebonne_vacant": 246,
+    "terrebonne_occupancy": 0.501,
+    "stubs_occupied": 311,
+    "stubs_vacant": 298,
+    "stubs_occupancy": 0.511,
+    "residential west_terrebonne_occupied": 79,
+    "residential west_terrebonne_vacant": 108,
+    "institutional_terrebonne_occupied": 30,
+    "institutional_terrebonne_vacant": 54,
+    "residential east_terrebonne_occupied": 138,
+    "residential east_terrebonne_vacant": 84
+   },
+   {
+    "period": "Sat AM",
+    "label": "Sat 8:00\u20139:00",
+    "terrebonne_occupied": 219,
+    "terrebonne_vacant": 261,
+    "terrebonne_occupancy": 0.456,
+    "stubs_occupied": 306,
+    "stubs_vacant": 304,
+    "stubs_occupancy": 0.502,
+    "residential west_terrebonne_occupied": 69,
+    "residential west_terrebonne_vacant": 104,
+    "institutional_terrebonne_occupied": 35,
+    "institutional_terrebonne_vacant": 49,
+    "residential east_terrebonne_occupied": 115,
+    "residential east_terrebonne_vacant": 108
+   },
+   {
+    "period": "Sat noon",
+    "label": "Sat 12:30\u201313:30",
+    "terrebonne_occupied": 216,
+    "terrebonne_vacant": 279,
+    "terrebonne_occupancy": 0.436,
+    "stubs_occupied": 298,
+    "stubs_vacant": 315,
+    "stubs_occupancy": 0.486,
+    "residential west_terrebonne_occupied": 83,
+    "residential west_terrebonne_vacant": 104,
+    "institutional_terrebonne_occupied": 25,
+    "institutional_terrebonne_vacant": 59,
+    "residential east_terrebonne_occupied": 107,
+    "residential east_terrebonne_vacant": 116
+   },
+   {
+    "period": "Sat PM",
+    "label": "Sat 18:30\u201319:30",
+    "terrebonne_occupied": 218,
+    "terrebonne_vacant": 276,
+    "terrebonne_occupancy": 0.441,
+    "stubs_occupied": 264,
+    "stubs_vacant": 343,
+    "stubs_occupancy": 0.435,
+    "residential west_terrebonne_occupied": 97,
+    "residential west_terrebonne_vacant": 92,
+    "institutional_terrebonne_occupied": 17,
+    "institutional_terrebonne_vacant": 65,
+    "residential east_terrebonne_occupied": 104,
+    "residential east_terrebonne_vacant": 119
+   }
+  ],
+  "thu_pm": {
+   "period": "Thu PM",
+   "label": "Thu 18:30\u201319:30",
+   "terrebonne_occupied": 247,
+   "terrebonne_vacant": 246,
+   "terrebonne_occupancy": 0.501,
+   "stubs_occupied": 311,
+   "stubs_vacant": 298,
+   "stubs_occupancy": 0.511,
+   "residential west_terrebonne_occupied": 79,
+   "residential west_terrebonne_vacant": 108,
+   "institutional_terrebonne_occupied": 30,
+   "institutional_terrebonne_vacant": 54,
+   "residential east_terrebonne_occupied": 138,
+   "residential east_terrebonne_vacant": 84
+  },
+  "max_occupancy_terrebonne": 0.622,
+  "min_vacant_terrebonne": 188,
+  "peak_cell": {
+   "table": "3-3",
+   "sector": "institutional",
+   "side_or_direction": "cross streets north",
+   "period": "Thu AM",
+   "occupancy_pct": "76",
+   "vacant_places": "10"
+  }
+ },
+ "curbs": {
+  "blocks": 29,
+  "lidar_night_by_eye": 183,
+  "lidar_N": 93,
+  "lidar_S": 90,
+  "lidar_converted_side": 98,
+  "optical_day": 158,
+  "optical_N": 30,
+  "optical_S": 128,
+  "optical_converted_side": 90,
+  "lots_lidar": 253,
+  "nominal_capacity_both_sides": 803,
+  "length_m": 2410,
+  "by_sector": {
+   "residential west": {
+    "blocks": 12,
+    "lidar_night": 52,
+    "optical_day": 62,
+    "exp_supply_derived": 189,
+    "exp_thu_pm_occupied": 79,
+    "lidar_night_over_exp_supply": 0.275
+   },
+   "institutional": {
+    "blocks": 5,
+    "lidar_night": 29,
+    "optical_day": 23,
+    "exp_supply_derived": 83,
+    "exp_thu_pm_occupied": 30,
+    "lidar_night_over_exp_supply": 0.349
+   },
+   "residential east": {
+    "blocks": 12,
+    "lidar_night": 102,
+    "optical_day": 73,
+    "exp_supply_derived": 223,
+    "exp_thu_pm_occupied": 138,
+    "lidar_night_over_exp_supply": 0.456
+   }
+  },
+  "lidar_night_over_exp_supply": 0.369,
+  "top_blocks_lidar": [
+   {
+    "block": "Montclair\u2013Walkley",
+    "cars": 16,
+    "nominal": 30
+   },
+   {
+    "block": "de Hampton\u2013Royal",
+    "cars": 15,
+    "nominal": 33
+   },
+   {
+    "block": "Grand\u2013Beaconsfield",
+    "cars": 12,
+    "nominal": 29
+   },
+   {
+    "block": "Hingston\u2013de Hampton",
+    "cars": 12,
+    "nominal": 33
+   },
+   {
+    "block": "King-Edward\u2013Montclair",
+    "cars": 11,
+    "nominal": 31
+   }
+  ]
+ },
+ "survey": {
+  "asof": "2026-11-07",
+  "responses": 206,
+  "groups": {
+   "on Terrebonne": {
+    "group": "on Terrebonne",
+    "respondents": 37,
+    "vehicles_0": 2,
+    "vehicles_1": 27,
+    "vehicles_2": 6,
+    "vehicles_3plus": 2,
+    "vehicles_blank": 0,
+    "with_vehicle": 35,
+    "vehicles_total": 45,
+    "offstreet_built_answered": 35,
+    "offstreet_built_ge1": 18,
+    "offstreet_built_share": 0.514,
+    "offstreet_built_ci": [
+     0.356,
+     0.67
+    ],
+    "offstreet_used_answered": 35,
+    "offstreet_used_ge1": 19,
+    "parked_own_offstreet": 15,
+    "parked_terrebonne": 9,
+    "parked_cross_within_block": 9,
+    "parked_cross_farther": 6,
+    "parked_somerled_monkland": 1,
+    "parked_rented": 1,
+    "parked_other": 0,
+    "street_parkers": 22,
+    "hardship_strict": 17,
+    "hardship_loose": 19,
+    "hardship_typical_evening": 10,
+    "hardship_storm": 16,
+    "street_parkers_no_offstreet": 17,
+    "street_parkers_more_vehicles_than_places": 20
+   },
+   "within one block": {
+    "group": "within one block",
+    "respondents": 72,
+    "vehicles_0": 13,
+    "vehicles_1": 35,
+    "vehicles_2": 20,
+    "vehicles_3plus": 4,
+    "vehicles_blank": 0,
+    "with_vehicle": 59,
+    "vehicles_total": 87,
+    "offstreet_built_answered": 59,
+    "offstreet_built_ge1": 43,
+    "offstreet_built_share": 0.729,
+    "offstreet_built_ci": [
+     0.604,
+     0.826
+    ],
+    "offstreet_used_answered": 59,
+    "offstreet_used_ge1": 39,
+    "parked_own_offstreet": 25,
+    "parked_terrebonne": 6,
+    "parked_cross_within_block": 32,
+    "parked_cross_farther": 3,
+    "parked_somerled_monkland": 2,
+    "parked_rented": 0,
+    "parked_other": 2,
+    "street_parkers": 38,
+    "hardship_strict": 18,
+    "hardship_loose": 28,
+    "hardship_typical_evening": 14,
+    "hardship_storm": 13,
+    "street_parkers_no_offstreet": 16,
+    "street_parkers_more_vehicles_than_places": 25
+   },
+   "corridor (both)": {
+    "group": "corridor (both)",
+    "respondents": 109,
+    "vehicles_0": 15,
+    "vehicles_1": 62,
+    "vehicles_2": 26,
+    "vehicles_3plus": 6,
+    "vehicles_blank": 0,
+    "with_vehicle": 94,
+    "vehicles_total": 132,
+    "offstreet_built_answered": 94,
+    "offstreet_built_ge1": 61,
+    "offstreet_built_share": 0.649,
+    "offstreet_built_ci": [
+     0.548,
+     0.738
+    ],
+    "offstreet_used_answered": 94,
+    "offstreet_used_ge1": 58,
+    "parked_own_offstreet": 40,
+    "parked_terrebonne": 15,
+    "parked_cross_within_block": 41,
+    "parked_cross_farther": 9,
+    "parked_somerled_monkland": 3,
+    "parked_rented": 1,
+    "parked_other": 2,
+    "street_parkers": 60,
+    "hardship_strict": 35,
+    "hardship_loose": 47,
+    "hardship_typical_evening": 24,
+    "hardship_storm": 29,
+    "street_parkers_no_offstreet": 33,
+    "street_parkers_more_vehicles_than_places": 45
+   },
+   "all respondents": {
+    "group": "all respondents",
+    "respondents": 206,
+    "vehicles_0": 49,
+    "vehicles_1": 112,
+    "vehicles_2": 39,
+    "vehicles_3plus": 6,
+    "vehicles_blank": 0,
+    "with_vehicle": 157,
+    "vehicles_total": 208,
+    "offstreet_built_answered": 156,
+    "offstreet_built_ge1": 106,
+    "offstreet_built_share": 0.679,
+    "offstreet_built_ci": [
+     0.603,
+     0.748
+    ],
+    "offstreet_used_answered": 156,
+    "offstreet_used_ge1": 102,
+    "parked_own_offstreet": 75,
+    "parked_terrebonne": 16,
+    "parked_cross_within_block": 56,
+    "parked_cross_farther": 15,
+    "parked_somerled_monkland": 3,
+    "parked_rented": 3,
+    "parked_other": 8,
+    "street_parkers": 82,
+    "hardship_strict": 43,
+    "hardship_loose": 64,
+    "hardship_typical_evening": 28,
+    "hardship_storm": 37,
+    "street_parkers_no_offstreet": 45,
+    "street_parkers_more_vehicles_than_places": 60
+   }
+  },
+  "public_filing": "Nov 2, 2026 (205 responses): 108 on or within a block, 59 street parkers, 34 strict / 46 loose hardship; 18 of 34 respondents on Terrebonne with a vehicle report an off-street place"
+ },
+ "offstreet": {
+  "buildings_checked": 123,
+  "buildings_either": 89,
+  "pct_buildings": 72.4,
+  "dwellings_checked": 268,
+  "dwellings_either": 188,
+  "pct_dwellings": 70.1,
+  "by_side": {
+   "N": {
+    "checked": 89,
+    "either": 70
+   },
+   "S": {
+    "checked": 34,
+    "either": 19
+   }
+  },
+  "garage_1954": 75,
+  "buildings_1954": 126,
+  "pct_1954": 59.5,
+  "dwellings_1954": 168,
+  "dwellings_roll": 289,
+  "buildings_ci": [
+   0.639,
+   0.795
+  ],
+  "dwellings_ci": [
+   0.644,
+   0.753
+  ]
+ },
+ "roll": {
+  "band": {
+   "north_street": "Somerled",
+   "north_offset_m": 259.8,
+   "south_offset_m": -285.7,
+   "margin_m": 25,
+   "note": "units with a centroid between the two streets (their own frontages included), along the lane from its west end to Girouard; bounding-box extract, clipped near the east end on the north side"
+  },
+  "terrebonne": {
+   "units": 185,
+   "dwellings": 573
+  },
+  "within_block": {
+   "units": 2316,
+   "dwellings": 5029
+  },
+  "band_total": {
+   "units": 2501,
+   "dwellings": 5602
+  },
+  "offsets": {
+   "Somerled": {
+    "median_v": 259.8,
+    "n": 123
+   },
+   "Monkland": {
+    "median_v": -285.7,
+    "n": 106
+   }
+  },
+  "coverage": {
+   "on_terrebonne": 0.065,
+   "within_block": 0.014,
+   "corridor": 0.019
+  }
+ },
+ "winters": {
+  "rows": [
+   {
+    "winter": "2021\u201322",
+    "loading_borough": 27,
+    "loading_sector": 26,
+    "storm_to_loading_borough": 36,
+    "storm_to_loading_sector": 36,
+    "snow_days": 46
+   },
+   {
+    "winter": "2022\u201323",
+    "loading_borough": 27,
+    "loading_sector": 25,
+    "storm_to_loading_borough": 34,
+    "storm_to_loading_sector": 33,
+    "snow_days": 48
+   },
+   {
+    "winter": "2023\u201324",
+    "loading_borough": 12,
+    "loading_sector": 10,
+    "storm_to_loading_borough": 18,
+    "storm_to_loading_sector": 17,
+    "snow_days": 31
+   },
+   {
+    "winter": "2024\u201325",
+    "loading_borough": 27,
+    "loading_sector": 25,
+    "storm_to_loading_borough": 32,
+    "storm_to_loading_sector": 32,
+    "snow_days": 57
+   },
+   {
+    "winter": "2025\u201326",
+    "loading_borough": 24,
+    "loading_sector": 30,
+    "storm_to_loading_borough": 36,
+    "storm_to_loading_sector": 44,
+    "snow_days": 54
+   }
+  ],
+  "mean_loading_sector": 23.2,
+  "mean_storm_to_loading_sector": 32.4,
+  "days": 121,
+  "source": "Terrebonne-private decision model, appendix \u00ab Five winters of snow-related parking constraint \u00bb (scripts/winter_constraint_nights.py): loading night = >= 100 truckloads hauled in the borough or >= 40 in sector CDN-301; storm-to-loading adds the days from a triggering snowfall (>= 2.5 cm) to the loading; December 1 to March 31"
+ },
+ "generated": "2026-11-07 11:18"
+}

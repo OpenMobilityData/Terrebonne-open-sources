@@ -1,0 +1,7 @@
+period,label,terrebonne_occupied,terrebonne_vacant,terrebonne_occupancy,stubs_occupied,stubs_vacant,stubs_occupancy,residential west_terrebonne_occupied,residential west_terrebonne_vacant,institutional_terrebonne_occupied,institutional_terrebonne_vacant,residential east_terrebonne_occupied,residential east_terrebonne_vacant
+Thu AM,Thu 7:30–8:30,276,221,0.555,320,283,0.531,100,92,41,41,135,88
+Thu noon,Thu 12:30–13:30,309,188,0.622,346,267,0.564,120,76,48,30,142,82
+Thu PM,Thu 18:30–19:30,247,246,0.501,311,298,0.511,79,108,30,54,138,84
+Sat AM,Sat 8:00–9:00,219,261,0.456,306,304,0.502,69,104,35,49,115,108
+Sat noon,Sat 12:30–13:30,216,279,0.436,298,315,0.486,83,104,25,59,107,116
+Sat PM,Sat 18:30–19:30,218,276,0.441,264,343,0.435,97,92,17,65,104,119
