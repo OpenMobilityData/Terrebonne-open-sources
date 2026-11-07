@@ -73,6 +73,64 @@
    "passages": 3150
   }
  ],
+ "winter_ratio_by_weather": {
+  "King Edward|no_snow": {
+   "matched_hours": 129,
+   "days": 15,
+   "telraam": 185,
+   "kensington": 322,
+   "ratio": 0.575
+  },
+  "King Edward|snow_ge_2.5cm": {
+   "matched_hours": 117,
+   "days": 13,
+   "telraam": 204,
+   "kensington": 231,
+   "ratio": 0.883
+  },
+  "King Edward|mild": {
+   "matched_hours": 141,
+   "days": 16,
+   "telraam": 203,
+   "kensington": 442,
+   "ratio": 0.459
+  },
+  "King Edward|harsh": {
+   "matched_hours": 229,
+   "days": 27,
+   "telraam": 351,
+   "kensington": 480,
+   "ratio": 0.731
+  },
+  "Draper|no_snow": {
+   "matched_hours": 187,
+   "days": 23,
+   "telraam": 611,
+   "kensington": 459,
+   "ratio": 1.331
+  },
+  "Draper|snow_ge_2.5cm": {
+   "matched_hours": 96,
+   "days": 12,
+   "telraam": 405,
+   "kensington": 190,
+   "ratio": 2.132
+  },
+  "Draper|mild": {
+   "matched_hours": 188,
+   "days": 24,
+   "telraam": 747,
+   "kensington": 582,
+   "ratio": 1.284
+  },
+  "Draper|harsh": {
+   "matched_hours": 222,
+   "days": 28,
+   "telraam": 789,
+   "kensington": 467,
+   "ratio": 1.69
+  }
+ },
  "direction_mapping": {
   "King Edward": {
    "n": 840,
@@ -754,26 +812,62 @@
   "kensington": {
    "max_day": 129,
    "date": "2026-03-30",
+   "weekday": "Monday",
    "people_ge_m2": 65,
-   "people_ge_m4": 33
+   "people_ge_m4": 33,
+   "snow_cm": 0.0,
+   "tmean": 8.4,
+   "same_day": {
+    "kensington": 129,
+    "king_edward": 270,
+    "draper": null,
+    "girouard_wb": 25.0
+   }
   },
   "king_edward": {
    "max_day": 307,
    "date": "2026-03-09",
+   "weekday": "Monday",
    "people_ge_m2": 154,
-   "people_ge_m4": 77
+   "people_ge_m4": 77,
+   "snow_cm": 0.0,
+   "tmean": null,
+   "same_day": {
+    "kensington": 116,
+    "king_edward": 307,
+    "draper": null,
+    "girouard_wb": 34.0
+   }
   },
   "draper": {
    "max_day": 115,
    "date": "2026-01-10",
+   "weekday": "Saturday",
    "people_ge_m2": 58,
-   "people_ge_m4": 29
+   "people_ge_m4": 29,
+   "snow_cm": 7.8,
+   "tmean": null,
+   "same_day": {
+    "kensington": 38,
+    "king_edward": 51,
+    "draper": 115,
+    "girouard_wb": 45.0
+   }
   },
   "girouard_wb": {
    "max_day": 67.0,
    "date": "2026-01-09",
+   "weekday": "Friday",
    "people_ge_m2": 34,
-   "people_ge_m4": 17
+   "people_ge_m4": 17,
+   "snow_cm": 0.0,
+   "tmean": 3.9,
+   "same_day": {
+    "kensington": 31,
+    "king_edward": 7,
+    "draper": 51,
+    "girouard_wb": 67.0
+   }
   },
   "kensington_core": {
    "max_day": 83,
@@ -785,56 +879,61 @@
  "band_fit": {
   "base": {
    "N": {
-    "daily": 16.0,
-    "regular": 0.0,
-    "occas": 208.8
+    "daily": 0.0,
+    "regular": 60.7,
+    "occas": 65.5
    },
+   "N_frequent": 60.7,
    "ci": {
     "daily": [
-     13.396646245596042,
-     18.23364667482819
+     0.0,
+     9.842799623698072
     ],
     "regular": [
-     0.0,
+     22.393664391833934,
      69.34403870119233
     ],
     "occas": [
-     41.48394561363329,
-     237.96819361381836
+     24.817097127705857,
+     128.4588479926916
+    ],
+    "frequent": [
+     32.46861895746403,
+     70.3630513200801
     ]
    },
-   "loglik": -598.8,
+   "loglik": -573.9,
    "passages_by_band": {
-    "daily": 1433,
-    "regular": 0,
-    "occas": 1842
+    "daily": 0,
+    "regular": 2464,
+    "occas": 688
    },
    "share_by_band": {
-    "daily": 0.438,
-    "regular": 0.0,
-    "occas": 0.562
+    "daily": 0.0,
+    "regular": 0.782,
+    "occas": 0.218
    },
    "per_person_passages": {
-    "daily": 89.7,
-    "regular": 36.7,
-    "occas": 8.8
+    "daily": 90.4,
+    "regular": 40.6,
+    "occas": 10.5
    },
    "riding_days_per_person": {
-    "daily": 44.9,
-    "regular": 18.3,
-    "occas": 5.9
+    "daily": 45.2,
+    "regular": 20.3,
+    "occas": 7.0
    },
-   "fitted_total": 3275,
+   "fitted_total": 3151,
    "observed_total": 3232,
    "dispersion": {
-    "y": 3.7,
-    "pairs": 2.54
+    "y": 5.48,
+    "pairs": 3.99
    },
    "fitted_by_type": {
-    "weekday_mild": 56.9,
-    "weekday_harsh": 30.2,
-    "weekend": 19.6,
-    "holiday_weekday": 37.8
+    "weekday_mild": 52.3,
+    "weekday_harsh": 36.2,
+    "weekend": 20.2,
+    "holiday_weekday": 20.5
    },
    "observed_by_type": {
     "weekday_mild": 50.6,
@@ -842,121 +941,65 @@
     "weekend": 20.5,
     "holiday_weekday": 22.0
    },
-   "desc": "daily: 80 % of mild weekdays, 65 % harsh, 40 % holiday weekdays, 5 % weekend days, 2 passages per riding day, 80 % as matched pairs; regular: 35 % / 16 % / 20 % / 15 %, 2 passages, 60 % paired; occasional: 10 % mild / 3 % harsh (weekday and weekend alike), 1.5 passages, 30 % paired"
+   "desc": "daily: rides 80 % of mild weekdays, 70 % of harsh weekdays (snow >= 2.5 cm or mean temperature <= -10 C), 30 % of holiday weekdays (Dec 22 to Jan 4), 5 % of weekend days (3 % harsh); 2 passages per riding day, 80 % of them as matched AM/PM pairs. regular: 35 % / 25 % / 12 % / 15 % (8 %); 2 passages; 60 % paired. occasional: 10 % / 6 % / 6 % / 12 % (6 %); 1.5 passages; 30 % paired"
   },
   "one_way": {
    "N": {
-    "daily": 18.0,
-    "regular": 0.0,
-    "occas": 258.8
+    "daily": 0.0,
+    "regular": 73.3,
+    "occas": 87.8
    },
+   "N_frequent": 73.3,
    "ci": {
     "daily": [
-     14.846425544526332,
-     20.206884081307074
+     0.0,
+     12.088440418967423
     ],
     "regular": [
-     0.0,
-     69.34403870119233
-    ],
-    "occas": [
-     214.7301852548066,
-     292.26078352585057
-    ]
-   },
-   "loglik": -598.9,
-   "passages_by_band": {
-    "daily": 1452,
-    "regular": 0,
-    "occas": 1826
-   },
-   "share_by_band": {
-    "daily": 0.443,
-    "regular": 0.0,
-    "occas": 0.557
-   },
-   "per_person_passages": {
-    "daily": 80.7,
-    "regular": 29.3,
-    "occas": 7.1
-   },
-   "riding_days_per_person": {
-    "daily": 44.9,
-    "regular": 18.3,
-    "occas": 5.9
-   },
-   "fitted_total": 3278,
-   "observed_total": 3232,
-   "dispersion": {
-    "y": 3.71,
-    "pairs": 2.52
-   },
-   "fitted_by_type": {
-    "weekday_mild": 56.9,
-    "weekday_harsh": 30.4,
-    "weekend": 19.4,
-    "holiday_weekday": 37.8
-   },
-   "observed_by_type": {
-    "weekday_mild": 50.6,
-    "weekday_harsh": 40.1,
-    "weekend": 20.5,
-    "holiday_weekday": 22.0
-   },
-   "desc": "as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point)"
-  },
-  "weather_sensitive": {
-   "N": {
-    "daily": 14.7,
-    "regular": 17.1,
-    "occas": 213.1
-   },
-   "ci": {
-    "daily": [
-     7.231713270335784,
-     18.23364667482819
-    ],
-    "regular": [
-     0.0,
+     16.453099336083664,
      85.1649238324115
     ],
     "occas": [
-     0.0,
-     323.8891199077428
+     37.43296610962943,
+     174.8402699910203
+    ],
+    "frequent": [
+     29.476689752258736,
+     85.37188615360154
     ]
    },
-   "loglik": -621.3,
+   "loglik": -574.5,
    "passages_by_band": {
-    "daily": 1356,
-    "regular": 561,
-    "occas": 1669
+    "daily": 0,
+    "regular": 2380,
+    "occas": 738
    },
    "share_by_band": {
-    "daily": 0.378,
-    "regular": 0.156,
-    "occas": 0.465
+    "daily": 0.0,
+    "regular": 0.763,
+    "occas": 0.237
    },
    "per_person_passages": {
-    "daily": 92.4,
-    "regular": 32.8,
-    "occas": 7.8
+    "daily": 81.4,
+    "regular": 32.5,
+    "occas": 8.4
    },
    "riding_days_per_person": {
-    "daily": 46.2,
-    "regular": 16.4,
-    "occas": 5.2
+    "daily": 45.2,
+    "regular": 20.3,
+    "occas": 7.0
    },
-   "fitted_total": 3585,
+   "fitted_total": 3118,
    "observed_total": 3232,
    "dispersion": {
-    "y": 2.48,
-    "pairs": 2.13
+    "y": 5.45,
+    "pairs": 3.91
    },
    "fitted_by_type": {
-    "weekday_mild": 67.4,
-    "weekday_harsh": 28.8,
-    "weekend": 19.2,
-    "holiday_weekday": 44.2
+    "weekday_mild": 51.6,
+    "weekday_harsh": 35.6,
+    "weekend": 20.3,
+    "holiday_weekday": 20.4
    },
    "observed_by_type": {
     "weekday_mild": 50.6,
@@ -964,60 +1007,65 @@
     "weekend": 20.5,
     "holiday_weekday": 22.0
    },
-   "desc": "as base, but the regular and occasional bands drop more on harsh days (regular 10 %, occasional 1.5 %) and the daily band less (70 %)"
+   "desc": "as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point) and fewer matched pairs"
   },
-  "survey_literal": {
+  "weather_sensitive": {
    "N": {
-    "daily": 13.7,
+    "daily": 14.9,
     "regular": 0.0,
-    "occas": 263.7
+    "occas": 253.4
    },
+   "N_frequent": 14.9,
    "ci": {
     "daily": [
-     10.907983168620548,
+     9.842799623698072,
      16.453099336083664
     ],
     "regular": [
      0.0,
-     12.088440418967423
+     37.43296610962943
     ],
     "occas": [
-     237.96819361381836,
+     157.76681326622514,
      292.26078352585057
+    ],
+    "frequent": [
+     12.348458778434987,
+     47.79739639348747
     ]
    },
-   "loglik": -598.5,
+   "loglik": -602.1,
    "passages_by_band": {
-    "daily": 1390,
+    "daily": 1388,
     "regular": 0,
-    "occas": 1880
+    "occas": 1992
    },
    "share_by_band": {
-    "daily": 0.425,
+    "daily": 0.411,
     "regular": 0.0,
-    "occas": 0.575
+    "occas": 0.589
    },
    "per_person_passages": {
-    "daily": 101.7,
-    "regular": 39.9,
-    "occas": 7.1
+    "daily": 93.1,
+    "regular": 32.2,
+    "occas": 7.9
    },
    "riding_days_per_person": {
-    "daily": 50.9,
-    "regular": 19.9,
-    "occas": 4.8
+    "daily": 46.6,
+    "regular": 16.1,
+    "occas": 5.2
    },
-   "fitted_total": 3270,
+   "fitted_total": 3380,
    "observed_total": 3232,
    "dispersion": {
-    "y": 3.75,
-    "pairs": 2.48
+    "y": 3.24,
+    "pairs": 2.94
    },
    "fitted_by_type": {
-    "weekday_mild": 57.0,
-    "weekday_harsh": 30.4,
-    "weekend": 18.1,
-    "holiday_weekday": 40.0
+    "weekday_mild": 61.9,
+    "weekday_harsh": 30.0,
+    "weekend": 20.9,
+    "holiday_weekday": 31.8
    },
    "observed_by_type": {
     "weekday_mild": 50.6,
@@ -1025,39 +1073,105 @@
     "weekend": 20.5,
     "holiday_weekday": 22.0
    },
-   "desc": "riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors as base"
+   "desc": "as base, but the regular and occasional bands drop more on harsh days (regular 12 %, occasional 2 %) and the daily band less (75 %)"
+  },
+  "survey_literal": {
+   "N": {
+    "daily": 0.0,
+    "regular": 40.8,
+    "occas": 173.1
+   },
+   "N_frequent": 40.8,
+   "ci": {
+    "daily": [
+     0.0,
+     10.907983168620548
+    ],
+    "regular": [
+     0.0,
+     45.97332037848285
+    ],
+    "occas": [
+     128.4588479926916,
+     237.96819361381836
+    ],
+    "frequent": [
+     11.210568851337236,
+     47.79739639348747
+    ]
+   },
+   "loglik": -575.5,
+   "passages_by_band": {
+    "daily": 0,
+    "regular": 1801,
+    "occas": 1423
+   },
+   "share_by_band": {
+    "daily": 0.0,
+    "regular": 0.559,
+    "occas": 0.441
+   },
+   "per_person_passages": {
+    "daily": 101.7,
+    "regular": 44.2,
+    "occas": 8.2
+   },
+   "riding_days_per_person": {
+    "daily": 50.8,
+    "regular": 22.1,
+    "occas": 5.5
+   },
+   "fitted_total": 3225,
+   "observed_total": 3232,
+   "dispersion": {
+    "y": 5.42,
+    "pairs": 3.75
+   },
+   "fitted_by_type": {
+    "weekday_mild": 53.9,
+    "weekday_harsh": 36.6,
+    "weekend": 19.3,
+    "holiday_weekday": 24.4
+   },
+   "observed_by_type": {
+    "weekday_mild": 50.6,
+    "weekday_harsh": 40.1,
+    "weekend": 20.5,
+    "holiday_weekday": 22.0
+   },
+   "desc": "riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors in the same proportions as base"
   }
  },
  "tail_table": [
   {
    "rides_per_winter": 2,
    "passages_per_person": 3.0,
-   "people": 614
+   "people": 229
   },
   {
    "rides_per_winter": 3,
    "passages_per_person": 4.5,
-   "people": 409
+   "people": 153
   },
   {
    "rides_per_winter": 4,
    "passages_per_person": 6.0,
-   "people": 307
+   "people": 115
   },
   {
    "rides_per_winter": 6,
    "passages_per_person": 9.0,
-   "people": 205
+   "people": 76
   },
   {
    "rides_per_winter": 8,
    "passages_per_person": 12.0,
-   "people": 154
+   "people": 57
   },
   {
    "rides_per_winter": 12,
    "passages_per_person": 18.0,
-   "people": 102
+   "people": 38
   }
  ],
  "year_over_year": {
@@ -1075,12 +1189,12 @@
   }
  },
  "corridor": {
-  "king_edward_over_kensington": 0.601,
-  "draper_over_kensington": 1.464,
+  "king_edward_over_kensington": 0.575,
+  "draper_over_kensington": 1.331,
   "girouard_wb_over_kensington_wb": 1.577,
   "trips_crossing_any_point_lower": 1.58,
-  "trips_crossing_any_point_upper": 4.64,
-  "note": "ratios of passages at each point to Kensington on matched hours (Telraam) or days (Girouard WB), winter core; trips crossing at least one point lie between the largest point and the sum of the points, in units of the Kensington count"
+  "trips_crossing_any_point_upper": 4.48,
+  "note": "ratios of passages at each point to Kensington on matched hours of days without snowfall (Telraam) or on all days (Girouard WB), winter core; trips crossing at least one point lie between the largest point and the sum of the points, in units of the Kensington count"
  },
  "survey": {
   "responses": 205,
@@ -1103,27 +1217,27 @@
  },
  "survey_coverage": {
   "weekly_survey": 36,
-  "frequent_modelled_kensington": 16.0,
+  "frequent_modelled_kensington": 60.7,
   "frequent_ci": [
-   13,
-   88
+   32.46861895746403,
+   70.3630513200801
   ],
   "occasional_survey": 51,
-  "occasional_modelled_kensington": 208.8,
+  "occasional_modelled_kensington": 65.5,
   "occasional_ci": [
-   41.48394561363329,
-   237.96819361381836
+   24.817097127705857,
+   128.4588479926916
   ],
   "corridor_factor": [
    1.58,
-   4.64
+   4.48
   ]
  },
- "generated": "2026-11-07 09:22",
+ "generated": "2026-11-07 09:28",
  "templates": {
-  "base": "daily: 80 % of mild weekdays, 65 % harsh, 40 % holiday weekdays, 5 % weekend days, 2 passages per riding day, 80 % as matched pairs; regular: 35 % / 16 % / 20 % / 15 %, 2 passages, 60 % paired; occasional: 10 % mild / 3 % harsh (weekday and weekend alike), 1.5 passages, 30 % paired",
-  "one_way": "as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point)",
-  "weather_sensitive": "as base, but the regular and occasional bands drop more on harsh days (regular 10 %, occasional 1.5 %) and the daily band less (70 %)",
-  "survey_literal": "riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors as base"
+  "base": "daily: rides 80 % of mild weekdays, 70 % of harsh weekdays (snow >= 2.5 cm or mean temperature <= -10 C), 30 % of holiday weekdays (Dec 22 to Jan 4), 5 % of weekend days (3 % harsh); 2 passages per riding day, 80 % of them as matched AM/PM pairs. regular: 35 % / 25 % / 12 % / 15 % (8 %); 2 passages; 60 % paired. occasional: 10 % / 6 % / 6 % / 12 % (6 %); 1.5 passages; 30 % paired",
+  "one_way": "as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point) and fewer matched pairs",
+  "weather_sensitive": "as base, but the regular and occasional bands drop more on harsh days (regular 12 %, occasional 2 %) and the daily band less (75 %)",
+  "survey_literal": "riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors in the same proportions as base"
  }
 }

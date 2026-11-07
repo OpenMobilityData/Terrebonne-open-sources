@@ -27,7 +27,7 @@ CORE = (dt.date(2025, 12, 1), dt.date(2026, 2, 28))          # Kensington westbo
 KEN_WB_END = dt.date(2026, 2, 28); DRAPER_END = dt.date(2026, 1, 23)
 MIN_HOURS, MIN_UPTIME, UP_HOUR = 8, 6.0, 0.7
 # validated default palette (dataviz skill, references/palette.md), fixed categorical order
-C = {'ken': '#2a78d6', 'ke': '#eb6834', 'dr': '#1baf7a', 'gir': '#eda100', 'eb': '#2a78d6', 'wb': '#86b6ef',
+C = {'frequent': '#6250d6', 'ken': '#2a78d6', 'ke': '#eb6834', 'dr': '#1baf7a', 'gir': '#eda100', 'eb': '#2a78d6', 'wb': '#86b6ef',
      'daily': '#2a78d6', 'regular': '#eb6834', 'occas': '#1baf7a', 'ink': '#0b0b0b', 'ink2': '#52514e', 'grid': '#e6e5e1', 'surf': '#fcfcfb'}
 plt.rcParams.update({'font.family': 'sans-serif', 'font.size': 9, 'axes.edgecolor': C['ink2'], 'axes.labelcolor': C['ink'], 'xtick.color': C['ink2'], 'ytick.color': C['ink2'],
                      'axes.spines.top': False, 'axes.spines.right': False, 'axes.grid': True, 'grid.color': C['grid'], 'grid.linewidth': 0.6, 'axes.axisbelow': True,
@@ -161,6 +161,14 @@ months = [(dt.date(2025, m, 1), dt.date(2025, m, 28 if m == 2 else 30 if m in (4
 for lab, T in (('King Edward', KE), ('Draper', DR)):
     for a, b in months: ratio_row(lab, T, a, b)
     ratio_row(lab, T, dt.date(2025, 9, 1), dt.date(2025, 10, 31)); ratio_row(lab, T, CORE[0], min(CORE[1], DRAPER_END) if lab == 'Draper' else CORE[1])
+# winter ratios by weather: a detection artefact on snow days would show as a jump of the ratio on those days
+wx_ratio = {}
+for lab, T in (('King Edward', KE), ('Draper', DR)):
+    m = matched(T, CORE[0], min(CORE[1], DRAPER_END) if lab == 'Draper' else CORE[1])
+    for cls, f in (('no_snow', lambda d: (WX.get(d, {}).get('snow') or 0) == 0), ('snow_ge_2.5cm', lambda d: (WX.get(d, {}).get('snow') or 0) >= 2.5), ('mild', lambda d: not byd[d]['harsh']), ('harsh', lambda d: byd[d]['harsh'])):
+        mm = [x for x in m if f(x[0].date())]; t_ = sum(x[1] + x[2] for x in mm); k_ = sum(x[3] + x[4] for x in mm)
+        wx_ratio[f'{lab}|{cls}'] = dict(matched_hours=len(mm), days=len({x[0].date() for x in mm}), telraam=t_, kensington=k_, ratio=round(t_ / k_, 3) if k_ else None)
+S['winter_ratio_by_weather'] = wx_ratio
 # by hour of day, autumn vs winter core
 hour_ratio = {}
 for lab, T in (('King Edward', KE), ('Draper', DR)):
@@ -208,9 +216,10 @@ for lab, key in (('King Edward', 'ke'), ('Draper', 'dr')):
     ax[0].plot([r['start'] + dt.timedelta(14) for r in rs], [r['ratio'] for r in rs], 'o-', color=C[key], lw=1.5, ms=4, label=f'{lab} (Telraam) / Kensington loop')
 if gir: ax[0].plot([dt.date.fromisoformat(g['month'] + '-15') for g in gir], [g['ratio'] for g in gir], 's--', color=C['gir'], lw=1.5, ms=4, label='Girouard WB (City) / Kensington WB')
 ax[0].axhline(1, color=C['ink2'], lw=0.6); ax[0].set_ylabel('ratio of passages, same hours and days'); ax[0].set_title('By month (Telraam: 8–16 h, uptime ≥ 0.7)', loc='left', fontsize=9); ax[0].legend(fontsize=6.5, loc='upper left')
+import matplotlib.dates as mdates; ax[0].xaxis.set_major_locator(mdates.MonthLocator(bymonth=(9, 11, 1, 3, 5))); ax[0].xaxis.set_major_formatter(mdates.DateFormatter('%b %Y')); ax[0].tick_params(axis='x', labelsize=7)
 for (lab, per), hr in hour_ratio.items():
     hs = [h for h in hr if hr[h][1] >= 30]; ax[1].plot(hs, [hr[h][0] / hr[h][1] for h in hs], ('-' if per == 'winter' else ':'), color=C['ke' if lab == 'King Edward' else 'dr'], lw=1.5, label=f'{lab}, {per}')
-ax[1].axhline(1, color=C['ink2'], lw=0.6); ax[1].set_xlabel('hour of day'); ax[1].set_title('By hour of day (autumn = Sept–Oct 2025; winter = Dec 2025–Feb 2026)', loc='left', fontsize=9); ax[1].legend(fontsize=6.5)
+ax[1].axhline(1, color=C['ink2'], lw=0.6); ax[1].set_xlabel('hour of day'); ax[1].set_title('By hour of day: autumn (Sept–Oct 2025) and winter (Dec 2025–Feb 2026)', loc='left', fontsize=8.5); ax[1].legend(fontsize=6.5)
 foot(fig); fig.tight_layout(rect=(0, 0.03, 1, 1)); fig.savefig(os.path.join(FIG, 'cross_sensor_ratios_en.png')); plt.close(fig)
 # figure: snapshot days
 fig, ax = plt.subplots(1, 2, figsize=(9.5, 3.4))
@@ -221,7 +230,7 @@ for i, ds in enumerate(('2024-09-19', '2025-01-29')):
     for j, v in enumerate(vals):
         if v is None: ax[i].text(j, 1, 'not yet\ninstalled', ha='center', fontsize=7, color=C['ink2']); continue
         ax[i].bar(j, v, color=cols[j], width=0.6); ax[i].text(j, v, f'{v:.0f}', ha='center', va='bottom', fontsize=8, color=C['ink'])
-    ax[i].set_xticks(range(4)); ax[i].set_xticklabels(pts, fontsize=7); ax[i].set_title(f'{ds}: bicycles over 12 hours, west to east', loc='left', fontsize=9); ax[i].set_ylabel('passages, 7–19 h')
+    ax[i].set_xticks(range(4)); ax[i].set_xticklabels(pts, fontsize=6.5); ax[i].set_title(f'{ds}: bicycles over 12 hours, west to east', loc='left', fontsize=9); ax[i].set_ylabel('passages, 7–19 h')
 foot(fig, SRC + ' Miovision: one-day camera counts (request 2026-581, pp. 85, 106, 127, 155; by approach: request 2026-634). Telraam hours with uptime shown in summary.json.'); fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(FIG, 'snapshot_days_en.png')); plt.close(fig)
 
 # ---------------------------------------------------------------- 4. Kensington winter structure
@@ -277,8 +286,9 @@ foot(fig, SRC + ' Shaded: before sunrise / after sunset on January 15.'); fig.ti
 fig, ax = plt.subplots(1, 2, figsize=(9.5, 3.6))
 for r in core:
     ax[0].scatter(r['tmean'], r['ken_tot'], s=14 if (r['snow'] or 0) < 2.5 else 34, marker='o' if not r['weekend'] else 's', facecolor=(C['ken'] if not r['weekend'] else C['wb']) if (r['snow'] or 0) < 2.5 else 'none', edgecolor=C['ken'] if not r['weekend'] else C['wb'], lw=1)
-ax[0].set_xlabel('mean temperature (°C), ECCC Trudeau'); ax[0].set_ylabel('passages per day'); ax[0].set_title('Daily passages against temperature; hollow = snow ≥ 2.5 cm; squares = weekend', loc='left', fontsize=8.5)
+ax[0].set_xlabel('mean temperature (°C), ECCC Trudeau'); ax[0].set_ylabel('passages per day'); ax[0].set_title('Daily passages and temperature\n(hollow: snow ≥ 2.5 cm; squares: weekend)', loc='left', fontsize=8.5)
 xs = [r['date'] for r in wd]; ax[1].plot(xs, [r['pairs'] for r in wd], color=C['ken'], lw=1.2, label='matched AM/PM round trips (pairs) per weekday'); ax[1].plot(xs, [r['ken_tot'] - 2 * r['pairs'] for r in wd], color=C['ke'], lw=1.0, label='passages not in a matched pair'); ax[1].legend(fontsize=7); ax[1].set_ylabel('per weekday'); ax[1].set_title('Weekdays: matched round trips and the rest', loc='left', fontsize=9)
+import matplotlib.dates as mdates; ax[1].xaxis.set_major_locator(mdates.MonthLocator()); ax[1].xaxis.set_major_formatter(mdates.DateFormatter('%b %Y')); ax[1].tick_params(axis='x', labelsize=7)
 foot(fig); fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(FIG, 'kensington_weather_pairs_en.png')); plt.close(fig)
 
 # ---------------------------------------------------------------- 5. model-free bounds on distinct users
@@ -286,20 +296,20 @@ def maxday(rs, key):
     r = max(rs, key=lambda r: r[key] or 0); return r[key], str(r['date'])
 bounds = {}
 for name, key, rs in (('kensington', 'ken_tot', w2), ('king_edward', 'ke_tot', sel(W2[0], W2[1], lambda r: r['ke_valid'])), ('draper', 'dr_tot', sel(W2[0], W2[1], lambda r: r['dr_valid'])), ('girouard_wb', 'gir_wb', sel(W2[0], W2[1], lambda r: r['gir_wb'] is not None))):
-    v, d = maxday(rs, key); bounds[name] = dict(max_day=v, date=d, people_ge_m2=math.ceil(v / 2), people_ge_m4=math.ceil(v / 4))
+    v, d = maxday(rs, key); dd = dt.date.fromisoformat(d); bounds[name] = dict(max_day=v, date=d, weekday=dd.strftime('%A'), people_ge_m2=math.ceil(v / 2), people_ge_m4=math.ceil(v / 4), snow_cm=WX.get(dd, {}).get('snow'), tmean=WX.get(dd, {}).get('tmean'), same_day=dict(kensington=byd[dd]['ken_tot'], king_edward=byd[dd]['ke_tot'] if byd[dd]['ke_valid'] else None, draper=byd[dd]['dr_tot'] if byd[dd]['dr_valid'] else None, girouard_wb=byd[dd]['gir_wb']))
 for name, key, rs in (('kensington_core', 'ken_tot', core),): v, d = maxday(rs, key); bounds[name] = dict(max_day=v, date=d, people_ge_m2=math.ceil(v / 2), people_ge_m4=math.ceil(v / 4))
 S['bounds'] = bounds
 
 # ---------------------------------------------------------------- 6. frequency-band model (Kensington, core period)
 TEMPLATES = {
- 'base': dict(desc='daily: 80 % of mild weekdays, 65 % harsh, 40 % holiday weekdays, 5 % weekend days, 2 passages per riding day, 80 % as matched pairs; regular: 35 % / 16 % / 20 % / 15 %, 2 passages, 60 % paired; occasional: 10 % mild / 3 % harsh (weekday and weekend alike), 1.5 passages, 30 % paired',
-              daily=dict(wd=.80, wd_h=.65, hol=.40, we=.05, we_h=.03, c=2.0, pair=.8), regular=dict(wd=.35, wd_h=.16, hol=.20, we=.15, we_h=.06, c=2.0, pair=.6), occas=dict(wd=.10, wd_h=.03, hol=.08, we=.12, we_h=.03, c=1.5, pair=.3)),
- 'one_way': dict(desc='as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point)',
-              daily=dict(wd=.80, wd_h=.65, hol=.40, we=.05, we_h=.03, c=1.8, pair=.7), regular=dict(wd=.35, wd_h=.16, hol=.20, we=.15, we_h=.06, c=1.6, pair=.5), occas=dict(wd=.10, wd_h=.03, hol=.08, we=.12, we_h=.03, c=1.2, pair=.25)),
- 'weather_sensitive': dict(desc='as base, but the regular and occasional bands drop more on harsh days (regular 10 %, occasional 1.5 %) and the daily band less (70 %)',
-              daily=dict(wd=.80, wd_h=.70, hol=.40, we=.05, we_h=.03, c=2.0, pair=.8), regular=dict(wd=.35, wd_h=.10, hol=.20, we=.15, we_h=.04, c=2.0, pair=.6), occas=dict(wd=.10, wd_h=.015, hol=.08, we=.12, we_h=.015, c=1.5, pair=.3)),
- 'survey_literal': dict(desc='riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors as base',
-              daily=dict(wd=.90, wd_h=.75, hol=.45, we=.05, we_h=.03, c=2.0, pair=.8), regular=dict(wd=.40, wd_h=.18, hol=.24, we=.10, we_h=.04, c=2.0, pair=.6), occas=dict(wd=.082, wd_h=.025, hol=.07, we=.082, we_h=.025, c=1.5, pair=.3)),
+ 'base': dict(desc='daily: rides 80 % of mild weekdays, 70 % of harsh weekdays (snow >= 2.5 cm or mean temperature <= -10 C), 30 % of holiday weekdays (Dec 22 to Jan 4), 5 % of weekend days (3 % harsh); 2 passages per riding day, 80 % of them as matched AM/PM pairs. regular: 35 % / 25 % / 12 % / 15 % (8 %); 2 passages; 60 % paired. occasional: 10 % / 6 % / 6 % / 12 % (6 %); 1.5 passages; 30 % paired',
+              daily=dict(wd=.80, wd_h=.70, hol=.30, we=.05, we_h=.03, c=2.0, pair=.8), regular=dict(wd=.35, wd_h=.25, hol=.12, we=.15, we_h=.08, c=2.0, pair=.6), occas=dict(wd=.10, wd_h=.06, hol=.06, we=.12, we_h=.06, c=1.5, pair=.3)),
+ 'one_way': dict(desc='as base, but fewer passages per riding day (daily 1.8, regular 1.6, occasional 1.2: more one-way trips through the point) and fewer matched pairs',
+              daily=dict(wd=.80, wd_h=.70, hol=.30, we=.05, we_h=.03, c=1.8, pair=.7), regular=dict(wd=.35, wd_h=.25, hol=.12, we=.15, we_h=.08, c=1.6, pair=.5), occas=dict(wd=.10, wd_h=.06, hol=.06, we=.12, we_h=.06, c=1.2, pair=.25)),
+ 'weather_sensitive': dict(desc='as base, but the regular and occasional bands drop more on harsh days (regular 12 %, occasional 2 %) and the daily band less (75 %)',
+              daily=dict(wd=.80, wd_h=.75, hol=.30, we=.05, we_h=.03, c=2.0, pair=.8), regular=dict(wd=.35, wd_h=.12, hol=.12, we=.15, we_h=.04, c=2.0, pair=.6), occas=dict(wd=.10, wd_h=.02, hol=.06, we=.12, we_h=.02, c=1.5, pair=.3)),
+ 'survey_literal': dict(desc='riding days taken from the survey categories at face value: most weekdays = 90 % of weekdays; one to three days a week = 2 of 5 weekdays; a few times a month = 2.5 days a month spread over all days; weather and holiday factors in the same proportions as base',
+              daily=dict(wd=.90, wd_h=.79, hol=.34, we=.05, we_h=.03, c=2.0, pair=.8), regular=dict(wd=.40, wd_h=.29, hol=.14, we=.10, we_h=.05, c=2.0, pair=.6), occas=dict(wd=.082, wd_h=.05, hol=.05, we=.082, we_h=.04, c=1.5, pair=.3)),
 }
 def q_of(tpl, r):
     if r['weekend']: return tpl['we_h'] if r['harsh'] else tpl['we']
@@ -314,7 +324,7 @@ def fit_bands(T):
         mu = Q @ N + 1e-9; mp = Qp @ N + 1e-9
         return -(nb_loglik(Y, mu, np.exp(th[3])) + nb_loglik(P, mp, np.exp(th[4])))
     best = None
-    for start in ([2.5, 2.5, 4.5, 1.5, 1.5], [1.5, 3.5, 3.5, 1.5, 1.5], [3.0, 1.0, 5.5, 1.5, 1.5]):
+    for start in ([2.5, 2.5, 4.5, 1.5, 1.5], [1.5, 3.5, 3.5, 1.5, 1.5], [3.0, 1.0, 5.5, 1.5, 1.5], [2.8, 4.0, 2.0, 1.5, 1.5], [2.0, 3.0, 5.0, 2.0, 1.0]):
         r_ = optimize.minimize(nll, np.array(start), method='Nelder-Mead', options=dict(maxiter=4000, xatol=1e-4, fatol=1e-4))
         if best is None or r_.fun < best.fun: best = r_
     N = np.exp(best.x[:3]); ll = -best.fun
@@ -325,13 +335,22 @@ def fit_bands(T):
         for g in grid:
             th = best.x.copy(); th[i] = math.log(max(g, 1e-6))
             def nll_f(th2): th3 = th.copy(); th3[[j for j in range(5) if j != i]] = th2; return nll(th3, fixed=(i, g))
-            rr = optimize.minimize(nll_f, np.delete(best.x, i), method='Nelder-Mead', options=dict(maxiter=2000, xatol=1e-3, fatol=1e-3)); vals.append(-rr.fun)
+            cands = [np.delete(best.x, i)] + [np.delete(np.array(st), i) for st in ([2.5, 2.5, 4.5, 1.5, 1.5], [1.5, 3.5, 3.5, 1.5, 1.5], [3.0, 1.0, 5.5, 1.5, 1.5], [2.8, 4.0, 2.0, 1.5, 1.5])]
+            rr = min((optimize.minimize(nll_f, c0, method='Nelder-Mead', options=dict(maxiter=3000, xatol=1e-3, fatol=1e-3)) for c0 in cands), key=lambda r_: r_.fun); vals.append(-rr.fun)
         vals = np.array(vals); ok = grid[vals >= ll - 1.92]; prof_ci[b] = (float(ok.min()) if len(ok) else None, float(ok.max()) if len(ok) else None); curves[b] = (grid.tolist(), (vals - ll).tolist())
+    # profile for the frequent core as a whole (daily + regular = s): fix the sum, free the split and the rest
+    sgrid = np.concatenate([[0.0], np.exp(np.linspace(math.log(1), math.log(300), 60))]); svals = []
+    for s_ in sgrid:
+        def nll_s(th2):   # th2 = [logit split, log occas, log r_y, log r_p]
+            f = 1 / (1 + math.exp(-th2[0])); Nn = np.array([s_ * f, s_ * (1 - f), math.exp(th2[1])]); mu = Q @ Nn + 1e-9; mp = Qp @ Nn + 1e-9
+            return -(nb_loglik(Y, mu, math.exp(th2[2])) + nb_loglik(P, mp, math.exp(th2[3])))
+        rr = min((optimize.minimize(nll_s, np.array(c0), method='Nelder-Mead', options=dict(maxiter=3000, xatol=1e-3, fatol=1e-3)) for c0 in ([0.0, 5.0, 1.5, 1.5], [2.0, 4.0, 1.5, 1.5], [-2.0, 5.5, 1.5, 1.5])), key=lambda r_: r_.fun); svals.append(-rr.fun)
+    svals = np.array(svals); oks = sgrid[svals >= ll - 1.92]; prof_ci['frequent'] = (float(oks.min()) if len(oks) else None, float(oks.max()) if len(oks) else None); curves['frequent'] = (sgrid.tolist(), (svals - ll).tolist())
     mu = Q @ N; days = len(core)
     per_person = {b: float(sum(q_of(T[b], r) * T[b]['c'] for r in core)) for b in ('daily', 'regular', 'occas')}
     riding_days = {b: float(sum(q_of(T[b], r) for r in core)) for b in ('daily', 'regular', 'occas')}
     passages = {b: float(N[i] * per_person[b]) for i, b in enumerate(('daily', 'regular', 'occas'))}
-    return dict(N={b: round(float(N[i]), 1) for i, b in enumerate(('daily', 'regular', 'occas'))}, ci=prof_ci, loglik=round(ll, 1), passages_by_band={b: round(v) for b, v in passages.items()}, share_by_band={b: round(v / sum(passages.values()), 3) for b, v in passages.items()},
+    return dict(N={b: round(float(N[i]), 1) for i, b in enumerate(('daily', 'regular', 'occas'))}, N_frequent=round(float(N[0] + N[1]), 1), ci=prof_ci, loglik=round(ll, 1), passages_by_band={b: round(v) for b, v in passages.items()}, share_by_band={b: round(v / sum(passages.values()), 3) for b, v in passages.items()},
                 per_person_passages={b: round(v, 1) for b, v in per_person.items()}, riding_days_per_person={b: round(v, 1) for b, v in riding_days.items()}, fitted_total=round(float(mu.sum())), observed_total=int(Y.sum()), dispersion=dict(y=round(float(math.exp(best.x[3])), 2), pairs=round(float(math.exp(best.x[4])), 2)), curves=curves,
                 fitted_by_type={k: round(float(np.mean(mu[[j for j, r in enumerate(core) if f(r)]])), 1) for k, f in (('weekday_mild', lambda r: not r['weekend'] and not r['harsh'] and not r['holiday']), ('weekday_harsh', lambda r: not r['weekend'] and r['harsh'] and not r['holiday']), ('weekend', lambda r: r['weekend']), ('holiday_weekday', lambda r: r['holiday'] and not r['weekend']))},
                 observed_by_type={k: round(float(np.mean(Y[[j for j, r in enumerate(core) if f(r)]])), 1) for k, f in (('weekday_mild', lambda r: not r['weekend'] and not r['harsh'] and not r['holiday']), ('weekday_harsh', lambda r: not r['weekend'] and r['harsh'] and not r['holiday']), ('weekend', lambda r: r['weekend']), ('holiday_weekday', lambda r: r['holiday'] and not r['weekend']))})
@@ -343,6 +362,7 @@ with open(os.path.join(HERE, 'band_fit.csv'), 'w', newline='') as f:
     w = csv.writer(f); w.writerow(['template', 'band', 'people', 'ci95_low', 'ci95_high', 'riding_days_per_person', 'passages_per_person', 'passages', 'share_of_passages'])
     for name, v in BF.items():
         for b in ('daily', 'regular', 'occas'): w.writerow([name, b, v['N'][b], v['ci'][b][0], v['ci'][b][1], v['riding_days_per_person'][b], v['per_person_passages'][b], v['passages_by_band'][b], v['share_by_band'][b]])
+        w.writerow([name, 'frequent (daily + regular)', v['N_frequent'], v['ci']['frequent'][0], v['ci']['frequent'][1], '', '', v['passages_by_band']['daily'] + v['passages_by_band']['regular'], round(v['share_by_band']['daily'] + v['share_by_band']['regular'], 3)])
 # the frequent core, whatever the split: daily + regular people and their passages (base), and a tail table: tail passages / per-person passages for a range of tail frequencies
 tail = BF['base']['passages_by_band']['occas']; S['tail_table'] = [dict(rides_per_winter=k, passages_per_person=round(k * 1.5, 1), people=round(tail / (k * 1.5))) for k in (2, 3, 4, 6, 8, 12)]
 # figure: fit and profile curves
@@ -350,9 +370,9 @@ fig, ax = plt.subplots(1, 2, figsize=(9.5, 3.6))
 b_ = BF['base']; types = ['weekday_mild', 'weekday_harsh', 'holiday_weekday', 'weekend']; xs_ = np.arange(len(types))
 ax[0].bar(xs_ - 0.18, [b_['observed_by_type'][t] for t in types], width=0.36, color=C['ken'], label='observed, mean per day'); ax[0].bar(xs_ + 0.18, [b_['fitted_by_type'][t] for t in types], width=0.36, color='#9ec5f4', label='fitted (base templates)')
 ax[0].set_xticks(xs_); ax[0].set_xticklabels(['weekday, mild', 'weekday, harsh', 'holiday weekday', 'weekend'], fontsize=8); ax[0].set_ylabel('passages per day'); ax[0].legend(fontsize=7); ax[0].set_title('Kensington, Dec 1, 2025 to Feb 28, 2026: observed and fitted', loc='left', fontsize=9)
-for b, lab in (('daily', 'most weekdays'), ('regular', '1–3 days a week'), ('occas', 'a few times a month')):
+for b, lab in (('daily', 'most weekdays'), ('regular', '1–3 days a week'), ('frequent', 'frequent = the two together'), ('occas', 'a few times a month')):
     g, v = b_['curves'][b]; ax[1].plot(g, v, color=C[b], lw=1.5, label=lab)
-ax[1].axhline(-1.92, color=C['ink2'], lw=0.6, ls='--'); ax[1].set_xscale('symlog', linthresh=10); ax[1].set_ylim(-8, 0.5); ax[1].set_xlim(0, 600); ax[1].set_xlabel('people in the band'); ax[1].set_ylabel('profile log-likelihood − maximum'); ax[1].legend(fontsize=7); ax[1].set_title('How well the counts pin down each band (95 % interval above the dashed line)', loc='left', fontsize=8.5)
+ax[1].axhline(-1.92, color=C['ink2'], lw=0.6, ls='--'); ax[1].set_xscale('symlog', linthresh=10); ax[1].set_ylim(-8, 0.5); ax[1].set_xlim(0, 600); ax[1].set_xlabel('people in the band'); ax[1].set_ylabel('profile log-likelihood − maximum'); ax[1].legend(fontsize=7); ax[1].set_title('Profile likelihood by band (95 % interval: above the dashed line)', loc='left', fontsize=8.5)
 foot(fig); fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(FIG, 'band_fit_en.png')); plt.close(fig)
 
 # year-over-year at the Telraam points on common calendar dates (valid days both years), W1 vs W2, daylight totals
@@ -366,12 +386,11 @@ for key, lab in (('ke', 'King Edward'), ('dr', 'Draper')):
 S['year_over_year'] = yoy
 
 # ---------------------------------------------------------------- 7. corridor scaling (bounds)
-rk = {r['sensor']: r for r in ratios if (r['end'] - r['start']).days > 40 and r['start'] == CORE[0]}
-ke_r = rk['King Edward']['ratio'] if 'King Edward' in rk else None; dr_r = rk['Draper']['ratio'] if 'Draper' in rk else None
+ke_r = wx_ratio['King Edward|no_snow']['ratio']; dr_r = wx_ratio['Draper|no_snow']['ratio']      # dry days only: the Telraam/loop ratio jumps on snow days (see winter_ratio_by_weather)
 gir_r = (sum(g['girouard_wb'] for g in gir if g['month'] >= '2025-12') / sum(g['ken_wb'] for g in gir if g['month'] >= '2025-12')) if gir else None
 S['corridor'] = dict(king_edward_over_kensington=ke_r, draper_over_kensington=dr_r, girouard_wb_over_kensington_wb=round(gir_r, 3) if gir_r else None,
                      trips_crossing_any_point_lower=round(max(1.0, dr_r or 0, gir_r or 0), 2), trips_crossing_any_point_upper=round(1.0 + (ke_r or 0) + (dr_r or 0) + (gir_r or 0), 2),
-                     note='ratios of passages at each point to Kensington on matched hours (Telraam) or days (Girouard WB), winter core; trips crossing at least one point lie between the largest point and the sum of the points, in units of the Kensington count')
+                     note='ratios of passages at each point to Kensington on matched hours of days without snowfall (Telraam) or on all days (Girouard WB), winter core; trips crossing at least one point lie between the largest point and the sum of the points, in units of the Kensington count')
 
 # ---------------------------------------------------------------- 8. the survey in context
 SURVEY = dict(responses=205, kept=161, winter_cyclists=87, weekly=36, less_than_weekly=51, child_winter=27, src='Terrebonne-open-sources/2026-11-02-apc-survey-filing (public figures of the Nov 2, 2026 filing)')
@@ -385,7 +404,7 @@ central = sum(x['passages_central'] for x in sv if x['passages_per_riding_day'] 
 S['survey'] = SURVEY; S['survey_implied'] = dict(passages_central=central, passages_low=lo, passages_high=hi, counted_w2=S['w2']['passages'], counted_core=S['core']['passages'], ratio_central=round(central / S['w2']['passages'], 2), ratio_low=round(lo / S['w2']['passages'], 2), ratio_high=round(hi / S['w2']['passages'], 2))
 # coverage of the modelled bands by the survey (Kensington point; corridor bounds)
 bb = BF['base']; freq_people = bb['N']['daily'] + bb['N']['regular']
-S['survey_coverage'] = dict(weekly_survey=36, frequent_modelled_kensington=round(freq_people, 1), frequent_ci=(round((bb['ci']['daily'][0] or 0) + (bb['ci']['regular'][0] or 0)), round((bb['ci']['daily'][1] or 0) + (bb['ci']['regular'][1] or 0))), occasional_survey=51, occasional_modelled_kensington=bb['N']['occas'], occasional_ci=bb['ci']['occas'],
+S['survey_coverage'] = dict(weekly_survey=36, frequent_modelled_kensington=round(freq_people, 1), frequent_ci=bb['ci']['frequent'], occasional_survey=51, occasional_modelled_kensington=bb['N']['occas'], occasional_ci=bb['ci']['occas'],
                             corridor_factor=(S['corridor']['trips_crossing_any_point_lower'], S['corridor']['trips_crossing_any_point_upper']))
 # figure: survey-implied passages vs counted
 fig, ax = plt.subplots(figsize=(7, 3.2))
@@ -393,7 +412,7 @@ labs = ['survey, low\n(1 passage/day, fewest days)', 'survey, central\n(1.5 pass
 vals = [lo, central, hi, S['w2']['passages']]; cols = ['#9ec5f4', '#2a78d6', '#184f95', C['ke']]
 ax.barh(range(4), vals, color=cols, height=0.6)
 for i, v in enumerate(vals): ax.text(v + 60, i, f'{v:,}', va='center', fontsize=8, color=C['ink'])
-ax.set_yticks(range(4)); ax.set_yticklabels(labs, fontsize=7.5); ax.invert_yaxis(); ax.set_xlabel('bicycle passages over the winter'); ax.set_title('Passages the 87 survey respondents would produce at one point, if every trip crossed it, against the count', loc='left', fontsize=8.5)
+ax.set_yticks(range(4)); ax.set_yticklabels(labs, fontsize=7.5); ax.invert_yaxis(); ax.set_xlabel('bicycle passages over the winter'); ax.set_title('Passages the 87 respondents would produce at one point if every trip crossed it, against the count', loc='left', fontsize=8)
 foot(fig, 'Sources: APC-NDG survey filing of Nov 2, 2026 (public figures: 87 winter cyclists, 36 at least weekly); borough loop counter at Kensington (request 2026-581). Riding-day assumptions in survey_context.csv.'); fig.tight_layout(rect=(0, 0.05, 1, 1)); fig.savefig(os.path.join(FIG, 'survey_vs_count_en.png')); plt.close(fig)
 
 S['generated'] = dt.datetime.now().strftime('%Y-%m-%d %H:%M'); S['templates'] = {k: v['desc'] for k, v in TEMPLATES.items()}
