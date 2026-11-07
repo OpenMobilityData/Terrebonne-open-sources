@@ -25,6 +25,8 @@ The APC-NDG survey's parking answers (corridor residents, vehicles, off-street p
 
 ## Status
 - [x] Folder, plan, EXP tables transcribed — Nov 7
-- [ ] parking_analysis.py
-- [ ] build_docs.py, note, deck, lay abstracts
-- [ ] README, root README row; owner's review; graph nodes
+- [x] parking_analysis.py — Nov 7
+- [x] build_docs.py, note, deck, lay abstracts (short in the note, both as txt) — Nov 7
+- [x] README, root README row — Nov 7
+- [ ] Owner's review; graph nodes (t_exp2022_occupancy, t_curb_cars_2015, t_offstreet_check, t_roll_dwellings_band); question lists (the Nov 27 supply-only mandate; the 2023 vs 2026 scope comparison)
+- [ ] Open: a present-day night occupancy count; the garage/driveway reading extended to the cross streets' first blocks

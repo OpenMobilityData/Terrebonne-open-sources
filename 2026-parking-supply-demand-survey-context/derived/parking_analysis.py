@@ -54,7 +54,7 @@ for i, (tab, title) in enumerate((('3-2', 'On rue de Terrebonne, by sector and d
         if k[0] != tab: continue
         ax[i].plot(x, [r['occ'] * 100 for r in v], ls[k[2]], marker=mk[k[1]], ms=4, lw=1.3, color=pal[k[1]], label=f'{SLAB[k[1]]}, {k[2]}')
     ax[i].axhline(80, color=C['ink2'], lw=0.6, ls=':'); ax[i].text(5.1, 81, 'EXP’s 80 % threshold', fontsize=6.5, color=C['ink2'], ha='right')
-    ax[i].set_xticks(x); ax[i].set_xticklabels([PLAB[p] for p in PERIODS], fontsize=6.5, rotation=20); ax[i].set_title(title, loc='left', fontsize=9); ax[i].legend(fontsize=5.5, ncol=2, loc='lower left'); ax[i].set_ylim(0, 100)
+    ax[i].set_xticks(x); ax[i].set_xticklabels([PLAB[p] for p in PERIODS], fontsize=6.5, rotation=20); ax[i].set_title(title, loc='left', fontsize=9); ax[i].legend(fontsize=5.5, ncol=1, loc='lower left'); ax[i].set_ylim(0, 100)
 ax[0].set_ylabel('occupancy (%)')
 foot(fig, 'Source: EXP, Étude de mobilité sur la rue de Terrebonne, Sept. 2023, Tables 3-2 (report p. 43) and 3-3 (p. 48); survey of Sept 29 and Oct 1, 2022.'); fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(FIG, 'exp_occupancy_en.png')); plt.close(fig)
 # figure 2: occupied and vacant places per period
@@ -89,7 +89,7 @@ ax.plot(xb, [2 * b['nominal_per_side'] for b in BL], color=C['ink2'], lw=0.8, ls
 for i, b in enumerate(BL):
     if b['converted_side'] == 'N': ax.axvspan(i - 0.5, i + 0.5, ymin=0.97, ymax=1.0, color='#e34948', alpha=0.5)
     else: ax.axvspan(i - 0.5, i + 0.5, ymin=0.0, ymax=0.03, color='#e34948', alpha=0.5)
-ax.set_xticks(xb); ax.set_xticklabels([b['block_name'] for b in BL], rotation=70, fontsize=6); ax.set_ylabel('cars at the curbs'); ax.legend(fontsize=7, loc='upper left'); ax.set_title('Cars parked on rue de Terrebonne by block, west to east, before the 2024 lane (red strip = side converted to parking in winter: north west of Cavendish, south east of it)', loc='left', fontsize=8.5)
+ax.set_xticks(xb); ax.set_xticklabels([b['block_name'] for b in BL], rotation=70, fontsize=6); ax.set_ylabel('cars at the curbs'); ax.legend(fontsize=7, loc='upper left'); ax.set_title('Cars parked on rue de Terrebonne by block, west to east, before the 2024 lane (red strip: the side converted to parking in winter)', loc='left', fontsize=8.5)
 foot(fig, 'Sources: City LiDAR 2015 (CC-BY 4.0) and Québec orthophoto (Imagerie_GQ), readings by the author (1954-underwriters-plans-terrebonne-garages/derived/on_street_cars_by_block.csv). Two snapshots, not a before-and-after.'); fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(os.path.join(FIG, 'curb_cars_by_block_en.png')); plt.close(fig)
 
 # ---------------------------------------------------------------- 3. the survey's parking answers (anonymized file; categories as in the filing's methods page)
