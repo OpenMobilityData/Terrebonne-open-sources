@@ -25,7 +25,7 @@
 \end{itemize}\end{columns}\end{frame}
 \begin{frame}{Weather and round trips}\centering\includegraphics[width=0.95\textwidth]{figures/kensington_weather_pairs_en.png}\\{\scriptsize NB regression: weekend -49 \%, holiday period -41 \%, +3 \% per unit of mean temperature, -2 \% per unit of snow on the ground; residual lag-1 autocorrelation 0.182.}\end{frame}
 \begin{frame}{The other points: the east end holds up in winter}\centering\includegraphics[width=0.95\textwidth]{figures/cross_sensor_ratios_en.png}\\{\scriptsize Dry days, winter core: King Edward 0.57, Draper 1.33 of the loop; Girouard WB 1.58 of the loop\textquoteright{}s WB (0.86 in November).}\end{frame}
-\begin{frame}{Snow days: the instruments diverge}\centering\small\begin{tabular}{@{}llrrrrr@{}}\toprule sensor & days & n & matched h & Telraam & Kensington & ratio\\ \midrule
+\begin{frame}{Snow days: the instruments diverge}\centering\small\begin{tabular}{@{}llrrrrr@{}}\toprule sensor & weather & days & matched h & Telraam & Kensington & ratio\\ \midrule
 King Edward & no snow & 15 & 129 & 185 & 322 & 0.575 \\
 King Edward & snow ge 2.5cm & 13 & 117 & 204 & 231 & 0.883 \\
 King Edward & mild & 16 & 141 & 203 & 442 & 0.459 \\
@@ -50,12 +50,12 @@ Girouard WB (City) & 2026-01-09 & 67 & 34 & 17 & one direction\\
 \item Purpose: to show which quantities one counter determines and which it does not.
 \end{itemize}\end{frame}
 \begin{frame}{What the counts pin down, and what they do not}\centering\includegraphics[width=0.95\textwidth]{figures/band_fit_en.png}\end{frame}
-\begin{frame}{People per band, by template set (Kensington, core period)}\centering\scriptsize\begin{tabular}{@{}lllllrr@{}}\toprule templates & most weekdays & 1--3 days/week & frequent (both) & a few times a month & passages, frequent & fitted total\\ \midrule
+\begin{frame}{People per band, by template set (Kensington, core period)}\centering\scriptsize\resizebox{\textwidth}{!}{\begin{tabular}{@{}lllllrr@{}}\toprule templates & most weekdays & 1--3 days/week & frequent (both) & a few times a month & passages, frequent & fitted total\\ \midrule
 base & 0 (0--10) & 61 (22--69) & \textbf{61} (32--70) & 66 (25--128) & 78\,\% & 3,151 \\
 more one-way trips & 0 (0--12) & 73 (16--85) & \textbf{73} (29--85) & 88 (37--175) & 76\,\% & 3,118 \\
 tail more weather-sensitive & 15 (10--16) & 0 (0--37) & \textbf{15} (12--48) & 253 (158--292) & 41\,\% & 3,380 \\
 survey categories literal & 0 (0--11) & 41 (0--46) & \textbf{41} (11--48) & 173 (128--238) & 56\,\% & 3,225 \\
-\bottomrule\end{tabular}\\[6pt]\footnotesize Stable: the frequent core is small in number (11--85) and makes most of the passages. Not identified: the split daily / near-daily, and the size of the tail (25--292) without an assumption on how often an occasional rider rides.\end{frame}
+\bottomrule\end{tabular}}\\[6pt]\footnotesize Stable: the frequent core is small in number (11--85) and makes most of the passages. Not identified: the split daily / near-daily, and the size of the tail (25--292) without an assumption on how often an occasional rider rides.\end{frame}
 \begin{frame}{From Kensington to the street}\begin{itemize}
 \item Dry-day ratios to Kensington: King Edward 0.57, Draper 1.33, Girouard WB 1.58.
 \item Trips crossing at least one point: between 1.58 (every trip crosses every point) and 4.48 (no trip crosses two) times the Kensington count.
