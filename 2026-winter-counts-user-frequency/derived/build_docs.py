@@ -224,12 +224,12 @@ DECK = r'''\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecol
 ''' + wx_rows + r'''
 \bottomrule\end{tabular}\\[6pt]\footnotesize On days with $\geq 2.5$ cm of snow both Telraam sensors count 50--60\,\% more relative to the loop. Either the camera over-detects on snow days, or cyclists leave the snowed-in lane for the roadway where the loop cannot see them. The data do not settle it; dry-day ratios are used, and the loop\textquoteright{}s snow-day counts may be low.\end{frame}
 \begin{frame}{Two snapshot days}\centering\includegraphics[width=0.95\textwidth]{figures/snapshot_days_en.png}\\{\scriptsize Jan 29, 2025: ''' + f"{j29['weather']['snow']}" + r''' cm of snow, mean ''' + f"{j29['weather']['tmean']}" + r''' $^\circ$C. Grand: ''' + f"{j29['grand_eb_6h']}" + r''' eastbound, ''' + f"{j29['grand_wb_6h']}" + r''' westbound in six peak hours (the « 8 »): no return leg in the window. Draper is a snow-day Telraam count.}\end{frame}
-\begin{frame}{Floors under the number of individuals (no model)}\centering\small\begin{tabular}{@{}llrrrl@{}}\toprule point & date & passages & people, $m=2$ & people, $m=4$ & note\\ \midrule
+\begin{frame}{Floors under the number of individuals (no model)}\centering\small\resizebox{0.95\textwidth}{!}{\begin{tabular}{@{}llrrrl@{}}\toprule point & date & passages & people, $m=2$ & people, $m=4$ & note\\ \midrule
 Kensington loop & ''' + f"{pd(bnd('kensington')['date'])} & {bnd('kensington')['max_day']:.0f} & {bnd('kensington')['people_ge_m2']} & {bnd('kensington')['people_ge_m4']}" + r''' & WB channel degraded\\
 Kensington, core & ''' + f"{pd(bnd('kensington_core')['date'])} & {bnd('kensington_core')['max_day']:.0f} & {bnd('kensington_core')['people_ge_m2']} & {bnd('kensington_core')['people_ge_m4']}" + r''' & both channels sound\\
 King Edward (Telraam) & ''' + f"{pd(bnd('king_edward')['date'])} & {bnd('king_edward')['max_day']:.0f} & {bnd('king_edward')['people_ge_m2']} & {bnd('king_edward')['people_ge_m4']}" + r''' & daylight, no snow\\
 Girouard WB (City) & ''' + f"{pd(bnd('girouard_wb')['date'])} & {bnd('girouard_wb')['max_day']:.0f} & {bnd('girouard_wb')['people_ge_m2']} & {bnd('girouard_wb')['people_ge_m4']}" + r''' & one direction\\
-\bottomrule\end{tabular}\\[6pt]\footnotesize If no one crosses a point more than $m$ times in a day, the largest day divided by $m$ is a floor under the distinct cyclists of the winter.\end{frame}
+\bottomrule\end{tabular}}\\[6pt]\footnotesize If no one crosses a point more than $m$ times in a day, the largest day divided by $m$ is a floor under the distinct cyclists of the winter.\end{frame}
 \begin{frame}{A frequency-band model}\small
 \[ Y_d \sim \mathrm{NB}\Big(\sum_b N_b\, p_b(d)\, c_b\Big), \qquad P_d \sim \mathrm{NB}\Big(\sum_b N_b\, p_b(d)\, \pi_b\Big) \]
 \begin{itemize}
