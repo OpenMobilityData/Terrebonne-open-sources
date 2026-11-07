@@ -21,7 +21,7 @@
 
 **Findings.** Sainte-Monique's 2024 revenue ($251k) and gifts ($220k) lie within their 2019–2023 range (+3 % and −3 % against the five-year mean; −6 % against 2023, which places it 9th and 10th of 13 among the fabriques compared in the St Monica folder). The temple's 2024 revenue ($180k, all reported as gifts) is +7 % and its expenditures +23 % against 2022–2023, whose two returns carry identical figures to the dollar (one observation, in effect); 2024 is the highest year of its short series. The Deliverance church's returns are under $12k a year and nil in 2024. On the street itself the pattern test has one comparable congregation besides the parish; neither shows a first lane year apart from its own record. The 2025 returns (CRA open-data file expected in 2026; the folder's watcher reports it) will give the first full calendar year with the lane for both.
 
-**Pages:** `https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-congregations-cra-t3010/derived/terrebonne_congregations_t3010_note_en.pdf`.
+**Links.** Folder (this README rendered): `https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-terrebonne-congregations-cra-t3010`. GitHub Pages serves files, not folder indexes, so a folder URL on openmobilitydata.github.io returns 404; the PDFs are served: `https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-congregations-cra-t3010/derived/terrebonne_congregations_t3010_note_en.pdf`.
 
 ---
 

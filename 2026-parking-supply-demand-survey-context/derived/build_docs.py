@@ -2,7 +2,7 @@
 """Note (A4) and deck (beamer 16:9), English, plus the lay abstracts (short in the note, both as .txt), from summary.json and the figures of parking_analysis.py."""
 import csv, json, os, subprocess, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); S = json.load(open(os.path.join(HERE, 'summary.json'))); STAMP = datetime.datetime.now().strftime('%Y-%m-%d')
-URL = 'https://openmobilitydata.github.io/Terrebonne-open-sources/2026-parking-supply-demand-survey-context/'
+URL = 'https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-parking-supply-demand-survey-context'
 esc = lambda s: str(s).replace('&', '\\&').replace('%', '\\%').replace("'", "\\textquoteright{}").replace('–', '--').replace('≥', '$\\geq$').replace('≤', '$\\leq$')
 E, CU, SV, OF, RL, WN = S['exp'], S['curbs'], S['survey']['groups'], S['offstreet'], S['roll'], S['winters']
 on, bl, co = SV['on Terrebonne'], SV['within one block'], SV['corridor (both)']; tp = E['thu_pm']; T71 = E['stated']['table71']

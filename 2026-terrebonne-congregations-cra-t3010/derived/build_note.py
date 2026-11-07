@@ -2,7 +2,7 @@
 """Short English note from summary.json and the figure. Usage: python3 build_note.py"""
 import json, os, subprocess, datetime, csv
 HERE = os.path.dirname(os.path.abspath(__file__)); S = json.load(open(os.path.join(HERE, 'summary.json'))); STAMP = datetime.datetime.now().strftime('%Y-%m-%d')
-URL = 'https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-congregations-cra-t3010/'
+URL = 'https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-terrebonne-congregations-cra-t3010'
 esc = lambda s: str(s).replace('&', '\\&').replace('%', '\\%').replace("'", "\\textquoteright{}").replace('–', '--').replace('«', '«\\,').replace('»', '\\,»')
 cong = {r['bn']: r for r in csv.DictReader(open(os.path.join(HERE, 'congregations.csv'), encoding='utf-8'))}
 SM, YK, DC = (S['congregations'][b] for b in ('130341852RR0001', '843768433RR0002', '837788975RR0001')); REF = S['fabriques_reference']

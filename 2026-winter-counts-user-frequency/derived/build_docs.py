@@ -3,7 +3,7 @@
 Usage: python3 build_docs.py  (writes winter_counts_user_frequency_note_en.pdf and winter_counts_user_frequency_deck_en.pdf)"""
 import json, os, subprocess, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); S = json.load(open(os.path.join(HERE, 'summary.json')))
-STAMP = datetime.datetime.now().strftime('%Y-%m-%d'); URL = 'https://openmobilitydata.github.io/Terrebonne-open-sources/2026-winter-counts-user-frequency/'
+STAMP = datetime.datetime.now().strftime('%Y-%m-%d'); URL = 'https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-winter-counts-user-frequency'
 pd = lambda d: datetime.date.fromisoformat(d).strftime('%B %-d, %Y')
 esc = lambda s: str(s).replace('&', '\\&').replace('%', '\\%').replace("'", "\\textquoteright{}").replace('–', '--').replace('≥', '$\\geq$').replace('≤', '$\\leq$').replace('°', '$^\\circ$')
 f0 = lambda x: f'{x:,.0f}'; f1 = lambda x: f'{x:,.1f}'; pc = lambda x: f'{100 * x:.0f}\\,\\%'
