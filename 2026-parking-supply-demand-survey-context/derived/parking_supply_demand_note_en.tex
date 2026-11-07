@@ -49,11 +49,11 @@ Occupancy on Terrebonne as a whole never exceeded 62\,\% at any period, and no s
 
 \subsection{The cars at the curbs, 2015 and the orthophoto}
 \begin{table}[htbp]\centering\small\caption{Cars at Terrebonne\textquoteright{}s curbs by sector, both sides, against EXP\textquoteright{}s supply and its Thursday-evening count.}\label{tab:sec}
-\begin{tabular}{@{}lrrrrrr@{}}\toprule sector & blocks & EXP supply (derived) & EXP occupied, Thu 18:30 & LiDAR night 2015 & night / supply & orthophoto, day\\ \midrule
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lrrrrrr@{}}\toprule sector & blocks & EXP supply (derived) & EXP occupied, Thu 18:30 & LiDAR night 2015 & night / supply & orthophoto, day\\ \midrule
 residential west & 12 & 189 & 79 & 52 & 28\,\% & 62 \\
 institutional & 5 & 83 & 30 & 29 & 35\,\% & 23 \\
 residential east & 12 & 223 & 138 & 102 & 46\,\% & 73 \\
-\bottomrule\end{tabular}\end{table}
+\bottomrule\end{tabular}}\end{table}
 The 2015 weeknight (a leaf-on night of unknown week, both curbs available, before the lane) holds 183 cars on the 2,410~m of the lane, 37\,\% of the 2022 supply, against a nominal capacity of about 803 at 6~m per car. The gradient runs east: 28\,\% of supply in the west sector, 35\,\% in the institutional sector, 46\,\% in the east, as in EXP\textquoteright{}s evening rates. The busiest blocks that night were Montclair--Walkley (16), de Hampton--Royal (15), Grand--Beaconsfield (12), Hingston--de Hampton (12). The daytime orthophoto holds 158, almost all on the south curb, which says more about the hour and the shadows than about demand. On the side the winter layout converts to parking (north west of Cavendish, south east of it) the night count is 98 and the day count 90.
 \begin{figure}[htbp]\centering\includegraphics[width=1.0\textwidth]{figures/curb_cars_by_block_en.png}\caption{Cars at the curbs by block, west to east: the 2015 LiDAR night (by eye) and the daytime orthophoto, both curbs; dashed: nominal capacity at 6 m per car; red strip: the side converted to parking in winter.}\label{fig:curb_cars_by_block}\end{figure}
 
@@ -97,5 +97,5 @@ The hardship questions ask about a typical winter evening and about the days aft
 \textbf{What would close the gap.} A night occupancy count on Terrebonne\textquoteright{}s remaining band and on the cross streets within a block, repeated on a few weeknights including one with snow removal pending, would give the measurement the 2022 survey gave for the pre-lane street; extending the garage-and-driveway reading to the first block of each cross street would give the within-a-block respondents the same ground truth the on-street respondents have.
 
 \section{Reproducibility}
-\texttt{parking\_analysis.py} reads the sources in place and writes \texttt{summary.json} (every number quoted here), \texttt{exp2022\_occupancy\_by\_period.csv}, \texttt{survey\_parking\_by\_group.csv} and the figures; \texttt{exp2023\_parking\_tables\_transcribed.csv} is the hand transcription of EXP\textquoteright{}s Tables 3-2 and 3-3 with their pages; \texttt{build\_docs.py} writes this note, the deck and the lay summaries. Generated 2026-11-07 11:22.
+\texttt{parking\_analysis.py} reads the sources in place and writes \texttt{summary.json} (every number quoted here), \texttt{exp2022\_occupancy\_by\_period.csv}, \texttt{survey\_parking\_by\_group.csv} and the figures; \texttt{exp2023\_parking\_tables\_transcribed.csv} is the hand transcription of EXP\textquoteright{}s Tables 3-2 and 3-3 with their pages; \texttt{build\_docs.py} writes this note, the deck and the lay summaries. Generated 2026-11-07 11:24.
 \end{document}

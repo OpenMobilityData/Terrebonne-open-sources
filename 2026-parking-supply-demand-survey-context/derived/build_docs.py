@@ -81,9 +81,9 @@ Occupancy on Terrebonne as a whole never exceeded ''' + pc(E['max_occupancy_terr
 
 \subsection{The cars at the curbs, 2015 and the orthophoto}
 \begin{table}[htbp]\centering\small\caption{Cars at Terrebonne\textquoteright{}s curbs by sector, both sides, against EXP\textquoteright{}s supply and its Thursday-evening count.}\label{tab:sec}
-\begin{tabular}{@{}lrrrrrr@{}}\toprule sector & blocks & EXP supply (derived) & EXP occupied, Thu 18:30 & LiDAR night 2015 & night / supply & orthophoto, day\\ \midrule
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lrrrrrr@{}}\toprule sector & blocks & EXP supply (derived) & EXP occupied, Thu 18:30 & LiDAR night 2015 & night / supply & orthophoto, day\\ \midrule
 ''' + sec_rows + r'''
-\bottomrule\end{tabular}\end{table}
+\bottomrule\end{tabular}}\end{table}
 The 2015 weeknight (a leaf-on night of unknown week, both curbs available, before the lane) holds ''' + f"{CU['lidar_night_by_eye']}" + r''' cars on the ''' + f"{CU['length_m']:,}" + r'''~m of the lane, ''' + pc(CU['lidar_night_over_exp_supply']) + r''' of the 2022 supply, against a nominal capacity of about ''' + f"{CU['nominal_capacity_both_sides']}" + r''' at 6~m per car. The gradient runs east: ''' + pc(CU['by_sector']['residential west']['lidar_night_over_exp_supply']) + r''' of supply in the west sector, ''' + pc(CU['by_sector']['institutional']['lidar_night_over_exp_supply']) + r''' in the institutional sector, ''' + pc(CU['by_sector']['residential east']['lidar_night_over_exp_supply']) + r''' in the east, as in EXP\textquoteright{}s evening rates. The busiest blocks that night were ''' + esc(', '.join(f"{b['block']} ({b['cars']})" for b in CU['top_blocks_lidar'][:4])) + r'''. The daytime orthophoto holds ''' + f"{CU['optical_day']}" + r''', almost all on the south curb, which says more about the hour and the shadows than about demand. On the side the winter layout converts to parking (north west of Cavendish, south east of it) the night count is ''' + f"{CU['lidar_converted_side']}" + r''' and the day count ''' + f"{CU['optical_converted_side']}" + r'''.
 ''' + fig('curb_cars_by_block', 1.0, 'Cars at the curbs by block, west to east: the 2015 LiDAR night (by eye) and the daytime orthophoto, both curbs; dashed: nominal capacity at 6 m per car; red strip: the side converted to parking in winter.') + r'''
 

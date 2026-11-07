@@ -485,5 +485,5 @@
   "days": 121,
   "source": "Terrebonne-private decision model, appendix \u00ab Five winters of snow-related parking constraint \u00bb (scripts/winter_constraint_nights.py): loading night = >= 100 truckloads hauled in the borough or >= 40 in sector CDN-301; storm-to-loading adds the days from a triggering snowfall (>= 2.5 cm) to the loading; December 1 to March 31"
  },
- "generated": "2026-11-07 11:22"
+ "generated": "2026-11-07 11:24"
 }
