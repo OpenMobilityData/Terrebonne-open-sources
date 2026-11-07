@@ -1,0 +1,73 @@
+table,report_page,pdf_page,sector,side_or_direction,period,occupancy_pct,vacant_places
+3-2,43,54,residential west,direction west,Thu AM,57,41
+3-2,43,54,residential west,direction west,Thu noon,66,36
+3-2,43,54,residential west,direction west,Thu PM,48,48
+3-2,43,54,residential west,direction west,Sat AM,42,45
+3-2,43,54,residential west,direction west,Sat noon,44,51
+3-2,43,54,residential west,direction west,Sat PM,57,37
+3-2,43,54,residential west,direction east,Thu AM,49,51
+3-2,43,54,residential west,direction east,Thu noon,61,40
+3-2,43,54,residential west,direction east,Thu PM,36,60
+3-2,43,54,residential west,direction east,Sat AM,31,59
+3-2,43,54,residential west,direction east,Sat noon,44,53
+3-2,43,54,residential west,direction east,Sat PM,46,55
+3-2,43,54,institutional,direction west,Thu AM,48,22
+3-2,43,54,institutional,direction west,Thu noon,71,9
+3-2,43,54,institutional,direction west,Thu PM,36,25
+3-2,43,54,institutional,direction west,Sat AM,48,22
+3-2,43,54,institutional,direction west,Sat noon,34,28
+3-2,43,54,institutional,direction west,Sat PM,11,36
+3-2,43,54,institutional,direction east,Thu AM,51,19
+3-2,43,54,institutional,direction east,Thu noon,44,21
+3-2,43,54,institutional,direction east,Thu PM,35,29
+3-2,43,54,institutional,direction east,Sat AM,36,27
+3-2,43,54,institutional,direction east,Sat noon,27,31
+3-2,43,54,institutional,direction east,Sat PM,30,29
+3-2,43,54,residential east,direction west,Thu AM,69,32
+3-2,43,54,residential east,direction west,Thu noon,67,36
+3-2,43,54,residential east,direction west,Thu PM,70,34
+3-2,43,54,residential east,direction west,Sat AM,51,52
+3-2,43,54,residential east,direction west,Sat noon,50,54
+3-2,43,54,residential east,direction west,Sat PM,47,58
+3-2,43,54,residential east,direction east,Thu AM,52,56
+3-2,43,54,residential east,direction east,Thu noon,60,46
+3-2,43,54,residential east,direction east,Thu PM,54,50
+3-2,43,54,residential east,direction east,Sat AM,52,56
+3-2,43,54,residential east,direction east,Sat noon,46,62
+3-2,43,54,residential east,direction east,Sat PM,46,61
+3-3,48,59,residential west,cross streets north,Thu AM,46,57
+3-3,48,59,residential west,cross streets north,Thu noon,56,50
+3-3,48,59,residential west,cross streets north,Thu PM,52,55
+3-3,48,59,residential west,cross streets north,Sat AM,43,63
+3-3,48,59,residential west,cross streets north,Sat noon,46,63
+3-3,48,59,residential west,cross streets north,Sat PM,34,73
+3-3,48,59,residential west,cross streets south,Thu AM,35,75
+3-3,48,59,residential west,cross streets south,Thu noon,39,71
+3-3,48,59,residential west,cross streets south,Thu PM,27,82
+3-3,48,59,residential west,cross streets south,Sat AM,39,69
+3-3,48,59,residential west,cross streets south,Sat noon,39,69
+3-3,48,59,residential west,cross streets south,Sat PM,41,67
+3-3,48,59,institutional,cross streets north,Thu AM,76,10
+3-3,48,59,institutional,cross streets north,Thu noon,63,15
+3-3,48,59,institutional,cross streets north,Thu PM,60,17
+3-3,48,59,institutional,cross streets north,Sat AM,51,21
+3-3,48,59,institutional,cross streets north,Sat noon,49,22
+3-3,48,59,institutional,cross streets north,Sat PM,46,23
+3-3,48,59,institutional,cross streets south,Thu AM,72,8
+3-3,48,59,institutional,cross streets south,Thu noon,62,11
+3-3,48,59,institutional,cross streets south,Thu PM,40,17
+3-3,48,59,institutional,cross streets south,Sat AM,55,13
+3-3,48,59,institutional,cross streets south,Sat noon,54,13
+3-3,48,59,institutional,cross streets south,Sat PM,70,10
+3-3,48,59,residential east,cross streets north,Thu AM,61,64
+3-3,48,59,residential east,cross streets north,Thu noon,61,63
+3-3,48,59,residential east,cross streets north,Thu PM,60,63
+3-3,48,59,residential east,cross streets north,Sat AM,63,61
+3-3,48,59,residential east,cross streets north,Sat noon,53,76
+3-3,48,59,residential east,cross streets north,Sat PM,46,86
+3-3,48,59,residential east,cross streets south,Thu AM,51,69
+3-3,48,59,residential east,cross streets south,Thu noon,63,57
+3-3,48,59,residential east,cross streets south,Thu PM,58,64
+3-3,48,59,residential east,cross streets south,Sat AM,49,77
+3-3,48,59,residential east,cross streets south,Sat noon,53,72
+3-3,48,59,residential east,cross streets south,Sat PM,43,84
