@@ -17,11 +17,13 @@ This repository is one of three on the same subject:
     README.md         what it is, who issued it, where and when it was obtained, what it says
     raw/              the documents exactly as obtained (file names normalized; content never edited)
     derived/          anything made from them (optional)
+        ocr/          the full text of every raw PDF, page by page (text layer, or OCR for image-only pages)
 ```
 
 Rules:
 
 - Nothing in `raw/` is ever modified. A document obtained as an excerpt of a larger bundle is labelled as such, with the bundle identified.
+- **Full text for search** (`<folder>/derived/ocr/`, November 8, 2026): one `.txt` per raw PDF, same relative path plus `.txt`, one block per page headed « page N (text layer) » or « page N (OCR) ». Scanned pages (school minutes, parts of the 2023 EXP study and of council files) are images a PDF search does not see; they are read by Tesseract (French and English models, 300 dpi). The OCR text is an unchecked machine reading, for finding pages only: quote from the page image. Built by `tools/ocr_text.py [<folder>]`.
 - Every folder README gives the issuing body, the date, the source (URL or council file) and the date obtained, and states whether the source link still works when last checked.
 - READMEs describe and quote; they do not evaluate. Analysis, where there is any, is in documents in `derived/` (or in the derived documents of the access-requests repository), never in a README.
 - Press articles are not reproduced (copyright); they are cited by title, outlet and date. Broadcast audio and video are not reproduced either; a transcript of an elected official's public statements may be published in `derived/` for criticism and review (fair dealing, *Copyright Act*, s. 29.1), with the source credited and linked.
