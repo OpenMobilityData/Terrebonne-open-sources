@@ -17,6 +17,8 @@ from concurrent.futures import ThreadPoolExecutor
 MIN_CHARS = 120
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault('TESSDATA_PREFIX', os.path.expanduser('~/Terrebonne-data/third-party/tessdata'))
+# press articles kept in raw/ as captures are not given a full text (the repository does not reproduce press text)
+PRESS = re.compile(r'lapresse|ledevoir|radio-canada|journalmetro|administrativelawmatters|fqm_chronique|gazette|cbc|ctvnews|globalnews|thesuburban', re.I)
 PII = re.compile(r'rickhoge@|Ponsard|562-8459', re.I)
 
 
@@ -64,7 +66,7 @@ def main(reqs):
         raw = os.path.join(ROOT, req, 'raw')
         for dp, _, fs in os.walk(raw):
             for fn in sorted(fs):
-                if not fn.lower().endswith('.pdf'):
+                if not fn.lower().endswith('.pdf') or PRESS.search(fn):
                     continue
                 pdf = os.path.join(dp, fn)
                 rel = os.path.relpath(pdf, raw)

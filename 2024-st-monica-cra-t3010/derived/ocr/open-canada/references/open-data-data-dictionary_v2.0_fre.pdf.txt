@@ -1,0 +1,2301 @@
+=== page 1 (text layer) ===
+                                             UNCLASSIFIED - NON CLASSIFIÉ
+
+
+
+
+    Données ouvertes
+
+    Liste des organismes de bienfaisance
+    Années 2013 à 2024
+    Dictionnaire des données
+
+    Version 2.0
+              0
+
+
+
+Dernière révision
+               :               2024 -09-30
+                                       -
+
+=== page 2 (text layer) ===
+                                                                                                             UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                                        UNCLASSIFIED
+
+
+Table des matières
+
+Historique des révisions .......................................................................................................... 3
+1 Introduction .......................................................................................................................... 4
+      1.1 À propos de ce document .............................................................................................. 4
+      1.2 Organisation de la documentation .................................................................................. 5
+      1.3 Public cible ..................................................................................................................... 6
+      1.4 Sommaire des changements .......................................................................................... 6
+ Tableau de références des identifiants de révision de la version papier du T3010 ....................... 6
+
+2. Diagramme de relations ................................................................................................... 12
+3. Jeux de données ................................................................................................................. 13
+         3.1 Identification ................................................................................................................. 13
+         3.2 Adresses Web des contacts d’organismes de bienfaisance ......................................... 14
+         3.3 Directeurs/Officiers ....................................................................................................... 15
+         3.4 Donataires reconnus .................................................................................................... 16
+         3.5 Programmes de bienfaisance ....................................................................................... 17
+         3.6 Information générale .................................................................................................... 18
+         3.7 Données financières ..................................................................................................... 24
+         3.8 Fondations privé/publique ............................................................................................ 32
+         3.9 Activités à l'extérieur du Canada - Détails financiers .................................................... 33
+         3.10 Activités à l'extérieur du Canada - Pays où les programmes ont été offert ................ 34
+         3.11 Activités à l'extérieur du Canada - Marchandises exportées ...................................... 35
+         3.12 Activités à l'extérieur du Canada - Ressources financières utilisées .......................... 36
+         3.13 Rémunération ............................................................................................................. 37
+         3.14 Dons en nature ........................................................................................................... 38
+         3.15 Activités politiques / Activité de politiques publique et de développement -
+         Description ......................................................................................................................... 39
+         3.16 Activités politiques – Financement de l’étranger ........................................................ 40
+         3.17 Activités politiques – Ressources ............................................................................... 41
+         3.18 Subventions accordées à des donataires non reconnus ............................................ 42
+         3.19 Annexe 8 – Contingent des versements ..................................................................... 43
+
+
+
+
+                                                                                                                              Page 2 de 46
+
+=== page 3 (text layer) ===
+                                    UNCLASSIFIED - NON CLASSIFIÉ
+
+                                            UNCLASSIFIED
+
+
+
+
+Historique des révisions
+Version & Date   Description
+1.2 2023-05-29   Première version
+2.0 2023-08-23   Deuxième version
+
+
+
+
+                                                 Page 3 de 46
+
+=== page 4 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                               UNCLASSIFIED
+1 Introduction
+1.1 À propos de ce document
+
+Le but de ce document est de décrire les données publiques du formulaire T3010 disponible sur le site de
+Données ouvertes (ouvert.canada.ca). Ce dictionnaire de données couvre les déclarations de
+renseignements des organismes de bienfaisance enregistrés dont la date de fin d’exercice tombe dans les
+années fiscales 2013 à 2024.
+
+Dans le but de réduire le fardeau administratif imposé aux organismes de bienfaisance, l’Agence du revenu
+du Canada (l'ARC) modernise ses systèmes de TI afin qu'elle puisse fournir de nouveaux services
+numériques aux organismes de bienfaisance.
+En mai 2019, la Direction des organismes de bienfaisance a rendu disponible plusieurs nouveaux services
+numériques dans le cadre de cette initiative :
+
+   •       Le formulaire T2050, Demande d’enregistrement d’un organisme de bienfaisance en vertu de la Loi
+           de l’impôt sur le revenu sera remplacé par un nouveau service de demande d’enregistrement en
+           ligne.
+   •       Les organismes de bienfaisance enregistrés pourront remplir et soumettre leur T3010 Déclaration de
+           renseignements des organismes de bienfaisance enregistrés en ligne par l’intermédiaire du portail
+           Mon dossier d’entreprise de l’ARC.
+   •       Les organismes de bienfaisance pourront mettre à jour leurs renseignements en ligne et ils pourront
+           communiquer avec la Direction par voie électronique par l’intermédiaire de Mon dossier d’entreprise.
+
+  Documents d'appui
+
+       ▪     T3010 (Année en question) – Déclaration de renseignements des organismes de bienfaisance
+             enregistrés
+             Formulaire que les organismes de bienfaisance enregistrés doivent remplir chaque
+             année et envoyer à l'ARC dans les six mois suivant la fin de son exercice fiscal. Un
+             organisme de bienfaisance utilise ce formulaire pour déclarer ses activités, ses
+             sources de revenus et ses dépenses.
+
+       ▪     T1235 (Année en question) – Feuille de travail – Administrateurs, fiduciaires et autres responsables
+             Formulaire utilisé par un organisme de bienfaisance enregistré pour identifier son
+             conseil d'administration / fiduciaires et autres responsables. Chaque organisme de
+             bienfaisance doit soumettre ce formulaire dans le cadre de sa déclaration annuelle.
+
+       ▪     T1236 (Année en questions) – Feuille de travail - Donataires reconnus / Montants fournis aux
+             autres organismes
+             Formulaire utilisé par un organisme de bienfaisance enregistré pour identifier les dons
+             qu'il a faits à des donataires reconnus et d'autres organisations au cours de son
+             exercice fiscal. Chaque organisme de bienfaisance doit soumettre ce formulaire dans
+             le cadre de sa déclaration annuelle.
+
+
+
+
+                                                                                                   Page 4 de 46
+
+=== page 5 (text layer) ===
+                                                                                         UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                  UNCLASSIFIED
+
+   ▪     T1441 (année en question) – Versements admissibles : Subventions à des donataires non
+         reconnus (organisations donataires)
+       Formulaire utilisé par un organisme de bienfaisance enregistré pour indiquer les versements
+       admissibles à des donataires non reconnus au cours de son exercice financier. Chaque organisme de
+       bienfaisance doit soumettre ce formulaire dans le cadre de sa déclaration annuelle.
+
+   ▪     TF725 Feuille de renseignements de base sur les organismes de bienfaisance enregistrés (BIS)
+         Un formulaire pré-imprimer qui est posté aux organismes de bienfaisance enregistrés dans le mois
+         suivant la fin de leur exercice fiscal dans le cadre de leur trousse de retour de renseignements
+         T3010.
+
+         NOTE : Depuis mai 2019, la feuille de renseignements de base n’est plus envoyé par la poste aux
+         organismes de bienfaisance
+
+   ▪     T4033 – Comment remplir la déclaration de renseignements des organismes de bienfaisance
+         enregistrés
+         Guide qui fournit de l'aide sur la façon de remplir la déclaration de renseignements des
+         organismes de bienfaisance enregistrés
+
+   ▪     Listes de codes pour Données ouvertes
+         Les listes de codes décrivent tous les codes identifiants et les descriptions associées qui sont
+         identifiés dans ce document
+
+
+1.2 Organisation de la documentation
+Ce document est organisé selon les sections suivantes :
+
+Section                Description
+Introduction           Fournit des renseignements liés au présent document
+Relations              Décrit la relation entre chaque jeu de donnée
+Jeux de données        Décrit chaque élément d’un jeu de donnée REMARQUE : Les champs sont
+                       indiqués par un symbole de clé (   ) pour identifier une entrée dans le fichier.
+
+
+
+
+                                                                                                          Page 5 de 46
+
+=== page 6 (text layer) ===
+                                                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                    UNCLASSIFIED
+  1.3 Public cible
+  L'information contenue dans les jeux de données est destinée à toutes les personnes intéressées
+  à utiliser les données dans des formats lisibles par ordinateur.
+
+
+  1.4 Sommaire des changements
+      Les modifications ci-dessous reflètent chaque version/révision du formulaire T3010 implémentée
+      depuis mai 2019.
+Tableau de références des identifiants de révision de la version papier du T3010
+
+ Form ID     Numéro de révision (anglais)        Numéro de révision ( français)   Date de sortie
+    23       T3010 E (19) Version B              T3010 F (19) Version B           mai 2019
+    24       T3010 E (19) Version C              T3010 F (19) Version C           octobre 2019
+    25       T3010 E (20) Version A              T3010 F (20) Version A           mai 2020
+    26       T3010 E (23) Version A              T3010 F (23) Version A           mai 2023
+    27       T3010 E (24) Version A              T3010 F (24) Version A           octobre 2023
+
+
+
+
+1.4.1 Modification de la version B du formulaire T3010 (19) – mai 2019
+
+ Zones affectées                               Descriptions
+ Information de version                        Il s’agissait de la première version du formulaire T3010 version 23
+                                               (v23)
+ Feuille de renseignements de base (BIS)       Depuis mai 2019, le BIS n’est plus envoyé par la poste aux
+                                               organismes de bienfaisance.
+ Contacts des organismes de bienfaisance       La feuille de renseignements de base était la principale source
+                                               d’information de contacts soumises dans le cadre du formulaire
+                                               T3010 et conformément à l’élément ci-dessous, la feuille a été mis
+                                               hors service en mai 2019. Les informations de contacts sont
+                                               stockées au niveau du compte et permettent plusieurs contacts,
+                                               par exemple : un organisme de bienfaisance peut désormais
+                                               stocker plusieurs adresses Web.
+ Nouveau champ de code de sous-catégorie L’ajout d’un nouveau champ de code de sous-catégorie, qui est
+ (Section « Identifications »                  un sous-ensemble du code de catégorie. Il y a également eu
+                                               plusieurs changements de code de catégorie. Ces codes se
+                                               trouvent dans le dictionnaire de données de la liste de codes.
+ Section « Activités à l’extérieur du Canada – « ACDI » a été remplacé par « Affaire mondiales »
+ Détails sur les finances »
+ Section « Cadeaux autres qu’en espèces        Sur le formulaire T3010, le terme « Dons en natures » a été
+ (cadeaux en nature) reçus »                   renommé « Dons autres qu’en espèces ».
+ Liste de codes                                Plusieurs listes de codes ont été modifiées
+ Champs financiers                             Tous les champs financiers de l’extrait ont désormais une
+                                               longueur de 14, dont un chiffre réservé à un signe négatif
+                                               potentiel.
+
+
+
+
+                                                                                                         Page 6 de 46
+
+=== page 7 (text layer) ===
+                                                                                            UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                     UNCLASSIFIED
+
+
+1.4.2 Modification de la version C du formulaire T3010 (19) – octobre 2019
+
+ Zones affectées                                 Descriptions
+ Nouvelle version du formulaire                 La nouvelle version de formulaire 24(v24) a été publiée. Diverses
+                                                questions ont été supprimées du formulaire
+ Anciennes versions de formulaire               Les anciennes versions du formulaire (c.-à-d.v23) peuvent
+                                                toujours être saisies dans le système si elles sont reçues sur
+                                                papier, si un ajustement de l’ancienne version est en cours de
+                                                traitement ou si une version 23 existante du formulaire est en
+                                                cours à ce moment-là de la version automne 2019.
+ Nouvel élément de données ID de                Un nouveau champ clé « ID de formulaire » a été ajouté à ce
+ formulaire                                     dictionnaire de données pour indiquer la version de formulaire du
+                                                T3010 sur laquelle il est fait rapport (dans des enregistrements de
+                                                données spécifiques). Il a été ajouté à chaque table qui s’associe
+                                                de manière unique à un T3010.
+ Nouvelle colonne « ID de formulaire            Une nouvelle colonne « ID de formulaire associé » a été ajoutée à
+ associé »                                      chaque tableau ci-dessous pour indiquer quelle version de
+                                                formulaire (par ID de formulaire) remplira une valeur pour ce
+                                                champ.
+
+                                                Cette colonne identifie les données remplies comme suit :
+
+                                                a. Si l’entrée est vide, le champ sera rempli pour toutes les
+                                                versions.
+                                                b. S’il existe une valeur « Form ID », le champ ne sera renseigné
+                                                que pour les versions spécifiées dans cette colonne.
+ Les tableaux de l’annexe 7 « Financement       Deux des tableaux (« Activités politiques – Financement » ont été
+ des activités politiques » et « Ressources     supprimés de la version 24 du formulaire et les tableaux associés
+ relatives aux activités politiques » ont été   ne rempliront plus les enregistrements de la version 24 et des
+ supprimés                                      versions ultérieures. Cela signifie que seule la table descriptions
+                                                est restée pour la V24 et les versions ultérieures.
+ Le tableau de l’annexe 7 « Activités           Pour la version 24 du formulaire T3010, le tableau de l’annexe 7
+ politiques – Description » a été renommé       « Activités politiques – Description » a été renommé « Activités
+                                                de politique publique et de développement – Description »
+
+
+1.4.3 Modifications de la version A du formulaire T3010 (20) – octobre 2020
+
+ Zones affectées                                Descriptions
+ Nouvelle version du formulaire                 La nouvelle version de formulaire 25(v25) a été publiée.
+
+ Les tableaux de l’annexe 7« Activités de       Les tableaux « Activités de politique publique et de développement
+ politique publique et de développement –       – Description » ont été supprimés du formulaire. Cela signifie que
+ Description » ont été supprimés                seule la table descriptions est restée pour la V25 et les versions
+                                                ultérieures.
+
+ Section C – ligne 2400 a été supprimée         La question associée pour l’annexe 7 dans la section C (ligne
+                                                2400) a été supprimée.
+
+
+
+
+                                                                                                           Page 7 de 46
+
+=== page 8 (text layer) ===
+                                                                                          UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                    UNCLASSIFIED
+1.4.4 Modifications de la version A du formulaire T3010 (23) – mai 2023
+
+ Zones affectées                              Description
+ Nouvelle version du formulaire               Une nouvelle version du formulaire T3010 (v26) est en élaboration
+                                              et sera déployée en mai 2023. Elle introduira les modifications ci-
+                                              dessous. Les modifications sont indiquées dans les changements
+                                              suivants au dictionnaire de données et découlent de changements
+                                              législatifs dans le cadre du budget 2022 – le nouveau cadre pour
+                                              les « partenariats pour des fins charitables », article 3703 du
+                                              Règlement de l’impôt sur le revenu (adopté lorsque le projet de
+                                              loi C-19 a reçu la sanction royale, le 23 juin 2022)
+ Anciennes versions du formulaire                  • Les anciennes versions du formulaire (v23/24/25) peuvent
+                                                        toujours être entrées dans le système si on les reçoit sur
+                                                        papier; une modification à l’ancienne version est en
+                                                        traitement, ou une version 25 existante du formulaire est
+                                                        en développement au moment de la publication de
+                                                        mai 2023. À l’avenir, le système PMOB traitera toutes les
+                                                        versions du formulaire T3010 et en fera rapport puisqu’on
+                                                        s’attend à d’autres modifications au formulaire dans les
+                                                        prochaines versions.
+
+                                                  •    Pour adapter les anciennes versions du formulaire, tous
+                                                       les champs demeureront intact même s’ils n’existent plus
+                                                       pour une version donnée du formulaire T3010. Dans ces
+                                                       cas, le système produira une valeur de champ vide pour
+                                                       cette version du formulaire T3010.
+ Nouvel élément de donnée « ID de             Un nouveau champ « ID de formulaire » a été ajouté au
+ formulaire »                                 dictionnaire de données pour indiquer la version du
+                                              formulaire T3010 utilisée dans des dossiers de données précis. Il
+                                              a été ajouté à chaque tableau lié uniquement au formulaire T3010.
+ Nouvelle colonne « ID de formulaire          Une nouvelle colonne « ID de formulaire associé » a été ajoutée à
+ associé »                                    chaque tableau ci-dessous pour indiquer quelle version de
+                                              formulaire (par ID de formulaire) générera une valeur pour ce
+                                              champ.
+                                              Cette colonne identifie les données générées comme suit :
+                                                   • Si l’entrée est vide, le champ sera rempli pour toutes les
+                                                       versions.
+                                                   • S’il y a une valeur « ID de formulaire », le champ ne sera
+                                                       rempli que pour les versions précisées dans la colonne.
+ Section C – 4 nouveaux champs                Les quatre champs suivants ont été ajoutés au formulaire :
+                                                   • 5840
+                                                   • 5841
+                                                   • 5842
+                                                   • 5843
+
+
+
+
+ Section D/Annexe 6 (modifications au texte   Un champ ajouté à l’Annexe 6/Section D
+ + un nouveau champ)                             • 5045
+
+
+
+
+                                                                                                         Page 8 de 46
+
+=== page 9 (text layer) ===
+                                                                                              UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                       UNCLASSIFIED
+ Annexe 2 Activités à l’extérieur du Canada      Mise à jour d’une description
+ – Détails financiers (modifications au texte)      • 210
+
+
+
+
+ Nouveau formulaire T1441 – Versements           Nombre total d’organisations donataires auxquelles l’organisme
+ admissibles : Subventions à des donataires      de bienfaisance a versé des subventions totalisant plus de 5 000 $
+ non reconnus (organisations donataires)         durant l’exercice financier. Pour chaque organisation donataire,
+                                                 l’utilisateur peut remplir les champs suivants :
+                                                       • Nom de l’organisation donataire
+                                                       • Objectif de la subvention
+                                                       • Montant des versements en espèces
+                                                       • Montant des versements autre qu’en espèces
+                                                       • Si c’est à l’extérieur du Canada, chaque code de pays,
+                                                            ainsi que le pays où les activités ont eu lieu
+
+
+
+
+1.4.5 Modifications de la version A du formulaire T3010 (24) – octobre 2023
+ Impacted Areas                                  Details
+ Nouvelle version du formulaire                  Les changements qui suivent ont été apportés à la version 27 du
+                                                 formulaire T3010. Les changements sont présentés dans les
+                                                 modifications au dictionnaire de données, plus bas, et découlent
+                                                 de modifications législatives introduites dans le budget de 2022,
+                                                 soit des changements au contingent des versements promulgués
+                                                 lorsque le projet de loi C-32, Loi d’exécution de l’énoncé
+                                                 économique de l’automne 2022, a reçu la sanction royale. Les
+                                                 changements indiqués plus bas s’appliqueront aux organismes
+                                                 dont l’exercice financier débute le 1er janvier 2023 ou après.
+ Anciennes versions du formulaire                     • Les anciennes versions du formulaire (les versions 23,
+                                                          24,25, 26) peuvent encore être entrées dans le système si
+                                                          on les reçoit sur papier, un ajustement à la vieille version
+                                                          est en traitement. Le système pourra gérer toutes les
+                                                          versions du formulaire et générer des rapports à ce sujet
+                                                          puisqu’on prévoit d’autres modifications au
+                                                          formulaire T3010 dans les prochaines versions.
+                                                      • Afin de s’adapter aux vieilles versions du formulaire, tous
+                                                          les champs demeureront intacts même s’ils n’existent plus
+                                                          pour une version donnée du formulaire T3010. Dans ces
+                                                          cas, le système produira une valeur en blanc ce dossier.
+ Section C – Nouvelles questions C17 et          Ajout de six champs :
+ C18, et six nouvelles lignes                         • Ligne 5850 – Dans les 24 mois précédant le début de
+                                                          l’exercice financier, la valeur moyenne des biens de votre
+                                                          organisme de bienfaisance (argent comptant, placements,
+                                                          immobilisations ou autres biens) qui ne sont pas utilisés
+                                                          directement dans des activités de bienfaisance ou à des
+                                                          administratives a-t-elle :
+                                                      1) dépassé 100 000 $, si l’organisme de bienfaisance est
+                                                          considéré comme une œuvre de bienfaisance?
+                                                      2) dépassé 25 000 $, si l’organisme de bienfaisance est
+                                                          considéré comme une fondation publique ou privée?
+
+                                                                                                             Page 9 de 46
+
+=== page 10 (text layer) ===
+                                                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                    UNCLASSIFIED
+                                                  •   Ligne 5860 – L’organisme de bienfaisance détenait-il des
+                                                      fonds orientés par les donateurs durant l’exercice
+                                                      financier?
+                                                  •   Ligne 5861 – Le nombre total des comptes détenus à la
+                                                      fin de l’exercice financier.
+                                                  •   Ligne 5862 – La valeur totale de tous les comptes détenus
+                                                      à la fin de l’exercice financier.
+                                                  •   Line 5863 – La valeur totale des dons versés dans des
+                                                      comptes de fonds orientés par les donateurs durant
+                                                      l’exercice financier.
+                                                  •   Ligne 5864 – La valeur totale des versements admissibles
+                                                      provenant de fonds orienés par les donateurs durant
+                                                      l’exercice financier.
+
+Section D / annexe 6 – ajout de 7 lignes et   Ajout de sept champs à l’annexe 6
+retrait de 2 lignes                               • Ligne 4101 – Entrez le montant total en argent comptant
+                                                      et des comptes bancaires inclus à la ligne 4100.
+                                                  • Ligne 4102 – Entrez la valeur de tous les placements à
+                                                      court terme inclus à la ligne 4100 dont l’échéance
+                                                      d’origine est d’au plus un an.
+                                                  • Ligne 4157 – Entrez la valeur des terrains et immeubles
+                                                      utilisés au Canada pour des programmes de bienfaisance
+                                                      ou à des fins administratives.
+                                                  • Ligne 4158 – Entrez le coût ou la valeur marchande de
+                                                      tous les terrains et les immeubles au Canada qui ne sont
+                                                      pas utilisés pour des programmes de bienfaisance ni à
+                                                      des fins administratives.
+                                                  • Ligne 4190 – Entrez la valeur des investissements
+                                                      d’impact, y compris celles indiquées à d’autres lignes. Aux
+                                                      fins du présent guide, les investissements d’impact sont
+                                                      investissements dans des entreprises ou des projets dans
+                                                      le but de produire des effets environnementaux ou
+                                                      sociaux positifs et mesurables tout en générant des
+                                                      rendements financiers positifs.
+                                                  • Ligne 4576 – Entrez le montant de la ligne 4580 qui
+                                                      représente le montant total des intérêts et les autres
+                                                      revenus que l’organisme de bienfaisance a reçus ou
+                                                      gagnés découlant des investissements d’impact.
+                                                  • Ligne 4577 – Entrez le montant total de la ligne 4580 qui
+                                                      représente le montant total des intérêts et des revenus de
+                                                      placements reçus de personnes ayant un lien de
+                                                      dépendance avec l’organisme de bienfaisance.
+                                              Retrait de deux champs de l’annexe 6 / section D
+                                                  • Ligne 4505 de la section D et de l’annexe 6
+                                                  • Ligne 4180 de l’annexe 6
+Annexe 1 Fondations – ajout de 2 lignes       Ajout de deux champs
+                                                  • Ligne 111 – Quelle était la valeur totale de tous les fonds
+                                                      réservés détenus à la fin de l’exercice financier?
+                                                  • Ligne 112 – De ce montant, quel montant ne pouvait pas
+                                                      être utilisé en raison d’une fiducie ou de directives écrites
+                                                      du bailleur de fonds?
+
+
+
+
+                                                                                                        Page 10 de 46
+
+=== page 11 (text layer) ===
+                                                                                UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                         UNCLASSIFIED
+Nouvelle annexe 8 – Contingent des   L’annexe 8 – Contingent des versements sera intégrée afin de
+versements                           permettre aux organismes de calculer leur contingent des
+                                     versements pour l’exercice financier actuel et les prochains
+                                     exercices. L’annexe sera divisée en trois pages. Les deux
+                                     premières pages constitueront l’étape 1 « Calculer le contingent
+                                     des versements pour l’exercice financier en cours » et l’étape 2
+                                     « Estimer le contingent des versements pour le prochaine
+                                     exercice financier »; la page 3 sera une page d’examen.
+
+Modifications de libellé             Modifications de libellés :
+                                         •   Ligne 200
+                                         •   Ligne 2000
+                                         •   Ligne 2100
+                                         •   Ligne 5045
+                                         •   Ligne 4890
+                                         •   Ligne 4910
+
+
+
+
+                                                                                             Page 11 de 46
+
+=== page 12 (text layer) ===
+                                                                  UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                          UNCLASSIFIED
+
+
+2. Diagramme de relations
+Cette section documente la relation entre chaque jeu de donnée.
+
+
+
+
+                                                                              Page 12 de 46
+
+=== page 13 (text layer) ===
+                                                                                        UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                UNCLASSIFIED
+
+
+ 3. Jeux de données
+3.1 Identification
+
+      Ce jeu de données contient des informations sur l'identification des organismes de bienfaisance telle que
+      le nom, l'adresse postale.. La liste ne comprend que les organismes de bienfaisance qui ont soumis un
+      formulaire T3010, Déclaration de renseignements des organismes de bienfaisance pour la période
+      concernée.
+
+      Nom du fichier:       IDENT_<année>.csv
+
+Éléments de données
+ Clé Champ                           Type      Taille   Description                             Modifications
+      BN                             Texte      15      Numéro d’enregistrement                 Aucun
+      Category                       Texte       4      Catégorie                               Aucun
+                                                        Consultez la liste de Code de
+                                                        catégorie
+      Sub-category                   Texte       4      Sous-catégorie. Voir les listes de       L’ajout d’un
+                                                        codes de catégorie / sous-catégorie     nouveau champ
+                                                        dans le PDF des listes de codes.        de code de sous-
+                                                                                                catégorie mai
+                                                                                                2019
+      Designation                    Texte        1     Désignation                             Aucun
+                                                        Consultez la liste de Code de
+                                                        désignation
+      Legal Name                     Texte      175     Nom légal                               Aucun
+      Account name                   Texte      175     Nom du compte                           Aucun
+      Adress Line 1                  Texte       30     Adresse postale: Ligne 1                Aucun
+      Adress Line 2                  Texte       30     Adresse postale: Ligne 2                Aucun
+      City                           Texte       30     Adresse postale: Ville                  Aucun
+      Province                       Texte        2     Adresse postale: Province/état          Aucun
+                                                        Consultez la liste de Code de
+                                                        provinces canadiennes/états
+                                                        américains
+      Postal Code                    Texte       10     Adresse postale: Code postal            Aucun
+      Country                        Texte       2      Code du pays ou le programme a été      Aucun
+                                                        diffusé Voir la liste des codes de
+                                                        pays (dans le PDF des listes de
+                                                        codes)
+
+ Source: Les informations que nous avons dans nos dossiers
+
+
+
+
+                                                                                                    Page
+
+
+
+                                                                                                          13 de 46
+
+=== page 14 (text layer) ===
+                                                                                     UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                             UNCLASSIFIED
+ 3.2 Adresses Web des contacts d’organismes de bienfaisance
+
+Cet ensemble de données contient des adresses Web en temps réel liées au compte de bienfaisance (et non liées
+au T3010)
+
+Nom de fichier :     WEBURL_<année>.csv
+
+Éléments de données
+  Clé Champ       Type        Taille         Début Fin     Description             Modifications (Nouveau
+                                                                                  fichier)
+       BN            Texte      15             1     15   Numéro d’enregistrement Le concept d’un fichier
+                                                                                  .csv a été introduit dans le
+                                                                                  cadre de la version de mai
+                                                                                  2019
+      #                         9             16     24 Numéro de séquence pour Nouveau
+                    Nombre                               identifier de manière
+                                                         unique chaque élément
+                                                         pour un NE
+      Website        Texte     200            25     224 URL du site Web de        Nouveau
+                                                         l’organisme de
+                                                         bienfaisance
+
+  Source: Les informations que nous avons dans nos dossiers
+
+
+
+
+                                                                                                Page 14 de 46
+
+=== page 15 (text layer) ===
+                                                                                          UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                  UNCLASSIFIED
+                                                                                                      Page
+3.3 Directeurs/Officiers
+
+Ce jeu de données contient une liste des administrateurs, fiduciaires et autres responsables.
+
+  Nom de fichier:      DIRECTORS_<année>.csv
+
+Éléments de données
+                                                                                                              ID de
+  Clé    Champ                   Type        Taille    Description                        Modifications      formulaire
+                                                                                                             associé
+         BN                      Texte         15      Numéro d’enregistrement            Aucun
+         FPE                     Date          10      Fin de l’exercice                  Aucun
+         Form ID                 Texte         4       ID version du formulaire           Aucun
+         #                      Nombre         9       No de séquence                     Aucun
+         Last Name               Texte         30      Nom                                Aucun
+         First Name              Texte         30      Prénom                             Aucun
+         Initials                Texte         3       Initiales                          Aucun
+         Position                Texte         30      Position dans l’organisme          Aucun
+         At Arm’s Length        Oui/Non        1       Sans lien de dépendance avec       Aucun
+                                                       d'autres administrateurs?
+         Start date               Date         10      Date à laquelle l'administrateur   Aucun
+                                                       a été nommé dans la position
+         End date                 Date         10      Date à laquelle l'administrateur   Aucun
+                                                       a cessé d'être dans la position
+
+Source: T1235 Feuille de travail
+Administrateurs, fiduciaires et autres
+responsables
+
+
+
+
+                                                                                                            15 de 46
+
+=== page 16 (text layer) ===
+                                                                                       UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                            UNCLASSIFIED
+  3.4 Donataires reconnus
+
+  Ce jeu de données contient une liste de dons faits à des donataires reconnus et à d'autres organismes.
+
+  Nom du fichier:         QUALIFIED_DONEES_<année>.csv
+
+Éléments de données
+                                                                                                       ID de
+ Clé Champ                      Type     Taille Description                    Modifications           formulaire
+                                                                                                       associé
+     BN                         Texte     15    Numéro d’enregistrement        Aucun
+     FPE                        Date      10    Fin de l’exercice              Aucun
+     Form ID                    Texte     4      ID version du formulaire      Aucun
+     #                         Nombre     9     No de séquence                 Aucun
+     Donee BN                   Texte     15    Numéro d’enregistrement du     Aucun
+                                                donataire reconnu
+     Donee Name                 Texte    175    Nom du donataire reconnu       Aucun
+     Associated                Oui/Non    1     Organisme de bienfaisance      Aucun
+                                                associé?
+     City                       Texte     30    Ville                          Aucun
+     Province                   Texte     2      Province                      Aucun
+                                                Consultez la liste de Code
+                                                de provinces
+                                                canadiennes/états
+                                                américains
+     Total Gifts               Montant    14    Montant total des dons         Laissé vide pour les
+                                                                               organismes de
+                                                                               bienfaisance exemptés
+     Gifts in Kind             Montant    14    Montant des dons en nature     Laissé vide pour les
+                                                                               organismes de
+                                                                               bienfaisance exemptés
+     Political Activity        Oui/Non    1     Une partie du don destinée à   Retiré de la version    23
+     Gift                                       des activités politiques?      24 du formulaire
+                                                                               T3010
+     Political Activity        Montant    14    Montant du don destiné à       Retiré de la version    23
+     Amount                                     des activités politiques       du formulaire T3010
+
+   Source : T1236, Feuille de travail - Donataires reconnus /
+                   Montants fournis aux autres organismes
+
+
+
+
+                                                                                                       Page 16 de 46
+
+=== page 17 (text layer) ===
+                                                                                       UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                             UNCLASSIFIED
+
+
+   3.5 Programmes de bienfaisance
+
+  Ce jeu de données contient une description des programmes de bienfaisance continus et les nouveaux
+  programmes. L'information est capturée telle que fournies par l'organisme de bienfaisance. La description
+  peut être soit en anglais ou en français et aucune traduction n’est fourni.
+
+Nom du fichier:      NEW_ONGOING_PROGRAMS_<année>.csv
+
+Éléments de données
+                                                                                                      ID de
+ Clé Champ                  Type Taille Description                          Modifications            formulaire
+                                                                                                      associé
+      BN                   Texte     15    Numéro d’enregistrement           Aucun
+      FPE                  Date      10    Fin de l’exercice                 Aucun
+      Form ID              Texte      4    ID version du formulaire          Aucun
+      Program Type         Texte      2    Code de type de programme         Aucun
+                                           Voir la liste des codes de type
+                                           de programme ( dans le PDF
+                                           des listes de codes )
+      Description                   2500   Description du programme de       Aucun
+                            Texte          bienfaisance
+
+  Source: T3010, Déclaration de renseignements des organismes de bienfaisance enregistrés
+        ▪ Section C, question C2
+
+
+
+
+                                                                                                      Page 17 de 46
+
+=== page 18 (text layer) ===
+                                                                                UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                      UNCLASSIFIED
+   3.6 Information générale
+
+Nom du fichier:      FINANCIAL_SECTION_A_B_AND_C_<année>.csv
+
+Éléments de données
+                                                                                                  ID de
+ Clé Champ                     Type      Taille   Description                 Modifications       formulaire
+                                                                                                  associé
+      BN                       Texte      15      Numéro                      Aucun
+                                                  d’enregistrement
+      FPE                      Date       10      Fin de l’exercice           Aucun
+      Form ID                  Texte      4       ID version du formulaire    Aucun
+      Program #1 Code          Texte      3       Domaine de programme        Aucun
+                                                  n1
+                                                  Voir la liste des codes
+                                                  de zone de programme
+                                                  (dans le PDF des listes
+                                                  de codes)
+      Program #1 %            Nombre       3      Domaine #1 –                Aucun
+                                                  Pourcentage
+      Program #1 Desc          Texte      60      Domaine #1 –                Aucun
+                                                  Description
+      Program #2 Code          Texte       3      Domaine de programme        Aucun
+                                                  n2
+                                                  Voir la liste des codes
+                                                  de zone de programme
+                                                  (dans le PDF des listes
+                                                  de codes)
+      Program #2 %             Texte       3      Domaine #2 –                Aucun
+                                                  Pourcentage
+      Program #2 Desc         Nombre      60      Domaine #2 –                Aucun
+                                                  Description
+      Program #3 Code          Texte       3      Domaine de programme        Aucun
+                                                  n3
+                                                  Voir la liste des codes
+                                                  de zone de programme
+                                                  (dans le PDF des listes
+                                                  de codes)
+      Program #3 %             Texte       3      Domaine #3 –                Aucun
+                                                  Pourcentage
+      Program #3 Desc          Texte      60      Domaine #3 –                Aucun
+                                                  Description
+      1510                    Oui/Non      1      L'organisme de              Aucun
+                                                  bienfaisance avait-il une
+                                                  position subalterne par
+                                                  rapport à un organisme
+                                                  parent?
+      1510-BN                  Texte      15      L'organisme de              Aucun
+                                                  bienfaisance avait-il une
+                                                  position subalterne par
+                                                  rapport à un organisme
+                                                  parent?
+      1510-Name                Texte      175     Nom de l’organisme          Aucun
+
+                                                                                               Page 18 de 46
+
+=== page 19 (text layer) ===
+                                                                   UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                        UNCLASSIFIED
+1570        Oui/Non        1      L'organisme de               Aucun
+                                  bienfaisance est-il
+                                  liquidé, dissous ou
+                                  cessé ses activités?
+
+1600   Oui/Non        1        Organisme désigné comme             Aucun
+                               une fondation publique ou une
+                               fondation privée?
+1800   Oui/Non        1        Organisme de bienfaisance           Aucun
+                               actif au cours de l'exercice?
+2000   Oui/Non        1        Organisme de bienfaisance           Aucun
+                               a fait des dons ou transféré
+                               des fonds à des donataires
+                               reconnus ou à d'autres
+                               organismes? (à l’exclusion
+                               des subventions à des
+                               donataires non reconnus)
+2100   Oui/Non        1        Organisme         a     exploité,   Aucun
+                               financé ou fourni des
+                               ressources        pour      toute
+                               activité, (à l’exclusion des
+                               versements admissibles) tout
+                               programme ou tout projet à
+                               l'extérieur du Canada?
+2400   Oui/Non        1        Organisme de bienfaisance      Retiré de la           23, 24
+                               s'est-il livré à des activités version 25 du
+                               politiques?                    formulaire
+                                                              T3010
+5030   Montant        14       Montant total consacré à des Retiré de la             23
+                               activités politiques           version 24 du
+                                                              formulaire
+                                                              T3010 Laissé
+                                                              vide pour les
+                                                              organismes
+                                                              de
+                                                              bienfaisance
+                                                              exemptés
+5031   Montant        14       Montant total des dons faits à Retiré de la           23
+                               des donataires reconnus        version 24 du
+                                                              formulaire
+                                                              T3010 Laissé
+                                                              vide pour les
+                                                              organismes
+                                                              de
+                                                              bienfaisance
+                                                              exemptés
+5032   Montant        14       Montant total reçu de          Retiré de la           23
+                               l'étranger qui devait être     version 24 du
+                               consacré à des activités       formulaire
+                               politiques                     T3010 Laissé
+                                                              vide pour les
+                                                              organismes
+                                                              de
+
+
+                                                                                  Page 19 de 46
+
+=== page 20 (text layer) ===
+                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                UNCLASSIFIED
+                                                           bienfaisance
+                                                           exemptés
+
+2500   Oui/Non    1    Financement:                        Aucun
+                       Publicité,imprimés,messages
+                       publicitaires à la radio ou à la
+                       télévision
+2510   Oui/Non    1    Financement: Ventes aux             Aucun
+                       enchères
+2530   Oui/Non    1    Financement: Boîtes de              Aucun
+                       collecte
+2540   Oui/Non    1    Financement: Sollicitation          Aucun
+                       porte-àporte
+2550   Oui/Non    1    Financement: Tirages, loteries      Aucun
+2560   Oui/Non    1    Financement:             Soirées-   Aucun
+                       bénéfice, galas ou concerts
+2570   Oui/Non    1    Financement: Ventes                 Aucun
+2575   Oui/Non    1    Financement: Internet               Aucun
+2580   Oui/Non    1    Financement: Campagnes de           Aucun
+                       financement par la poste
+2590   Oui/Non    1    Financement: Programmes de          Aucun
+                       dons planifiés
+2600   Oui/Non    1    Financement: Dons de                Aucun
+                       sociétés et commandites
+                       ciblés
+2610   Oui/Non    1    Financement: Contacts ciblés        Aucun
+
+2620   Oui/Non   1     Financement: Sollicitation par      Aucun
+                       téléphone ou à la télévision
+2630   Oui/Non   1     Financement: Tournois,              Aucun
+                       événements sportifs
+2640   Oui/Non   1     Financement: Marketing lié à        Aucun
+                       une cause
+2650   Oui/Non    1    Financement: Autres                 Aucun
+2660    Texte    175   Financement: Autres                 Aucun
+                       (précisez)
+2700   Oui/Non   1     Rémunéré des collecteurs de         Aucun
+                       fonds externes?
+5450   Montant   14    Montant du revenu brut que     Laissé vide
+                       les collecteurs de fonds ont   pour les
+                       recueilli                      organismes de
+                                                      bienfaisance
+                                                      exemptés
+5460   Montant   14    Montant versé aux collecteurs Laissé vide
+                       de fonds ou retenu par ceux-ci pour les
+                                                      organismes de
+                                                      bienfaisance
+                                                      exemptés
+2730   Oui/Non   1     Paiement aux collecteurs de    Aucun
+                       fonds: Commissions
+2740   Oui/Non   1     Paiement aux collecteurs de    Aucun
+                       fonds: Primes
+
+                                                                          Page 20 de 46
+
+=== page 21 (text layer) ===
+                                                         UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                              UNCLASSIFIED
+2750   Oui/Non   1     Paiement aux collecteurs de       Aucun
+                       fonds: Honoraires
+                       d'intermédiation
+2760   Oui/Non   1     Paiement aux collecteurs de       Aucun
+                       fonds: Honoraires fixes pour
+                       des services
+2770   Oui/Non   1     Paiement aux collecteurs de       Aucun
+                       fonds: Honoraires
+2780   Oui/Non   1     Paiement aux collecteurs de       Aucun
+                       fonds: Autres
+2790    Texte    175   Paiement aux collecteurs de       Aucun
+                       fonds: Autres (précisez)
+2800   Oui/Non   1     Collecteurs de fonds ont-ils      Aucun
+                       délivré des reçus aux fins de
+                       l'impôt au nom de
+                       l'organisme?
+3200   Oui/Non   1     L'organisme de bienfaisance a     Aucun
+                       rémunéré ses
+                       administrateurs/fiduciaires,
+                       autres
+                       responsables          ou
+                       personnes qui ont un
+                       lien de dépendance
+                       avec lui pour des
+                       services fournis?
+3400   Oui/Non   1     Engagé des dépenses pour          Aucun
+                       rémunérer les employés?
+3900   Oui/Non    1    Reçu un don ou un cadeau          Aucun
+                       de quelque nature d'une
+                       valeur de 10 000 $ ou plus
+                       d'un donateur qui n'était pas
+                       résident au Canada?
+4000   Oui/Non    1    Reçu des dons en nature           Aucun
+                       (dons autres qu'en espèces)
+                       pour lesquels
+                       il a délivré des reçus aux
+                       fins de l'impôt?
+5800   Oui/Non    1    Acquis un titre non               Aucun
+                       admissible?
+5810   Oui/Non    1    Autorisé un donateur à utiliser   Aucun
+                       ses biens?
+5820   Oui/Non    1    Délivré des reçus aux fins de     Aucun
+                       l'impôt au nom d'autres
+                       organismes?
+
+
+
+
+                                                                        Page 21 de 46
+
+=== page 22 (text layer) ===
+                                                          UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                               UNCLASSIFIED
+5830   Oui/Non   1    Détenait une participation          Aucun
+                      directe dans une société de
+                      personnes en commandite?
+
+                      Note: Cette question a été
+                      ajoutée dans la déclaration
+                      annuelle T3010(16). Les
+                      organismes de bienfaisance
+                      dont la fin d’exercice est le
+                      31 décembre 2015, devaient
+                      répondre à cette nouvelle
+                      question sur l’encart 15-122 :
+                      Nouvelle     exigence      de
+                      déclaration.
+5840   Oui/Non   1    L’organisme de bienfaisance a-      Aucun             26
+                      t-il   fait   des     versements
+                      admissibles sous forme de
+                      subventions à des donataires
+                      non reconnus (organisations
+                      non donataires) au cours de
+                      l’exercice financier?
+5841   Oui/Non   1    L’organisme de bienfaisance a-      Aucun             26
+                      t-il accordé des subventions à
+                      des organisations donataires
+                      totalisant plus de 5 000 $ au
+                      cours de l’exercice financier?
+5842   Montant   10   Entrez          le        nombre    Nouveau           26
+                      d’organisations        donataires   champ
+                      ayant reçu des subventions
+                      totalisant 5 000 $ ou moins au
+                      cours de l’exercice financier.
+5843   Montant   17   Entrez les montants versés aux      Laissé vide       26
+                      organisations donataires ayant      pour les
+                      reçu des subventions totalisant     organismes de
+                      5 000 $ ou moins au cours de        bienfaisance
+                      l’exercice financier.
+                                                          exemptés
+5850   Oui/Non   1    Dans les 24 mois précédant          Aucun             27
+                      le début de l’exercice
+                      financier, la valeur moyenne
+                      des biens de votre organisme
+                      de bienfaisance (argent
+                      comptant, placements,
+                      immobilisations ou autres
+                      biens) qui ne sont pas utilisés
+                      directement dans des
+                      activités de bienfaisance ou à
+                      des fins administratives a-t-
+                      elle :
+                      a) dépassé 100 000 $, si
+                      l’organisme de bienfaisance
+                      est considéré comme une
+                      œuvre de bienfaisance?
+                      b) dépassé 25 000 $, si
+                      l’organisme de bienfaisance
+                      est considéré comme une
+
+                                                                         Page 22 de 46
+
+=== page 23 (text layer) ===
+                                                                              UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                   UNCLASSIFIED
+                                             fondation     publique     ou
+                                             privée?
+
+
+
+
+ 5860               Oui/Non           1      L’organisme de bienfaisance      Aucun             27
+                                             détenait-il des fonds orientés
+                                             par les donateurs durant
+                                             l’exercice financier?
+
+ 5861               Nombre            10     Le nombre total des comptes      Aucun             27
+                                             détenus à la fin de l’exercice
+                                             financier
+
+
+ 5862               Montant           17     La valeur totale de tous les     Laissé vide       27
+                                             comptes détenus à la fin de      pour les
+                                             l’exercice financier             organismes de
+                                                                              bienfaisance
+                                                                              exemptés
+ 5863               Montant           17     La valeur totale des dons        Laissé vide       27
+                                             versés dans des comptes de       pour les
+                                             fonds orientés par les           organismes de
+                                             donateurs durant l’exercice      bienfaisance
+                                             financier                        exemptés
+ 5864               Montant           17     La valeur totale des             Laissé vide       27
+                                             versements admissibles           pour les
+                                             provenant de fonds orientés      organismes de
+                                             par les donateurs durant         bienfaisance
+                                             l’exercice financier             exemptés
+
+
+Source : T3010, Déclaration de renseignements des
+           organismes de bienfaisance enregistrés
+    ▪ Section A, Identification
+    ▪ Section C, Programmes et renseignements généraux
+
+
+
+
+                                                                                             Page 23 de 46
+
+=== page 24 (text layer) ===
+                                                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                UNCLASSIFIED
+
+
+   3.7 Données financières
+ Ce jeu de données documente les données financières qui est dans la section D et l'annexe 6. Le champ
+ « Section utilisée » indique quelle partie du formulaire a été utilisé pour déclarer les données financières. Une
+ description détaillée des numéros de ligne (par exemple de 4020, 4050, etc.) peut être trouvée dans le guide
+ T4033, Comment remplir la déclaration de renseignements des organismes de bienfaisance enregistrés.
+
+ Nom du fichier :    FINANCIAL D_AND _SCHEDULE_6_<année>.csv
+
+Éléments de données
+                                                                                                               ID de
+ Clé   Champ                  Type          Taille    Description                     Modifications            formulaire
+                                                                                                               associé
+       BN                     Texte          15       Numéro d’enregistrement         Aucun
+       FPE                    Date           10       Fin de l’exercice               Aucun
+       Form ID                               4        ID version du formulaire        Aucun
+                              Texte
+       Section Used           Texte           1       Partie du formulaire utilisé    Aucun
+                                                      pour remplir
+                                                      les données financières
+                                                      Valeurs: D=Section D,
+                                                      6=Annexe 6
+       4020                   Texte           1       Méthode utilisée pour           Laissé vide pour les
+                                                      déclarer les données            organismes de
+                                                      financières                     bienfaisance
+                                                      Valeurs: A=Comptabilité         exemptés
+                                                      d'exercice,
+                                                      C=Comptabilité de caisse
+       4050                  Oui/Non          1       L'organisme de bienfaisance     Aucun
+                                                      possède des terrains et/ou
+                                                      des immeubles
+       4100                  Montant         14       Argent comptant, comptes        Laissé vide pour les
+                                                      bancaires et placements à       organismes de
+                                                      court terme                     bienfaisance
+                                                                                      exemptés
+       4110                  Montant         14       Sommes à recevoir de            Laissé vide pour les
+                                                      personnes avec lesquelles       organismes de
+                                                      l'organisme a un lien de        bienfaisance
+                                                      dépendance                      exemptés
+       4120                  Montant         14       Sommes à recevoir d'autres      Laissé vide pour les
+                                                      sources                         organismes de
+                                                                                      bienfaisance
+                                                                                      exemptés
+       4130                  Montant         14       Placements auprès de            Laissé vide pour les
+                                                      personnes avec lesquelles       organismes de
+                                                      l'organisme a un lien de        bienfaisance
+                                                      dépendance                      exemptés
+       4140                  Montant         14       Placements à long terme         Laissé vide pour les
+                                                                                      organismes de
+                                                                                      bienfaisance
+                                                                                      exemptés
+       4150                  Montant         14       Stocks                          Laissé vide pour les
+                                                                                      organismes de
+                                                                                                             Page 24 de 46
+
+=== page 25 (text layer) ===
+                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                UNCLASSIFIED
+                                                      bienfaisance
+                                                      exemptés
+4155   Montant   14   Terrains et immeubles au        Laissé vide pour les
+                      Canada                          organismes de
+                                                      bienfaisance
+                                                      exemptés
+4160   Montant   14   Autres immobilisations au       Laissé vide pour les
+                      Canada                          organismes de
+                                                      bienfaisance
+                                                      exemptés
+4165   Montant   14   Immobilisations à l'extérieur   Laissé vide pour les
+                      du Canada                       organismes de
+                                                      bienfaisance
+                                                      exemptés
+4166   Montant   14   Amortissement des               Laissé vide pour les
+                      immobilisations accumulées      organismes de
+                                                      bienfaisance
+                                                      exemptés
+
+4170   Montant   14   Autres éléments d'actif         Laissé vide pour les
+                                                      organismes de
+                                                      bienfaisance
+                                                      exemptés
+4180   Montant   14   Dons à conserver pendant        Laissé vide pour les     27
+                      10 ans (ajout de nouveaux       organismes de
+                      renseignements)                 bienfaisance
+                                                      exemptés
+4200   Montant   14   Total de l'actif                Laissé vide pour les
+                                                      organismes de
+                                                      bienfaisance
+                                                      exemptés
+4250   Montant   14   Montant des lignes 4150,        Laissé vide pour les
+                      4155, 4160, 4165 et             organismes de
+                      4170 n'ayant pas servi à        bienfaisance
+                      la réalisation de               exemptés
+                      programmes de
+                      bienfaisance
+4300   Montant   14   Comptes fournisseurs et         Laissé vide pour les
+                      charges à payer                 organismes de
+                                                      bienfaisance
+                                                      exemptés
+4310   Montant   14   Produit comptabilisé            Laissé vide pour les
+                      d'avance                        organismes de
+                                                      bienfaisance
+                                                      exemptés
+4320   Montant   14   Sommes à payer à des            Laissé vide pour les
+                      personnes avec lesquelles       organismes de
+                      l'organisme a un lien de        bienfaisance
+                      dépendance                      exemptés
+4330   Montant   14   Autres éléments du passif       Laissé vide pour les
+                                                      organismes de
+                                                      bienfaisance
+                                                      exemptés
+4350   Montant   14   Total du passif                 Laissé vide pour les
+                                                      organismes de
+                                                      bienfaisance
+                                                      exemptés
+
+
+                                                                             Page 25 de 46
+
+=== page 26 (text layer) ===
+                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                UNCLASSIFIED
+4400   Oui/Non   1    Emprunté de personnes           Aucun
+                      avec lesquelles il a un lien
+                      de dépendance, prêté à
+                      celles-ci ou investi des
+                      biens avec elles
+4490   Oui/Non   1    Délivré des reçus aux fins de   Aucun
+                      l'impôt pour les dons reçus
+4500   Montant   14   Montant admissible total de     Laissé vide pour les
+                      tous les dons pour lesquels     organismes de
+                      l'organisme de bienfaisance     bienfaisance
+                      a délivré des reçus aux fins    exemptés
+                      de l'impôt
+5610   Montant   14   Total des montants              Laissé vide pour les
+                      admissibles en frais de         organismes de
+                      scolarité pour lesquels         bienfaisance
+                      l'organisme de bienfaisance     exemptés
+                      a délivré un reçu aux fins de
+                      l'impôt
+4505   Montant   14   Montant total des dons à     Retiré de la                27
+                      conserver pendant 10 ans     version 27 du
+                      qui ont été reçus (ajout de  formulaire T3010
+                      nouveaux renseignements)     Laissé vide pour les
+                                                   organismes de
+                                                   bienfaisance
+                                                   exemptés
+4510   Montant   14   Montant total reçu de tout   Laissé vide pour les
+                      autre organisme de           organismes de
+                      bienfaisance enregistré      bienfaisance
+                                                   exemptés
+4530   Montant   14   Montant total de tous les Laissé vide pour les
+                      autres dons reçus pour organismes de
+                      lesquels un reçu aux fins de bienfaisance
+                      l'impôt n'a pas              exemptés
+                      été délivré
+4540   Montant   14   Total des revenus provenant Laissé vide pour les
+                      du gouvernement fédéral     organismes de
+                                                      bienfaisance
+                                                      exemptés
+4550   Montant   14   Total des revenus provenant     Laissé vide pour les
+                      de                              organismes de
+                      gouvernements provinciaux       bienfaisance
+                      ou territoriaux                 exemptés
+4560   Montant   14   Total des revenus provenant     Laissé vide pour les
+                      de                              organismes de
+                                                      bienfaisance
+                                                      exemptés
+
+
+
+
+                                                                             Page 26 de 46
+
+=== page 27 (text layer) ===
+                       gouvernements municipaux
+                       ou régionaux                          UNCLASSIFIED - NON CLASSIFIÉ
+4565   Oui/Non   1     Reçu un revenu provenant         Aucun
+                       de n'importe quel palier de                UNCLASSIFIED
+                       gouvernement au Canada
+4570   Montant   14    Montant total reçu de            Laissé vide pour les
+                       n'importe quel palier de         organismes de
+                       gouvernement au Canada           bienfaisance
+                                                        exemptés
+4571   Montant   14    Total des revenus pour           Laissé vide pour les
+                       lesquels l'organisme de          organismes de
+                       bienfaisance a délivré des       bienfaisance
+                       reçus aux fins de                exemptés
+                       l'impôt provenant de toutes
+                       les sources à l'extérieur du
+                       Canada
+4575   Montant   14    Total des revenus                Laissé vide pour les
+                       pour lesquels                    organismes de
+                       l'organisme de                   bienfaisance
+                       bienfaisance n'a pas             exemptés
+                       délivré des reçus
+                       d'impôt provenant de
+                       toutes les sources à
+                       l'extérieur du Canada
+4580   Montant   14    Total des revenus d'intérêts     Laissé vide pour les
+                       et de placement reçus ou         organismes de
+                       réalisés                         bienfaisance
+                                                        exemptés
+4590   Montant   14    Produit brut de la disposition   Laissé vide pour les
+                       de biens                         organismes de
+                                                        bienfaisance
+                                                        exemptés
+4600   Montant   14    Produit net de la disposition    Laissé vide pour les
+                       de biens                         organismes de
+                                                        bienfaisance
+                                                        exemptés
+4610   Montant   14    Revenu brut provenant de         Laissé vide pour les
+                       location de terrains et          organismes de
+                       d'immeubles                      bienfaisance
+                                                        exemptés
+4620   Montant   14    Cotisations de membres et        Laissé vide pour les
+                       droits d'adhésion pour           organismes de
+                       lesquels l'organisme n'a         bienfaisance
+                       pas délivré de reçus aux         exemptés
+                       fins de l'impôt
+4630   Montant   14    Total des montants des           Laissé vide pour les
+                       collectes de fonds pour          organismes de
+                       lesquels l'organisme n'a         bienfaisance
+                       pas délivré de reçus aux         exemptés
+                       fins de l'impôt
+4640   Montant   14    Total du revenu provenant        Laissé vide pour les
+                       de la vente de biens et de       organismes de
+                       services                         bienfaisance
+                                                        exemptés
+4650   Montant   14    Tout autre revenu qui n'est      Laissé vide pour les
+                       pas compris dans les             organismes de
+                       montants ci-dessus               bienfaisance
+                                                        exemptés
+4655    Texte    175   Précisez les types de            Aucun
+                       revenus compris dans le
+
+
+                                                                               Page 27 de 46
+
+=== page 28 (text layer) ===
+                                                          UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                UNCLASSIFIED
+                      montant déclaré à la ligne
+                      4650
+4700   Montant   14   Total des revenus              Laissé vide pour les
+                                                     organismes de
+                                                     bienfaisance
+                                                     exemptés
+4800   Montant   14   Total des dépenses pour la     Laissé vide pour les
+                      publicité et promotion         organismes de
+                                                     bienfaisance
+                                                     exemptés
+4810   Montant   14   Total des dépenses pour les    Laissé vide pour les
+                      frais de déplacement et        organismes de
+                      d'utilisation de véhicules     bienfaisance
+                                                     exemptés
+4820   Montant   14   Total des dépenses pour les    Laissé vide pour les
+                      intérêts et frais bancaires    organismes de
+                                                     bienfaisance
+                                                     exemptés
+
+
+
+4830   Montant   14   Total des dépenses pour les    Laissé vide pour les
+                      permis et droits d'adhésion    organismes de
+                                                     bienfaisance
+                                                     exemptés
+4840   Montant   14   Total des dépenses pour les Laissé vide pour les
+                      fournitures et frais de bureau organismes de
+                                                     bienfaisance
+                                                     exemptés
+4850   Montant   14   Total des dépenses pour les Laissé vide pour les
+                      coûts d'occupation             organismes de
+                                                     bienfaisance
+                                                     exemptés
+4860   Montant   14   Total des dépenses pour        Laissé vide pour les
+                      des honoraires de              organismes de
+                      professionnels et de           bienfaisance
+                      consultants                    exemptés
+4870   Montant   14   Total des dépenses pour la Laissé vide pour les
+                      formation du personnel et organismes de
+                      des bénévoles              bienfaisance
+                                                      exemptés
+4880   Montant   14   Total des dépenses              Laissé vide pour les
+                      engagées pour rémunérer         organismes de
+                      les employés                    bienfaisance
+                                                      exemptés
+4890   Montant   14   Juste valeur marchande de       Laissé vide pour les
+                      tous les dons de biens          organismes de
+                      utilisés par l’organisme        bienfaisance
+                      dans le cadre de ses            exemptés
+                      propres activités
+4891   Montant   14   Total des dépenses pour les Laissé vide pour les
+                      fournitures et biens achetés organismes de
+                                                      bienfaisance
+                                                      exemptés
+4900   Montant   14   Total des dépenses pour         Laissé vide pour les
+                      l’amortissement des             organismes de
+                      immobilisations                 bienfaisance
+                                                      exemptés
+
+
+                                                                             Page 28 de 46
+
+=== page 29 (text layer) ===
+                                                            UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                  UNCLASSIFIED
+4910   Montant   14    Subventions de recherches        Laissé vide pour les
+                       et bourses versées par           organismes de
+                       l’organisme dans le cadre de     bienfaisance
+                       ses propres activités            exemptés
+4920   Montant   14    Toutes les autres dépenses       Laissé vide pour les
+                       qui ne sont pas comprises        organismes de
+                       dans les montants                bienfaisance
+                       mentionnés ci-dessus             exemptés
+                       (à l'exception des dons faits
+                       aux donataires reconnus)
+4930    Texte    175   Précisez les types de            Aucun
+                       dépenses comprises dans le
+                       montant déclaré à la ligne
+                       4920
+4950   Montant   14    Dépenses        totales    (à    Laissé vide pour les
+                       l’exception des versements       organismes de
+                       admissibles)                     bienfaisance
+                                                        exemptés
+5000   Montant   14    Total des dépenses liées         Laissé vide pour les
+                       aux activités de bienfaisance    organismes de
+                                                        bienfaisance
+                                                        exemptés
+5010   Montant   14    Total des dépenses liées à       Laissé vide pour les
+                       la gestion et à                  organismes de
+                       l'administration                 bienfaisance
+                                                        exemptés
+5020   Montant   14    Total des dépenses liées         Laissé vide pour les
+                       aux activités de collecte de     organismes de
+                       fonds                            bienfaisance
+                                                        exemptés
+5030   Montant   14    Total des dépenses liées aux     Le champ n’existe        23
+                       activités politiques provenant   plus dans la
+                       de la question C5(b)             version 24
+                                                        Laissé vide pour les
+                                                        organismes de
+                                                        bienfaisance
+                                                        exemptés
+5040   Montant   14    Total des autres dépenses        Laissé vide pour les
+                       (incluses dans le montant de     organismes de
+                       la ligne 4950)                   bienfaisance
+                                                        exemptés
+5050   Montant   14    Montant total des dons faits     Laissé vide pour les
+                       à tous les donataires            organismes de
+                       reconnus                         bienfaisance
+                                                        exemptés
+5100   Montant   14    Total des dépenses               Laissé vide pour les
+                                                        organismes de
+                                                        bienfaisance
+                                                        exemptés
+5500   Montant   14    Montant accumulé y compris       Laissé vide pour les
+                       le revenu tiré de fonds          organismes de
+                       accumulés                        bienfaisance
+                                                        exemptés
+5510   Montant   14    Montant dépensé dans le but      Laissé vide pour les
+                       précis que nous avons            organismes de
+                       autorisé                         bienfaisance
+                                                        exemptés
+
+
+                                                                               Page 29 de 46
+
+=== page 30 (text layer) ===
+                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                 UNCLASSIFIED
+5750   Montant   14   Montant        utilisé    pour   Laissé vide pour les
+                      effectuer une réduction          organismes de
+                      spéciale de son contingent       bienfaisance
+                      des versements                   exemptés
+5900   Montant   14   Valeur des biens non             Laissé vide pour les
+                      utilisée dans le cadre de ses    organismes de
+                      activités de bienfaisance, 24    bienfaisance
+                      mois précédant le début de       exemptés
+                      l'exercice
+5910   Montant   14   Valeur des biens non utilisée    Laissé vide pour les
+                      dans le cadre de ses             organismes de
+                      activités de bienfaisance, 24    bienfaisance
+                      mois précédant                   exemptés
+                      la fin de l'exercice (add new
+                      info)
+5045   Montant   17   Total des subventions            Laissé vide pour les     26
+                      versées à des donataires         organismes de
+                      non reconnus (organisations      bienfaisance
+                      donataires)                      exemptés
+4101   Montant   17   Entrez les montants totaux       Laissé vide pour         27
+                      en argent comptant et dans       les organismes de
+                      les comptes bancaires inclus     bienfaisance
+                      à la ligne 4100                  exemptés
+4102   Montant   17   Entrez la valeur de tous les     Laissé vide pour         27
+                      placements à court terme         les organismes de
+                      inclus à la ligne 4100 dont      bienfaisance
+                      l’échéance d’origine était       exemptés
+                      d’au plus un an
+4157   Montant   17   Entrez le coût ou la juste       Laissé vide pour         27
+                      valeur marchande de tous         les organismes de
+                      les terrains et immeubles au     bienfaisance
+                      Canada utilisés pour des         exemptés
+                      programmes de
+                      bienfaisance ou à des fins
+                      administratives
+4158   Montant   17   Entrez le coût ou la juste       Laissé vide pour         27
+                      valeur marchande de tous         les organismes de
+                      les terrains et immeubles au     bienfaisance
+                      Canada qui ne sont pas           exemptés
+                      utilisés pour des
+                      programmes de
+                      bienfaisance ni à des fins
+                      administratives
+4190   Montant   17   Inscrivez la valeur de tous      Laissé vide pour         27
+                      les investissements d’impact     les organismes de
+                      y compris celles inscrites à     bienfaisance
+                      d’autres lignes. Aux fins du     exemptés
+                      présent guide, les
+                      investissements d’impact
+                      sont des investissements
+                      dans des entreprises ou des
+                      projets dans le but de
+                      produire des effets
+                      environnementaux ou
+                      sociaux positifs et
+                                                                              Page 30 de 46
+
+=== page 31 (text layer) ===
+                                                                                    UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                         UNCLASSIFIED
+                                                mesurables tout en générant
+                                                des rendements financiers
+                                                positifs
+
+       4576               Montant        17     Entrez le montant de la          Laissé vide pour     27
+                                                ligne 4580 représentant le       les organismes de
+                                                total des revenus d’intérêt et   bienfaisance
+                                                d’autres revenus provenant       exemptés
+                                                des investissements
+                                                d’impact
+       4577               Montant        17     Entrez le montant de la          Laissé vide pour     27
+                                                ligne 4580 représentant le       les organismes de
+                                                total des intérêts et des        bienfaisance
+                                                revenus de placement             exemptés
+                                                provenant de personnes
+                                                avec lien de dépendance
+                                                avec l’organisme de
+                                                bienfaisnce
+
+Source : T3010, Déclaration de renseignements des
+           organismes de bienfaisance enregistrés
+        ▪ Section D, Renseignements financiers
+        ▪ Annexe 6, Renseignements financiers détaillés
+
+
+
+
+                                                                                                   Page 31 de 46
+
+=== page 32 (text layer) ===
+                                                                                       UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                            UNCLASSIFIED
+   3.8 Fondations privé/publique
+
+Nom du fichier :   SCHEDULE_1_FOUNDATIONS_<année>.csv
+
+Éléments de données
+                                                                                                        ID de
+ Clé    Champ             Type     Taille Description                          Modifications            formulaire
+                                                                                                        associé
+        BN                Texte     15    Numéro d’enregistrement              Aucun
+        FPE               Date      10    Fin de l’exercice                    Aucun
+        Form ID           Texte      4    ID version du formulaire             Aucun
+        100              Oui/Non     1    La fondation a-t-elle acquis le      Aucun
+                                          contrôle d'une société
+        110              Oui/Non    1     La fondation a-t-elle contracté      Aucun
+                                          des dettes autres que pour des
+                                          dépenses d'exploitation
+                                          courantes, l'achat ou la vente
+                                          d'investissements ou
+                                          l'administration de
+                                          programmes de
+                                          bienfaisance
+        120              Oui/Non    1     La fondation a-t-elle détenu         Aucun
+                                          des      actions,    des    droits
+                                          d'acquérir des actions ou des
+                                          dettes qui peuvent être
+                                          considérés comme des
+                                          placements non admissibles
+        130              Oui/Non    1     La fondation a-t-elle détenu plus    Aucun
+                                          de 2 % de toute catégorie
+                                          d'actions d'une société
+        111              Montant    17    Quelle était la valeur totale de Laissé vide pour les         27
+                                          tous les fonds réservés détenus  organismes de
+                                          à la fin de l’exercice financier?bienfaisance
+                                                                           exemptés
+        112              Montant    17    De ce montant, quel montant ne Laissé vide pour les           27
+                                          pouvait pas être utilisé en      organismes de
+                                          raison d’une fiducie ou de       bienfaisance
+                                          directives écrite du bailleur de exemptés
+                                          fonds?
+
+Source : T3010, Déclaration de renseignements des
+           organismes de bienfaisance enregistrés
+        ▪ Annexe 1, Fondations
+
+
+
+
+                                                                                                      Page 32 de 46
+
+=== page 33 (text layer) ===
+                                                                                         UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                               UNCLASSIFIED
+   3.9 Activités à l'extérieur du Canada - Détails financiers
+
+Nom du fichier :       SCHEDULE_2_DETAILS_<année>.csv
+
+Éléments de données
+                                                                                                          ID de
+ Cle Champ         Type    Taille Description                       Modifications                         formulaire
+                                                                                                          associé
+      BN           Texte    15   Numéro d’enregistrement            Aucun
+      FPE          Date     10   Fin de l’exercice                  Aucun
+      Form         Texte    4    ID version du formulaire           Aucun
+      ID
+      200      Montant      14   Total des dépenses liées aux       Laissé vide pour les organismes de
+                                 activités,                         bienfaisance exemptés
+                                 programmes ou projets réalisés
+                                 à l'extérieur du Canada,
+                                 sauf les dons aux donataires
+                                 reconnus (sauf les versements
+                                 admissibles)
+      210      Oui/Non      1    Ressources consacrées à la         Aucun
+                                 réalisation de programmes à
+                                 l'extérieur du Canada que
+                                 l’organisme de bienfaisance
+                                 fournies à toute personne ou à
+                                 tout organisme (à l'exception
+                                 des versements admissibles)
+
+      220      Oui/Non      1    Y a-t-il des projets qui sont      Dans la version de mai 2019, le
+                                 entrepris à l'extérieur            terme « ACDI » a été remplacé
+                                 du Canada et financés par          par « Affaires mondiales »
+                                 l'Agence canadienne de
+                                 développement
+                                 international (ACDI)
+      230      Montant      14   Montant total que l’organisme a    Laissé vide pour les organismes de
+                                 dépensé dans le cadre de cet       bienfaisance exemptés
+                                 accord
+      240      Oui/Non      1    Y avait-il des programmes          Aucun
+                                 réalisés à l'extérieur du Canada
+                                 par des employés de
+                                 l'organisme de bienfaisance
+      250      Oui/Non      1    Y avait-il des programmes          Aucun
+                                 réalisés à l'extérieur du Canada
+                                 par les bénévoles de
+                                 l'organisme de bienfaisance
+      260      Oui/Non      1    L'organisme de bienfaisance        Aucun
+                                 exporte-t-il des biens dans le
+                                 cadre de ses programmes de
+                                 bienfaisance
+
+Source : T3010(16), Déclaration de renseignements des
+              organismes de bienfaisance enregistrés
+         ▪ Annexe 2
+
+                                                                                                         Page 33 de 46
+
+=== page 34 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                           UNCLASSIFIED
+
+    3.10 Activités à l'extérieur du Canada - Pays où les programmes ont été offert
+  Ce jeu de données contient une liste de pays où les organismes de bienfaisance ont réalisés
+                                             leurs programmes ou ont offert leurs ressources.
+
+Nom du fichier :     SCHEDULE_2_COUNTRIES_<année>.csv
+
+Éléments de données
+                                                                                                        ID de
+ Clé Champ                  Type    Taille Description                           Modifications          formulaire
+                                                                                                        associé
+
+
+
+      BN                    Texte     15    Numéro d’enregistrement              Aucun
+
+      FPE                   Date      10    Fin de l’exercice                    Aucun
+
+      Form ID               Texte      4    ID version du formulaire             Aucun
+
+      #                                9    No de séquence                       Aucun
+                           Nombre
+      Country              Texte       2    Code du pays ou le programme a      Aucun
+                                            été diffusé Voir la liste des codes
+                                            de pays (dans le PDF des listes de
+                                            codes)
+
+
+
+Source : T3010, Déclaration de renseignements des organismes de bienfaisance enregistrés
+      ▪    Annexe 2, question 3
+
+
+
+
+                                                                                                     Page 34 de 46
+
+=== page 35 (text layer) ===
+                                                                                UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                     UNCLASSIFIED
+           3.11 Activités à l'extérieur du Canada -
+                          Marchandises exportées
+ Ce jeu de données contient une liste
+ de biens qui ont été exportés à
+ l’étranger.
+Nom du fichier :   SCHEDULE_2_GOODS_<année>.csv
+
+Éléments de données
+                                                                                                 ID de
+ Clé   Champ               Type     Taille Description                  Modifications            formulaire
+                                                                                                 associé
+
+       BN                  Texte     15    Numéro d’enregistrement      Aucun
+       FPE                 Date      10    Fin de l’exercice            Aucun
+       Form ID             Texte     4     ID version du formulaire     Aucun
+       #                  Nombre     9     No de séquence               Aucun
+       Item Name           Texte     30    Bien exporté                 Aucun
+       Item Value                    14    Valeur du bien (en dollar    Laissé vide pour les
+                          Montant          canadien)                    organismes de
+                                                                        bienfaisance exemptés
+       Destination         texte    175    Destination du bien          Aucun
+       Country             Texte     2     Code du pays ou le           Aucun
+                                           programme a été diffusé
+                                           Voir la liste des codes de
+                                           pays (dans le
+                                           PDF des listes de codes)
+
+
+ Source : T3010, Déclaration de renseignements des organismes de bienfaisance enregistrés
+       ▪ Annexe 2, question 7 (tableau seulement)
+
+
+
+
+                                                                                                Page 35 de 46
+
+=== page 36 (text layer) ===
+                                                                                       UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                            UNCLASSIFIED
+3.12 Activités à l'extérieur du Canada - Ressources financières utilisées
+Nom du fichier :     SCHEDULE_2_RESOURCES_<année>.csv
+
+Éléments de données
+                                                                                            ID de
+ Clé Champ                Type     Taille Description                Modifications          formulaire
+                                                                                            associé
+
+
+      BN                  Texte     15    Numéro d’entreprise        Aucun
+      FPE                 Date      10    Fin de l’exercice          Aucun
+                                          financier
+      Form ID             Texte      4    ID version du formulaire   Aucun
+      #                  Nombre      9    No de séquence             Aucun
+      Org Name            Texte     175   Nom de la personne ou      Aucun
+                                          de l'organisme
+      Amount             Montant    14    Montant transféré à la     Laissé vide pour les
+                                          personne ou de             organismes de
+                                          l'organisme                bienfaisance
+                                                                     exemptés
+      Country             Texte      2    Code du pays ou le         Aucun
+                                          programme a été
+                                          menées
+                                          Voir la liste des codes de
+                                          pays (dans le
+                                          PDF des listes de codes)
+
+
+Source : T3010, Déclaration de renseignements des organismes de bienfaisance enregistrés
+         ▪ Annexe 2, question 2 (tableau seulement)
+
+
+
+
+                                                                                                      Page 36 de 46
+
+=== page 37 (text layer) ===
+                                                                                     UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                          UNCLASSIFIED
+   3.13 Rémunération
+
+   Ce jeu de données contient des informations sur la rémunération d’employés.
+
+Nom du fichier :    SCHEDULE_3_COMPENSATION_<année>.csv
+
+Éléments de données
+                                                                                                    ID de
+ Clé Champ          Type     Taille   Description                                 Modifications     formulaire
+                                                                                                    associé
+     BN             Texte      15     Numéro d’enregistrement                     Aucun
+     FPE            Date       10     Fin de l’exercice                           Aucun
+     Form ID        Texte       4     ID version du formulaire                    Aucun
+     300           Nombre       5     Nombre de postes rémunérés, permanents     Laissé vide pour
+                                      et à temps plein                           les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     305           Nombre       5     $1-39,999 (dix (10) plus importants postes Laissé vide pour
+                                      rémunérés)                                 les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     310           Nombre       5     $40,000-$79,999 (dix (10) plus importants  Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     315           Nombre       5     $80,000-119,999 (dix (10) plus importants  Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     320           Nombre       5     $120,000-159,999 (dix (10) plus importants Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     325           Nombre       5     $160,000-199,999 (dix (10) plus importants Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     330           Nombre       5     $200,000-249,999 (dix (10) plus importants Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     335           Nombre       5     $250,000-299,999 (dix (10) plus importants Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     340           Nombre       5     $300,000-349,999 (dix (10) plus importants Laissé vide pour
+                                      postes rémunérés)                          les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     345           Nombre       5     $350,000 and over (dix (10) plus           Laissé vide pour
+                                      importants postes rémunérés)               les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+     370           Nombre       5     Nombre d'employés embauchés à temps Laissé vide pour
+                                      partiel ou pour une partie de l'année      les organismes
+                                                                                 de bienfaisance
+                                                                                 exemptés
+
+                                                                                                    Page 37 de 46
+
+=== page 38 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                           UNCLASSIFIED
+      380        Montant      14        Total des dépenses liées à la              Laissé vide pour
+                                        rémunération des employés embauchés        les organismes
+                                        à temps partiel ou pour une partie de      de bienfaisance
+                                        l'année au cours de l’exercice             exemptés
+      390        Montant      14        Total des dépenses liées à toute la        Laissé vide pour
+                                        rémunération                               les organismes
+                                                                                   de bienfaisance
+                                                                                   exemptés
+
+Source : T3010, Déclaration de renseignements des
+           organismes de bienfaisance enregistrés
+        ▪ Annexe 3, Rémunération
+
+
+
+
+   3.14 Dons en nature
+
+    Nom du fichier:          SCHEDULE_5_GIFTS_IN_KIND_<année>.csv
+
+Éléments de données
+                                                                                                        ID de
+ Clé Champ            Type     Taille    Description                               Modifications        formulaire
+                                                                                                        associé
+      BN           Texte        15       Numéro d’enregistrement                   Aucun
+      FPE          Date         10       Fin de l’exercice                         Aucun
+      Form ID      Texte        4        ID version du formulaire                  Aucun
+      500         Oui/Non       1        Œuvres d'art, vin, bijoux                 Aucun
+      505         Oui/Non       1        Matériaux de construction                 Aucun
+      510         Oui/Non       1        Vêtements, meubles, nourriture            Aucun
+      515         Oui/Non       1        Véhicules                                 Aucun
+      520         Oui/Non       1        Biens culturels                           Aucun
+      525         Oui/Non       1        Biens écosensibles                        Aucun
+      530         Oui/Non       1        Polices d'assurance-vie                   Aucun
+      535         Oui/Non       1        Équipement et fournitures médicales       Aucun
+      540         Oui/Non       1        Titres hors bourse                        Aucun
+      545         Oui/Non       1        Machines, matériel, ordinateurs et        Aucun
+                                         logiciels
+      550         Oui/Non          1     Titres cotés, produits et fonds communs   Aucun
+                                         de placement
+      555         Oui/Non        1       Livres                                    Aucun
+      560         Oui/Non        1       Autres                                    Aucun
+      565          Texte        175      Autres: Précisez                          Aucun
+      580         Montant        14      Total du montant de dons en               Laissé vide pour
+                                         nature pour lesquels                      les organismes de
+                                         l'organisme a délivré un reçu             bienfaisance
+                                         aux fins de l'impôt.                      exemptés
+
+
+ Source : T3010, Déclaration de renseignements des
+            organismes de bienfaisance enregistrés
+         ▪ Annexe 5, Dons autres qu’en espèces
+
+                                                                                                       Page 38 de 46
+
+=== page 39 (text layer) ===
+                                                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                UNCLASSIFIED
+
+
+  3.15 Activités politiques / Activité de politiques publique et de développement -
+Description
+       Nom du fichier :           SCHEDULE_7_ DESCRIPTION_<année>.csv
+
+Note spéciale : Le terme « activités politiques » a été renommé « activité de politiques publique et
+             développement » dans la version 24 du formulaire
+
+Éléments de données
+                                                                                                           ID de
+ Clé       Champ          Type      Tailles           Description                 Modifications            formulaire
+                                                                                                           associé
+        BN                Texte       15      Numéro d’enregistrement       Retiré de la version 25 du     23, 24
+                                                                            formulaire T3010
+        FPE               Date        10      Fin de l’exercice             Aucun                          23, 24
+        Form ID           Texte       4       ID version du formulaire      Aucun                          23, 24
+        Description       Texte      2500     Les activités politiques de   Aucun                          23, 24
+                                              l'organisme de bienfaisance
+
+Source : T3010(16), Déclaration de renseignements des organismes de bienfaisance enregistrés
+         ▪ Annexe 7, question 1
+
+
+
+
+                                                                                                          Page 39 de 46
+
+=== page 40 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                           UNCLASSIFIED
+
+       3.16 Activités politiques – Financement de l’étranger
+
+    Nom du Fichier:       SCHEDULE_7_PA_FUNDING_FROM_OUTSIDE_CA_<année>.csv
+
+Éléments de données
+                                                                                                        ID de
+ Clé     Champ           Type      Taille   Description               Modifications                     formulaire
+                                                                                                        associé
+         BN              Texte      15      Numéro                    Retiré de la version 24 du        23
+                                            d’enregistrement          formulaire T3010
+         FPE             Date       10      Fin de l’exercice         Aucun                             23
+         Form ID         Texte       4       ID version du            Aucun                             23
+                                            formulaire
+         #              Nombre       9       No de séquence           Aucun                             23
+         Activity        Texte      175     Activité politique        Aucun                             23
+         Amount         Montant     14      Montant reçu              Laissé vide pour les organismes   23
+                                                                      de bienfaisance exemptés
+         Country         Texte       2      Code de pays de la        Aucun                             23
+                                            source de financement
+                                            Voir la liste des codes
+                                            de pays (dans le PDF
+                                            des listes de codes)
+
+Source : T3010, Déclaration de renseignements des organismes de bienfaisance enregistrés
+         ▪ Annexe 7, question 3
+
+
+
+
+                                                                                                     Page 40 de 46
+
+=== page 41 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                           UNCLASSIFIED
+
+
+       3.17 Activités politiques – Ressources
+
+    Nom du fichier : SCHEDULE_7_PA_RESOURCES_<année>.csv
+
+Éléments de données
+                                                                                                       ID de
+ Clé     Champ              Type      Taille   Description                    Modifications            formulaire
+                                                                                                       associé
+         BN                 Texte      15      Numéro d’enregistrement        Retiré de la version     23
+                                                                              24 du formulaire
+                                                                              T3010
+         FPE                Date       10      Fin de l’exercice              Aucun                    23
+         Form ID            Texte      4         ID version du formulaire     Aucun                    23
+         #                 Nombre      9       No de séquence (1=Ligne        Aucun                    23
+                                               700, 2=Ligne 701, …,
+                                               9=Ligne 708)
+         Staff              Texte       1      Membres du personnel           Aucun                    23
+         Volunteers         Texte       1      Bénévoles                      Aucun                    23
+         Financial          Texte       1      Financières                    Aucun                    23
+         Property           Texte       1      Biens                          Aucun                    23
+         Others             Texte      175     Autre        façon      que    Aucun                    23
+                                               l’organisme               de
+                                               bienfaisance a participé à
+                                               ou mené des
+                                               activités politiques
+                                               (applicable uniquement à
+                                               la ligne 708)
+
+Source : T3010, Déclaration de renseignements des organismes de bienfaisance enregistrés
+          ▪ Annexe 7, question 2
+
+
+
+
+                                                                                                     Page 41 de 46
+
+=== page 42 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                              UNCLASSIFIED
+
+
+3.18 Subventions accordées à des donataires non reconnus
+Ce jeu de données contient une liste de versements admissibles versés à des donataires non reconnus
+(organisations donataires).
+Nom du fichier :     NON_QUALIFIED_DONEES_<YEAR>.csv
+Éléments de données :
+
+ Clé   Champ              Type     Taille   Description                   Modifications       ID de
+                                                                                              formulaire
+                                                                                              associé
+       BN                 Texte      15     Numéro d’entreprise             Nouveau tableau 26
+                                                                            dans la
+                                                                            version 26 du
+                                                                            formulaire T3010
+       FPE                Date       10     Le mois et le jour de la fin de Aucun             26
+                                            l’exercice financier de
+                                            l’organisme de bienfaisance.
+                                            Les organismes de
+                                            bienfaisance doivent
+                                            produire leur
+                                            formulaire T3010 annuel
+                                            dans les six mois suivant la
+                                            fin de leur exercice financier.
+       Form ID            Texte       4     ID de la version du             Aucun             26
+                                            formulaire
+       #                 Numéro      10     Numéro séquentiel               Aucun             26
+                                            identifiant chaque
+                                            subvention de manière
+                                            individuelle par NE/FEF
+       Recipient Name     Texte     175     Nom du donataire non            Aucun             26
+                                            reconnu
+       Purpose            Texte     1250    Description de l’objectif pour Aucun              26
+                                            lequel les versements
+                                            admissibles ont été
+                                            accordés au donataire non
+                                            reconnu
+       Cash amount       Montant     17     Montant en espèces versés Laissé vide pour        26
+                                            à un donataire non reconnu      les organismes de
+                                                                          bienfaisance
+                                                                          exemptés
+       Non-cash          Montant     17     Montant autre qu’en           Laissé vide pour     26
+       amount                               espèces versés à un           les organismes de
+                                            donataire non reconnu         bienfaisance
+                                                                          exemptés
+       Country            Texte     125     Liste des pays où les         Aucun                26
+                                            activités ont lieu
+
+Source :
+Formulaire T1441, Versements admissibles : Subventions à des donataires non reconnus (organisations
+donataires)
+
+
+
+                                                                                                     Page 42 de 46
+
+=== page 43 (text layer) ===
+                                                                                           UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                                 UNCLASSIFIED
+3.19 Annexe 8 – Contingent des versements
+Ce jeu de données contient le calcul du contingent des versements pour l’exercice financier en cours et le
+prochain.
+Nom du fichier :        SCHEDULE_8_DQ.<YEAR>.csv
+
+Éléments de données :
+
+ Clé   Champ        Type     Taille   Description                                Modifications   ID de
+                                                                                                 formulaire
+                                                                                                 associé
+
+       BN           Texte     15      Numéro d’entreprise                        Aucun           27
+       FPE          Date      10      Le mois et le jour de fin de l’exercice    Aucun           27
+                                      financier de l’organisme de
+                                      bienfaisance. Les organismes de
+                                      bienfaisance doivent produire leur
+                                      formulaire T3010 dans les six mois de
+                                      la fin de l’exercice financier.
+
+       Form ID      Texte      4      ID de la version du formulaire             Aucun           27
+
+       Filing       Date      10      Date où l’organisme de bienfaisance a      Aucun           27
+       Date                           produit sa déclaration
+
+       Line 805    Montant    17      Valeur moyenne des biens non utilisés      Laissé vide     27
+                                      dans des activités de bienfaisance ou      pour les
+                                      à des fins administratives (ligne 5900     organismes
+                                      de votre déclaration)                      de
+                                                                                 bienfaisance
+                                                                                 exemptés
+
+       Line 810    Montant    17      Si vous avez reçu la permission            Laissé vide     27
+                                      d’accumuler des biens, entrez le           pour les
+                                      montant total accumulé moins toutes        organismes
+                                      les dépenses faites pour la fin précisée   de
+                                      (additionnez les montants inscrits aux     bienfaisance
+                                      lignes 5500 moins tous les montants        exemptés
+                                      inscrits aux lignes 5510 de toutes vos
+                                      déclarations, jusqu’à aujourd’hui, qui
+                                      sont comprises dans la période
+                                      d’accumulation de biens)
+
+       Line 815    Montant    17      Doit afficher le total du montant          Laissé vide     27
+                                      indiqué à la ligne 805 moins le            pour les
+                                      montant indiqué à la ligne 810.            organismes
+                                                                                 de
+                                      « Ligne 1 moins ligne 2 (si le montant
+                                                                                 bienfaisance
+                                      est négatif, entrez 0) »
+                                                                                 exemptés
+
+       Line 820    Montant    17      Si le montant indiqué à la ligne 3 est     Laissé vide     27
+                                      égal ou inférieur à 1 000 000, doit        pour les
+                                                                                 organismes
+                                                                                 de
+                                                                                                          Page 43 de 46
+
+=== page 44 (text layer) ===
+                                                                                 UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                       UNCLASSIFIED
+                          afficher le total de la ligne 815 multiplié   bienfaisance
+                          par 3,5 %;                                    exemptés
+                          Si le montant de la ligne 3 est
+                          supérieur à 1 000 000, doit demeurer
+                          vide
+Line 825   Montant   17   Si le montant indiqué à la ligne 3 est        Laissé vide    27
+                          égal ou inférieur à 1 000 000, doit           pour les
+                          demeurer vide                                 organismes
+                                                                        de
+                          Si le montant à la ligne 3 est supérieur
+                                                                        bienfaisance
+                          à 1 000 000, doit afficher le total de la     exemptés
+                          ligne 815 moins 1 000 000 $
+Line 830   Montant   17   Si le montant à la ligne 3 est égal ou        Laissé vide    27
+                          inférieur à 1 000 000, doit demeurer          pour les
+                          vide                                          organismes
+                                                                        de
+                          Si le montant à la ligne 3 est supérieur
+                                                                        bienfaisance
+                          à 1 000 000, doit afficher le total de la     exemptés
+                          ligne 825 multiplié par 5 %
+Line 835   Montant   17   Si le montant à la ligne 3 est égal ou        Laissé vide    27
+                          inférieur à 1 000 000, doit demeurer          pour les
+                          vide                                          organismes
+                                                                        de
+                          Si le montant à la ligne 3 est supérieur
+                                                                        bienfaisance
+                          à 1 000 000, doit afficher le total de la     exemptés
+                          ligne 830 plus 35 000 $
+
+Line 840   Montant   17   Doit être prérempli avec le montant de        Laissé vide    27
+                          la ligne 820 ou 835 de la page 1 de           pour les
+                          l’annexe 8                                    organismes
+                                                                        de
+                          « Entrez le montant qui apparaît à la
+                                                                        bienfaisance
+                          ligne 820 ou à la ligne 835. C’est le         exemptés
+                          contingent des versements de votre
+                          organisme de bienfaisance pour
+                          l’exercice en cours »
+Line 845   Montant   17   Doit être prérempli avec le montant de        Laissé vide    27
+                          la ligne 5000 de l’annexe 6 de la             pour les
+                          présente déclaration                          organismes
+                                                                        de
+                          « Total des dépenses liées aux
+                                                                        bienfaisance
+                          activités de bienfaisance (ligne 5000         exemptés
+                          de votre déclaration) »
+Line 850   Montant   17   Doit être prérempli avec le montant de        Laissé vide    27
+                          la ligne 5045 de l’annexe 6 de la             pour les
+                          présente déclaration                          organismes
+                                                                        de
+                          « Total des subventions versées à des
+                                                                        bienfaisance
+                          donataires non reconnus (ligne 5045
+                                                                        exemptés
+                          de votre déclaration) »
+
+                                                                                                Page 44 de 46
+
+=== page 45 (text layer) ===
+                                                                              UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                    UNCLASSIFIED
+Line 855   Montant   17   Doit être prérempli avec le montant de     Laissé vide    27
+                          la ligne 5050 de l’annexe 6 de la          pour les
+                          présente déclaration                       organismes
+                                                                     de
+                          « Total des dons faits à des donataires
+                                                                     bienfaisance
+                          reconnus (ligne 5050 de votre              exemptés
+                          déclaration) »
+
+Line 860   Montant   17   Doit afficher la somme des lignes 845,     Laissé vide    27
+                          850 et 855                                 pour les
+                                                                     organismes
+                                                                     de
+                                                                     bienfaisance
+                                                                     exemptés
+
+Line 865   Montant   17   Doit afficher la différence de la          Laissé vide    27
+                          ligne 840 moins la ligne 860               pour les
+                                                                     organismes
+                          « La ligne 860 moins la ligne 840.
+                                                                     de
+                          C’est le montant excédentaire ou le
+                                                                     bienfaisance
+                          montant manquant au contingent des
+                                                                     exemptés
+                          versements de votre organisme de
+                          bienfaisance pour l’exercice en
+                          cours. »
+
+Line 870   Montant   17   Doit être prérempli avec le montant de     Laissé vide    27
+                          la ligne 5910 de l’annexe 6 de la          pour les
+                          présente déclaration                       organismes
+                                                                     de
+                          « Valeur moyenne des biens non
+                                                                     bienfaisance
+                          utilisés dans des activités de
+                                                                     exemptés
+                          bienfaisance ou à des fins
+                          administratives avant le prochain
+                          exercice financier (ligne 5910 de votre
+                          déclaration) »
+Line 875   Montant   17   Si le montant de la ligne 870 est égal     Laissé vide    27
+                          ou inférieur à 1 000 000, doit afficher    pour les
+                          le total de la ligne 870 multiplié         organismes
+                          par 3,5 %                                  de
+                                                                     bienfaisance
+                          Si le montant de la ligne 870 est          exemptés
+                          supérieur à 1 000 000, doit demeurer
+                          vide
+                          « Le montant qui apparaît à la
+                          ligne 875 est l’estimation du contingent
+                          des versements de votre organisme de
+                          bienfaisance pour le prochain exercice
+                          financier. ”
+Line 880   Montant   17   Si le montant indiqué à la ligne 870 est   Laissé vide    27
+                          égal ou inférieur à 1 000 000, doit        pour les
+                          demeurer vide                              organismes
+                                                                     de
+
+                                                                                             Page 45 de 46
+
+=== page 46 (text layer) ===
+                                                                                      UNCLASSIFIED - NON CLASSIFIÉ
+
+                                                                                            UNCLASSIFIED
+                                  Si le montant indiqué à la ligne 870 est   bienfaisance
+                                  supérieur à 1 000 000, doit afficher le    exemptés
+                                  total de la ligne 870 moins 1 000 000 $
+
+       Line 885   Montant   17    Si le montant indiqué à la ligne 870 est   Laissé vide    27
+                                  égal ou inférieur à 1 000 000, doit        pour les
+                                  demeurer vide                              organismes
+                                                                             de
+                                  Si le montant indiqué à la ligne 870 est
+                                                                             bienfaisance
+                                  supérieur à 1 000 000, doit afficher le    exemptés
+                                  total de la ligne 880 multiplié par 5 %
+
+       Line 890   Montant   17    Si le montant indiqué à la ligne 870 est   Laissé vide    27
+                                  égal ou inférieur à 1 000 000, doit        pour les
+                                  demeurer vide                              organismes
+                                                                             de
+                                  Si le montant indiqué à la ligne 870 est
+                                                                             bienfaisance
+                                  supérieur à 1 000 000, doit afficher le
+                                                                             exemptés
+                                  total de la ligne 885 plus 35 000 $
+                                  « Le montant indiqué à la ligne 890 est
+                                  l’estimation du contingent des
+                                  versements de votre organisme de
+                                  bienfaisance pour le prochain exercice
+                                  financier. »
+
+
+Source(s) :
+   ▪   Annexe 8 – Contingent des versements
+
+
+
+
+                                                                                                     Page 46 de 46
+

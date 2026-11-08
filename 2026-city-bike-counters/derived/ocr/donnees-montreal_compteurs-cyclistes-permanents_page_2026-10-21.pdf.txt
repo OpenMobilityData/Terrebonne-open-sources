@@ -1,0 +1,278 @@
+=== page 1 (text layer) ===
+montreal.ca
+
+
+
+
+Données ouvertes
+
+        Rechercher
+
+
+
+Accueil          Données         Actualités       Applications      À propos
+
+
+
+          Compteurs cyclistes permanents
+
+
+               Ensemble de données   Catégories    Applications
+
+
+
+
+              Les jeux de données analysés proviennent de détecteurs de
+              comptage vélo installés sur différents sites par le SUM-DIGD. Ces
+              capteurs enregistrent le nombre de passages de cyclistes à chaque
+              minute, permettant une observation fine de la fréquentation. Sur
+              certains emplacements, les détecteurs fournissent également des
+              données de vitesse, enrichissant l’analyse comportementale.
+
+          Afin de faciliter l’interprétation et de dégager des tendances, les
+          données brutes sont agrégées de plusieurs façons :
+          - 15min
+          - 1hr
+          - quotidien
+Nous utilisons des témoins
+          - mensuel
+Nous avons besoin de votre consentement pour recueillir certains témoins (cookies) que nous
+          - annuel
+utilisons pour améliorer votre expérience sur notre site et diffuser des contenus et des
+publicités personnalisés. Politique relative aux fichiers témoins
+          Cette méthodologie permet de suivre l’évolution du trafic cycliste,
+          d’identifier les variations saisonnières et d’évaluer l’impact
+          d’aménagements
+                Personnaliserou d’événements spécifiques. L’agrégation
+                                                                  Tout accepterest
+
+=== page 2 (text layer) ===
+         réalisée à l’aide de traitements automatisés, garantissant la
+         cohérence des séries temporelles et la qualité des analyses.
+
+
+         Ressources
+
+         Cartes
+
+         Visualisation
+         Dernière modification: il y a 5 mois
+
+
+
+         Données
+
+          CSV
+         Cyclistes CSV
+         Dernière modification: il y a 2 mois
+         283,5 MB
+
+
+          CSV
+         Velos - Comptage 2026 - Eco-Compteur
+         Dernière modification: il y a 16 heures
+         71,7 MB
+
+
+          CSV
+         Velos - Comptage 2025 - Eco-Compteur
+         Dernière modification: il y a 5 mois
+         72,7 MB
+
+
+          CSV
+         Velosdes
+Nous utilisons - Comptage
+                   témoins 2024 - Eco-Compteur
+         Dernière modification: il y a 5 mois
+Nous avons83,9besoin
+               MB de votre consentement pour recueillir certains témoins (cookies) que nous
+utilisons pour améliorer votre expérience sur notre site et diffuser des contenus et des
+publicités personnalisés. Politique relative aux fichiers témoins
+          CSV
+         Velos - Comptage 2023 - Eco-Compteur
+         Dernière modification: il y a 5 mois
+         86,7 MB
+
+=== page 3 (text layer) ===
+               Afficher plus de ressources
+
+
+
+         Méthodologie
+
+         Détecteurs installés sur fût.
+
+         Limites possibles :
+
+         Des trous de données dans les comptages cyclistes peuvent être
+         causés par des problèmes techniques comme des pannes de
+         capteurs, des pertes de communication ou des bogues logiciels. Ils
+         peuvent aussi résulter d’interventions sur le terrain, telles que des
+         travaux routiers, des opérations de maintenance ou le
+         déplacement temporaire des équipements. Le traitement des
+         données peut entraîner la suppression de certaines valeurs, créant
+         des absences dans les séries, bien que l’historique soit conservé, y
+         compris pour les sites qui ont été décommissionnés.
+
+         Dictionnaire de données (permanent)
+                _id (numérique) : Identifiant unique de chaque comptage.
+                agg_code (texte) : Type d’agrégation (f=15min, h=hr,
+                 d=quotidien, m=mensuel, y=annuel).
+                 instance (texte) : Identifiant unique de chaque site.
+                 longitude (numérique) : Position GPS (longitude) du site de
+                 comptage en WGS 84.
+                 latitude (numérique) : Position GPS (latitude) du site de
+                 comptage
+Nous utilisons des  témoins en WGS 84.
+                 arrondissement (texte) : Arrondissement.
+Nous avons besoin de votre consentement pour recueillir certains témoins (cookies) que nous
+                         votre(numérique)
+                 numeroVoie
+utilisons pour améliorer        expérience sur: Numéro
+                                                notre site de la voie des
+                                                           et diffuser de comptage.
+                                                                          contenus et des
+publicités personnalisés.  (texte) : Direction
+                 direction Politique            des
+                                     relative aux    vélos.témoins
+                                                  fichiers
+                 periode (date) : Période de comptage.
+                 volume (numérique) : Volume de passage selon la période de
+                 comptage.
+
+=== page 4 (text layer) ===
+                vitesse (numérique) : Vitesse moyenne selon la période de
+                comptage.
+
+         Dictionnaire de données (2019-2026)
+                date (texte) : Jour de la mesure.
+                heure (texte) : Période de la mesure.
+                id_compteur (numérique) : Id du compteur.
+                nb_passage (numérique) : Nombre de passage dans cette
+                période.
+                longitude (numérique) : Position GPS (longitude).
+                latitude (numérique) : Position GPS (latitude).
+
+
+         Méthodologie sur les données 2009-2025
+         Boucles magnétiques réparties sur plusieurs sites de comptage.
+
+         Limites possibles :
+                Les vélos au carbone ne sont pas détectés.
+                Les entraves routières.
+                Événements qui interfèrent avec les comptages.
+                Bris d’équipement.
+                Maintenance.
+                Les données relevées semblent trop élevées pour la période
+                de décembre 2019 à février 2020.
+
+          Note : Les corridors sanitaires mis en place en réponse de la
+          COVID-19 viennent interférer avec certains compteurs. Ceux-ci
+          ont été marqués comme Unidirectionnel dans la liste des
+Nous utilisons des témoins
+          compteurs.
+Nous avons besoin de votre consentement pour recueillir certains témoins (cookies) que nous
+utilisons pour améliorer votre expérience sur notre site et diffuser des contenus et des
+publicitésTerritoires
+           personnalisés. Politique relative aux fichiers témoins
+
+           +
+           −
+
+=== page 5 (text layer) ===
+                                                               Leaflet | © OpenStreetMap contributors
+
+
+
+
+         Mots-clés
+         Circulation Comptage Compteur Piste cyclable PoleARTM
+
+         SUM Vélo
+
+
+         Informations additionnelles
+         Publieur
+         Service de l'urbanisme et de la mobilité - Direction de l'urbanisme
+
+         Couverture temporelle
+         2009 /
+
+         Fréquence de mise à jour
+         Quotidien
+
+         Dernière modification de la fiche descriptive
+         il y a 16 heures
+
+         Date d'ajout de l'ensemble de données
+Nous utilisons
+         il y a 1 des
+                  an témoins
+Nous avons besoin de votre consentement pour recueillir certains témoins (cookies) que nous
+utilisons pour améliorer votre expérience sur notre site et diffuser des contenus et des
+publicités personnalisés. Politique relative aux fichiers témoins
+
+=== page 6 (text layer) ===
+               Ville de Montréal
+               Montréal estime que les données ouvertes sont un élément central dans l’atteinte
+               des objectifs en matière de transparence et de développement économique, mais
+               aussi dans la résolution des défis urbains. Plus ces données sont rendues
+               publiques et partagées avec la communauté, plus elles seront exploitées à leur
+               plein potentiel dans un écosystème montréalais en pleine effervescence.
+
+
+
+
+Nous utilisons des témoins                                                                   Haut de la page
+
+Nous avons besoin de votre consentement pour recueillir certains témoins (cookies) que nous
+utilisons pour améliorer votre expérience sur notre site et diffuser des contenus et des
+publicités
+ Données personnalisés.
+           ouvertes       Politique relative aux fichiers témoins
+
+Rechercher
+
+
+Applications
+
+=== page 7 (text layer) ===
+Organisations
+
+
+
+
+Initiative
+
+Notre démarche
+
+
+Licence d'utilisation
+
+
+
+
+Communication
+
+Actualités
+
+
+Nous joindre
+
+
+
+
+Nous suivre
+
+   Fil RSS
+
+
+
+
+               Fichiers témoins   Accessibilité   Confidentialité   Mentions légales   English
+Nous utilisons des témoins
+Nous avons besoin de votre consentement pour recueillir certains témoins (cookies) que nous
+utilisons pour améliorer votre expérience sur notre site et diffuser des contenus et des
+publicités personnalisés. Politique relative aux fichiers témoins
+
