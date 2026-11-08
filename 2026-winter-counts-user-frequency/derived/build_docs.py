@@ -45,9 +45,9 @@ The survey found 87 people who cycled on Terrebonne last winter, 36 of them at l
 """
 LAY_SHORT = f"""Lay summary
 
-The borough's winter figures for rue de Terrebonne count passages at one point, Kensington: one bicycle crossing, one direction. They do not count people. This note asks, from four sensors along the street, how many people cycle it in winter and how often, and compares the answer with the APC-NDG survey of 2026.
+The borough's winter figures for rue de Terrebonne count passages, not people, at one point, Kensington: one bicycle crossing, one direction. This note asks, from four sensors, how many people cycle it in winter and how often, and compares the answer with the 2026 survey of the Association des piétons et cyclistes de NDG (APC-NDG).
 
-From December 1, 2025 to February 28, 2026 Kensington recorded {co['passages']:,} passages, {co['weekday']['mean']:.0f} on a weekday, {co['weekend']['mean']:.0f} on a weekend day; {co['pairs']['mean']:.0f} a day are matched morning and evening trips, the mark of commuting. The street is busier at its east end: on dry days Draper counts {cr['draper_over_kensington']:.1f} times Kensington and Girouard {cr['girouard_wb_over_kensington_wb']:.1f} times. Without knowing how often each person rides, no counter gives a head count, but at least {bd['king_edward']['people_ge_m2']} different people passed King Edward on {pd(bd['king_edward']['date'])} and at least {bd['kensington_core']['people_ge_m2']} passed Kensington on {pd(bd['kensington_core']['date'])}. The survey's 87 winter cyclists account for about {si['ratio_central']*100:.0f} per cent of the passages counted: consistent with the count, a floor under the number of people, not a measure of it.
+From December 2025 to February 2026 Kensington recorded {co['passages']:,} passages, {co['weekday']['mean']:.0f} on a weekday, {co['weekend']['mean']:.0f} on a weekend day; {co['pairs']['mean']:.0f} a day are matched morning and evening trips, the mark of commuting. The street is busier at its east end: on dry days Draper counts {cr['draper_over_kensington']:.1f} times Kensington and Girouard {cr['girouard_wb_over_kensington_wb']:.1f} times. Without knowing how often each person rides, no counter gives a head count, but at least {bd['king_edward']['people_ge_m2']} different people passed King Edward on {pd(bd['king_edward']['date'])} and at least {bd['kensington_core']['people_ge_m2']} passed Kensington on {pd(bd['kensington_core']['date'])}. The survey's 87 winter cyclists account for about {si['ratio_central']*100:.0f} per cent of the passages counted: consistent with the count, a floor under the number of people, not a measure of it.
 """
 open(os.path.join(HERE, 'lay_abstract_en_long.txt'), 'w', encoding='utf-8').write(LAY.strip() + '\n')
 open(os.path.join(HERE, 'lay_abstract_en_short.txt'), 'w', encoding='utf-8').write(LAY_SHORT.strip() + '\n')
@@ -62,7 +62,7 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \captionsetup{font=small,labelfont=bf}\setlength{\parindent}{0pt}\setlength{\parskip}{0.6em}
 \begin{document}
 {\LARGE\textbf{How many people cycle rue de Terrebonne in winter, and how often?}}\\[3pt]
-{\large Bicycle counts on four sensors, a frequency distribution, and the APC-NDG survey in context}\\[4pt]
+{\large Bicycle counts on four sensors, a frequency distribution, and the survey of the Association des piétons et cyclistes de NDG (APC-NDG) in context}\\[4pt]
 {\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Data: borough loop counter (access requests 2026-300 and 2026-581), the author\textquoteright{}s Telraam sensors (counts: Telraam), City open data (CC-BY 4.0), ECCC. Code, tables and figures: \url{''' + URL + r'''}.}
 
 \section*{Abstract}
@@ -195,7 +195,7 @@ Under central assumptions the 87 account for ''' + f"{si['passages_central']:,}"
 
 DECK = r'''\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs,amsmath}
-\title{How many people cycle rue de Terrebonne in winter, and how often?}\subtitle{Bicycle counts on four sensors, a frequency distribution, and the APC-NDG survey in context}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + STAMP + r'''}
+\title{How many people cycle rue de Terrebonne in winter, and how often?}\subtitle{Bicycle counts on four sensors, a frequency distribution, and the survey of the Association des piétons et cyclistes de NDG (APC-NDG) in context}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + STAMP + r'''}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \begin{frame}{Two units}\begin{itemize}

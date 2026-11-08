@@ -45,7 +45,7 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \captionsetup{font=small,labelfont=bf}\setlength{\parindent}{0pt}\setlength{\parskip}{0.6em}
 \begin{document}
 {\LARGE\textbf{Parking around rue de Terrebonne: supply, measured demand, and the survey\textquoteright{}s answers in context}}\\[4pt]
-{\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Companion to the note on winter bicycle counts and user frequency. Data: EXP 2023 (the borough\textquoteright{}s published study), City LiDAR 2015 and assessment roll (open data, CC-BY 4.0), Québec orthophoto, BAnQ plans, ECCC, City snow-removal transactions, the APC-NDG survey\textquoteright{}s anonymized file. Code, tables and figures: \url{''' + URL + r'''}.}
+{\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Companion to the note on winter bicycle counts and user frequency. Data: EXP 2023 (the borough\textquoteright{}s published study), City LiDAR 2015 and assessment roll (open data, CC-BY 4.0), Québec orthophoto, BAnQ plans, ECCC, City snow-removal transactions, the anonymized file of the survey of the Association des piétons et cyclistes de NDG (APC-NDG). Code, tables and figures: \url{''' + URL + r'''}.}
 
 \section*{Abstract}
 ''' + ABSTRACT + r'''
