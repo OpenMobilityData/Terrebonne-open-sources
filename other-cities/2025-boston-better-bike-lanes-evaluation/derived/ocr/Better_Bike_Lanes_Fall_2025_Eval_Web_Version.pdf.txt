@@ -1,0 +1,1414 @@
+=== page 1 (OCR) ===
+BETTER
+BIKE LANES
+
+Year Two Quantitative Evaluation
+Fall 2025
+
+CITY of BOSTON
+
+=== page 2 (text layer) ===
+In 2022, we launched a
+major initiative to expand
+the citywide bike network,
+close key gaps, and
+increase the percentage of
+residents within a short
+walk from a safe and
+connected bike route.
+
+=== page 3 (text layer) ===
+IN 2024, WE COMPLETED:
+1.   BOYLSTON STREET (BACK BAY)
+     Separated bike lane
+2.   BERKELEY STREET (SOUTH END, BACK BAY)
+     Separated bike lane
+3.   MILK STREET (DOWNTOWN)
+     Separated bike lane
+4.   NORTH BEACON STREET (ALLSTON/BRIGHTON)
+     Separated bike lane
+5.   WESTERN AVENUE (ALLSTON/BRIGHTON)
+     Separated bike lane
+6.   WINSHIP STREET (ALLSTON/BRIGHTON)
+     Separated bike lane
+7.   SOUTH STREET (ALLSTON/BRIGHTON)
+     Contraﬂow street and speed humps
+
+=== page 4 (text layer) ===
+EVALUATION SCOPE
+Performance evaluation is a key part of
+delivering successful projects.
+In this evaluation, we looked at user counts as a
+key metric to measure project impact. Since
+these projects strategically expanded our
+bicycle network, we speciﬁcally analyzed bicycle
+and motor vehicle volumes.
+We compared counts taken before the projects
+(September 2022) with counts taken one year
+after the projects ﬁnished (September 2025).
+Waiting one year lets us see how people actually
+change their travel habits. We also included
+some mid-year data from June 2025, as well as
+historic data from control locations, when we
+had it available.
+
+=== page 5 (text layer) ===
+DATA COLLECTION AND METHODOLOGY
+       FALL 2022                                      SPRING AND FALL 2025
+       Baseline data collection for                   Post-install data collection for
+       all Better Bike Lane projects                  projects completed in 2024
+       Tuesday, Sept. 27, 2022                        Wednesday, June 11, 2025
+       Wednesday, Sept. 28, 2022                      Thursday, June 12, 2025
+                                                      Tuesday, September 16, 2025
+                                                      Wednesday, September 17, 2025
+
+
+
+
+We collected data on mid-week dates that represent typical trafﬁc conditions. Post-install
+data collection were timed to allow at least six months of adjustment following project
+installation. Weather was typical for the data collected dates. Data collection was
+performed by a third party vendor using automated counting technology.
+For the analysis in this presentation, we averaged consecutive data collection dates
+together. Note that data were not collected at every location on all of the dates listed
+above.
+Control location data were derived from the Quarterly Bicycle Count program.
+5
+
+=== page 6 (OCR) ===
+KEY TAKEAWAYS
+
+CITY of BOSTON
+
+=== page 7 (text layer) ===
+Bicycle counts signiﬁcantly increased on                     Daily bicycle volumes before and after by project
+every corridor where we completed Better                                                                          % change    bike % bike %
+
+Bike Lanes projects in 2024.                                                                                      in volume   before after
+
+                                                                                                                      +83%       7%    11%
+The number of people biking, and the percentage of all
+trafﬁc they make up, both saw substantial increases.
+                                                                                                                      +42%       2%     3%
+
+  ▸   We counted over 3,000 more daily bike trips, a
+      55% increase across all projects. In our prior                                                                  +37%      15%    19%
+      report on Better Bike Lane projects completed in
+      2023, we recorded a 44% increase in volume. The                                                                 +62%       1%     2%
+      latest projects appear to have tapped into even
+      more growth potential by focusing on mostly                                                                     +51%       4%     8%
+      arterial streets and closing key new network
+      connection gaps.
+                                                                                                                      +49%       2%     3%
+
+  ▸   Bicycles as a share of of all trafﬁc increased to 7%
+      of daily trafﬁc across all projects, nearly doubling                                                            +22%       3%     5%
+      from 4% in the baseline condition. Some projects
+      saw bicycle mode share as high as 19%
+
+  ▸   Boylston Street (Back Bay) topped the list with a
+      near doubling (+83%) of daily bike trips, leading       * average of three count locations within the project area.
+      four other corridors that measured growth of            ** average of two count locations within the project area.
+      nearly 50% or more.
+
+=== page 8 (text layer) ===
+Motor vehicle counts were steady in                         Daily motor vehicle volumes before and after by project
+comparison, with changes varying                                                                                              % change
+
+signiﬁcantly by project                                                                                                       in volume
+
+                                                                                                                                  +6%
+Motor vehicle volumes decreased a modest -5% across
+all projects while accommodating a major growth (+55%
+on average) in bicycling.                                                                                                          -1%
+
+
+  ▸   The mixed results indicates that project impacts                                                                             0%
+      on vehicle volumes were localized.
+  ▸   Volumes remained stable in most areas and                                                                                    -5%
+      decreased in others, likely due to external factors
+      or daily variability.                                                                                                      -15%
+  ▸   Measured increases in motor vehicle volumes,
+      such as the +6% at Boylston Street, can be                                                                                   -4%
+      attributed to localized changes like the ﬁnishing
+      of nearby construction projects.                                                                                           -16%
+
+
+
+
+                                                                * average of three count locations within the project area.
+                                                                ** average of two count locations within the project area.
+
+=== page 9 (text layer) ===
+Better Bike Lanes corridors dramatically                    Average Percent Change in Volume
+                                                            Project Streets vs. Control Streets
+outperformed corridors with no design                       September 2022 - September 2025
+
+changes during the same time period
+Project streets measured an average increase of +55% in
+bicycle volumes, compared to +5% at the control streets
+group.
+
+  ▸   The 50+ percentage point difference conﬁrms the
+      projects drove a major growth in bicycle trips
+      compared to the control group.
+
+  ▸   Motor vehicle volumes saw a modest average
+      decrease of -5% at project sites, only 2 percentage
+      points lower than the -3% decrease measured at
+      control streets.
+
+  ▸   The projects achieved major growth in bicycle
+      trips without clear impacts to motor vehicle
+      volumes.
+
+
+
+                                                            Fifteen control streets were selected for comparison. These streets had
+                                                            similar characteristics to the project streets and geographic coverage, but
+                                                            did not receive any bicycle infrastructure improvements or new
+                                                            connecting bike routes between Fall 2022 and Fall 2025.
+
+=== page 10 (OCR) ===
+RESULTS
+
+By project and location
+
+CITY of BOSTON
+
+=== page 11 (text layer) ===
+BOYLSTON
+STREET
+Back Bay
+    SEPARATED BIKE LANE
+    One-way eastbound
+
+
+    LANE REALLOCATION
+    3 thru lanes to 2 thru lanes
+    + turn lanes where needed
+
+=== page 12 (text layer) ===
+LOCATION Boylston Street
+PROJECT EXTENTS
+Massachusetts Avenue to Arlington
+Street
+DATA COLLECTION LOCATIONS                         4
+1. Boylston Street west of Arlington
+   Street
+ 2.   Boylston Street west of Fairﬁeld                1
+      Street
+ 3.   Boylston Street west of Dalton          2
+      Street                              3
+
+ 4.   Commonwealth Avenue east of
+      Berkeley Street (off-site control
+      location)
+
+12
+
+=== page 13 (text layer) ===
+BICYCLING Boylston Street west of Arlington Street
+                                                                   Bicycle trips increased 67% after project completion,
+                                                                   rising to a daily average of around 1,000, about 430 new
+                                                                   trips.
+
+                                                                     ▸    Bicycles as a percentage of all vehicles roughly
+                                                                          doubled from 7.5% before to about 14% after, due
+                                                                          both to substantial growth in bicycle trips and
+                                                                          moderately declining motor vehicle trips.
+
+                                                                     ▸    This remarkable growth suggests the new
+                                                                          separated bike lane on Boylston Street attracted
+                                                                          bicycle trips and served latent demand.
+
+                                                                     ▸    The range overlap between June and September
+                                                                          2025 suggests that difference between both dates
+                                                                          could be due to daily variability.
+
+
+                        BEFORE         AFTER          AFTER
+                    September 2022   June 2025    September 2025
+bicycles % of all
+                        7.5%           13.7%          13.6%
+        vehicles
+ % change from
+                          -            +81%           +67%
+      baseline
+
+          range       567 - 572      937 - 1121     941 - 964
+
+=== page 14 (text layer) ===
+MOTOR VEHICLES Boylston Street west of Arlington Street
+                                                                   Motor vehicle volume decreased by 14% after project
+                                                                   completion, a moderate but notable change resulting in
+                                                                   nearly 1,000 fewer motor vehicle trips.
+
+                                                                     ▸   This suggests an overall change in the user mix on
+                                                                         Boylston Street trending towards bicycling.
+
+                                                                     ▸   While the continuous decline, with
+                                                                         non-overlapping ranges, suggests a trend, it may
+                                                                         still be within the potential range for daily
+                                                                         variation.
+
+                                                                     ▸   Additional follow up data collection will show if
+                                                                         this trend is sustained over time.
+
+
+
+
+                     BEFORE          AFTER            AFTER
+                 September 2022    June 2025      September 2025
+ % change from
+                        -             -8%              -14%
+      baseline
+         range    6,665 - 7,328   6,445 - 6,481    6,021 - 6,042
+
+=== page 15 (text layer) ===
+BICYCLING Boylston Street west of Fairﬁeld Street
+                                                                    Bicycle trips doubled after project completion, rising to a
+                                                                    daily average of almost 1,200, about 600 new trips.
+
+                                                                      ▸    Bicycles as a percentage of all vehicles doubled
+                                                                           from 4.9% before to 10.3% after, due both to
+                                                                           substantial growth in bicycle trips and moderately
+                                                                           declining motor vehicle trips.
+
+                                                                      ▸    This remarkable growth suggests the new
+                                                                           separated bike lane on Boylston Street attracted
+                                                                           bicycle trips and served latent demand.
+
+                                                                      ▸    The ranges of daily volumes do not overlap
+                                                                           between the three data collection periods, which
+                                                                           may indicate consistent growth across the dates
+                                                                           measured.
+
+
+                        BEFORE         AFTER           AFTER
+                    September 2022   June 2025     September 2025
+bicycles % of all
+        vehicles        4.9%            9.1%           10.3%
+
+ % change from
+                          -            +73%            +101%
+      baseline
+          range       583 - 590      903 - 1,124    1,174 - 1,189
+
+=== page 16 (text layer) ===
+MOTOR VEHICLES Boylston Street west of Fairﬁeld Street
+                                                                      Motor vehicle volume decreased by 9% after project
+                                                                      completion, a moderate but notable change resulting in
+                                                                      over 1,000 fewer motor vehicle trips.
+                                                                        ▸   This suggests an overall change in the user mix on
+                                                                            Boylston Street trending towards bicycling.
+                                                                        ▸   The data ranges for both after data collection
+                                                                            periods (June and September 2025) overlap with
+                                                                            each other but not with the before condition
+                                                                            (September 2025), suggestion a sustained
+                                                                            reduction.
+                                                                        ▸   Additional follow up data collection will show if
+                                                                            this trend is sustained over time.
+
+
+
+
+                     BEFORE           AFTER             AFTER
+                 September 2022     June 2025       September 2025
+ % change from
+                        -              -11%              -9%
+      baseline
+         range   10,904 - 11,785   9,887 - 10,251   10,176 - 10,407
+
+=== page 17 (text layer) ===
+BICYCLING Boylston Street west of Dalton Street
+                                                                   Bicycle trips nearly doubled after project completion,
+                                                                   rising to a daily average of around 1,200, about 550 new
+                                                                   trips.
+
+                                                                     ▸    Bicycles as a percentage of all vehicles gained
+                                                                          about 2 percentage points from 8.9% before to
+                                                                          about 10.5% after, due to a proportional rise in
+                                                                          motor trafﬁc following the reopening of the Dalton
+                                                                          Street Bridge.
+
+                                                                     ▸    This location had the highest numerical count of
+                                                                          bicycles in the before and after data, suggesting
+                                                                          that the new separated bike lane both served
+                                                                          existing trips and tapped into latent demand.
+
+                                                                     ▸    The ranges of daily volume do not overlap across
+                                                                          the three periods, suggesting consistent growth.
+                                                                          The range shrank between June and September
+                        BEFORE         AFTER          AFTER               2025, suggesting stabilization of daily volumes.
+                    September 2022   June 2025    September 2025
+bicycles % of all
+        vehicles        8.9%           8.8%           10.5%
+
+ % change from
+                          -            +50%           +81%
+      baseline
+          range       616 - 764      865 - 1210    1237 - 1256
+
+=== page 18 (text layer) ===
+MOTOR VEHICLES Boylston Street west of Dalton Street
+                                                                     Motor vehicle volume increased 50% from 2022 to
+                                                                     2025. This growth is likely due to the completion of a
+                                                                     nearby construction project.
+
+                                                                       ▸   In 2022, the Dalton Street Bridge rehabilitation
+                                                                           project was underway, restricting Boylston
+                                                                           Street eastbound to one lane and prohibiting
+                                                                           right turns onto Dalton Street.
+
+                                                                       ▸   The 2025 increase likely reﬂects a rebound in
+                                                                           trafﬁc after the bridge reopened in 2024,
+                                                                           restoring vehicle network connections closed
+                                                                           during construction.
+
+                                                                       ▸   The moderate decrease in motor vehicle counts
+                                                                           at the other two locations on Boylston Street
+                                                                           suggests the increase was isolated to this
+                    BEFORE           AFTER             AFTER
+                                                                           location and due to the bridge re-opening
+                September 2022     June 2025       September 2025          rather than our bike network project.
+
+% change from
+                       -             +51%              +50%
+     baseline
+
+
+        range    7,073 - 7,115   10,708 - 10,775   10,546 - 10,668
+
+=== page 19 (text layer) ===
+A CLOSER LOOK Boylston Street vs. Comm. Ave
+                                                                                                                                                          Bicycles             Motor vehicles
+                                                                                                                                                   Boylston     Comm.       Boylston      Comm.
+                                                                                                                                      Before
+                                                                                                                                                      570         663         6,997        5,468
+                                                                                                                                      Sep 2022
+                                                                                                                                      After          1,029        657         6,463        6,134
+                                                                                                                                      Jun 2025      (+81%)       (-1%)       (-7.6%)      (+12%)
+                                                                                                                                      After           953                     6,032        5,517
+                                                                                                                                                                     -
+                                                                                                                                      Sep 2025      (+67%)                   (-14%)        (+1%)
+
+
+
+
+We compared Boylston Street to a nearby corridor,                                                         ▸      Boylston Street measured a cumulative reduction
+Comm. Ave, to assess the project’s network effects. Both                                                         of -14% in motor vehicle volume during the study
+streets are parallel primary eastbound arterials in the                                                          period, with lower volumes observed in each data
+Back Bay. Comm. Ave had an existing bike lane with no                                                            collection period.
+design changes in the study period.
+                                                                                                          ▸      The Comm. Ave control site returned to a volume
+     ▸   Boylston Street saw substantial growth (+67%) in                                                        similar to baseline by September 2025, following
+         bicycle volume, while the Comm. Ave. control site                                                       an initial increase measured in June 2025 (+12%).
+         remained stable (-1%).
+                                                                                                          ▸      Neither location's volume changed enough to
+     ▸   This suggests the new separated bike lane on                                                            suggest that the vehicle capacity reduction on
+         Boylston Street encouraged new bicycle trips and                                                        Boylston Street caused motor vehicle trafﬁc to
+         served latent demand rather than drawing users                                                          divert to Comm. Ave. The differences observed are
+         from parallel corridors.                                                                                likely within the range of normal variation.
+19       Data notes: Each data collection period represents an average of data collected on two dates. Comm Ave data were collected on 9/27/2022, 10/6/2022, 6/11/2025, 6/12/2025, 9/23/2025, and
+         9/24/2025. Bicycle data were not available for September 2025. Boylston Street data were collected on 9/27/2022, 10/6/2022, 6/11/2025, 6/12/2025, 9/23/2025, and 9/24/2025.
+
+=== page 20 (text layer) ===
+BERKELEY
+STREET
+South End, Back Bay
+     REPAVING
+
+
+     SEPARATED BIKE LANE
+     One-way northbound
+
+
+     LANE REALLOCATION
+     3 thru lanes to 2 thru lanes
+     + turn lanes where needed
+
+=== page 21 (text layer) ===
+LOCATION Berkeley Street
+PROJECT EXTENTS
+Tremont Street (South End) to
+Commonwealth Avenue (Back Bay)
+DATA COLLECTION LOCATIONS
+1. Berkeley Street Bridge over
+   Interstate 90
+ 2.   Berkeley Street north of
+      Providence Street          2
+                                     1
+
+
+
+
+21
+
+=== page 22 (text layer) ===
+BICYCLING Berkeley Street over I-90
+                                                                       Bicycle volumes increased by 23% from 2022 to 2025,
+                                                                       despite a temporary decrease measured in the 2024
+                                       bike lane
+                                      installed to                     interim period. Bicycles made up a larger share of total
+                                      Comm. Ave                        trafﬁc, rising by half a percentage point.
+                        bike lane
+                       installed to                                      ▸    These results suggest the importance of a
+                      Columbus Ave                                            connected bicycle network. In the 2024 interim
+                                                                              period, the project was partially completed, with
+                                                                              the facility ending at Columbus Ave. The dip in
+                                                                              volume in 2024 may be due to natural variation or
+                                                                              trip diversion to the newly completed Tremont
+                                                                              Street separated bike lane.
+
+                                                                         ▸    By June 2025, the project was completed, creating
+                                                                              network connections to the new Boylston Street
+                                                                              separated bike lane and existing bike lanes on
+                                                                              Comm. Ave.
+                     BEFORE     INTERIM         AFTER       AFTER        ▸    The growth observed after project completion
+                    Sep 2022    Sep 2024       Jun 2025    Sep 2025           appears to have been sustained.
+bicycles % of all
+                      2.4%        2.1%           2.9%        2.8%
+        vehicles
+
+ % change from
+                        -         -10%           +26%       +23%
+      baseline
+
+          range     209 - 215   193 - 189      299 - 234   264 - 259
+
+=== page 23 (text layer) ===
+MOTOR VEHICLES Berkeley Street over I-90
+                                                                        Motor vehicle volume increased modestly by 3% during
+                                                                        the evaluation period.
+
+                                                                          ▸   This amount of variation is likely within the range
+                                                                              of daily variation rather than a trend, given that
+                                                                              the ranges of daily volumes overlap between all of
+                                                                              the dates measured.
+
+                                                                          ▸   The results suggest that the design changes didn’t
+                                                                              have a measurable effect on vehicle volumes on
+                                                                              Berkeley Street.
+
+
+
+
+                  BEFORE       INTERIM        AFTER         AFTER
+                 Sep 2022      Sep 2024      Jun 2025      Sep 2025
+
+% change from
+                     -           +1%           +1%           +3%
+     baseline
+
+        range   8548 - 9002   8668 - 8973   8752 - 9023   8865 - 9149
+
+=== page 24 (text layer) ===
+BICYCLING Berkeley Street north of Providence Street
+                                                                  Bicycle volumes grew by almost 60% during the
+                                                                  evaluation period. Bicycles also made up a larger share of
+                                                                  total trafﬁc, rising by about 1.5 percentage points.
+
+                                                                    ▸    This level of growth indicates that this section of
+                                                                         Berkeley Street has a high level of bicycle network
+                                                                         importance, especially as it connects to the
+                                                                         separated bike lane on Boylston Street and bike
+                                                                         lanes on Commonwealth Avenue.
+
+                                                                    ▸    The ranges of daily counts do not overlap across
+                                                                         the three collection periods, indicating consistent
+                                                                         growth. The smaller range in September 2025
+                                                                         compared to June 2025 suggests that volumes may
+                                                                         be stabilizing over time.
+
+
+
+                        BEFORE         AFTER         AFTER
+                    September 2022   June 2025   September 2025
+bicycles % of all
+        vehicles        2.2%           2.9%          3.5%
+
+ % change from
+                          -            +21%          +57%
+      baseline
+          range       254 - 280      284 - 363     394 - 443
+
+=== page 25 (text layer) ===
+MOTOR VEHICLES Berkeley Street north of Providence St
+                                                                   Motor vehicle volumes showed a reduction that partially
+                                                                   recovered between the before and after measurements.
+
+                                                                     ▸   Motor vehicle volumes decreased by 9% in the
+                                                                         initial June 2025 after period but partially
+                                                                         recovered by September 2025, settling at a 4%
+                                                                         decrease from baseline.
+
+                                                                     ▸   The gap between the before range (11,970 - 11,979)
+                                                                         and the combined after ranges (10,725 - 11,895)
+                                                                         shows that even the highest measured trafﬁc day
+                                                                         in the after period was consistently lower than the
+                                                                         lowest measured trafﬁc day in the before period.
+                                                                         This suggests a sustained reduction in the after
+                                                                         period, though future data collection would help
+                                                                         conﬁrm this change.
+
+
+                     BEFORE           AFTER           AFTER
+                 September 2022     June 2025     September 2025
+% change from          -              -9%              -4%
+      baseline
+        range    11970 - 11979    10725 - 11012   11209 - 11895
+
+=== page 26 (text layer) ===
+MILK STREET
+Downtown
+
+   REPAVING
+
+
+   SEPARATED BIKE LANE
+   Bi-directional from School to
+   Devonshire Street
+   One-way eastbound from
+   Devonshire Street to Atlantic Ave
+
+=== page 27 (text layer) ===
+LOCATION Milk Street
+PROJECT EXTENTS
+ ▸ Washington Street from School
+   Street to Milk Street
+     ▸   Milk Street from Washington
+         Street to Atlantic Avenue          1
+DATA COLLECTION LOCATIONS
+1. Washington Street north of Milk
+                                                    3
+   Street
+ 2.      Milk Street west of Arch Street        2
+ 3.      Milk Street west of Broad Street
+
+
+
+
+27
+
+=== page 28 (text layer) ===
+BICYCLING Washington Street north of Milk Street
+                                                             Bicycle volumes increased by 57% following the project
+                                                             completion, rising from a 2-day average of 762 to 1,195
+                                                             bicycles per day. This increase represents an average
+                                                             daily gain of 433 additional bicyclists.
+
+                                                               ▸   Bicycles now represent a 30% share of all vehicles
+                                                                   counted at this location, a 9 percentage point gain
+                                                                   from 21% before implementation.
+
+                                                               ▸   There is no overlap in the daily count ranges
+                                                                   between the before and after data, which suggests
+                                                                   that the increase is not due to daily ambient
+                                                                   variability.
+
+
+
+
+                               BEFORE           AFTER
+                           September 2022   September 2025
+
+       bicycles % of all
+               vehicles         21%              30%
+
+% change from baseline           -              +57%
+                 range       723 - 801       1187 - 1202
+28
+
+=== page 29 (text layer) ===
+A CLOSER LOOK Washington Street north of Milk Street
+                                                                                                   Northbound   Southbound
+                                                                                         Before
+                                                                                                      661          101
+                                                                                 September 2022
+
+                                                                                           After
+                                                                                                      950          245
+                                                                                 September 2025
+
+                                                                                       Change #      +289         +144
+
+
+                                                                                       Change %      +44%         +143%
+
+
+The new bike lane added southbound bike access on              ▸   Growth in volume was mainly driven by the
+Washington Street between School and Milk Streets,                 northbound direction, which added 289 trips, a
+which was previously one-way northbound.                           44% increase.
+
+     ▸   This created a new eastbound connection towards       ▸   Hourly data shows clear commuting peaks for
+         the Financial District and Seaport via School,            northbound trips both before and after the
+         Washington, and Milk Street.                              project. Northbound evening peak (4 - 7 pm) trafﬁc
+                                                                   grew signiﬁcantly.
+     ▸   As a result, the southbound direction grew by
+         143%, with the highest hourly volume in the “after”   ▸   Southbound travel grew signiﬁcantly during the
+         period occurring at 8 AM. This suggests that we           morning commuting peak (7 - 10 am), indicating
+         captured demand and improved overall network              the project’s success in capturing demand.
+         connectivity.
+
+
+29
+
+=== page 30 (text layer) ===
+MOTOR VEHICLES Washington Street north of Milk Street
+                                                       Motor vehicle volumes showed negligible change
+                                                       between the before and after periods, increasing from
+                                                       2,808 motor vehicles per day to 2,827 motor vehicles per
+                                                       day, only a 1% increase.
+
+                                                         ▸   The narrow daily count ranges for both periods
+                                                             overlap signiﬁcantly, suggesting that the 1%
+                                                             increase is within the normal margin of daily
+                                                             variability.
+
+                                                         ▸   This stability suggests that the new bicycle facility
+                                                             and corresponding growth in bicycle trips did not
+                                                             impact motor vehicle volume and capacity.
+
+
+
+
+                         BEFORE           AFTER
+                     September 2022   September 2025
+
+     % change from
+                           -               +1%
+          baseline
+
+             range    2737 - 2878      2803 - 2851
+
+30
+
+=== page 31 (text layer) ===
+BICYCLING Milk Street west of Arch Street
+                                                           Bicycle volumes grew by 26%, rising from 491 to 617 trips
+                                                           per day following the project's completion.
+
+                                                             ▸    The share of total trafﬁc made up by bicycles
+                                                                  increased by 5 percentage points, rising from 12%
+                                                                  to 17%. This was due both to a rise in bicycle trips
+                                                                  and a reduction in motor vehicle trips.
+
+                                                             ▸    The daily count ranges conﬁrm the growth is
+                                                                  reliable: the After range (606–627) shows no
+                                                                  overlap with the Before range (465–516).
+
+
+
+
+                             BEFORE           AFTER
+                         September 2022   September 2025
+
+     bicycles % of all
+             vehicles         12%              17%
+
+      % change from
+                               -              +26%
+           baseline
+31             range       465 - 516        606 - 627
+
+=== page 32 (text layer) ===
+MOTOR VEHICLES Milk Street west of Arch Street
+                                                       Motor vehicle volumes decreased by 11%, falling from
+                                                       3,507 to 3,120 vehicles per day.
+
+                                                         ▸   This reduction reﬂects the conversion of Milk
+                                                             Street from two-way operation to one-way
+                                                             westbound.
+
+                                                         ▸   The eastbound movement, which had a much
+                                                             lower volume than the westbound movement, was
+                                                             restricted to create a short-term parking and
+                                                             delivery zone.
+
+                                                         ▸   This expected reduction in volume was key to
+                                                             managing demand for food delivery and
+                                                             short-term parking while making space for the
+                                                             two-way separated bike lane.
+
+
+                         BEFORE           AFTER
+                     September 2022   September 2025
+
+     % change from
+                           -              -11%
+          baseline
+
+             range    3395 - 3619      3086 - 3153
+
+32
+
+=== page 33 (text layer) ===
+BICYCLING Milk Street west of Broad Street
+                                                           Bicycle volumes showed a modest 4% increase, from a
+                                                           272 to 284 bicycles per day.
+
+                                                             ▸   The percentage of total trafﬁc made up by bicycles
+                                                                 remained virtually unchanged, decreasing slightly
+                                                                 by 1 percentage point.
+
+                                                             ▸   The daily count ranges overlap (256–288 Before
+                                                                 and 283–285 After), suggesting the small 4%
+                                                                 increase is within the normal range of daily
+                                                                 ﬂuctuation.
+
+                                                             ▸   The consistent volumes suggest that this segment
+                                                                 of the corridor already had a stable user base
+                                                                 before the project.
+
+
+
+                             BEFORE           AFTER
+                         September 2022   September 2025
+
+     bicycles % of all
+             vehicles         10%              9%
+
+      % change from
+                               -               +4%
+           baseline
+33             range       256 - 288        283 - 285
+
+=== page 34 (text layer) ===
+MOTOR VEHICLES Milk Street west of Broad Street
+                                                       Motor vehicle volumes increased by 15%, rising from
+                                                       2,467 to 2,840 motor vehicles per day, an average daily
+                                                       gain of 373 additional motor vehicles using this segment
+                                                       of Milk Street.
+
+                                                         ▸    The After range (2,799–2,881) shows no overlap
+                                                              with the Before range (2,420–2,514), suggesting a
+                                                              genuine increase.
+
+                                                         ▸    This increase may be related to the completion of
+                                                              a major nearby development project.
+
+                                                         ▸    Additional data collection could help conﬁrm if
+                                                              this change is sustained over time.
+
+
+
+
+                         BEFORE           AFTER
+                     September 2022   September 2025
+
+     % change from
+                           -               15%
+          baseline
+
+             range    2420 - 2514      2799 - 2881
+
+34
+
+=== page 35 (OCR) ===
+NORTH BEACON
+
+STREET
+Allston & Brighton
+
+#2.) REPAVING
+
+SEPARATED BIKE LANE
+Both directions with traffic
+
+=== page 36 (text layer) ===
+LOCATION North Beacon Street
+PROJECT EXTENTS
+Goodenough Street to Cambridge
+Street
+DATA COLLECTION LOCATIONS
+1. North Beacon Street west of
+   Glencoe Street
+
+
+                                 1
+
+
+
+
+36
+
+=== page 37 (text layer) ===
+BICYCLING North Beacon Street west of Glencoe Street
+                                                                       Bicycle volumes increased by 62% over baseline, rising
+                                                                       from an average of 165 to 266 bicycles per day by
+                                                                       September 2025.
+
+                                                                         ▸   The bicycle share of total trafﬁc nearly doubled,
+                                                                             rising from 1.5% before implementation to 2.5% by
+                                                                             September 2025.
+
+                                                                         ▸   The count ranges for all three periods show no
+                                                                             overlap, indicating a reliable and continuous
+                                                                             increase in usage following the project.
+
+                                                                         ▸   These results indicate that there was signiﬁcant
+                                                                             unmet demand for bicycle trips that the previous
+                                                                             conditions were not serving.
+
+
+
+                             BEFORE         AFTER         AFTER
+                         September 2022   June 2025   September 2025
+     bicycles % of all
+             vehicles        1.5%           2.2%          2.5%
+
+      % change from
+                               -            +44%          +62%
+           baseline
+               range       164 - 165      211 - 261     241 - 291
+37
+
+=== page 38 (text layer) ===
+MOTOR VEHICLES North Beacon Street west of Glencoe St
+                                                                       Motor vehicle volumes decreased by 6% from the
+                                                                       baseline, moving from a 2-day average of 11,114 to 10,556
+                                                                       motor vehicles per day by September 2025.
+
+                                                                         ▸    The reduction is stable within the measured dates,
+                                                                              remaining at 6% below “before” volumes. The
+                                                                              count ranges conﬁrm the decrease, as the After
+                                                                              ranges (10,483–10,508 and 10,400–10,711) show no
+                                                                              overlap with the Before range (10,899–11,329).
+
+                                                                         ▸    This minor, consistent decrease is notable when
+                                                                              paired with the 62% increase in bicycle volume.
+
+
+
+
+                         BEFORE          AFTER            AFTER
+                     September 2022    June 2025      September 2025
+     % change from
+                           -              -6%              -5%
+          baseline
+             range   10899 - 11329    10483 - 10508   10400 - 10711
+
+
+
+38
+
+=== page 39 (OCR) ===
+WESTERN
+
+AVENUE
+Allston & Brighton
+
+ou SEPARATED BIKE LANE
+Both directions with traffic
+
+=== page 40 (text layer) ===
+LOCATION Western Avenue
+PROJECT EXTENTS
+Leo Birmingham Parkway to Travis
+Street
+DATA COLLECTION LOCATIONS
+ 1.   Western Avenue west of Speedway
+      Avenue
+ 2.   Western Avenue west of Waverly
+      Street                                   1   3
+                                           2
+ 3.   Western Avenue east of Hague
+      Street (off-site control location)
+
+
+
+
+40
+
+=== page 41 (text layer) ===
+BICYCLING Western Ave west of Speedway Ave
+                                                                       Bicycle volumes increased by 80% overall from the
+                                                                       baseline measurement, rising from an average of 527 to
+                                                                       947 bicycles per day by September 2025, one year after
+                                                                       project completion.
+
+                                                                         ▸   In June 2025, less than one year after project
+                                                                             completion, bicycle counts had already increased
+                                                                             by +58% and continued to climb to reach the
+                                                                             +80% by September 2025.
+
+                                                                         ▸   The bicycle share of total trafﬁc doubled from
+                                                                             4.3% before implementation to 8.4% by September
+                                                                             2025.
+
+                                                                         ▸   The count ranges for all three periods show no
+                                                                             overlap, indicating a reliable and consistent
+                                                                             increase in usage across the measured dates.
+
+                             BEFORE         AFTER         AFTER          ▸   These results indicate that there was signiﬁcant
+                         September 2022   June 2025   September 2025         unmet demand for bicycle trips that the previous
+     bicycles % of all                                                       conditions were not serving.
+             vehicles        4.3%           7.1%          8.4%
+
+      % change from
+                               -            +58%          +80%
+           baseline
+               range       504 - 550      814 - 854     913 - 981
+41
+
+=== page 42 (text layer) ===
+MOTOR VEHICLES Western Ave west of Speedway Ave
+                                                                       Motor vehicle volumes decreased by 12% overall from the
+                                                                       before measurement, moving from a 2-day average of
+                                                                       11,785 to 10,350 motor vehicles per day by the September
+                                                                       2025 after period.
+
+                                                                         ▸   The reduction was gradual but consistent:
+                                                                             volumes decreased by 7% by the initial June 2025
+                                                                             after period (10,969 trips) and continued to decline
+                                                                             to the ﬁnal 12% total.
+
+                                                                         ▸   The count ranges for all three periods show no
+                                                                             overlap, indicating a reliable and consistent
+                                                                             reduction in usage across the measured dates.
+
+                                                                         ▸   This reduction was measured at the same location
+                                                                             that saw an 80% increase in bicycle volume during
+                                                                             the same period.
+
+                         BEFORE          AFTER            AFTER          ▸   The reduction is also notable considering the
+                     September 2022    June 2025      September 2025         growth in residential and employment density
+     % change from
+                           -              -7%             -12%
+                                                                             along the corridor, suggesting that new trips to
+          baseline                                                           those locations are happening by modes other
+             range   11547 - 12022    10808 - 11130   10200 - 10500          than driving.
+
+42
+
+=== page 43 (text layer) ===
+BICYCLING Western Avenue west of Waverly Street
+                                                      Bicycle volumes increased by 23%, rising from a 2-day
+                                                      average of 550 to 678 bicycles per day.
+
+                                                        ▸   This represents an average daily gain of 128
+                                                            additional bicycle trips at this location.
+                                                        ▸   The bicycle share of total trafﬁc increased by 2.1
+                                                            percentage points, moving from 4.6% to 6.7%
+                                                            between the before and after measurements.
+
+                                                        ▸   The daily count ranges conﬁrm the increase is
+                                                            consistent: the after range (639–716) shows no
+                                                            overlap with the before range (512–587).
+
+                                                        ▸   These results indicate that there was signiﬁcant
+                                                            unmet demand for bicycle trips that the previous
+                                                            conditions were not serving.
+
+                        BEFORE           AFTER
+                    September 2022   September 2025
+bicycles % of all
+                        4.6%             6.7%
+        vehicles
+ % change from
+                          -              +23%
+      baseline
+
+          range       512 - 587        639 - 716
+43
+
+=== page 44 (text layer) ===
+MOTOR VEHICLES Western Avenue west of Waverly Street
+                                                  Motor vehicle volumes decreased by 18%, moving from a
+                                                  2-day average of 11,469 to 9,453 motor vehicles per day.
+
+                                                    ▸   This reduction amounts to an average daily
+                                                        decrease of 2,016 motor vehicle trips at this
+                                                        location.
+
+                                                    ▸   The count ranges indicate a distinct difference in
+                                                        volumes: the after range (9,403–9,503) shows no
+                                                        overlap with the before range (11,137–11,800).
+
+                                                    ▸   This reduction was measured at the same location
+                                                        that saw a 23% increase in bicycle volume during
+                                                        the same period.
+
+                                                    ▸   The reduction is also notable considering the
+                                                        growth in residential and employment density
+                                                        along the corridor, suggesting that new trips to
+                    BEFORE           AFTER              those locations are happening by modes other
+                September 2022   September 2025         than driving.
+% change from
+                      -              -18%
+     baseline
+
+        range   11137 - 11800     9403 - 9503
+
+
+44
+
+=== page 45 (text layer) ===
+A CLOSER LOOK Western Ave Bicycle Trends Over Time
+                                                                 2016   2017   2018   2019   2020   2021   2022   2023   2024   2025
+
+
+                                           Western Avenue east
+                                                                 675    861    522    642    429    763    933    690    711    1,024
+                                               of Hague Street
+
+
+                                          Western Avenue west
+                                                                 293    446    263    380    296    363    550    532    418    678
+                                             of Waverly Street
+
+
+
+
+We compared the Waverly Street project location to an                    ▸     While Hague Street always had higher volumes,
+external control site at Hague Street on Western Avenue,                       both locations changed roughly proportional to
+using historical data since 2016. Both locations are                           one another, suggesting a consistency of bicycle
+bidirectional with one lane per direction. Hague Street                        through trafﬁc along the corridor.
+has had bike lanes since prior to 2016; Prior to 2024,
+Waverly had a faded westbound lane and an eastbound                      ▸     Both sites reached their highest volume in 2025,
+shared lane.                                                                   following the completion of our project which
+                                                                               created a continuous separated bike lane corridor
+     ▸   Both locations showed a general upward trend in                       along the length of Western Avenue.
+         bicycle volumes from 2016–2025. Periodic dips
+         can be attributed to weather (2018) and the                     ▸     The general upward trend between 2016 and 2024
+         COVID-19 pandemic (2020).                                             suggests that bicycle trips were already increasing
+                                                                               and that the project captured unmet demand.
+
+45
+
+=== page 46 (text layer) ===
+A CLOSER LOOK Western Ave Vehicle Trends Over Time
+                                                                  2016     2017     2018     2019     2020     2021     2022     2023     2024     2025
+
+
+                                            Western Avenue east
+                                                                  12,044   11,390   11,749   10,749   6,242    7,534    7,698    7,331    7,074    7,380
+                                            of Hague Street
+
+
+                                            Western Avenue west
+                                                                  13,951   13,295   13,077   14,098   10,293   11,397   11,469   11,384   10,584   9,453
+                                            of Waverly Street
+
+
+
+
+Unlike bicycle volumes, motor vehicle volumes showed a                       ▸      Hague Street showed a clear downward trend,
+general downward trend at both locations from 2016 to                               losing nearly half of its 2016 vehicle trips by 2025.
+2025.                                                                               This trend is notable given the opening of several
+                                                                                    large residential and institutional developments
+     ▸   Motor vehicles dropped distinctly in 2020 due to                           on the corridor during that same time period.
+         the COVID-19 pandemic and have remained below
+         pre-pandemic levels ever since.                                     ▸      Waverly Street has consistently shown higher
+                                                                                    motor vehicle volumes than Hague Street, likely
+     ▸   The comparative resilience of bicycle volumes,                             reﬂecting its proximity to several major arterials
+         which did not fall as dramatically in 2020 and have                        from points west. Motor vehicle volumes at
+         reached new peaks since, suggests overall                                  Waverly Street appear to be more resilient, having
+         changing travel patterns on the Western Avenue                             lost proportionally fewer trips compared to Hague
+         corridor and beyond.                                                       Street.
+
+46
+
+=== page 47 (text layer) ===
+WINSHIP
+STREET
+Brighton
+    REPAVING
+
+
+    SEPARATED BIKE LANE
+    Southbound / uphill
+
+
+    SHARED LANE
+    Northbound / downhill
+
+=== page 48 (text layer) ===
+LOCATION Winship Street
+PROJECT EXTENTS
+Cambridge Street to Chestnut Hill
+Avenue
+DATA COLLECTION LOCATIONS
+1. Winship Street north of Peaceable
+   Street                              1
+
+
+
+
+48
+
+=== page 49 (text layer) ===
+BICYCLING Winship Street north of Peaceable Street
+                                                       Bicycle volumes increased by 49%, rising from 97 to 145
+                                                       bicycles per day in the post-implementation period,
+                                                       representing a gain of 48 additional people biking on the
+                                                       corridor.
+
+                                                         ▸    The bicycle share of total trafﬁc increased by 1
+                                                              percentage point, moving from 2% to 3% between
+                                                              the before and after measurements.
+
+                                                         ▸    The count ranges conﬁrm the increase is
+                                                              consistent: the “after” range (141–148) shows no
+                                                              overlap with the “before” range (88–106).
+
+                                                         ▸    The results suggest that the new bike facility
+                                                              provided a valuable connection that served
+                                                              previously unmet demand.
+
+
+                         BEFORE            After
+                     September 2022   September 2025
+ bicycles % of all
+         vehicles         2%               3%
+
+     % change from
+                           -              +49%
+          baseline
+             range      88 - 106        141 - 148
+49
+
+=== page 50 (text layer) ===
+A CLOSER LOOK Winship Street north of Peaceable Street
+                                                             We installed a separated bike lane in the uphill,
+                                                             southbound direction, while northbound bicycles share a
+                                                             lane with vehicles.
+
+                                                               ▸   Southbound (bike lane) travel increased by 56%
+                                                                   (+23 trips), rising from 41 to 64 average daily trips.
+                                                                   This suggests that the new separated bike lane
+                                                                   supported travel in that direction.
+
+                                                               ▸   Northbound (shared lane) travel also increased by
+                                                                   45% (+25 trips), moving from 56 to 81 average daily
+                                                                   trips, suggesting the new separated facility
+                                                                   contributed to overall network improvement that
+                                                                   beneﬁted both directions.
+            BEFORE: September 2022   AFTER: September 2025
+                                                               ▸   The consistency of growth in both directions is
+                   Northbound             Southbound
+                                                                   conﬁrmed by the lack of overlap in ranges before
+                   shared lane         separated bike lane         and after.
+       Before           56                     41
+     Sep 2022        (53 - 59)              (35 - 47)
+
+         After          81                     64
+     Sep 2025        (78 - 83)              (63 - 65)
+
+     Change #          +25                    +23
+50   Change %         +45%                   +56%
+
+=== page 51 (text layer) ===
+MOTOR VEHICLES Winship Street north of Peaceable Street
+                                                       Motor vehicle volumes decreased by 4% within the
+                                                       measured dates, moving from a 2-day average of 4,940 to
+                                                       4,725 motor vehicles per day.
+
+                                                         ▸   The reduction amounts to an average daily
+                                                             decrease of 215 motor vehicles using this segment
+                                                             of Winship Street.
+
+                                                         ▸   The count ranges indicate a difference in volumes:
+                                                             the “after” range (4,611–4,838) does not overlap
+                                                             with the “before” range (4,790–5,089).
+
+                                                         ▸   The 4% reduction in motor vehicle volume was
+                                                             measured at the same location that saw a 49%
+                                                             increase in bicycle volume during the same period.
+
+
+
+                         BEFORE            After
+                     September 2022   September 2025
+     % change from
+                           -               -4%
+          baseline
+
+             range    4790 - 5089      4611 - 4838
+
+
+51
+
+=== page 52 (text layer) ===
+SOUTH STREET
+Brighton
+
+    SPEED HUMPS
+
+
+    CONTRAFLOW STREET
+    One-way for motor vehicles
+    Two-way for bicycles
+    No marked lanes
+
+=== page 53 (text layer) ===
+LOCATION South Street
+PROJECT EXTENTS
+Chestnut Hill Avenue to
+Commonwealth Avenue
+DATA COLLECTION LOCATION
+1. South Street north of   1
+   Commonwealth Avenue
+
+
+
+
+53
+
+=== page 54 (text layer) ===
+BICYCLING South Street north of Commonwealth Avenue
+                                                      Bicycle volumes increased by 22%, rising from 74 to 90
+                                                      bicycles per day in the after measurement.
+                                                        ▸   This represents an average daily gain of 16
+                                                            additional cyclists utilizing the corridor.
+                                                        ▸   The bicycle share of total trafﬁc increased by 1.5
+                                                            percentage points, moving from 3.5% to 5%
+                                                            between the before and after measurements.
+                                                        ▸   The count ranges conﬁrm the increase is
+                                                            consistent: the after range (88–91) shows no
+                                                            overlap with the before range (65–82).
+
+
+
+
+                        BEFORE           AFTER
+                    September 2022   September 2025
+bicycles % of all
+                         3.5%              5%
+        vehicles
+ % change from
+                           -             +22%
+      baseline
+
+          range         65 - 82          88 - 91
+54
+
+=== page 55 (text layer) ===
+A CLOSER LOOK South Street north of Commonwealth Ave
+                                                            We added northbound contraﬂow access on a street that
+                                                            was previously one-way southbound for motor vehicles.
+
+                                                              ▸   Northbound (contraﬂow) bicycle volume
+                                                                  increased by 139% (+16 trips), rising from 12 to 28
+                                                                  average daily trips in the after measurement.
+
+                                                              ▸   This percentage increase suggests that the new
+                                                                  contraﬂow access successfully met existing
+                                                                  demand for travel in that direction while serving
+                                                                  existing trips.
+
+                                                              ▸   Southbound (with ﬂow) bicycle volume showed no
+                                                                  change, remaining stable at 62 average daily trips
+           BEFORE: September 2022   AFTER: September 2025
+                                                                  between the before and after measurements.
+
+                   Northbound             Southbound
+                                                              ▸   The overall stability of the southbound direction
+                   contraﬂow               with ﬂow               conﬁrms that the installation of the contraﬂow
+                                                                  access did not disrupt or discourage travel in the
+       Before
+     Sep 2022
+                       12                     62                  existing direction.
+
+         After
+                       28                     62
+     Sep 2025
+
+     Change #          +16                     0
+
+55   Change %         +139%                   0%
+
+=== page 56 (text layer) ===
+MOTOR VEHICLES South St north of Commonwealth Ave
+                                                  Motor vehicle volumes decreased by 16%, an average
+                                                  daily decrease of 343 motor vehicles trips on South
+                                                  Street.
+
+                                                    ▸   The count ranges indicate a distinct difference in
+                                                        volumes: the after range (1,729–1,759) shows no
+                                                        overlap with the before range (1,959–2,214).
+
+                                                    ▸   The reduction in motor vehicle trips (-343 / day)
+                                                        is much greater than the increase in bicycle trips
+                                                        (+16 / day). This supports the conclusion that the
+                                                        new biking trips did not simply replace the lost
+                                                        driving trips.
+
+                                                    ▸   The reduction in driving volume may be
+                                                        attributable to route diversion. The addition of
+                                                        speed humps in the corridor could have lead some
+                                                        drivers to select alternative routes for travel
+                    BEFORE           BEFORE             during the measured dates.
+                September 2022   September 2025
+% change from
+                      -              -16%
+     baseline
+
+        range    1959 - 2214      1729 - 1759
+
+
+56
+
+=== page 57 (OCR) ===
+CONCLUSIONS
+AND NEXT STEPS
+
+CITY of BOSTON
+
+=== page 58 (text layer) ===
+CONCLUSIONS
+We can conclude that Better Bike Lanes projects
+built in 2023 and 2024 resulted in immediate and
+substantial increases in bike trips.
+
+  ▸   These projects served existing bicycle trips
+      and tapped into unmet demand. Control data
+      suggests that these are actual increases in the
+      number of bike trips rather than existing trips
+      diverting to the new facilities.
+
+  ▸   We saw no notable impact on motor vehicle
+      trip volume on average, though some
+      corridors experienced greater variation.
+      Determining whether these changes were due
+      to local factors, regional trends, or our
+      projects directly will require further analysis.
+
+  ▸   There is potential for more growth in bicycle
+      trips. Future projects that strategically expand
+      the reach of the bicycle network can be
+      expected to show similar impacts.
+
+=== page 59 (text layer) ===
+FUTURE EVALUATION
+While user counts are a key metric, we can use more
+information to track project effectiveness and
+improve future designs. This list details future
+research ideas for bicycle network projects; other
+project types may need different study.
+
+  ▸   Volume trends: Track long-term
+      corridor-level trends by continuing user
+      counts. Analyze seasonal volume patterns.
+
+  ▸   Safety: Measure changes in injury- and
+      fatality-causing crashes (requires multi-year
+      data). Assess safety risk by analyzing motor
+      vehicle speeds.
+
+  ▸   Operations: Analyze vehicular travel times
+      and routing to evaluate the project's impact
+      on corridor-level operational efﬁciency and
+      regional travel.
+
+  ▸   Qualitative: Gather user feedback via surveys
+      and review public comments.
+
+=== page 60 (OCR) ===
+THANK YOU
+
+btd@boston:gov
+
+CITY of BOSTON
+

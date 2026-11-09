@@ -22,6 +22,7 @@ This repository is one of three on the same subject:
 
 Rules:
 
+- **`other-cities/`** (November 9, 2026) groups documents published by other cities on the effects of measures like the ones at issue here (counts before and after, parking and curb effects, motor traffic, winter operation, safety), one folder per document inside it, same layout and rules; its own [README](other-cities/README.md) lists the entries.
 - Nothing in `raw/` is ever modified. A document obtained as an excerpt of a larger bundle is labelled as such, with the bundle identified.
 - **Full text for search** (`<folder>/derived/ocr/`, November 8, 2026): one `.txt` per raw PDF, same relative path plus `.txt`, one block per page headed « page N (text layer) » or « page N (OCR) ». Scanned pages (school minutes, parts of the 2023 EXP study and of council files) are images a PDF search does not see; they are read by Tesseract (French and English models, 300 dpi). The OCR text is an unchecked machine reading, for finding pages only: quote from the page image. Press articles kept as captures get no full text (they are not reproduced). Built by `tools/ocr_text.py [<folder>]`.
 - Every folder README gives the issuing body, the date, the source (URL or council file) and the date obtained, and states whether the source link still works when last checked.
@@ -67,6 +68,8 @@ Rules:
 | [`2024-cdn-ndg-pld/`](2024-cdn-ndg-pld/) | The borough's Plan local de déplacements 2024–2034 (102 pp.), its page on montreal.ca and the adoption release of May 10, 2024 | Arrondissement de Côte-des-Neiges–Notre-Dame-de-Grâce | 2024 |
 | [`2026-city-council-calendar/`](2026-city-council-calendar/) | The City council's sittings to the end of 2026 as listed on October 23, 2026, with the event pages of the extraordinary sittings of November 24 (budget tabled) and December 16 (budgets adopted) | Ville de Montréal | 2026 |
 | [`1954-underwriters-plans-terrebonne-garages/`](1954-underwriters-plans-terrebonne-garages/) | Off-street parking on rue de Terrebonne as built: a building-by-building reading of the Underwriters' Survey Bureau fire-insurance plans of 1954–55 (126 residential buildings with a Terrebonne address, 75 with a garage as built, 60 %), joined to the City's assessment roll, with two maps (on the City's parcels; on the georeferenced sheets), a note and a web page; the scans themselves are not reproduced | Underwriters' Survey Bureau (source, 1954–55); reading, maps and note by the repository's author | 1954–55; 2026-10-25 |
+| [`other-cities/`](other-cities/) | Other cities' documented experience with measures like the ones at issue: first entry, the City of Boston's « Better Bike Lanes » quantitative evaluations (Year Two, Fall 2025: counts before and after seven 2024 projects with control streets; Year One, Fall 2024) and the program page as captured ([`other-cities/2025-boston-better-bike-lanes-evaluation/`](other-cities/2025-boston-better-bike-lanes-evaluation/)) | City of Boston, Boston Transportation Department | 2025-04; 2025-11 |
+
 Two earlier repositories that held some of these files (`Terrebonne-EXP-Report`, `Terrebonne-working-committee`) were retired when this one was created.
 
 ## Provenance and use

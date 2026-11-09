@@ -1,0 +1,11 @@
+# Other cities: documented experience with measures like the ones at issue on rue de Terrebonne
+
+Documents published by other cities, their agencies or evaluators, on the effects of bike-lane and street-reallocation projects: counts before and after, parking and curb-space effects, motor-vehicle volumes and travel times, winter operation, safety. The questions these entries speak to are the ones put about Terrebonne: whether a protected lane shifts trips from cars to bicycles, what happens to motor traffic and to parking on the street and its neighbours, and how a seasonal or year-round layout performs.
+
+The same rules as the rest of the repository apply (root README, « How the repository is organized »): one folder per document or set of documents, named `<year>-<city>-<slug>/`, with `README.md`, `raw/` (the documents exactly as obtained, file names normalized, content never edited) and `derived/` (`ocr/` full text for search; anything else made from them). Every README gives the issuing body, the date, the source URL, the date obtained, the file hashes, a Wayback Machine snapshot where one could be made, and whether the link still worked when last checked. READMEs describe and quote the documents; they do not evaluate them, and they do not transpose a result from one city to Terrebonne: the comparison, where one is made, belongs in a note in `derived/` or in the private working papers.
+
+Foreign public documents keep their own terms (root README, « Provenance and use »); they are reproduced here as published by the issuing body, with the source linked, and will be removed on request of the issuer.
+
+| Folder | Document | Issued by | Date |
+|---|---|---|---|
+| [`2025-boston-better-bike-lanes-evaluation/`](2025-boston-better-bike-lanes-evaluation/) | City of Boston, « Better Bike Lanes: Year Two Quantitative Evaluation, Fall 2025 » (60 slides: bicycle and motor-vehicle counts before and after seven 2024 projects, September 2022 vs June and September 2025, fifteen control streets) and the Year One evaluation of Fall 2024 (53 slides, the 2023 projects); the program page as captured | City of Boston, Boston Transportation Department (Streets Cabinet) | 2025-11 (Year Two); 2025-04 (Year One) |
