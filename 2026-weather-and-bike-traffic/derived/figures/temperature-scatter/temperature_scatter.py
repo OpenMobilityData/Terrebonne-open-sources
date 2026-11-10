@@ -9,7 +9,7 @@ CAT = [('dry', '#8a949b', 'o', 9), ('rain', '#2a78d6', 'v', 13), ('snow', '#eb68
 NAME = {'en': {'dry': 'No precipitation', 'rain': 'Rain (0.2 mm or more)', 'snow': 'Snowfall (0.2 cm or more)'}, 'fr': {'dry': 'Sans précipitations', 'rain': 'Pluie (0,2 mm ou plus)', 'snow': 'Neige (0,2 cm ou plus)'}}
 for lang in ('en', 'fr'):
     fig, axes = plt.subplots(3, 2, figsize=(9.2, 10.4), gridspec_kw={'hspace': 0.42, 'wspace': 0.18})
-    for ax, s in zip(axes.flat, ['west', 'east', 'loop', 'gir', 'bixi', 'city']):
+    for ax, s in zip(axes.flat, ['west', 'loop', 'east', 'gir', 'bixi', 'city']):
         d = L.read_daily(s); L.style_axes(ax)
         d['cat'] = np.where(d.snow >= 0.2, 'snow', np.where(d.rain >= 0.2, 'rain', 'dry'))
         for c, col, mk, sz in CAT:

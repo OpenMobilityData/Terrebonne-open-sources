@@ -10,7 +10,7 @@ e = pd.read_csv(os.path.join(T, 'effects_main.csv')); e = e[e.model == 'main']
 TERMS = [('rain_under2', 'Rain, under 2 mm', 'Pluie, moins de 2 mm'), ('rain_2to10', 'Rain, 2 to 10 mm', 'Pluie, 2 à 10 mm'), ('rain_over10', 'Rain, over 10 mm', 'Pluie, plus de 10 mm'),
          ('snow_under2', 'Snowfall, under 2 cm', 'Neige, moins de 2 cm'), ('snow_2to10', 'Snowfall, 2 cm or more', 'Neige, 2 cm ou plus'),
          ('snow_on_ground', 'Snow on the ground (1 cm or more)', 'Neige au sol (1 cm ou plus)'), ('wind_per_10kmh', 'Wind, per 10 km/h', 'Vent, par 10 km/h')]
-ORDER = ['west', 'east', 'loop', 'gir', 'bixi', 'city']; MK = {'west': 'o', 'east': 's', 'loop': 'D', 'gir': 'v', 'bixi': '^', 'city': 'P'}
+ORDER = ['west', 'loop', 'east', 'gir', 'bixi', 'city']; MK = {'west': 'o', 'east': 's', 'loop': 'D', 'gir': 'v', 'bixi': '^', 'city': 'P'}
 for lang in ('en', 'fr'):
     fig, ax = plt.subplots(figsize=(8.2, 6.8)); L.style_axes(ax); ax.grid(axis='y', visible=False)
     for i, (t, en, fr) in enumerate(TERMS):

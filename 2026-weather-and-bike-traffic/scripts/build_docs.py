@@ -11,7 +11,17 @@ URL = 'https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/202
 N = json.load(open(os.path.join(ROOT, 'derived', 'numbers.json'))); H = N['hourly']
 tab = lambda n: pd.read_csv(os.path.join(T, n + '.csv'))
 EFF, BLK, CV, LAG, YR, CUR, COV = tab('effects_main'), tab('deviance_blocks').set_index('series'), tab('cross_validation').set_index('series'), tab('snow_lags_winter'), tab('year_terms'), tab('temperature_curve'), tab('coverage_by_month')
-SER = ['west', 'east', 'loop', 'gir', 'bixi', 'city']; TER = ['west', 'east', 'loop', 'gir']
+SER = ['west', 'loop', 'east', 'gir', 'bixi', 'city']; TER = ['west', 'loop', 'east', 'gir']   # the Terrebonne counters from west to east
+INSTR = {'west': 'camera sensor, 08:00--16:00', 'east': 'camera sensor, 08:00--16:00', 'loop': 'loop, 24 h', 'gir': 'detector, 24 h', 'bixi': 'bike-share dock'}
+def LEv(term, series):
+    r = LE[(LE.term == term) & (LE.series == series)]
+    return float(r.pct.iloc[0]) if len(r) else float('nan')
+def loc_row(r):
+    key = 'temperature above 20 °C (per degree)' if 'above 20' in r.term else r.term
+    lab = ('temperature above 20 °C (per degree)' if 'above 20' in r.term else r.term).replace(' °C', '\\,$^\\circ$C')
+    cells = ' & '.join(('--' if LEv(key, x) != LEv(key, x) else sg(LEv(key, x), 1 if 'temperature' in key else 0)) for x in ('west', 'loop', 'east', 'gir'))
+    p = '$<$0.001' if r.p < 0.001 else f'{r.p:.3f}'
+    return f"{lab} & {cells} & {r.chi2:.1f} & {int(r.df)} & {p} \\\\"
 NAME = {'west': 'King Edward', 'east': 'Draper', 'loop': 'Kensington loop', 'gir': 'Girouard detector', 'bixi': 'BIXI station', 'city': 'City counters'}
 D = lambda s: datetime.date.fromisoformat(s).strftime('%B %-d, %Y')
 def sg(v, d=0):
@@ -40,11 +50,11 @@ DRAFT = '' if FINAL else r'\begin{center}\colorbox{red!15}{\parbox{0.96\textwidt
 
 # ---------------------------------------------------------------- rows
 ser_rows = '\n'.join(f"{NAME[s]} & {what} & {D(N[s]['first'])} to {D(N[s]['last'])} & {N[s]['n_days']} & {N[s]['mean_count']:,.0f} \\\\" for s, what in [
-    ('west', 'Bicycles, both directions, 08:00--16:00 (Telraam S2 camera sensor, west of Cavendish)'), ('east', 'The same, east of Cavendish'),
-    ('loop', 'Bicycles eastbound, 24 h (the borough\\textquoteright{}s Eco-Counter loop)'), ('gir', 'Bicycles westbound, 24 h (the City\\textquoteright{}s pole-mounted detector at Girouard)'), ('bixi', 'Trips starting or ending at the station « Grand Boulevard / de Terrebonne », April 15 to November 15'),
+    ('west', 'Bicycles, both directions, 08:00--16:00 (Telraam S2 camera sensor, west of Cavendish)'),
+    ('loop', 'Bicycles eastbound, 24 h (the borough\\textquoteright{}s Eco-Counter loop)'), ('east', 'Bicycles, both directions, 08:00--16:00 (Telraam S2 camera sensor, east of Cavendish)'), ('gir', 'Bicycles westbound, 24 h (the City\\textquoteright{}s pole-mounted detector at Girouard)'), ('bixi', 'Trips starting or ending at the station « Grand Boulevard / de Terrebonne », April 15 to November 15'),
     ('city', 'Bicycles, 24 h, sum of twelve City loop counters elsewhere in Montréal')])
 slope_rows = '\n'.join(f"{NAME[s]} & {N[s]['bp']:.1f} ({N[s]['bp_lo']:.0f} to {N[s]['bp_hi']:.0f}) & {sg(N[s]['slope_cold_pct'], 1)} ({rng(N[s]['slope_cold_lo'], N[s]['slope_cold_hi'], 1)}) & {sg(N[s]['slope_warm_pct'], 1)} ({rng(N[s]['slope_warm_lo'], N[s]['slope_warm_hi'], 1)}) & {sg(N[s]['within_cold_pct'], 1)} ({rng(N[s]['within_cold_lo'], N[s]['within_cold_hi'], 1)}) \\\\" for s in SER)
-cold_rows = '\n'.join(f"{NAME[s]} & {N[s]['days_below_0']} & {sg(N[s]['slope_below0_pct'], 1)} ({rng(N[s]['slope_below0_lo'], N[s]['slope_below0_hi'], 1)}) & {sg(N[s]['slope_0_to_bp_pct'], 1)} ({rng(N[s]['slope_0_to_bp_lo'], N[s]['slope_0_to_bp_hi'], 1)}) & {N[s]['cold0_p']:.2f} \\\\" for s in ['west', 'east', 'loop', 'gir', 'city'])
+cold_rows = '\n'.join(f"{NAME[s]} & {N[s]['days_below_0']} & {sg(N[s]['slope_below0_pct'], 1)} ({rng(N[s]['slope_below0_lo'], N[s]['slope_below0_hi'], 1)}) & {sg(N[s]['slope_0_to_bp_pct'], 1)} ({rng(N[s]['slope_0_to_bp_lo'], N[s]['slope_0_to_bp_hi'], 1)}) & {N[s]['cold0_p']:.2f} \\\\" for s in ['west', 'loop', 'east', 'gir', 'city'])
 curve_rows = '\n'.join(f"{t:+d} & " + ' & '.join('--' if curve(s, t) is None else f'{curve(s, t):.0f}' for s in SER) + ' \\\\' for t in (-15, -10, -5, 0, 5, 10, 15, 20, 25)).replace('+', '').replace('-', '$-$')
 TERMS = [('rain_under2', 'Rain, under 2 mm'), ('rain_2to10', 'Rain, 2 to 10 mm'), ('rain_over10', 'Rain, over 10 mm'), ('snow_under2', 'Snowfall, under 2 cm'), ('snow_2to10', 'Snowfall, 2 cm or more'),
          ('snow_on_ground', 'Snow on the ground, 1 cm or more'), ('wind_per_10kmh', 'Wind, per 10 km/h'), ('snow_yesterday_per_cm', 'Snowfall the day before, per cm'), ('saturday', 'Saturday'), ('sunday_holiday', 'Sunday or holiday'), ('christmas_period', 'December 24 to January 2')]
@@ -57,7 +67,7 @@ lag_rows = '\n'.join(f"{k} & " + ' & '.join((lambda r: f'{sg(r.pct_per_5cm)} ({r
 load_rows = '\n'.join(f"{NAME[s]} & {N[s]['loading_sector']} & {N[s]['winter_days']:.0f} & {N[s]['winter_loading_days']:.0f} & {cell(s, 'loading_day', 'winter_lags')} & {cell(s, 'temp_per_degree', 'winter_lags')} \\\\" for s in TER)
 yr = lambda s, y: YR[(YR.series == s) & (YR.year == y)].iloc[0]
 yr_rows = '\n'.join(f"{NAME[r.series]} & {r.year.replace('-', '--')} against {r.reference.replace('-', '--')} & {int(r.days)} & {sg(r.pct)} ({rng(r.lo, r.hi)}) \\\\" for r in YR.itertuples() if not (r.series == 'city' and r.year == '2026-27'))
-cov_rows = '\n'.join(f"{r.month} & {r.west} & {r.east} & {r.loop} & {r.gir} & {r.bixi} & {r.city} \\\\" for r in COV.itertuples())
+cov_rows = '\n'.join(f"{r.month} & {r.west} & {r.loop} & {r.east} & {r.gir} & {r.bixi} & {r.city} \\\\" for r in COV.itertuples())
 he = lambda k: f"{-H[k]['pct']:.0f}\\,\\% ({-H[k]['hi']:.0f} to {-H[k]['lo']:.0f})"
 wspan = f"{100 * H['window_share_min']:.0f} to {100 * H['window_share_max']:.0f}"
 west, east, loop = N['west'], N['east'], N['loop']
@@ -65,6 +75,7 @@ cold_span = f"{min(N[s]['slope_cold_pct'] for s in TER):.0f} to {max(N[s]['slope
 w27 = yr('west', '2026-27'); w26 = yr('west', '2025-26'); e26 = yr('east', '2025-26'); c26 = yr('city', '2025-26')
 dchill = {s: N[s]['aic_temp'] - N[s]['aic_chill'] for s in SER}
 b26 = yr('bixi', '2025-26')
+LCT = tab('location_context'); LC = {r.series: r for r in LCT.itertuples()}; DK = tab('location_draper_over_king_edward'); LT = tab('location_tests'); LE = tab('location_effects')
 YS = tab('year_comparison_steps'); YS = YS[YS.common_dates >= 30]; YW = tab('year_comparison_weather')
 ys = lambda s_, y: YS[(YS.series == s_) & (YS.year == y)].iloc[0]; yw = lambda s_, y: YW[(YW.series == s_) & (YW.year == y)].iloc[0]
 st = lambda r, k: f"{sg(r[k + '_pct'])} ({rng(r[k + '_lo'], r[k + '_hi'])})"
@@ -80,22 +91,22 @@ SUMMARY_ITEMS = f"""\\item \\textbf{{Temperature.}} On the four Terrebonne count
 \\item \\textbf{{Season or weather?}} The two cannot be fully separated: {100 * min(BLK.loc[x, 'shared'] for x in TER):.0f} to {100 * max(BLK.loc[x, 'shared'] for x in TER):.0f}\\,\\% of the day-to-day variation on the Terrebonne series can be attributed to either. Weather effects estimated only from the variation inside each calendar month are nonetheless close to those estimated over the whole record.
 \\item \\textbf{{Darkness.}} On the loop counter, the same clock hour in the evening carries {he('dark_eve')} fewer bicycles when the sun has set than when it is up, at the same temperature and in the same month.
 \\item \\textbf{{Snow loading.}} On the days the City loaded snow in the sector that contains each counter, the counts are not distinguishable from other winter days once temperature and snow are accounted for; the intervals are wide ({min(N[x]['winter_loading_days'] for x in TER):.0f} to {max(N[x]['winter_loading_days'] for x in TER):.0f} loading days per series).
-\\item \\textbf{{Agreement.}} The two camera sensors, the loop counter, the BIXI station on the street and the City\\textquoteright{{}}s counters elsewhere respond to weather in the same direction and with similar size, although they count different things.
-\\item \\textbf{{Year to year.}} The weather of each year is part of the comparison: the model that estimates the difference between years also contains temperature, rain, snowfall, snow on the ground and wind, so a colder or snowier year is not mistaken for a decline. On that basis King Edward counted {yv(w26)} in its second counting year (from August~15, 2025) compared with its first, and {yv(w27)} from August~15 to November~8, 2026 compared with its first year. (compared plainly on the same dates, without the weather, {st(s1w, 'step1')}\\,\\% and {st(s1w3, 'step1')}\\,\\%; its second year was colder and much snowier than its first). Draper counted {yv(e26)} after its first year, the BIXI station {yv(b26)}, and the City\\textquoteright{{}}s counters elsewhere {yv(c26)}. The series do not move in one direction, Downtime is accounted for in these figures: only days with a complete, valid count enter, and each is compared with days of the same time of year, day type and weather, so a gap in one year is not counted as a decline. The comparisons remain limited for other reasons: two to three years of data, a camera sensor whose field of view can change when it is remounted, and a third year that so far holds a single autumn. A year term absorbs every difference between the years other than the weather."""
+\\item \\textbf{{By location.}} The counters stand at different points of the street, from King Edward at the west end ({LC['west'].km_to_downtown_reference:.1f}\\,km from downtown) to Girouard at the east end ({LC['gir'].km_to_downtown_reference:.1f}\\,km), and each is analysed as its own location; a difference between two of them is a difference between places, and between instruments, not a discrepancy. The response to temperature is similar along the street (from {N['west']['slope_cold_pct']:.1f}\\,\\% per degree at King Edward to {N['gir']['slope_cold_pct']:.1f}\\,\\% at Girouard); the effects of light rain, heavy rain, snow on the ground and the weekend do differ by location (tests in Section~\\ref{{sec:location}}). On the days both camera sensors were valid, Draper counted {DK.iloc[0].draper_over_king_edward:.2f} times what King Edward counted ({DK.iloc[0].lo:.2f} to {DK.iloc[0].hi:.2f}), the one comparison between two locations made with the same instrument.
+\\item \\textbf{{Year to year.}} The weather of each year is part of the comparison: the model that estimates the difference between years also contains temperature, rain, snowfall, snow on the ground and wind, so a colder or snowier year is not mistaken for a decline. On that basis King Edward counted {yv(w26)} in its second counting year (from August~15, 2025) compared with its first, and {yv(w27)} from August~15 to November~8, 2026 compared with its first year. (compared plainly on the same dates, without the weather, {st(s1w, 'step1')}\\,\\% and {st(s1w3, 'step1')}\\,\\%; its second year was colder and much snowier than its first). Draper counted {yv(e26)} after its first year, the BIXI station {yv(b26)}, and the City\\textquoteright{{}}s counters elsewhere {yv(c26)}. The year-to-year figures are specific to each location and are not expected to be the same along the street. Downtime is accounted for in these figures: only days with a complete, valid count enter, and each is compared with days of the same time of year, day type and weather, so a gap in one year is not counted as a decline. The comparisons remain limited for other reasons: two to three years of data, a camera sensor whose field of view can change when it is remounted, and a third year that so far holds a single autumn. A year term absorbs every difference between the years other than the weather."""
 
-ABSTRACT = f"""This note measures how the number of bicycles counted on rue de Terrebonne varies with the weather, with daylight and with snow, using every count series available for the street: two citizen-operated Telraam camera sensors (King Edward, {west['n_days']} valid days from {D(west['first'])}; Draper, {east['n_days']} days), the borough\\textquoteright{{}}s loop counter at Kensington ({loop['n_days']} days, eastbound, hourly release of June~4, 2026), the City\\textquoteright{{}}s detector at Girouard ({N['gir']['n_days']} days, westbound), trips at the BIXI station on the street, and, as a reference, twelve City counters elsewhere in Montréal. Weather is Environment and Climate Change Canada\\textquoteright{{}}s record at Montréal-Trudeau. Each series is modelled separately by negative binomial regression, so that every effect is a percentage and no levels are compared between series; the Telraam sensors, which count only in daylight, are analysed in a fixed window (08:00--16:00) that is daylight all year. The analysis accounts for sensor downtime: only days with a complete, valid count are used, no gap is filled in, and every comparison is between days of the same time of year, day type and weather, so that a period without data removes days from a comparison without being read as a drop in cycling. From one year to the next, with each year\\textquoteright{{}}s weather taken into account in the model (a colder or snowier year is compared with what that weather predicts), the series do not move in one direction (King Edward {yv(w27)} in the autumn of 2026 against its first year, Draper {yv(e26)} after its first year), and two to three years of data do not establish a trend. The note states what was measured, with intervals, and what the data cannot show. It makes no recommendation."""
+ABSTRACT = f"""This note measures how the number of bicycles counted on rue de Terrebonne varies with the weather, with daylight and with snow, using every count series available for the street: two citizen-operated Telraam camera sensors (King Edward, {west['n_days']} valid days from {D(west['first'])}; Draper, {east['n_days']} days), the borough\\textquoteright{{}}s loop counter at Kensington ({loop['n_days']} days, eastbound, hourly release of June~4, 2026), the City\\textquoteright{{}}s detector at Girouard ({N['gir']['n_days']} days, westbound), trips at the BIXI station on the street, and, as a reference, twelve City counters elsewhere in Montréal. Weather is Environment and Climate Change Canada\\textquoteright{{}}s record at Montréal-Trudeau. Each series is modelled separately by negative binomial regression, so that every effect is a percentage and no levels are compared between series; the Telraam sensors, which count only in daylight, are analysed in a fixed window (08:00--16:00) that is daylight all year. The analysis accounts for sensor downtime: only days with a complete, valid count are used, no gap is filled in, and every comparison is between days of the same time of year, day type and weather, so that a period without data removes days from a comparison without being read as a drop in cycling. From one year to the next, with each year\\textquoteright{{}}s weather taken into account in the model (a colder or snowier year is compared with what that weather predicts), the result depends on the location (King Edward, at the west end, {yv(w27)} in the autumn of 2026 against its first year; Draper, further east, {yv(e26)} after its first year), and two to three years of data do not establish a trend at either. Location is a parameter of every model: each counter is analysed as its own point on the street. The note states what was measured, with intervals, and what the data cannot show. It makes no recommendation."""
 
 LAY_WORDS = 300
 r0 = lambda term: span(term).replace('\\,\\%', '')
-LAY = f"""How much does weather change cycling on rue de Terrebonne? This note uses every count available: citizen-operated camera sensors at King Edward and Draper, the borough's counter at Kensington, the City's detector at Girouard, and trips at the BIXI station at Grand Boulevard, plus City counters elsewhere. Weather is from Trudeau airport; counts run August 2024 to November 2026.
+LAY = f"""How much does weather change cycling on rue de Terrebonne? This note uses every count available: citizen-operated camera sensors at King Edward and Draper, the borough's counter at Kensington, the City's detector at Girouard, and trips at the BIXI station at Grand Boulevard. Weather is from Trudeau airport; counts run August 2024 to November 2026.
 
-Temperature matters most. Each degree warmer brings {cold_span} per cent more bicycles, up to about 20 °C, where the numbers stop rising. A day at 0 °C sees {cspan(0)} per cent of the bicycles of the same day at 20 °C; a day at −10 °C, {cspan(-10)} per cent. There is no temperature below which cycling stops.
+Temperature matters most. Each degree warmer brings {cold_span} per cent more bicycles, up to about 20 °C, then levels off. A day at 0 °C sees {cspan(0)} per cent of the bicycles of the same day at 20 °C; a day at −10 °C, {cspan(-10)} per cent. There is no temperature below which cycling stops.
 
 A day with 2 to 10 mm of rain has {r0('rain_2to10')} per cent fewer bicycles than a dry day at the same temperature; snow on the ground goes with {span('snow_on_ground', ['west', 'east', 'loop']).replace(chr(92) + ',' + chr(92) + '%', '')} per cent fewer at three of the four counters. At the same evening hour and temperature, the borough's counter records {-H['dark_eve']['pct']:.0f} per cent fewer bicycles after sunset.
 
-Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. Snow-loading days look like other winter days, but are too few to be sure. Year to year, with weather set aside, the counters disagree: one camera counted {w27.pct:.0f} per cent more in autumn 2026 than in its first year, the other {-e26.pct:.0f} per cent fewer. The analysis accounts for sensor downtime (only complete days are used, compared like with like), but two to three years of counts cannot show whether cycling on the street is rising or falling.
+Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. Snow-loading days look like other winter days, but are too few to be sure. Year to year, with each year's weather accounted for, the result depends on the location: the west-end camera (King Edward) counted {w27.pct:.0f} per cent more in autumn 2026 than in its first year, the camera further east (Draper) {-e26.pct:.0f} per cent fewer. The analysis accounts for sensor downtime (only complete days, compared like with like), but two to three years of counts cannot show whether cycling on the street is rising or falling.
 
-Counters differ (the cameras count only in daylight), so only percentage changes are compared. The note makes no recommendation."""
+Counters differ in place and type; only percentage changes are compared. The note makes no recommendation."""
 n_lay = len(LAY.split()); assert n_lay <= LAY_WORDS, f'lay summary has {n_lay} words, limit {LAY_WORDS}'
 open(os.path.join(ROOT, 'derived', 'lay_abstract_en.txt'), 'w', encoding='utf-8').write('Lay summary\n\n' + LAY + '\n')
 print('lay summary:', n_lay, 'words')
@@ -104,7 +115,7 @@ LAY_TEX = '\n\n'.join(q.replace('%', '\\%').replace("'", '\\textquoteright{}').r
 NOTE = r'''\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
-\captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}
+\captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}\widowpenalty=10000\clubpenalty=10000\raggedbottom
 \newcommand{\docversion}{''' + STAMP + r'''}
 \begin{document}
 {\raggedright\LARGE\bfseries Weather, daylight, snow and bicycle traffic on rue de Terrebonne\par}\vspace{0.3em}
@@ -119,8 +130,8 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \begin{enumerate}
 ''' + SUMMARY_ITEMS + r'''
 \end{enumerate}
-''' + fig('overview', 'overview', 'Daytime temperature and the daily count of each series. Each panel has its own scale; the series are not compared in level.', 0.97) + r'''
-\clearpage\tableofcontents\clearpage
+''' + fig('overview', 'overview', 'Daytime temperature and the daily count of each series. Each panel has its own scale; the series are not compared in level.', 0.97, 'p') + r'''
+\tableofcontents\clearpage
 
 \section{Questions}
 \begin{enumerate}
@@ -129,7 +140,7 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \item What do rain, snowfall, snow on the ground and wind each add at a given temperature?
 \item How much of the seasonal swing can be attributed to weather, and how much to day length and the calendar?
 \item Does a snowfall depress the counts on the following days, and do the days on which the City loads snow differ from other winter days?
-\item Do the series agree?
+\item How do the responses differ from one location on the street to another?
 \item After weather is accounted for, does the count differ from one year to the next?
 \end{enumerate}
 
@@ -165,6 +176,8 @@ Environment and Climate Change Canada, station Montréal-Trudeau (climate ID 702
 
 \textbf{Season against weather.} Temperature, day length and the calendar move together over the year. Three devices are used: the deviance accounted for by calendar-and-season terms alone, by weather terms alone and by both; a model in which the season terms are replaced by one constant per calendar month, so that weather effects are estimated only from days of the same month; and, for the loop, an hourly model in which the same clock hour is sometimes light and sometimes dark.
 
+\textbf{Location.} The counters stand at different points of a street that runs from a more residential west end towards downtown, and they are not the same instruments. Location is therefore a parameter of every model: each counter has its own level and its own response to every condition, which is what fitting one model per counter means. A further model (Section~\ref{sec:location}) puts the four counters on the street together, with a location term and its interaction with every other term, to test whether each effect is the same at every location. A difference between two counters is read as a difference between places and instruments, never as one counter contradicting another.
+
 \textbf{Downtime and gaps.} The camera sensors have periods of downtime, some of them weeks long (Appendix~\ref{app:coverage}). The analysis accounts for them in three ways. A day enters only if its count is complete and valid (Section~2.1); a partial day is never used as if it were a low count. No missing day or hour is filled in or interpolated. And no total or average is taken across a gap: every estimate comes from a model in which a day is compared with days of the same time of year, day type and weather, so a period without data shortens the record without shifting the estimates. The same holds for the loop\textquoteright{}s excluded days and the Girouard detector\textquoteright{}s incomplete days.
 
 \textbf{What the models cannot show.} They describe association in the record, not what any person would do. They cannot separate temperature from other things that change with the season (school terms, holidays abroad, habits). Weather is measured at the airport. The loop\textquoteright{}s record covers one winter.
@@ -174,7 +187,7 @@ Environment and Climate Change Canada, station Montréal-Trudeau (climate ID 702
 Figure~\ref{fig:temperature_scatter} shows the raw relation. Figure~\ref{fig:temperature_curve} shows the fitted response with everything else held fixed, each series relative to its own level at 20\,$^\circ$C.
 ''' + fig('temperature-curve', 'temperature_curve', 'Fitted response to temperature (spline model), relative to 20\\,$^\\circ$C.', 0.85) + r'''
 \begin{center}\small\begin{tabular}{@{}rrrrrrr@{}}\toprule
-Daytime temperature ($^\circ$C) & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+Daytime temperature ($^\circ$C) & King Edward & Kensington loop & Draper & Girouard detector & BIXI station & City counters\\\midrule
 ''' + curve_rows + r'''
 \bottomrule\multicolumn{7}{@{}l}{\footnotesize Count relative to the same day at 20\,$^\circ$C (= 100), spline model. BIXI: regular season only.}\end{tabular}\end{center}
 
@@ -185,7 +198,7 @@ Series & Change of slope, $^\circ$C (bootstrap 95\,\%) & Below it: \% per degree
 \bottomrule\end{tabular}\end{center}
 On the four Terrebonne series each degree below the change of slope goes with ''' + cold_span + r'''\,\% more bicycles, and the estimate is the same when only days of the same calendar month are compared (last column). The BIXI station and the City counters show smaller slopes (''' + f"{N['bixi']['slope_cold_pct']:.1f} and {N['city']['slope_cold_pct']:.1f}" + r'''\,\%). Above the change of slope the count is flat or falls slightly.
 
-\textbf{Where the slope changes.} The lowest deviance is at ''' + ', '.join(f"{N[s]['bp']:g}" for s in TER) + r'''\,$^\circ$C for King Edward, Draper, the loop and the Girouard detector, but the bootstrap intervals are wide (Appendix~\ref{app:bp}): the response bends gradually, as the spline shows, rather than at a point. The spline and the two-segment line fit about equally well (Appendix~\ref{app:aic}); a single straight line on the log scale fits worse on every series.
+\textbf{Where the slope changes.} The lowest deviance is at ''' + ', '.join(f"{N[s]['bp']:g}" for s in TER) + r'''\,$^\circ$C for King Edward, the Kensington loop, Draper and the Girouard detector, but the bootstrap intervals are wide (Appendix~\ref{app:bp}): the response bends gradually, as the spline shows, rather than at a point. The spline and the two-segment line fit about equally well (Appendix~\ref{app:aic}); a single straight line on the log scale fits worse on every series.
 
 \textbf{Is there a second change in the cold?} Adding a change of slope at 0\,$^\circ$C to the model:
 \begin{center}\small\begin{tabular}{@{}lrp{3.6cm}p{3.6cm}r@{}}\toprule
@@ -200,12 +213,12 @@ The wind-chill index and the daytime temperature are almost the same variable ov
 \section{Rain, snow and wind}
 ''' + fig('effects', 'effects', 'Change in the daily count associated with each condition, temperature and time of year held fixed.', 0.92) + r'''
 \begin{center}\scriptsize\setlength{\tabcolsep}{3pt}\begin{tabular}{@{}lllllll@{}}\toprule
-Condition & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+Condition & King Edward & Kensington loop & Draper & Girouard detector & BIXI station & City counters\\\midrule
 ''' + eff_rows + r'''
 \bottomrule\multicolumn{7}{@{}p{16cm}}{\scriptsize Percentage change in the daily count (95\,\% interval), compared with a day without the condition (for the day types, with a weekday). --: fewer than five such days, or not applicable.}\end{tabular}\end{center}
 Number of days behind each estimate:
 \begin{center}\footnotesize\begin{tabular}{@{}p{4.6cm}rrrrrr@{}}\toprule
-Condition & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+Condition & King Edward & Kensington loop & Draper & Girouard detector & BIXI station & City counters\\\midrule
 ''' + days_rows + r'''
 \bottomrule\end{tabular}\end{center}
 Light rain (under 2\,mm in 24 hours) is not distinguishable from none on the camera sensors, which count 08:00--16:00; the two 24-hour counters on the street, the loop and the Girouard detector, show a reduction. Snow on the ground goes with a third to a half fewer bicycles at King Edward, Draper and Kensington and with no measurable change at the Girouard detector (''' + cell('gir', 'snow_on_ground') + r'''\,\%, 88 such days); the record does not say why the east end differs. The effects are multiplicative: on a January day that would see 20 bicycles in the window, 2 to 10\,mm of rain removes about four; on a June day that would see 300, about sixty. Snow on the ground carries the persistence of a snowfall: once it is in the model, the snowfall of the day before adds little.
@@ -228,7 +241,7 @@ Most of what the models account for can be credited to either set of terms: the 
 ''' + fig('snow-lags', 'snow_lags', 'Winter days: change in the count per 5\\,cm of snowfall on the day and on each of the seven days before.', 0.95) + r'''
 On winter days (November~16 to March~31), with temperature, rain, wind, day type and snow on the ground in the model:
 \begin{center}\footnotesize\scriptsize\begin{tabular}{@{}rllll@{}}\toprule
-Days after the snowfall & King Edward & Draper & Kensington loop & Girouard detector\\\midrule
+Days after the snowfall & King Edward & Kensington loop & Draper & Girouard detector\\\midrule
 ''' + lag_rows + r'''
 \bottomrule\multicolumn{5}{@{}l}{\footnotesize Percentage change per 5\,cm of snow (95\,\% interval).}\end{tabular}\end{center}
 The day of a snowfall shows the clearest reduction (''' + f"{min(-LAG[(LAG.lag_days == 0)].pct_per_5cm):.0f} to {max(-LAG[(LAG.lag_days == 0)].pct_per_5cm):.0f}" + r'''\,\% per 5\,cm; the interval excludes zero at ''' + ' and '.join(NAME[s] if s != 'gir' else 'the Girouard detector' for s in TER if LAG[(LAG.series == s) & (LAG.lag_days == 0)].hi.iloc[0] < 0) + r'''). On the following days the estimates scatter around zero and a few negative values, with wide intervals and no pattern common to the four series; winter counts are small (a few dozen a day), each series has ''' + f"{min(N[s]['winter_days'] for s in TER):.0f} to {max(N[s]['winter_days'] for s in TER):.0f}" + r''' winter days, and snow on the ground already carries part of the after-effect. An average over snowfall episodes was also computed (\texttt{snow\_episodes\_summary.csv}); with fewer than ten episodes of 10\,cm or more per series it is too noisy to read.
@@ -240,8 +253,30 @@ Series & Sector & Winter days & of which loading days & Loading day: change (\%)
 \bottomrule\end{tabular}\end{center}
 On the days the City loaded snow in the sector that contains the counter, the counts are not distinguishable from those of other winter days with the same temperature and snow. The intervals are wide enough to contain a reduction of a quarter or more as well as no change; the record does not settle the question. In winter alone, each degree goes with ''' + f"{min(eff(s, 'temp_per_degree', 'winter_lags').pct for s in TER):.0f} to {max(eff(s, 'temp_per_degree', 'winter_lags').pct for s in TER):.0f}" + r'''\,\% more bicycles on the four series.
 
-\section{Agreement between the series}
-The six series count different things with different instruments. Their relative responses agree in direction everywhere and broadly in size: the temperature curves of the four Terrebonne series lie close to one another (Figure~\ref{fig:temperature_curve}); the rain and snow effects overlap (Figure~\ref{fig:effects}). The differences that stand out: the BIXI station and the City counters respond less steeply to temperature than the Terrebonne counters; the two 24-hour counters on the street (the loop and the Girouard detector) show a weekend reduction of a fifth to a third that the camera sensors, counting 08:00--16:00, do not show, and respond to light rain where the camera sensors do not; and snow on the ground shows no effect at the Girouard detector. The first may reflect who rides where; the second and third are what one would expect from the difference between a 24-hour count and a daytime window; the last is unexplained. None of this was tested formally: the series cover different periods.
+\section{Location: what differs along the street}\label{sec:location}
+The counters do not measure the same thing at the same place, and none of the differences between them is a discrepancy. The street runs from a more residential west end towards downtown; a counter further east can be expected to see more through traffic and more commuters, and the resident population around the counters also differs:
+\begin{center}\footnotesize\resizebox{\textwidth}{!}{\begin{tabular}{@{}lrrrrll@{}}\toprule
+Counter (west to east) & From the west end (km) & To downtown (km) & Residents within 500\,m & Residents per km$^2$ & Motor traffic & Instrument\\\midrule
+''' + '\n'.join(f"{NAME.get(r.series, r.location)} & {r.km_from_lane_west_end:.2f} & {r.km_to_downtown_reference:.1f} & {r.residents_within_500m_2021:,} & {r.residents_per_km2_within_500m:,} & one-way {r.motor_traffic_one_way} & {INSTR[r.series]} \\\\" for r in LCT.itertuples()) + r'''
+\bottomrule\multicolumn{7}{@{}p{16cm}}{\footnotesize Distances in a straight line, the first from the west end of the lane; downtown reference point: avenue McGill College at rue Sainte-Catherine Ouest. Residents: 2021 Census, dissemination areas, weighted by the share of each area within 500\,m of the counter (Statistics Canada).}\end{tabular}}\end{center}
+\textbf{What location can and cannot be adjusted for.} Each counter is its own location in every model of this note, with its own level and its own responses. An adjustment for « centrality » as such, a coefficient for distance to downtown or for population density, cannot be estimated from this record: there are four counters on the street, of three different kinds (two camera sensors read over eight daytime hours in both directions, one loop and one detector counting 24 hours in one direction each), so position and instrument cannot be told apart, and four points do not determine a gradient. The table above gives the context in which each counter\textquoteright{}s figures are to be read.
+
+\textbf{The one like-for-like comparison of two locations.} The two camera sensors are the same instrument, read in the same window. On the days valid at both:
+\begin{center}\small\resizebox{\textwidth}{!}{\begin{tabular}{@{}lrrrl@{}}\toprule
+Days & Number & King Edward, mean a day & Draper, mean a day & Draper over King Edward (95\,\% interval)\\\midrule
+''' + '\n'.join(f"{r.days.replace('–', '--')} & {r.n_days} & {r.king_edward_mean:.0f} & {r.draper_mean:.0f} & {r.draper_over_king_edward:.2f} ({r.lo:.2f} to {r.hi:.2f}) \\\\" for r in DK.itertuples()) + r'''
+\bottomrule\end{tabular}}\end{center}
+Draper, 1.4\,km further east, counts about a fifth more than King Edward in the same eight hours, and proportionately more in winter (the winter interval is wide). This is a difference between two places on the street.
+
+\textbf{Do the effects differ by location?} A single model of the four counters on the street (''' + f"{int(LT.n_days.iloc[0]):,}" + r''' counter-days), with a location term and its interaction with every other term, and standard errors clustered by date because the counters share each day\textquoteright{}s weather, tests whether each effect is the same at the four locations:
+\begin{center}\small\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+ & \multicolumn{4}{c}{Effect at each location (\%)} & \multicolumn{3}{c}{Same at all four?}\\\cmidrule(lr){2-5}\cmidrule(l){6-8}
+Term & King Edward & Kensington & Draper & Girouard & $\chi^2$ & df & $p$\\\midrule
+''' + '\n'.join(loc_row(r) for r in LT.itertuples()) + r'''
+\bottomrule\multicolumn{8}{@{}p{15.5cm}}{\footnotesize Change of slope fixed at 20\,$^\circ$C in this model so that the slopes are comparable. A small $p$ means the effect differs by location.}\end{tabular}\end{center}
+The response to temperature below 20\,$^\circ$C is close along the street, a little steeper at the west end than at the east end (''' + f"{LEv('temperature below 20 °C (per degree)', 'west'):.1f} against {LEv('temperature below 20 °C (per degree)', 'gir'):.1f}" + r'''\,\% per degree; the test is borderline). The effects that clearly differ are those of the weekend, of light and heavy rain, and of snow on the ground. The weekend and light-rain differences follow the instrument: the two 24-hour counters (the loop and the Girouard detector) show them and the two camera sensors, read 08:00--16:00, do not. Snow on the ground goes with a large reduction at King Edward, Kensington and Draper and with none at Girouard, at the east end. The record cannot say how much of any of this is the place and how much the instrument.
+
+The BIXI station and the City\textquoteright{}s counters elsewhere respond less steeply to temperature than the counters on the street; they are different quantities again (trips at a dock; a sum of counters on other streets) and are shown for context.
 
 \section{Year to year, after weather}
 \textbf{Is the weather of each year allowed for?} Yes. The year term is estimated in the same model as temperature, rain, snowfall, snow on the ground and wind. A year that was colder, wetter or snowier is therefore compared with what the model expects for that weather, not with the raw count of a milder year. To make the part played by the weather visible, the comparison is shown here in three steps:
@@ -255,11 +290,11 @@ Series & Counting years & Dates in both & 1. Plain, same dates (\%) & 2. Season 
 ''' + ystep_rows + r'''
 \bottomrule\multicolumn{6}{@{}p{15.5cm}}{\footnotesize Counting years run from August 15. 95\,\% intervals: step 1, bootstrap over 14-day blocks of dates; steps 2 and 3, autocorrelation-robust. Comparisons with fewer than 30 dates in both years are not shown.}\end{tabular}\end{center}
 How the weather differed, on the dates both years have (first year / later year):
-\begin{center}\footnotesize\begin{tabular}{@{}lrrrrr@{}}\toprule
+\begin{center}\footnotesize\resizebox{\textwidth}{!}{\begin{tabular}{@{}lrrrrr@{}}\toprule
 Comparison & Daytime temp. ($^\circ$C) & Days below $-$10\,$^\circ$C & Snowfall (cm) & Days, snow on ground & Rain (mm)\\\midrule
 ''' + yweather_rows + r'''
-\bottomrule\end{tabular}\end{center}
-The weather matters to the answer. On the dates King Edward has in both of its first two years, the second year was colder (''' + f"{wxw.daytime_temp_mean_year:.1f} against {wxw.daytime_temp_mean_ref:.1f}" + r'''\,$^\circ$C by day) and much snowier (''' + f"{wxw.snowfall_cm_year:.0f} against {wxw.snowfall_cm_ref:.0f}\,cm of snow, {wxw.snow_on_ground_days_year:.0f} against {wxw.snow_on_ground_days_ref:.0f}" + r''' days with snow on the ground). Compared plainly, the second year is ''' + st(s1w, 'step1') + r'''\,\%; with the time of year alone, ''' + st(s1w, 'step2') + r'''\,\%; once the weather is in the model, ''' + st(s1w, 'step3') + r'''\,\%: what looked like a lower second year is accounted for by a harder winter. At Draper the difference narrows with the weather but remains (''' + st(s1e, 'step2') + r''' to ''' + st(s1e, 'step3') + r'''\,\%). King Edward\textquoteright{}s autumn of 2026 is higher than its autumn of 2024 at every step (''' + st(s1w3, 'step1') + r'''\,\% plainly, ''' + st(s1w3, 'step3') + r'''\,\% with the weather); the two autumns were close in temperature (''' + f"{yw('west', '2026-27').daytime_temp_mean_year:.1f} against {yw('west', '2026-27').daytime_temp_mean_ref:.1f}" + r'''\,$^\circ$C by day) and the autumn of 2026 had more rain (''' + f"{yw('west', '2026-27').rain_mm_year:.0f} against {yw('west', '2026-27').rain_mm_ref:.0f}" + r'''\,mm).
+\bottomrule\end{tabular}}\end{center}
+The weather matters to the answer. On the dates King Edward has in both of its first two years, the second year was colder (''' + f"{wxw.daytime_temp_mean_year:.1f} against {wxw.daytime_temp_mean_ref:.1f}" + r'''\,$^\circ$C by day) and much snowier (''' + f"{wxw.snowfall_cm_year:.0f} against {wxw.snowfall_cm_ref:.0f}\\,cm of snow, {wxw.snow_on_ground_days_year:.0f} against {wxw.snow_on_ground_days_ref:.0f}" + r''' days with snow on the ground). Compared plainly, the second year is ''' + st(s1w, 'step1') + r'''\,\%; with the time of year alone, ''' + st(s1w, 'step2') + r'''\,\%; once the weather is in the model, ''' + st(s1w, 'step3') + r'''\,\%: what looked like a lower second year is accounted for by a harder winter. At Draper the difference narrows with the weather but remains (''' + st(s1e, 'step2') + r''' to ''' + st(s1e, 'step3') + r'''\,\%). King Edward\textquoteright{}s autumn of 2026 is higher than its autumn of 2024 at every step (''' + st(s1w3, 'step1') + r'''\,\% plainly, ''' + st(s1w3, 'step3') + r'''\,\% with the weather); the two autumns were close in temperature (''' + f"{yw('west', '2026-27').daytime_temp_mean_year:.1f} against {yw('west', '2026-27').daytime_temp_mean_ref:.1f}" + r'''\,$^\circ$C by day) and the autumn of 2026 had more rain (''' + f"{yw('west', '2026-27').rain_mm_year:.0f} against {yw('west', '2026-27').rain_mm_ref:.0f}" + r'''\,mm).
 
 The adjustment has its own limits: it assumes that riders respond to a given temperature or snowfall in the same way each year, the weather is measured at the airport, and the state of the lane itself (cleared or not) is not observed.
 
@@ -294,7 +329,7 @@ The typical day is predicted to within about a fifth to a quarter of its count, 
 \appendix
 \section{Valid days by month}\label{app:coverage}
 \begin{center}\footnotesize\begin{tabular}{@{}lrrrrrr@{}}\toprule
-Month & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+Month & King Edward & Kensington loop & Draper & Girouard detector & BIXI station & City counters\\\midrule
 ''' + cov_rows + r'''
 \bottomrule\multicolumn{7}{@{}p{12cm}}{\footnotesize Loop: days valid in the daily table (both directions); the models use the eastbound channel, to May~10, 2026. BIXI: days with at least one trip.}\end{tabular}\end{center}
 
@@ -374,6 +409,15 @@ Series & Sector & Winter days & Loading days & Change on a loading day (\%)\\\mi
 \begin{itemize}
 \item With temperature, snowfall, snow on the ground, rain, wind and day type in the model, loading days are not distinguishable from other winter days.
 \item The intervals are wide: they contain no change and a reduction of a quarter or more. The record does not settle the question.
+\end{itemize}''') + fr('Location is a parameter: the counters stand at different points of the street', r'''\begin{center}\resizebox{0.92\textwidth}{!}{\begin{tabular}{lrrrl}\toprule
+Counter (west to east) & To downtown (km) & Residents within 500\,m & Residents per km$^2$ & Instrument\\\midrule
+''' + '\n'.join(f"{NAME.get(r.series, r.location)} & {r.km_to_downtown_reference:.1f} & {r.residents_within_500m_2021:,} & {r.residents_per_km2_within_500m:,} & {INSTR[r.series]} \\\\" for r in LCT.itertuples()) + r'''
+\bottomrule\end{tabular}}\end{center}
+\begin{itemize}
+\item Each counter is analysed as its own location. A difference between two counters is a difference between places and instruments, not a discrepancy.
+\item Like for like (the two camera sensors, same window, same days): Draper counts ''' + f"{DK.iloc[0].draper_over_king_edward:.2f} times King Edward ({DK.iloc[0].lo:.2f} to {DK.iloc[0].hi:.2f})" + r'''.
+\item Tested in one model of the four counters: the response to temperature is close along the street; the effects of the weekend, rain and snow on the ground differ by location.
+\item A coefficient for « centrality » cannot be estimated: four counters of three kinds.
 \end{itemize}''') + fr('Year to year: is the weather allowed for?', r'''\begin{itemize}
 \item Yes: the year term is estimated in the same model as temperature, rain, snowfall, snow on the ground and wind. Downtime is accounted for (only valid days; like compared with like).
 \end{itemize}
@@ -383,7 +427,7 @@ Series & Years & Dates in both & 1. Plain, same dates (\%) & 2. Season only (\%)
 \bottomrule\end{tabular}}\end{center}
 \begin{itemize}
 \item King Edward\textquoteright{}s second year was colder and much snowier than its first (''' + f"{wxw.snowfall_cm_year:.0f} against {wxw.snowfall_cm_ref:.0f}" + r'''\,cm of snow on the common dates): the apparent drop disappears once the weather is in the model.
-\item The series do not move in one direction; two to three years do not establish a trend.
+\item The result is specific to each location (King Edward at the west end, Draper further east); two to three years do not establish a trend at either.
 \end{itemize}''') + fr('How well the models predict', r'''\begin{center}\small\begin{tabular}{lrrrrr}\toprule
  & & \multicolumn{2}{c}{Median absolute error (\%)} & \multicolumn{2}{c}{$R^2$ (log scale)}\\
 Series & Days & Fitted & Month left out & Fitted & Month left out\\\midrule

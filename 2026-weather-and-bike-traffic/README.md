@@ -6,7 +6,7 @@ How the daily number of bicycles counted on rue de Terrebonne varies with temper
 
 ## The count series
 
-The series are never added together and never compared in level: they count different things at different places. What they can share is a relative response (a percentage change).
+The series are never added together and never compared in level: they count different things at different places. **Location is a parameter of every model**: each counter is analysed as its own point on a street that runs from a more residential west end towards downtown, and a difference between two counters is a difference between places and instruments, never a disagreement. What they can share is a relative response (a percentage change).
 
 | Series | What is counted | Period used | Source |
 |---|---|---|---|
@@ -38,6 +38,8 @@ Limits of each series, stated once here and again in the note:
 | [`scripts/build_dataset.py`](scripts/build_dataset.py) → `derived/daily_<series>.csv`, [`derived/weather_daily.csv`](derived/weather_daily.csv), [`derived/tables/coverage_by_month.csv`](derived/tables/coverage_by_month.csv) | One table per series: the day's count and validity flags, weather, calendar, day length, snow loading (sectors CDN-301 and CDN-111, and the borough), lagged snowfall |
 | [`scripts/models.py`](scripts/models.py) → [`derived/tables/`](derived/tables/), [`derived/numbers.json`](derived/numbers.json) | Every model and every table (list below) |
 | [`scripts/year_comparison.py`](scripts/year_comparison.py) → [`derived/tables/year_comparison_steps.csv`](derived/tables/year_comparison_steps.csv), [`year_comparison_weather.csv`](derived/tables/year_comparison_weather.csv) | The year-to-year comparison in three steps (the same calendar dates valid in both years, no model; a model with day type and time of year; the main model with the weather), and how the weather differed between the years on those dates |
+| [`scripts/location_context.py`](scripts/location_context.py) → [`derived/tables/location_context.csv`](derived/tables/location_context.csv) | Where each counter stands: distance from the lane's west end and to downtown, residents within 500 m (2021 Census, dissemination areas; run with `/opt/local/bin/python3.13`, needs geopandas) |
+| [`scripts/location_model.py`](scripts/location_model.py) → [`derived/tables/location_tests.csv`](derived/tables/location_tests.csv), [`location_effects.csv`](derived/tables/location_effects.csv), [`location_draper_over_king_edward.csv`](derived/tables/location_draper_over_king_edward.csv) | Location as a parameter: one model of the four counters on the street with a location term and its interaction with every other term, tests of whether each effect is the same at every location, and the like-for-like ratio of the two camera sensors |
 | `derived/figures/<type>/` | One folder per figure type, the script beside its PNG and SVG, English and French: `overview`, `temperature-scatter`, `temperature-curve`, `effects`, `season-weather`, `daylight`, `snow-lags`, `breakpoint` |
 | [`scripts/build_docs.py`](scripts/build_docs.py) → [`docs/`](docs/) | The note (with a lay summary of at most 300 words, also written to [`derived/lay_abstract_en.txt`](derived/lay_abstract_en.txt)) and the slide deck (English), built from `numbers.json` and the tables |
 
@@ -58,6 +60,8 @@ The earlier MATLAB analyses of the Telraam counts (2024–2026) were read before
 ~/.venvs/omd/bin/python scripts/build_dataset.py         # needs the sibling clones Terrebonne-telraam (with data/api/) and Terrebonne-access-requests
 ~/.venvs/omd/bin/python scripts/models.py --boot=300
 ~/.venvs/omd/bin/python scripts/year_comparison.py
+~/.venvs/omd/bin/python scripts/location_model.py
+/opt/local/bin/python3.13 scripts/location_context.py      # needs the 2021 Census files in ~/Terrebonne-data/third-party/statcan-census-2021/
 for f in derived/figures/*/*.py; do ~/.venvs/omd/bin/python "$f"; done
 ~/.venvs/omd/bin/python scripts/build_docs.py
 ```
@@ -73,6 +77,7 @@ Python 3 with pandas, numpy, scipy, statsmodels, matplotlib and openpyxl; pdflat
 | Borough loop counter, Kensington | Access requests 2026-300 and 2026-581, [Terrebonne-access-requests](https://github.com/OpenMobilityData/Terrebonne-access-requests) | Released under the Act respecting access to documents held by public bodies |
 | City snow-removal transactions (`loading_daily.csv`) | City of Montréal open data, via Terrebonne-access-requests `2026-300/derived/` | CC BY 4.0, Ville de Montréal |
 | City permanent bicycle counters, including the detector at Girouard | [donnees.montreal.ca](https://donnees.montreal.ca/dataset/cyclistes), loop-counter files of November 7, 2026 and detector files of October 16, 2026 | CC BY 4.0, Ville de Montréal |
+| Statistics Canada, 2021 Census: dissemination-area boundaries and Census Profile 98-401-X2021006 | [statcan.gc.ca](https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm) | Statistics Canada Open Licence; files not redistributed, only the residents-within-500-m figures |
 | BIXI trip history, 2024–2026 | [bixi.com/en/open-data](https://bixi.com/en/open-data/), downloaded November 10, 2026 (the 2026 file was last modified September 29, 2026 and runs to August 31) | The City's portal lists the dataset under CC BY 4.0: « la paternité des données doit être attribuée à BIXI Montréal ». BIXI's own page states no licence. The yearly files are not redistributed here; the daily totals are, attributed to BIXI Montréal |
 
 The author's own work in this folder (text, figures, tables, method) is under CC BY 4.0 and the scripts under the MIT licence, as in the rest of the repository; neither covers the third parties' data.

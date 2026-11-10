@@ -9,7 +9,7 @@ plt = L.fig_setup(); T = L.TABLES
 p = pd.read_csv(os.path.join(T, 'breakpoint_profile.csv'))
 for lang in ('en', 'fr'):
     fig, ax = plt.subplots(figsize=(8.2, 4.2)); L.style_axes(ax)
-    for s in ['west', 'east', 'loop', 'gir', 'bixi', 'city']:
+    for s in ['west', 'loop', 'east', 'gir', 'bixi', 'city']:
         d = p[p.series == s]; ax.plot(d.breakpoint, d.delta, color=L.SERIES[s][2], lw=2, label=L.SHORT[lang][s])
         m = d.loc[d.delta.idxmin()]; ax.plot(m.breakpoint, 0, 'o', color=L.SERIES[s][2], ms=7, mec='white', mew=1)
     ax.axhline(3.84, color=L.MUTED, lw=0.8, ls=(0, (4, 3))); ax.text(26.2, 3.84, '3.84' if lang == 'en' else '3,84', fontsize=7.5, color=L.MUTED, va='center')

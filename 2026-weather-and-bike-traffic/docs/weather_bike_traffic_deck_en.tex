@@ -70,13 +70,29 @@
 \begin{center}\small\begin{tabular}{llrrl}\toprule
 Series & Sector & Winter days & Loading days & Change on a loading day (\%)\\\midrule
 King Edward & CDN-301 & 191 & 44 & $-$4 ($-$29 to +30) \\
-Draper & CDN-111 & 154 & 34 & $-$18 ($-$45 to +22) \\
 Kensington loop & CDN-301 & 132 & 36 & +2 ($-$25 to +39) \\
+Draper & CDN-111 & 154 & 34 & $-$18 ($-$45 to +22) \\
 Girouard detector & CDN-111 & 109 & 18 & $-$9 ($-$25 to +11) \\
 \bottomrule\end{tabular}\end{center}
 \begin{itemize}
 \item With temperature, snowfall, snow on the ground, rain, wind and day type in the model, loading days are not distinguishable from other winter days.
 \item The intervals are wide: they contain no change and a reduction of a quarter or more. The record does not settle the question.
+\end{itemize}
+\end{frame}
+\begin{frame}{Location is a parameter: the counters stand at different points of the street}
+\begin{center}\resizebox{0.92\textwidth}{!}{\begin{tabular}{lrrrl}\toprule
+Counter (west to east) & To downtown (km) & Residents within 500\,m & Residents per km$^2$ & Instrument\\\midrule
+King Edward & 6.7 & 6,130 & 7,800 & camera sensor, 08:00--16:00 \\
+Kensington loop & 5.9 & 5,760 & 7,300 & loop, 24 h \\
+BIXI station & 5.9 & 5,730 & 7,300 & bike-share dock \\
+Draper & 5.4 & 6,890 & 8,800 & camera sensor, 08:00--16:00 \\
+Girouard detector & 4.9 & 9,320 & 11,900 & detector, 24 h \\
+\bottomrule\end{tabular}}\end{center}
+\begin{itemize}
+\item Each counter is analysed as its own location. A difference between two counters is a difference between places and instruments, not a discrepancy.
+\item Like for like (the two camera sensors, same window, same days): Draper counts 1.22 times King Edward (1.16 to 1.29).
+\item Tested in one model of the four counters: the response to temperature is close along the street; the effects of the weekend, rain and snow on the ground differ by location.
+\item A coefficient for « centrality » cannot be estimated: four counters of three kinds.
 \end{itemize}
 \end{frame}
 \begin{frame}{Year to year: is the weather allowed for?}
@@ -92,7 +108,7 @@ City counters & 2025--26 against 2024--25 & 213 & $-$8 ($-$16 to +1) & $-$10 ($-
 \bottomrule\end{tabular}}\end{center}
 \begin{itemize}
 \item King Edward\textquoteright{}s second year was colder and much snowier than its first (135 against 55\,cm of snow on the common dates): the apparent drop disappears once the weather is in the model.
-\item The series do not move in one direction; two to three years do not establish a trend.
+\item The result is specific to each location (King Edward at the west end, Draper further east); two to three years do not establish a trend at either.
 \end{itemize}
 \end{frame}
 \begin{frame}{How well the models predict}
@@ -100,8 +116,8 @@ City counters & 2025--26 against 2024--25 & 213 & $-$8 ($-$16 to +1) & $-$10 ($-
  & & \multicolumn{2}{c}{Median absolute error (\%)} & \multicolumn{2}{c}{$R^2$ (log scale)}\\
 Series & Days & Fitted & Month left out & Fitted & Month left out\\\midrule
 King Edward & 691 & 22 & 23 & 0.84 & 0.82 \\
-Draper & 505 & 19 & 20 & 0.88 & 0.86 \\
 Kensington loop & 284 & 20 & 25 & 0.92 & 0.87 \\
+Draper & 505 & 19 & 20 & 0.88 & 0.86 \\
 Girouard detector & 296 & 13 & 14 & 0.92 & 0.90 \\
 BIXI station & 441 & 15 & 17 & 0.59 & 0.50 \\
 City counters & 661 & 15 & 18 & 0.94 & 0.93 \\

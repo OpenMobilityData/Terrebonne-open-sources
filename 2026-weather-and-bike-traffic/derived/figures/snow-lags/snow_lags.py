@@ -9,7 +9,7 @@ plt = L.fig_setup(); T = L.TABLES
 g = pd.read_csv(os.path.join(T, 'snow_lags_winter.csv'))
 for lang in ('en', 'fr'):
     fig, axes = plt.subplots(1, 4, figsize=(9.6, 3.1), sharey=True, gridspec_kw={'wspace': 0.08})
-    for ax, s in zip(axes, ['west', 'east', 'loop', 'gir']):
+    for ax, s in zip(axes, ['west', 'loop', 'east', 'gir']):
         d = g[g.series == s]; L.style_axes(ax); ax.grid(axis='x', visible=False); col = L.SERIES[s][2]
         ax.axhline(0, color=L.INK, lw=0.8); ax.vlines(d.lag_days, d.lo, d.hi, color=col, lw=1.6); ax.plot(d.lag_days, d.pct_per_5cm, 'o', color=col, ms=6, mec='white', mew=0.8)
         ax.set_title(L.SHORT[lang][s], loc='left'); ax.set_xticks(range(8)); ax.set_xlabel(L.tr(lang, 'Days after the snowfall', 'Jours après la neige'))

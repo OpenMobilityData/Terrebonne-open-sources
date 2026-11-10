@@ -1,0 +1,6 @@
+series,location,latitude,longitude,km_from_lane_west_end,km_to_downtown_reference,motor_traffic_one_way,snow_sector_2025_26,borough_district,residents_within_500m_2021,residents_per_km2_within_500m,dissemination_areas_touched
+west,King Edward,45.46354,-73.63784,0.48,6.7,westbound,CDN-301,Loyola,6130,7800,18
+loop,Kensington loop,45.47022,-73.63204,1.35,5.9,eastbound,CDN-301,Notre-Dame-de-Grâce,5760,7300,21
+bixi,BIXI station (Grand Boulevard),45.47054,-73.63166,1.4,5.9,eastbound,CDN-301,Notre-Dame-de-Grâce,5730,7300,18
+east,Draper,45.47405,-73.62872,1.85,5.4,eastbound,CDN-111,Notre-Dame-de-Grâce,6890,8800,22
+gir,Girouard detector,45.47833,-73.62487,2.41,4.9,eastbound,CDN-111,Notre-Dame-de-Grâce,9320,11900,26

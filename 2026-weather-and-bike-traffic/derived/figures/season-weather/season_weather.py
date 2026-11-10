@@ -8,7 +8,7 @@ import wx_lib as L, pandas as pd, numpy as np
 plt = L.fig_setup(); T = L.TABLES
 b = pd.read_csv(os.path.join(T, 'deviance_blocks.csv')).set_index('series')
 PARTS = [('shared', '#8a949b', 'Either set of terms (shared)', 'L’un ou l’autre ensemble (commun)'), ('unique_weather', '#2a78d6', 'Weather only', 'Météo seulement'), ('unique_calendar_season', '#eb6834', 'Calendar and season only', 'Calendrier et saison seulement')]
-ORDER = ['west', 'east', 'loop', 'gir', 'bixi', 'city']
+ORDER = ['west', 'loop', 'east', 'gir', 'bixi', 'city']
 for lang in ('en', 'fr'):
     fig, ax = plt.subplots(figsize=(8.2, 4.1)); L.style_axes(ax); ax.grid(axis='y', visible=False)
     for i, s in enumerate(ORDER):

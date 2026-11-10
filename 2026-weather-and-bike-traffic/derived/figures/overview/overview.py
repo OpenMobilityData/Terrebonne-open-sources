@@ -7,7 +7,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, os.path.jo
 import wx_lib as L, pandas as pd, numpy as np
 plt = L.fig_setup()
 wx = pd.read_csv(os.path.join(L.DERIVED, 'weather_daily.csv'), parse_dates=['date']).set_index('date')
-ORDER = ['west', 'east', 'loop', 'gir', 'bixi', 'city']
+ORDER = ['west', 'loop', 'east', 'gir', 'bixi', 'city']
 for lang in ('en', 'fr'):
     fig, axes = plt.subplots(7, 1, figsize=(9.2, 11.6), sharex=True, gridspec_kw={'height_ratios': [1.1, 1, 1, 1, 1, 1, 1], 'hspace': 0.46})
     lo, hi = pd.Timestamp('2024-08-01'), wx.index.max()

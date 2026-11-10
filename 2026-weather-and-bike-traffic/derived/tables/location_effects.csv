@@ -1,0 +1,45 @@
+term,series,pct,lo,hi
+temperature below 20 °C (per degree),west,6.14,5.12,7.16
+temperature below 20 °C (per degree),loop,5.48,4.3,6.67
+temperature below 20 °C (per degree),east,5.41,4.43,6.39
+temperature below 20 °C (per degree),gir,4.14,3.19,5.09
+temperature above 20 °C (per degree),west,0.42,-1.36,2.23
+temperature above 20 °C (per degree),loop,-1.16,-3.42,1.15
+temperature above 20 °C (per degree),east,-0.56,-2.1,1.0
+temperature above 20 °C (per degree),gir,-0.0,-1.59,1.61
+"rain, under 2 mm",west,-5.87,-13.94,2.95
+"rain, under 2 mm",loop,-22.54,-33.26,-10.09
+"rain, under 2 mm",east,-0.66,-7.79,7.01
+"rain, under 2 mm",gir,-16.44,-22.79,-9.57
+"rain, 2 to 10 mm",west,-21.97,-29.1,-14.13
+"rain, 2 to 10 mm",loop,-21.89,-33.12,-8.76
+"rain, 2 to 10 mm",east,-14.43,-22.1,-6.01
+"rain, 2 to 10 mm",gir,-15.68,-21.29,-9.67
+"rain, over 10 mm",west,-39.58,-47.35,-30.67
+"rain, over 10 mm",loop,-45.67,-55.97,-32.96
+"rain, over 10 mm",east,-25.0,-33.37,-15.58
+"rain, over 10 mm",gir,-31.36,-38.55,-23.34
+"snowfall, under 2 cm",west,-26.46,-40.03,-9.81
+"snowfall, under 2 cm",loop,-7.63,-21.72,9.01
+"snowfall, under 2 cm",east,-9.18,-24.84,9.75
+"snowfall, under 2 cm",gir,-11.83,-20.7,-1.97
+"snowfall, 2 cm or more",west,-36.02,-53.21,-12.51
+"snowfall, 2 cm or more",loop,-18.19,-35.0,2.97
+"snowfall, 2 cm or more",east,-23.14,-39.23,-2.79
+"snowfall, 2 cm or more",gir,-25.81,-35.02,-15.29
+snow on the ground,west,-46.55,-58.91,-30.47
+snow on the ground,loop,-31.47,-45.87,-13.24
+snow on the ground,east,-38.04,-50.21,-22.9
+snow on the ground,gir,-4.2,-17.38,11.08
+wind (per 10 km/h),west,-6.55,-10.92,-1.96
+wind (per 10 km/h),loop,-2.89,-9.61,4.34
+wind (per 10 km/h),east,-1.38,-6.2,3.68
+wind (per 10 km/h),gir,-2.78,-6.04,0.58
+Saturday,west,-8.02,-15.98,0.69
+Saturday,loop,-33.26,-41.62,-23.7
+Saturday,east,-0.99,-10.13,9.08
+Saturday,gir,-23.33,-28.55,-17.73
+Sunday or holiday,west,-1.59,-9.35,6.83
+Sunday or holiday,loop,-32.26,-39.48,-24.18
+Sunday or holiday,east,6.37,-2.59,16.14
+Sunday or holiday,gir,-30.27,-34.86,-25.36
