@@ -76,6 +76,22 @@ SUMMARY_ITEMS = f"""\\item \\textbf{{Temperature.}} On the three Terrebonne coun
 
 ABSTRACT = f"""This note measures how the number of bicycles counted on rue de Terrebonne varies with the weather, with daylight and with snow, using every count series available for the street: the author\\textquoteright{{}}s two Telraam camera sensors (King Edward, {west['n_days']} valid days from {D(west['first'])}; Draper, {east['n_days']} days), the borough\\textquoteright{{}}s loop counter at Kensington ({loop['n_days']} days, eastbound, hourly release of June~4, 2026), trips at the BIXI station on the street, and, as a reference, twelve City counters elsewhere in Montréal. Weather is Environment and Climate Change Canada\\textquoteright{{}}s record at Montréal-Trudeau. Each series is modelled separately by negative binomial regression, so that every effect is a percentage and no levels are compared between series; the Telraam sensors, which count only in daylight, are analysed in a fixed window (08:00--16:00) that is daylight all year. The note states what was measured, with intervals, and what the data cannot show. It makes no recommendation."""
 
+LAY_WORDS = 300
+r0 = lambda term: span(term).replace('\\,\\%', '')
+LAY = f"""How much does the weather change cycling on rue de Terrebonne? This note uses every count available for the street: the author's two camera sensors at King Edward and Draper, the borough's counter at Kensington, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere in Montréal for comparison. Weather is Environment Canada's record at Trudeau airport; the counts run from August 2024 to November 2026.
+
+Temperature matters most. Each degree warmer brings about {cold_span} per cent more bicycles, up to about 20 °C, where the numbers stop rising. A day at 0 °C sees {cspan(0)} per cent of the bicycles of the same day at 20 °C; a day at −10 °C, {cspan(-10)} per cent. The decline is steady: there is no temperature below which cycling stops.
+
+Rain and snow come next. A day with 2 to 10 mm of rain has {r0('rain_2to10')} per cent fewer bicycles than a dry day at the same temperature; snow on the ground goes with {r0('snow_on_ground')} per cent fewer. Wind chill describes the counts about as well as temperature and wind do. Darkness matters too: at the same evening hour and temperature, the borough's counter records about {-H['dark_eve']['pct']:.0f} per cent fewer bicycles after sunset.
+
+Some questions the counts cannot settle. Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. On days when the City loaded snow, the counts resemble those of other winter days, but such days are too few to be sure.
+
+The cameras count only in daylight (read here from 8 a.m. to 4 p.m.); the borough's counter runs day and night. Their numbers are never compared directly, only their percentage changes. The note makes no recommendation."""
+n_lay = len(LAY.split()); assert n_lay <= LAY_WORDS, f'lay summary has {n_lay} words, limit {LAY_WORDS}'
+open(os.path.join(ROOT, 'derived', 'lay_abstract_en.txt'), 'w', encoding='utf-8').write('Lay summary\n\n' + LAY + '\n')
+print('lay summary:', n_lay, 'words')
+LAY_TEX = '\n\n'.join(q.replace('%', '\\%').replace("'", '\\textquoteright{}').replace('°C', '$^\\circ$C').replace('−', '$-$') for q in LAY.split('\n\n'))
+
 NOTE = r'''\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
@@ -84,8 +100,10 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \begin{document}
 {\raggedright\LARGE\bfseries Weather, daylight, snow and bicycle traffic on rue de Terrebonne\par}\vspace{0.3em}
 {\large Five count series, August 2024 to November 2026\par}\vspace{0.6em}
-{\small Terrebonne-open-sources, version \docversion. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Scripts, tables and figures: \url{''' + URL + r'''}.\par}
+{\small Terrebonne-open-sources, version \docversion. Author: Rick Hoge, PhD (see the repository\textquoteright{}s « About the author »). Scripts, tables and figures: \url{''' + URL + r'''}.\par}
 ''' + DRAFT + r'''
+\subsection*{Lay summary}
+''' + LAY_TEX + r'''
 \subsection*{Abstract}
 ''' + ABSTRACT + r'''
 \subsection*{What the analysis finds}
@@ -284,7 +302,7 @@ DMARK = '' if FINAL else r'\setbeamertemplate{footline}{\hfill{\tiny\textcolor{r
 DECK = r'''\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs,amsmath}
 ''' + DMARK + r'''
-\title{Weather, daylight, snow and bicycle traffic on rue de Terrebonne}\subtitle{Five count series, August 2024 to November 2026: methods in brief and the main results}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + TODAY + r'''}
+\title{Weather, daylight, snow and bicycle traffic on rue de Terrebonne}\subtitle{Five count series, August 2024 to November 2026: methods in brief and the main results}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{''' + TODAY + r'''}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 ''' + fr('The question and the sources', r'''\begin{itemize}

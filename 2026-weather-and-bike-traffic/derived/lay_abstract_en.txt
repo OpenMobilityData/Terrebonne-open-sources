@@ -1,0 +1,11 @@
+Lay summary
+
+How much does the weather change cycling on rue de Terrebonne? This note uses every count available for the street: the author's two camera sensors at King Edward and Draper, the borough's counter at Kensington, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere in Montréal for comparison. Weather is Environment Canada's record at Trudeau airport; the counts run from August 2024 to November 2026.
+
+Temperature matters most. Each degree warmer brings about 5 to 6 per cent more bicycles, up to about 20 °C, where the numbers stop rising. A day at 0 °C sees 30 to 34 per cent of the bicycles of the same day at 20 °C; a day at −10 °C, 17 to 20 per cent. The decline is steady: there is no temperature below which cycling stops.
+
+Rain and snow come next. A day with 2 to 10 mm of rain has 14 to 22 per cent fewer bicycles than a dry day at the same temperature; snow on the ground goes with 31 to 47 per cent fewer. Wind chill describes the counts about as well as temperature and wind do. Darkness matters too: at the same evening hour and temperature, the borough's counter records about 27 per cent fewer bicycles after sunset.
+
+Some questions the counts cannot settle. Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. On days when the City loaded snow, the counts resemble those of other winter days, but such days are too few to be sure.
+
+The cameras count only in daylight (read here from 8 a.m. to 4 p.m.); the borough's counter runs day and night. Their numbers are never compared directly, only their percentage changes. The note makes no recommendation.

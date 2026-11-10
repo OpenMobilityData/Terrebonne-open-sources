@@ -2,12 +2,22 @@
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
 \captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}
-\newcommand{\docversion}{2026-11-10-10-01-34}
+\newcommand{\docversion}{2026-11-10-10-11-47}
 \begin{document}
 {\raggedright\LARGE\bfseries Weather, daylight, snow and bicycle traffic on rue de Terrebonne\par}\vspace{0.3em}
 {\large Five count series, August 2024 to November 2026\par}\vspace{0.6em}
-{\small Terrebonne-open-sources, version \docversion. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Scripts, tables and figures: \url{https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-weather-and-bike-traffic}.\par}
+{\small Terrebonne-open-sources, version \docversion. Author: Rick Hoge, PhD (see the repository\textquoteright{}s « About the author »). Scripts, tables and figures: \url{https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-weather-and-bike-traffic}.\par}
 \begin{center}\colorbox{red!15}{\parbox{0.96\textwidth}{\centering\textbf{\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, November 10, 2026. Not yet checked line by line; figures may change.}}}}\end{center}
+\subsection*{Lay summary}
+How much does the weather change cycling on rue de Terrebonne? This note uses every count available for the street: the author\textquoteright{}s two camera sensors at King Edward and Draper, the borough\textquoteright{}s counter at Kensington, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere in Montréal for comparison. Weather is Environment Canada\textquoteright{}s record at Trudeau airport; the counts run from August 2024 to November 2026.
+
+Temperature matters most. Each degree warmer brings about 5 to 6 per cent more bicycles, up to about 20 $^\circ$C, where the numbers stop rising. A day at 0 $^\circ$C sees 30 to 34 per cent of the bicycles of the same day at 20 $^\circ$C; a day at $-$10 $^\circ$C, 17 to 20 per cent. The decline is steady: there is no temperature below which cycling stops.
+
+Rain and snow come next. A day with 2 to 10 mm of rain has 14 to 22 per cent fewer bicycles than a dry day at the same temperature; snow on the ground goes with 31 to 47 per cent fewer. Wind chill describes the counts about as well as temperature and wind do. Darkness matters too: at the same evening hour and temperature, the borough\textquoteright{}s counter records about 27 per cent fewer bicycles after sunset.
+
+Some questions the counts cannot settle. Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. On days when the City loaded snow, the counts resemble those of other winter days, but such days are too few to be sure.
+
+The cameras count only in daylight (read here from 8 a.m. to 4 p.m.); the borough\textquoteright{}s counter runs day and night. Their numbers are never compared directly, only their percentage changes. The note makes no recommendation.
 \subsection*{Abstract}
 This note measures how the number of bicycles counted on rue de Terrebonne varies with the weather, with daylight and with snow, using every count series available for the street: the author\textquoteright{}s two Telraam camera sensors (King Edward, 691 valid days from August 16, 2024; Draper, 509 days), the borough\textquoteright{}s loop counter at Kensington (284 days, eastbound, hourly release of June~4, 2026), trips at the BIXI station on the street, and, as a reference, twelve City counters elsewhere in Montréal. Weather is Environment and Climate Change Canada\textquoteright{}s record at Montréal-Trudeau. Each series is modelled separately by negative binomial regression, so that every effect is a percentage and no levels are compared between series; the Telraam sensors, which count only in daylight, are analysed in a fixed window (08:00--16:00) that is daylight all year. The note states what was measured, with intervals, and what the data cannot show. It makes no recommendation.
 \subsection*{What the analysis finds}
