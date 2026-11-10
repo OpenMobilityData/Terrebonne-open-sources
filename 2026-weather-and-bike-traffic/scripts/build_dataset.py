@@ -2,7 +2,7 @@
 """Build the daily analysis tables: one CSV per count series, each row a day with the count, its validity flags,
 the weather of the day (ECCC Montréal-Trudeau), the calendar, day length and the City's snow-loading record.
 
-Output: derived/daily_<series>.csv for west, east (Telraam), loop (Kensington), bixi, city; derived/weather_daily.csv;
+Output: derived/daily_<series>.csv for west, east (Telraam), loop (Kensington), gir (City detector at Girouard), bixi, city; derived/weather_daily.csv;
 derived/tables/coverage_by_month.csv (valid days per series and month).
 Run after fetch_eccc.py, bixi_daily.py and city_counters_daily.py.  Usage: python3 scripts/build_dataset.py
 """
@@ -22,6 +22,7 @@ def main():
     for seg in ('west', 'east'):
         frames[seg] = L.telraam_daily(seg)
     k = L.loop_daily(); frames['loop'] = k
+    frames['gir'] = L.girouard_daily()
     p = os.path.join(L.DERIVED, 'bixi_daily_terrebonne.csv')
     if os.path.exists(p):
         b = pd.read_csv(p, parse_dates=['date']); b = b[b.station == BIXI_STATION].set_index('date')

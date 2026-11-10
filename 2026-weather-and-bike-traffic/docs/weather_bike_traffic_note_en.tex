@@ -2,33 +2,33 @@
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
 \captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}
-\newcommand{\docversion}{2026-11-10-10-16-54}
+\newcommand{\docversion}{2026-11-10-10-34-43}
 \begin{document}
 {\raggedright\LARGE\bfseries Weather, daylight, snow and bicycle traffic on rue de Terrebonne\par}\vspace{0.3em}
-{\large Five count series, August 2024 to November 2026\par}\vspace{0.6em}
+{\large Six count series, August 2024 to November 2026\par}\vspace{0.6em}
 {\small Terrebonne-open-sources, version \docversion. Author: Rick Hoge, PhD (see the repository\textquoteright{}s « About the author »). Scripts, tables and figures: \url{https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-weather-and-bike-traffic}.\par}
 \begin{center}\colorbox{red!15}{\parbox{0.96\textwidth}{\centering\textbf{\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, November 10, 2026. Not yet checked line by line; figures may change.}}}}\end{center}
 \subsection*{Lay summary}
-How much does the weather change cycling on rue de Terrebonne? This note uses every count available for the street: citizen-operated camera sensors at King Edward and Draper, the borough\textquoteright{}s counter at Kensington, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere in Montréal for comparison. Weather is Environment Canada\textquoteright{}s record at Trudeau airport; the counts run from August 2024 to November 2026.
+How much does the weather change cycling on rue de Terrebonne? This note uses every count available: citizen-operated camera sensors at King Edward and Draper, the borough\textquoteright{}s counter at Kensington, the City\textquoteright{}s detector at Girouard, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere for comparison. Weather is from Trudeau airport; counts run August 2024 to November 2026.
 
-Temperature matters most. Each degree warmer brings about 5 to 6 per cent more bicycles, up to about 20 $^\circ$C, where the numbers stop rising. A day at 0 $^\circ$C sees 30 to 34 per cent of the bicycles of the same day at 20 $^\circ$C; a day at $-$10 $^\circ$C, 17 to 20 per cent. The decline is steady: there is no temperature below which cycling stops.
+Temperature matters most. Each degree warmer brings 5 to 6 per cent more bicycles, up to about 20 $^\circ$C, where the numbers stop rising. A day at 0 $^\circ$C sees 30 to 43 per cent of the bicycles of the same day at 20 $^\circ$C; a day at $-$10 $^\circ$C, 17 to 28 per cent. There is no temperature below which cycling stops.
 
-Rain and snow come next. A day with 2 to 10 mm of rain has 14 to 22 per cent fewer bicycles than a dry day at the same temperature; snow on the ground goes with 31 to 47 per cent fewer. Wind chill describes the counts about as well as temperature and wind do. Darkness matters too: at the same evening hour and temperature, the borough\textquoteright{}s counter records about 27 per cent fewer bicycles after sunset.
+A day with 2 to 10 mm of rain has 14 to 22 per cent fewer bicycles than a dry day at the same temperature; snow on the ground goes with 31 to 47 per cent fewer at three of the four counters. Darkness matters too: at the same evening hour and temperature, the borough\textquoteright{}s counter records 27 per cent fewer bicycles after sunset.
 
-Some questions the counts cannot settle. Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. On days when the City loaded snow, the counts resemble those of other winter days, but such days are too few to be sure.
+Cold, snow and short days arrive together, so much of the winter drop could be either weather or season. Days when the City loaded snow look like other winter days, but are too few to be sure. Year to year, with weather set aside, the counters disagree: one camera counted about 27 per cent more in autumn 2026 than in its first year, the other 12 per cent fewer. Two to three years of counts, with gaps, cannot show whether cycling on the street is rising or falling.
 
-The cameras count only in daylight (read here from 8 a.m. to 4 p.m.); the borough\textquoteright{}s counter runs day and night. Their numbers are never compared directly, only their percentage changes. The note makes no recommendation.
+The cameras count only in daylight, the other counters day and night, so only percentage changes are compared. The note makes no recommendation.
 \subsection*{Abstract}
-This note measures how the number of bicycles counted on rue de Terrebonne varies with the weather, with daylight and with snow, using every count series available for the street: two citizen-operated Telraam camera sensors (King Edward, 691 valid days from August 16, 2024; Draper, 509 days), the borough\textquoteright{}s loop counter at Kensington (284 days, eastbound, hourly release of June~4, 2026), trips at the BIXI station on the street, and, as a reference, twelve City counters elsewhere in Montréal. Weather is Environment and Climate Change Canada\textquoteright{}s record at Montréal-Trudeau. Each series is modelled separately by negative binomial regression, so that every effect is a percentage and no levels are compared between series; the Telraam sensors, which count only in daylight, are analysed in a fixed window (08:00--16:00) that is daylight all year. The note states what was measured, with intervals, and what the data cannot show. It makes no recommendation.
+This note measures how the number of bicycles counted on rue de Terrebonne varies with the weather, with daylight and with snow, using every count series available for the street: two citizen-operated Telraam camera sensors (King Edward, 691 valid days from August 16, 2024; Draper, 509 days), the borough\textquoteright{}s loop counter at Kensington (284 days, eastbound, hourly release of June~4, 2026), the City\textquoteright{}s detector at Girouard (296 days, westbound), trips at the BIXI station on the street, and, as a reference, twelve City counters elsewhere in Montréal. Weather is Environment and Climate Change Canada\textquoteright{}s record at Montréal-Trudeau. Each series is modelled separately by negative binomial regression, so that every effect is a percentage and no levels are compared between series; the Telraam sensors, which count only in daylight, are analysed in a fixed window (08:00--16:00) that is daylight all year. From one year to the next, with weather held fixed, the series do not move in one direction (King Edward +27\,\% (+12 to +45) in the autumn of 2026 against its first year, Draper $-$12\,\% ($-$20 to $-$5) after its first year), and two to three years of data with gaps do not establish a trend. The note states what was measured, with intervals, and what the data cannot show. It makes no recommendation.
 \subsection*{What the analysis finds}
 \begin{enumerate}
-\item \textbf{Temperature.} On the three Terrebonne count series, each additional degree of daytime temperature goes with 5 to 6\,\% more bicycles, up to roughly 20\,$^\circ$C; above that the count stops rising. Holding rain, snow, wind, day of the week and time of year fixed, a day at 0\,$^\circ$C has 30 to 34\,\% of the count of the same day at 20\,$^\circ$C, and a day at $-$10\,$^\circ$C has 17 to 20\,\%. The count falls steadily with the cold; it does not fall to zero.
+\item \textbf{Temperature.} On the four Terrebonne count series, each additional degree of daytime temperature goes with 5 to 6\,\% more bicycles, up to roughly 20\,$^\circ$C; above that the count stops rising. Holding rain, snow, wind, day of the week and time of year fixed, a day at 0\,$^\circ$C has 30 to 43\,\% of the count of the same day at 20\,$^\circ$C, and a day at $-$10\,$^\circ$C has 17 to 28\,\%. The count falls steadily with the cold; it does not fall to zero.
 \item \textbf{No threshold in the cold.} In percentage terms the slope below 0\,$^\circ$C is not distinguishable from the slope between 0\,$^\circ$C and 20\,$^\circ$C on any Terrebonne series. The change of slope that the earlier analyses placed near $-$1 or $-$5\,$^\circ$C belongs to a straight-line model of the counts themselves; the only change of slope the data support is the levelling-off in warm weather, and its position is poorly determined (intervals of ten degrees or more).
 \item \textbf{Wind chill.} Replacing air temperature and wind by the wind-chill index fits about as well (the two are correlated at 0.996); the data cannot separate them.
-\item \textbf{Rain and snow.} At a given temperature and time of year, a day with 2 to 10\,mm of rain has 14 to 22\,\% fewer bicycles on the Terrebonne series, a day with more than 10\,mm 25 to 46\,\%, and a day with at least 1\,cm of snow on the ground 31 to 47\,\%. Snow on the ground is the largest single weather effect after temperature.
-\item \textbf{Season or weather?} The two cannot be fully separated: 65 to 81\,\% of the day-to-day variation on the Terrebonne series can be attributed to either. Weather effects estimated only from the variation inside each calendar month are nonetheless close to those estimated over the whole record.
+\item \textbf{Rain and snow.} At a given temperature and time of year, a day with 2 to 10\,mm of rain has 14 to 22\,\% fewer bicycles on the Terrebonne series, a day with more than 10\,mm 25 to 46\,\% fewer, and a day with at least 1\,cm of snow on the ground 31 to 47\,\% fewer at King Edward, Draper and Kensington, where it is the largest single weather effect after temperature; at the Girouard detector snow on the ground shows no measurable effect ($-$4 ($-$15 to +9)\,\%).
+\item \textbf{Season or weather?} The two cannot be fully separated: 65 to 82\,\% of the day-to-day variation on the Terrebonne series can be attributed to either. Weather effects estimated only from the variation inside each calendar month are nonetheless close to those estimated over the whole record.
 \item \textbf{Darkness.} On the loop counter, the same clock hour in the evening carries 27\,\% (19 to 34) fewer bicycles when the sun has set than when it is up, at the same temperature and in the same month.
-\item \textbf{Snow loading.} On the days the City loaded snow in the sector, the counts are not distinguishable from other winter days once temperature and snow are accounted for; the intervals are wide (36 to 44 loading days per series).
+\item \textbf{Snow loading.} On the days the City loaded snow in the sector that contains each counter, the counts are not distinguishable from other winter days once temperature and snow are accounted for; the intervals are wide (18 to 44 loading days per series).
 \item \textbf{Agreement.} The two camera sensors, the loop counter, the BIXI station on the street and the City\textquoteright{}s counters elsewhere respond to weather in the same direction and with similar size, although they count different things.
 \item \textbf{Year to year.} With weather, day of the week and time of year held fixed, King Edward counted $-$1\,\% ($-$11 to +9) in its second counting year (from August~15, 2025) compared with its first, and +27\,\% (+12 to +45) from August~15 to November~8, 2026 compared with its first year. Draper counted $-$12\,\% ($-$20 to $-$5) after its first year, the BIXI station $-$10\,\% ($-$16 to $-$4), and the City\textquoteright{}s counters elsewhere $-$7\,\% ($-$14 to 0). The series do not move in one direction, and these comparisons are limited: two to three years of data, gaps that fall in different months each year, a camera sensor whose field of view can change when it is remounted, and a third year that so far holds a single autumn. A year term absorbs every difference between the years other than the weather.
 \end{enumerate}
@@ -53,6 +53,7 @@ Series & What is counted & Days used in the models & Days & Mean a day\\\midrule
 King Edward & Bicycles, both directions, 08:00--16:00 (Telraam S2 camera sensor, west of Cavendish) & August 16, 2024 to November 8, 2026 & 691 & 163 \\
 Draper & The same, east of Cavendish & September 25, 2024 to October 21, 2026 & 509 & 198 \\
 Kensington loop & Bicycles eastbound, 24 h (the borough\textquoteright{}s Eco-Counter loop) & July 27, 2025 to May 10, 2026 & 284 & 157 \\
+Girouard detector & Bicycles westbound, 24 h (the City\textquoteright{}s pole-mounted detector at Girouard) & October 24, 2025 to October 15, 2026 & 296 & 121 \\
 BIXI station & Trips starting or ending at the station « Grand Boulevard / de Terrebonne », April 15 to November 15 & August 2, 2024 to August 31, 2026 & 441 & 63 \\
 City counters & Bicycles, 24 h, sum of twelve City loop counters elsewhere in Montréal & January 1, 2025 to November 6, 2026 & 661 & 14,821 \\
 \bottomrule\end{tabular}\end{center}
@@ -62,12 +63,14 @@ The means are given to describe each series, not to compare them: a camera senso
 
 \textbf{Kensington loop.} The borough\textquoteright{}s Eco-Counter (inductive loops, 24 hours, by direction). The hourly workbook released on June~4, 2026 under access request 2026-300 runs from July~26, 2025 to May~11, 2026. The westbound channel under-counts from about March~1, 2026, so the models use the eastbound channel alone. The daily table released on October~9, 2026 under request 2026-581 serves to identify the days set aside (May~29--31, 2026, zeros; June~7--9, 2026). One site, less than one full year, one direction.
 
+\textbf{Girouard detector.} The City\textquoteright{}s pole-mounted detector at the corner of Girouard (open data « Compteurs cyclistes permanents », instance det-00118-01; files downloaded October~16, 2026) counts bicycles on Terrebonne in one direction, westbound, 24 hours a day, from October~23, 2025. It is the City\textquoteright{}s only counter on the street, at its east end, and it covers the summer of 2026, which the loop\textquoteright{}s hourly release does not. A day is used when at least 22 of its 24 hourly rows are present. One direction, a little under one year, a camera-type detector rather than a loop.
+
 \textbf{BIXI station.} The station « Grand Boulevard / de Terrebonne » stands 6\,m from the lane. BIXI Montréal\textquoteright{}s open trip files give each trip\textquoteright{}s start and end station and time; the series is the number of trips starting or ending there each day. A trip is not a bicycle passing a point, and a day without a trip is absent from the files rather than recorded as zero, so the models use the regular season only (April~15 to November~15). The station recorded trips in the winter of 2025--26 (3 to 6 a day on the days with trips) and none in the winter of 2024--25.
 
-\textbf{City counters.} Twelve of the City\textquoteright{}s permanent loop counters, none on Terrebonne, kept because they report on at least 97\,\% of days from January~1, 2025 to November~6, 2026; the series is their sum on the days when all twelve report. It is a reference for how bicycle traffic elsewhere in Montréal responds to the same weather.
+\textbf{City counters.} Twelve of the City\textquoteright{}s permanent loop counters elsewhere in Montréal, none on Terrebonne, kept because they report on at least 97\,\% of days from January~1, 2025 to November~6, 2026; the series is their sum on the days when all twelve report. It is a reference for how bicycle traffic elsewhere in Montréal responds to the same weather.
 
 \subsection{Weather, daylight, snow}
-Environment and Climate Change Canada, station Montréal-Trudeau (climate ID 7025251), about 9\,km from the street. From the daily file: rain (mm), snowfall (cm), snow on the ground (cm). From the hourly file: temperature and wind, averaged over 08:00--16:00 local time (« daytime »), and the wind-chill index computed from them by Environment Canada\textquoteright{}s formula. The hourly file carries no precipitation amount, so rain and snowfall are 24-hour totals: rain that fell at night counts as a rainy day. Sunrise and sunset are computed for the street\textquoteright{}s position (NOAA solar equations). Snow loading is the City\textquoteright{}s record of loads by day for sector CDN-301, which contains the lane from its west end to Royal (open data, snow-removal transactions).
+Environment and Climate Change Canada, station Montréal-Trudeau (climate ID 7025251), about 9\,km from the street. From the daily file: rain (mm), snowfall (cm), snow on the ground (cm). From the hourly file: temperature and wind, averaged over 08:00--16:00 local time (« daytime »), and the wind-chill index computed from them by Environment Canada\textquoteright{}s formula. The hourly file carries no precipitation amount, so rain and snowfall are 24-hour totals: rain that fell at night counts as a rainy day. Sunrise and sunset are computed for the street\textquoteright{}s position (NOAA solar equations). Snow loading is the City\textquoteright{}s record of loads by day and by snow-removal sector (open data, snow-removal transactions): sector CDN-301 contains the lane from its west end to Royal (King Edward and Kensington), sector CDN-111 from Draper to Girouard (the Draper sensor and the Girouard detector). Each counter is matched with its own sector.
 
 \section{Method}
 \textbf{One model per series, on a percentage scale.} Daily counts are modelled by negative binomial regression with a log link. Counts are non-negative, their spread grows with their level, and a weather effect is plausibly proportional (rain removes a share of the riders, not a fixed number); a straight-line model of the counts themselves, as in the earlier analyses, forces a rainy day to remove as many bicycles in January as in June. On the log scale every coefficient is a percentage change, which is also what allows the series to be set side by side without comparing their levels.
@@ -86,18 +89,18 @@ Environment and Climate Change Canada, station Montréal-Trudeau (climate ID 702
 \begin{figure}[htbp]\centering\includegraphics[width=0.95\textwidth]{../derived/figures/temperature-scatter/temperature_scatter_en.png}\caption{Daily count against daytime temperature, days marked by precipitation. Black line: median of the days without precipitation, by 2.5-degree band.}\label{fig:temperature_scatter}\end{figure}
 Figure~\ref{fig:temperature_scatter} shows the raw relation. Figure~\ref{fig:temperature_curve} shows the fitted response with everything else held fixed, each series relative to its own level at 20\,$^\circ$C.
 \begin{figure}[htbp]\centering\includegraphics[width=0.85\textwidth]{../derived/figures/temperature-curve/temperature_curve_en.png}\caption{Fitted response to temperature (spline model), relative to 20\,$^\circ$C.}\label{fig:temperature_curve}\end{figure}
-\begin{center}\small\begin{tabular}{@{}rrrrrr@{}}\toprule
-Daytime temperature ($^\circ$C) & King Edward & Draper & Kensington loop & BIXI station & City counters\\\midrule
-$-$15 & 13 & 16 & 17 & $-$$-$ & 28 \\
-$-$10 & 17 & 20 & 19 & $-$$-$ & 29 \\
-$-$5 & 22 & 26 & 24 & $-$$-$ & 33 \\
-0 & 30 & 34 & 34 & $-$$-$ & 41 \\
-5 & 41 & 47 & 51 & 69 & 55 \\
-10 & 59 & 66 & 70 & 76 & 74 \\
-15 & 81 & 86 & 88 & 86 & 91 \\
-20 & 100 & 100 & 100 & 100 & 100 \\
-25 & 107 & 102 & 105 & 107 & 99 \\
-\bottomrule\multicolumn{6}{@{}l}{\footnotesize Count relative to the same day at 20\,$^\circ$C (= 100), spline model. BIXI: regular season only.}\end{tabular}\end{center}
+\begin{center}\small\begin{tabular}{@{}rrrrrrr@{}}\toprule
+Daytime temperature ($^\circ$C) & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+$-$15 & 13 & 16 & 17 & 25 & $-$$-$ & 28 \\
+$-$10 & 17 & 20 & 19 & 28 & $-$$-$ & 29 \\
+$-$5 & 22 & 26 & 24 & 33 & $-$$-$ & 33 \\
+0 & 30 & 34 & 34 & 43 & $-$$-$ & 41 \\
+5 & 41 & 47 & 51 & 58 & 69 & 55 \\
+10 & 59 & 66 & 70 & 77 & 76 & 74 \\
+15 & 81 & 86 & 88 & 91 & 86 & 91 \\
+20 & 100 & 100 & 100 & 100 & 100 & 100 \\
+25 & 107 & 102 & 105 & 103 & 107 & 99 \\
+\bottomrule\multicolumn{7}{@{}l}{\footnotesize Count relative to the same day at 20\,$^\circ$C (= 100), spline model. BIXI: regular season only.}\end{tabular}\end{center}
 
 \textbf{Slopes.} With temperature as a line with one change of slope:
 \begin{center}\small\begin{tabular}{@{}lp{2.9cm}p{3.2cm}p{3.2cm}p{3.2cm}@{}}\toprule
@@ -105,12 +108,13 @@ Series & Change of slope, $^\circ$C (bootstrap 95\,\%) & Below it: \% per degree
 King Edward & 20.0 (10 to 26) & +6.1 (+4.9 to +7.4) & +0.4 ($-$1.6 to +2.4) & +6.6 (+5.3 to +8.0) \\
 Draper & 24.5 (8 to 25) & +5.0 (+4.1 to +5.8) & $-$7.9 ($-$10.2 to $-$5.5) & +5.0 (+4.1 to +5.9) \\
 Kensington loop & 18.0 (-8 to 26) & +5.6 (+4.5 to +6.8) & 0.0 ($-$2.1 to +2.2) & +6.3 (+5.1 to +7.4) \\
+Girouard detector & 15.5 (5 to 23) & +4.6 (+3.5 to +5.6) & +0.8 ($-$0.6 to +2.1) & +5.1 (+3.9 to +6.3) \\
 BIXI station & 23.5 (1 to 26) & +2.7 (+1.9 to +3.4) & $-$2.2 ($-$5.5 to +1.2) & +3.2 (+2.5 to +3.9) \\
-City counters & 20.5 (-4 to 24) & +3.7 (+3.1 to +4.4) & $-$1.7 ($-$3.0 to $-$0.4) & +4.4 (+3.8 to +5.0) \\
+City counters & 20.5 (-3 to 24) & +3.7 (+3.1 to +4.4) & $-$1.7 ($-$3.0 to $-$0.4) & +4.4 (+3.8 to +5.0) \\
 \bottomrule\end{tabular}\end{center}
-On the three Terrebonne series each degree below the change of slope goes with 5 to 6\,\% more bicycles, and the estimate is the same when only days of the same calendar month are compared (last column). The BIXI station and the City counters show smaller slopes (2.7 and 3.7\,\%). Above the change of slope the count is flat or falls slightly.
+On the four Terrebonne series each degree below the change of slope goes with 5 to 6\,\% more bicycles, and the estimate is the same when only days of the same calendar month are compared (last column). The BIXI station and the City counters show smaller slopes (2.7 and 3.7\,\%). Above the change of slope the count is flat or falls slightly.
 
-\textbf{Where the slope changes.} The lowest deviance is at 20, 24.5 and 18\,$^\circ$C for King Edward, Draper and the loop, but the bootstrap intervals are wide (Appendix~\ref{app:bp}): the response bends gradually, as the spline shows, rather than at a point. The spline and the two-segment line fit about equally well (Appendix~\ref{app:aic}); a single straight line on the log scale fits worse on every series.
+\textbf{Where the slope changes.} The lowest deviance is at 20, 24.5, 18, 15.5\,$^\circ$C for King Edward, Draper, the loop and the Girouard detector, but the bootstrap intervals are wide (Appendix~\ref{app:bp}): the response bends gradually, as the spline shows, rather than at a point. The spline and the two-segment line fit about equally well (Appendix~\ref{app:aic}); a single straight line on the log scale fits worse on every series.
 
 \textbf{Is there a second change in the cold?} Adding a change of slope at 0\,$^\circ$C to the model:
 \begin{center}\small\begin{tabular}{@{}lrp{3.6cm}p{3.6cm}r@{}}\toprule
@@ -118,49 +122,51 @@ Series & Days below 0\,$^\circ$C & Below 0\,$^\circ$C: \% per degree & 0\,$^\cir
 King Edward & 135 & +5.2 (+1.9 to +8.6) & +6.5 (+5.5 to +7.6) & 0.47 \\
 Draper & 109 & +4.6 (+2.5 to +6.8) & +5.1 (+3.9 to +6.3) & 0.74 \\
 Kensington loop & 108 & +5.0 (+3.5 to +6.4) & +6.3 (+4.7 to +8.0) & 0.22 \\
+Girouard detector & 87 & +4.0 (+2.3 to +5.8) & +5.3 (+3.7 to +6.8) & 0.36 \\
 City counters & 169 & +2.4 (+1.4 to +3.5) & +4.8 (+3.9 to +5.6) & 0.00 \\
 \bottomrule\end{tabular}\end{center}
 On the Terrebonne series the two slopes are not distinguishable. The earlier analyses, which fitted two straight lines to the counts themselves, placed a change of slope at $-$1\,$^\circ$C (air temperature) or $-$5\,$^\circ$C (feels-like temperature): a count that falls by a constant percentage per degree traces a curve that flattens towards zero, and two straight lines fitted to that curve meet near where it flattens. The City counters do show a flatter slope below 0\,$^\circ$C.
 
 \section{Wind chill}
-The wind-chill index and the daytime temperature are almost the same variable over a year (correlation 0.996). A model with the wind-chill index in place of temperature and wind has an AIC lower by 2.8 to 3.9 on the Terrebonne series (Appendix~\ref{app:aic}): a small difference in its favour, not enough to say that riders respond to wind chill rather than to temperature. Wind as a separate term goes with $-$7 ($-$10 to $-$3)\,\% per 10\,km/h at King Edward and is not distinguishable from zero at Draper and on the loop.
+The wind-chill index and the daytime temperature are almost the same variable over a year (correlation 0.996). A model with the wind-chill index in place of temperature and wind has an AIC that differs by $-$3.9 to +1.8 on the Terrebonne series (negative values favour wind chill; Appendix~\ref{app:aic}): small differences, three of four in its favour, not enough to say that riders respond to wind chill rather than to temperature. Wind as a separate term goes with $-$7 ($-$10 to $-$3)\,\% per 10\,km/h at King Edward and is not distinguishable from zero on the other three Terrebonne series.
 
 \section{Rain, snow and wind}
 \begin{figure}[htbp]\centering\includegraphics[width=0.92\textwidth]{../derived/figures/effects/effects_en.png}\caption{Change in the daily count associated with each condition, temperature and time of year held fixed.}\label{fig:effects}\end{figure}
-\begin{center}\scriptsize\setlength{\tabcolsep}{4pt}\begin{tabular}{@{}llllll@{}}\toprule
-Condition & King Edward & Draper & Kensington loop & BIXI station & City counters\\\midrule
-Rain, under 2 mm & $-$6 ($-$14 to +3) & 0 ($-$7 to +8) & $-$23 ($-$33 to $-$12) & $-$2 ($-$8 to +3) & $-$13 ($-$18 to $-$8) \\
-Rain, 2 to 10 mm & $-$22 ($-$29 to $-$14) & $-$14 ($-$21 to $-$7) & $-$22 ($-$34 to $-$8) & $-$20 ($-$24 to $-$15) & $-$26 ($-$31 to $-$21) \\
-Rain, over 10 mm & $-$40 ($-$48 to $-$30) & $-$25 ($-$32 to $-$17) & $-$46 ($-$56 to $-$34) & $-$31 ($-$39 to $-$22) & $-$45 ($-$49 to $-$40) \\
-Snowfall, under 2 cm & $-$27 ($-$40 to $-$9) & $-$10 ($-$25 to +9) & $-$7 ($-$22 to +10) & $-$25 ($-$39 to $-$9) & $-$11 ($-$19 to $-$2) \\
-Snowfall, 2 cm or more & $-$36 ($-$52 to $-$14) & $-$24 ($-$41 to $-$2) & $-$18 ($-$34 to +2) & -- & $-$21 ($-$28 to $-$13) \\
-Snow on the ground, 1 cm or more & $-$47 ($-$61 to $-$28) & $-$37 ($-$53 to $-$18) & $-$31 ($-$47 to $-$11) & -- & $-$18 ($-$31 to $-$2) \\
-Wind, per 10 km/h & $-$7 ($-$10 to $-$3) & 0 ($-$5 to +4) & $-$3 ($-$9 to +3) & $-$1 ($-$5 to +3) & $-$4 ($-$7 to $-$1) \\
-Snowfall the day before, per cm & $-$1 ($-$4 to +1) & $-$1 ($-$2 to +1) & $-$1 ($-$5 to +2) & $-$4 ($-$8 to 0) & $-$1 ($-$2 to 0) \\
-Saturday & $-$8 ($-$16 to +1) & 0 ($-$9 to +9) & $-$34 ($-$42 to $-$24) & $-$11 ($-$16 to $-$5) & $-$36 ($-$41 to $-$31) \\
-Sunday or holiday & $-$2 ($-$9 to +6) & +7 ($-$2 to +16) & $-$32 ($-$39 to $-$25) & $-$20 ($-$25 to $-$15) & $-$42 ($-$45 to $-$38) \\
-December 24 to January 2 & $-$22 ($-$39 to 0) & $-$49 ($-$66 to $-$25) & $-$49 ($-$72 to $-$7) & -- & $-$62 ($-$68 to $-$55) \\
-\bottomrule\multicolumn{6}{@{}p{16cm}}{\footnotesize Percentage change in the daily count (95\,\% interval), compared with a day without the condition (for the day types, with a weekday). --: fewer than five such days, or not applicable.}\end{tabular}\end{center}
+\begin{center}\scriptsize\setlength{\tabcolsep}{3pt}\begin{tabular}{@{}lllllll@{}}\toprule
+Condition & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+Rain, under 2 mm & $-$6 ($-$14 to +3) & 0 ($-$7 to +8) & $-$23 ($-$33 to $-$12) & $-$18 ($-$23 to $-$13) & $-$2 ($-$8 to +3) & $-$13 ($-$18 to $-$8) \\
+Rain, 2 to 10 mm & $-$22 ($-$29 to $-$14) & $-$14 ($-$21 to $-$7) & $-$22 ($-$34 to $-$8) & $-$17 ($-$23 to $-$10) & $-$20 ($-$24 to $-$15) & $-$26 ($-$31 to $-$21) \\
+Rain, over 10 mm & $-$40 ($-$48 to $-$30) & $-$25 ($-$32 to $-$17) & $-$46 ($-$56 to $-$34) & $-$33 ($-$40 to $-$25) & $-$31 ($-$39 to $-$22) & $-$45 ($-$49 to $-$40) \\
+Snowfall, under 2 cm & $-$27 ($-$40 to $-$9) & $-$10 ($-$25 to +9) & $-$7 ($-$22 to +10) & $-$11 ($-$20 to $-$2) & $-$25 ($-$39 to $-$9) & $-$11 ($-$19 to $-$2) \\
+Snowfall, 2 cm or more & $-$36 ($-$52 to $-$14) & $-$24 ($-$41 to $-$2) & $-$18 ($-$34 to +2) & $-$25 ($-$33 to $-$16) & -- & $-$21 ($-$28 to $-$13) \\
+Snow on the ground, 1 cm or more & $-$47 ($-$61 to $-$28) & $-$37 ($-$53 to $-$18) & $-$31 ($-$47 to $-$11) & $-$4 ($-$15 to +9) & -- & $-$18 ($-$31 to $-$2) \\
+Wind, per 10 km/h & $-$7 ($-$10 to $-$3) & 0 ($-$5 to +4) & $-$3 ($-$9 to +3) & $-$3 ($-$6 to 0) & $-$1 ($-$5 to +3) & $-$4 ($-$7 to $-$1) \\
+Snowfall the day before, per cm & $-$1 ($-$4 to +1) & $-$1 ($-$2 to +1) & $-$1 ($-$5 to +2) & $-$2 ($-$5 to +1) & $-$4 ($-$8 to 0) & $-$1 ($-$2 to 0) \\
+Saturday & $-$8 ($-$16 to +1) & 0 ($-$9 to +9) & $-$34 ($-$42 to $-$24) & $-$22 ($-$27 to $-$18) & $-$11 ($-$16 to $-$5) & $-$36 ($-$41 to $-$31) \\
+Sunday or holiday & $-$2 ($-$9 to +6) & +7 ($-$2 to +16) & $-$32 ($-$39 to $-$25) & $-$30 ($-$34 to $-$25) & $-$20 ($-$25 to $-$15) & $-$42 ($-$45 to $-$38) \\
+December 24 to January 2 & $-$22 ($-$39 to 0) & $-$49 ($-$66 to $-$25) & $-$49 ($-$72 to $-$7) & $-$36 ($-$45 to $-$25) & -- & $-$62 ($-$68 to $-$55) \\
+\bottomrule\multicolumn{7}{@{}p{16cm}}{\scriptsize Percentage change in the daily count (95\,\% interval), compared with a day without the condition (for the day types, with a weekday). --: fewer than five such days, or not applicable.}\end{tabular}\end{center}
 Number of days behind each estimate:
-\begin{center}\footnotesize\begin{tabular}{@{}p{4.6cm}rrrrr@{}}\toprule
-Condition & King Edward & Draper & Kensington loop & BIXI station & City counters\\\midrule
-Rain, under 2 mm & 81 & 61 & 25 & 58 & 77 \\
-Rain, 2 to 10 mm & 110 & 76 & 37 & 79 & 92 \\
-Rain, over 10 mm & 45 & 36 & 15 & 39 & 47 \\
-Snowfall, under 2 cm & 56 & 48 & 38 & 9 & 64 \\
-Snowfall, 2 cm or more & 46 & 30 & 30 & -- & 46 \\
-Snow on the ground, 1 cm or more & 120 & 93 & 105 & -- & 161 \\
+\begin{center}\footnotesize\begin{tabular}{@{}p{4.6cm}rrrrrr@{}}\toprule
+Condition & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+Rain, under 2 mm & 81 & 61 & 25 & 33 & 58 & 77 \\
+Rain, 2 to 10 mm & 110 & 76 & 37 & 40 & 79 & 92 \\
+Rain, over 10 mm & 45 & 36 & 15 & 26 & 39 & 47 \\
+Snowfall, under 2 cm & 56 & 48 & 38 & 30 & 9 & 64 \\
+Snowfall, 2 cm or more & 46 & 30 & 30 & 26 & -- & 46 \\
+Snow on the ground, 1 cm or more & 120 & 93 & 105 & 88 & -- & 161 \\
 \bottomrule\end{tabular}\end{center}
-Light rain (under 2\,mm in 24 hours) is not distinguishable from none on the camera sensors; the loop, which counts day and night, shows a reduction. The effects are multiplicative: on a January day that would see 20 bicycles in the window, 2 to 10\,mm of rain removes about four; on a June day that would see 300, about sixty. Snow on the ground carries the persistence of a snowfall: once it is in the model, the snowfall of the day before adds little.
+Light rain (under 2\,mm in 24 hours) is not distinguishable from none on the camera sensors, which count 08:00--16:00; the two 24-hour counters on the street, the loop and the Girouard detector, show a reduction. Snow on the ground goes with a third to a half fewer bicycles at King Edward, Draper and Kensington and with no measurable change at the Girouard detector ($-$4 ($-$15 to +9)\,\%, 88 such days); the record does not say why the east end differs. The effects are multiplicative: on a January day that would see 20 bicycles in the window, 2 to 10\,mm of rain removes about four; on a June day that would see 300, about sixty. Snow on the ground carries the persistence of a snowfall: once it is in the model, the snowfall of the day before adds little.
 
 \section{Day length, season and darkness}
 \begin{figure}[htbp]\centering\includegraphics[width=0.85\textwidth]{../derived/figures/season-weather/season_weather_en.png}\caption{Share of the deviance of daily counts accounted for by the two sets of terms.}\label{fig:season_weather}\end{figure}
-\begin{center}\small\begin{tabular}{@{}lrrrrrr@{}}\toprule
+\begin{center}\footnotesize\begin{tabular}{@{}lrrrrrr@{}}\toprule
  & \multicolumn{3}{c}{Deviance accounted for (\%)} & \multicolumn{3}{c}{of which (\%)}\\\cmidrule(lr){2-4}\cmidrule(l){5-7}
 Series & Calendar and season alone & Weather alone & Both & Either & Weather only & Calendar and season only\\\midrule
 King Edward & 67 & 77 & 80 & 65 & 13 & 2 \\
 Draper & 78 & 81 & 86 & 73 & 8 & 5 \\
 Kensington loop & 87 & 86 & 92 & 81 & 5 & 5 \\
+Girouard detector & 88 & 87 & 93 & 82 & 5 & 6 \\
 BIXI station & 49 & 53 & 63 & 38 & 14 & 10 \\
 City counters & 86 & 81 & 92 & 75 & 6 & 11 \\
 \bottomrule\end{tabular}\end{center}
@@ -174,30 +180,31 @@ Most of what the models account for can be credited to either set of terms: the 
 \section{Snowfall, the days after, and snow loading}
 \begin{figure}[htbp]\centering\includegraphics[width=0.95\textwidth]{../derived/figures/snow-lags/snow_lags_en.png}\caption{Winter days: change in the count per 5\,cm of snowfall on the day and on each of the seven days before.}\label{fig:snow_lags}\end{figure}
 On winter days (November~16 to March~31), with temperature, rain, wind, day type and snow on the ground in the model:
-\begin{center}\footnotesize\begin{tabular}{@{}rlll@{}}\toprule
-Days after the snowfall & King Edward & Draper & Kensington loop\\\midrule
-0 & $-$12 ($-$24 to +2) & $-$17 ($-$23 to $-$10) & $-$14 ($-$27 to +2) \\
-1 & +1 ($-$14 to +18) & $-$3 ($-$10 to +6) & +2 ($-$13 to +18) \\
-2 & +6 ($-$8 to +22) & $-$2 ($-$17 to +15) & $-$16 ($-$29 to $-$1) \\
-3 & $-$6 ($-$21 to +11) & $-$3 ($-$15 to +10) & $-$11 ($-$26 to +8) \\
-4 & $-$14 ($-$28 to +2) & $-$11 ($-$22 to 0) & $-$7 ($-$24 to +13) \\
-5 & $-$13 ($-$23 to $-$2) & $-$6 ($-$19 to +10) & +3 ($-$12 to +21) \\
-6 & +8 ($-$1 to +18) & $-$14 ($-$20 to $-$8) & $-$6 ($-$21 to +12) \\
-7 & +9 ($-$2 to +22) & $-$12 ($-$19 to $-$4) & $-$11 ($-$24 to +4) \\
-\bottomrule\multicolumn{4}{@{}l}{\footnotesize Percentage change per 5\,cm of snow (95\,\% interval).}\end{tabular}\end{center}
-The day of a snowfall shows the clearest reduction (12 to 17\,\% per 5\,cm; the interval excludes zero at Draper only). On the following days the estimates scatter around zero and a few negative values, with wide intervals and no pattern common to the three series; winter counts are small (a few dozen a day), each series has 132 to 191 winter days, and snow on the ground already carries part of the after-effect. An average over snowfall episodes was also computed (\texttt{snow\_episodes\_summary.csv}); with fewer than ten episodes of 10\,cm or more per series it is too noisy to read.
+\begin{center}\footnotesize\scriptsize\begin{tabular}{@{}rllll@{}}\toprule
+Days after the snowfall & King Edward & Draper & Kensington loop & Girouard detector\\\midrule
+0 & $-$12 ($-$24 to +2) & $-$17 ($-$23 to $-$9) & $-$14 ($-$27 to +2) & $-$13 ($-$22 to $-$3) \\
+1 & +1 ($-$14 to +18) & $-$1 ($-$9 to +8) & +2 ($-$13 to +18) & +10 (+1 to +21) \\
+2 & +6 ($-$8 to +22) & $-$2 ($-$17 to +15) & $-$16 ($-$29 to $-$1) & +8 ($-$7 to +25) \\
+3 & $-$6 ($-$21 to +11) & $-$4 ($-$15 to +9) & $-$11 ($-$26 to +8) & +2 ($-$15 to +22) \\
+4 & $-$14 ($-$28 to +2) & $-$13 ($-$22 to $-$2) & $-$7 ($-$24 to +13) & $-$3 ($-$15 to +10) \\
+5 & $-$13 ($-$23 to $-$2) & $-$6 ($-$19 to +9) & +3 ($-$12 to +21) & +6 ($-$6 to +19) \\
+6 & +8 ($-$1 to +18) & $-$14 ($-$20 to $-$9) & $-$6 ($-$21 to +12) & $-$2 ($-$9 to +6) \\
+7 & +9 ($-$2 to +22) & $-$12 ($-$19 to $-$4) & $-$11 ($-$24 to +4) & +3 ($-$10 to +18) \\
+\bottomrule\multicolumn{5}{@{}l}{\footnotesize Percentage change per 5\,cm of snow (95\,\% interval).}\end{tabular}\end{center}
+The day of a snowfall shows the clearest reduction (12 to 17\,\% per 5\,cm; the interval excludes zero at Draper and the Girouard detector). On the following days the estimates scatter around zero and a few negative values, with wide intervals and no pattern common to the four series; winter counts are small (a few dozen a day), each series has 109 to 191 winter days, and snow on the ground already carries part of the after-effect. An average over snowfall episodes was also computed (\texttt{snow\_episodes\_summary.csv}); with fewer than ten episodes of 10\,cm or more per series it is too noisy to read.
 
 \textbf{Snow-loading days.}
-\begin{center}\small\begin{tabular}{@{}lrrp{3.8cm}p{3.8cm}@{}}\toprule
-Series & Winter days & of which loading days (sector CDN-301) & Loading day: change (\%) & Temperature: \% per degree (winter only)\\\midrule
-King Edward & 191 & 44 & $-$4 ($-$29 to +30) & +7 (+5 to +9) \\
-Draper & 154 & 37 & $-$21 ($-$48 to +21) & +7 (+5 to +9) \\
-Kensington loop & 132 & 36 & +2 ($-$25 to +39) & +7 (+5 to +10) \\
+\begin{center}\small\begin{tabular}{@{}llrrp{3.4cm}p{3.4cm}@{}}\toprule
+Series & Sector & Winter days & of which loading days & Loading day: change (\%) & Temperature: \% per degree (winter only)\\\midrule
+King Edward & CDN-301 & 191 & 44 & $-$4 ($-$29 to +30) & +7 (+5 to +9) \\
+Draper & CDN-111 & 154 & 34 & $-$18 ($-$45 to +22) & +7 (+5 to +9) \\
+Kensington loop & CDN-301 & 132 & 36 & +2 ($-$25 to +39) & +7 (+5 to +10) \\
+Girouard detector & CDN-111 & 109 & 18 & $-$9 ($-$25 to +11) & +4 (+2 to +6) \\
 \bottomrule\end{tabular}\end{center}
-On the days the City loaded snow in the sector, the counts are not distinguishable from those of other winter days with the same temperature and snow. The intervals are wide enough to contain a reduction of a quarter or more as well as no change; the record does not settle the question. In winter alone, each degree goes with about 7\,\% more bicycles on all three series.
+On the days the City loaded snow in the sector that contains the counter, the counts are not distinguishable from those of other winter days with the same temperature and snow. The intervals are wide enough to contain a reduction of a quarter or more as well as no change; the record does not settle the question. In winter alone, each degree goes with 4 to 7\,\% more bicycles on the four series.
 
 \section{Agreement between the series}
-The five series count different things with different instruments. Their relative responses agree in direction everywhere and broadly in size: the temperature curves of the three Terrebonne series lie within each other\textquoteright{}s intervals (Figure~\ref{fig:temperature_curve}); the rain and snow effects overlap (Figure~\ref{fig:effects}). The differences that stand out: the BIXI station and the City counters respond less steeply to temperature than the Terrebonne counters; the loop shows a weekend reduction of about a third that the camera sensors, counting 08:00--16:00, do not show; and the loop responds to light rain where the camera sensors do not. The first may reflect who rides where; the others are what one would expect from the difference between a 24-hour count and a daytime window. None of this was tested formally: the series cover different periods.
+The six series count different things with different instruments. Their relative responses agree in direction everywhere and broadly in size: the temperature curves of the four Terrebonne series lie close to one another (Figure~\ref{fig:temperature_curve}); the rain and snow effects overlap (Figure~\ref{fig:effects}). The differences that stand out: the BIXI station and the City counters respond less steeply to temperature than the Terrebonne counters; the two 24-hour counters on the street (the loop and the Girouard detector) show a weekend reduction of a fifth to a third that the camera sensors, counting 08:00--16:00, do not show, and respond to light rain where the camera sensors do not; and snow on the ground shows no effect at the Girouard detector. The first may reflect who rides where; the second and third are what one would expect from the difference between a 24-hour count and a daytime window; the last is unexplained. None of this was tested formally: the series cover different periods.
 
 \section{Year to year, after weather}
 The counting-year terms of the models compare the same series across years with weather, day type and time of year held fixed:
@@ -209,7 +216,7 @@ Draper & 2025--26 against 2024--25 & 245 & $-$12 ($-$20 to $-$5) \\
 BIXI station & 2025--26 against 2024--25 & 229 & $-$10 ($-$16 to $-$4) \\
 City counters & 2025--26 against 2024--25 & 361 & $-$7 ($-$14 to 0) \\
 \bottomrule\end{tabular}\end{center}
-These figures are to be read with care. A year term absorbs anything that differs between the years besides the weather: the sensors\textquoteright{} gaps fall in different months each year, a camera sensor\textquoteright{}s field of view can change when it is remounted, and the 2026--27 counting year so far holds only August~15 to early November. King Edward\textquoteright{}s 2026--27 figure compares that autumn with the autumn of 2024. Draper\textquoteright{}s and the BIXI station\textquoteright{}s later years are merged (too few days after August~15, 2026), and the City counters\textquoteright{} 2026--27 term is not shown (its first year holds no autumn to compare with). The loop has a single year and no such term.
+These figures are to be read with care. A year term absorbs anything that differs between the years besides the weather: the sensors\textquoteright{} gaps fall in different months each year, a camera sensor\textquoteright{}s field of view can change when it is remounted, and the 2026--27 counting year so far holds only August~15 to early November. King Edward\textquoteright{}s 2026--27 figure compares that autumn with the autumn of 2024. Draper\textquoteright{}s and the BIXI station\textquoteright{}s later years are merged (too few days after August~15, 2026), and the City counters\textquoteright{} 2026--27 term is not shown (its first year holds no autumn to compare with). The loop and the Girouard detector each have about one year and no such term.
 
 \section{How well the models predict}
 Each calendar month in turn was left out, the model fitted on the rest, and the month predicted:
@@ -219,6 +226,7 @@ Series & Days predicted & Fitted & Month left out & Fitted & Month left out\\\mi
 King Edward & 691 & 22 & 23 & 0.84 & 0.82 \\
 Draper & 505 & 19 & 20 & 0.88 & 0.86 \\
 Kensington loop & 284 & 20 & 25 & 0.92 & 0.87 \\
+Girouard detector & 296 & 13 & 14 & 0.92 & 0.90 \\
 BIXI station & 441 & 15 & 17 & 0.59 & 0.50 \\
 City counters & 661 & 15 & 18 & 0.94 & 0.93 \\
 \bottomrule\end{tabular}\end{center}
@@ -227,7 +235,8 @@ The typical day is predicted to within about a fifth to a quarter of its count, 
 \section{Limits}
 \begin{itemize}
 \item \textbf{Daylight-only sensors.} The Telraam figures are 08:00--16:00 counts. They say nothing about evening and night riding, and their levels are never to be compared with the loop\textquoteright{}s.
-\item \textbf{Gaps.} King Edward has no valid day in February 2026 and few in December 2025 and July 2026; Draper has none from February to April 2026. The winter of 2025--26 is therefore thinly covered by the camera sensors and carried mostly by the loop.
+\item \textbf{Gaps.} King Edward has no valid day in February 2026 and few in December 2025 and July 2026; Draper has none from February to April 2026. The winter of 2025--26 is therefore thinly covered by the camera sensors and carried mostly by the loop and the Girouard detector.
+\item \textbf{The Girouard detector: one direction, one winter,} and a camera-type detector whose counting method the City\textquoteright{}s page does not detail.
 \item \textbf{One loop site, one winter, one direction} in the models; the westbound channel is not used after the fault of March 2026, and for consistency not before.
 \item \textbf{Weather at the airport,} 9\,km away; precipitation as 24-hour totals; the state of the lane itself (cleared or not, icy or not) is not observed. Snow on the ground at the airport stands in for it.
 \item \textbf{Season and weather are confounded} and no model can fully separate them from this record.
@@ -237,37 +246,37 @@ The typical day is predicted to within about a fifth to a quarter of its count, 
 
 \appendix
 \section{Valid days by month}\label{app:coverage}
-\begin{center}\footnotesize\begin{tabular}{@{}lrrrrr@{}}\toprule
-Month & King Edward & Draper & Kensington loop & BIXI station & City counters\\\midrule
-2024-08 & 14 & 0 & 0 & 31 & 0 \\
-2024-09 & 26 & 4 & 0 & 30 & 0 \\
-2024-10 & 28 & 18 & 0 & 31 & 0 \\
-2024-11 & 29 & 21 & 0 & 21 & 0 \\
-2024-12 & 19 & 21 & 0 & 0 & 0 \\
-2025-01 & 26 & 24 & 0 & 0 & 30 \\
-2025-02 & 27 & 22 & 0 & 0 & 21 \\
-2025-03 & 30 & 22 & 0 & 0 & 30 \\
-2025-04 & 30 & 30 & 0 & 20 & 30 \\
-2025-05 & 31 & 29 & 0 & 31 & 31 \\
-2025-06 & 30 & 30 & 0 & 30 & 30 \\
-2025-07 & 31 & 30 & 6 & 29 & 31 \\
-2025-08 & 30 & 27 & 31 & 14 & 31 \\
-2025-09 & 28 & 28 & 30 & 30 & 30 \\
-2025-10 & 31 & 31 & 31 & 31 & 31 \\
-2025-11 & 30 & 27 & 30 & 30 & 30 \\
-2025-12 & 14 & 26 & 31 & 31 & 31 \\
-2026-01 & 25 & 12 & 29 & 25 & 29 \\
-2026-02 & 0 & 0 & 28 & 23 & 28 \\
-2026-03 & 22 & 0 & 29 & 28 & 29 \\
-2026-04 & 30 & 0 & 30 & 30 & 30 \\
-2026-05 & 31 & 18 & 28 & 31 & 31 \\
-2026-06 & 29 & 25 & 27 & 30 & 30 \\
-2026-07 & 10 & 19 & 31 & 31 & 31 \\
-2026-08 & 22 & 16 & 31 & 31 & 31 \\
-2026-09 & 30 & 17 & 0 & 0 & 30 \\
-2026-10 & 31 & 13 & 0 & 0 & 31 \\
-2026-11 & 8 & 0 & 0 & 0 & 6 \\
-\bottomrule\multicolumn{6}{@{}p{11cm}}{\footnotesize Loop: days valid in the daily table (both directions); the models use the eastbound channel, to May~10, 2026. BIXI: days with at least one trip.}\end{tabular}\end{center}
+\begin{center}\footnotesize\begin{tabular}{@{}lrrrrrr@{}}\toprule
+Month & King Edward & Draper & Kensington loop & Girouard detector & BIXI station & City counters\\\midrule
+2024-08 & 14 & 0 & 0 & 0 & 31 & 0 \\
+2024-09 & 26 & 4 & 0 & 0 & 30 & 0 \\
+2024-10 & 28 & 18 & 0 & 0 & 31 & 0 \\
+2024-11 & 29 & 21 & 0 & 0 & 21 & 0 \\
+2024-12 & 19 & 21 & 0 & 0 & 0 & 0 \\
+2025-01 & 26 & 24 & 0 & 0 & 0 & 30 \\
+2025-02 & 27 & 22 & 0 & 0 & 0 & 21 \\
+2025-03 & 30 & 22 & 0 & 0 & 0 & 30 \\
+2025-04 & 30 & 30 & 0 & 0 & 20 & 30 \\
+2025-05 & 31 & 29 & 0 & 0 & 31 & 31 \\
+2025-06 & 30 & 30 & 0 & 0 & 30 & 30 \\
+2025-07 & 31 & 30 & 6 & 0 & 29 & 31 \\
+2025-08 & 30 & 27 & 31 & 0 & 14 & 31 \\
+2025-09 & 28 & 28 & 30 & 0 & 30 & 30 \\
+2025-10 & 31 & 31 & 31 & 8 & 31 & 31 \\
+2025-11 & 30 & 27 & 30 & 30 & 30 & 30 \\
+2025-12 & 14 & 26 & 31 & 31 & 31 & 31 \\
+2026-01 & 25 & 12 & 29 & 19 & 25 & 29 \\
+2026-02 & 0 & 0 & 28 & 26 & 23 & 28 \\
+2026-03 & 22 & 0 & 29 & 18 & 28 & 29 \\
+2026-04 & 30 & 0 & 30 & 6 & 30 & 30 \\
+2026-05 & 31 & 18 & 28 & 25 & 31 & 31 \\
+2026-06 & 29 & 25 & 27 & 30 & 30 & 30 \\
+2026-07 & 10 & 19 & 31 & 27 & 31 & 31 \\
+2026-08 & 22 & 16 & 31 & 31 & 31 & 31 \\
+2026-09 & 30 & 17 & 0 & 30 & 0 & 30 \\
+2026-10 & 31 & 13 & 0 & 15 & 0 & 31 \\
+2026-11 & 8 & 0 & 0 & 0 & 0 & 6 \\
+\bottomrule\multicolumn{7}{@{}p{12cm}}{\footnotesize Loop: days valid in the daily table (both directions); the models use the eastbound channel, to May~10, 2026. BIXI: days with at least one trip.}\end{tabular}\end{center}
 
 \section{Model comparison}\label{app:aic}
 \begin{center}\small\begin{tabular}{@{}lrrrrrr@{}}\toprule
@@ -276,6 +285,7 @@ Series & one line & two segments & spline & temperature & wind chill & Correlati
 King Edward & 7286.8 & 7269.8 & 7273.0 & 7276.2 & 7265.9 & 0.996 \\
 Draper & 5413.0 & 5384.9 & 5389.1 & 5383.0 & 5381.2 & 0.996 \\
 Kensington loop & 2743.3 & 2734.9 & 2734.5 & 2733.8 & 2732.2 & 0.995 \\
+Girouard detector & 2630.2 & 2611.6 & 2610.9 & 2612.4 & 2613.4 & 0.997 \\
 BIXI station & 3687.1 & 3676.5 & 3683.0 & 3674.8 & 3674.3 & 0.995 \\
 City counters & 12286.9 & 12242.5 & 12218.5 & 12249.8 & 12237.4 & 0.996 \\
 \bottomrule\end{tabular}\end{center}
@@ -293,7 +303,7 @@ Sunset adjustment & Counts up to 15:00 multiplied by a fixed ratio (1.65 on week
 Filling of dark hours & Five ways to fill the hours after sunset from a reference daily profile & Not kept: no count is estimated for hours the sensor did not see \\
 Daily weather regression of November 2025 & Least squares on before-15:00 counts with temperature, precipitation, wind, weekend and a linear trend; ten interaction tests; weather classes compared by $t$-tests & Kept as the main model, with a count distribution, season terms in place of the trend and autocorrelation-robust intervals \\
 Weekly season-and-anomaly split & Share of variance from a seasonal baseline and from weather anomalies, weekly & Kept, daily, as the deviance shares and the within-month model \\
-Lagged-snow regression and snow-event averages, winter 2024--25 & Ten lags of a snow proxy (precipitation on days below 0\,$^\circ$C); average response by snowfall class & Kept with measured snowfall and snow on the ground, two winters, three series, and the City\textquoteright{}s loading record \\
+Lagged-snow regression and snow-event averages, winter 2024--25 & Ten lags of a snow proxy (precipitation on days below 0\,$^\circ$C); average response by snowfall class & Kept with measured snowfall and snow on the ground, two winters, four series, and the City\textquoteright{}s loading record \\
 Winter retention, storm recovery, composite scores & Ratios of winter to summer counts by mode; one storm; ad hoc scores & Not kept \\
 Weather source & A commercial city-level feed & Environment and Climate Change Canada, Montréal-Trudeau \\
 \bottomrule\end{tabular}\end{center}

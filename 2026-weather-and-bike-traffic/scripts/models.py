@@ -16,7 +16,8 @@ never through levels. Method, in order:
   blocks     deviance explained by calendar-and-season terms alone, weather alone, both (shared and unique parts)
   M-within   harmonics and year replaced by one fixed effect per calendar month: weather effects from the
              day-to-day variation inside a month only
-  M-lags     winter days (Nov 16 – Mar 31): snowfall of the day and of each of the seven days before, snow loading
+  M-lags     winter days (Nov 16 – Mar 31): snowfall of the day and of each of the seven days before, and a flag for the
+             days the City loaded snow in the sector that contains the counter (CDN-301 or CDN-111)
   events     snowfall episodes (consecutive days with at least 2 cm merged): observed count over the count expected
              from temperature, calendar and season, from 3 days before to 7 days after the episode's first day
   hourly     Kensington loop, eastbound, hours 06:00–21:59: count ~ hour x day type + month + temperature spline
@@ -39,6 +40,7 @@ RAIN_BINS, RAIN_LAB = [-1, 0.0, 2.0, 10.0, 1e9], ['none', 'under2', '2to10', 'ov
 SNOW_BINS, SNOW_LAB = [-1, 0.0, 2.0, 10.0, 1e9], ['none', 'under2', '2to10', 'over10']
 SEAS = 's1 + c1 + s2 + c2'
 MIN_YEAR_DAYS = 60
+MIN_SPAN_DAYS = 450
 MIN_CLASS = 5   # a class or flag with fewer days than this is merged with its neighbour or left out (BIXI's season has no snow)
 
 def CALf(d): return "C(daytype, Treatment('weekday'))" + (' + xmas' if d.xmas.sum() >= MIN_CLASS else '')
@@ -72,6 +74,7 @@ def load(series):
     d['sog_flag'] = (d.sog >= 1).astype(int); d['ym'] = d.index.strftime('%Y-%m')
     d['logdaylen'] = np.log(d.daylen)
     # a counting year with fewer than MIN_YEAR_DAYS days in the series is merged with its neighbour (no separate year term)
+    if (d.index.max() - d.index.min()).days < MIN_SPAN_DAYS: d['cyc_year'] = sorted(d.cyc_year.unique())[-1]   # a record of about one year has no year term
     yrs = sorted(d.cyc_year.unique())
     for i, y in enumerate(yrs):
         if (d.cyc_year == y).sum() < MIN_YEAR_DAYS and len(yrs) > 1:
@@ -138,7 +141,7 @@ def main(argv):
     opts = dict(a[2:].split('=', 1) for a in argv if a.startswith('--') and '=' in a); nboot = int(opts.get('boot', 300))
     os.makedirs(L.TABLES, exist_ok=True)
     N = {}; coef_rows, curve_rows, prof_rows, block_rows, lag_rows, event_rows, cv_rows, yoy_rows, band_rows = [], [], [], [], [], [], [], [], []
-    series = [s for s in ('west', 'east', 'loop', 'bixi', 'city') if os.path.exists(os.path.join(L.DERIVED, f'daily_{s}.csv'))]
+    series = [s for s in ('west', 'east', 'loop', 'gir', 'bixi', 'city') if os.path.exists(os.path.join(L.DERIVED, f'daily_{s}.csv'))]
     for s in series:
         d = load(s); n = N[s] = {'n_days': int(len(d)), 'first': str(d.index.min().date()), 'last': str(d.index.max().date()), 'mean_count': float(d.y.mean())}
         print(f'--- {s}: {len(d)} days', flush=True)
@@ -224,14 +227,14 @@ def main(argv):
                             'median_abs_pct_error_in': 100 * float(np.median(np.abs(ins - d.y) / np.maximum(d.y, 1))), 'r2_log_in': float(np.corrcoef(np.log1p(d.y), np.log1p(ins))[0, 1] ** 2)})
         # winter lag model and episodes
         wd = d[d.winter == 1].copy()
-        if s in ('west', 'east', 'loop') and len(wd) > 80:
-            wd = wd.dropna(subset=[f'snow_l{k}' for k in range(1, 8)])
+        if s in ('west', 'east', 'loop', 'gir') and len(wd) > 80:
+            wd = wd.dropna(subset=[f'snow_l{k}' for k in range(1, 8)]); sector = L.LOAD_SECTOR[s]; wd['loading'] = wd.loading if sector == 'CDN-301' else wd.loading_111
             lagf = f"y ~ {CALf(wd)}{year_term(wd)} + t_day + C(rain_c, Treatment('none')) + sog_flag + wind_day + snow + " + ' + '.join(f'snow_l{k}' for k in range(1, 8)) + ' + loading'
-            rl = fit_nb(lagf, wd); n['winter_days'] = int(len(wd)); n['winter_loading_days'] = int(wd.loading.sum()); n['winter_alpha'] = rl.alpha_used
+            rl = fit_nb(lagf, wd); n['winter_days'] = int(len(wd)); n['loading_sector'] = sector; n['winter_loading_days'] = int(wd.loading.sum()); n['winter_alpha'] = rl.alpha_used
             for k in range(0, 8):
                 nm = 'snow' if k == 0 else f'snow_l{k}'; bb, ss = rl.params[nm], rl.bse[nm]
                 lag_rows.append({'series': s, 'lag_days': k, 'pct_per_5cm': 100 * (np.exp(5 * bb) - 1), 'lo': 100 * (np.exp(5 * (bb - 1.96 * ss)) - 1), 'hi': 100 * (np.exp(5 * (bb + 1.96 * ss)) - 1), 'p': float(rl.pvalues[nm])})
-            coef_rows.append({'series': s, 'model': 'winter_lags', 'term': 'loading_day_CDN301', 'days': int(wd.loading.sum()), **rr(rl, 'loading')})
+            coef_rows.append({'series': s, 'model': 'winter_lags', 'term': 'loading_day', 'sector': sector, 'days': int(wd.loading.sum()), **rr(rl, 'loading')})
             coef_rows.append({'series': s, 'model': 'winter_lags', 'term': 'temp_per_degree', 'days': int(len(wd)), **rr(rl, 't_day')})
             # episodes: expected count from a winter model without any snow term
             ef = f"y ~ {CALf(wd)}{year_term(wd)} + t_day + C(rain_c, Treatment('none')) + wind_day"

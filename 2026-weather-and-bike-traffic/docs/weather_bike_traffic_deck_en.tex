@@ -1,20 +1,21 @@
 \documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs,amsmath}
 \setbeamertemplate{footline}{\hfill{\tiny\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, November 10, 2026}\quad\insertframenumber}\hspace{1em}\vspace{0.4em}}
-\title{Weather, daylight, snow and bicycle traffic on rue de Terrebonne}\subtitle{Five count series, August 2024 to November 2026: methods in brief and the main results}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{November 10, 2026}
+\title{Weather, daylight, snow and bicycle traffic on rue de Terrebonne}\subtitle{Six count series, August 2024 to November 2026: methods in brief and the main results}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{November 10, 2026}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \begin{frame}{The question and the sources}
 \begin{itemize}
 \item How does the number of bicycles counted on rue de Terrebonne vary with temperature, wind chill, rain, snow, daylight and snow loading?
-\item Five series, each analysed on its own and never compared in level:
+\item Six series, each analysed on its own and never compared in level:
 \begin{itemize}\footnotesize
 \item \textbf{King Edward} and \textbf{Draper}: citizen-operated Telraam camera sensors, bicycles 08:00--16:00 (691 and 509 valid days from August and September 2024)
 \item \textbf{Kensington loop}: the borough\textquoteright{}s counter, eastbound, 24 h (284 days, July 27, 2025 to May 10, 2026; hourly release of June 4, 2026)
+\item \textbf{Girouard detector}: the City\textquoteright{}s detector at the east end, westbound, 24 h (296 days, October 24, 2025 to October 15, 2026)
 \item \textbf{BIXI station} Grand Boulevard / de Terrebonne: trips starting or ending, regular season
 \item \textbf{City counters}: twelve loop counters elsewhere in Montréal, as a reference
 \end{itemize}
-\item Weather: Environment and Climate Change Canada, Montréal-Trudeau (daily rain, snowfall, snow on the ground; hourly temperature and wind). Snow loading: the City\textquoteright{}s record for sector CDN-301.
+\item Weather: Environment and Climate Change Canada, Montréal-Trudeau (daily rain, snowfall, snow on the ground; hourly temperature and wind). Snow loading: the City\textquoteright{}s record for the sector that contains each counter (CDN-301, CDN-111).
 \end{itemize}
 \end{frame}
 \begin{frame}{The record}
@@ -42,11 +43,11 @@
 \centering\includegraphics[width=0.62\textwidth,height=0.76\textheight,keepaspectratio]{../derived/figures/temperature-scatter/temperature_scatter_en.png}\\[0.2em]{\scriptsize Each panel has its own scale. Black line: median of the days without precipitation.}
 \end{frame}
 \begin{frame}{Temperature: the fitted response, relative to 20\,$^\circ$C}
-\centering\includegraphics[width=0.66\textwidth,height=0.76\textheight,keepaspectratio]{../derived/figures/temperature-curve/temperature_curve_en.png}\\[0.2em]{\scriptsize Terrebonne series: 5 to 6\,\% more bicycles per degree up to roughly 20\,$^\circ$C; at 0\,$^\circ$C, 30 to 34\,\% of the count at 20\,$^\circ$C; at $-$10\,$^\circ$C, 17 to 20\,\%.}
+\centering\includegraphics[width=0.66\textwidth,height=0.76\textheight,keepaspectratio]{../derived/figures/temperature-curve/temperature_curve_en.png}\\[0.2em]{\scriptsize Terrebonne series: 5 to 6\,\% more bicycles per degree up to roughly 20\,$^\circ$C; at 0\,$^\circ$C, 30 to 43\,\% of the count at 20\,$^\circ$C; at $-$10\,$^\circ$C, 17 to 28\,\%.}
 \end{frame}
 \begin{frame}{Temperature: what the fits say}
 \begin{itemize}
-\item Below roughly 20\,$^\circ$C, each degree goes with 5 to 6\,\% more bicycles on the three Terrebonne series; the same inside calendar months.
+\item Below roughly 20\,$^\circ$C, each degree goes with 5 to 6\,\% more bicycles on the four Terrebonne series; the same inside calendar months.
 \item Above that the count is flat or falls slightly. The position of the bend is poorly determined (intervals of ten degrees or more): the response bends gradually.
 \item \textbf{No second change of slope in the cold}: below 0\,$^\circ$C the percentage slope is not distinguishable from the slope between 0 and 20\,$^\circ$C.
 \item The $-$1 and $-$5\,$^\circ$C thresholds of the earlier analyses came from fitting straight lines to the counts themselves.
@@ -63,14 +64,15 @@
 \centering\includegraphics[width=0.84\textwidth,height=0.76\textheight,keepaspectratio]{../derived/figures/daylight/daylight_en.png}\\[0.2em]{\scriptsize On the loop (hourly), the same evening hour carries 27\,\% (19 to 34) fewer bicycles after sunset than before, at the same temperature and in the same month.}
 \end{frame}
 \begin{frame}{Snowfall and the days after (winter days)}
-\centering\includegraphics[width=0.9\textwidth,height=0.76\textheight,keepaspectratio]{../derived/figures/snow-lags/snow_lags_en.png}\\[0.2em]{\scriptsize The day of the snowfall shows the clearest reduction; no pattern common to the three series on the following days. Snow on the ground carries part of the after-effect.}
+\centering\includegraphics[width=0.9\textwidth,height=0.76\textheight,keepaspectratio]{../derived/figures/snow-lags/snow_lags_en.png}\\[0.2em]{\scriptsize The day of the snowfall shows the clearest reduction; no pattern common to the four series on the following days. Snow on the ground carries part of the after-effect.}
 \end{frame}
 \begin{frame}{Snow-loading days}
-\begin{center}\small\begin{tabular}{lrrl}\toprule
-Series & Winter days & Loading days & Change on a loading day (\%)\\\midrule
-King Edward & 191 & 44 & $-$4 ($-$29 to +30) \\
-Draper & 154 & 37 & $-$21 ($-$48 to +21) \\
-Kensington loop & 132 & 36 & +2 ($-$25 to +39) \\
+\begin{center}\small\begin{tabular}{llrrl}\toprule
+Series & Sector & Winter days & Loading days & Change on a loading day (\%)\\\midrule
+King Edward & CDN-301 & 191 & 44 & $-$4 ($-$29 to +30) \\
+Draper & CDN-111 & 154 & 34 & $-$18 ($-$45 to +22) \\
+Kensington loop & CDN-301 & 132 & 36 & +2 ($-$25 to +39) \\
+Girouard detector & CDN-111 & 109 & 18 & $-$9 ($-$25 to +11) \\
 \bottomrule\end{tabular}\end{center}
 \begin{itemize}
 \item With temperature, snowfall, snow on the ground, rain, wind and day type in the model, loading days are not distinguishable from other winter days.
@@ -84,6 +86,7 @@ Series & Days & Fitted & Month left out & Fitted & Month left out\\\midrule
 King Edward & 691 & 22 & 23 & 0.84 & 0.82 \\
 Draper & 505 & 19 & 20 & 0.88 & 0.86 \\
 Kensington loop & 284 & 20 & 25 & 0.92 & 0.87 \\
+Girouard detector & 296 & 13 & 14 & 0.92 & 0.90 \\
 BIXI station & 441 & 15 & 17 & 0.59 & 0.50 \\
 City counters & 661 & 15 & 18 & 0.94 & 0.93 \\
 \bottomrule\end{tabular}\end{center}
@@ -93,7 +96,7 @@ Each calendar month in turn is left out and predicted from the rest.
 \begin{itemize}
 \item Telraam figures are 08:00--16:00 counts; never compared in level with the loop.
 \item Gaps: King Edward has no valid day in February 2026; Draper none from February to April 2026.
-\item The loop: one site, one winter, one direction.
+\item The loop and the Girouard detector: one winter and one direction each.
 \item Weather at the airport (9 km); precipitation as 24-hour totals; the state of the lane is not observed.
 \item Season and weather are confounded; the models describe association in the record, not cause.
 \item Year-to-year terms absorb anything that differs between years besides the weather (gaps, sensor position); see the note.

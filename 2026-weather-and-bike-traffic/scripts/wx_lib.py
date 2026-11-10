@@ -7,6 +7,8 @@ Series (never pooled, never compared in level):
   loop         the borough's Eco-Counter loop at Kensington, 24 h: hourly by direction (access request 2026-300,
                released June 4, 2026, to May 11, 2026) and daily totals (request 2026-581, released October 9, 2026,
                to August 31, 2026), both in the sibling clone Terrebonne-access-requests
+  gir          the City's detector at Girouard (det-00118-01), bicycles westbound on Terrebonne, 24 h, from October 24, 2025
+               (City open data « Compteurs cyclistes permanents », files downloaded October 16, 2026)
   bixi         BIXI trips starting or ending at the station « Grand Boulevard / de Terrebonne » (BIXI Montréal open data)
   city         the City's permanent loop counters elsewhere in Montréal (City open data), as a reference
 Weather: Environment and Climate Change Canada, Montréal-Trudeau (climate ID 7025251), raw/eccc/.
@@ -27,12 +29,16 @@ DERIVED = os.path.join(ROOT, 'derived'); TABLES = os.path.join(DERIVED, 'tables'
 LAT, LON = 45.4702, -73.6320            # the Kensington counter
 WIN = (8, 16)                           # fixed clock window, hours 08:00–15:59: daylight on every day of the year at this latitude
 MIN_HOURS, MIN_UPTIME, WIN_UPTIME = 8, 6.0, 0.5
+# the City's snow-removal sector that contains each counter (2025-26 sectors): CDN-301 runs from the lane's west end to Royal,
+# CDN-111 from Draper to Girouard
+LOAD_SECTOR = {'west': 'CDN-301', 'loop': 'CDN-301', 'east': 'CDN-111', 'gir': 'CDN-111'}
 LOOP_EXCLUDE = {'2026-05-29', '2026-05-30', '2026-05-31', '2026-06-07', '2026-06-08', '2026-06-09'}  # outage (zeros), counter-fault value, days missing from the Oct 9 table
 WB_DEGRADED_FROM = '2026-03-01'
 SERIES = {  # slug: (label EN, label FR, colour)
     'west': ('King Edward (Telraam, 08:00–16:00)', 'King Edward (Telraam, 8 h–16 h)', '#2a78d6'),
     'east': ('Draper (Telraam, 08:00–16:00)', 'Draper (Telraam, 8 h–16 h)', '#eb6834'),
     'loop': ('Kensington loop (24 h)', 'Boucle Kensington (24 h)', '#1baf7a'),
+    'gir': ('Girouard detector (westbound, 24 h)', 'Détecteur Girouard (vers l\u2019ouest, 24 h)', '#c9930a'),
     'bixi': ('BIXI station Grand / Terrebonne (trips)', 'Station BIXI Grand / Terrebonne (trajets)', '#6250d6'),
     'city': ('City counters elsewhere (24 h, reference)', 'Compteurs de la Ville ailleurs (24 h, référence)', '#5f6b74'),
 }
@@ -126,8 +132,8 @@ def weather_daily():
 
 def loading_flags(idx):
     l = pd.read_csv(LOADING, parse_dates=['day'])
-    s = l[l.NomSecteur == 'CDN-301'].groupby('day').loads.sum(); b = l[l.ArrondissementCode == 'CDN'].groupby('day').loads.sum()
-    return pd.DataFrame({'loads_301': s.reindex(idx).fillna(0).values, 'loads_cdn': b.reindex(idx).fillna(0).values}, index=idx)
+    s = l[l.NomSecteur == 'CDN-301'].groupby('day').loads.sum(); e = l[l.NomSecteur == 'CDN-111'].groupby('day').loads.sum(); b = l[l.ArrondissementCode == 'CDN'].groupby('day').loads.sum()
+    return pd.DataFrame({'loads_301': s.reindex(idx).fillna(0).values, 'loads_111': e.reindex(idx).fillna(0).values, 'loads_cdn': b.reindex(idx).fillna(0).values}, index=idx)
 
 # ---------------------------------------------------------------- counts
 def telraam_hourly(seg):
@@ -171,13 +177,25 @@ def loop_daily():
     o['wb_degraded'] = (o.index >= WB_DEGRADED_FROM).astype(int)
     return o
 
+GIR_INSTANCE, GIR_MIN_HOURS = 'det-00118-01', 22
+def girouard_daily():
+    """City detector at Girouard, the Terrebonne westbound channel: daily total from the hourly rows; a day is valid when
+    at least GIR_MIN_HOURS of its 24 hourly rows are present and the total is above zero."""
+    fs = sorted(glob.glob(os.path.join(CITY_DIR, 'cyclistes_202[56]_2026-10-16.csv')))
+    d = pd.concat([pd.read_csv(f) for f in fs]); d = d[(d.instance == GIR_INSTANCE) & (d.agg_code == 'h')].copy()
+    d['t'] = pd.to_datetime(d.periode, format='mixed'); d = d.drop_duplicates('t').set_index('t').sort_index()
+    o = d.groupby(d.index.normalize()).volume.agg(hours='size', bike='sum')
+    w = d[(d.index.hour >= WIN[0]) & (d.index.hour < WIN[1])]; o['bike_win'] = w.groupby(w.index.normalize()).volume.sum()
+    o['valid'] = ((o.hours >= GIR_MIN_HOURS) & (o.bike > 0)).astype(int); o.index.name = 'date'
+    return o
+
 def design_frame(counts, extra_cols=()):
     """Join a daily count frame with weather, calendar and snow-loading columns; adds lagged snowfall."""
     w = weather_daily(); idx = w.index
     f = w.join(calendar_frame(idx)).join(loading_flags(idx))
     for k in range(1, 8): f[f'snow_l{k}'] = f.snow.shift(k)
     f['snow3'] = f.snow.shift(1).rolling(3).sum(); f['rain_l1'] = f.rain.shift(1)
-    f['loading'] = (f.loads_301 > 0).astype(int); f['loading_cdn'] = (f.loads_cdn > 0).astype(int)
+    f['loading'] = (f.loads_301 > 0).astype(int); f['loading_111'] = (f.loads_111 > 0).astype(int); f['loading_cdn'] = (f.loads_cdn > 0).astype(int)
     f['winter'] = [int((d.month, d.day) >= (11, 16) or d.month <= 3) for d in f.index]
     return counts.join(f, how='inner')
 
@@ -213,7 +231,7 @@ def read_daily(series):
     else: d = d[d.valid == 1].copy(); d['y'] = d.bike
     return d
 SERIES_NOTE = {
-    'en': {'west': 'bicycles, 08:00–16:00', 'east': 'bicycles, 08:00–16:00', 'loop': 'bicycles eastbound, 24 h', 'bixi': 'trips starting or ending', 'city': 'bicycles, 12 counters, 24 h'},
-    'fr': {'west': 'vélos, 8 h–16 h', 'east': 'vélos, 8 h–16 h', 'loop': "vélos vers l'est, 24 h", 'bixi': 'trajets au départ ou à l’arrivée', 'city': 'vélos, 12 compteurs, 24 h'}}
-SHORT = {'en': {'west': 'King Edward', 'east': 'Draper', 'loop': 'Kensington loop', 'bixi': 'BIXI station', 'city': 'City counters'},
-         'fr': {'west': 'King Edward', 'east': 'Draper', 'loop': 'Boucle Kensington', 'bixi': 'Station BIXI', 'city': 'Compteurs de la Ville'}}
+    'en': {'west': 'bicycles, 08:00–16:00', 'east': 'bicycles, 08:00–16:00', 'loop': 'bicycles eastbound, 24 h', 'gir': 'bicycles westbound, 24 h', 'bixi': 'trips starting or ending', 'city': 'bicycles, 12 counters, 24 h'},
+    'fr': {'west': 'vélos, 8 h–16 h', 'east': 'vélos, 8 h–16 h', 'loop': "vélos vers l'est, 24 h", 'gir': "vélos vers l'ouest, 24 h", 'bixi': 'trajets au départ ou à l’arrivée', 'city': 'vélos, 12 compteurs, 24 h'}}
+SHORT = {'en': {'west': 'King Edward', 'east': 'Draper', 'loop': 'Kensington loop', 'gir': 'Girouard detector', 'bixi': 'BIXI station', 'city': 'City counters'},
+         'fr': {'west': 'King Edward', 'east': 'Draper', 'loop': 'Boucle Kensington', 'gir': 'Détecteur Girouard', 'bixi': 'Station BIXI', 'city': 'Compteurs de la Ville'}}

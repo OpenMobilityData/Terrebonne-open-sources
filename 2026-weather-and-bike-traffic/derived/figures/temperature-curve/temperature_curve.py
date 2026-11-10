@@ -9,7 +9,7 @@ plt = L.fig_setup(); T = L.TABLES
 cur = pd.read_csv(os.path.join(T, 'temperature_curve.csv'))
 for lang in ('en', 'fr'):
     fig, ax = plt.subplots(figsize=(8.2, 5.0)); L.style_axes(ax)
-    for s in ['city', 'bixi', 'loop', 'east', 'west']:
+    for s in ['city', 'bixi', 'gir', 'loop', 'east', 'west']:
         c = cur[cur.series == s]; col = L.SERIES[s][2]
         ax.fill_between(c.temp, c.lo, c.hi, color=col, alpha=0.12, lw=0)
         ax.plot(c.temp, c.index_20C_100, color=col, lw=2, label=L.SHORT[lang][s])
