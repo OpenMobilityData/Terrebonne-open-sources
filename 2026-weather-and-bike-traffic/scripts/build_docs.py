@@ -2,7 +2,8 @@
 """Note (A4, pdflatex) and slide deck (beamer 16:9), English, from derived/numbers.json, derived/tables/ and the
 figures. Every figure in the text is read from the tables at build time.
 Usage: python3 scripts/build_docs.py [--final]   (without --final both documents carry a DRAFT mark)
-Writes docs/weather_bike_traffic_note_en.{tex,pdf} and docs/weather_bike_traffic_deck_en.{tex,pdf}."""
+Writes docs/weather_bike_traffic_note_en.{tex,pdf}, docs/weather_bike_traffic_deck_en.{tex,pdf} and docs/deck_figures_en/NN-<figure>.png
+(each figure of the deck, named by the number of the slide that shows it)."""
 import os, sys, json, subprocess, datetime
 import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, '..')); DOCS = os.path.join(ROOT, 'docs'); T = os.path.join(ROOT, 'derived', 'tables')
@@ -448,6 +449,14 @@ Each calendar month in turn is left out and predicted from the rest.''') + fr('L
 '''
 
 os.makedirs(DOCS, exist_ok=True)
+# the deck's figures as PNG files named by slide number (07-effects.png = the figure of slide 7), rewritten at each build
+import re, shutil, glob
+FIGDIR = os.path.join(DOCS, 'deck_figures_en'); os.makedirs(FIGDIR, exist_ok=True)
+for old in glob.glob(os.path.join(FIGDIR, '*.png')): os.remove(old)
+for n, frame in enumerate(DECK.split('\\begin{frame}')[1:], 1):
+    for m in re.finditer(r'\\includegraphics\[[^\]]*\]\{([^}]+)\}', frame):
+        src = os.path.normpath(os.path.join(DOCS, m.group(1))); name = os.path.basename(src).replace('_en.png', '.png').replace('_', '-')
+        shutil.copyfile(src, os.path.join(FIGDIR, f'{n:02d}-{name}')); print('slide figure', f'{n:02d}-{name}')
 for name, tex, runs in (('weather_bike_traffic_note_en', NOTE, 3), ('weather_bike_traffic_deck_en', DECK, 2)):
     open(os.path.join(DOCS, name + '.tex'), 'w', encoding='utf-8').write(tex)
     for _ in range(runs):
