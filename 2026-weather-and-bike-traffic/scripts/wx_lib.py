@@ -2,7 +2,7 @@
 """Shared loaders and helpers for the weather-and-bike-traffic component.
 
 Series (never pooled, never compared in level):
-  west, east   the author's two Telraam S2 sensors (King Edward, Draper): daylight counts, hourly, from the Telraam API
+  west, east   two citizen-operated Telraam S2 sensors (King Edward, Draper): daylight counts, hourly, from the Telraam API
                copy in the sibling clone Terrebonne-telraam/data/api/ (not published: Telraam owns the counts)
   loop         the borough's Eco-Counter loop at Kensington, 24 h: hourly by direction (access request 2026-300,
                released June 4, 2026, to May 11, 2026) and daily totals (request 2026-581, released October 9, 2026,

@@ -1,6 +1,6 @@
 Lay summary
 
-How much does the weather change cycling on rue de Terrebonne? This note uses every count available for the street: the author's two camera sensors at King Edward and Draper, the borough's counter at Kensington, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere in Montréal for comparison. Weather is Environment Canada's record at Trudeau airport; the counts run from August 2024 to November 2026.
+How much does the weather change cycling on rue de Terrebonne? This note uses every count available for the street: citizen-operated camera sensors at King Edward and Draper, the borough's counter at Kensington, and trips at the BIXI station at Grand Boulevard, with City counters elsewhere in Montréal for comparison. Weather is Environment Canada's record at Trudeau airport; the counts run from August 2024 to November 2026.
 
 Temperature matters most. Each degree warmer brings about 5 to 6 per cent more bicycles, up to about 20 °C, where the numbers stop rising. A day at 0 °C sees 30 to 34 per cent of the bicycles of the same day at 20 °C; a day at −10 °C, 17 to 20 per cent. The decline is steady: there is no temperature below which cycling stops.
 

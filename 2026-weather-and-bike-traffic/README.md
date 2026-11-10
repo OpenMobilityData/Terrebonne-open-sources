@@ -10,7 +10,7 @@ The series are never added together and never compared in level: they count diff
 
 | Series | What is counted | Period used | Source |
 |---|---|---|---|
-| King Edward | Bicycles, both directions, **08:00–16:00**, Telraam S2 camera sensor (west of Cavendish) | August 16, 2024 → November 8, 2026 | The author's sensor; Telraam API pull of November 9, 2026 ([Terrebonne-telraam](https://github.com/OpenMobilityData/Terrebonne-telraam)) |
+| King Edward | Bicycles, both directions, **08:00–16:00**, Telraam S2 camera sensor (west of Cavendish) | August 16, 2024 → November 8, 2026 | Citizen-operated sensor, installed by Terrebonne residents; Telraam API pull of November 9, 2026 ([Terrebonne-telraam](https://github.com/OpenMobilityData/Terrebonne-telraam)) |
 | Draper | The same, east of Cavendish | September 25, 2024 → January 24, 2026 and May 7 → October 21, 2026 | The same |
 | Kensington loop | Bicycles **eastbound**, 24 hours, the borough's Eco-Counter loop | July 27, 2025 → May 10, 2026 | Hourly workbook released June 4, 2026 under access request [2026-300](https://github.com/OpenMobilityData/Terrebonne-access-requests/tree/main/2026-300) |
 | BIXI station | Trips starting or ending at « Grand Boulevard / de Terrebonne » (6 m from the lane) | April 15 → November 15 of 2024, 2025 and 2026 (to August 31, 2026) for the models; all days with trips in the charts | BIXI Montréal open data |
@@ -65,7 +65,7 @@ Python 3 with pandas, numpy, scipy, statsmodels, matplotlib and openpyxl; pdflat
 | Source | Where | Terms |
 |---|---|---|
 | Environment and Climate Change Canada, historical climate data, Montréal-Trudeau (7025251) | [climate.weather.gc.ca](https://climate.weather.gc.ca/), downloaded November 10, 2026 | [Environment and Climate Change Canada Data Servers End-use Licence](https://eccc-msc.github.io/open-data/licence/readme_en/); files reproduced in `raw/eccc/` with attribution |
-| Telraam counts (the author's two sensors) | Telraam API | The counts belong to Telraam and are not republished (see the Terrebonne-telraam README, « Data and licence »); only daily window totals computed from them appear here |
+| Telraam counts (two citizen-operated sensors) | Telraam API | The counts belong to Telraam and are not republished (see the Terrebonne-telraam README, « Data and licence »); only daily window totals computed from them appear here |
 | Borough loop counter, Kensington | Access requests 2026-300 and 2026-581, [Terrebonne-access-requests](https://github.com/OpenMobilityData/Terrebonne-access-requests) | Released under the Act respecting access to documents held by public bodies |
 | City snow-removal transactions (`loading_daily.csv`) | City of Montréal open data, via Terrebonne-access-requests `2026-300/derived/` | CC BY 4.0, Ville de Montréal |
 | City permanent bicycle counters | [donnees.montreal.ca](https://donnees.montreal.ca/dataset/cyclistes), files of November 7, 2026 | CC BY 4.0, Ville de Montréal |
