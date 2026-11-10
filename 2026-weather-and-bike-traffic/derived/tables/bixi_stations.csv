@@ -1,0 +1,4 @@
+station,latitude,longitude,metres_from_lane_axis,first_day,last_day,days_with_trips,starts,ends
+Grand Boulevard / de Terrebonne,45.47054,-73.63166,6,2024-04-03,2026-08-31,710,17345,19031
+Grand Boulevard / de Terrebonne 2,45.47042,-73.63158,18,2026-05-13,2026-05-13,1,8,8
+Loyola / Somerled,45.47042,-73.63157,19,2026-05-13,2026-05-13,1,2,11
