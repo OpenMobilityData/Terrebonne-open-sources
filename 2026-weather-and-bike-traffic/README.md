@@ -37,6 +37,7 @@ Limits of each series, stated once here and again in the note:
 | [`scripts/city_counters_daily.py`](scripts/city_counters_daily.py) → [`derived/city_counters_daily.csv`](derived/city_counters_daily.csv), [`derived/tables/city_counters_kept.csv`](derived/tables/city_counters_kept.csv) | The reference series: the twelve City loop counters that report on at least 97 % of days with no run of more than two zero days, summed on the days when all twelve report |
 | [`scripts/build_dataset.py`](scripts/build_dataset.py) → `derived/daily_<series>.csv`, [`derived/weather_daily.csv`](derived/weather_daily.csv), [`derived/tables/coverage_by_month.csv`](derived/tables/coverage_by_month.csv) | One table per series: the day's count and validity flags, weather, calendar, day length, snow loading (sectors CDN-301 and CDN-111, and the borough), lagged snowfall |
 | [`scripts/models.py`](scripts/models.py) → [`derived/tables/`](derived/tables/), [`derived/numbers.json`](derived/numbers.json) | Every model and every table (list below) |
+| [`scripts/year_comparison.py`](scripts/year_comparison.py) → [`derived/tables/year_comparison_steps.csv`](derived/tables/year_comparison_steps.csv), [`year_comparison_weather.csv`](derived/tables/year_comparison_weather.csv) | The year-to-year comparison in three steps (the same calendar dates valid in both years, no model; a model with day type and time of year; the main model with the weather), and how the weather differed between the years on those dates |
 | `derived/figures/<type>/` | One folder per figure type, the script beside its PNG and SVG, English and French: `overview`, `temperature-scatter`, `temperature-curve`, `effects`, `season-weather`, `daylight`, `snow-lags`, `breakpoint` |
 | [`scripts/build_docs.py`](scripts/build_docs.py) → [`docs/`](docs/) | The note (with a lay summary of at most 300 words, also written to [`derived/lay_abstract_en.txt`](derived/lay_abstract_en.txt)) and the slide deck (English), built from `numbers.json` and the tables |
 
@@ -56,6 +57,7 @@ The earlier MATLAB analyses of the Telraam counts (2024–2026) were read before
 ~/.venvs/omd/bin/python scripts/city_counters_daily.py   # needs the City's counter files in ~/Terrebonne-data/third-party/montreal-opendata/
 ~/.venvs/omd/bin/python scripts/build_dataset.py         # needs the sibling clones Terrebonne-telraam (with data/api/) and Terrebonne-access-requests
 ~/.venvs/omd/bin/python scripts/models.py --boot=300
+~/.venvs/omd/bin/python scripts/year_comparison.py
 for f in derived/figures/*/*.py; do ~/.venvs/omd/bin/python "$f"; done
 ~/.venvs/omd/bin/python scripts/build_docs.py
 ```
