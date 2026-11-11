@@ -1,0 +1,17 @@
+check,lots,agree_pct,kappa,detail
+"two readings of the same lot: car access, both decisive",174,94.8,0.78,"yes/yes 146, no/no 19, yes/no 3, no/yes 6"
+"two readings of the same lot: car access, three values",248,84.3,0.7,unclear in either: 74; unclear in both: 44
+two readings of the same lot: places_independent,248,84.3,,sum 223 against 243; within one 99.6 %; mean absolute difference 0.16
+two readings of the same lot: places_total,248,75.0,,sum 310 against 318; within one 95.6 %; mean absolute difference 0.31
+reader 01,202,,,"access yes 64 %, unclear 22 %, independent places per lot 1.02, total 1.29, low confidence 42 %"
+reader 02,186,,,"access yes 61 %, unclear 18 %, independent places per lot 0.91, total 1.27, low confidence 35 %"
+reader 03,213,,,"access yes 55 %, unclear 25 %, independent places per lot 0.85, total 1.28, low confidence 50 %"
+reader 04,183,,,"access yes 63 %, unclear 17 %, independent places per lot 0.89, total 1.26, low confidence 46 %"
+reader 05,182,,,"access yes 58 %, unclear 17 %, independent places per lot 0.85, total 1.17, low confidence 41 %"
+reader 06,203,,,"access yes 62 %, unclear 23 %, independent places per lot 1.00, total 1.13, low confidence 42 %"
+reader 07,196,,,"access yes 73 %, unclear 23 %, independent places per lot 1.06, total 1.40, low confidence 32 %"
+reader 08,215,,,"access yes 67 %, unclear 13 %, independent places per lot 0.92, total 1.11, low confidence 34 %"
+reader 09,209,,,"access yes 61 %, unclear 25 %, independent places per lot 0.96, total 1.31, low confidence 50 %"
+reader 10,193,,,"access yes 64 %, unclear 21 %, independent places per lot 0.93, total 1.36, low confidence 44 %"
+reader 11,198,,,"access yes 57 %, unclear 18 %, independent places per lot 0.82, total 1.05, low confidence 36 %"
+reader 12,178,,,"access yes 61 %, unclear 31 %, independent places per lot 1.21, total 1.62, low confidence 44 %"

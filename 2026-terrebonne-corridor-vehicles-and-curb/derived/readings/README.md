@@ -1,4 +1,4 @@
-# Readings of private parking, lot by lot: FIRST PASS, NOT USED
+# Readings of private parking, lot by lot
 
 **Status (November 11, 2026): this first pass failed its checks and no figure in the note, the deck or the
 folder README rests on it.** It is kept as the record of what was tried.
@@ -38,3 +38,47 @@ folder README rests on it.** It is kept as the record of what was tried.
 5. **Rendering.** On one strip (1320240L1) three lots fall outside the image; large lots are cut by the image edge.
 6. **No ground truth.** The October 25 reading was one reader's, from above, and is not a standard either: on the
    strips looked at again, each reading is wrong in places.
+
+---
+
+# Second pass (protocol version 2): read, AWAITING THE OWNER'S CHECK, not yet used
+
+**Status (November 11, 2026): every lot has been read a second time under a corrected protocol and on enlarged
+crops. The readers agree with each other far better than in the first pass, but agreement between readers is not
+accuracy: no figure in the note, the deck or the folder README rests on these readings until the owner's check of a
+random sample (below) is in.**
+
+- **Crops:** `../../scripts/offstreet_crops.py`: 702 crops of up to five neighbouring lots at 20 pixels per metre
+  (a building of six dwellings or more, or a large lot, alone at a smaller scale), dark tones lifted;
+  `../tables/offstreet_crops.csv`. Images outside the repository.
+- **Protocol:** `PROTOCOL_v2.md`; the readers' brief: `READER_BRIEF_v2.md`. Changes from version 1: both lots on a
+  shared driveway have access; a front pad counts when a car fits between the sidewalk and the building, even partly
+  on public ground; places are recorded as independent (a car can leave without another being moved) and total;
+  « unclear » is reserved for a passage wide enough for a car with no car, paved mouth or garage visible.
+- **Readers:** thirteen independent AI readers (the assistant's subagents). Batches 1 to 12 cover every crop once
+  (`batches_v2.csv`, `v2_todo_batch_NN.csv`, `v2_batch_NN.csv`); batch 13 is a second reading of one crop in ten.
+- **Collation and checks:** `../../scripts/offstreet_readings_v2.py` → `../tables/offstreet_readings_v2.csv`,
+  `offstreet_readings_v2_second.csv`, `offstreet_reading_checks_v2.csv`.
+- **The owner's check:** `owner_check_sample.csv`: 112 lots drawn at random with a fixed seed before any
+  second-pass reading existed (100 buildings of five dwellings or fewer, 12 larger), judged by the owner on a
+  private check page from street-level imagery or on the street, without seeing any reader's answer
+  (`../../scripts/offstreet_check_page.py`). Its export goes in `owner_check.json`.
+
+| Check | Result |
+|---|---|
+| Lots read | 2,358 of 2,358: car access yes 1,468 (62 %), no 394 (17 %), unclear 496 (21 %) |
+| Buildings of five dwellings or fewer (2,262) | yes 1,428, no 364, unclear 470 |
+| Buildings of six dwellings or more (96) | yes 40, no 30, unclear 26 |
+| Places where access is yes | 1,735 independent, 2,406 total |
+| Places where access is unclear (if it is a driveway) | 507 independent, 582 total |
+| Readers | yes from 55 % to 73 % of a reader's rows, unclear from 13 % to 31 % |
+| Two readings of the same lot, both decisive (174 lots) | 95 % agree (kappa 0.78): yes/yes 146, no/no 19, yes/no 3, no/yes 6 |
+| Two readings of the same lot, three values (248 lots) | 84 % agree (kappa 0.70); unclear in either 74, in both 44 |
+| Independent places, two readings (248 lots) | 223 against 243; within one place on 99.6 % of lots |
+| Total places, two readings | 310 against 318; within one place on 95.6 % |
+
+Points the readers reported as not settled by the protocol (to be ruled on with the owner's check in hand): a
+passage lying wholly on the neighbour's side of the lot line; a paved or bare rear yard with no car and no visible
+way in; a wide shared passage with room to park on each side; large buildings with a possible underground garage
+or with parking just outside their outline; an attached wing that may be a garage; white rectangles that may be
+temporary shelters; passages within measuring error (about 0.25 m) of the 2.3 m threshold.

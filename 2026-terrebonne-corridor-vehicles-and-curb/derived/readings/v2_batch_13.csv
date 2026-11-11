@@ -1,0 +1,249 @@
+crop,label,car_access,kind,places_independent,places_total,garage,vehicle,confidence,notes
+1320235R0_2,6,no,none,0,0,no,no,medium,walkway only in front; building fills the width; no passage on its right
+1320235R0_2,7,unclear,shared driveway,1,1,unclear,no,low,passage about 3.3 m between 7 and 8 in shade; no paved crossing seen at its mouth; rear hidden
+1320235R0_2,8,unclear,shared driveway,1,1,unclear,no,low,passage about 3.3 m between 7 and 8 in shade; no paved crossing seen; narrow strip at front left is not a driveway; rear hidden
+1310198L0_1,1,unclear,shared driveway,1,1,unclear,no,low,corner lot; passage about 2.8 m between 1 and 2 in shade with lawn at its mouth; walkway only in front; nothing seen from side street; rear hidden
+1310198L0_1,2,yes,front pad,1,1,unclear,yes,high,car standing on paved strip in front of building left part
+1310198L0_1,3,yes,front pad,1,1,unclear,yes,high,car standing on paved strip in front of building right part
+1310198L0_1,4,yes,front pad,1,1,unclear,no,medium,asphalt strip about 2.9 m wide at left of front yard from sidewalk to building beside the car of lot 3
+1310198L0_1,5,yes,shared driveway,1,1,yes,no,medium,paved crossing at right leading into passage about 2.5 m to a detached garage roof at rear spanning the lot line
+1600537R1_3,11,unclear,rear,1,1,unclear,no,low,paved lane about 4.5 m wide between 11 and 12 outside both outlines leads to a parking lot behind on another lot; building notch beside it in deep shade cannot be read; walkways only in front
+1600537R1_3,12,unclear,rear,1,1,unclear,no,low,paved lane about 4.5 m wide between 11 and 12 outside the outline leads to a parking lot behind on another lot; side yard beside it in shade with shrub at front; no pad seen in rear yard
+1600537R1_3,13,no,none,0,0,no,no,low,corner lot; walkways only in front; side yard lawn and trees; rear shows a patio and a small shed roof in shade; no crossing seen from side street
+1320362L0_1,1,yes,own driveway,1,1,unclear,no,medium,corner lot; paved mouth at front left leading under tree shade to a flat-roofed annex at left of house
+1320362L0_1,2,yes,own driveway,1,2,unclear,yes,high,car standing on driveway at right of house; paving continues beside the house
+1320362L0_1,3,yes,own driveway,1,1,unclear,yes,high,white vehicle standing on driveway at front right of house
+1320362L0_1,4,yes,own driveway,1,1,unclear,no,medium,paved crossing at front left leading into the shaded notch at left of building
+1320362L0_1,5,no,none,0,0,no,no,low,corner lot; no crossing seen on front or side street; rear yard bare ground with no vehicle
+1320137L1_1,1,yes,own driveway,1,2,unclear,no,medium,paved strip about 3 m wide at left of house from the sidewalk to beside the building
+1320137L1_1,2,yes,own driveway,1,1,unclear,yes,medium,car standing off the roadway at the right edge of the lot astride the lot line; surface under trees
+1310222R1_3,11,unclear,shared driveway,1,1,unclear,no,low,passage about 2.7 m between 11 and 12 in shade; mouth under tree with no paved crossing seen; attached to neighbour on the right
+1310222R1_3,12,yes,shared driveway,1,1,unclear,no,low,paved crossing and passage about 3.2 m between 12 and 13 lying on the side of 13; second passage between 11 and 12 shows no crossing
+1310222R1_3,13,yes,shared driveway,1,1,unclear,no,medium,paved strip from sidewalk into passage about 3.2 m at right of building leading to rear yard; rear open ground no pad distinguishable
+1320272R0_1,1,yes,own driveway,1,1,unclear,yes,high,car standing on driveway at front left of house
+1320272R0_1,2,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 2 and 3 in shade; mouth under tree branches with no distinct paved crossing; rear hidden
+1320272R0_1,3,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 2 and 3 in shade with no distinct crossing; the paved strip on its left lies on lot 4
+1320272R0_1,4,yes,own driveway,1,3,unclear,no,medium,pale paved strip about 2.5 m from sidewalk into passage at right of house on this lot; roofed structure behind the house
+1320272R0_1,5,unclear,own driveway,1,1,unclear,no,low,side space about 4 m at left of house in deep shade with trees at its mouth; no crossing seen; walkway only in front
+1320177L0_1,1,yes,own driveway,1,1,unclear,no,medium,pale paved band from sidewalk to a lower flat-roofed annex at right of house
+1320177L0_1,2,unclear,own driveway,1,1,unclear,no,low,pale ground in front of flat-roofed annex at left of house; no distinct crossing; passage on the right lies on lot 3
+1320177L0_1,3,yes,own driveway,1,4,yes,no,medium,pale paved band from sidewalk into passage about 4.5 m at left of house; small detached roof at its end and paved rear
+1320177L0_1,4,unclear,shared driveway,1,1,unclear,no,low,passage about 3 m between 3 and 4 in shade; no crossing seen; stepping-stone walk in front; rear patio
+1320177L0_1,5,unclear,shared driveway,1,1,unclear,no,low,passage about 3.5 m at right of house in shade with a faint pale band at its mouth; hedge along left side; front lawn
+1310215R0_1,1,yes,shared driveway,1,1,unclear,no,low,pale smooth band from sidewalk into passage about 4.5 m between 1 and 2; rear hidden in shade
+1310215R0_1,2,yes,shared driveway,1,1,unclear,no,low,pale smooth band from sidewalk into passage about 4.5 m between 1 and 2; rear hidden in shade
+1310215R0_1,3,yes,shared driveway,1,1,unclear,no,low,pale band from sidewalk into passage about 3.6 m between 3 and 4; rear hidden
+1310215R0_1,4,yes,shared driveway,1,1,unclear,no,low,pale band from sidewalk into passage about 3.6 m between 3 and 4; rear hidden
+1310215R0_1,5,yes,shared driveway,1,1,unclear,no,low,pale band from sidewalk into passage about 3.6 m at left of building mostly outside the outline; rear hidden
+1310280L0_2,6,unclear,shared driveway,1,1,unclear,no,low,passage about 2.3 m at left of building in deep shade; mouth under branches no crossing distinguishable; rear hidden
+1310280L0_2,7,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 7 and 8 in deep shade; mouth under tree branches; rear hidden
+1310280L0_2,8,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 7 and 8 in deep shade; mouth under tree branches; rear hidden
+1310280L0_2,9,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 9 and 10 in deep shade; no crossing distinguishable; rear hidden
+1310280L0_2,10,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 9 and 10 in deep shade; no crossing distinguishable; attached on the right
+1310306L1_1,1,yes,shared driveway,2,2,unclear,no,medium,paved band from street along left of building curving to a paved rear area; second paved band into passage between 1 and 2
+1310306L1_1,2,yes,shared driveway,2,2,unclear,no,medium,paved band from sidewalk into passage about 3.4 m between 1 and 2 leading to a large bare or paved rear yard
+1310306L1_1,3,yes,front pad,2,2,unclear,no,medium,wide paved area in front of building about 5 m wide and 8 m deep continuous with that of lot 4; passage on left shows lawn at its mouth
+1310306L1_1,4,yes,front pad,2,2,unclear,no,medium,wide paved area in front of building continuous with that of lot 3; shrub at right
+1310306L1_1,5,yes,front pad,2,2,unclear,yes,high,dark red car standing on paved front area at right of lot; white car beside it is beyond the outline
+1310216L0_1,1,yes,rear,2,2,unclear,no,medium,corner lot; grey paved area behind the building open to the side street
+1310216L0_1,2,yes,shared driveway,1,1,unclear,yes,high,car standing at the mouth of the passage about 4 m between 2 and 3 on this lot's side
+1310216L0_1,3,yes,shared driveway,1,1,unclear,yes,high,car standing at the mouth of the passage about 4 m between 2 and 3 on this lot's side
+1310216L0_1,4,unclear,shared driveway,1,1,unclear,no,low,passage about 3.4 m between 4 and 5 in deep shade; mouth pale ground under branches with no distinct crossing; rear hidden
+1310216L0_1,5,unclear,shared driveway,1,1,unclear,no,low,passage about 3.4 m between 4 and 5 in deep shade; mouth pale ground under branches with no distinct crossing
+1310394R0_1,1,yes,own driveway,1,1,unclear,yes,medium,dark car standing off the roadway on a strip at front right of lot just below the lot line at the mouth of the right side passage
+1310394R0_1,2,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 2 and 3 in deep shade; mouth under a tree with no crossing seen; rear hidden
+1310394R0_1,3,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 2 and 3 in deep shade; mouth under a tree with no crossing seen; rear hidden
+1310394R0_1,4,unclear,shared driveway,1,1,unclear,no,low,passage about 2.3 m between 4 and 5 in deep shade; car of lot 5 stands beside its mouth; front lawn under branches
+1310394R0_1,5,yes,front pad,1,1,unclear,yes,high,dark car standing on a strip in front of building right part beside the mouth of passage between 4 and 5
+1310216R0_2,6,unclear,shared driveway,1,1,unclear,no,low,passage about 4.5 m at right of building in deep shade; pale ground at mouth without distinct edges; rear hidden
+1310216R0_2,7,yes,shared driveway,1,1,unclear,no,low,pale smooth band from sidewalk toward passage about 4.7 m between 7 and 8; passage in deep shade; rear hidden
+1310216R0_2,8,yes,shared driveway,1,1,unclear,no,low,pale smooth band from sidewalk toward passage about 4.7 m between 7 and 8; passage in deep shade; rear hidden
+1310216R0_2,9,unclear,shared driveway,1,1,unclear,no,low,passage about 4.7 m between 9 and 10 in deep shade; mouth under tree shadow no distinct crossing; rear hidden
+1310216R0_2,10,unclear,shared driveway,1,1,unclear,no,low,passage about 4.7 m between 9 and 10 in deep shade; mouth under tree shadow no distinct crossing; rear hidden
+1310030R0_1,1,yes,own driveway,2,2,unclear,no,medium,grey paved area about 6 m wide at right of building from the sidewalk to beside the house; no vehicle
+1310030R0_1,2,unclear,own driveway,1,1,unclear,no,low,side strip about 2.7 m at left of building in shade; building materials piled on the public strip in front hide the mouth; attached to 1
+1310030R0_1,3,yes,own driveway,1,2,unclear,yes,high,car standing beside the building on driveway at right of house
+1310030R0_1,4,yes,own driveway,1,3,unclear,yes,high,white vehicle standing at front left at the mouth of the wide shaded side space at left of house
+1310030R0_1,5,yes,front pad,1,1,unclear,yes,high,dark car standing at front right of lot off the roadway
+1320226R1_1,1,yes,front pad,1,1,unclear,yes,high,car standing in front of building at right of lot
+1320226R1_1,2,yes,own driveway,2,2,unclear,yes,high,two cars standing side by side at front left of lot
+1320226R1_1,3,yes,own driveway,1,1,unclear,yes,high,dark car standing on the strip at front left of lot inside the outline
+1320226R1_1,4,yes,own driveway,1,3,unclear,yes,high,two cars one behind the other on driveway at left of house; small roof at rear is shed sized
+1320226R1_1,5,yes,own driveway,2,5,unclear,yes,high,car standing on driveway at right of house; second paved driveway at left leading to flat-roofed annex
+1310305R0_1,1,no,none,0,0,no,no,medium,walkway only in front; attached to 2; building reaches the right lot line; paved area on the right is the neighbour's beyond the outline
+1310305R0_1,2,no,none,0,0,no,no,medium,walkway only in front; attached to 1; gap on the left about 1.2 m; rear patio with no way in
+1310305R0_1,3,no,none,0,0,no,no,medium,walkways and garden beds in front; attached to 4; gap on the right about 1.2 m
+1310305R0_1,4,yes,shared driveway,1,1,unclear,no,low,passage about 2.4 m between 4 and 5 with a car standing at its mouth on lot 5 side; rear hidden under trees
+1310305R0_1,5,yes,shared driveway,1,1,unclear,yes,high,light car standing off the roadway at front right at the mouth of the passage between 4 and 5
+1310281L0_2,6,no,none,0,0,no,no,medium,steps and walk in front; no passage on either side wide enough; notch at rear left only
+1310281L0_2,7,no,none,0,0,no,no,medium,attached to 8 and close to 6; front yard with shrubs and porch; no passage
+1310281L0_2,8,yes,shared driveway,1,2,unclear,no,high,asphalt driveway about 5 m wide between 8 and 9 from the street to the rear; small roof at rear of lot
+1310281L0_2,9,yes,shared driveway,1,2,unclear,no,high,asphalt driveway about 5 m wide between 8 and 9 from the street to the rear
+1310048R1_1,1,yes,front pad,1,1,unclear,yes,high,dark car standing on strip in front of building left part beside the lot line with 2
+1310048R1_1,2,yes,front pad,1,1,unclear,no,medium,pale paved strip in front of building right part from sidewalk to building beside the car of lot 1
+1310048R1_1,3,unclear,own driveway,1,1,unclear,no,low,side space about 5 m at right of building cluttered with objects and a small shed; mouth under tree branches with no crossing seen
+1310048R1_1,4,yes,front pad,1,1,unclear,no,medium,pale concrete strip about 3 m wide in front of building right part from sidewalk to building
+1310048R1_1,5,yes,own driveway,1,2,unclear,no,low,pinkish paved strip about 2.3 m along right side of house in a space about 5 m wide between 5 and 4; mouth greyish no vehicle
+1320002R0_1,1,no,none,0,0,no,no,low,corner building; outline covers only a strip of it; dark striped band in front reads as the leaning facade; walkway at right; cars seen are in the roadway
+1320002R0_1,2,no,none,0,0,no,no,low,attached to 3; no crossing seen in front; gap at right about 2 m; small dark recess at the door
+1320002R0_1,3,unclear,own driveway,1,1,unclear,no,low,low flat-roofed annex at left of building and side space about 3.8 m in tree shade; no crossing distinguishable
+1320002R0_1,4,yes,front pad,2,2,unclear,no,medium,bright concrete pad about 6 m wide in front of house from sidewalk to building
+1320002R0_1,5,yes,own driveway,1,1,unclear,no,low,dark rectangular recess about 2.4 m wide in front of house right part reaching the sidewalk reads as a shaded ramp or drive; too short to be a car
+1310394R0_2,6,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 6 and 7 in deep shade; small dark object below the lot line at its mouth not identifiable as a car; rear hidden
+1310394R0_2,7,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 6 and 7 in deep shade; no distinct crossing; rear hidden
+1310394R0_2,8,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 8 and 9 in deep shade; mouth under tree branches; rear hidden
+1310394R0_2,9,unclear,shared driveway,1,1,unclear,no,low,passage about 2.5 m between 8 and 9 in deep shade; mouth under tree branches; rear hidden
+1310394R0_2,10,no,none,0,0,no,no,low,attached to 9; gap at left about 2 m in deep shade judged narrower than 2.3 m; porch and walk in front
+1310173L0_2,2,unclear,shared driveway,1,1,unclear,no,low,space about 5.7 m between this building and the next in deep shade with a line of small light marks; no crossing or ramp seen; front lawn; trees at left
+1320178R1_2,6,yes,own driveway,1,4,yes,no,medium,side strip about 3.7 m at left of house in shade leading to a small detached roof at its rear end; mouth greyish smooth ground
+1320178R1_2,7,yes,front pad,1,1,unclear,yes,high,car standing in front of house right part astride the lot line off the roadway
+1310124R1_1,1,yes,front pad,1,2,unclear,yes,high,car standing on asphalt area at front right of building; second car beside it is beyond the outline
+1310124R1_1,2,yes,own driveway,1,3,unclear,no,medium,pale paved strip about 4 m wide at right of building from the sidewalk to the rear on this lot
+1310124R1_1,3,yes,own driveway,2,4,unclear,yes,medium,dark vehicle in the shade beside the building in a side space about 5 m leading to a grey paved court behind
+1310124R1_1,4,yes,own driveway,1,1,unclear,yes,high,car standing at front right of lot off the roadway astride the lot line; small shed roof at rear
+1310124R1_1,5,yes,rear,1,1,yes,no,low,dark grey roof or pad about 5 by 6 m at the rear lot line beside what reads as a lane; attached on both sides in front
+1310173R1_4,4,yes,shared driveway,1,1,unclear,no,low,passage about 5.7 m between this building and the next with four cars in a row along the neighbour's wall just outside the outline; ownership not evident; left side space in deep shade with lawn at its mouth; rear hidden
+1320218R0_1,1,yes,shared driveway,1,1,yes,no,medium,pale strip about 3.8 m between 1 and 2 from the street to a long detached roof behind on this lot; larger dark rectangle at rear may be a second roof or pad
+1320218R0_1,2,yes,shared driveway,1,1,yes,no,medium,pale strip about 3.8 m between 1 and 2 from the street to a garage-sized greenish roof behind the building
+1320218R0_1,3,unclear,shared driveway,1,1,unclear,no,low,passage about 4.2 m between 3 and 4 in shade with a tree at its mouth and no crossing seen; rear yard under trees; paved lane runs behind the lot
+1320218R0_1,4,yes,rear,1,1,yes,no,low,garage-sized roof at the rear of the lot abutting the paved lane behind; passage between 3 and 4 shows no crossing
+1320218R0_1,5,yes,rear,1,1,yes,no,medium,corner lot; garage-sized roof behind the building with a short pale pad to the side street
+1320290R0_2,2,unclear,shared driveway,1,1,unclear,no,low,large building; space about 3.7 m between it and the building on the left in deep shade; walk and lawn in front; no lot or ramp seen
+1310200R1_1,1,unclear,shared driveway,1,1,unclear,no,low,passage about 2.8 m between 1 and 2 in deep shade; mouth under branches no crossing distinguishable; rear hidden
+1310200R1_1,2,unclear,shared driveway,1,1,unclear,no,low,passage about 2.8 m between 1 and 2 in deep shade; mouth under branches no crossing distinguishable; rear hidden
+1310200R1_1,3,yes,shared driveway,1,1,unclear,yes,low,dark vehicle-sized object standing at the mouth of the passage about 4.8 m between 3 and 4 on this lot's side under branches
+1310200R1_1,4,yes,shared driveway,1,1,unclear,no,low,dark vehicle-sized object standing at the mouth of the passage about 4.8 m between 3 and 4 on the side of lot 3; rear hidden
+1310200R1_1,5,unclear,shared driveway,1,1,unclear,no,low,space about 3 m at left of building in deep shade; mouth pale under branches no distinct crossing; rear hidden
+1320388L1_1,1,yes,own driveway,1,1,unclear,no,medium,pale paved band about 4.5 m wide from sidewalk to a lower annex at left of building
+1320388L1_1,2,yes,shared driveway,1,1,unclear,yes,medium,dark car standing off the roadway astride the lot line of 2 and 3 at the mouth of a narrow gap about 2 m
+1320388L1_1,3,yes,shared driveway,1,1,unclear,yes,low,dark car standing off the roadway astride the lot line of 2 and 3 at the mouth of a narrow gap about 2 m
+1320388L1_1,4,yes,own driveway,1,1,unclear,yes,low,dark vehicle-sized object in shade at front right at the mouth of the space about 3.5 m between 4 and 5
+1320388L1_1,5,yes,front pad,1,1,unclear,no,low,pale paved band about 2.8 m wide from sidewalk to the front of the house beside a narrower walk; depth about 5.5 m
+1320197R0_1,1,yes,own driveway,1,4,yes,no,high,asphalt strip about 3 m at right of building from the sidewalk to a detached garage roof at the rear
+1320197R0_1,2,yes,own driveway,2,2,unclear,no,medium,pale paved band about 5.5 m wide at front left from the sidewalk to a small lower roofed part of the building
+1320197R0_1,3,yes,front pad,1,1,unclear,no,medium,pale paved band about 4 m wide beside a walk from the sidewalk to the front of the house
+1320197R0_1,4,yes,own driveway,1,1,unclear,yes,high,light car standing at front right of lot off the roadway
+1320197R0_1,5,yes,front pad,2,2,unclear,yes,high,two dark cars standing side by side in front of the house; third light car at left is beyond the outline; roof behind house may be a garage
+1310209L0_2,6,yes,front pad,2,2,unclear,no,medium,pale paving about 6 m wide and 5.7 m deep in front of building beside a lawn patch; gap to 7 about 2 m
+1310209L0_2,7,yes,front pad,1,1,unclear,no,medium,pale paving about 4.7 m wide and 5.7 m deep in front of building
+1310209L0_2,8,yes,front pad,1,1,unclear,yes,high,dark car standing in front of building right part astride the lot line off the roadway
+1310209L0_2,9,yes,front pad,1,1,unclear,no,medium,pale paving about 4.5 m wide and 5.7 m deep in front of building left part beside a walk
+1310221R1_2,6,yes,own driveway,1,1,unclear,yes,high,dark car standing at front right of lot astride the lot line at the mouth of the space about 3 m at right of building
+1310221R1_2,7,unclear,shared driveway,1,1,unclear,no,low,passage about 3.2 m between 6 and 7 in deep shade lying on the side of 6 with a small roof in it; no crossing seen; attached to 8
+1310221R1_2,8,yes,shared driveway,1,1,unclear,no,low,passage about 3.8 m between 8 and 9 with a car of lot 9 standing at its mouth; rear hidden
+1310221R1_2,9,yes,shared driveway,1,1,unclear,yes,high,dark car standing at front right of lot at the mouth of the passage about 3.8 m between 8 and 9
+1310221R1_2,10,yes,shared driveway,1,1,unclear,yes,high,dark car standing at front left of lot at the mouth of the space about 4 m at left of building
+1310360L0_2,6,yes,rear,1,1,unclear,no,low,corner lot; flat-roofed rear block and a small paved court between it and the main building opening to the side street on the right; no vehicle; attached on the left
+1310199R0_2,6,unclear,shared driveway,1,1,unclear,no,low,space about 3 m between 6 and the building on the right in shade; mouth pale with no distinct crossing; attached to 7; rear lawn
+1310199R0_2,7,yes,shared driveway,1,1,yes,yes,high,dark car standing in front at left of lot at the mouth of the passage about 3.2 m between 7 and 8; grey garage-sized roof at rear astride the lot line
+1310199R0_2,8,yes,shared driveway,1,1,yes,yes,high,dark car standing in front at right of lot at the mouth of the passage about 3.2 m between 7 and 8; grey garage-sized roof at rear astride the lot line
+1310199R0_2,9,yes,own driveway,1,4,unclear,yes,high,white car standing beside the building in the space about 4 m at left of building on this lot; large grey square at rear is a roof or a pad
+1310199R0_2,10,yes,shared driveway,1,1,unclear,no,low,passage between 9 and 10 holds a car but lies almost wholly on lot 9; only about 1 m on this lot; rear yard cluttered with no pad seen; attached on the left
+1320222L1_1,1,yes,own driveway,1,5,yes,yes,medium,dark vehicle in shade beside the building on the strip at right of house leading to a detached garage roof at the rear
+1320222L1_1,2,unclear,own driveway,1,1,unclear,no,low,pale strip about 4 m at left of building with a line of posts in it; no vehicle and no distinct crossing; attached to 3
+1320222L1_1,3,unclear,own driveway,1,1,unclear,no,low,side space about 5.6 m at right of building in shade; row of shrubs across the front; no crossing seen
+1320222L1_1,4,no,none,0,0,no,no,medium,house fills the lot width; lawn and walk in front; small shed at rear
+1320222L1_1,5,unclear,own driveway,1,1,unclear,no,low,side space about 6 m at right of building in deep shade holding a small grey rectangle shorter than a car; shrubs at front; no crossing seen
+1310030L0_1,1,yes,own driveway,1,4,unclear,yes,high,light car standing beside the building on the paved strip at right of house; small roof at rear
+1310030L0_1,2,yes,own driveway,1,3,unclear,no,medium,pale paved strip about 3.5 m at left of building on this lot from the sidewalk to behind the front wall; beside the driveway of lot 1
+1310030L0_1,3,yes,own driveway,1,3,unclear,no,medium,grey paved band about 4.5 m at right of building from the sidewalk to a grey pad behind; objects on it near the front
+1310030L0_1,4,yes,shared driveway,1,1,unclear,no,low,grey paved pad astride the lot line of 3 and 4 behind the front wall reached by the paved band on lot 3; own side strip tan and unpaved; walk in front
+1310030L0_1,5,yes,own driveway,1,3,unclear,yes,high,red car standing beside the building on the driveway at right of house; blue car beside it is beyond the outline
+1310210L0_2,6,yes,front pad,1,1,unclear,no,low,pale band about 3.6 m wide in front of building right part from the building toward the sidewalk; attached on the left; pool at rear
+1310210L0_2,7,yes,front pad,1,1,unclear,yes,high,white car standing in front of building left part astride the lot line off the roadway
+1310210L0_2,8,no,none,0,0,no,no,low,gap to 7 about 2 m in deep shade; steps or porch in front; attached to 9
+1310210L0_2,9,unclear,shared driveway,1,1,unclear,no,low,passage about 3.7 m between 9 and 10 in deep shade; mouth hidden by conifers; rear hidden
+1310210L0_2,10,unclear,shared driveway,1,1,unclear,no,low,passage about 3.7 m between 9 and 10 in deep shade; mouth hidden by conifers; attached on the right
+1600537R0_3,11,no,none,0,0,no,no,medium,gap at left about 2.2 m in deep shade with a narrow walk leading from it; garden in front; attached on the right
+1320397R1_2,6,yes,front pad,1,1,unclear,yes,high,light car standing on paved strip in front of house left part
+1320397R1_2,7,yes,front pad,1,1,unclear,yes,high,red car standing on paved strip in front of house right part
+1320397R1_2,8,yes,front pad,1,1,unclear,no,medium,corner lot; grey paved band about 3.5 m wide from the sidewalk to the front of the house right part
+1320081L0_1,1,yes,own driveway,1,2,unclear,no,medium,grey paved strip about 3.4 m at left of building from the street to beside the house with small objects on it; attached to 2
+1320081L0_1,2,unclear,own driveway,1,1,unclear,no,low,side space about 3.3 m at right of building in shade with a tree at its mouth; no crossing seen; attached to 1
+1320081L0_1,3,yes,front pad,1,1,unclear,yes,high,red car standing in front of building left part off the roadway astride the lot line
+1320081L0_1,4,yes,own driveway,1,1,unclear,yes,high,dark car standing at front right of lot off the roadway at the mouth of the shaded space at right of building
+1320081L0_1,5,no,none,0,0,no,no,low,walk and steps in front under conifer shade; no crossing seen; building continues to the right
+1310028L0_1,1,yes,own driveway,1,1,yes,no,medium,grey paved band about 3.7 m wide from the sidewalk at left of lot beside a small detached roof near the street; house to the right under trees
+1320003L0_2,6,yes,own driveway,1,4,yes,yes,high,light car standing at front right on the paved driveway along the right of the house leading to a paved court and a detached garage roof at the rear
+1320003L0_2,7,yes,shared driveway,1,1,yes,no,low,garage-sized detached roof at rear left of lot beside that of lot 6 reached only by the driveway along the lot line on lot 6; pool and garden between; walk and lawn in front
+1310191L0_3,11,unclear,shared driveway,1,1,unclear,no,low,space about 3.5 m between this building and the one on the left in deep shade of which about 1.7 m on this lot; mouth not readable; attached on the right
+1320389R1_1,1,yes,front pad,1,1,unclear,yes,high,white car standing in front of the building off the roadway
+1320389R1_1,2,yes,front pad,1,1,unclear,yes,high,dark car standing at front left of lot off the roadway beside the car of lot 3
+1320389R1_1,3,yes,front pad,1,1,unclear,yes,high,white car standing at front right of lot off the roadway
+1320389R1_1,4,yes,own driveway,1,3,unclear,yes,high,white car standing at front left of lot on the strip along the left of the house leading to a grey paved area behind
+1320389R1_1,5,yes,shared driveway,1,1,unclear,no,low,space about 4 m between 4 and 5 used as driveway on the side of 4; this lot's side and front hold piled materials; white car at left is beyond the outline
+1600536L0_1,1,yes,own driveway,1,2,unclear,yes,high,corner lot; white car standing at front right of lot at the mouth of the space about 4.6 m between 1 and 2
+1600536L0_1,2,yes,own driveway,2,4,unclear,yes,high,light car standing at front right of lot at the mouth of the space at right of building; grey paved court behind the building reached along its left side
+1600536L0_1,3,unclear,own driveway,1,1,unclear,no,low,side space about 5 m at left of building under conifers and shade; curved garden path in front; no crossing seen; attached to 4
+1600536L0_1,4,yes,front pad,1,1,unclear,yes,low,red vehicle-sized object under tree branches in front of the lot just below the lot line off the roadway; wide treed space at right
+1600536L0_1,5,no,none,0,0,no,no,low,front yard under trees and hedge shade with no crossing seen; pool at rear; attached on the right
+1320312L0_1,1,unclear,own driveway,1,1,unclear,no,low,large building filling the lot; front and rear in deep shade; no lot or ramp distinguishable; pale strip about 2.7 m along the right side with objects on it; cars seen are in the roadway
+1600527L0_1,1,no,none,0,0,no,no,low,attached to 2 with no passage on the left; front in shade with walk only; rear strip in deep shade with no way in seen
+1600527L0_1,2,unclear,rear,1,1,unclear,no,low,corner lot; side yard at right under trees with no crossing seen from the side street; rear strip in deep shade cannot be read
+1320389R1_2,6,yes,own driveway,1,2,unclear,yes,high,white car standing on the paved strip at front right of lot beside the house
+1320389R1_2,7,no,none,0,0,no,no,medium,walk only from sidewalk to porch; narrow annex at left about 2.2 m; strip at right about 2.2 m with fence; no crossing seen
+1310211R1_3,10,no,none,0,0,no,no,low,large corner building; strip at left is setback along the side street where cars stand in the roadway; walk at right; paved forecourt with no vehicle or ramp seen
+1320197L0_2,6,no,none,0,0,no,no,medium,narrow walk from sidewalk across the side yard at left; lawn and trees; no crossing seen; attached on the right
+1310357L0_1,1,unclear,shared driveway,1,1,unclear,no,low,passage about 4.2 m between 1 and 2 with pale ground under trees; front in deep shade so the mouth cannot be read
+1310357L0_1,2,unclear,shared driveway,1,1,unclear,no,low,passage about 4.2 m between 1 and 2 with pale ground under trees; front in deep shade so the mouth cannot be read; attached to 3
+1310357L0_1,3,no,none,0,0,no,no,low,attached to 2; strip at right under 2 m; front in deep shade with no crossing distinguishable
+1310172R1_3,3,yes,own driveway,1,5,unclear,no,medium,large building; pale paved band about 4.5 m wide from the street along the right side of the building into deep shade toward the rear; no stalls or vehicles visible; rear hidden
+1320204R1_1,1,yes,shared driveway,1,1,unclear,no,low,space about 5 m between 1 and 2 with pale paving at its mouth and a car standing on the side of lot 2; about 2.8 m of it on this lot; pool and deck at rear
+1320204R1_1,2,yes,own driveway,1,1,unclear,yes,high,light car standing at front right of lot off the roadway on pale paving
+1320204R1_1,3,yes,own driveway,1,2,yes,yes,medium,blue car standing in front of lot under a conifer; small detached roof at left of the house
+1320204R1_1,4,yes,own driveway,1,1,unclear,yes,high,red car standing at front right of lot in front of a lower annex at right of house
+1320204R1_1,5,unclear,own driveway,1,1,unclear,no,low,side space about 5 m at left of building in deep shade with a dark object in it; no distinct crossing; attached to 4
+1310222L0_2,6,unclear,shared driveway,1,1,unclear,no,low,space about 2.4 m at left of building in deep shade; no crossing distinguishable; rear hidden
+1310222L0_2,7,unclear,shared driveway,1,1,unclear,no,low,passage about 2.3 m between 7 and 8 in deep shade; no crossing distinguishable; long white object in rear yard
+1310222L0_2,8,unclear,shared driveway,1,1,unclear,no,low,passage about 2.3 m between 7 and 8 in deep shade; no crossing distinguishable; rear yard cluttered
+1310222L0_2,9,yes,shared driveway,2,2,unclear,yes,medium,car standing crosswise on grey paved ground behind the building reached by the passage about 2.5 m between 9 and 10
+1310222L0_2,10,yes,shared driveway,2,2,unclear,no,medium,passage about 2.5 m between 9 and 10 leading to grey paved ground behind both buildings; yellow boat-like object on it; attached on the right
+1310125L1_2,6,yes,front pad,1,1,unclear,no,low,row house; pale paving about 3 m wide and 6.5 m deep in front of building from the building to the sidewalk beside a walk; no vehicle
+1310125L1_2,7,yes,front pad,1,1,unclear,no,low,row house; pale paving about 3.7 m wide and 6.5 m deep in front of building reaching the sidewalk; no vehicle
+1310125L1_2,8,yes,front pad,1,1,unclear,no,low,row house; pale paving on both sides of a tree in front of building reaching the sidewalk; no vehicle
+1310125L1_2,9,yes,front pad,1,1,unclear,no,low,row house; pale paving about 3.8 m wide and 6.5 m deep in front of building reaching the sidewalk; no vehicle
+1310125L1_2,10,yes,front pad,1,1,unclear,yes,medium,row house; bluish car-sized object standing in the shade in front of building right part between two hedges
+1320223L0_1,1,unclear,own driveway,1,1,unclear,no,low,dark shaded rectangle about 2.5 m wide at right part of building reads as a low annex or recess; front under branches with no distinct crossing
+1320223L0_1,2,yes,shared driveway,1,1,unclear,no,low,space about 4 m between 2 and 3 with the car of lot 3 standing at its mouth on the side of 3; about 2.4 m on this lot in shade; lawn in front
+1320223L0_1,3,yes,own driveway,1,1,unclear,yes,high,white car standing at front left of lot on a pale strip beside the house corner
+1320223L0_1,4,yes,own driveway,1,1,unclear,yes,high,dark car standing at front right of lot astride the lot line off the roadway
+1320223L0_1,5,yes,own driveway,1,2,unclear,yes,high,light car standing at left of lot beside the front wing of the house
+1310394R1_3,11,yes,own driveway,1,1,unclear,yes,high,white car standing at front right of lot inside the outline at the mouth of the space at right of building; second car beyond the outline
+1310394R1_3,12,yes,shared driveway,1,1,unclear,yes,high,dark car standing at front left of lot astride the lot line at the mouth of the passage about 3.2 m between 12 and 13
+1310394R1_3,13,yes,shared driveway,1,1,unclear,no,low,passage about 3.2 m between 12 and 13 with a car standing at its mouth on the side of 12; rear hidden; attached to 14
+1310394R1_3,14,unclear,shared driveway,1,1,unclear,no,low,passage about 3 m between 14 and 15 in deep shade; mouth under tree branches with no crossing seen; rear hidden
+1310394R1_3,15,unclear,shared driveway,1,1,unclear,no,low,passage about 3 m between 14 and 15 in deep shade; mouth under tree branches with no crossing seen; left side in shade under trees
+1320217L0_1,1,yes,own driveway,1,5,yes,no,high,asphalt driveway from the street along the right side of the house to a detached garage roof at the rear
+1320217L0_1,2,yes,own driveway,1,4,yes,yes,high,light car standing beside the building on the strip at right leading to a small detached roof at the rear
+1310125L0_2,6,yes,front pad,1,1,unclear,no,low,row house; pale paved patch about 3.8 m wide in front of building right part partly under a conifer; reaches the sidewalk; no vehicle
+1310125L0_2,7,yes,front pad,1,1,unclear,no,low,row house; pale paving about 3.4 m wide and 6.6 m deep in front of building left part with a narrow light object on it; no car
+1310125L0_2,8,yes,front pad,1,1,unclear,no,low,row house; grey paved band about 3.4 m wide and 6.6 m deep in front of building right part reaching the sidewalk; no vehicle
+1310125L0_2,9,yes,front pad,1,1,unclear,no,low,row house; pale paved band about 3.4 m wide and 6.6 m deep in front of building left part reaching the sidewalk; shrub beside it; no vehicle
+1310125L0_2,10,yes,front pad,1,1,unclear,no,low,row house; pale paving about 3.5 m wide in front of building right part reaching the sidewalk; white shelter to the right is beyond the outline
+1310199L0_2,6,no,none,0,0,no,no,low,stepping-stone walk and porch in front; gaps on both sides under 2 m; no crossing seen
+1310199L0_2,7,yes,front pad,1,1,unclear,yes,high,white car standing in front of building astride the lot line off the roadway
+1310199L0_2,8,yes,front pad,1,2,unclear,no,low,grey paved band about 3 m wide from the sidewalk toward the building right part into shade; no vehicle; attached to 7
+1310199L0_2,9,yes,front pad,2,3,no,no,medium,long white temporary shelter about 3 by 9 m standing on the paved strip in front of building with pale paving beside it; shelter is not a garage; dark object at its street end
+1310199L0_2,10,yes,front pad,1,1,unclear,no,medium,pale concrete band about 3.5 m wide from the sidewalk widening toward the building left part; no vehicle
+1310161L0_6,6,no,none,0,0,no,no,low,large building; red paved court about 4.5 m wide along the right side holds small objects and is closed at the street end by a lower building part; pale ground behind with no vehicle; cars seen are in the roadway
+1310200R0_3,11,yes,shared driveway,1,1,unclear,yes,low,light car-sized object standing at the mouth of the space about 3.2 m at right of building astride the lot line; passage in deep shade; attached on the left
+1310048L0_2,6,yes,front pad,1,1,unclear,no,medium,dark asphalt about 3 m wide in front of building right part continuous with that under the car of lot 7; depth about 5.2 m
+1310048L0_2,7,yes,front pad,1,1,unclear,yes,high,white car standing on dark asphalt in front of building left part
+1600529L0_2,6,yes,shared driveway,1,1,unclear,no,low,pale band about 2.6 m from the sidewalk into the space about 2.9 m at left of building; passage in deep shade; rear yard open toward a lane behind
+1600529L0_2,7,unclear,shared driveway,1,1,unclear,no,low,passage about 4.5 m between 7 and 8 in deep shade; mouth pale with no distinct crossing; flat pale roof or pad at rear beside a lane behind
+1600529L0_2,8,unclear,shared driveway,1,1,unclear,no,low,passage about 4.5 m between 7 and 8 in deep shade; mouth pale with no distinct crossing; rear yard beside a lane behind
+1600529L0_2,9,yes,shared driveway,1,1,unclear,yes,medium,grey car standing off the roadway astride the lot line of 9 and 10 at the mouth of the passage about 4.5 m; rear hidden
+1600529L0_2,10,yes,shared driveway,1,1,unclear,yes,medium,grey car standing off the roadway astride the lot line of 9 and 10 at the mouth of the passage about 4.5 m; attached on the right
+4005162L0_1,1,yes,front pad,1,1,unclear,no,low,rotated lot; pale grey paved band in front of building left part toward the street; cars seen nearby stand at the edge of the roadway outside the outline
+1310216R1_2,6,yes,own driveway,1,4,unclear,no,low,pale band about 3 m from the sidewalk along the left side of the building under branches toward the rear; no vehicle; attached on the right
+1320273R1_2,6,yes,front pad,1,1,unclear,yes,high,light car standing on paved strip in front of house right part
+1320327R1_1,1,yes,front pad,2,2,unclear,no,low,pale paved area about 6 m wide and 5.5 m deep in front of house right part from building to sidewalk beside a walk; no vehicle
+1320198L1_2,6,yes,own driveway,1,3,unclear,no,low,pale strip about 2.8 m along the left side of the house from the sidewalk to a paved patch behind with a line across it; no vehicle; attached to 7
+1320198L1_2,7,unclear,own driveway,1,1,unclear,no,low,pale strip about 2.5 m at right of building in a side space about 3.5 m with objects in it; mouth under a tree with no distinct crossing; attached to 6
+1320198L1_2,8,no,none,0,0,no,no,medium,lawn and shrubs in the side yard at left; curved garden walk; front lawn under trees; attached to 9
+1320198L1_2,9,no,none,0,0,no,no,low,corner lot; narrow walks in front; side yard in shade with no crossing seen from the side street; small shed at rear
+1600529L1_1,1,yes,shared driveway,1,1,unclear,yes,high,car standing at the mouth of the passage about 4 m between 1 and 2 and another in the shade at its rear end on this lot's side; lane behind
+1600529L1_1,2,yes,rear,2,2,unclear,yes,high,two dark cars standing side by side at the rear of the lot beside the lane behind; shared passage between 1 and 2 with a car at its mouth
+1600529L1_1,3,unclear,shared driveway,1,1,unclear,no,low,passage about 4.2 m between 3 and 4 in deep shade; mouth pale with no distinct crossing; rear yard beside a lane with no vehicle seen
+1600529L1_1,4,unclear,shared driveway,1,1,unclear,no,low,passage about 4.2 m between 3 and 4 in deep shade; mouth pale with no distinct crossing; pale open ground at rear beside a lane with no vehicle
+1600529L1_1,5,yes,rear,1,1,unclear,yes,high,dark car standing at the rear of the lot beside the lane behind; attached to 4; space at right in deep shade
