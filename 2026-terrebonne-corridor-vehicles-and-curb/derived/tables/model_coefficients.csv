@@ -1,0 +1,6 @@
+variable,coefficient,standard_error
+constant,-2.6203,0.7827
+share of renter households,0.0153,0.114
+share of commuters who drive,2.013,0.1139
+persons per household,0.1981,0.0472
+log of median household income,0.0915,0.0661

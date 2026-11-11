@@ -1,0 +1,5 @@
+sector,blocks,dwellings_addressed_on_terrebonne,cars_at_curbs_2015_night,cars_on_lots_2015_night,cars_seen_per_dwelling,modelled_automobiles_per_household,modelled_automobiles_for_those_dwellings
+residential west,12,146,52,97,1.02,0.93,136.3
+institutional,5,140,29,45,0.53,0.66,92.29
+residential east,12,287,102,111,0.74,0.89,254.33
+whole lane,29,573,183,253,0.76,0.84,482.92

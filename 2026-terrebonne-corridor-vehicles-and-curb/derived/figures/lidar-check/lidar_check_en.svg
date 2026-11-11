@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="403.2pt" viewBox="0 0 720 403.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-11T10:09:38.347267</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 403.2 
+L 720 403.2 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 50.4 298.368 
+L 698.4 298.368 
+L 698.4 80.64 
+L 50.4 80.64 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(100.859049 311.528)">residential west</text>
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(83.724674 323.458)">(west end – Cavendish)</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(269.232964 311.528)">institutional</text>
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(249.41812 323.458)">(Cavendish – Grand)</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(420.391255 311.528)">residential east</text>
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(412.891255 323.458)">(Grand – Girouard)</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #5f6b74" x="613.220639" y="311.388" transform="rotate(-0 613.220639 311.388)">whole lane</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <path d="M 50.4 298.368 
+L 698.4 298.368 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="303.128" transform="rotate(-0 46.9 303.128)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <path d="M 50.4 264.871385 
+L 698.4 264.871385 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="269.631385" transform="rotate(-0 46.9 269.631385)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path d="M 50.4 231.374769 
+L 698.4 231.374769 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="236.134769" transform="rotate(-0 46.9 236.134769)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <path d="M 50.4 197.878154 
+L 698.4 197.878154 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="202.638154" transform="rotate(-0 46.9 202.638154)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13">
+      <path d="M 50.4 164.381538 
+L 698.4 164.381538 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="169.141538" transform="rotate(-0 46.9 169.141538)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <path d="M 50.4 130.884923 
+L 698.4 130.884923 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="135.644923" transform="rotate(-0 46.9 135.644923)">1.0</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <path d="M 50.4 97.388308 
+L 698.4 97.388308 
+" clip-path="url(#p2339764f17)" style="fill: none; stroke: #e2e4e1; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: end; fill: #5f6b74" x="46.9" y="102.148308" transform="rotate(-0 46.9 102.148308)">1.2</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 10px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #5f6b74" x="26.871563" y="189.504" transform="rotate(-90 26.871563 189.504)">per dwelling</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 79.854545 298.368 
+L 133.987224 298.368 
+L 133.987224 127.535262 
+L 79.854545 127.535262 
+z
+" clip-path="url(#p2339764f17)" style="fill: #9aa3ab"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 239.068305 298.368 
+L 293.200983 298.368 
+L 293.200983 209.601969 
+L 239.068305 209.601969 
+z
+" clip-path="url(#p2339764f17)" style="fill: #9aa3ab"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 398.282064 298.368 
+L 452.414742 298.368 
+L 452.414742 174.430523 
+L 398.282064 174.430523 
+z
+" clip-path="url(#p2339764f17)" style="fill: #9aa3ab"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 557.495823 298.368 
+L 611.628501 298.368 
+L 611.628501 171.080862 
+L 557.495823 171.080862 
+z
+" clip-path="url(#p2339764f17)" style="fill: #9aa3ab"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 137.171499 298.368 
+L 191.304177 298.368 
+L 191.304177 142.608738 
+L 137.171499 142.608738 
+z
+" clip-path="url(#p2339764f17)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 296.385258 298.368 
+L 350.517936 298.368 
+L 350.517936 187.829169 
+L 296.385258 187.829169 
+z
+" clip-path="url(#p2339764f17)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 455.599017 298.368 
+L 509.731695 298.368 
+L 509.731695 149.308062 
+L 455.599017 149.308062 
+z
+" clip-path="url(#p2339764f17)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 614.812776 298.368 
+L 668.945455 298.368 
+L 668.945455 157.682215 
+L 614.812776 157.682215 
+z
+" clip-path="url(#p2339764f17)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 50.4 298.368 
+L 698.4 298.368 
+" style="fill: none; stroke: #c9cdd2; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="106.920885" y="124.1856" transform="rotate(-0 106.920885 124.1856)">1.02</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="266.134644" y="206.252308" transform="rotate(-0 266.134644 206.252308)">0.53</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="425.348403" y="171.080862" transform="rotate(-0 425.348403 171.080862)">0.74</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="584.562162" y="167.7312" transform="rotate(-0 584.562162 167.7312)">0.76</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="164.237838" y="139.259077" transform="rotate(-0 164.237838 139.259077)">0.93</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="323.451597" y="184.479508" transform="rotate(-0 323.451597 184.479508)">0.66</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="482.665356" y="145.9584" transform="rotate(-0 482.665356 145.9584)">0.89</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: middle; fill: #1f2428" x="641.879115" y="154.332554" transform="rotate(-0 641.879115 154.332554)">0.84</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_12">
+     <path d="M 207.740391 92.95344 
+L 225.740391 92.95344 
+L 225.740391 86.65344 
+L 207.740391 86.65344 
+z
+" style="fill: #9aa3ab"/>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: start; fill: #1f2428" x="232.940391" y="92.95344" transform="rotate(-0 232.940391 92.95344)">cars seen, 2015 night (curbs and lots)</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 401.812734 92.95344 
+L 419.812734 92.95344 
+L 419.812734 86.65344 
+L 401.812734 86.65344 
+z
+" style="fill: #2a78d6"/>
+    </g>
+    <g id="text_22">
+     <text style="font-size: 9px; font-family: 'Helvetica Neue'; text-anchor: start; fill: #1f2428" x="427.012734" y="92.95344" transform="rotate(-0 427.012734 92.95344)">modelled automobiles, 2024</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_23">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'Helvetica Neue'; text-anchor: start; fill: #1f2428" x="8.64" y="22.755" transform="rotate(-0 8.64 22.755)">A check from another source: cars seen along Terrebonne on a 2015 night</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(8.64 39.9)">Per dwelling addressed on rue de Terrebonne (City roll). Grey: cars counted by eye on the City's 2015 night LiDAR, at the curbs and on the</text>
+   <text style="font-size: 10px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(8.64 51.83)">lots along the street. Blue: the model's 2024 automobiles per household for the areas holding those dwellings.</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 7.5px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(8.64 369.8166)">The two are not the same quantity: the LiDAR sees visitors' cars and the lots of churches, schools and corner buildings, and misses cars inside garages or away;</text>
+   <text style="font-size: 7.5px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(8.64 378.7641)">nine years separate them. The check is on the order of magnitude.</text>
+   <text style="font-size: 7.5px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(8.64 387.7116)">Sources: SAAQ, vehicles released under the access Act (file 03.06.34729), December 31, 2024, type inferred; Statistics Canada, 2021 Census;</text>
+   <text style="font-size: 7.5px; font-family: 'Helvetica Neue'; fill: #5f6b74" transform="translate(8.64 396.6591)">City of Montréal, géobase, parking-sign inventory and assessment roll (CC BY 4.0). Automobiles below the FSA are MODELLED, not measured.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2339764f17">
+   <rect x="50.4" y="80.64" width="648" height="217.728"/>
+  </clipPath>
+ </defs>
+</svg>

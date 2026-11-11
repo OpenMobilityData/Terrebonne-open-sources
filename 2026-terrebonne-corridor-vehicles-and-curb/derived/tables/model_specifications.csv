@@ -1,0 +1,7 @@
+specification,variables,median_abs_pct,p75_abs_pct,p90_abs_pct,largest_abs_pct,H4A_pct,H4B_pct,chosen
+households only,0,35.9,50.2,98.3,281.9,40.0,58.9,False
+"tenure, dwelling type",3,14.7,29.8,51.0,145.4,29.9,6.4,False
+commuting,1,7.9,13.8,25.2,90.4,-15.3,2.4,False
+"tenure, commuting, household size",3,5.5,10.9,25.8,90.9,-10.8,0.2,False
+"tenure, commuting, household size, income",4,5.4,11.0,24.4,91.4,-10.7,-0.6,True
+"tenure, commuting, household size, income, dwelling type",6,6.1,11.3,27.0,90.0,-9.9,-2.1,False

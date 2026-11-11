@@ -1,0 +1,314 @@
+{
+ "generated": "2026-11-11 10:07",
+ "year": 2024,
+ "fsa": {
+  "H4A": {
+   "automobiles_inferred": 9598,
+   "households": 12124,
+   "per_household": 0.79,
+   "scale_factor": 1.074,
+   "households_from_da_pct": -1.19
+  },
+  "H4B": {
+   "automobiles_inferred": 7351,
+   "households": 10524,
+   "per_household": 0.7,
+   "scale_factor": 0.995,
+   "households_from_da_pct": -1.2
+  }
+ },
+ "sets": {
+  "corridor": {
+   "dissemination_areas": 22,
+   "households": 5471,
+   "automobiles_modelled": 4622,
+   "low_90": 4382,
+   "high_90": 4927,
+   "low_90_wide": 4351,
+   "high_90_wide": 4970,
+   "per_household": 0.845,
+   "per_household_low_90": 0.801,
+   "per_household_high_90": 0.901,
+   "alt_3_variables": 4616,
+   "alt_6_variables": 4683,
+   "curb_km": 46.815,
+   "forbidden_at_all_times_km": 4.308,
+   "legal_curb_km": 39.326,
+   "places_5.0m": 7865,
+   "places_5.5m": 7150,
+   "places_6.0m": 6554,
+   "automobiles_per_place_5.5m": 0.646,
+   "automobiles_per_place_low_90": 0.613,
+   "automobiles_per_place_high_90": 0.689,
+   "legal_curb_m_per_household": 7.188
+  },
+  "rest": {
+   "dissemination_areas": 61,
+   "households": 18978,
+   "automobiles_modelled": 14363,
+   "low_90": 14033,
+   "high_90": 14641,
+   "low_90_wide": 13980,
+   "high_90_wide": 14694,
+   "per_household": 0.757,
+   "per_household_low_90": 0.739,
+   "per_household_high_90": 0.772,
+   "alt_3_variables": 14361,
+   "alt_6_variables": 14285,
+   "curb_km": 148.227,
+   "forbidden_at_all_times_km": 17.9,
+   "legal_curb_km": 118.291,
+   "places_5.0m": 23658,
+   "places_5.5m": 21507,
+   "places_6.0m": 19715,
+   "automobiles_per_place_5.5m": 0.668,
+   "automobiles_per_place_low_90": 0.653,
+   "automobiles_per_place_high_90": 0.681,
+   "legal_curb_m_per_household": 6.233
+  },
+  "all": {
+   "dissemination_areas": 83,
+   "households": 24449,
+   "automobiles_modelled": 18985,
+   "low_90": 18830,
+   "high_90": 19163,
+   "low_90_wide": 18805,
+   "high_90_wide": 19188,
+   "per_household": 0.777,
+   "per_household_low_90": 0.77,
+   "per_household_high_90": 0.784,
+   "alt_3_variables": 18977,
+   "alt_6_variables": 18968,
+   "curb_km": 195.042,
+   "forbidden_at_all_times_km": 22.208,
+   "legal_curb_km": 157.617,
+   "places_5.0m": 31523,
+   "places_5.5m": 28657,
+   "places_6.0m": 26269,
+   "automobiles_per_place_5.5m": 0.662,
+   "automobiles_per_place_low_90": 0.657,
+   "automobiles_per_place_high_90": 0.669,
+   "legal_curb_m_per_household": 6.447
+  }
+ },
+ "corridor_share_within_300m_median": 1.0,
+ "da": {
+  "n": 83,
+  "per_household_p10": 0.582,
+  "per_household_median": 0.75,
+  "per_household_p90": 1.166,
+  "per_household_min": 0.48,
+  "per_household_max": 2.02,
+  "half_width_90_median_pct": 26.767676767676768,
+  "half_width_90_wide_median_pct": 31.220657276995308,
+  "per_place_p10": 0.364,
+  "per_place_median": 0.73,
+  "per_place_p90": 1.646
+ },
+ "model": {
+  "fsas": 114,
+  "chosen": "tenure, commuting, household size, income",
+  "lofo": [
+   {
+    "specification": "households only",
+    "variables": 0,
+    "median_abs_pct": 35.9,
+    "p75_abs_pct": 50.2,
+    "p90_abs_pct": 98.3,
+    "largest_abs_pct": 281.9,
+    "H4A_pct": 40.0,
+    "H4B_pct": 58.9,
+    "chosen": false
+   },
+   {
+    "specification": "tenure, dwelling type",
+    "variables": 3,
+    "median_abs_pct": 14.7,
+    "p75_abs_pct": 29.8,
+    "p90_abs_pct": 51.0,
+    "largest_abs_pct": 145.4,
+    "H4A_pct": 29.9,
+    "H4B_pct": 6.4,
+    "chosen": false
+   },
+   {
+    "specification": "commuting",
+    "variables": 1,
+    "median_abs_pct": 7.9,
+    "p75_abs_pct": 13.8,
+    "p90_abs_pct": 25.2,
+    "largest_abs_pct": 90.4,
+    "H4A_pct": -15.3,
+    "H4B_pct": 2.4,
+    "chosen": false
+   },
+   {
+    "specification": "tenure, commuting, household size",
+    "variables": 3,
+    "median_abs_pct": 5.5,
+    "p75_abs_pct": 10.9,
+    "p90_abs_pct": 25.8,
+    "largest_abs_pct": 90.9,
+    "H4A_pct": -10.8,
+    "H4B_pct": 0.2,
+    "chosen": false
+   },
+   {
+    "specification": "tenure, commuting, household size, income",
+    "variables": 4,
+    "median_abs_pct": 5.4,
+    "p75_abs_pct": 11.0,
+    "p90_abs_pct": 24.4,
+    "largest_abs_pct": 91.4,
+    "H4A_pct": -10.7,
+    "H4B_pct": -0.6,
+    "chosen": true
+   },
+   {
+    "specification": "tenure, commuting, household size, income, dwelling type",
+    "variables": 6,
+    "median_abs_pct": 6.1,
+    "p75_abs_pct": 11.3,
+    "p90_abs_pct": 27.0,
+    "largest_abs_pct": 90.0,
+    "H4A_pct": -9.9,
+    "H4B_pct": -2.1,
+    "chosen": false
+   }
+  ],
+  "downscaling": [
+   {
+    "set": "all groups",
+    "method": "model",
+    "fsas": 103,
+    "groups": 27,
+    "median_abs_pct": 4.6,
+    "p75_abs_pct": 10.6,
+    "p90_abs_pct": 26.5,
+    "H4A_pct": NaN,
+    "H4B_pct": NaN
+   },
+   {
+    "set": "all groups",
+    "method": "in proportion to households",
+    "fsas": 103,
+    "groups": 27,
+    "median_abs_pct": 13.9,
+    "p75_abs_pct": 22.1,
+    "p90_abs_pct": 42.4,
+    "H4A_pct": NaN,
+    "H4B_pct": NaN
+   },
+   {
+    "set": "groups without an FSA of the fleet list",
+    "method": "model",
+    "fsas": 84,
+    "groups": 24,
+    "median_abs_pct": 3.9,
+    "p75_abs_pct": 6.9,
+    "p90_abs_pct": 11.6,
+    "H4A_pct": NaN,
+    "H4B_pct": NaN
+   },
+   {
+    "set": "groups without an FSA of the fleet list",
+    "method": "in proportion to households",
+    "fsas": 84,
+    "groups": 24,
+    "median_abs_pct": 12.3,
+    "p75_abs_pct": 18.3,
+    "p90_abs_pct": 30.1,
+    "H4A_pct": NaN,
+    "H4B_pct": NaN
+   },
+   {
+    "set": "H4A and H4B as one group",
+    "method": "model",
+    "fsas": 2,
+    "groups": 1,
+    "median_abs_pct": 5.3,
+    "p75_abs_pct": NaN,
+    "p90_abs_pct": NaN,
+    "H4A_pct": -4.6,
+    "H4B_pct": 6.0
+   },
+   {
+    "set": "H4A and H4B as one group",
+    "method": "in proportion to households",
+    "fsas": 2,
+    "groups": 1,
+    "median_abs_pct": 6.3,
+    "p75_abs_pct": NaN,
+    "p90_abs_pct": NaN,
+    "H4A_pct": -5.5,
+    "H4B_pct": 7.1
+   }
+  ]
+ },
+ "terrebonne_curb": {
+  "N": {
+   "length_m": 2414,
+   "net_m": 2124,
+   "banned_m": 1479,
+   "legal_m": 645
+  },
+  "S": {
+   "length_m": 2414,
+   "net_m": 2124,
+   "banned_m": 1400,
+   "legal_m": 725
+  }
+ },
+ "terrebonne_legal_m": 1370,
+ "terrebonne_places_5.5m": 249,
+ "lidar": {
+  "sectors": [
+   {
+    "sector": "residential west",
+    "blocks": 12,
+    "dwellings_addressed_on_terrebonne": 146,
+    "cars_at_curbs_2015_night": 52,
+    "cars_on_lots_2015_night": 97,
+    "cars_seen_per_dwelling": 1.02,
+    "modelled_automobiles_per_household": 0.93,
+    "modelled_automobiles_for_those_dwellings": 136.3
+   },
+   {
+    "sector": "institutional",
+    "blocks": 5,
+    "dwellings_addressed_on_terrebonne": 140,
+    "cars_at_curbs_2015_night": 29,
+    "cars_on_lots_2015_night": 45,
+    "cars_seen_per_dwelling": 0.53,
+    "modelled_automobiles_per_household": 0.66,
+    "modelled_automobiles_for_those_dwellings": 92.29
+   },
+   {
+    "sector": "residential east",
+    "blocks": 12,
+    "dwellings_addressed_on_terrebonne": 287,
+    "cars_at_curbs_2015_night": 102,
+    "cars_on_lots_2015_night": 111,
+    "cars_seen_per_dwelling": 0.74,
+    "modelled_automobiles_per_household": 0.89,
+    "modelled_automobiles_for_those_dwellings": 254.33
+   },
+   {
+    "sector": "whole lane",
+    "blocks": 29,
+    "dwellings_addressed_on_terrebonne": 573,
+    "cars_at_curbs_2015_night": 183,
+    "cars_on_lots_2015_night": 253,
+    "cars_seen_per_dwelling": 0.76,
+    "modelled_automobiles_per_household": 0.84,
+    "modelled_automobiles_for_those_dwellings": 482.92
+   }
+  ],
+  "areas": 11,
+  "dwellings": 573,
+  "rho_count": -0.16,
+  "p_count": 0.639,
+  "rho_rate": 0.31,
+  "p_rate": 0.361
+ }
+}

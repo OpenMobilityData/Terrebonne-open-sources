@@ -1,0 +1,4 @@
+set,dissemination_areas,households,automobiles_modelled,low_90,high_90,low_90_wide,high_90_wide,per_household,per_household_low_90,per_household_high_90,alt_3_variables,alt_6_variables,curb_km,forbidden_at_all_times_km,legal_curb_km,places_5.0m,places_5.5m,places_6.0m,automobiles_per_place_5.5m,automobiles_per_place_low_90,automobiles_per_place_high_90,legal_curb_m_per_household
+corridor,22,5471,4622,4382,4927,4351,4970,0.84,0.8,0.9,4616,4683,46.81,4.31,39.33,7865,7150,6554,0.65,0.61,0.69,7.19
+rest,61,18978,14363,14033,14641,13980,14694,0.76,0.74,0.77,14361,14285,148.23,17.9,118.29,23658,21507,19715,0.67,0.65,0.68,6.23
+all,83,24449,18985,18830,19163,18805,19188,0.78,0.77,0.78,18977,18968,195.04,22.21,157.62,31523,28657,26269,0.66,0.66,0.67,6.45
