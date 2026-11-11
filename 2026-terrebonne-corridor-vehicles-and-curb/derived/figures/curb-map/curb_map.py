@@ -16,12 +16,12 @@ T = {"en": dict(title="Legal curb by block face in the corridor, from the City's
                 sub="Each side of each street segment, drawn offset from the centre line. Blue: curb where no sign forbids stopping or parking at all times;\n"
                     "orange: faces where such signs cover half the curb or more. Rue de Terrebonne: one parking band, south side west of Cavendish, north side east of it.",
                 a="legal curb on more than half the face", b="forbidden at all times on half the face or more",
-                note="Corridor: {k} km of legal curb on {f} block faces ({p} % of the curb net of 5 m at each end is forbidden at all times). Upper bound: driveways,\nhydrants, bus stops, hourly and permit rules are not deducted."),
+                note="Corridor: {k} km of legal curb on {f} block faces ({p} % of the curb net of 10 m at each end is forbidden at all times). Upper bound: driveways,\nhydrants, bus stops, hourly and permit rules are not deducted."),
      "fr": dict(title="Bordure légale par côté d’îlot dans le corridor, d’après l’inventaire de signalisation de la Ville",
                 sub="Chaque côté de chaque tronçon, décalé de l’axe. Bleu : bordure où aucun panneau n’interdit l’arrêt ou le stationnement en tout temps ;\n"
                     "orange : côtés où ces panneaux couvrent la moitié de la bordure ou plus. Rue de Terrebonne : une bande de stationnement, côté sud à l’ouest de Cavendish, côté nord à l’est.",
                 a="bordure légale sur plus de la moitié du côté", b="interdit en tout temps sur la moitié du côté ou plus",
-                note="Corridor : {k} km de bordure légale sur {f} côtés d’îlot ({p} % de la bordure, nette de 5 m à chaque extrémité, est interdite en tout temps). Borne supérieure :\nentrées charretières, bornes d’incendie, arrêts d’autobus, règles horaires et vignettes non déduits."),
+                note="Corridor : {k} km de bordure légale sur {f} côtés d’îlot ({p} % de la bordure, nette de 10 m à chaque extrémité, est interdite en tout temps). Borne supérieure :\nentrées charretières, bornes d’incendie, arrêts d’autobus, règles horaires et vignettes non déduits."),
      }
 
 

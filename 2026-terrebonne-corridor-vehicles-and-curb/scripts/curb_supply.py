@@ -1,16 +1,18 @@
 """Stage 2: legal curb by block face in the two FSAs of the lane (H4A, H4B), from the City's géobase and its
 sign inventory, and each face's dissemination area.
 
-A block face is one side of one géobase segment. Its legal curb is its length, less 5 m at each end
-(assumption for intersections), less the stretches where a sign forbids stopping or parking at all times
+A block face is one side of one géobase segment, which runs from the centre of one intersection to the centre of
+the next. Its legal curb is its length, less 10 m at each end, less the stretches where a sign forbids stopping or parking at all times
 (« \\A EN TOUT TEMPS », « \\P EN TOUT TEMPS »). The stretch a sign governs runs from its pole to the next pole
 in the direction of its arrow; a sign without an arrow governs the stretches on both sides of its pole. The arrow
 coding is the one found on the whole City in Quebec-vehicle-registrations/scripts/street_space.py, except on a
 face where the other coding leaves fewer stretches claimed both by an all-time prohibition and by another
 parking rule (hours, days, time limit, permit: a rule that implies parking exists there); a stretch still claimed
 both ways counts for half. This reading is finer than street_space.py's (which counts a sign without an arrow for
-half of each stretch), and was checked on rue de Terrebonne, where the layout is known. Driveways, hydrants, bus
-stops, hourly rules, permit zones and the seasonal rules are not deducted: this is an upper bound on legal curb.
+half of each stretch), and was checked on rue de Terrebonne, where the layout is known. The 10 m at each end is the half roadway of the cross street (5 m,
+an assumption: local cross streets measure 9.0 to 9.4 m curb to curb on the 2015 LiDAR) plus the 5 m next to an
+intersection where the Highway Safety Code forbids stopping (art. 386, par. 4), signed or not. Driveways, hydrants,
+bus stops, hourly rules, permit zones and the seasonal rules are not deducted: this is an upper bound on legal curb.
 
 A face belongs to the dissemination area that contains the point 12 m to its side of the segment's midpoint
 (dissemination-area boundaries follow street centre lines).
@@ -27,7 +29,10 @@ from shapely.geometry import Point
 from corridor_lib import CRS, DA_SHP, FSAS, GEOBASE, LANE, SIGNS, TABLES
 
 OUT = ("autoroute", "pont", "tunnel", "voie", "ruelle")
-END = 5.0
+HALF_ROADWAY = 5.0   # m: the part of each segment end that lies in the cross street's own roadway (assumption: the
+                     # local cross streets measure 9.0 to 9.4 m curb to curb on the 2015 LiDAR, rue de Terrebonne 11.0 m)
+CLEARANCE = 5.0      # m: no stopping within 5 m of an intersection (Highway Safety Code, art. 386, par. 4)
+END = HALF_ROADWAY + CLEARANCE
 SIDE_OFFSET = 12.0
 BANS = ["\\A EN TOUT TEMPS", "\\P EN TOUT TEMPS"]
 

@@ -2,12 +2,12 @@ Lay summary
 
 How many cars belong to the households along the Terrebonne bike lane, and how much curb is there to park them? Québec's vehicle registry, as released, places each vehicle only in a postal district of about 10,000 households (H4A or H4B), not on a street. This note goes one step finer, and says which parts are measured and which are estimated.
 
-Measured: the curb. Using the City's inventory of parking signs, every side of every block was read for stretches where parking is forbidden at all times. The 22 census areas that touch the lane, reaching about one block to each side, hold 39 km of legal curb. That is an upper limit: driveways, hydrants and bus stops are not removed.
+Measured: the curb. Using the City's inventory of parking signs, every side of every block was read for stretches where parking is forbidden at all times. The 22 census areas that touch the lane, reaching about one block to each side, hold 37 km of legal curb. That is an upper limit: driveways, hydrants and bus stops are not removed.
 
 Estimated: the cars. Census facts about each small area (renters, commuters who drive, household size, income) were used to share out each district's registered automobiles. For the corridor's 5,471 households the estimate is about 4,600 automobiles, between 4,400 and 4,900: 0.84 per household. For a single small area the estimate is uncertain by about a quarter either way.
 
 The method was tested where the answer is known. Sharing a group of districts' total among its members, it was off by 5 per cent at the median, against 14 per cent for a simple split by number of households.
 
-At 5.5 m per car, the corridor's legal curb would hold about 7,200 cars, more than the estimated number registered there. This is not a measure of parking difficulty: it ignores garages and driveways, which about 70 per cent of dwellings on Terrebonne have, as well as visitors, time limits and where on the block a space is. A count of cars seen on a 2015 night agrees with the estimate only in order of magnitude.
+At 5.5 m per car, the corridor's legal curb would hold about 6,800 cars, more than the estimated number registered there. This is not a measure of parking difficulty: it ignores garages and driveways, which about 70 per cent of dwellings on Terrebonne have, as well as visitors, time limits and where on the block a space is. A count of cars seen on a 2015 night agrees with the estimate only in order of magnitude.
 
 The note makes no recommendation.

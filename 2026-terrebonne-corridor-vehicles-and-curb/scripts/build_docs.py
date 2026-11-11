@@ -111,7 +111,9 @@ Dissemination areas do not nest in FSAs. Each area is shared among FSAs in propo
 The corridor is the set of """ + str(C["dissemination_areas"]) + r""" dissemination areas that hold a block face of rue de Terrebonne along the lane, from its west end to Girouard. They reach about one block to each side (Somerled is about 260\,m north of the lane, Monkland about 285\,m south); """ + str(int((DA.share_within_300m >= 0.9).sum())) + r""" of them have nine-tenths or more of their surface within 300\,m of the lane (the others are the larger areas toward the west end, the smallest share being """ + f"{100 * DA.share_within_300m.min():.0f}" + r"""\,\%), and no area outside the set has half its surface within that distance.
 
 \subsection{Legal curb}
-A block face is one side of one géobase segment (autoroutes, bridges, tunnels and back lanes left out). Its legal curb is its length, less 5\,m at each end (an assumption for intersections), less the stretches where a sign forbids stopping or parking at all times («\,\textbackslash A EN TOUT TEMPS\,», «\,\textbackslash P EN TOUT TEMPS\,»). The stretch a sign governs runs from its pole to the next pole in the direction of its arrow; a sign without an arrow governs the stretches on both sides of its pole. Where the usual reading of the arrows leaves a stretch claimed both by an all-time prohibition and by another parking rule (hours, days, a time limit: a rule that implies parking exists there), the other reading is taken for that face if it leaves fewer such stretches; a stretch still claimed both ways counts for half.
+A block face is one side of one géobase segment (autoroutes, bridges, tunnels and back lanes left out). A segment runs from the centre of one intersection to the centre of the next. A face\textquoteright{}s legal curb is its length, less 10\,m at each end, less the stretches where a sign forbids stopping or parking at all times («\,\textbackslash A EN TOUT TEMPS\,», «\,\textbackslash P EN TOUT TEMPS\,»). The stretch a sign governs runs from its pole to the next pole in the direction of its arrow; a sign without an arrow governs the stretches on both sides of its pole. Where the usual reading of the arrows leaves a stretch claimed both by an all-time prohibition and by another parking rule (hours, days, a time limit: a rule that implies parking exists there), the other reading is taken for that face if it leaves fewer such stretches; a stretch still claimed both ways counts for half.
+
+The 10\,m at each end is the half roadway of the cross street (5\,m, an assumption: the local cross streets measure 9.0 to 9.4\,m from curb to curb on the 2015 LiDAR, rue de Terrebonne 11.0\,m) plus the 5\,m next to an intersection where the Highway Safety Code forbids stopping, signed or not (art.~386, par.~4).
 
 The result is an \textbf{upper bound} on legal curb: driveways, hydrants, bus stops, hourly rules, permit zones and seasonal rules are not deducted. Places are legal curb divided by 5, 5.5 and 6\,m.
 
@@ -151,7 +153,7 @@ The corridor\textquoteright{}s """ + n_(C["households"]) + r""" households are e
 \begin{figure}[H]\centering\includegraphics[width=\textwidth]{../derived/figures/area-estimates/area_estimates_en.png}\caption{Modelled automobiles per household, the corridor\textquoteright{}s areas from west to east.}\label{fig:areas}\end{figure}
 
 \subsection{Legal curb}
-The corridor holds """ + f"{C['curb_km']:.1f}" + r"""\,km of curb; net of 5\,m at each end of each face, """ + f"{pct_ban:.0f}" + r"""\,\% is forbidden at all times, leaving """ + f"{C['legal_curb_km']:.1f}" + r"""\,km of legal curb: """ + n_(C["places_6.0m"]) + r""" to """ + n_(C["places_5.0m"]) + r""" places at 6 to 5\,m, an upper bound. That is """ + f"{C['legal_curb_m_per_household']:.1f}" + r"""\,m of legal curb per household (""" + f"{R['legal_curb_m_per_household']:.1f}" + r"""\,m in the other areas of the two FSAs).
+The corridor holds """ + f"{C['curb_km']:.1f}" + r"""\,km of curb; net of 10\,m at each end of each face, """ + f"{pct_ban:.0f}" + r"""\,\% is forbidden at all times, leaving """ + f"{C['legal_curb_km']:.1f}" + r"""\,km of legal curb: """ + n_(C["places_6.0m"]) + r""" to """ + n_(C["places_5.0m"]) + r""" places at 6 to 5\,m, an upper bound. That is """ + f"{C['legal_curb_m_per_household']:.1f}" + r"""\,m of legal curb per household (""" + f"{R['legal_curb_m_per_household']:.1f}" + r"""\,m in the other areas of the two FSAs).
 
 """ + fig("curb-map", "curb_map", "Block faces of the corridor. A face is drawn orange when all-time prohibitions cover half of it or more.", 0.92) + r"""
 
@@ -228,7 +230,7 @@ DECK = r"""\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecol
 \begin{itemize}\small
 \item City géobase and parking-sign inventory (October 2026)
 \item Every side of every street segment
-\item Less 5\,m at each end, less stretches forbidden at all times
+\item Less 10\,m at each end (cross street\textquoteright{}s half roadway, and the 5\,m of the Highway Safety Code), less stretches forbidden at all times
 \item An \textbf{upper bound}: driveways, hydrants, bus stops, hourly and permit rules not deducted
 \end{itemize}\end{column}
 \begin{column}{0.47\textwidth}\textbf{Modelled: the automobiles}

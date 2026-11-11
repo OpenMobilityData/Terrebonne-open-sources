@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
 \captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}\widowpenalty=10000\clubpenalty=10000\raggedbottom
-\newcommand{\docversion}{2026-11-11-10-16-30}
+\newcommand{\docversion}{2026-11-11-10-52-13}
 \begin{document}
 {\LARGE\bfseries Automobiles and curb along rue de Terrebonne\par}\vspace{0.3em}
 {\large Registered vehicles known by postal district, modelled below it; legal curb measured block face by block face\par}\vspace{0.6em}
@@ -11,13 +11,13 @@ Rick Hoge, PhD \hfill November 11, 2026 \hfill version \docversion
 \section*{Lay summary}
 How many cars belong to the households along the Terrebonne bike lane, and how much curb is there to park them? Québec\textquoteright{}s vehicle registry, as released, places each vehicle only in a postal district of about 10,000 households (H4A or H4B), not on a street. This note goes one step finer, and says which parts are measured and which are estimated.
 
-Measured: the curb. Using the City\textquoteright{}s inventory of parking signs, every side of every block was read for stretches where parking is forbidden at all times. The 22 census areas that touch the lane, reaching about one block to each side, hold 39 km of legal curb. That is an upper limit: driveways, hydrants and bus stops are not removed.
+Measured: the curb. Using the City\textquoteright{}s inventory of parking signs, every side of every block was read for stretches where parking is forbidden at all times. The 22 census areas that touch the lane, reaching about one block to each side, hold 37 km of legal curb. That is an upper limit: driveways, hydrants and bus stops are not removed.
 
 Estimated: the cars. Census facts about each small area (renters, commuters who drive, household size, income) were used to share out each district\textquoteright{}s registered automobiles. For the corridor\textquoteright{}s 5,471 households the estimate is about 4,600 automobiles, between 4,400 and 4,900: 0.84 per household. For a single small area the estimate is uncertain by about a quarter either way.
 
 The method was tested where the answer is known. Sharing a group of districts\textquoteright{} total among its members, it was off by 5 per cent at the median, against 14 per cent for a simple split by number of households.
 
-At 5.5 m per car, the corridor\textquoteright{}s legal curb would hold about 7,200 cars, more than the estimated number registered there. This is not a measure of parking difficulty: it ignores garages and driveways, which about 70 per cent of dwellings on Terrebonne have, as well as visitors, time limits and where on the block a space is. A count of cars seen on a 2015 night agrees with the estimate only in order of magnitude.
+At 5.5 m per car, the corridor\textquoteright{}s legal curb would hold about 6,800 cars, more than the estimated number registered there. This is not a measure of parking difficulty: it ignores garages and driveways, which about 70 per cent of dwellings on Terrebonne have, as well as visitors, time limits and where on the block a space is. A count of cars seen on a 2015 night agrees with the estimate only in order of magnitude.
 
 The note makes no recommendation.
 
@@ -52,11 +52,13 @@ Dissemination areas do not nest in FSAs. Each area is shared among FSAs in propo
 The corridor is the set of 22 dissemination areas that hold a block face of rue de Terrebonne along the lane, from its west end to Girouard. They reach about one block to each side (Somerled is about 260\,m north of the lane, Monkland about 285\,m south); 17 of them have nine-tenths or more of their surface within 300\,m of the lane (the others are the larger areas toward the west end, the smallest share being 19\,\%), and no area outside the set has half its surface within that distance.
 
 \subsection{Legal curb}
-A block face is one side of one géobase segment (autoroutes, bridges, tunnels and back lanes left out). Its legal curb is its length, less 5\,m at each end (an assumption for intersections), less the stretches where a sign forbids stopping or parking at all times («\,\textbackslash A EN TOUT TEMPS\,», «\,\textbackslash P EN TOUT TEMPS\,»). The stretch a sign governs runs from its pole to the next pole in the direction of its arrow; a sign without an arrow governs the stretches on both sides of its pole. Where the usual reading of the arrows leaves a stretch claimed both by an all-time prohibition and by another parking rule (hours, days, a time limit: a rule that implies parking exists there), the other reading is taken for that face if it leaves fewer such stretches; a stretch still claimed both ways counts for half.
+A block face is one side of one géobase segment (autoroutes, bridges, tunnels and back lanes left out). A segment runs from the centre of one intersection to the centre of the next. A face\textquoteright{}s legal curb is its length, less 10\,m at each end, less the stretches where a sign forbids stopping or parking at all times («\,\textbackslash A EN TOUT TEMPS\,», «\,\textbackslash P EN TOUT TEMPS\,»). The stretch a sign governs runs from its pole to the next pole in the direction of its arrow; a sign without an arrow governs the stretches on both sides of its pole. Where the usual reading of the arrows leaves a stretch claimed both by an all-time prohibition and by another parking rule (hours, days, a time limit: a rule that implies parking exists there), the other reading is taken for that face if it leaves fewer such stretches; a stretch still claimed both ways counts for half.
+
+The 10\,m at each end is the half roadway of the cross street (5\,m, an assumption: the local cross streets measure 9.0 to 9.4\,m from curb to curb on the 2015 LiDAR, rue de Terrebonne 11.0\,m) plus the 5\,m next to an intersection where the Highway Safety Code forbids stopping, signed or not (art.~386, par.~4).
 
 The result is an \textbf{upper bound} on legal curb: driveways, hydrants, bus stops, hourly rules, permit zones and seasonal rules are not deducted. Places are legal curb divided by 5, 5.5 and 6\,m.
 
-\textbf{Check on rue de Terrebonne}, where the layout is known: the reading finds parking on the south side west of Cavendish and on the north side east of it, one band, as built in 2024: 1{,}370\,m of legal curb, 249 places at 5.5\,m. The borough\textquoteright{}s 2023 study counted 478 places on the two sides before the lane (report p.~40): 230 westbound and 248 eastbound.
+\textbf{Check on rue de Terrebonne}, where the layout is known: the reading finds parking on the south side west of Cavendish and on the north side east of it, one band, as built in 2024: 1{,}306\,m of legal curb, 238 places at 5.5\,m. The borough\textquoteright{}s 2023 study counted 478 places on the two sides before the lane (report p.~40): 230 westbound and 248 eastbound.
 
 \subsection{Automobiles below the FSA}
 \begin{enumerate}
@@ -85,21 +87,21 @@ The tests say the model shares a total among FSAs better than households alone d
 \caption{Modelled automobiles and measured legal curb. Interval: 90\,\%. Places: legal curb at 6\,m to 5\,m per vehicle (upper bound). Last column: modelled automobiles per place at 5.5\,m.}\label{tab:sets}
 \footnotesize\setlength{\tabcolsep}{4pt}\begin{tabular}{@{}p{3.3cm}rrrrrrrr@{}}\toprule
  & areas & hh. & autos & interval & per hh. & curb km & places & per place \\\midrule
-Corridor & 22 & 5{,}471 & 4{,}622 & 4{,}382--4{,}927 & 0.84 & 39.3 & 6{,}554--7{,}865 & 0.65 \\
-Other areas of H4A, H4B & 61 & 18{,}978 & 14{,}363 & 14{,}033--14{,}641 & 0.76 & 118.3 & 19{,}715--23{,}658 & 0.67 \\
-All & 83 & 24{,}449 & 18{,}985 & 18{,}830--19{,}163 & 0.78 & 157.6 & 26{,}269--31{,}523 & 0.66 \\
+Corridor & 22 & 5{,}471 & 4{,}622 & 4{,}382--4{,}927 & 0.84 & 37.2 & 6{,}192--7{,}431 & 0.68 \\
+Other areas of H4A, H4B & 61 & 18{,}978 & 14{,}363 & 14{,}033--14{,}641 & 0.76 & 109.3 & 18{,}210--21{,}852 & 0.72 \\
+All & 83 & 24{,}449 & 18{,}985 & 18{,}830--19{,}163 & 0.78 & 146.4 & 24{,}402--29{,}283 & 0.71 \\
 \bottomrule\end{tabular}\end{table}
 The corridor\textquoteright{}s 5{,}471 households are estimated to have 4{,}622 automobiles and light trucks registered (4{,}382 to 4{,}927), 0.84 per household (0.80 to 0.90); the other areas of the two FSAs, 0.76. The two alternative specifications give 4{,}616 and 4{,}683 for the corridor. Area by area the estimates run from 0.61 to 1.26 per household, and the 90\,\% interval of a single area is about 29\,\% of its estimate either way (Figure~\ref{fig:areas}, Table~\ref{tab:da}). The differences between neighbouring areas are mostly within those intervals.
 
 \begin{figure}[H]\centering\includegraphics[width=\textwidth]{../derived/figures/area-estimates/area_estimates_en.png}\caption{Modelled automobiles per household, the corridor\textquoteright{}s areas from west to east.}\label{fig:areas}\end{figure}
 
 \subsection{Legal curb}
-The corridor holds 46.8\,km of curb; net of 5\,m at each end of each face, 10\,\% is forbidden at all times, leaving 39.3\,km of legal curb: 6{,}554 to 7{,}865 places at 6 to 5\,m, an upper bound. That is 7.2\,m of legal curb per household (6.2\,m in the other areas of the two FSAs).
+The corridor holds 46.8\,km of curb; net of 10\,m at each end of each face, 8\,\% is forbidden at all times, leaving 37.2\,km of legal curb: 6{,}192 to 7{,}431 places at 6 to 5\,m, an upper bound. That is 6.8\,m of legal curb per household (5.8\,m in the other areas of the two FSAs).
 
 \begin{figure}[H]\centering\includegraphics[width=0.92\textwidth]{../derived/figures/curb-map/curb_map_en.png}\caption{Block faces of the corridor. A face is drawn orange when all-time prohibitions cover half of it or more.}\end{figure}
 
 \subsection{Automobiles beside curb}
-At 5.5\,m per place the corridor has 0.65 modelled automobile per place of legal curb (0.61 to 0.69); in 5 of the 22 areas the estimate exceeds the area\textquoteright{}s own places (Figure~\ref{fig:both}).
+At 5.5\,m per place the corridor has 0.68 modelled automobile per place of legal curb (0.65 to 0.73); in 5 of the 22 areas the estimate exceeds the area\textquoteright{}s own places (Figure~\ref{fig:both}).
 
 \textbf{This ratio is not a measure of parking pressure, in either direction.} The curb figure is an upper bound (no driveway, hydrant or bus stop deducted, no hourly or permit rule). The automobile figure is every vehicle registered, wherever it is kept: off-street parking is in neither term, and on rue de Terrebonne itself 70\,\% of dwellings are in a building with a garage as built or a driveway today (188 of 268; \emph{1954-underwriters-plans-terrebonne-garages}). Visitors, institutions and vehicles from elsewhere use the same curb; a place at the far end of an area is not a place at one\textquoteright{}s door. The measurements of occupancy that exist are those of the borough\textquoteright{}s 2023 study: on Thursday, September 29, 2022, at 18:30--19:30, 247 cars on rue de Terrebonne\textquoteright{}s places (50\,\%) and 311 on the cross-street stubs (51\,\%) (EXP, Tables 3-2 and 3-3, as transcribed in \emph{2026-parking-supply-demand-survey-context}).
 
@@ -158,27 +160,27 @@ log of median household income & +0.091 & 0.066 \\
 \begin{longtable}{@{}p{5.6cm}lrrrrrr@{}}
 \caption{The corridor\textquoteright{}s dissemination areas, west to east. N, S: side of rue de Terrebonne and the cross streets the frontage runs between. Automobiles: modelled, with 90\,\% interval. Places: legal curb at 5.5\,m (upper bound).}\label{tab:da}\\\toprule
 Frontage on Terrebonne & FSA & hh. & autos & interval & per hh. & curb km & places \\\midrule\endhead
-N: west end -- Belmore; S: west end -- Belmore & H4B & 176 & 158 & 108--219 & 0.90 & 3.09 & 561 \\
-N: Belmore -- Montclair & H4B & 249 & 274 & 202--358 & 1.10 & 3.41 & 619 \\
-S: Belmore -- Mariette & H4B & 273 & 166 & 123--218 & 0.61 & 2.56 & 465 \\
-S: Mariette -- King-Edward & H4B & 231 & 192 & 139--259 & 0.83 & 2.24 & 407 \\
-S: King-Edward -- Cavendish & H4B & 225 & 239 & 174--316 & 1.06 & 3.05 & 555 \\
-N: Montclair -- Walkley & H4B & 208 & 175 & 132--224 & 0.84 & 0.56 & 101 \\
-N: Walkley -- Cavendish & H4B & 283 & 205 & 157--260 & 0.72 & 1.68 & 306 \\
-N: Cavendish -- Madison & H4V & 233 & 172 & 125--235 & 0.74 & 1.69 & 306 \\
-S: Cavendish -- Madison & H4B & 316 & 204 & 132--317 & 0.65 & 2.12 & 385 \\
-N: Madison -- Grand & H4B & 260 & 195 & 155--244 & 0.75 & 1.62 & 295 \\
-S: Madison -- Grand & H4B & 253 & 194 & 151--244 & 0.77 & 2.77 & 504 \\
-N: Grand -- Hingston & H4B & 270 & 201 & 152--257 & 0.74 & 1.22 & 222 \\
-S: Grand -- Hingston & H4B & 323 & 232 & 176--302 & 0.72 & 1.22 & 222 \\
-N: Hingston -- Royal & H4A & 192 & 167 & 113--242 & 0.87 & 1.26 & 229 \\
-S: Hingston -- Royal & H4A & 267 & 312 & 215--441 & 1.17 & 1.23 & 224 \\
-N: Royal -- de Melrose & H4A & 204 & 196 & 146--258 & 0.96 & 1.19 & 216 \\
-S: Royal -- de Melrose & H4A & 200 & 163 & 117--225 & 0.82 & 1.30 & 236 \\
-N: de Melrose -- d'Oxford & H4A & 259 & 176 & 134--221 & 0.68 & 1.85 & 337 \\
-S: de Melrose -- Harvard & H4A & 249 & 314 & 228--415 & 1.26 & 1.25 & 227 \\
-S: Harvard -- Marcil & H4A & 186 & 164 & 111--242 & 0.88 & 1.21 & 220 \\
-N: d'Oxford -- Girouard & H4A & 325 & 288 & 218--372 & 0.89 & 1.69 & 307 \\
-S: Marcil -- Girouard & H4A & 289 & 235 & 176--304 & 0.81 & 1.13 & 206 \\
+N: west end -- Belmore; S: west end -- Belmore & H4B & 176 & 158 & 108--219 & 0.90 & 2.88 & 523 \\
+N: Belmore -- Montclair & H4B & 249 & 274 & 202--358 & 1.10 & 3.23 & 587 \\
+S: Belmore -- Mariette & H4B & 273 & 166 & 123--218 & 0.61 & 2.36 & 429 \\
+S: Mariette -- King-Edward & H4B & 231 & 192 & 139--259 & 0.83 & 2.11 & 384 \\
+S: King-Edward -- Cavendish & H4B & 225 & 239 & 174--316 & 1.06 & 2.82 & 512 \\
+N: Montclair -- Walkley & H4B & 208 & 175 & 132--224 & 0.84 & 0.54 & 98 \\
+N: Walkley -- Cavendish & H4B & 283 & 205 & 157--260 & 0.72 & 1.60 & 292 \\
+N: Cavendish -- Madison & H4V & 233 & 172 & 125--235 & 0.74 & 1.57 & 285 \\
+S: Cavendish -- Madison & H4B & 316 & 204 & 132--317 & 0.65 & 1.96 & 356 \\
+N: Madison -- Grand & H4B & 260 & 195 & 155--244 & 0.75 & 1.54 & 279 \\
+S: Madison -- Grand & H4B & 253 & 194 & 151--244 & 0.77 & 2.61 & 475 \\
+N: Grand -- Hingston & H4B & 270 & 201 & 152--257 & 0.74 & 1.17 & 213 \\
+S: Grand -- Hingston & H4B & 323 & 232 & 176--302 & 0.72 & 1.17 & 213 \\
+N: Hingston -- Royal & H4A & 192 & 167 & 113--242 & 0.87 & 1.20 & 219 \\
+S: Hingston -- Royal & H4A & 267 & 312 & 215--441 & 1.17 & 1.18 & 215 \\
+N: Royal -- de Melrose & H4A & 204 & 196 & 146--258 & 0.96 & 1.13 & 206 \\
+S: Royal -- de Melrose & H4A & 200 & 163 & 117--225 & 0.82 & 1.25 & 228 \\
+N: de Melrose -- d'Oxford & H4A & 259 & 176 & 134--221 & 0.68 & 1.76 & 320 \\
+S: de Melrose -- Harvard & H4A & 249 & 314 & 228--415 & 1.26 & 1.21 & 220 \\
+S: Harvard -- Marcil & H4A & 186 & 164 & 111--242 & 0.88 & 1.18 & 214 \\
+N: d'Oxford -- Girouard & H4A & 325 & 288 & 218--372 & 0.89 & 1.58 & 287 \\
+S: Marcil -- Girouard & H4A & 289 & 235 & 176--304 & 0.81 & 1.10 & 199 \\
 \bottomrule\end{longtable}}
 \end{document}
