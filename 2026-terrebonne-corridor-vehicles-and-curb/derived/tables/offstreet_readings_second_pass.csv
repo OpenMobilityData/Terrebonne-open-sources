@@ -1,0 +1,190 @@
+strip,label,driveway,places,garage,access,vehicle_on_lot,confidence,notes,batch
+1600528L1,1,yes,4,unclear,front,no,low,side strip on left about 3.3 m wide in shade runs to the rear; probably shared with the lot to the left,11
+1600528L1,2,yes,4,unclear,front,no,medium,shared driveway between 2 and 3 about 5.8 m wide in total; own side about 2.5 m; paved area behind the building,11
+1600528L1,3,yes,4,unclear,front,no,medium,shared driveway between 2 and 3; own side about 3.3 m; runs to the rear,11
+1600528L1,4,yes,4,unclear,front,no,low,shared driveway between 4 and 5 about 5.3 m in total; own side under 2 m; paved area at rear,11
+1600528L1,5,yes,4,unclear,front,no,medium,shared driveway between 4 and 5; own side about 3.5 m; paved area at rear,11
+1600528L1,6,yes,4,unclear,front,no,low,shared driveway between 6 and 7 in shade about 5.9 m in total; own side about 2.2 m,11
+1600528L1,7,yes,4,unclear,front,no,medium,shared driveway between 6 and 7 in shade; own side about 3.7 m,11
+1600528L1,8,yes,4,unclear,front,no,low,shared driveway between 8 and 9 in shade about 5.9 m in total; own side about 2.2 m; lot under trees,11
+1600528L1,9,yes,4,unclear,front,no,medium,shared driveway between 8 and 9 in shade; own side about 3.7 m,11
+1600528L1,10,yes,1,unclear,side street,no,low,corner lot; concrete pad at the rear opening on the side street; car beside it is on the street,11
+1320002L0,1,no,0,no,none,no,low,no side passage; front yard in shade,11
+1320002L0,2,yes,3,no,front,yes,medium,driveway on right side about 3.9 m wide in shade; vehicle at the lot line; may also serve garage of lot 3,11
+1320002L0,3,yes,0,yes,front,no,low,detached garage at rear left corner reached by the driveway lying on lot 2; no width on own lot; shared note,11
+1320002L0,4,yes,3,unclear,front,no,low,side passage on right about 3.9 m in shade and under evergreens at the front; pavement visible behind,11
+1320002L0,5,no,0,no,none,no,medium,no side passage on own lot; walkway at front,11
+1320002L0,6,unclear,3,unclear,front,no,low,side passage on right about 4.5 m wide entirely in shade; best count 3,11
+1320357L0,1,no,0,unclear,none,no,low,building fills most of the lot; rear court is bare ground with trees; front and left side in deep shade; two dark shapes at the front wall could be ramps or canopies,11
+1320203L0,1,no,0,no,none,no,medium,building fills the lot; only a narrow paved wedge on the left,11
+1310200L0,1,no,0,no,none,no,low,small corner lot; building fills most of it; rest in shade with a tree,11
+1310200L0,2,unclear,2,no,front,no,low,strip about 3.7 m wide right of the house in shade; best count 2,11
+1310200L0,3,yes,3,no,front,yes,low,strip about 4 m wide right of the house; dark car-sized object on it in shade; ends at the rear patio,11
+1310200L0,4,yes,3,yes,front,no,medium,driveway on left side in shade ending at an attached structure at the rear left,11
+1310200L0,5,yes,2,yes,front,no,medium,paved pad in front of the building about 6 m wide and 5 to 6 m deep continuous with the pad of lot 6; ends at the wall,11
+1310200L0,6,yes,1,yes,front,yes,medium,paved pad at front left about 4 m wide continuous with lot 5; white car on it reaching over the lot line,11
+1310200L0,7,no,0,no,none,no,low,no side passage on own lot; front in shade under a tree,11
+1310200L0,8,yes,3,unclear,front,no,low,strip about 2.7 to 3 m wide right of the building in shade; pale concrete at its front end,11
+1310200L0,9,yes,3,unclear,front,no,low,strip about 3 m wide right of the building in shade; appears to lead to the rear of lot 10 where a car stands,11
+1310200L0,10,yes,1,no,front,yes,low,car parked behind the building; reached apparently by the passage between 9 and 10 lying mostly on lot 9 or from the paved area to the right,11
+1310333L0,1,no,0,no,none,no,medium,building fills the lot; narrow front strip in shade,11
+1310333L0,2,no,0,no,none,no,low,building fills the lot; a white vehicle stands just outside the outline on the side-street side,11
+1320223L1,1,yes,2,no,front,yes,high,paved driveway right of the house; two cars on it,11
+1320223L1,2,yes,1,yes,front,no,medium,short driveway at front left ending at the left wing of the house; evergreen beside it,11
+1320223L1,3,yes,2,no,front,yes,medium,driveway along the right edge; grey car at the front,11
+1320223L1,4,unclear,2,no,front,no,low,house under a large tree; right side about 6 m wide in shade; best count 2,11
+1320223L1,5,yes,2,no,front,no,low,strip about 4.7 m wide left of the house with objects on it; a small white object may be part of a vehicle,11
+1320223L1,6,yes,1,yes,front,yes,medium,car at front left in front of the house wall reaching over the lot line; pad about 4 m deep,11
+1320223L1,7,yes,1,yes,front,no,low,flat-roofed annex on the right of the house looks like a garage; surface in front of it in shade,11
+1320223L1,8,no,0,no,none,no,medium,fenced side yard with a small white shed; front walk only,11
+1320223L1,9,no,0,no,none,no,low,corner lot; lawn on the side-street side; nothing paved seen; front in shade,11
+1310243R0,1,no,0,no,none,no,medium,building fills the lot,11
+1310243R0,2,unclear,2,no,lane,no,low,pale paved area about 8 by 5 m behind the building under trees; way in not visible; best count 2,11
+1310243R0,3,no,0,unclear,none,no,low,building fills most of the lot; rear court in shade with a tree,11
+1320315L0,1,unclear,0,no,none,no,low,front and left side in deep shade; nothing paved seen,11
+1320315L0,2,yes,2,unclear,front,no,low,concrete passage right of the building about 2.2 m on own lot and about 3.9 m with the part on lot 3; leads to a paved area and small structure at the rear,11
+1320315L0,3,no,0,no,none,no,low,passage between 2 and 3 lies mostly on lot 2 and is given to it; rear is a patio,11
+1320315L0,4,no,0,no,none,no,medium,corner lot; narrow green strip on the right; front walk only,11
+1600529R1,1,no,0,no,none,no,low,labels 1 and 2 are inside one outline; right passage holds a stair structure and trees; left passage about 2.2 m in shade,11
+1600529R1,2,no,0,no,none,no,low,labels 1 and 2 are inside one outline; right passage holds a stair structure and trees; left passage about 2.2 m in shade,11
+1600529R1,3,unclear,3,no,front,no,low,front lot of two on the same strip of land; passage about 3.5 m on the left in deep shade; best count 3,11
+1600529R1,4,unclear,2,no,front,no,low,rear lot behind lot 3; reached only by the shaded passage on the left; dark object in it may be a vehicle; best count 2,11
+1600529R1,5,yes,4,unclear,front,yes,medium,paved driveway right of the building; about 5.5 m wide with the shaded part so possibly double width; white car on it,11
+1600529R1,6,yes,4,unclear,front,no,low,shared passage between 6 and 7 about 5 m in total; own side about 2 m,11
+1600529R1,7,yes,4,unclear,front,yes,medium,shared passage between 6 and 7; own side about 3 m; dark car at its front end reaching over the lot line,11
+1600529R1,8,yes,0,unclear,front,no,low,shared passage between 8 and 9 about 4.7 m in total; own side about 1.5 m so the places are given to lot 9,11
+1600529R1,9,yes,4,unclear,front,no,low,shared passage between 8 and 9 in deep shade; own side about 3.2 m,11
+1600529R1,10,yes,4,unclear,front,no,low,passage about 4 m wide left of the building in deep shade running to a paved rear yard,11
+1600529R1,11,no,0,no,none,no,medium,corner lot; building fills it; car to the left is outside the outline,11
+1310180R0,1,no,0,no,none,no,medium,no side passage on own lot; front garden with paths,11
+1310180R0,2,unclear,0,no,none,no,low,passage between 2 and 3 about 4 m in total in deep shade; own side under 2 m; rear is a patio,11
+1310180R0,3,unclear,3,no,front,no,low,passage right of the building in deep shade; own side about 2.3 m; rear has a deck and an evergreen; best count 3,11
+1310180R0,4,yes,5,no,front,no,medium,passage right of the building about 3.2 m on own lot in shade leading to a grey paved pad about 6 m square at the rear,11
+1310180R0,5,yes,2,no,front,yes,low,car and dark paved area behind the building; reached by the passage between 5 and 6 about 3.2 m in total half on each lot; passage not counted,11
+1310180R0,6,unclear,0,no,front,no,low,passage between 5 and 6 about 3.2 m in total half on each lot in shade; no pad seen at own rear,11
+1310180R0,7,yes,4,no,front,no,low,shared driveway between 7 and 8 about 5 m in total; own side about 2 m,11
+1310180R0,8,yes,6,no,front,no,medium,asphalt driveway right of the building about 3 m on own lot leading to a paved area about 14 by 5 m behind the building; 4 along the drive and 2 more at the rear,11
+1320349L1,1,no,0,no,none,no,medium,right side yard holds a shrub; the car beside it stands on lot 2,11
+1320349L1,2,yes,2,no,front,yes,medium,driveway left of the house about 3.5 m wide; dark car on it beside the house,11
+1320349L1,3,yes,2,no,front,no,high,asphalt driveway right of the house about 4 m wide beside the driveway of lot 4,11
+1320349L1,4,yes,2,no,front,no,medium,paved driveway left of the house about 3.7 m wide beside the driveway of lot 3,11
+1320349L1,5,unclear,1,unclear,side street,no,low,corner lot; dark rectangle right of the house toward the side street may be a carport or a car in shade; best count 1,11
+1320215R0,1,yes,2,no,front,yes,medium,driveway right of the house about 3.4 m wide; dark car at its front end,11
+1320215R0,2,yes,1,yes,front,yes,low,white-roofed annex left of the house looks like a garage or carport; car-sized object in front of it,11
+1320197R1,1,yes,1,yes,front,yes,high,red car at front left on a short driveway ending at the house wall,11
+1320197R1,2,yes,2,no,front,no,medium,reddish paved driveway at front right continuing beside the house,11
+1320197R1,3,yes,2,no,front,yes,medium,driveway along the right side about 3.5 m wide; dark car at the front reaching over the lot line,11
+1320197R1,4,yes,1,yes,front,yes,high,blue car on a short driveway ending at the house wall,11
+1320197R1,5,yes,2,yes,front,yes,high,two dark cars side by side on a double pad ending at the house wall,11
+1320197R1,6,yes,1,yes,front,no,medium,asphalt driveway about 6 m long ending at a recess in the house front,11
+1320197R1,7,yes,1,yes,front,no,medium,pale concrete driveway about 6 m long ending at a recess in the house front,11
+1320223R1,1,yes,3,unclear,front,no,medium,concrete driveway right of the house about 3 m wide; front part in sun and the rest beside the house in shade,11
+1320240L1,1,unclear,0,unclear,none,no,low,image not readable: the outline lies beyond the right edge of the image; only the label shows,11
+1320240L1,2,unclear,0,unclear,none,no,low,image not readable: the outline lies beyond the right edge of the image; only the label shows,11
+1320240L1,3,unclear,0,unclear,none,no,low,image not readable: the outline lies beyond the right edge of the image; only the label shows,11
+1310250R0,1,yes,1,yes,front,no,high,grey driveway about 5 m long ending at a flat-roofed annex on the right of the house,11
+1320379L0,1,no,0,unclear,none,no,low,left side strip about 4 m in deep shade with balconies or fire escapes; no parking seen,11
+1320379L0,2,no,0,unclear,none,no,low,building fills most of the lot; side strip and front court in deep shade,11
+1320379L0,3,unclear,0,unclear,none,no,low,side strips about 4 m and 5.7 m wide in deep shade; rear is bare ground under trees; nothing countable seen,11
+1320379L0,4,unclear,0,unclear,none,no,low,right side strip about 4 m wide in deep shade; rear is bare ground with balconies; nothing countable seen,11
+1310351L0,1,yes,2,no,front,yes,medium,strip right of the building with a white van-sized vehicle on it; apron below it at the street,11
+1600536R1,1,unclear,1,no,front,no,low,pale strip about 3 m wide crosses the boulevard at front right; on the lot only a 2 m side strip in shade; best count 1,11
+1600536R1,2,yes,1,unclear,front,yes,low,dark car at front left standing mostly across the lot line; front pad on the lot about 3.5 m deep; shared gap about 2.2 m between 2 and 3,11
+1600536R1,3,yes,1,unclear,front,yes,low,dark car at front right standing mostly across the lot line; front pad on the lot about 3.5 m deep; shared gap about 2.2 m between 2 and 3,11
+1600536R1,4,no,0,no,none,no,low,no passage wide enough; front yard only,11
+1600536R1,5,no,0,no,none,no,low,no passage wide enough; front yard only,11
+1600536R1,6,no,0,no,none,no,low,shared gap between 5 and 6 about 2.5 m in total; nothing paved seen at the front,11
+1600536R1,7,yes,1,unclear,front,yes,low,dark car at front left partly across the lot line; shared gap about 2.5 m between 7 and 8,11
+1600536R1,8,yes,1,unclear,front,yes,low,dark car at front right partly across the lot line; shared gap about 2.5 m between 7 and 8,11
+1600536R1,9,no,0,no,none,no,low,no passage wide enough; front yard with a path,11
+1600536R1,10,unclear,1,no,front,no,low,grey car-sized shape at front right in shade under a tree; best count 1,11
+1600536R1,11,yes,1,yes,front,no,medium,paved driveway at front left ending at a low attached wing on the left of the house,11
+1320273L0,1,no,0,no,none,no,low,corner lot; rear holds a round pool and a patio; nothing paved for a car seen; hedge at the right end,11
+1320273L0,2,yes,2,yes,front,yes,medium,concrete pad in front of the house about 8 m wide and under 4 m deep on the lot; dark car at its left,11
+1310044L0,1,yes,1,yes,front,yes,medium,grey-roofed annex left of the building looks like a garage; orange car in front of it reaching over the lot line,11
+1310221L0,1,unclear,1,no,front,no,low,front in deep shade; pale car-sized shape in it; best count 1,11
+1310221L0,2,no,0,no,none,no,medium,no side passage; front lawn,11
+1310221L0,3,no,0,no,none,no,medium,gap on the left about 1.2 m; front lawn,11
+1310221L0,4,no,0,no,none,no,low,building reaches the right lot line; the passage to its right is on lot 5,11
+1310221L0,5,yes,4,unclear,front,yes,medium,passage about 3.5 m wide left of the building in shade; car at its front end and a second dark shape further in,11
+1310221L0,6,yes,3,unclear,front,yes,low,passage right of the building about 3.2 m in total of which about 2 m on own lot; pale car-sized shape at its front end,11
+1310221L0,7,yes,0,unclear,front,no,low,passage between 6 and 7 lies mostly on lot 6 and is given to it,11
+1310221L0,8,no,0,no,none,no,low,no passage wide enough; front in shade,11
+1310221L0,9,no,0,no,none,no,low,the passage to the right is on lot 10; a dark car stands on the apron below the lot line and is not on the lot,11
+1310221L0,10,yes,4,unclear,front,no,low,passage about 3.2 m wide left of the building in deep shade; apron at the street,11
+1310221L0,11,unclear,3,unclear,front,no,low,passage about 2.7 m wide right of the building in deep shade; evergreen near its mouth; pale strip crosses the boulevard; best count 3,11
+1310221L0,12,no,0,no,none,no,medium,no passage on own lot,11
+1310221L0,13,no,0,no,none,no,low,no passage on own lot; building under a tree,11
+1310221L0,14,no,0,no,none,no,medium,no passage on own lot,11
+1310221L0,15,no,0,no,none,no,medium,no passage on own lot,11
+1310021R1,1,no,0,unclear,none,no,low,outline cut by the top edge of the image; front is a paved forecourt with planters and a lawn; no stalls seen in the visible part,11
+1310281R0,1,unclear,1,no,side street,no,low,corner lot; rear in deep shade next to the side street; narrow grey strip along the side; best count 1,11
+1310281R0,2,no,0,no,none,no,low,passage on the left about 2.2 m in deep shade,11
+1310281R0,3,no,0,no,none,no,medium,no passage on own lot,11
+1310281R0,4,unclear,3,no,front,no,low,passage about 2.7 m wide left of the building in deep shade with trees at the rear; best count 3,11
+1310281R0,5,no,0,no,none,no,low,no passage on own lot; front under a porch roof,11
+1310281R0,6,yes,4,yes,front,no,low,shared driveway between 6 and 7 about 5.7 m in total; own side about 2.2 m; grey-roofed garage at the rear left corner of the lot,11
+1310281R0,7,yes,4,unclear,front,no,medium,shared driveway between 6 and 7; own side about 3 m; paved to the rear,11
+1310281R0,8,yes,4,no,front,no,low,bare or gravel strip about 3.5 m wide left of the building running to the rear,11
+1310395L0,1,yes,2,yes,side street,no,medium,corner lot; asphalt pad about 5 m deep and 6.5 m wide from the side street to the building wall,11
+1310395L0,2,unclear,0,no,none,no,low,passage about 4.7 m wide right of the building in deep shade; evergreen at its front; best count 0,11
+1310395L0,3,yes,4,unclear,front,no,low,shared passage between 3 and 4 about 7 m in total in deep shade; own side about 2.8 m,11
+1310395L0,4,yes,4,unclear,front,no,low,shared passage between 3 and 4 about 7 m in total in deep shade; own side about 4 m,11
+1310395L0,5,yes,4,unclear,front,yes,low,shared driveway between 5 and 6 about 6 m in total; own side about 2.6 m; grey car-sized shape at its front in shade,11
+1310395L0,6,yes,4,unclear,front,yes,medium,shared driveway between 5 and 6; own side about 3.4 m; dark car at the front reaching over the lot line; white structure at the rear,11
+1310395L0,7,yes,4,unclear,front,yes,medium,shared driveway between 7 and 8 about 5.7 m in total; own side about 2.2 m; white car at the front reaching over the lot line,11
+1310395L0,8,yes,4,unclear,front,no,low,shared driveway between 7 and 8 in deep shade; own side about 3.5 m,11
+1310395L0,9,yes,4,unclear,front,no,low,shared driveway between 9 and 10 about 6 m in total in deep shade; own side about 2.5 m,11
+1310395L0,10,yes,4,unclear,front,yes,medium,shared driveway between 9 and 10; own side about 3.5 m; white car at the front reaching over the lot line,11
+1320353R0,1,yes,1,yes,front,yes,high,driveway at front left about 3 m wide ending at the house wall; dark car on it; beside the driveway of lot 2,11
+1320353R0,2,yes,1,yes,front,no,medium,driveway at front right about 3 m wide ending at the house wall; beside the driveway of lot 1,11
+1320359R0,1,yes,1,unclear,front,no,low,long white shelter left of the house over the driveway reaching past the lot line; what is under it cannot be seen,11
+1320359R0,2,yes,1,yes,front,no,medium,driveway at front right about 6 m long ending at a white-roofed annex of the house,11
+1320359R0,3,yes,1,yes,front,yes,medium,dark car on a short driveway at front left ending at the house wall,11
+1320359R0,4,yes,1,yes,front,yes,medium,dark car on a short driveway at front right ending at the house wall,11
+1320359R0,5,no,0,no,none,no,medium,corner lot; lawn and trees; no paved surface seen,11
+1310340L0,1,no,0,unclear,none,no,low,building fills most of the lot; left strip in deep shade; the marked stalls to the left and the cars to the right are outside the outline; outline cut by the top edge,11
+1310180R1,1,yes,4,no,front,no,low,shared passage between 1 and 2 about 5.7 m in total in deep shade; own side about 3.3 m,11
+1310180R1,2,yes,4,no,front,yes,medium,shared passage between 1 and 2; own side about 2.4 m; white car parked in the rear yard,11
+1310180R1,3,unclear,1,no,front,yes,low,no passage on own lot; white vehicle-sized object behind the building in shade; way in not visible; best count 1,11
+1310180R1,4,unclear,2,no,front,no,low,grey paved-looking area behind the building; way in not visible; best count 2,11
+1310180R1,5,unclear,3,no,front,no,low,passage about 2.6 m wide left of the building in deep shade; best count 3,11
+1310180R1,6,unclear,0,unclear,none,no,low,two buildings with a court about 6 m wide between them in deep shade; rear is garden with a pool; no stalls seen; best count 0,11
+1310180R1,7,unclear,0,no,front,no,low,corner lot with two buildings; gap between them about 2.2 m in shade; blue car stands on the apron mostly below the lot line; best count 0,11
+1310125R0,1,yes,2,no,lane,yes,high,two white cars parked behind the building reached from the rear lane,11
+1310125R0,2,no,0,no,none,no,low,no passage on own lot; the shaded strip to the right is a separate unnumbered lot,11
+1310125R0,3,no,0,no,none,no,medium,no passage wide enough on own lot,11
+1310125R0,4,yes,3,no,front,no,low,passage about 3 m wide right of the building; pale paving at its front end; rest in shade,11
+1310125R0,5,unclear,3,no,front,no,low,passage about 2.7 m wide left of the building in deep shade; best count 3,11
+1310125R0,6,no,0,no,none,no,medium,no passage on own lot; rear is a garden and deck,11
+1310125R0,7,no,0,no,none,no,medium,no passage wide enough; rear under evergreens,11
+1310125R0,8,unclear,1,unclear,front,no,low,low grey annex about 2.7 m wide on the left of the building may be a garage; front of it in shade; best count 1,11
+1320235L0,1,no,0,no,none,no,low,front walks only; left side in shade under evergreens,11
+1320235L0,2,yes,1,yes,front,yes,medium,dark car at front right on a short driveway ending at the house wall; beside the driveway of lot 3,11
+1320235L0,3,yes,1,yes,front,no,low,short paved driveway at front left ending at the house wall; beside the driveway of lot 2; partly in shade,11
+1320235L0,4,yes,1,yes,front,no,medium,short grey driveway at front right ending at the house wall; beside the driveway of lot 5,11
+1320235L0,5,yes,1,yes,front,no,medium,short grey driveway at front left ending at the house wall; beside the driveway of lot 4,11
+1320235L0,6,unclear,1,unclear,front,no,low,front left in deep shade under evergreens; best count 1,11
+1320235L0,7,no,0,unclear,none,no,low,reddish paved pad in front of the house about 6 m wide but only about 2.3 m deep on the lot; the rest of it is on the public strip,11
+1320178R1,1,yes,4,yes,front,no,low,bare strip about 4 m wide right of the house leading to a white-roofed garage at the rear right,11
+1320178R1,2,yes,2,no,front,yes,medium,white car at front right on a driveway beside the house; reaches over the lot line,11
+1320178R1,3,no,0,no,none,no,low,front walk only; sides in shade,11
+1320178R1,4,yes,2,unclear,front,no,low,white shelter or van about 3 by 6 m at front right standing across the lot line; driveway under it,11
+1320178R1,5,yes,3,no,front,yes,medium,dark car at front right on a driveway about 3.5 m wide that continues beside the building in shade,11
+1320178R1,6,unclear,2,no,front,no,low,passage about 3 m wide left of the house in deep shade; best count 2,11
+1320178R1,7,yes,2,no,front,yes,medium,car at front right on a driveway about 2.7 m wide beside the house; reaches over the lot line,11
+1320178R1,8,no,0,no,none,no,medium,corner lot; lawn and fence; the driveway above it is on another lot,11
+1320081R1,1,no,0,no,none,no,medium,house fills the narrow lot; white steps at the front,11
+1320081R1,2,yes,1,yes,front,no,medium,driveway right of the house about 6.5 m long ending at an attached carport or garage,11
+1320081R1,3,no,0,no,none,no,low,no paved surface seen at the front; flat structure at rear left not reachable by car,11
+1320081R1,4,unclear,1,unclear,front,no,low,front under a large evergreen; best count 1,11
+1320081R1,5,yes,1,yes,front,yes,medium,dark car at front left on a short driveway ending at the house wall,11
+1320081R1,6,yes,1,yes,front,no,low,paved driveway about 4 m wide at front right ending at the house wall,11
+1320081R1,7,no,0,no,none,no,low,left side in shade behind a wall; front lawn,11
+1320137L0,1,yes,2,no,front,no,high,asphalt driveway about 4.5 m wide left of the house; about 9.5 m from the lot line to a fence,11
+1320137L0,2,no,0,no,none,no,low,right side strip is lawn in shade; no paved surface seen,11
+1310030R1,1,yes,3,no,front,yes,medium,strip about 2.7 m wide right of the building; white car at its front end,11
+1320208R0,1,unclear,1,unclear,front,no,low,front in shade; grey paving at front left partly on the public strip; best count 1,11
+1320208R0,2,unclear,2,no,front,no,low,passage about 4 m wide right of the house in deep shade with an object in it; best count 2,11
+1320208R0,3,no,0,no,none,no,low,front walk only; the concrete to the left is on another lot,11
+1320208R0,4,yes,1,unclear,front,no,low,reddish paved pad at front left about 6 m wide continuing to the street; shallow on the lot in front of the house,11

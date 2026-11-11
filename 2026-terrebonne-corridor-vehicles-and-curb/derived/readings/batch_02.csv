@@ -1,0 +1,267 @@
+strip,label,driveway,places,garage,access,vehicle_on_lot,confidence,notes
+1310361L0,1,yes,2,no,lane,yes,medium,paved pad behind building reached from rear lane; one car on it; partly shaded
+1310361L0,2,yes,2,no,lane,yes,high,paved pad behind building reached from rear lane; two cars on it
+1320178R0,1,yes,3,no,front,no,low,side driveway between houses 1 and 2 in shade; appears shared with lot 2 and counted here; car-like object in back yard not counted as vehicle
+1320178R0,2,yes,0,yes,front,no,low,detached garage in back yard reached by the driveway shared with lot 1; places given to lot 1
+1320178R0,3,yes,2,yes,front,no,medium,driveway left of house ending at light flat roof attached to house
+1320178R0,4,unclear,1,no,front,no,low,narrow lot; front in tree shade; possible short paved pad; best count 1
+1320178R0,5,yes,1,yes,front,no,medium,short driveway to attached annex at right of house
+1320178R0,6,yes,2,yes,front,no,medium,driveway left of house to small detached building behind
+1320178R0,7,yes,2,yes,front,no,low,narrow driveway right of house to annex behind; beside driveway of lot 6
+1310330L0,1,unclear,1,no,side street,no,low,corner lot; rear yard fully in shade; best count 1
+1310330L0,2,unclear,2,no,front,no,low,gap between buildings 2 and 3 in shade may be a shared driveway; most of width on lot 2; best count 2
+1310330L0,3,unclear,0,no,front,no,low,possible shared driveway with lot 2 in shade; places given to lot 2; rear is deck and yard
+1310330L0,4,unclear,2,no,front,no,low,gap between buildings 4 and 5 in shade may be a shared driveway; most of width on lot 4; best count 2; rear has fenced deck
+1310330L0,5,unclear,0,no,front,no,low,possible shared driveway with lot 4 in shade; places given to lot 4
+1310330L0,6,no,0,no,none,no,low,narrow walkway right of building; front and rear shaded
+1310361R0,1,yes,1,no,side street,yes,medium,paved strip right of building with a dark vehicle; corner lot
+1310361R0,2,no,0,no,none,no,medium,building fills width; walkway only; driveway to its left is on lot 3
+1310361R0,3,yes,6,yes,front,no,medium,long driveway right of building to detached garage at rear; in shade
+1310361R0,4,yes,1,no,front,yes,medium,orange car on short pad at front left corner; rear pergola and yard
+1310361R0,5,yes,3,unclear,front,no,low,shaded gap right of building may be driveway to rear structure; best count 3
+1310361R0,6,no,0,no,none,no,low,corner lot; rear yard shaded with tree; no surface seen
+1320365L0,1,yes,1,no,front,yes,low,small light vehicle on short pad in front of building; large paved yard to the right is outside the outline
+1320311L0,1,unclear,0,no,side street,no,low,dark paved strip behind building about 4 m deep with no stalls or cars seen; parking lot with cars is outside the outline; best count 0
+1320322L0,1,yes,1,yes,front,no,medium,short front driveway at right edge to building wall paired with lot 2; pool in side yard
+1320322L0,2,yes,1,yes,front,no,medium,short front driveway at left edge to building wall paired with lot 1; in shade
+1320322L0,3,yes,5,yes,front,yes,low,side driveway left of building to detached red-roof garage about 4 places with dark vehicle in shade; plus short front ramp at right edge paired with lot 4
+1320322L0,4,yes,1,yes,front,no,low,short front driveway at left edge paired with lot 3; narrow walkway at right
+1600537L0,1,no,0,no,none,no,low,attached row; no gap beside building; dark flat structure in rear yard with no way in seen
+1600537L0,2,no,0,no,none,no,medium,attached row; no gap beside building; rear yard with objects
+1600537L0,3,yes,0,no,front,no,low,narrow driveway about 2.3 m between buildings 3 and 4 shared; most of width on lot 4; places given to lot 4
+1600537L0,4,yes,4,no,front,yes,low,narrow shared driveway between buildings 3 and 4 counted here to rear of building; white car at its mouth partly on public strip
+1600537L0,5,yes,4,yes,front,no,medium,driveway about 3 m wide right of building to dark-roofed structure in rear yard; shaded
+1600537L0,6,no,0,no,none,no,medium,no gap beside building; driveway at left is on lot 5
+1600537L0,7,unclear,4,no,front,no,low,gap about 2.3 m right of building in shade may be driveway shared with lot 8; most of width on lot 7; best count 4
+1600537L0,8,unclear,0,no,front,no,low,possible shared driveway with lot 7 in shade; places given to lot 7
+1600537L0,9,unclear,4,no,front,no,low,gap about 2.3 m right of building in shade may be driveway shared with lot 10; most of width on lot 9; best count 4
+1600537L0,10,unclear,0,no,front,no,low,possible shared driveway with lot 9 in shade; places given to lot 9
+1600537L0,11,yes,3,no,front,yes,low,driveway right of building shared with next lot outside outline; red car at its mouth straddling the lot line
+1310171L1,1,yes,1,yes,front,yes,low,short driveway at left to annex of house; dark vehicle-like shape in shade
+1310171L1,2,yes,2,no,front,no,high,wide paver pad in front of house about 9 m wide and 5 m deep; counted as double width
+1310171L1,3,unclear,1,no,front,no,low,front yard bare ground and shade; strip left of house may be driveway or deck; best count 1
+1310171L1,4,yes,2,yes,front,no,medium,light paved double-width driveway at front right to building wall
+1310171L1,5,unclear,1,no,front,no,low,front in tree shade; paved area at left edge seems to belong to lot 4; best count 1
+1310171L1,6,no,0,no,none,no,low,building spans lot width; front and rear in shade
+1310171L1,7,no,0,no,none,no,low,building spans lot width; front in shade
+1320235R0,1,unclear,1,no,front,no,low,house and front under trees and shade; best count 1
+1320235R0,2,unclear,1,no,front,no,low,front in shade; no gap wide enough beside house seen; best count 1
+1320235R0,3,unclear,1,no,front,no,low,shaded strip about 2.3 m right of house; best count 1
+1320235R0,4,unclear,1,no,front,no,low,shaded strip about 2.3 m left of house; best count 1
+1320235R0,5,yes,1,yes,front,yes,medium,grey car at front left on short driveway ending at house wall
+1320235R0,6,yes,1,no,front,yes,medium,light vehicle at front left corner of lot
+1320235R0,7,yes,2,no,front,no,low,shaded strip about 3 m left of house with object at front; taken as driveway
+1320235R0,8,unclear,1,no,front,no,low,objects in shade at front left may be a vehicle or debris; best count 1
+1320317L0,1,no,0,no,none,no,medium,corner lot; lawn and paver patio behind; fence along side street; no way in seen
+1320317L0,2,no,0,no,none,no,low,gap right of building under 2.3 m and shaded; rear lawn
+1320317L0,3,unclear,2,no,front,no,low,strip about 4 m left of building in deep shade; rear lawn and shed; best count 2
+1320317L0,4,yes,3,no,front,yes,medium,paved driveway left of building about 3.8 m wide to rear of building; dark vehicle-like shape on it
+1320317L0,5,unclear,2,no,side street,no,low,corner lot; rear yard is a construction site with excavator and bare earth; best count 2
+1310222R0,1,unclear,1,no,side street,no,low,corner lot; shallow rear yard in shade; best count 1
+1310222R0,2,unclear,0,no,front,no,low,shaded gap between buildings 2 and 3 may be shared driveway; places given to lot 3
+1310222R0,3,unclear,3,no,front,no,low,shaded gap about 3 m between buildings 3 and 2 may be shared driveway; most of width on lot 3; best count 3
+1310222R0,4,yes,4,no,front,no,low,strip about 2.8 m left of building beside lot 5 driveway; shaded; to rear of building
+1310222R0,5,yes,3,no,front,yes,medium,driveway right of building with grey car at its mouth; large wooden deck behind
+1310222R0,6,yes,0,no,front,no,low,shaded gap about 3.7 m between buildings 6 and 7 taken as shared driveway; places given to lot 7
+1310222R0,7,yes,4,unclear,front,no,low,shared driveway between buildings 7 and 6 counted here; small dark structure in rear yard
+1310222R0,8,unclear,3,no,front,no,low,shaded gap about 2.5 m right of building; best count 3
+1310222R0,9,no,0,no,none,no,low,gap at left under 2.3 m on this lot; adjoining driveway is on lot 10
+1310222R0,10,yes,6,no,front,yes,medium,driveway right of building to paved yard behind; dark vehicle-like shape on driveway in shade
+1310222R0,11,yes,4,no,front,no,low,paved yard behind building continuous with lot 10; strip about 4 m left of building in shade
+1600528R0,1,no,0,yes,none,no,low,corner lot; green-roofed garage behind building opening toward side street; apron on lot shorter than a car
+1600528R0,2,yes,3,no,side street,no,medium,paved yard behind building reached by strip along top of lot from side street; no car on it
+1600528R0,3,yes,2,no,lane,no,low,bare earth or gravel yard behind building at end of rear lane
+1600528R0,4,no,0,no,none,no,low,gap right of building under 2.3 m on this lot; shaded
+1600528R0,5,yes,0,unclear,front,no,low,shared driveway between buildings 5 and 6; places given to lot 6; rear extension at lane may be garage
+1600528R0,6,yes,5,unclear,front,no,low,shared driveway about 2.7 m between buildings 6 and 5 counted here; car at its mouth on public strip; rear extension at lane may be garage
+1600528R0,7,unclear,0,unclear,front,no,low,possible shared driveway with lot 8 in shade; places given to lot 8
+1600528R0,8,unclear,5,unclear,front,no,low,gap about 2.5 m between buildings 8 and 7 in shade may be shared driveway; best count 5
+1600528R0,9,unclear,0,unclear,front,no,low,possible shared driveway with lot 10 in shade; places given to lot 10
+1600528R0,10,unclear,5,unclear,front,no,low,gap about 2.2 m between buildings 10 and 9 in shade may be shared driveway; best count 5
+1600528R0,11,unclear,0,unclear,front,no,low,possible shared driveway with lot 12 in shade; places given to lot 12
+1600528R0,12,unclear,5,unclear,front,no,low,gap about 2.7 m between buildings 12 and 11 in shade may be shared driveway; best count 5
+1600528R0,13,unclear,0,unclear,front,no,low,gap at left mostly on neighbouring lot outside outline; shaded; best count 0
+1310172R0,1,unclear,2,no,front,no,low,strip about 4 m left of building in deep shade may be a drive; rear shaded by trees; best count 2
+1310172R0,2,yes,6,no,front,yes,medium,paved strip about 6.5 m wide along left side of building with two cars; counted cars and empty spaces of same size; upper part shaded
+1310045L0,1,yes,1,yes,side street,no,medium,driveway from side street at left ending at house wall
+1310045L0,2,no,0,no,none,no,low,paver patio behind; right side of house in shade; car beside it is on lot 3
+1310045L0,3,yes,2,no,front,yes,high,driveway left of house with dark car on it
+1310045L0,4,unclear,1,no,side street,no,low,corner lot; right side of house in its own shade; best count 1
+1310015L0,1,unclear,1,no,front,no,low,building and front under tree shade; no gap of 2.3 m beside building seen; best count 1
+1310015L0,2,unclear,1,no,front,no,low,strip about 3 m right of building with evergreen and shade; best count 1
+1310015L0,3,unclear,2,no,front,no,low,strip about 3.5 m right of building in shade with small grey object; best count 2
+1310015L0,4,yes,1,yes,front,yes,medium,white van or truck on short front driveway ending at building wall; partly over public strip
+1310015L0,5,unclear,3,no,front,no,low,strip about 3.8 m right of building in deep shade; small structure behind; best count 3
+1310015L0,6,no,0,no,none,no,low,gap at left under 2.3 m on this lot; front shaded
+1310015L0,7,yes,3,no,front,yes,medium,driveway about 4 m right of building with grey car near its mouth
+1310015L0,8,yes,1,yes,front,no,low,short front driveway at left edge to building wall; white car at its mouth is mostly on public strip
+1310199L1,1,unclear,1,unclear,front,no,low,front in shade; flat white annex at right of house may be garage; best count 1
+1310199L1,2,unclear,1,no,front,no,low,strip about 3 m left of house in tree shade; best count 1
+1310199L1,3,no,0,no,none,no,low,gap at left under 2.3 m; evergreen in front yard
+1310199L1,4,no,0,no,none,no,low,gap at right about 1.3 m on this lot; shaded
+1310199L1,5,no,0,no,none,no,low,no gap beside building; small dark-roofed structure in front yard not identified
+1310199L1,6,unclear,1,no,front,no,low,front yard dark and shaded; gap at right about 1.6 m on this lot; best count 1
+1310199L1,7,yes,1,unclear,front,yes,medium,dark car on short front driveway at left of house partly over public strip; gazebo and patio behind
+1310199L1,8,yes,1,unclear,front,yes,low,dark vehicle-like shape on short front driveway; could be shadow
+1310199L1,9,yes,1,yes,front,yes,high,red vehicle on short front driveway ending at house wall
+1310199L1,10,unclear,1,no,front,no,low,strip about 4 m right of house in shade; front lawn and walkway; best count 1
+1310015L1,1,yes,3,no,front,no,low,driveway right of building about 4.2 m wide between buildings 1 and 2 shared; most of width on lot 1; car at its mouth on public strip
+1310015L1,2,yes,0,no,front,no,low,shared driveway with lot 1; places given to lot 1
+1310015L1,3,yes,3,no,front,no,low,driveway right of building about 4.3 m wide between buildings 3 and 4 shared; most of width on lot 3
+1310015L1,4,yes,0,no,front,yes,low,shared driveway with lot 3; places given to lot 3; white car at its mouth partly on this lot and partly on public strip
+1310015L1,5,yes,3,no,front,yes,medium,driveway right of building about 4.2 m wide between buildings 5 and 6 shared; most of width on lot 5; grey car on it
+1310015L1,6,yes,0,no,front,no,low,shared driveway with lot 5; places given to lot 5
+1310015L1,7,yes,3,no,front,yes,medium,driveway right of building about 5 m wide between buildings 7 and 8 shared; most of width on lot 7; red car on it
+1310015L1,8,yes,0,no,front,no,low,shared driveway with lot 7; places given to lot 7; small structure in rear yard
+1310015L1,9,yes,1,unclear,front,no,low,darker annex at right of building may be garage with short driveway in front; grey object there in shade
+1320272R0,1,yes,1,no,front,yes,medium,grey car on short front driveway at left of house partly over public strip; curved walkway beside it
+1320272R0,2,unclear,1,no,front,no,low,front in shade; no gap beside house; best count 1
+1320272R0,3,unclear,1,no,front,no,low,strip about 3 m right of house in shade; best count 1
+1320272R0,4,unclear,1,no,front,no,low,strip about 3.3 m right of house in shade; evergreen in front; best count 1
+1320272R0,5,unclear,2,no,front,no,low,strip about 3.9 m left of building in deep shade; best count 2
+1320272R0,6,yes,1,no,front,yes,low,bluish vehicle-like shape at front left of house in shade
+1320272R0,7,unclear,1,no,front,no,low,narrow lot; gap right of building about 2.1 m; front in shade; best count 1
+1320137R0,1,no,0,no,none,no,low,small paved patch at front right is shorter than a car on the lot; pool and sheds behind
+1320137R0,2,yes,3,no,front,yes,high,driveway left of house about 4 m wide with dark car on it; beside driveway of lot 3
+1320137R0,3,yes,3,no,front,yes,high,driveway right of house with white car and a dark vehicle behind it
+1320177R0,1,no,0,no,none,no,low,corner lot; side yard is bare ground with play equipment; no driveway seen
+1320177R0,2,unclear,1,no,front,no,low,wide side yard left of house under trees and shade; best count 1
+1320177R0,3,no,0,no,none,no,low,house spans lot width; front under trees; pool behind
+1320177R0,4,unclear,3,unclear,front,no,low,strip about 4.5 m right of house in shade leading to long dark roof behind that may be a garage; best count 3
+1320177R0,5,unclear,2,no,front,no,low,strip about 3.8 m right of house in shade with objects; wooden deck behind; best count 2
+1320177R0,6,unclear,1,no,front,no,low,reddish paved area in front of house about 7 m wide but only about 4 m deep on the lot; best count 1
+1320177R0,7,yes,4,no,front,no,medium,grey driveway right of house running to rear yard beside pergola
+1320177R0,8,yes,2,no,front,yes,medium,driveway right of house with light car near its mouth
+1320177R0,9,unclear,2,no,front,no,low,strip about 4.9 m right of house in tree shade; pool behind; best count 2
+1320357L0,1,unclear,0,unclear,front,no,low,rear court between wings is dark and tree-shaded with no stalls or cars seen; two dark shapes at front wall in shade may be garage entrances; best count 0
+1310015R1,1,yes,3,no,front,no,low,narrow gap about 2.2 m between buildings 1 and 2 shared; most of width on lot 1; car at its mouth on public strip
+1310015R1,2,yes,0,no,front,no,low,shared narrow driveway with lot 1; places given to lot 1
+1310015R1,3,yes,3,yes,front,no,low,strip about 2.7 m left of house leading to tan-roofed structure behind taken as garage; shaded
+1310015R1,4,no,0,no,none,no,low,gap right of house under 1 m on this lot; walkway in front; lawn and shed behind
+1310015R1,5,unclear,3,no,front,no,low,strip about 2.6 m left of house in shade; gap of 4 m with lot 6; best count 3
+1310015R1,6,unclear,1,unclear,front,no,low,dark patch in front of building at left edge may be short ramp paired with lot 7; best count 1
+1310015R1,7,yes,1,yes,front,yes,medium,grey car on short front driveway at right end of building ending at wall; shaded gap about 2.8 m at left not counted
+1310015R1,8,unclear,0,no,front,no,low,gap at right about 1.5 m on this lot beside lot 7 strip; shaded; best count 0
+1310015R1,9,unclear,2,no,front,no,low,strip about 2.6 m left of building with hedge and shade; best count 2
+1320002L1,1,unclear,1,no,front,no,low,building and front in deep shade; gap at left about 2.2 m; best count 1
+1320002L1,2,yes,3,yes,front,no,low,strip about 3 m right of building in shade leading to dark-roofed structure at rear right
+1320002L1,3,unclear,1,no,front,no,low,gap at left about 1.3 m on this lot beside lot 2 strip; front shaded; best count 1
+1320002L1,4,no,0,no,none,no,low,no gap of 2.3 m beside building; front shaded
+1320002L1,5,no,0,no,none,no,low,no gap of 2.3 m beside building; evergreen in front
+1320002L1,6,unclear,1,unclear,side street,no,low,corner lot; brown-roofed structure behind building toward side street may be garage; side yard shaded; best count 1
+1310394L1,1,unclear,3,no,front,no,low,gap about 2.3 m left of building in shade; best count 3
+1310394L1,2,unclear,3,no,front,no,low,gap about 2.2 m between buildings 2 and 3 in shade may be shared driveway; most of width on lot 2; best count 3
+1310394L1,3,unclear,0,no,front,no,low,possible shared driveway with lot 2; places given to lot 2
+1310394L1,4,unclear,3,no,front,no,low,gap about 2.5 m between buildings 4 and 5 in shade may be shared driveway; most of width on lot 4; best count 3
+1310394L1,5,unclear,0,no,front,no,low,possible shared driveway with lot 4; places given to lot 4
+1310394L1,6,unclear,3,no,front,no,low,gap about 2.5 m between buildings 6 and 7 in shade may be shared driveway; most of width on lot 6; best count 3
+1310394L1,7,unclear,0,no,front,no,low,possible shared driveway with lot 6; places given to lot 6
+1310394L1,8,unclear,3,no,front,no,low,gap about 2.7 m between buildings 8 and 9 in shade may be shared driveway; most of width on lot 8; best count 3
+1310394L1,9,unclear,0,no,front,no,low,possible shared driveway with lot 8; places given to lot 8
+1310394L1,10,yes,0,no,front,no,low,shared driveway about 3.3 m between buildings 10 and 11; places given to lot 11
+1310394L1,11,yes,3,no,front,no,low,shared driveway about 3.3 m between buildings 11 and 10 in shade; most of width on lot 11
+1310394L1,12,yes,2,no,lane,yes,medium,pad at rear of lot by the lane with a red and a dark vehicle-like shape; shared side driveway with lot 13 given to lot 13
+1310394L1,13,yes,3,no,front,yes,medium,shared driveway about 3.2 m between buildings 13 and 12; most of width on lot 13; dark car near its mouth
+1310394L1,14,yes,0,no,front,yes,low,shared driveway with lot 15; places given to lot 15; white car at front right corner partly on this lot and partly on public strip
+1310394L1,15,yes,3,no,front,no,low,shared driveway about 3.2 m between buildings 15 and 14; most of width on lot 15; paved patch at rear
+1320327R0,1,unclear,1,no,front,no,low,strip about 2.7 m right of house in shade; best count 1
+1320327R0,2,yes,2,no,front,no,low,greyish paved strip about 3.3 m left of house; upper part shaded
+1320327R0,3,unclear,1,no,front,no,low,strip about 3 m right of house along fence; possible short front ramp at left edge paired with lot 4; best count 1
+1320327R0,4,yes,1,yes,front,no,low,short front driveway at right end of house to wall; light car at its mouth on public strip; surface on lot is short
+1320327R0,5,yes,1,yes,front,yes,medium,white car on short front driveway at left end of house ending at wall; car overhangs public strip; surface on lot is about 3 m deep
+1320327R0,6,yes,1,yes,front,yes,medium,dark car on short front driveway at right end of house ending at wall; car overhangs public strip; surface on lot is about 3 m deep
+1320327R0,7,unclear,1,no,front,no,low,strip about 3.2 m right of house with patio behind; dark patches at front; best count 1
+1310394L0,1,no,0,no,none,no,low,gap at left about 2 m; shaded; parking area further left is outside the outline
+1310394L0,2,yes,3,no,front,yes,medium,driveway about 2.5 m right of building between buildings 2 and 3; white van or truck at its mouth partly over public strip
+1310394L0,3,yes,0,no,front,no,low,driveway between buildings 2 and 3 lies on lot 2; places given to lot 2
+1310394L0,4,unclear,0,no,front,no,low,possible shared driveway with lot 5 in shade; places given to lot 5
+1310394L0,5,unclear,3,no,front,no,low,gap about 2.5 m between buildings 5 and 4 in shade may be shared driveway; most of width on lot 5; best count 3
+1310394L0,6,unclear,0,no,front,no,low,possible shared driveway with lot 7 in shade; places given to lot 7
+1310394L0,7,unclear,3,no,front,no,low,gap about 2.6 m between buildings 7 and 6 in shade may be shared driveway; most of width on lot 7; best count 3
+1310394L0,8,unclear,0,no,front,no,low,possible shared driveway with lot 9 in shade; places given to lot 9
+1310394L0,9,unclear,3,no,front,no,low,gap about 2.3 m between buildings 9 and 8 in shade may be shared driveway; most of width on lot 9; best count 3
+1310394L0,10,yes,1,no,front,yes,medium,red car in front of building at right end partly over public strip
+1310394L0,11,unclear,3,no,front,no,low,gap about 2.3 m between buildings 11 and 10 in shade may be shared driveway; most of width on lot 11; best count 3
+1310394L0,12,yes,1,no,front,yes,low,light car at front right corner of lot by gap at right of building
+1310209L1,1,no,0,no,none,no,low,narrow lot; no gap beside house; walkway in front
+1310209L1,2,no,0,no,none,no,low,gap at left about 1.4 m; rear yard with long white object not a car
+1310209L1,3,no,0,no,none,no,low,gap at left about 2.1 m in shade; too narrow as seen
+1310209L1,4,no,0,no,none,no,medium,no gap beside building; flat roof and yard behind
+1310209L1,5,no,0,no,none,no,low,reddish paving in front of building about 3 m deep on lot; shorter than a car
+1310209L1,6,yes,1,yes,front,yes,low,dark car in front of building at left partly over public strip; short driveway to wall
+1310209L1,7,yes,1,yes,front,no,low,wide lot; narrow light-roofed annex left of house taken as garage with short driveway in front; shaded
+1310209L1,8,unclear,1,no,front,no,low,dark shape in front of building may be a car or shadow; gap at left about 1.5 m; best count 1
+1310209L1,9,no,0,no,none,no,low,gap at left about 1.9 m; walkway in front; trampoline behind
+1310209L1,10,yes,3,yes,side street,no,medium,corner lot; light paved yard behind building with detached garage; opens to side street
+1310160L0,1,yes,2,no,front,yes,medium,paved yard behind building with white car; reached across rear of lot 2 from its side driveway as far as seen
+1310160L0,2,yes,5,no,front,yes,medium,driveway about 2.7 m right of building to paved rear yard with light car; shaded along building
+1310160L0,3,no,0,no,none,no,low,corner lot; building nearly fills lot; front in deep shade
+1320178L1,1,unclear,1,no,front,no,low,front under trees; gap at right about 2.5 m in shade; best count 1
+1320178L1,2,unclear,1,no,front,no,low,gap at right about 2.5 m in shade; front shaded; best count 1
+1320178L1,3,unclear,1,no,front,no,low,no gap beside house; front in shade; best count 1
+1320178L1,4,unclear,2,unclear,front,no,low,strip about 4 m right of house with narrow white-roofed annex that may be garage; shaded; best count 2
+1320178L1,5,yes,4,yes,front,no,low,strip about 3.6 m right of building in deep shade leading to long dark-roofed building at rear
+1320178L1,6,yes,2,no,front,yes,medium,paved strip left of house with dark car on it
+1320178L1,7,unclear,1,no,front,no,low,bare ground right of building under tree shade; best count 1
+1310305R0,1,no,0,no,none,no,medium,building spans lot; paved alley at right is outside the outline; shed behind
+1310305R0,2,no,0,no,none,no,medium,building spans lot; shed and yard behind
+1310305R0,3,no,0,no,none,no,low,house spans lot; porch and walkway in front
+1310305R0,4,no,0,no,none,no,medium,narrow lot; building spans lot
+1310305R0,5,yes,3,no,front,yes,medium,driveway about 2.3 m right of building with white car at its mouth partly over public strip; deck behind
+1310305R0,6,yes,3,no,front,yes,low,strip about 3.1 m left of building beside lot 7 strip; dark vehicle-like shape and objects in shade
+1310305R0,7,yes,3,no,front,no,low,strip about 2.7 m right of building beside lot 6 strip; shaded
+1310305R0,8,unclear,3,no,front,no,low,strip about 3.2 m left of building in deep shade; best count 3
+1310305R0,9,no,0,no,none,no,low,strip right of house looks like lawn; front lawn
+1310305R0,10,unclear,1,no,front,no,low,gap at right about 2.1 m on this lot in shade; best count 1
+1310394R1,1,unclear,3,no,front,no,low,gap about 2.1 m right of building in shade; best count 3
+1310394R1,2,yes,0,no,front,no,low,shared driveway between buildings 2 and 3; places given to lot 3
+1310394R1,3,yes,3,no,front,yes,medium,shared driveway about 2.4 m between buildings 3 and 2; most of width on lot 3; silver car at its mouth mostly on public strip
+1310394R1,4,unclear,0,no,front,no,low,possible shared driveway with lot 5 in shade; places given to lot 5
+1310394R1,5,unclear,3,no,front,no,low,gap about 2.3 m between buildings 5 and 4 in shade may be shared driveway; most of width on lot 5; best count 3
+1310394R1,6,unclear,3,no,front,no,low,gap about 2.8 m between buildings 6 and 7 in shade may be shared driveway; most of width on lot 6; best count 3
+1310394R1,7,unclear,0,no,front,no,low,possible shared driveway with lot 6 in shade; places given to lot 6
+1310394R1,8,unclear,3,no,front,no,low,gap about 2.8 m between buildings 8 and 9 in shade may be shared driveway; most of width on lot 8; best count 3; blue tarp in front
+1310394R1,9,unclear,0,no,front,no,low,possible shared driveway with lot 8 in shade; places given to lot 8
+1310394R1,10,yes,3,no,front,yes,medium,shared driveway about 3 m between buildings 10 and 11; most of width on lot 10; grey car at front left partly over public strip
+1310394R1,11,yes,0,no,front,no,low,shared driveway with lot 10; places given to lot 10
+1310394R1,12,yes,0,no,front,no,low,shared driveway with lot 13; places given to lot 13
+1310394R1,13,yes,3,no,front,no,low,shared driveway about 3.5 m between buildings 13 and 12; most of width on lot 13; car at its mouth on public strip
+1310394R1,14,unclear,3,no,front,no,low,gap about 2.7 m between buildings 14 and 15 in shade may be shared driveway; most of width on lot 14; best count 3
+1310394R1,15,unclear,0,no,front,no,low,possible shared driveway with lot 14 in shade; places given to lot 14; corner lot with gap of 2 m at left
+1310199R1,1,unclear,3,unclear,front,no,low,strip about 2.4 m left of building under tree shadows leading to long grey surface or roof behind; best count 3
+1310023L1,1,unclear,1,no,front,no,low,front of house in shade with dark patches; paver patio behind; best count 1
+1310023L1,2,yes,2,no,front,no,low,dark strip about 3.9 m left of house taken as driveway; shaded
+1310023L1,3,yes,2,unclear,front,yes,medium,two cars side by side in front of building overhanging public strip; surface on lot about 3 m deep
+1310354L0,1,no,0,no,none,no,medium,gap at left under 2 m on lot; paved drive with car to the left is outside the outline; rear shaded
+1600536L1,1,yes,2,no,front,yes,low,strip about 4 m left of house in shade with light vehicle-like shape near front
+1600536L1,2,unclear,1,no,front,no,low,no gap of 2.3 m beside house; front in shade; best count 1
+1600536L1,3,yes,1,unclear,front,no,medium,narrow lot; grey paver surface about 4.5 m wide in front of house
+1600536L1,4,yes,3,no,front,yes,medium,strip about 2.2 m left of building with dark car at front
+1600536L1,5,unclear,0,no,front,no,low,possible shared driveway with lot 6 in shade; places given to lot 6
+1600536L1,6,unclear,3,no,front,no,low,gap about 3.5 m between buildings 6 and 5 in shade may be shared driveway; most of width on lot 6; pool behind; best count 3
+1600536L1,7,unclear,3,no,front,no,low,strip about 3 m left of building in shade; best count 3
+1600536L1,8,unclear,3,no,front,no,low,strip about 3 m right of building in shade; best count 3
+1600536L1,9,no,0,no,none,no,low,house spans lot; front lawn and walkway; lane at right is outside the outline
+1600536L1,10,unclear,2,no,front,no,low,strip about 3.7 m left of building in shade beside lane; best count 2
+1600536L1,11,no,0,no,none,no,low,corner lot; lawn at right; two walkways in front; no driveway seen
+1310280L0,1,yes,0,no,front,no,low,driveway between buildings 1 and 2 about 4.5 m wide shared; most of width on lot 2; red car at its mouth mostly on public strip
+1310280L0,2,yes,4,no,front,yes,medium,driveway left of building shared with lot 1 counted here; dark car on it
+1310280L0,3,unclear,0,no,front,no,low,possible shared driveway with lot 4 in shade; places given to lot 4; patio with umbrella behind
+1310280L0,4,unclear,3,no,front,no,low,gap about 2.2 m left of building in shade may be shared driveway; best count 3
+1310280L0,5,unclear,0,no,front,no,low,possible shared driveway with lot 6 in shade; places given to lot 6
+1310280L0,6,unclear,3,no,front,no,low,gap about 3 m between buildings 6 and 5 in shade may be shared driveway; most of width on lot 6; best count 3
+1310280L0,7,unclear,0,no,front,no,low,possible shared driveway with lot 8 in shade; places given to lot 8
+1310280L0,8,unclear,3,no,front,no,low,gap about 2.7 m between buildings 8 and 7 in shade may be shared driveway; most of width on lot 8; best count 3
+1310280L0,9,unclear,0,no,front,no,low,possible shared driveway with lot 10 in shade; places given to lot 10
+1310280L0,10,unclear,3,no,front,no,low,gap about 2.5 m between buildings 10 and 9 in shade may be shared driveway; most of width on lot 10; best count 3
+1310280L0,11,unclear,0,no,front,no,low,gap at right about 3 m mostly on neighbouring lot outside outline; best count 0
+1310285R1,1,yes,3,no,front,no,low,strip about 4 m left of building in shade with a light object that may be a vehicle
+1310285R1,2,yes,4,no,front,yes,medium,wide strip right of building with dark car on it; patio behind
+1310285R1,3,unclear,3,no,front,no,low,wide strip right of building in shade of building and trees; best count 3
+1310285R1,4,unclear,3,no,front,no,low,strip about 4.7 m left of building in deep shade with dark objects; best count 3
+1310285R1,5,unclear,2,no,front,no,low,wide yard right of building under trees; best count 2
+1310285R1,6,unclear,2,no,front,no,low,strip about 4.7 m left of building in deep shade; best count 2
+1310285R1,7,unclear,3,unclear,front,no,low,yard right of building with brown-roofed structure behind that may be garage and round paver patio; best count 3
+1310285R1,8,yes,2,no,front,yes,medium,strip left of building with white car at front partly over public strip; pool behind
+1310285R1,9,no,0,no,none,no,low,building spans lot; shed behind
+1310285R1,10,no,0,no,none,no,low,corner lot; building spans lot; bare rear yard with no way in seen

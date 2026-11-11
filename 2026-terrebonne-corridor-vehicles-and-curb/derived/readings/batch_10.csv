@@ -1,0 +1,193 @@
+strip,label,driveway,places,garage,access,vehicle_on_lot,confidence,notes
+1320197R0,1,yes,3,yes,front,no,high,single driveway along right side to detached garage at rear
+1320197R0,2,yes,1,yes,front,no,medium,short wide paved apron in front of attached garage about 4 m deep
+1320197R0,3,yes,2,yes,front,no,high,double-width driveway ending at house wall
+1320197R0,4,yes,1,yes,front,yes,medium,short driveway to house wall with car straddling lot line
+1320197R0,5,yes,2,unclear,front,yes,high,double-width driveway with two cars in front of house
+1320197R0,6,yes,2,no,front,yes,medium,narrow driveway along right side of house with white car
+1320197R0,7,yes,2,yes,front,no,medium,double-width apron in front of attached garage about one car deep
+1320249R0,1,yes,1,no,side street,no,medium,paved pad beside house reached from side street on right
+1320249R0,2,yes,2,no,front,yes,low,driveway on line with lot 3 with white car on the line; counted here
+1320249R0,3,no,0,no,none,no,low,driveway on shared line with lot 2 counted on lot 2; front is walkway and garden
+1320249R0,4,no,0,no,none,no,medium,corner lot; dark shape in front yard read as shrubs not a car
+1310331L0,1,no,0,no,none,no,medium,building fills lot; rear courtyard terrace with no car access; top of lot in shadow
+1600528R1,1,no,0,no,none,no,low,front yard trees and garden; building near rear lane; side gap in shadow
+1600528R1,2,no,0,no,none,no,low,building reaches rear lane; no surface seen
+1600528R1,3,no,0,no,none,no,low,small rear yard at lane; no car surface seen
+1600528R1,4,no,0,no,none,no,low,rear strip at lane under 3 m deep; nothing at front
+1600528R1,5,unclear,1,no,lane,no,low,light surface behind right part of building at lane may be a pad; best count 1
+1600528R1,6,no,0,no,none,no,low,building reaches rear lane; front garden
+1600528R1,7,no,0,no,none,no,low,building reaches rear lane; small structure or deck at lane
+1600528R1,8,no,0,no,none,no,low,building reaches rear lane; front garden
+1600528R1,9,no,0,yes,none,no,low,garage-size structure at rear lane with apron shorter than a car
+1600528R1,10,unclear,1,no,lane,no,low,rear yard at lane about 6 m deep in shade may hold a car; best count 1
+1310022R0,1,yes,1,yes,front,yes,medium,short driveway to house wall beside lot 2 driveway; car straddles lot line
+1310022R0,2,yes,1,yes,front,yes,medium,short driveway to house wall at right edge; car straddles lot line
+1310022R0,3,yes,1,yes,front,yes,medium,short driveway at left edge to house wall; white car straddles lot line
+1310022R0,4,yes,1,yes,front,yes,medium,short driveway at right edge to house wall; dark car on it
+1310022R0,5,no,0,no,none,no,medium,no driveway seen; dark-roofed shed at rear with no car access
+1310022R0,6,yes,1,yes,side street,no,medium,corner lot; drive from side street on left to small garage at rear
+1310198R1,1,yes,2,no,front,yes,low,narrow driveway on left side in shadow; dark car at lot line straddling line with lot 2
+1310198R1,2,unclear,1,no,front,no,low,left side gap in shadow of house; rear pergola; best count 1
+1310198R1,3,yes,3,yes,front,yes,low,narrow driveway on left side toward rear structure read as garage; dark vehicle at lot line
+1310198R1,4,yes,2,no,front,no,low,light strip at left edge on line with lot 5 continuing beside house
+1310198R1,5,unclear,1,no,front,no,low,left side gap in shadow shared with lot 6; rubble or gravel patch at rear; best count 1
+1310198R1,6,yes,2,yes,front,no,low,red-roofed garage at rear right reached along right side gap shared with lot 5
+1310198R1,7,unclear,1,no,front,no,low,left side gap about 3 m wide entirely in shadow; best count 1
+1310198R1,8,no,0,no,none,no,medium,corner lot; no car surface seen from front or side street
+1320223L0,1,unclear,1,unclear,front,no,low,small lot mostly covered by low building; front strip in tree shadow may be paved; best count 1
+1320223L0,2,no,0,no,none,no,low,no paved surface seen; bare ground at front and right side
+1320223L0,3,yes,1,yes,front,yes,high,driveway at left to house wall with white car
+1320223L0,4,yes,1,unclear,front,yes,high,driveway at right front to house with dark car straddling lot line
+1320223L0,5,yes,1,yes,front,yes,high,driveway at left to house wing with car
+1320223L0,6,yes,2,yes,front,yes,high,double-width driveway at right to house wall with two dark cars
+1320366L0,1,no,0,no,none,no,low,corner lot under tree shadow; lawn around house; no car surface seen
+1310211L1,1,unclear,1,no,front,no,low,front in building shadow; grey strip at left front may be a driveway; best count 1
+1310211L1,2,yes,2,yes,front,no,medium,dark asphalt double-width driveway at right front to house wall
+1310211L1,3,yes,2,no,front,no,low,grey strip at left edge continuing beside building in shadow
+1310211L1,4,unclear,1,no,front,no,low,front and right side in shadow; best count 1
+1310211L1,5,yes,1,no,front,no,low,paved strip at left front beside walkway
+1310211L1,6,no,0,no,none,no,low,front yard with shrubs and walkway only
+1310211L1,7,no,0,unclear,none,no,low,large building; no surface lot seen; right side strip in shadow could hide a ramp
+1320361L0,1,yes,1,yes,side street,yes,medium,corner lot; white vehicle on pad off side street in front of dark-roofed structure read as garage
+1320361L0,2,yes,3,no,front,no,medium,paved driveway along right side of house to paved rear yard; small shed at rear
+1320361L0,3,no,0,no,none,no,medium,lawn and garden pond; no car surface seen
+1310382R0,1,no,0,no,none,no,medium,corner row house; front walk and rear deck only
+1310382R0,2,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,3,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,4,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,5,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,6,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,7,no,0,no,none,no,medium,row house; fenced front garden
+1310382R0,8,no,0,no,none,yes,low,dark car on front pad about 3 m deep on lot and straddling lot line; shorter than a car so not counted
+1310382R0,9,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,10,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,11,no,0,no,none,no,medium,row house; front yard with walkway only
+1310382R0,12,no,0,no,none,no,medium,row house; front yard in tree shadow; walkway only
+1320133L0,1,yes,1,yes,front,yes,low,short driveway at left to house wall about 4 m on lot; car straddles lot line
+1320133L0,2,yes,1,yes,front,no,low,short wide driveway at right to house wall in shadow about 4 m on lot
+1320133L0,3,yes,1,yes,front,yes,low,short driveway at left to house wall; dark car straddles lot line
+1320133L0,4,yes,1,yes,front,yes,low,short driveway at right to house wall; dark car straddles lot line
+1320133L0,5,yes,1,yes,front,yes,medium,short driveway at left to house wall with white car
+1320133L0,6,unclear,1,unclear,front,no,low,front in shadow; grey area at right front may be a short driveway; best count 1
+1310021R0,1,yes,1,unclear,front,yes,medium,short driveway at left front to building with blue car straddling lot line
+1310021R0,2,yes,3,no,front,no,low,narrow paved strip along right side to paved rear yard; width near the 2.3 m minimum
+1310021R0,3,yes,2,unclear,front,yes,medium,driveway along left side with dark car; grey-roofed structure at rear may be a garage
+1310021R0,4,yes,2,no,front,no,medium,paved driveway along right side of house
+1310021R0,5,unclear,1,no,front,no,low,front under tree shadow; greyish area at left front may be a driveway; best count 1
+1310021R0,6,yes,1,yes,front,no,medium,light paved driveway at right front ending at house wall
+4005162L0,1,no,0,no,none,no,low,lot at an angle on cul-de-sac; house and shaded rear yard; no car surface seen
+4005162L0,2,yes,35,unclear,front,yes,low,outline cut by image edge; building not in view; surface parking lot with about 10 cars and about 35 marked stalls visible
+1320327R1,1,unclear,1,no,front,no,low,left side gap in shadow and light strip at right front under 3 m deep on lot; best count 1
+1310281L0,1,unclear,1,yes,side street,no,low,corner lot; garage-size structure at rear on side street and brownish side yard strip that may be paved; best count 1
+1310281L0,2,no,0,no,none,no,low,building covers most of lot; side gaps narrow and in shadow
+1310281L0,3,unclear,2,yes,front,no,low,left side gap about 2.7 m wide in shadow leading toward light-roofed structure at rear; best count 2
+1310281L0,4,no,0,no,none,no,low,building fills width; no surface seen
+1310281L0,5,unclear,2,no,front,no,low,left side gap about 3.5 m wide in deep shadow; best count 2
+1310281L0,6,no,0,no,none,no,low,front in shadow; no surface seen
+1310281L0,7,no,0,no,none,no,low,building fills width; front in shadow
+1310281L0,8,unclear,2,no,front,no,low,right side gap about 4 m wide in shadow; best count 2
+1310281L0,9,unclear,1,no,front,no,low,greyish area in front of building may be a paved pad; best count 1
+1320349L1,1,no,0,no,none,no,medium,shrub and yard at right side; car beside it is on lot 2 side of line
+1320349L1,2,yes,2,no,front,yes,medium,driveway along left side of house with dark car
+1320349L1,3,yes,2,no,front,no,high,paved driveway along right side of house
+1320349L1,4,yes,2,no,front,no,high,paved driveway along left side of house
+1320349L1,5,no,0,no,none,no,medium,corner lot; yard and garden beds; no car surface seen
+1320176L0,1,no,0,no,none,no,medium,large building fills lot; lawn and trees around; no surface parking or ramp seen
+1320176L0,2,no,0,no,none,no,medium,flat-roofed building with lawn behind; no car surface seen
+1320176L1,1,yes,2,no,front,yes,low,right side gap in shadow with dark car-shaped object beside house
+1320176L1,2,no,0,no,none,no,low,house fills width; front steps only; rear under trees
+1320176L1,3,yes,2,no,front,no,medium,dark asphalt driveway along right side of house; small sheds at rear
+1320176L1,4,yes,1,unclear,side street,yes,medium,corner lot; white car on pad off side street at right beside house
+1320177R1,1,yes,1,yes,front,no,medium,light concrete driveway at right front ending at house wall
+1320177R1,2,yes,3,unclear,front,yes,medium,wide driveway at left front with silver car continuing beside house
+1320177R1,3,yes,2,yes,front,no,low,wide paved apron at right front to house wall about one car deep
+1320177R1,4,yes,4,no,front,yes,medium,long driveway along left side with dark car to paved rear court
+1320177R1,5,no,0,no,none,no,low,front in shadow; no driveway seen
+1320177R1,6,yes,2,unclear,front,yes,medium,wide paved front area at left with light car
+1320177R1,7,yes,2,no,front,yes,medium,driveway at right front with dark car straddling lot line continuing beside house to paved rear
+1320177R1,8,unclear,1,no,front,no,low,dark grey area at left front beside porch may be a driveway; best count 1
+1320177R1,9,no,0,no,none,no,low,corner lot under tree shadow; no car surface seen
+1310222L0,1,unclear,1,no,lane,no,low,light surface at rear of lot toward lane may be a pad; best count 1
+1310222L0,2,no,0,no,none,no,low,rear yard in shadow under trees; nothing at front
+1310222L0,3,yes,1,no,lane,yes,low,dark car-shaped object in rear yard off lane
+1310222L0,4,unclear,1,no,lane,no,low,tan strip from lane across wide side yard may be a walkway or drive; best count 1
+1310222L0,5,no,0,no,none,no,low,rear yard dark; no surface seen
+1310222L0,6,unclear,1,no,lane,no,low,greyish rear yard may be paved pad off lane; best count 1
+1310222L0,7,no,0,no,none,no,low,rear yard dark with white object not a car
+1310222L0,8,no,0,no,none,no,low,rear yard bare ground with debris
+1310222L0,9,yes,1,no,lane,yes,low,dark car at rear edge of lot off lane
+1310222L0,10,yes,2,no,lane,yes,medium,paved rear area off lane with yellow car
+1310222L0,11,yes,2,no,front,yes,low,driveway along right side with dark car at front beside lot 12 driveway
+1310222L0,12,yes,2,no,front,yes,low,driveway along left side with white car straddling lot line
+1320176R0,1,yes,6,unclear,side street,yes,low,paved strip behind building reached from street at right with two cars parked along it; left part in shadow; stalls not marked
+1320176R0,2,no,0,no,none,no,low,building with treed yard; no car surface seen
+1320176R0,3,yes,3,yes,front,no,low,right side gap in shadow leading to grey-roofed garage-size structure at rear
+1320176R0,4,yes,3,unclear,front,no,low,left side gap in shadow toward rear structure; blue car at left edge mostly outside outline
+1320362L0,1,no,0,no,none,no,low,corner lot; front under tree and rear in shadow; no car surface seen
+1320362L0,2,yes,1,unclear,front,yes,medium,short driveway at right front with white car
+1320362L0,3,yes,1,yes,front,yes,medium,short driveway at right front to house wall with white vehicle straddling lot line
+1320362L0,4,no,0,no,none,no,low,house fills width; shallow front yard
+1320362L0,5,no,0,no,none,no,low,corner lot; bare ground behind house; no car surface seen
+1310199R0,1,unclear,1,unclear,side street,no,low,corner lot; dark area behind house toward side street may be a pad or roof; best count 1
+1310199R0,2,no,0,no,none,no,medium,lawn at left and rear; no driveway seen
+1310199R0,3,yes,1,no,front,yes,low,wide pad at right front under 3 m deep on lot; vehicles mostly on public strip below lot line
+1310199R0,4,yes,1,unclear,front,yes,medium,driveway at right front beside house with dark car
+1310199R0,5,no,0,no,none,no,medium,house fills width; no driveway seen
+1310199R0,6,unclear,1,unclear,front,no,low,narrow right side gap on line with lot 5 toward dark structure at rear; best count 1
+1310199R0,7,yes,2,no,front,yes,low,driveway on left side on line with lot 8; dark car at front straddling lot line; gravel strip at rear
+1310199R0,8,yes,1,unclear,front,yes,low,dark car at right front beside lot 7 driveway; grey-roofed structure at rear right
+1310199R0,9,yes,3,yes,front,yes,medium,driveway along left side with light car toward large grey structure at rear
+1310199R0,10,no,0,no,none,no,medium,semi-detached; right gap too narrow; no driveway seen
+1310199R0,11,no,0,no,none,no,low,gap on line with lot 12 counted on lot 12; front walkway only
+1310199R0,12,yes,3,yes,front,no,low,right side gap shared across line with lot 11 leading to dark structure at rear read as garage; counted here
+1310232R0,1,unclear,2,no,side street,yes,low,building covers lot; rear strip about 5 m deep in deep shadow with a white car at its right end partly inside outline; best count 2
+1320129L1,1,no,0,unclear,none,no,low,attached house; front yard about 3 m deep so any front apron is shorter than a car
+1320129L1,2,no,0,unclear,none,no,low,attached house; front yard about 3 m deep so any front apron is shorter than a car
+1320129L1,3,no,0,unclear,none,no,low,attached house; front yard about 3 m deep so any front apron is shorter than a car
+1320129L1,4,yes,3,yes,front,no,low,left side gap about 3 m wide in shadow leading to dark-roofed structure at rear
+1320129L1,5,no,0,no,none,no,low,paver apron at front about 3 m deep on lot shorter than a car; pool at rear
+1320129L1,6,unclear,1,no,front,no,low,grey paved area at right front and right side gap about 2.7 m; best count 1
+1320129L1,7,no,0,no,none,no,low,shrubs at front; sheds at rear with no car access seen
+1320129L1,8,no,0,no,none,no,low,shrubs at front; no car surface seen
+1320378L1,1,yes,3,yes,front,yes,high,driveway along left side with white car to brown-roofed carport or garage
+1320378L1,2,yes,3,yes,front,yes,medium,driveway along left side in shadow with car at front straddling lot line; garage-size structure and paved yard at rear
+1320002R1,1,unclear,2,no,front,no,low,left side gap about 4.5 m wide in shadow; best count 2
+1320002R1,2,no,0,no,none,no,low,semi-detached; right gap narrow; shallow front yard
+1320002R1,3,yes,2,no,front,yes,medium,driveway along left side with white car at front straddling lot line
+1320002R1,4,no,0,no,none,no,low,house fills width; shallow front yard; no driveway seen
+1320002R1,5,no,0,no,none,no,low,building fills width; front under tree shadow
+1320002R1,6,yes,3,yes,front,no,low,left side gap in shadow shared across line with lot 7 toward small rear structures; counted here
+1320002R1,7,no,0,yes,none,no,low,right side gap shared across line with lot 6 counted on lot 6; dark structure at rear right
+1320002R1,8,no,0,no,none,no,low,front lawn and curved walkway under large tree; no driveway seen
+1320002R1,9,unclear,1,no,front,no,low,grey paved area at front may be steps or a short apron; best count 1
+1320002R1,10,unclear,1,no,front,no,low,right side gap about 3 m wide bare ground toward light patch behind house; best count 1
+1320002R1,11,unclear,1,no,side street,no,low,corner lot; dark rounded car-size object behind house may be a car or a cover; best count 1
+1310332L0,1,yes,2,no,front,no,low,paved rear court shared with lot 2 reached by drive at right edge of lot 2
+1310332L0,2,yes,2,no,front,yes,medium,paved rear court with silver car reached by drive along right edge
+1310332L0,3,no,0,no,none,no,low,building with shrubs and trees; drive at left edge is outside outline
+1310332L0,4,yes,2,no,side street,no,medium,corner lot; paved pad beside building off side street at right
+1320002L0,1,no,0,no,none,no,low,front in shadow; no driveway seen
+1320002L0,2,yes,3,no,front,no,low,right side gap in shadow shared across line with lot 3; counted here; dark car below lot line at its mouth
+1320002L0,3,no,0,yes,none,no,low,gap on line with lot 2 counted on lot 2; brown-roofed structure at rear left read as garage
+1320002L0,4,unclear,2,no,front,no,low,right side gap about 4 m wide in deep shadow; best count 2
+1320002L0,5,no,0,no,none,no,low,left gap narrow; front in shadow
+1320002L0,6,unclear,2,no,front,no,low,right side gap about 4 m wide under tree shadow; best count 2
+1310209R0,1,yes,3,yes,side street,no,low,corner lot; tan drive from side street to paved court behind house beside long brown-roofed structure read as garage
+1310209R0,2,yes,3,no,front,no,low,dark strip along right side of house to gravel rear yard with play equipment
+1310209R0,3,no,0,no,none,no,low,semi-detached; right gap under 2.3 m; front yard only
+1310209R0,4,no,0,no,none,no,low,semi-detached; front steps and yard only
+1310209R0,5,unclear,1,no,front,no,low,right side gap about 2.7 m wide bare ground; best count 1
+1310209R0,6,no,0,no,none,no,low,right gap narrow with hedge; no driveway seen
+1310238R0,1,no,0,no,none,no,low,outline cut by left edge of image; visible part is building and a strip of trees
+1320357R0,1,yes,6,unclear,front,no,low,dark paved strip about 3.8 m wide along left side of building for full depth of lot in shadow; no stalls marked; counted one car per 5 m
+1320357R0,2,yes,2,no,front,yes,high,driveway along right side of house with black car
+1320357R0,3,yes,2,no,front,yes,high,driveway along left side of house with dark car at front
+1310340L0,1,no,0,unclear,none,no,low,tall building fills outline; left strip in deep shadow could hide a ramp; no surface stalls seen
+1320240R1,1,unclear,0,no,none,no,low,outline cut by left edge of image; only a small paved corner shows; best count 0
+1320223R1,1,yes,3,no,front,no,medium,light concrete driveway along right side of house; upper part in shadow
+1320176R1,1,yes,2,no,front,yes,low,right side gap with blue car at front straddling lot lines
+1320176R1,2,yes,4,yes,front,no,low,left side gap in shadow leading to grey-roofed garage at rear
+1320176R1,3,yes,5,yes,front,yes,medium,asphalt driveway along right side with dark car to brown-roofed garage at rear
+1320176R1,4,unclear,1,no,front,no,low,right side in shadow; white car sits just below lot line at its mouth; best count 1
+1320176R1,5,unclear,1,no,side street,no,low,corner lot; bare or paved patch at left of house toward side street; best count 1

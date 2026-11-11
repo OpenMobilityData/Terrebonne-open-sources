@@ -1,0 +1,14 @@
+check,buildings,agree_pct,kappa,detail
+two readings of the same building: driveway yes/no,122,91.0,0.82,"yes/yes 64, no/no 47, yes/no 0, no/yes 11; unclear in either: 67 of 189"
+two readings of the same building: places,189,66.7,,total places 205 (first) against 287 (second); within one place 85.7 %; mean absolute difference 0.58
+"against the reading of October 25, 2026 (rue de Terrebonne): driveway yes/no",112,52.7,0.04,"Oct 25 yes: 70, new yes: 59; Oct 25 yes and new no 32, Oct 25 no and new yes 21; not matched or unclear: 22 of 134"
+reader 01,233,,,"driveway yes 48 %, unclear 27 %, places per building 1.11, low confidence 64 %"
+reader 02,266,,,"driveway yes 40 %, unclear 44 %, places per building 1.52, low confidence 77 %"
+reader 03,262,,,"driveway yes 50 %, unclear 15 %, places per building 1.36, low confidence 51 %"
+reader 04,224,,,"driveway yes 35 %, unclear 29 %, places per building 0.88, low confidence 62 %"
+reader 05,240,,,"driveway yes 39 %, unclear 33 %, places per building 1.45, low confidence 72 %"
+reader 06,229,,,"driveway yes 38 %, unclear 38 %, places per building 1.08, low confidence 61 %"
+reader 07,261,,,"driveway yes 52 %, unclear 19 %, places per building 1.65, low confidence 76 %"
+reader 08,200,,,"driveway yes 50 %, unclear 14 %, places per building 1.14, low confidence 37 %"
+reader 09,251,,,"driveway yes 42 %, unclear 23 %, places per building 1.10, low confidence 53 %"
+reader 10,192,,,"driveway yes 44 %, unclear 18 %, places per building 1.27, low confidence 62 %"
