@@ -12,8 +12,8 @@
 
 | File | Content |
 |---|---|
-| [`docs/corridor_vehicles_curb_note_en.pdf`](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-corridor-vehicles-and-curb/docs/corridor_vehicles_curb_note_en.pdf) | The note (11 pp.): lay summary, overview map, question, data, method, the two tests of the model, results, the 2015 check, what is and is not shown, tables |
-| [`docs/corridor_vehicles_curb_deck_en.pdf`](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-corridor-vehicles-and-curb/docs/corridor_vehicles_curb_deck_en.pdf) | The slide deck (16 slides, 16:9); its figures as PNG files named by slide number in `docs/deck_figures_en/` |
+| [`docs/corridor_vehicles_curb_note_en.pdf`](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-corridor-vehicles-and-curb/docs/corridor_vehicles_curb_note_en.pdf) | The note (13 pp.): lay summary, overview map, question, data, method, the two tests of the model, results, private parking (measured on rue de Terrebonne; a scenario for the corridor), the 2015 check, what is and is not shown, tables |
+| [`docs/corridor_vehicles_curb_deck_en.pdf`](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-corridor-vehicles-and-curb/docs/corridor_vehicles_curb_deck_en.pdf) | The slide deck (18 slides, 16:9); its figures as PNG files named by slide number in `docs/deck_figures_en/` |
 | [`derived/lay_abstract_en.txt`](derived/lay_abstract_en.txt) | The lay summary (300 words), plain text |
 | [`derived/numbers.json`](derived/numbers.json) | Every number the note quotes |
 | [`derived/tables/da_corridor.csv`](derived/tables/da_corridor.csv), [`.geojson`](derived/tables/da_corridor.geojson) | The 83 dissemination areas with a part in H4A or H4B: households, modelled automobiles with 90 % intervals (and intervals with the unexplained spread doubled), the two alternative specifications, legal curb, places at 5.5 m, the set (corridor or rest), the frontage on Terrebonne |
@@ -23,8 +23,9 @@
 | [`derived/tables/fsa_model_table.csv`](derived/tables/fsa_model_table.csv), [`da_census.csv`](derived/tables/da_census.csv), [`da_fsa_shares.csv`](derived/tables/da_fsa_shares.csv), [`fsa_households_check.csv`](derived/tables/fsa_households_check.csv) | The census variables by FSA (with the automobiles of 2023 and 2024, inferred) and by dissemination area (census divisions of Montréal and Laval); the share of each area in each FSA; households rebuilt from areas against Statistics Canada's FSA profile |
 | [`derived/tables/model_specifications.csv`](derived/tables/model_specifications.csv), [`model_coefficients.csv`](derived/tables/model_coefficients.csv), [`lofo_errors.csv`](derived/tables/lofo_errors.csv), [`downscaling_test.csv`](derived/tables/downscaling_test.csv), [`downscaling_summary.csv`](derived/tables/downscaling_summary.csv), [`fsa_scale_factors.csv`](derived/tables/fsa_scale_factors.csv), [`da_vehicles.csv`](derived/tables/da_vehicles.csv) | The model: specifications compared, coefficients, each FSA left out in turn, the downscaling test, the scale factors, the estimates by area |
 | [`derived/tables/lidar_check_by_sector.csv`](derived/tables/lidar_check_by_sector.csv), [`lidar_check_by_da.csv`](derived/tables/lidar_check_by_da.csv) | Cars seen along Terrebonne on the 2015 LiDAR night against the model |
-| `derived/figures/<type>/` | `overview-map`, `curb-map`, `area-estimates`, `model-tests`, `curb-and-automobiles`, `lidar-check`: PNG and SVG, English and French, each with its script |
-| `scripts/` | `build_dataset.py`, `curb_supply.py`, `demand_model.py`, `corridor.py`, `build_docs.py [--final]`, `corridor_lib.py`, `fig_lib.py` |
+| [`derived/tables/offstreet_terrebonne_by_sector.csv`](derived/tables/offstreet_terrebonne_by_sector.csv), [`offstreet_scenario_by_da.csv`](derived/tables/offstreet_scenario_by_da.csv), [`derived/offstreet.json`](derived/offstreet.json) | Private parking: the buildings read on rue de Terrebonne by sector (measured); the scenario by dissemination area (assumption for the cross streets) |
+| `derived/figures/<type>/` | `overview-map`, `curb-map`, `area-estimates`, `model-tests`, `curb-and-automobiles`, `off-street-terrebonne`, `off-street-corridor`, `lidar-check`: PNG and SVG, English and French, each with its script |
+| `scripts/` | `build_dataset.py`, `curb_supply.py`, `demand_model.py`, `corridor.py`, `offstreet.py`, `build_docs.py [--final]`, `corridor_lib.py`, `fig_lib.py` |
 
 ![Overview map](derived/figures/overview-map/overview_map_en.png)
 
@@ -42,7 +43,9 @@
 - Downscaling test: the model's share of a group's total is off by 4.6 % at the median; a split in proportion to households, by 13.9 %. For H4A and H4B taken as a pair the two are close (-4.6 % and +6.0 % against -5.5 % and +7.1 %).
 - Corridor, **modelled**: 4,622 automobiles for 5,471 households (90 % interval 4,382 to 4,927), 0.84 per household (0.80 to 0.90); the other areas of the two FSAs, 0.76. A single area's interval is about a quarter of its estimate either way.
 - Corridor, **measured**: 46.8 km of curb, 37.2 km legal; 6,192 to 7,431 places at 6 to 5 m (upper bound).
-- 0.68 modelled automobile per place of legal curb at 5.5 m. The note states why this ratio is not a measure of parking pressure in either direction (the curb figure is an upper bound; off-street parking is in neither term; where vehicles are kept is not measured).
+- 0.68 modelled automobile per place of legal curb at 5.5 m. This is the limiting case where every registered vehicle is kept at the curb; the note states why the ratio is not a measure of parking pressure in either direction.
+- Private parking, **measured** on rue de Terrebonne: 89 of the 123 buildings read have a garage as built (1954–55 plans) or a driveway today (imagery), 72 % (64 to 80); one place each gives 89 places for 268 dwellings (226 modelled automobiles), beside 238 curb places on the street today.
+- Private parking, **scenario** for the corridor (the cross streets were not read: an assumption): that share applied to the 2,262 buildings of five dwellings or fewer gives 1,637 places (1,445 to 1,798); none is counted for the 96 larger buildings. With them, 0.55 modelled automobile per place.
 - 2015 LiDAR night: 436 cars seen at the curbs and on the lots along Terrebonne for 573 dwellings addressed on the street (0.76 per dwelling) against 0.84 modelled per household; the area-by-area comparison shows no relation (rank correlation 0.31, 11 areas).
 
 ## Reproduce
@@ -52,6 +55,7 @@
 ~/.venvs/omd/bin/python scripts/curb_supply.py
 ~/.venvs/omd/bin/python scripts/demand_model.py --draws=2000
 ~/.venvs/omd/bin/python scripts/corridor.py
+~/.venvs/omd/bin/python scripts/offstreet.py
 for f in derived/figures/*/*.py; do ~/.venvs/omd/bin/python $f; done
 ~/.venvs/omd/bin/python scripts/build_docs.py        # --final once the draft mark is lifted
 ```

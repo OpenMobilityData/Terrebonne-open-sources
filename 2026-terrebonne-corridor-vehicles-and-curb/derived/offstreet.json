@@ -1,0 +1,41 @@
+{
+ "measured": {
+  "buildings_read": 123,
+  "with_garage_or_driveway": 89,
+  "share": 0.724,
+  "share_low": 0.639,
+  "share_high": 0.795,
+  "whole_lane": {
+   "buildings_read": 123,
+   "with_garage_or_driveway": 89,
+   "dwellings_in_buildings_read": 268,
+   "dwellings_in_buildings_with_garage_or_driveway": 188,
+   "modelled_automobiles_of_those_dwellings": 225.7,
+   "offstreet_places_floor": 89,
+   "curb_places_on_terrebonne_today_5.5m": 238,
+   "cars_on_lots_2015_night": 253,
+   "cars_at_curbs_2015_night": 183
+  }
+ },
+ "scenario": {
+  "buildings": 2358,
+  "dwellings_roll": 5929,
+  "small_buildings": 2262,
+  "dwellings_in_small_buildings": 3337,
+  "large_buildings": 96,
+  "dwellings_in_large_buildings": 2592,
+  "offstreet_scenario": 1637,
+  "offstreet_scenario_low": 1445,
+  "offstreet_scenario_high": 1798,
+  "curb_places": 6755,
+  "curb_plus_offstreet": 8392,
+  "curb_plus_offstreet_low": 7637,
+  "curb_plus_offstreet_high": 9229,
+  "automobiles_modelled": 4622,
+  "per_place_curb_only": 0.68,
+  "per_place_with_offstreet": 0.55,
+  "areas_over_curb_only": 6,
+  "areas_over_with_offstreet": 3
+ },
+ "small_building_max_dwellings": 5
+}

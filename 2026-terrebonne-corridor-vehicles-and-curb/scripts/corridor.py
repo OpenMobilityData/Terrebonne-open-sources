@@ -10,7 +10,7 @@ H4B; « all » = both.
 Automobiles are MODELLED below the FSA (demand_model.py); curb is MEASURED from the sign inventory
 (curb_supply.py). Places are legal curb divided by 5, 5.5 and 6 m: an upper bound (driveways, hydrants, bus
 stops, hourly and permit rules not deducted). Off-street parking is measured only for the buildings addressed
-on rue de Terrebonne (1954-55 plans and present-day imagery): it is in no ratio here.
+on rue de Terrebonne (1954-55 plans and present-day imagery): it is in no ratio here (see offstreet.py).
 
 Outputs (derived/tables/): da_corridor.csv, da_corridor.geojson, corridor_sets.csv, lidar_check_by_sector.csv,
 lidar_check_by_da.csv; derived/numbers.json

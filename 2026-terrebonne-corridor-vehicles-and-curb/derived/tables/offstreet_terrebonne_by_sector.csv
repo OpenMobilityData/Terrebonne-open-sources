@@ -1,0 +1,5 @@
+sector,buildings_read,with_garage_or_driveway,dwellings_in_buildings_read,dwellings_in_buildings_with_garage_or_driveway,modelled_automobiles_of_those_dwellings,offstreet_places_floor,curb_places_on_terrebonne_today_5.5m,cars_on_lots_2015_night,cars_at_curbs_2015_night
+residential west,41,25,87,46,74.4,25,73,97,52
+institutional,17,11,17,12,12.7,11,59,45,29
+residential east,65,53,164,130,138.6,53,106,111,102
+whole lane,123,89,268,188,225.7,89,238,253,183

@@ -10,14 +10,14 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[2] / "scripts"))
 import fig_lib as F  # noqa: E402
 
-T = {"en": dict(title="Modelled automobiles and legal curb, corridor areas from west to east",
+T = {"en": dict(title="If every vehicle were kept on the street: modelled automobiles and legal curb",
                 sub="Blue: automobiles registered to the area's households and businesses, modelled, with 90 % interval. Orange: vehicles the area's legal curb\n"
-                    "would hold at 5.5 m each (bar: 6 m to 5 m), an upper bound. Off-street parking is not in the figure: neither bound measures parking pressure.",
+                    "would hold at 5.5 m each (bar: 6 m to 5 m), an upper bound. Private parking is left out: this is the case where every vehicle is kept at the curb.",
                 x="vehicles", a="modelled automobiles", b="curb places (upper bound)", clip="{v} →"),
-     "fr": dict(title="Automobiles modélisées et bordure légale, aires du corridor d’ouest en est",
+     "fr": dict(title="Si chaque véhicule était garé sur rue : automobiles modélisées et bordure légale",
                 sub="Bleu : automobiles immatriculées par les ménages et entreprises de l’aire, modélisées, intervalle à 90 %. Orange : véhicules que contiendrait\n"
-                    "la bordure légale de l’aire à 5,5 m chacun (barre : 6 m à 5 m), une borne supérieure. Le stationnement hors rue n’y figure pas : aucune des deux\n"
-                    "bornes ne mesure la pression sur le stationnement.",
+                    "la bordure légale de l’aire à 5,5 m chacun (barre : 6 m à 5 m), une borne supérieure. Le stationnement privé est laissé de côté : c’est le cas où chaque\n"
+                    "véhicule est garé en bordure.",
                 x="véhicules", a="automobiles modélisées", b="places en bordure (borne supérieure)", clip="{v} →")}
 XMAX = 660
 
