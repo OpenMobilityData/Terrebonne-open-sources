@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""The note (A4, pdflatex), English, from derived/numbers.json and derived/tables/. Every figure in the text is
+"""The note (A4, pdflatex) and the slide deck (beamer 16:9), English, from derived/numbers.json and derived/tables/. Every figure in the text is
 read from the tables at build time.
 Usage: ~/.venvs/omd/bin/python scripts/build_docs.py [--final]   (without --final the note carries a DRAFT mark)
-Writes docs/corridor_vehicles_curb_note_en.{tex,pdf} and derived/lay_abstract_en.txt."""
+Writes docs/corridor_vehicles_curb_note_en.{tex,pdf}, docs/corridor_vehicles_curb_deck_en.{tex,pdf},
+docs/deck_figures_en/NN-<figure>.png (each figure of the deck, named by its slide number) and derived/lay_abstract_en.txt."""
 import datetime
 import json
 import subprocess
@@ -206,6 +207,95 @@ Frontage on Terrebonne & FSA & hh. & autos & interval & per hh. & curb km & plac
 \bottomrule\end{longtable}}
 \end{document}
 """
+# ---------------------------------------------------------------- the slide deck (beamer, 16:9)
+fr = lambda title, body: "\\begin{frame}{" + title + "}\n" + body + "\n\\end{frame}\n"
+ffig = lambda title, typ, name, text="", h=0.66: fr(title, f"\\begin{{center}}\\includegraphics[height={h}\\textheight]{{../derived/figures/{typ}/{name}_en.png}}\\end{{center}}" + (f"\n{{\\footnotesize {text}}}" if text else ""))
+DMARK = "" if FINAL else r"\setbeamertemplate{footline}{\hfill{\tiny\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, " + TODAY + r"}\quad\insertframenumber}\hspace{1em}\vspace{0.4em}}"
+half = 100 * ((DA.high_90 - DA.low_90) / 2 / DA.automobiles_modelled).median()
+DECK = r"""\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs,amsmath}
+""" + DMARK + r"""
+\title{Automobiles and curb along rue de Terrebonne}\subtitle{Registered vehicles known by postal district, modelled below it; legal curb measured block face by block face}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{""" + TODAY + r"""}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+""" + ffig("Overview", "overview-map", "overview_map", "Registered totals are known for H4A and H4B only. The split among dissemination areas is a model.", 0.74) + fr("The question", r"""\begin{itemize}
+\item The SAAQ files released under the access Act for 2023 and 2024 locate each vehicle to its \textbf{FSA} (first three characters of the postal code), and no finer.
+\item The lane lies in two FSAs: \textbf{H4B} west of Royal (""" + n_(FB["automobiles_inferred"]) + r""" automobiles and light trucks, """ + f"{FB['per_household']:.2f}" + r""" per household) and \textbf{H4A} east of it (""" + n_(FA["automobiles_inferred"]) + r""", """ + f"{FA['per_household']:.2f}" + r"""). Type inferred; December 31, 2024.
+\item An FSA holds ten to twelve thousand households. What can be said about the areas that front the lane: how many automobiles are registered there, and how much legal curb do they hold?
+\item The note makes no recommendation.
+\end{itemize}""") + fr("Two kinds of figures, kept apart", r"""\begin{columns}[T]
+\begin{column}{0.47\textwidth}\textbf{Measured: the curb}
+\begin{itemize}\small
+\item City géobase and parking-sign inventory (October 2026)
+\item Every side of every street segment
+\item Less 5\,m at each end, less stretches forbidden at all times
+\item An \textbf{upper bound}: driveways, hydrants, bus stops, hourly and permit rules not deducted
+\end{itemize}\end{column}
+\begin{column}{0.47\textwidth}\textbf{Modelled: the automobiles}
+\begin{itemize}\small
+\item Registered totals exist by FSA only
+\item Shared among dissemination areas from 2021 Census variables
+\item Scaled so each FSA\textquoteright{}s areas sum to its registered total
+\item An \textbf{estimate with an interval}, never a count
+\end{itemize}\end{column}\end{columns}
+\vspace{1em}The 2015 LiDAR night count and the imagery are a \textbf{check}, not an input.""") + fr("The corridor", r"""\begin{itemize}
+\item The """ + str(C["dissemination_areas"]) + r""" dissemination areas that hold a block face of rue de Terrebonne along the lane, west end to Girouard.
+\item They reach about one block to each side (Somerled about 260\,m north, Monkland about 285\,m south).
+\item """ + n_(C["households"]) + r""" households (2021 Census).
+\item Dissemination areas do not nest in FSAs: each is shared among FSAs by the dwellings of the City\textquoteright{}s assessment roll in each FSA polygon. Households rebuilt this way: H4A """ + sg(FA["households_from_da_pct"]) + r"""\,\%, H4B """ + sg(FB["households_from_da_pct"]) + r"""\,\% against Statistics Canada\textquoteright{}s own FSA profile.
+\end{itemize}""") + fr("Method: legal curb", r"""\begin{itemize}
+\item A sign governs the stretch from its pole to the next pole in the direction of its arrow; a sign without an arrow, the stretches on both sides.
+\item Where the usual reading of the arrows leaves a stretch claimed both by an all-time prohibition and by an hourly rule, the other reading is taken for that face if it leaves fewer such stretches.
+\item \textbf{Check on rue de Terrebonne}, where the layout is known: the reading finds one parking band, south side west of Cavendish, north side east of it: """ + n_(N["terrebonne_legal_m"]) + r"""\,m, """ + str(N["terrebonne_places_5.5m"]) + r""" places at 5.5\,m.
+\item The borough\textquoteright{}s 2023 study counted 478 places on the two sides before the lane (230 westbound, 248 eastbound).
+\end{itemize}""") + ffig("Legal curb by block face", "curb-map", "curb_map", f"Corridor: {C['curb_km']:.1f} km of curb, {C['legal_curb_km']:.1f} km legal; {n_(C['places_6.0m'])} to {n_(C['places_5.0m'])} places at 6 to 5 m (upper bound).", 0.7) + fr("Method: automobiles below the FSA", r"""\begin{enumerate}
+\item Across """ + str(N["model"]["fsas"]) + r""" FSAs (1{,}000 households or more), the logarithm of automobiles per household is regressed on: share of renters, share of commuters who drive, persons per household, median household income. Robust regression: a few FSAs hold business fleets (""" + fleet + r""").
+\item Each dissemination area\textquoteright{}s rate is predicted from its own census variables.
+\item Predictions are scaled so each FSA\textquoteright{}s areas sum to its registered total (factors """ + f"{FA['scale_factor']:.2f} for H4A, {FB['scale_factor']:.2f} for H4B" + r""").
+\end{enumerate}
+\textbf{Intervals}: 2{,}000 draws (FSAs resampled; sampling error of the 25\,\% sample variables; an unexplained factor per area; rescaling).
+
+Not covered by the intervals: census of 2021 against vehicles of 2024; inferred type; vehicles registered to businesses.""") + ffig("Does the model work where the answer is known?", "model-tests", "model_tests", f"Sharing a group of FSAs\\textquoteright{{}} total among its members: off by {dm['median_abs_pct']:.1f}\\,\\% at the median with the model, {dh['median_abs_pct']:.1f}\\,\\% in proportion to households. For H4A and H4B as a pair the model gains little. Below the FSA nothing can test the split.", 0.6) + fr("The corridor: modelled automobiles, measured curb", r"""\begin{center}\resizebox{0.98\textwidth}{!}{\begin{tabular}{lrrrrrrrr}\toprule
+ & areas & households & automobiles & 90\,\% interval & per household & legal curb km & places (6 to 5\,m) & per place (5.5\,m) \\\midrule
+""" + set_rows + r"""
+\bottomrule\end{tabular}}\end{center}
+\begin{itemize}
+\item Corridor: """ + f"{C['per_household']:.2f}" + r""" automobile per household (""" + f"{C['per_household_low_90']:.2f} to {C['per_household_high_90']:.2f}" + r"""); the other areas of the two FSAs, """ + f"{R['per_household']:.2f}" + r""".
+\item The two alternative specifications give """ + n_(C["alt_3_variables"]) + r""" and """ + n_(C["alt_6_variables"]) + r""" for the corridor.
+\item Places are an upper bound; automobiles are every vehicle registered, wherever it is kept.
+\end{itemize}""") + ffig("Area by area: the estimates and their intervals", "area-estimates", "area_estimates", f"A single area\\textquoteright{{}}s 90\\,\\% interval is about {half:.0f}\\,\\% of its estimate either way; most differences between neighbours are within it.", 0.7) + ffig("Modelled automobiles beside the places the legal curb would hold", "curb-and-automobiles", "curb_and_automobiles", "", 0.76) + fr("Why the ratio is not a measure of parking pressure", r"""\begin{itemize}
+\item At 5.5\,m per place: """ + f"{C['automobiles_per_place_5.5m']:.2f}" + r""" modelled automobile per place of legal curb in the corridor (""" + f"{C['automobiles_per_place_low_90']:.2f} to {C['automobiles_per_place_high_90']:.2f}" + r"""); the estimate exceeds the area\textquoteright{}s own places in """ + str(over) + r""" of """ + str(len(DA)) + r""" areas.
+\item The curb figure is an \textbf{upper bound}: no driveway, hydrant, bus stop, hourly or permit rule deducted.
+\item \textbf{Off-street parking is in neither term.} On rue de Terrebonne, 70\,\% of dwellings are in a building with a garage as built or a driveway today (188 of 268).
+\item Visitors, institutions and vehicles from elsewhere use the same curb; a place at the far end of an area is not a place at one\textquoteright{}s door.
+\item The occupancy measurements that exist are EXP\textquoteright{}s: Thursday, September 29, 2022, 18:30--19:30: 247 cars on Terrebonne\textquoteright{}s places (50\,\%), 311 on the cross-street stubs (51\,\%).
+\end{itemize}""") + ffig("A check from another source: the 2015 LiDAR night", "lidar-check", "lidar_check", f"{int(whole.cars_at_curbs_2015_night + whole.cars_on_lots_2015_night)} cars seen for {int(whole.dwellings_addressed_on_terrebonne)} dwellings addressed on Terrebonne. Agreement in order of magnitude; area by area, no relation (rank correlation {N['lidar']['rho_rate']:.2f}, {N['lidar']['areas']} areas).", 0.6) + fr("What is shown and what is not", r"""\begin{itemize}
+\item \textbf{Measured:} the registered automobiles of H4A and H4B (type inferred); the legal curb of each block face, as an upper bound; garages and driveways on rue de Terrebonne.
+\item \textbf{Modelled:} the automobiles of every area smaller than an FSA. The model shares a known total better than households alone where that can be tested; below the FSA nothing can test it, and the 2015 check does not confirm its area-by-area differences.
+\item \textbf{Not measured by anyone:} off-street places beyond rue de Terrebonne; where registered vehicles are kept; occupancy of the curb since the lane was built.
+\end{itemize}""") + fr("Where everything is", r"""\begin{itemize}
+\item Note, tables by dissemination area and by block face, figures (English and French) and scripts: \url{""" + URL + r"""}
+\item Sources: SAAQ (access request 03.06.34729; tables of Quebec-vehicle-registrations); Statistics Canada, 2021 Census; City of Montréal open data (géobase, parking-sign inventory, assessment roll, LiDAR 2015; CC BY 4.0); DMTI Spatial (FSA polygons, under licence).
+\end{itemize}""") + r"""
+\end{document}
+"""
+import glob, os, re, shutil
+FIGDIR = DOCS / "deck_figures_en"; FIGDIR.mkdir(exist_ok=True)
+for old in FIGDIR.glob("*.png"):
+    old.unlink()
+for n, frame in enumerate(DECK.split("\\begin{frame}")[1:], 1):
+    for m in re.finditer(r"\\includegraphics\[[^\]]*\]\{([^}]+)\}", frame):
+        src = (DOCS / m.group(1)).resolve()
+        shutil.copyfile(src, FIGDIR / f"{n:02d}-{src.name.replace('_en.png', '.png').replace('_', '-')}")
+dk = DOCS / "corridor_vehicles_curb_deck_en.tex"
+dk.write_text(DECK, encoding="utf-8")
+for _ in range(2):
+    r = subprocess.run(["pdflatex", "-interaction=nonstopmode", "-halt-on-error", dk.name], cwd=DOCS, capture_output=True, text=True)
+    if r.returncode:
+        print(r.stdout[-2500:]); sys.exit(1)
+for ext in ("aux", "log", "out", "toc", "nav", "snm"):
+    (DOCS / f"corridor_vehicles_curb_deck_en.{ext}").unlink(missing_ok=True)
+print("OK deck")
 DOCS.mkdir(exist_ok=True)
 tex = DOCS / "corridor_vehicles_curb_note_en.tex"
 tex.write_text(NOTE, encoding="utf-8")

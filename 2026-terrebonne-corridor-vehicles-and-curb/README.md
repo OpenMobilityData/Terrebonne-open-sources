@@ -1,4 +1,4 @@
-# Automobiles and curb along rue de Terrebonne: registered vehicles known by FSA, modelled below it; legal curb measured by block face (note, data) — DRAFT
+# Automobiles and curb along rue de Terrebonne: registered vehicles known by FSA, modelled below it; legal curb measured by block face (note, deck, data) — DRAFT
 
 **Issued by:** the author of these repositories (see the root README). **Status: DRAFT of November 11, 2026, under the author's review; figures may change.**
 
@@ -13,6 +13,7 @@
 | File | Content |
 |---|---|
 | [`docs/corridor_vehicles_curb_note_en.pdf`](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-corridor-vehicles-and-curb/docs/corridor_vehicles_curb_note_en.pdf) | The note (11 pp.): lay summary, overview map, question, data, method, the two tests of the model, results, the 2015 check, what is and is not shown, tables |
+| [`docs/corridor_vehicles_curb_deck_en.pdf`](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-terrebonne-corridor-vehicles-and-curb/docs/corridor_vehicles_curb_deck_en.pdf) | The slide deck (16 slides, 16:9); its figures as PNG files named by slide number in `docs/deck_figures_en/` |
 | [`derived/lay_abstract_en.txt`](derived/lay_abstract_en.txt) | The lay summary (300 words), plain text |
 | [`derived/numbers.json`](derived/numbers.json) | Every number the note quotes |
 | [`derived/tables/da_corridor.csv`](derived/tables/da_corridor.csv), [`.geojson`](derived/tables/da_corridor.geojson) | The 83 dissemination areas with a part in H4A or H4B: households, modelled automobiles with 90 % intervals (and intervals with the unexplained spread doubled), the two alternative specifications, legal curb, places at 5.5 m, the set (corridor or rest), the frontage on Terrebonne |

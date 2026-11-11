@@ -1,2 +1,3 @@
-441 nodes, 1236 edges; 1 problem(s)
+441 nodes, 1236 edges; 2 problem(s)
 orphan: a_lagace
+time not H:MM:SS: d_corridor_note
