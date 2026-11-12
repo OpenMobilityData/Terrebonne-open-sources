@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
 \captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}\widowpenalty=10000\clubpenalty=10000\raggedbottom
-\newcommand{\docversion}{2026-11-12-10-53-21}
+\newcommand{\docversion}{2026-11-12-14-02-10}
 \begin{document}
 {\LARGE\bfseries Automobiles and curb along rue de Terrebonne\par}\vspace{0.3em}
 {\large Registered vehicles known by postal district, modelled below it; legal curb measured block face by block face\par}\vspace{0.6em}
@@ -134,6 +134,13 @@ For the corridor\textquoteright{}s 2{,}262 buildings of five dwellings or fewer:
 \textbf{Limits.} The check is one person\textquoteright{}s judgment from street-level imagery, on 99 small buildings. The aerial imagery predates the 2024 lane; the street-level imagery is more recent. The first reading of rue de Terrebonne, of October 25, was made from the air alone and found a garage or driveway at 72\,\% of the buildings; checked from the street, the same street gives 87\,\% with car access, close to the 86\,\% found for the corridor\textquoteright{}s sample from the street.
 
 \begin{figure}[H]\centering\includegraphics[width=1.0\textwidth]{../derived/figures/off-street-corridor/off_street_corridor_en.png}\caption{The corridor\textquoteright{}s areas with the measured private places of small buildings added (independent places only).}\end{figure}
+
+\subsection{The corridor on one map}
+Figure~\ref{fig:corridor-parking-map} puts every source on one map: each area shaded by its modelled automobiles, the legal curb of every block face, and, on rue de Terrebonne, each lot\textquoteright{}s private places as counted from the street. Elsewhere in the corridor no private place is drawn lot by lot, since per lot those are readings from above; the table below the map gives each area\textquoteright{}s calibrated total with its interval. Figure~\ref{fig:status-map} colours each area by its modelled automobiles as a share of its places, with the thresholds of the charts (green under 80\,\%, yellow 80 to 100\,\%, red over 100\,\%): with private places, 17 green, 3 yellow, 2 red; with the curb alone, 14 green, 2 yellow, 6 red. With private places, the areas over 100\,\% are areas where almost every household lives in a building of six dwellings or more, whose garages are not counted (share of households in such buildings: area 6, 95\,\%; area 15, 93\,\%): the share there reflects places the count leaves out. A share compares registered vehicles with capacity; it does not measure how full the street is.
+
+\begin{figure}[H]\centering\includegraphics[width=1.0\textwidth]{../derived/figures/corridor-parking-map/corridor_parking_map_en.png}\caption{The corridor\textquoteright{}s parking on one map: areas shaded by modelled automobiles (SAAQ 2024), legal curb by block face (measured), and rue de Terrebonne\textquoteright{}s lots by their private places (counted from street level, November 12, 2026); per area, modelled automobiles, curb places and private places with their intervals.\label{fig:corridor-parking-map}}\end{figure}
+
+\begin{figure}[H]\centering\includegraphics[width=1.0\textwidth]{../derived/figures/status-map/status_map_en.png}\caption{Modelled automobiles as a share of places, by area. A: curb and private places; B: curb alone. Hatched in A: areas where most households live in buildings of six dwellings or more, whose garages are not counted.\label{fig:status-map}}\end{figure}
 
 \subsection{A check from the 2015 LiDAR night}
 The City\textquoteright{}s 2015 LiDAR was flown at night. Counted by eye along rue de Terrebonne: 183 cars at the curbs and 253 on the lots along the street, 436 for the 573 dwellings addressed on the street: 0.76 per dwelling. The model gives 0.84 per household for the areas that hold those dwellings.
