@@ -33,19 +33,20 @@ def main():
     O = json.load(open(ROOT / "derived/offstreet.json")); S, K = O["corridor"], O["check"]
     y = np.arange(len(s))[::-1]; curb = s.legal_m / 5.5
     for lang, t in T.items():
-        fig, ax = plt.subplots(figsize=(10, 8.6))
-        ax.hlines(y + 0.24, s.low_90, s.high_90, color=F.BLUE, lw=3, alpha=0.5, capstyle="round")
-        ax.plot(s.automobiles_modelled, y + 0.24, "o", color=F.BLUE, ms=7, mec=F.SURFACE, mew=1.5, label=t["a"])
+        fig, ax = plt.subplots(figsize=(10, 10.4))
+        ax.hlines(y + 0.27, s.low_90, s.high_90, color=F.BLUE, lw=3, alpha=0.5, capstyle="round")
+        ax.plot(s.automobiles_modelled, y + 0.27, "o", color=F.BLUE, ms=7, mec=F.SURFACE, mew=1.5, label=t["a"])
         ax.plot(curb, y, "D", color=F.ORANGE, ms=6, mec=F.SURFACE, mew=1.5, label=t["b"])
-        ax.hlines(y - 0.24, curb + s.private_independent_low, curb + s.private_independent_high, color=F.AQUA, lw=3, alpha=0.5, capstyle="round")
-        ax.plot(curb + s.private_independent, y - 0.24, "s", color=F.AQUA, ms=6.5, mec=F.SURFACE, mew=1.5, label=t["c"])
+        ax.hlines(y - 0.27, curb + s.private_independent_low, curb + s.private_independent_high, color=F.AQUA, lw=3, alpha=0.5, capstyle="round")
+        ax.plot(curb + s.private_independent, y - 0.27, "s", color=F.AQUA, ms=6.5, mec=F.SURFACE, mew=1.5, label=t["c"])
         ax.set_yticks(y); ax.set_yticklabels([F.fr_frontage(v) if lang == "fr" else v for v in s.frontage], fontsize=8.5)
         ax.grid(axis="x"); ax.grid(axis="y", visible=False); ax.set_xlim(0, 860); ax.set_xlabel(t["x"])
-        ax.legend(loc="lower right", fontsize=9)
+        F.row_bands(ax, len(s))
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.045), ncol=3, fontsize=9)
         note = t["note"].format(au=F.num(S["automobiles_modelled"], lang), cp=F.num(S["curb_places"], lang), tp=F.num(S["curb_plus_private"], lang),
                                 op=F.num(S["private_independent"], lang), ol=F.num(S["private_independent_low"], lang), oh=F.num(S["private_independent_high"], lang),
                                 lb=S["large_buildings"], ld=F.num(S["dwellings_in_large_buildings"], lang))
-        F.finish(fig, HERE, "off_street_corridor", lang, t["title"], t["sub"].format(n=K["small_judged"]), note, top=0.84, bottom=0.16, left=0.3)
+        F.finish(fig, HERE, "off_street_corridor", lang, t["title"], t["sub"].format(n=K["small_judged"]), note, top=0.845, bottom=0.135, left=0.3)
     print("OK off_street_corridor")
 
 

@@ -46,6 +46,17 @@ def corridor():
     return d[d.set == "corridor"].sort_values(["west_to_east", "frontage"]).reset_index(drop=True)
 
 
+def row_bands(ax, n):
+    """One band per row so that the markers of an area read as a group: alternate rows shaded, a thin rule between rows."""
+    for i in range(n):
+        if i % 2 == 0:
+            ax.axhspan(i - 0.5, i + 0.5, color="#f1f2f0", zorder=0, lw=0)
+    for i in range(n + 1):
+        ax.axhline(i - 0.5, color=GRID, lw=0.8, zorder=0.5)
+    ax.set_ylim(-0.5, n - 0.5)
+    ax.tick_params(axis="y", length=0)
+
+
 def fr_frontage(s):
     return s.replace("west end", "extrémité ouest").replace("N:", "N :").replace("S:", "S :")
 
