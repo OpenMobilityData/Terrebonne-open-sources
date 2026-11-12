@@ -20,6 +20,7 @@ ROLL = TP / "montreal-opendata/unites-evaluation-fonciere/uniteevaluationfoncier
 FSA_SHP = TP / "canmap-v2024.3/CanMapPostalCodeSuitev2024.3/Shapefiles/ForwardSortationAreasRegion.shp"
 GEOBASE = TP / "montreal-opendata/geobase_2026-10-14.json"
 SIGNS = TP / "montreal-opendata/signalisation-2026-10-23/signalisation_stationnement.csv"
+DISTRICTS = TP / "montreal-opendata/districts-electoraux/districts-electoraux-2025.json"   # City open data, CC BY 4.0
 LANE = GARAGES / "terrebonne_lane_geobase.geojson"
 
 CRS = 32188                      # NAD83 / MTM zone 8, metres
