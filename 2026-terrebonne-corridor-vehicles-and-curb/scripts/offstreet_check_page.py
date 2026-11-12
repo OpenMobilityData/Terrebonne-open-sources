@@ -47,11 +47,13 @@ def main():
         items.append({"n": int(r.n), "key": r.key, "crop": r.crop, "label": int(r.label), "address": f"{civ} {str(row.NOM_RUE).split('(')[0].strip()}",
                       "dwellings": int(row.dwellings), "large": bool(row.large),
                       "sv": f"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint={lat:.6f},{lon:.6f}",
-                      "map": f"https://www.google.com/maps/search/?api=1&query={plat:.6f},{plon:.6f}"})
+                      "map": f"https://www.google.com/maps/search/?api=1&query={plat:.6f},{plon:.6f}",
+                      # Apple Maps, Look Around at the lot's own point (unified map URL; the viewing direction cannot be set)
+                      "apple": f"https://maps.apple.com/look-around?coordinate={plat:.6f},{plon:.6f}"})
     cards = "\n".join(f"""<section class="card" id="c{i['n']}" data-key="{i['key']}">
-<h2>{i['n']} of {len(items)} · {html.escape(i['address'])} <small>{i['dwellings']} dwelling{'s' if i['dwellings'] != 1 else ''} · lot {i['label']} on crop {i['crop']}</small></h2>
+<h2>{i['n']} of {len(items)} · <a target="_blank" rel="noopener" href="{i['apple']}" title="Open in Apple Maps, Look Around">{html.escape(i['address'])}</a> <small>{i['dwellings']} dwelling{'s' if i['dwellings'] != 1 else ''} · lot {i['label']} on crop {i['crop']}</small></h2>
 <img loading="lazy" src="img/{i['n']:03d}.png" alt="aerial crop, lot outlined in red">
-<p class="links"><a target="_blank" rel="noopener" href="{i['sv']}">Street-level view</a> · <a target="_blank" rel="noopener" href="{i['map']}">Map</a></p>
+<p class="links"><a target="_blank" rel="noopener" href="{i['apple']}">Apple Maps (Look Around)</a> · <a target="_blank" rel="noopener" href="{i['sv']}">Google street-level view</a> · <a target="_blank" rel="noopener" href="{i['map']}">Google map</a></p>
 <div class="form">
 <label>Car access <select data-f="car_access"><option value=""></option><option>yes</option><option>no</option><option>cannot tell</option></select></label>
 <label>Kind <select data-f="kind"><option value=""></option><option>own driveway</option><option>shared driveway</option><option>front pad</option><option>rear</option><option>parking lot</option><option>none</option></select></label>
@@ -67,7 +69,7 @@ def main():
 :root{{--bg:#fbfbfa;--ink:#1f2428;--mut:#5f6b74;--line:#d9dcd8;--card:#fff;--acc:#2a78d6}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#16181a;--ink:#e8eaec;--mut:#a3adb5;--line:#33383c;--card:#1e2124;--acc:#6aa8ee}}}}
 body{{background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,Helvetica,Arial,sans-serif;margin:0;padding:16px}}
-main{{max-width:1100px;margin:0 auto}} h1{{font-size:1.4rem}} h2{{font-size:1.05rem;margin:0 0 8px}} h2 small{{color:var(--mut);font-weight:400;margin-left:8px}}
+main{{max-width:1100px;margin:0 auto}} h1{{font-size:1.4rem}} h2{{font-size:1.05rem;margin:0 0 8px}} h2 small{{color:var(--mut);font-weight:400;margin-left:8px}} h2 a{{color:var(--acc)}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;margin:18px 0}} .card.done{{border-color:var(--acc)}}
 img{{max-width:100%;height:auto;border-radius:4px}} .links a{{color:var(--acc)}}
 .form{{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}} label{{display:flex;flex-direction:column;font-size:.85rem;color:var(--mut)}}
