@@ -57,6 +57,25 @@ if chk:
         'by_side': {side: {'checked': len([r for r in chk if r['side'] == side]), 'either': sum(r['driveway_today'] == 'yes' or r['garage_1954'] == 'yes' for r in chk if r['side'] == side)} for side in 'NS'},
         'dwellings_either': sum(int(r['logements'] or 0) for r in chk if r['driveway_today'] == 'yes' or r['garage_1954'] == 'yes'), 'dwellings_checked': sum(int(r['logements'] or 0) for r in chk)}
     S['present_day']['pct_dwellings_either'] = pct(S['present_day']['dwellings_either'], S['present_day']['dwellings_checked'])
+# street-level check (the author, Nov 12, 2026; street_check/; replaces the aerial reading for the present-day figures)
+sc = [r for r in front if r.get('access_street_check') in ('yes', 'no', 'cannot tell')]
+if sc:
+    d = [r for r in sc if r['access_street_check'] in ('yes', 'no')]
+    acc = [r for r in d if r['access_street_check'] == 'yes']; ei = [r for r in d if r['access_street_check'] == 'yes' or r['garage_1954'] == 'yes']
+    S['street_check'] = {'frame': len(sc), 'dropped_no_dwelling_today': sum(r.get('access_street_check') == 'no dwelling today' for r in front),
+        'decided': len(d), 'cannot_tell': len(sc) - len(d), 'access': len(acc), 'pct_access': pct(len(acc), len(d)),
+        'pct_access_low': pct(len(acc), len(sc)), 'pct_access_high': pct(len(acc) + len(sc) - len(d), len(sc)),
+        'garage_1954_or_access': len(ei), 'pct_either': pct(len(ei), len(d)),
+        'by_side': {side: {'decided': sum(r['side'] == side for r in d), 'access': sum(r['side'] == side for r in acc), 'either': sum(r['side'] == side for r in ei)} for side in 'NS'},
+        'dwellings_decided': sum(int(r['logements'] or 0) for r in d), 'dwellings_access': sum(int(r['logements'] or 0) for r in acc),
+        'garage_1954_with_access': sum(r['garage_1954'] == 'yes' for r in acc), 'garage_1954_without_access': sum(r['garage_1954'] == 'yes' and r['access_street_check'] == 'no' for r in d),
+        'no_garage_1954_with_access': sum(r['garage_1954'] == 'no' for r in acc), 'no_garage_1954_without': sum(r['garage_1954'] == 'no' and r['access_street_check'] == 'no' for r in d),
+        'converted_none_left': sum(r['converted_street_check'] == 'yes, none left' for r in d), 'converted_some_left': sum(r['converted_street_check'] == 'yes, some left' for r in d),
+        'aerial_no_street_yes': sum(r['driveway_today'] == 'no' and r['access_street_check'] == 'yes' for r in sc),
+        'aerial_yes_street_no': sum(r['driveway_today'] == 'yes' and r['access_street_check'] == 'no' for r in sc)}
+    S['street_check']['pct_dwellings_access'] = pct(S['street_check']['dwellings_access'], S['street_check']['dwellings_decided'])
+    W = json.load(open(os.path.join(HERE, 'street_check', 'summary.json')))['whole_street']
+    S['street_check']['whole_street'] = {k: W[k] for k in ('lots', 'decided', 'access_yes', 'pct_access', 'small_decided', 'small_access', 'small_places_independent', 'small_places_total', 'small_dwellings', 'large_lots', 'large_with_underground_garage', 'converted_none_left', 'converted_some_left', 'converted_cannot_tell')}
 json.dump(S, open(os.path.join(HERE, 'summary.json'), 'w'), indent=1, ensure_ascii=False)
 with open(os.path.join(HERE, 'summary.txt'), 'w') as f:
     f.write(f"Residential buildings addressed on rue de Terrebonne, west end of the lane to Girouard, sheets available: {S['buildings_terrebonne']}\n")
@@ -75,6 +94,15 @@ with open(os.path.join(HERE, 'summary.txt'), 'w') as f:
         f.write(f"  garage as built (1954-55) OR driveway today: {P['garage_1954_or_driveway_today']} = {P['pct_either']} %  (N {P['by_side']['N']['either']}/{P['by_side']['N']['checked']}, S {P['by_side']['S']['either']}/{P['by_side']['S']['checked']}); by dwellings {P['dwellings_either']}/{P['dwellings_checked']} = {P['pct_dwellings_either']} %\n")
         f.write(f"  garages of 1954-55: apron still visible {P['garage_1954_with_apron_today']}, none visible {P['garage_1954_without_apron_today']}; no garage in 1954-55 but a driveway today: {P['no_garage_1954_with_driveway_today']} (none: {P['no_garage_1954_without']})\n")
         f.write(f"  a vehicle parked on the lot at the moment of the photo: {P['vehicle_on_lot_at_capture']}\n")
+    if 'street_check' in S:
+        C = S['street_check']; Wh = C['whole_street']
+        f.write(f"\nStreet-level check (the author, Nov 12, 2026; replaces the aerial reading; {C['frame']} buildings of the Oct 25 frame, {C['dropped_no_dwelling_today']} dropped: no dwelling today):\n")
+        f.write(f"  car access today: {C['access']} of {C['decided']} decided = {C['pct_access']} %  ({C['cannot_tell']} cannot tell: {C['pct_access_low']}-{C['pct_access_high']} % either way); by dwellings {C['dwellings_access']}/{C['dwellings_decided']} = {C['pct_dwellings_access']} %\n")
+        f.write(f"  garage as built (1954-55) OR access today: {C['garage_1954_or_access']} of {C['decided']} = {C['pct_either']} %  (N {C['by_side']['N']['either']}/{C['by_side']['N']['decided']}, S {C['by_side']['S']['either']}/{C['by_side']['S']['decided']})\n")
+        f.write(f"  garages of 1954-55: access today {C['garage_1954_with_access']}, none today {C['garage_1954_without_access']}; no garage in 1954-55 but access today {C['no_garage_1954_with_access']} (none: {C['no_garage_1954_without']})\n")
+        f.write(f"  parking converted to another use: none left {C['converted_none_left']}, some left {C['converted_some_left']} (the 1954-55 plans taking priority)\n")
+        f.write(f"  against the aerial reading: its no -> yes {C['aerial_no_street_yes']}, its yes -> no {C['aerial_yes_street_no']}\n")
+        f.write(f"  whole street, {Wh['lots']} lots: access {Wh['access_yes']} of {Wh['decided']} = {Wh['pct_access']} %; five dwellings or fewer {Wh['small_access']} of {Wh['small_decided']}, {Wh['small_places_independent']} independent places, {Wh['small_places_total']} with tandem; {Wh['large_with_underground_garage']} of {Wh['large_lots']} larger buildings with an underground garage (not counted)\n")
     f.write("\nBy block face:\n")
     for b in S['by_sheet']: f.write(f"  {b['side']} {b['sheet']:7} {b['extent']:32} {b['with_garage']:3} / {b['buildings']:3}  {b['pct']} %\n")
 print(open(os.path.join(HERE, 'summary.txt')).read())

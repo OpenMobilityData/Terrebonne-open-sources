@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Distribution of off-street parking along rue de Terrebonne, block face by block face:
 top, the 1954-55 reading (garage as built / none); bottom, the present-day combination
-(garage and driveway / garage only / driveway only / neither). North side bars grow upward,
+(garage as built and car access today / garage as built, no parking today / access today only / neither; the author's street-level check of Nov 12, 2026). North side bars grow upward,
 south side bars downward; x = distance along the street from the west end of the lane;
 the south face missing in 1954-55 (sheet 787-8) is hatched. Usage: python3 overview_chart.py [en|fr]"""
 import csv, os, sys
@@ -54,7 +54,7 @@ def panel(ax, T, cats, title):
     ax.legend(handles=handles, loc='lower left', ncol=2, fontsize=6.8, frameon=False, bbox_to_anchor=(0, -0.62))
 fig, (a1, a2) = plt.subplots(2, 1, figsize=(12, 7.6))
 panel(a1, tally(cat54, {'gar', 'none'}), C54, 'A. 1954–55 plans: buildings with a Terrebonne address, by block face' if LANG == 'en' else 'A. Plans de 1954–1955 : bâtiments adressés sur Terrebonne, par face d’îlot')
-panel(a2, tally(lambda r: r['cat_today'], {k for k, *_ in CTD}), CTD, 'B. Garage as built and driveway or apron today (aerial imagery, October 2026)' if LANG == 'en' else 'B. Garage d’origine et entrée ou aire pavée aujourd’hui (imagerie aérienne, octobre 2026)')
+panel(a2, tally(lambda r: r['cat_today'], {k for k, *_ in CTD}), CTD, 'B. Garage as built and car access today (street-level check, November 2026)' if LANG == 'en' else 'B. Garage d’origine et accès automobile aujourd’hui (vérification à hauteur de rue, novembre 2026)')
 a2.set_xlabel('Distance along rue de Terrebonne from the west end of the lane (m); west at left, Girouard at right' if LANG == 'en' else 'Distance le long de la rue de Terrebonne depuis l’extrémité ouest de la piste (m); ouest à gauche, Girouard à droite', fontsize=8)
 fig.subplots_adjust(top=0.88, bottom=0.17, left=0.06, right=0.99, hspace=1.35)
 base = os.path.join(HERE, f'figures/terrebonne_garages_distribution_{LANG}')

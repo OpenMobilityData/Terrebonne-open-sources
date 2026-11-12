@@ -17,6 +17,14 @@ Present-day check (Québec government aerial imagery, read Oct 25, 2026; 123 of 
   garages of 1954-55: apron still visible 64, none visible 10; no garage in 1954-55 but a driveway today: 15 (none: 33)
   a vehicle parked on the lot at the moment of the photo: 34
 
+Street-level check (the author, Nov 12, 2026; replaces the aerial reading; 122 buildings of the Oct 25 frame, 1 dropped: no dwelling today):
+  car access today: 99 of 118 decided = 83.9 %  (4 cannot tell: 81.1-84.4 % either way); by dwellings 225/259 = 86.9 %
+  garage as built (1954-55) OR access today: 110 of 118 = 93.2 %  (N 83/86, S 27/32)
+  garages of 1954-55: access today 60, none today 11; no garage in 1954-55 but access today 39 (none: 8)
+  parking converted to another use: none left 12, some left 16 (the 1954-55 plans taking priority)
+  against the aerial reading: its no -> yes 32, its yes -> no 9
+  whole street, 154 lots: access 129 of 149 = 86.6 %; five dwellings or fewer 124 of 143, 165 independent places, 266 with tandem; 5 of 6 larger buildings with an underground garage (not counted)
+
 By block face:
   N 789-12  Belmore-Coronation                 1 /   3  33.3 %
   N 789-13  Coronation-Mayfair                 0 /   6  0.0 %

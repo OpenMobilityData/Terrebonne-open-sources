@@ -25,10 +25,10 @@ CATS = [  # key, label en, label fr, colour, marker
     ('corner', 'Corner building addressed on the cross street (garage: ring)', 'Bâtiment de coin adressé sur la rue transversale (garage : anneau)', '#8a8884', 's'),
     ('other', 'Church, presbytery, vacant lot, or sheet missing', 'Église, presbytère, terrain vacant ou feuillet manquant', '#ffffff', 'D'),
 ]
-CATS_TODAY = [
-    ('both', 'Garage as built and a driveway or apron today', 'Garage d\u2019origine et entr\u00e9e ou aire pav\u00e9e aujourd\u2019hui', '#2a78d6', 'o'),
-    ('gar_only', 'Garage as built, no driveway or apron visible today', 'Garage d\u2019origine, sans entr\u00e9e visible aujourd\u2019hui', '#6250d6', 'o'),
-    ('drive_only', 'No garage as built, driveway or parking pad today', 'Sans garage d\u2019origine, entr\u00e9e ou aire de stationnement aujourd\u2019hui', '#1baf7a', 'o'),
+CATS_TODAY = [  # present day = the author's street-level check of November 12, 2026 (street_check/)
+    ('both', 'Garage as built and car access today', 'Garage d\u2019origine et acc\u00e8s automobile aujourd\u2019hui', '#2a78d6', 'o'),
+    ('gar_only', 'Garage as built, no parking today (converted)', 'Garage d\u2019origine, plus de stationnement aujourd\u2019hui (converti)', '#6250d6', 'o'),
+    ('drive_only', 'No garage as built, car access today', 'Sans garage d\u2019origine, acc\u00e8s automobile aujourd\u2019hui', '#1baf7a', 'o'),
     ('neither', 'Neither', 'Ni l\u2019un ni l\u2019autre', '#eb6834', 'o'),
     ('corner', 'Corner building addressed on the cross street', 'B\u00e2timent de coin adress\u00e9 sur la rue transversale', '#8a8884', 's'),
     ('other', 'Church, presbytery, vacant lot, not checked, or sheet missing', '\u00c9glise, presbyt\u00e8re, terrain vacant, non v\u00e9rifi\u00e9 ou feuillet manquant', '#ffffff', 'D'),
@@ -47,7 +47,7 @@ def conversion_handle(lang): return Line2D([], [], color='#e34948', linewidth=3,
 def category_today(r):
     c = category(r)
     if c in (None, 'corner', 'other'): return c
-    d = r.get('driveway_today', '')
+    d = r.get('access_street_check', '')
     if d not in ('yes', 'no'): return 'other'
     g = r['garage_1954'] == 'yes'
     return 'both' if g and d == 'yes' else 'gar_only' if g else 'drive_only' if d == 'yes' else 'neither'
@@ -109,16 +109,16 @@ def titles(kind, lang):
              ('modern', 'en'): "Buildings fronting rue de Terrebonne: off-street parking as built (1954–55), on today's parcels",
              ('sheets', 'fr'): "Bâtiments en façade de la rue de Terrebonne : stationnement hors rue d’origine, sur les plans d’assurance-incendie de 1954–1955",
              ('modern', 'fr'): "Bâtiments en façade de la rue de Terrebonne : stationnement hors rue d’origine (1954–1955), sur le cadastre d’aujourd’hui",
-             ('today', 'en'): "Buildings fronting rue de Terrebonne: garage as built (1954–55) and driveway or apron today (aerial imagery, 2026)",
-             ('today', 'fr'): "Bâtiments en façade de la rue de Terrebonne : garage d’origine (1954–1955) et entrée ou aire pavée aujourd’hui (imagerie aérienne, 2026)"}[(kind, lang)]
+             ('today', 'en'): "Buildings fronting rue de Terrebonne: garage as built (1954–55) and car access today (street-level check, November 2026)",
+             ('today', 'fr'): "Bâtiments en façade de la rue de Terrebonne : garage d’origine (1954–1955) et accès automobile aujourd’hui (vérification à hauteur de rue, novembre 2026)"}[(kind, lang)]
     return title
 def sources(kind, lang):
     src = {('sheets', 'en'): "Underlay: Underwriters' Survey Bureau, Insurance plan of the city of Montreal, vol. 7, sheets 739, 775, 784, 785, 787, 789, 798 (Nov. 1954–Dec. 1955), georeferenced on the City's geobase and straightened along the street; north side above, south side below; sheet 787-8 (Hampton–Melrose, south) is missing from the series. Markers: the author's reading of each building (buildings_geo.csv), positioned on the City's assessment-roll parcels (CC-BY 4.0). West (Belmore) at left, east (Girouard) at right.",
            ('modern', 'en'): "Base: Ville de Montréal open data, CC-BY 4.0 (géobase street centrelines; unités d'évaluation foncière parcels), drawn in a frame straightened along rue de Terrebonne; north side above, south side below. Markers: the author's reading of the 1954–55 Underwriters' Survey Bureau plans, one per building (buildings_geo.csv). West (Belmore) at left, east (Girouard) at right.",
            ('sheets', 'fr'): "Fond : Underwriters' Survey Bureau, plan d’assurance de la ville de Montréal, vol. 7, feuillets 739, 775, 784, 785, 787, 789, 798 (nov. 1954–déc. 1955), géoréférencés sur la géobase de la Ville et redressés le long de la rue; côté nord en haut, côté sud en bas; le feuillet 787-8 (Hampton–Melrose, sud) manque à la série. Repères : lecture de chaque bâtiment par l’auteur (buildings_geo.csv), placés sur les unités d’évaluation de la Ville (CC-BY 4.0). Ouest (Belmore) à gauche, est (Girouard) à droite.",
            ('modern', 'fr'): "Fond : données ouvertes de la Ville de Montréal, CC-BY 4.0 (géobase; unités d’évaluation foncière), dans un repère redressé le long de la rue de Terrebonne; côté nord en haut, côté sud en bas. Repères : lecture par l’auteur des plans de l’Underwriters' Survey Bureau de 1954–1955, un par bâtiment (buildings_geo.csv). Ouest (Belmore) à gauche, est (Girouard) à droite.",
-           ('today', 'en'): "Base: Ville de Montréal open data, CC-BY 4.0 (géobase; assessment-roll parcels), straightened along the street; north side above. Markers: the author's reading of the 1954–55 plans combined with a reading of the Gouvernement du Québec's aerial imagery (service Imagerie_GQ, fetched October 25, 2026): a driveway, paved apron or parking pad on the lot, or none (buildings_geo.csv, columns driveway_today, vehicle_or_pad_on_lot). What a garage is used for inside cannot be seen from above.",
-           ('today', 'fr'): "Fond : données ouvertes de la Ville de Montréal, CC-BY 4.0 (géobase; unités d’évaluation), redressé le long de la rue; côté nord en haut. Repères : lecture des plans de 1954–1955 par l’auteur, combinée à une lecture de l’imagerie aérienne du Gouvernement du Québec (service Imagerie_GQ, consulté le 25 octobre 2026) : entrée, aire pavée ou aire de stationnement sur le lot, ou rien (buildings_geo.csv). L’usage intérieur d’un garage ne se voit pas du ciel."}[(kind, lang)]
+           ('today', 'en'): "Base: Ville de Montréal open data, CC-BY 4.0 (géobase; assessment-roll parcels), straightened along the street; north side above. Markers: the author's reading of the 1954–55 plans combined with the author's street-level check of November 12, 2026: car access today means at least one private place usable today; a garage as built with no parking today has been converted to another use (buildings_geo.csv, columns access_street_check, converted_street_check; street_check/). Garage interiors are not counted.",
+           ('today', 'fr'): "Fond : données ouvertes de la Ville de Montréal, CC-BY 4.0 (géobase; unités d’évaluation), redressé le long de la rue; côté nord en haut. Repères : lecture des plans de 1954–1955 par l’auteur, combinée à la vérification de l’auteur à hauteur de rue du 12 novembre 2026 : accès automobile aujourd’hui = au moins une place privée utilisable aujourd’hui; un garage d’origine sans stationnement aujourd’hui a été converti à un autre usage (buildings_geo.csv, colonnes access_street_check, converted_street_check; street_check/). L’intérieur des garages n’est pas compté."}[(kind, lang)]
     return src
 def draw_axis(ax, k, kind, lang, cats, catkey, scalebar):
     u0, u1 = k * PANEL, (k + 1) * PANEL

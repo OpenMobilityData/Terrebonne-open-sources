@@ -424,5 +424,56 @@
   "dwellings_either": 188,
   "dwellings_checked": 268,
   "pct_dwellings_either": 70.1
+ },
+ "street_check": {
+  "frame": 122,
+  "dropped_no_dwelling_today": 1,
+  "decided": 118,
+  "cannot_tell": 4,
+  "access": 99,
+  "pct_access": 83.9,
+  "pct_access_low": 81.1,
+  "pct_access_high": 84.4,
+  "garage_1954_or_access": 110,
+  "pct_either": 93.2,
+  "by_side": {
+   "N": {
+    "decided": 86,
+    "access": 74,
+    "either": 83
+   },
+   "S": {
+    "decided": 32,
+    "access": 25,
+    "either": 27
+   }
+  },
+  "dwellings_decided": 259,
+  "dwellings_access": 225,
+  "garage_1954_with_access": 60,
+  "garage_1954_without_access": 11,
+  "no_garage_1954_with_access": 39,
+  "no_garage_1954_without": 8,
+  "converted_none_left": 12,
+  "converted_some_left": 16,
+  "aerial_no_street_yes": 32,
+  "aerial_yes_street_no": 9,
+  "pct_dwellings_access": 86.9,
+  "whole_street": {
+   "lots": 154,
+   "decided": 149,
+   "access_yes": 129,
+   "pct_access": 86.6,
+   "small_decided": 143,
+   "small_access": 124,
+   "small_places_independent": 165,
+   "small_places_total": 266,
+   "small_dwellings": 230,
+   "large_lots": 6,
+   "large_with_underground_garage": 5,
+   "converted_none_left": 12,
+   "converted_some_left": 19,
+   "converted_cannot_tell": 13
+  }
  }
 }
