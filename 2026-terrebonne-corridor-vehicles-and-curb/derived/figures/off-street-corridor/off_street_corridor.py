@@ -1,5 +1,5 @@
-"""Per corridor area: modelled automobiles, the places of the legal curb, and curb plus private parking under the
-scenario (Terrebonne's measured share of buildings with a garage or driveway applied to the area's small buildings).
+"""Per corridor area: modelled automobiles, the places of the legal curb, and curb plus private places as measured
+(every lot read from above, calibrated on the owner's check of a random sample from street-level imagery).
 Run:  ~/.venvs/omd/bin/python derived/figures/off-street-corridor/off_street_corridor.py"""
 import json
 import sys
@@ -14,39 +14,38 @@ sys.path.insert(0, str(HERE.parents[2] / "scripts"))
 import fig_lib as F  # noqa: E402
 from corridor_lib import ROOT, TABLES  # noqa: E402
 
-T = {"en": dict(title="With private parking added: a scenario for the corridor",
-                sub="Blue: modelled automobiles (90 % interval). Orange: places of the legal curb at 5.5 m (upper bound). Green: curb plus one private place for\n"
-                    "{p} % of the area's buildings of five dwellings or fewer, the share with a garage or driveway MEASURED on rue de Terrebonne ({lo}–{hi} %).\n"
-                    "The cross streets were not read: for them this share is an assumption. Larger buildings are given no private place.",
-                x="vehicles", a="modelled automobiles", b="curb places (upper bound)", c="curb + private places (scenario)",
-                note="Corridor: {au} modelled automobiles; {cp} curb places; {tp} with the scenario's {op} private places ({ol}–{oh})."),
-     "fr": dict(title="Avec le stationnement privé : un scénario pour le corridor",
-                sub="Bleu : automobiles modélisées (intervalle à 90 %). Orange : places de la bordure légale à 5,5 m (borne supérieure). Vert : bordure plus une place\n"
-                    "privée pour {p} % des immeubles de cinq logements ou moins de l’aire, la part ayant un garage ou une entrée MESURÉE rue de Terrebonne ({lo}–{hi} %).\n"
-                    "Les rues transversales n’ont pas été relevées : pour elles, cette part est une hypothèse. Aucune place privée n’est attribuée aux immeubles plus grands.",
-                x="véhicules", a="automobiles modélisées", b="places en bordure (borne supérieure)", c="bordure + places privées (scénario)",
-                note="Corridor : {au} automobiles modélisées ; {cp} places en bordure ; {tp} avec les {op} places privées du scénario ({ol}–{oh}).")}
+T = {"en": dict(title="With private parking added: the corridor, area by area",
+                sub="Blue: modelled automobiles (90 % interval). Orange: places of the legal curb at 5.5 m (upper bound). Green: curb plus the private places\n"
+                    "of buildings of five dwellings or fewer, counting only places a car can leave without another being moved (90 % interval).\n"
+                    "Every lot was read on aerial imagery; the estimate is calibrated on {n} lots judged by the author from street-level imagery.",
+                x="vehicles", a="modelled automobiles", b="curb places (upper bound)", c="curb + private places (measured)",
+                note="Corridor: {au} modelled automobiles; {cp} curb places; {tp} with {op} private places ({ol}–{oh}). Not counted: garage interiors,\nand the parking of the {lb} buildings of six dwellings or more ({ld} dwellings), several of which have an underground garage."),
+     "fr": dict(title="Avec le stationnement privé : le corridor, aire par aire",
+                sub="Bleu : automobiles modélisées (intervalle à 90 %). Orange : places de la bordure légale à 5,5 m (borne supérieure). Vert : bordure plus les places\n"
+                    "privées des immeubles de cinq logements ou moins, en ne comptant que celles d’où une voiture peut sortir sans en déplacer une autre (intervalle à 90 %).\n"
+                    "Chaque terrain a été relevé sur imagerie aérienne ; l’estimation est calée sur {n} terrains jugés par l’auteur à partir d’images prises de la rue.",
+                x="véhicules", a="automobiles modélisées", b="places en bordure (borne supérieure)", c="bordure + places privées (mesurées)",
+                note="Corridor : {au} automobiles modélisées ; {cp} places en bordure ; {tp} avec {op} places privées ({ol}–{oh}). Non comptés : l’intérieur des garages\net le stationnement des {lb} immeubles de six logements ou plus ({ld} logements), dont plusieurs ont un garage souterrain.")}
 
 
 def main():
-    s = pd.read_csv(TABLES / "offstreet_scenario_by_da.csv", dtype={"dauid": str})
-    O = json.load(open(ROOT / "derived/offstreet.json")); M, S = O["measured"], O["scenario"]
-    y = np.arange(len(s))[::-1]
+    s = pd.read_csv(TABLES / "offstreet_measured_by_da.csv", dtype={"dauid": str})
+    O = json.load(open(ROOT / "derived/offstreet.json")); S, K = O["corridor"], O["check"]
+    y = np.arange(len(s))[::-1]; curb = s.legal_m / 5.5
     for lang, t in T.items():
         fig, ax = plt.subplots(figsize=(10, 8.6))
         ax.hlines(y + 0.24, s.low_90, s.high_90, color=F.BLUE, lw=3, alpha=0.5, capstyle="round")
         ax.plot(s.automobiles_modelled, y + 0.24, "o", color=F.BLUE, ms=7, mec=F.SURFACE, mew=1.5, label=t["a"])
-        ax.plot(s.legal_m / 5.5, y, "D", color=F.ORANGE, ms=6, mec=F.SURFACE, mew=1.5, label=t["b"])
-        ax.hlines(y - 0.24, s.legal_m / 5.5 + s.offstreet_scenario_low, s.legal_m / 5.5 + s.offstreet_scenario_high, color=F.AQUA, lw=3, alpha=0.5, capstyle="round")
-        ax.plot(s.legal_m / 5.5 + s.offstreet_scenario, y - 0.24, "s", color=F.AQUA, ms=6.5, mec=F.SURFACE, mew=1.5, label=t["c"])
+        ax.plot(curb, y, "D", color=F.ORANGE, ms=6, mec=F.SURFACE, mew=1.5, label=t["b"])
+        ax.hlines(y - 0.24, curb + s.private_independent_low, curb + s.private_independent_high, color=F.AQUA, lw=3, alpha=0.5, capstyle="round")
+        ax.plot(curb + s.private_independent, y - 0.24, "s", color=F.AQUA, ms=6.5, mec=F.SURFACE, mew=1.5, label=t["c"])
         ax.set_yticks(y); ax.set_yticklabels([F.fr_frontage(v) if lang == "fr" else v for v in s.frontage], fontsize=8.5)
-        ax.grid(axis="x"); ax.grid(axis="y", visible=False); ax.set_xlim(0, 800); ax.set_xlabel(t["x"])
+        ax.grid(axis="x"); ax.grid(axis="y", visible=False); ax.set_xlim(0, 860); ax.set_xlabel(t["x"])
         ax.legend(loc="lower right", fontsize=9)
-        f0 = lambda v: F.num(100 * v, lang, 0)
-        sub = t["sub"].format(p=f0(M["share"]), lo=f0(M["share_low"]), hi=f0(M["share_high"]))
-        note = t["note"].format(au=F.num(S["automobiles_modelled"], lang), cp=F.num(S["curb_places"], lang), tp=F.num(S["curb_plus_offstreet"], lang),
-                                op=F.num(S["offstreet_scenario"], lang), ol=F.num(S["offstreet_scenario_low"], lang), oh=F.num(S["offstreet_scenario_high"], lang))
-        F.finish(fig, HERE, "off_street_corridor", lang, t["title"], sub, note, top=0.84, bottom=0.15, left=0.3)
+        note = t["note"].format(au=F.num(S["automobiles_modelled"], lang), cp=F.num(S["curb_places"], lang), tp=F.num(S["curb_plus_private"], lang),
+                                op=F.num(S["private_independent"], lang), ol=F.num(S["private_independent_low"], lang), oh=F.num(S["private_independent_high"], lang),
+                                lb=S["large_buildings"], ld=F.num(S["dwellings_in_large_buildings"], lang))
+        F.finish(fig, HERE, "off_street_corridor", lang, t["title"], t["sub"].format(n=K["small_judged"]), note, top=0.84, bottom=0.16, left=0.3)
     print("OK off_street_corridor")
 
 

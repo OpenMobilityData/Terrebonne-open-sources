@@ -1,32 +1,34 @@
-"""Stage 5: private (off-street) parking: what is measured, and a scenario for the corridor.
+"""Stage 5: private (off-street) parking in the corridor: measured, with its error measured too.
 
-MEASURED, for the buildings addressed on rue de Terrebonne only (folder 1954-underwriters-plans-terrebonne-garages):
-each building read on the 1954-55 Underwriters' plans (garage as built) and on present-day aerial imagery (driveway
-or paved apron). A building with either is counted for ONE off-street place: a floor (a driveway may hold more; a
-garage may no longer be used for a car). Buildings not read (no plan sheet; larger apartment buildings) are not in
-this part.
+1. Rue de Terrebonne (folder 1954-underwriters-plans-terrebonne-garages): the buildings addressed on the street, read
+   on October 25, 2026 on the 1954-55 Underwriters' plans (garage as built) and on aerial imagery (driveway or apron);
+   one place counted per building with either. Kept as first published; the check below shows that a reading from
+   above misses part of the driveways.
+2. The corridor's 22 dissemination areas: every lot holding a dwelling (2,358) was read on enlarged aerial crops by
+   independent readers under a written protocol (derived/readings/; offstreet_readings_v2.py). The owner then judged,
+   from street-level imagery and without seeing any reading, a random sample of 112 lots drawn beforehand
+   (derived/readings/owner_check.json). The estimate for the buildings of five dwellings or fewer applies, to the lots
+   of each reader answer (yes, unclear, no), the share with car access and the mean number of places the owner found
+   for the sampled lots of that answer; intervals by resampling the checked lots (2,000 draws, 90 %).
+   Places: « independent » = cars that can stand there and leave without another being moved; « total » = all cars
+   the surface holds, one behind another included. Garage interiors are not counted.
+   Buildings of six dwellings or more: counted, not given places: in the owner's sample most of those with parking
+   have an underground garage whose places cannot be seen.
 
-SCENARIO, for the corridor's 22 dissemination areas: the share of buildings with a garage or driveway measured on
-rue de Terrebonne (with its 95 % interval) is applied to every building of five dwellings or fewer in the City's
-assessment roll, one place each; buildings of six dwellings or more are given none, because nothing was measured
-for them. The cross streets were not read: this is an assumption, labelled as such wherever it is used.
-
-Outputs: derived/tables/offstreet_terrebonne_by_sector.csv, offstreet_scenario_by_da.csv; derived/offstreet.json
-Run:  ~/.venvs/omd/bin/python scripts/offstreet.py   (after corridor.py)
+Outputs: derived/tables/offstreet_terrebonne_by_sector.csv, offstreet_measured_by_da.csv; derived/offstreet.json
+Run:  ~/.venvs/omd/bin/python scripts/offstreet.py   (after corridor.py and offstreet_readings_v2.py)
 """
 import json
 import sys
 
-import geopandas as gpd
 import numpy as np
 import pandas as pd
 from statsmodels.stats.proportion import proportion_confint
 
-from corridor_lib import CACHE, CRS, DA_SHP, GARAGES, ROOT, TABLES
+from corridor_lib import GARAGES, ROOT, TABLES
 
 sys.path.insert(0, str(GARAGES))
 SECTORS = (("residential west", 0, 11), ("institutional", 12, 16), ("residential east", 17, 28))
-SMALL = 5            # dwellings: buildings up to this size take the share measured on Terrebonne
 PLACE = 5.5
 
 
@@ -63,51 +65,71 @@ def main():
     ts = pd.DataFrame(rows); ts.to_csv(TABLES / "offstreet_terrebonne_by_sector.csv", index=False)
     pd.set_option("display.width", 250); print(ts.T.to_string())
     k, n = int(b.either.sum()), len(b)
-    lo, hi = proportion_confint(k, n, alpha=0.05, method="wilson")
+    lo_t, hi_t = proportion_confint(k, n, alpha=0.05, method="wilson")
     share = k / n
-    print(f"share of buildings read with a garage as built or a driveway today: {k} of {n} = {100 * share:.1f} % ({100 * lo:.1f} to {100 * hi:.1f})")
+    print(f"share of buildings read with a garage as built or a driveway today: {k} of {n} = {100 * share:.1f} % ({100 * lo_t:.1f} to {100 * hi_t:.1f})")
 
-    # 2. scenario: the corridor's buildings from the assessment roll
-    r = gpd.read_parquet(CACHE / "roll_dwelling_points.parquet")
-    da = gpd.read_file(DA_SHP, columns=["DAUID"], where="DAUID LIKE '2466%'").to_crs(CRS)
-    da = da[da.DAUID.isin(cor.index)]
-    j = gpd.sjoin(r, da, predicate="within")
-    j["key"] = j.geometry.x.round(0).astype(int).astype(str) + "_" + j.geometry.y.round(0).astype(int).astype(str)   # condominium units of one building share a point
-    bl = j.groupby(["DAUID", "key"]).NOMBRE_LOGEMENT.sum().rename("dw").reset_index()
-    g = bl.groupby("DAUID")
-    s = pd.DataFrame({"buildings": g.size(), "dwellings_roll": g.dw.sum(),
-                      "small_buildings": g.apply(lambda x: int((x.dw <= SMALL).sum()), include_groups=False),
-                      "dwellings_in_small_buildings": g.apply(lambda x: x[x.dw <= SMALL].dw.sum(), include_groups=False),
-                      "large_buildings": g.apply(lambda x: int((x.dw > SMALL).sum()), include_groups=False),
-                      "dwellings_in_large_buildings": g.apply(lambda x: x[x.dw > SMALL].dw.sum(), include_groups=False)})
-    s.index.name = "dauid"
-    s["offstreet_scenario"] = (s.small_buildings * share).round(0)
-    s["offstreet_scenario_low"] = (s.small_buildings * lo).round(0); s["offstreet_scenario_high"] = (s.small_buildings * hi).round(0)
+    # 2. measured: every lot of the corridor read from above (offstreet_readings_v2.py), calibrated on the owner's check
+    m = pd.read_csv(TABLES / "offstreet_readings_v2.csv", dtype={"dauid": str})
+    o = pd.read_csv(TABLES / "offstreet_owner_check.csv")
+    sm = m[~m.large]; lg = m[m.large]
+    chk = o[(~o.large) & o.car_access_owner.isin(["yes", "no"])].copy()
+    chk["acc"] = (chk.car_access_owner == "yes").astype(float)
+    chk["pi"] = chk.places_independent_owner.fillna(0); chk["pt"] = chk.places_total_owner.fillna(0)
+    ANS = ["yes", "unclear", "no"]
+    counts = sm.groupby(["dauid", "car_access"]).size().unstack(fill_value=0).reindex(columns=ANS, fill_value=0).reindex(cor.index, fill_value=0)
+
+    def rates(samp):
+        g = samp.groupby("car_access")[["acc", "pi", "pt"]].mean(); ov = samp[["acc", "pi", "pt"]].mean()
+        return np.array([(g.loc[k] if k in g.index else ov).values for k in ANS])          # 3 reader answers x (access, independent, total)
+
+    R0 = rates(chk); E0 = counts.values @ R0                                               # areas x 3
+    rng = np.random.default_rng(20261112)
+    EB = np.array([counts.values @ rates(chk.sample(len(chk), replace=True, random_state=int(rng.integers(1e9)))) for _ in range(2000)])   # draws x areas x 3
+    q = lambda a, pq: np.quantile(a, pq, axis=0)
+    s = pd.DataFrame({"small_buildings": counts.sum(axis=1), "read_yes": counts.yes, "read_unclear": counts.unclear, "read_no": counts.no,
+                      "with_access": E0[:, 0].round(0), "private_independent": E0[:, 1].round(0), "private_independent_low": q(EB[:, :, 1], 0.05).round(0),
+                      "private_independent_high": q(EB[:, :, 1], 0.95).round(0), "private_total": E0[:, 2].round(0), "private_total_low": q(EB[:, :, 2], 0.05).round(0),
+                      "private_total_high": q(EB[:, :, 2], 0.95).round(0)}, index=cor.index)
+    s["large_buildings"] = lg.groupby("dauid").size().reindex(cor.index, fill_value=0)
+    s["dwellings_in_large_buildings"] = lg.groupby("dauid").dwellings.sum().reindex(cor.index, fill_value=0)
     s = s.join(cor[["frontage", "west_to_east", "households", "automobiles_modelled", "low_90", "high_90", "legal_m"]])
     s["curb_places"] = (s.legal_m / PLACE).round(0)
-    s["curb_plus_offstreet"] = s.curb_places + s.offstreet_scenario
-    s["automobiles_per_place_curb_only"] = (s.automobiles_modelled / s.curb_places).round(2)
-    s["automobiles_per_place_with_offstreet"] = (s.automobiles_modelled / s.curb_plus_offstreet).round(2)
+    s["curb_plus_private_independent"] = (s.legal_m / PLACE + E0[:, 1]).round(0)
+    s["automobiles_per_place_curb_only"] = (s.automobiles_modelled / (s.legal_m / PLACE)).round(2)
+    s["automobiles_per_place_with_private"] = (s.automobiles_modelled / (s.legal_m / PLACE + E0[:, 1])).round(2)
     s = s.sort_values(["west_to_east", "frontage"])
-    s.to_csv(TABLES / "offstreet_scenario_by_da.csv")
+    s.to_csv(TABLES / "offstreet_measured_by_da.csv")
     C = json.load(open(ROOT / "derived/numbers.json"))["sets"]["corridor"]
-    tot = {"buildings": int(s.buildings.sum()), "dwellings_roll": int(s.dwellings_roll.sum()), "small_buildings": int(s.small_buildings.sum()),
-           "dwellings_in_small_buildings": int(s.dwellings_in_small_buildings.sum()), "large_buildings": int(s.large_buildings.sum()),
-           "dwellings_in_large_buildings": int(s.dwellings_in_large_buildings.sum()),
-           "offstreet_scenario": int(round(s.small_buildings.sum() * share)), "offstreet_scenario_low": int(round(s.small_buildings.sum() * lo)),
-           "offstreet_scenario_high": int(round(s.small_buildings.sum() * hi)), "curb_places": C["places_5.5m"]}
-    tot["curb_plus_offstreet"] = tot["curb_places"] + tot["offstreet_scenario"]
-    tot["curb_plus_offstreet_low"] = C["places_6.0m"] + tot["offstreet_scenario_low"]; tot["curb_plus_offstreet_high"] = C["places_5.0m"] + tot["offstreet_scenario_high"]
-    tot["automobiles_modelled"] = C["automobiles_modelled"]
+    T0 = E0.sum(axis=0); TB = EB.sum(axis=1)
+    lo, hi = np.quantile(TB, 0.05, axis=0), np.quantile(TB, 0.95, axis=0)
+    ol = o[o.large]
+    tot = {"small_buildings": int(len(sm)), "read_yes": int(counts.yes.sum()), "read_unclear": int(counts.unclear.sum()), "read_no": int(counts.no.sum()),
+           "with_access": int(round(T0[0])), "with_access_low": int(round(lo[0])), "with_access_high": int(round(hi[0])), "share_with_access": round(float(T0[0] / len(sm)), 3),
+           "private_independent": int(round(T0[1])), "private_independent_low": int(round(lo[1])), "private_independent_high": int(round(hi[1])),
+           "private_total": int(round(T0[2])), "private_total_low": int(round(lo[2])), "private_total_high": int(round(hi[2])),
+           "large_buildings": int(len(lg)), "dwellings_in_large_buildings": int(lg.dwellings.sum()),
+           "curb_places": C["places_5.5m"], "automobiles_modelled": C["automobiles_modelled"]}
+    tot["curb_plus_private"] = tot["curb_places"] + tot["private_independent"]
+    tot["curb_plus_private_low"] = C["places_6.0m"] + tot["private_independent_low"]; tot["curb_plus_private_high"] = C["places_5.0m"] + tot["private_independent_high"]
     tot["per_place_curb_only"] = round(C["automobiles_modelled"] / tot["curb_places"], 2)
-    tot["per_place_with_offstreet"] = round(C["automobiles_modelled"] / tot["curb_plus_offstreet"], 2)
+    tot["per_place_with_private"] = round(C["automobiles_modelled"] / tot["curb_plus_private"], 2)
     tot["areas_over_curb_only"] = int((s.automobiles_modelled > s.legal_m / PLACE).sum())
-    tot["areas_over_with_offstreet"] = int((s.automobiles_modelled > s.legal_m / PLACE + s.small_buildings * share).sum())
-    print(json.dumps(tot, indent=1))
+    tot["areas_over_with_private"] = int((s.automobiles_modelled > s.curb_plus_private_independent).sum())
+    by = chk.groupby("car_access").agg(n=("acc", "size"), yes=("acc", "sum"), pi=("pi", "sum"), pt=("pt", "sum"))
+    check = {"small_judged": int(len(chk)), "small_yes": int(chk.acc.sum()), "small_cannot_tell": int(((~o.large) & ~o.car_access_owner.isin(["yes", "no"])).sum()),
+             "small_share": round(float(chk.acc.mean()), 3), "independent_per_lot": round(float(chk.pi.mean()), 2), "total_per_lot": round(float(chk.pt.mean()), 2),
+             "by_reader_answer": {k: {"lots": int(by.n[k]), "owner_yes": int(by.yes[k]), "independent": int(by.pi[k]), "total": int(by.pt[k])} for k in ANS},
+             "large_sampled": int(len(ol)), "large_yes": int((ol.car_access_owner == "yes").sum()), "large_no": int((ol.car_access_owner == "no").sum()),
+             "large_cannot_tell": int((~ol.car_access_owner.isin(["yes", "no"])).sum()),
+             "large_underground_garage": int(((ol.car_access_owner == "yes") & (ol.kind_owner == "parking lot")).sum())}
+    plo, phi = proportion_confint(check["small_yes"], check["small_judged"], alpha=0.05, method="wilson")
+    check["small_share_low"], check["small_share_high"] = round(plo, 3), round(phi, 3)
+    print(json.dumps({"corridor": tot, "check": check}, indent=1))
     w = ts[ts.sector == "whole lane"].iloc[0]
-    json.dump({"measured": {"buildings_read": n, "with_garage_or_driveway": k, "share": round(share, 3), "share_low": round(lo, 3), "share_high": round(hi, 3),
+    json.dump({"measured": {"buildings_read": n, "with_garage_or_driveway": k, "share": round(share, 3), "share_low": round(lo_t, 3), "share_high": round(hi_t, 3),
                             "whole_lane": {a: (float(v) if isinstance(v, (float, np.floating)) else int(v)) for a, v in w.items() if a != "sector"}},
-               "scenario": tot, "small_building_max_dwellings": SMALL}, open(ROOT / "derived/offstreet.json", "w"), indent=1)
+               "corridor": tot, "check": check}, open(ROOT / "derived/offstreet.json", "w"), indent=1)
     print("OK offstreet")
 
 

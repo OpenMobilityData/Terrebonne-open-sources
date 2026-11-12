@@ -17,25 +17,66 @@
    "cars_at_curbs_2015_night": 183
   }
  },
- "scenario": {
-  "buildings": 2358,
-  "dwellings_roll": 5929,
+ "corridor": {
   "small_buildings": 2262,
-  "dwellings_in_small_buildings": 3337,
+  "read_yes": 1428,
+  "read_unclear": 470,
+  "read_no": 364,
+  "with_access": 1986,
+  "with_access_low": 1867,
+  "with_access_high": 2096,
+  "share_with_access": 0.878,
+  "private_independent": 2228,
+  "private_independent_low": 2051,
+  "private_independent_high": 2414,
+  "private_total": 3731,
+  "private_total_low": 3415,
+  "private_total_high": 4053,
   "large_buildings": 96,
   "dwellings_in_large_buildings": 2592,
-  "offstreet_scenario": 1637,
-  "offstreet_scenario_low": 1445,
-  "offstreet_scenario_high": 1798,
   "curb_places": 6755,
-  "curb_plus_offstreet": 8392,
-  "curb_plus_offstreet_low": 7637,
-  "curb_plus_offstreet_high": 9229,
   "automobiles_modelled": 4622,
+  "curb_plus_private": 8983,
+  "curb_plus_private_low": 8243,
+  "curb_plus_private_high": 9845,
   "per_place_curb_only": 0.68,
-  "per_place_with_offstreet": 0.55,
+  "per_place_with_private": 0.51,
   "areas_over_curb_only": 6,
-  "areas_over_with_offstreet": 3
+  "areas_over_with_private": 2
  },
- "small_building_max_dwellings": 5
+ "check": {
+  "small_judged": 99,
+  "small_yes": 85,
+  "small_cannot_tell": 1,
+  "small_share": 0.859,
+  "independent_per_lot": 0.96,
+  "total_per_lot": 1.61,
+  "by_reader_answer": {
+   "yes": {
+    "lots": 56,
+    "owner_yes": 52,
+    "independent": 59,
+    "total": 97
+   },
+   "unclear": {
+    "lots": 20,
+    "owner_yes": 18,
+    "independent": 20,
+    "total": 36
+   },
+   "no": {
+    "lots": 23,
+    "owner_yes": 15,
+    "independent": 16,
+    "total": 26
+   }
+  },
+  "large_sampled": 12,
+  "large_yes": 6,
+  "large_no": 4,
+  "large_cannot_tell": 2,
+  "large_underground_garage": 6,
+  "small_share_low": 0.777,
+  "small_share_high": 0.914
+ }
 }

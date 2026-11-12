@@ -41,12 +41,9 @@ folder README rests on it.** It is kept as the record of what was tried.
 
 ---
 
-# Second pass (protocol version 2): read, AWAITING THE OWNER'S CHECK, not yet used
+# Second pass (protocol version 2): read, checked by the owner, USED through the check
 
-**Status (November 11, 2026): every lot has been read a second time under a corrected protocol and on enlarged
-crops. The readers agree with each other far better than in the first pass, but agreement between readers is not
-accuracy: no figure in the note, the deck or the folder README rests on these readings until the owner's check of a
-random sample (below) is in.**
+**Status (November 11, 2026, late evening): the owner's check is in (`owner_check.json`, 112 lots, all judged from street-level imagery). It shows that the readers, though consistent with each other, missed part of the car access: of the 99 small buildings the owner judged yes or no, 85 have access (86 %); where the readers said yes the check confirmed 52 of 56, where they said no it found access in 15 of 23, and of the 20 they left unclear 18 have access. The note's figures therefore rest on the check; the readings serve only to sharpen it (`../../scripts/offstreet.py`: the owner's rates applied to the lots of each reader answer).**
 
 - **Crops:** `../../scripts/offstreet_crops.py`: 702 crops of up to five neighbouring lots at 20 pixels per metre
   (a building of six dwellings or more, or a large lot, alone at a smaller scale), dark tones lifted;
