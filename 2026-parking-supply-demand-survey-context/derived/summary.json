@@ -371,34 +371,42 @@
   "public_filing": "Nov 2, 2026 (205 responses): 108 on or within a block, 59 street parkers, 34 strict / 46 loose hardship; 18 of 34 respondents on Terrebonne with a vehicle report an off-street place"
  },
  "offstreet": {
-  "buildings_checked": 123,
-  "buildings_either": 89,
-  "pct_buildings": 72.4,
-  "dwellings_checked": 268,
-  "dwellings_either": 188,
-  "pct_dwellings": 70.1,
+  "buildings_checked": 118,
+  "buildings_either": 99,
+  "pct_buildings": 83.9,
+  "dwellings_checked": 259,
+  "dwellings_either": 225,
+  "pct_dwellings": 86.9,
   "by_side": {
    "N": {
-    "checked": 89,
-    "either": 70
+    "checked": 86,
+    "either": 74
    },
    "S": {
-    "checked": 34,
-    "either": 19
+    "checked": 32,
+    "either": 25
    }
   },
+  "cannot_tell": 4,
+  "garage_1954_or_access": 110,
+  "pct_garage_1954_or_access": 93.2,
+  "converted_none_left": 12,
+  "converted_some_left": 16,
+  "aerial_checked": 123,
+  "aerial_either": 89,
+  "aerial_pct": 72.4,
   "garage_1954": 75,
   "buildings_1954": 126,
   "pct_1954": 59.5,
   "dwellings_1954": 168,
   "dwellings_roll": 289,
   "buildings_ci": [
-   0.639,
-   0.795
+   0.762,
+   0.894
   ],
   "dwellings_ci": [
-   0.644,
-   0.753
+   0.822,
+   0.905
   ]
  },
  "roll": {
@@ -485,5 +493,5 @@
   "days": 121,
   "source": "Terrebonne-private decision model, appendix \u00ab Five winters of snow-related parking constraint \u00bb (scripts/winter_constraint_nights.py): loading night = >= 100 truckloads hauled in the borough or >= 40 in sector CDN-301; storm-to-loading adds the days from a triggering snowfall (>= 2.5 cm) to the loading; December 1 to March 31"
  },
- "generated": "2026-11-07 11:24"
+ "generated": "2026-11-12 10:49"
 }

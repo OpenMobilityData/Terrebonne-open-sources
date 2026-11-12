@@ -136,17 +136,22 @@ S['survey'] = dict(asof=SURVEY_ASOF, responses=len(rows), groups={r['group']: r 
 print('survey check: corridor', SV[2]['respondents'], 'street parkers', SV[2]['street_parkers'], 'strict', SV[2]['hardship_strict'], 'loose', SV[2]['hardship_loose'], file=sys.stderr)
 
 # ---------------------------------------------------------------- 4. off-street: the plans and imagery against the survey
-G = json.load(open(os.path.join(G54, 'summary.json'))); PD = G['present_day']; RL = G['roll']
-S['offstreet'] = dict(buildings_checked=PD['checked'], buildings_either=PD['garage_1954_or_driveway_today'], pct_buildings=PD['pct_either'], dwellings_checked=PD['dwellings_checked'], dwellings_either=PD['dwellings_either'], pct_dwellings=PD['pct_dwellings_either'],
-                      by_side=PD['by_side'], garage_1954=G['with_garage'], buildings_1954=G['buildings_terrebonne'], pct_1954=G['pct'], dwellings_1954=RL['dwellings_in_buildings_with_garage'], dwellings_roll=RL['dwellings'],
-                      buildings_ci=wilson(PD['garage_1954_or_driveway_today'], PD['checked']), dwellings_ci=wilson(PD['dwellings_either'], PD['dwellings_checked']))
+G = json.load(open(os.path.join(G54, 'summary.json'))); PD = G['present_day']; SCK = G['street_check']; RL = G['roll']
+# present day = the author's street-level check of Nov 12, 2026 (car access today = at least one private place usable today);
+# it replaced the aerial reading of Oct 25, 2026 (garage as built or driveway today, 89 of 123), kept below as aerial_* for the record
+S['offstreet'] = dict(buildings_checked=SCK['decided'], buildings_either=SCK['access'], pct_buildings=SCK['pct_access'], dwellings_checked=SCK['dwellings_decided'], dwellings_either=SCK['dwellings_access'], pct_dwellings=SCK['pct_dwellings_access'],
+                      by_side={k: {'checked': v['decided'], 'either': v['access']} for k, v in SCK['by_side'].items()}, cannot_tell=SCK['cannot_tell'],
+                      garage_1954_or_access=SCK['garage_1954_or_access'], pct_garage_1954_or_access=SCK['pct_either'], converted_none_left=SCK['converted_none_left'], converted_some_left=SCK['converted_some_left'],
+                      aerial_checked=PD['checked'], aerial_either=PD['garage_1954_or_driveway_today'], aerial_pct=PD['pct_either'],
+                      garage_1954=G['with_garage'], buildings_1954=G['buildings_terrebonne'], pct_1954=G['pct'], dwellings_1954=RL['dwellings_in_buildings_with_garage'], dwellings_roll=RL['dwellings'],
+                      buildings_ci=wilson(SCK['access'], SCK['decided']), dwellings_ci=wilson(SCK['dwellings_access'], SCK['dwellings_decided']))
 fig, ax = plt.subplots(figsize=(8, 3.2))
-items = [('Plans + imagery: buildings on Terrebonne with a garage or driveway today', PD['garage_1954_or_driveway_today'], PD['checked'], C['lidar']), ('Plans + imagery: dwellings in those buildings', PD['dwellings_either'], PD['dwellings_checked'], C['lidar']),
+items = [('Street check: buildings on Terrebonne with car access today', SCK['access'], SCK['decided'], C['lidar']), ('Street check: dwellings in those buildings', SCK['dwellings_access'], SCK['dwellings_decided'], C['lidar']),
          ('Survey: on Terrebonne, households with a vehicle, at least one off-street place', SV[0]['offstreet_built_ge1'], SV[0]['offstreet_built_answered'], C['survey']), ('Survey: within one block, same', SV[1]['offstreet_built_ge1'], SV[1]['offstreet_built_answered'], C['survey']), ('Survey: corridor (both), same', SV[2]['offstreet_built_ge1'], SV[2]['offstreet_built_answered'], C['survey'])]
 for i, (lab, k, n, col) in enumerate(items):
-    lo, hi = wilson(k, n); ax.plot([100 * lo, 100 * hi], [i, i], color=col, lw=2); ax.plot(100 * k / n, i, 'o', color=col, ms=6); ax.text(100 * hi + 1.5, i, f'{k} of {n} ({100 * k / n:.0f} %)', va='center', fontsize=7.5, color=C['ink'])
+    lo, hi = wilson(k, n); ax.plot([100 * lo, 100 * hi], [i, i], color=col, lw=2); ax.plot(100 * k / n, i, 'o', color=col, ms=6); lab_ = f'{k} of {n} ({100 * k / n:.0f} %)'; ax.text(100 * lo - 1.5, i, lab_, va='center', ha='right', fontsize=7.5, color=C['ink']) if 100 * hi > 85 else ax.text(100 * hi + 1.5, i, lab_, va='center', fontsize=7.5, color=C['ink'])
 ax.set_yticks(range(len(items))); ax.set_yticklabels([it[0] for it in items], fontsize=7); ax.invert_yaxis(); ax.set_xlim(0, 100); ax.set_xlabel('share with off-street parking (%), 95 % Wilson interval'); ax.set_title('Off-street parking: external reading and survey answers', loc='left', fontsize=9)
-foot(fig, f'Sources: 1954-underwriters-plans-terrebonne-garages (BAnQ plans; City LiDAR 2015; Québec orthophoto; City roll); APC-NDG survey, anonymized file as of {SURVEY_ASOF}.'); fig.tight_layout(rect=(0, 0.05, 1, 1)); fig.savefig(os.path.join(FIG, 'offstreet_share_en.png')); plt.close(fig)
+foot(fig, f'Sources: 1954-underwriters-plans-terrebonne-garages (the author\'s street-level check, Nov 12, 2026; City roll); APC-NDG survey, anonymized file as of {SURVEY_ASOF}.'); fig.tight_layout(rect=(0, 0.05, 1, 1)); fig.savefig(os.path.join(FIG, 'offstreet_share_en.png')); plt.close(fig)
 # figure: where corridor respondents parked last night, by group
 fig, ax = plt.subplots(figsize=(8, 3.2)); cats = [('parked_own_offstreet', 'own garage, driveway or carport'), ('parked_terrebonne', 'on rue de Terrebonne'), ('parked_cross_within_block', 'cross street, within a block'), ('parked_cross_farther', 'cross street, farther'), ('parked_somerled_monkland', 'Somerled or Monkland'), ('parked_rented', 'rented space'), ('parked_other', 'other / free text')]
 yy = np.arange(len(cats))
