@@ -1,0 +1,1122 @@
+{
+ "exported": "2026-11-12T04:23:53.992Z",
+ "answers": [
+  {
+   "key": "9a16e9014e2d",
+   "n": 1,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Single car visible on what appears to be a front pad ; street level confirms"
+  },
+  {
+   "key": "1eaf02160ead",
+   "n": 2,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Sunken garage discernible based on shadows - adjacent twin house has the same ; street level confirms"
+  },
+  {
+   "key": "d2f9db66bda0",
+   "n": 3,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Single car visible in driveway - no discernible garage ; street level confirms"
+  },
+  {
+   "key": "16a6a06c17b2",
+   "n": 4,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Parked car visible in street view"
+  },
+  {
+   "key": "ac5fc96b1ac8",
+   "n": 5,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "3",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Long paved area alongside house with one van parked closest to street.  Long enough to hold three cars with blocking.  Street level confirms"
+  },
+  {
+   "key": "9b9d6d6deaba",
+   "n": 6,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "No parking"
+  },
+  {
+   "key": "f6b407812440",
+   "n": 7,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Sunken garage"
+  },
+  {
+   "key": "c344f5829f25",
+   "n": 8,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "be9159c1c34f",
+   "n": 9,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1411ad6ad27b",
+   "n": 10,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "883ac7a29c9d",
+   "n": 11,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "e6b18bc32279",
+   "n": 12,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "fdaa6a31ad71",
+   "n": 13,
+   "car_access": "yes",
+   "kind": "parking lot",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Multi-unit apartment building with underground garage entrance - not possible to see how many spots are in garage;  look this up?"
+  },
+  {
+   "key": "f0aec3b8a11c",
+   "n": 14,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "65d1f156d9f3",
+   "n": 15,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "9acb411933ab",
+   "n": 16,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "e3862900f5fb",
+   "n": 17,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "3f8cdf17584f",
+   "n": 18,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "4",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Twin semi-detached with 2x sunken garages"
+  },
+  {
+   "key": "26a8d09e5f81",
+   "n": 19,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "484bcfaa6b03",
+   "n": 20,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "66cca1ad6d8a",
+   "n": 21,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "2089d18fccae",
+   "n": 22,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "0aa1ccdf80a3",
+   "n": 23,
+   "car_access": "yes",
+   "kind": "parking lot",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Multi-unit apartment building with underground garage - can't see how many spots."
+  },
+  {
+   "key": "a5852cbcea5a",
+   "n": 24,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "606ab73476a1",
+   "n": 25,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "878a9c01afb5",
+   "n": 26,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "7074f12c4b5c",
+   "n": 27,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "e3b12f0fb509",
+   "n": 28,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "d65281665583",
+   "n": 29,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "f8c388879ec5",
+   "n": 30,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "4",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Long driveway with garage at back"
+  },
+  {
+   "key": "b04eb707d626",
+   "n": 31,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "3fdb7e5207d7",
+   "n": 32,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "411b9f5c6da8",
+   "n": 33,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "15ebed7dc108",
+   "n": 34,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "79177b83c241",
+   "n": 35,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "fbf605069664",
+   "n": 36,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "db9d1c24c9a9",
+   "n": 37,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "123eb8bf4666",
+   "n": 38,
+   "car_access": "yes",
+   "kind": "parking lot",
+   "basis": "street-level imagery",
+   "note": "Multi-unit building with underground parking lot."
+  },
+  {
+   "key": "70bbbe2a5413",
+   "n": 39,
+   "car_access": "yes",
+   "kind": "parking lot",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Multi-unit apartment building with underground garage."
+  },
+  {
+   "key": "82293e6bb09d",
+   "n": 40,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "7473ed9b9017",
+   "n": 41,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Multi-unit apartment building - no discernible parking."
+  },
+  {
+   "key": "dadc2e70a0cc",
+   "n": 42,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1bbfd46553a0",
+   "n": 43,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Appears that original garage was converted to living space."
+  },
+  {
+   "key": "dac9d24ac528",
+   "n": 44,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "7d0638df6d76",
+   "n": 45,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "af3ff56e82a2",
+   "n": 46,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "4e8a507bac6e",
+   "n": 47,
+   "car_access": "cannot tell",
+   "basis": "street-level imagery",
+   "note": "Multi-unit residential - may have underground garage but can't be sure."
+  },
+  {
+   "key": "f2e974966cfa",
+   "n": 48,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "531862ddaa92",
+   "n": 49,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Multi-unit residential - does not appear to have parking."
+  },
+  {
+   "key": "be71ea97bd93",
+   "n": 50,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "13a8e75365bc",
+   "n": 51,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "5fc7d4ebf65f",
+   "n": 52,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1e6ac38cd97e",
+   "n": 53,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "a775cbbe5500",
+   "n": 54,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "2ecb7c6e05d7",
+   "n": 55,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "eeda270d7712",
+   "n": 56,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "262fc42b0d28",
+   "n": 57,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1d4faec2e52b",
+   "n": 58,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "3",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "8036bd674239",
+   "n": 59,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "db35ba311d36",
+   "n": 60,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "189627433c7c",
+   "n": 61,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "22bc03ce4bc3",
+   "n": 62,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "7d9706a24d20",
+   "n": 63,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "2",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "4da477eee880",
+   "n": 64,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "b16f1a0fc6ac",
+   "n": 65,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "92f6ba26f86a",
+   "n": 66,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "ac131afbd7bc",
+   "n": 67,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "7ed545b0a06a",
+   "n": 68,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1151280a82f6",
+   "n": 69,
+   "car_access": "yes",
+   "kind": "parking lot",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Multi-unit residential with underground parking garage - can't count spaces."
+  },
+  {
+   "key": "80d72c0f71b3",
+   "n": 70,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "415f9661956a",
+   "n": 71,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "7f5afca312a5",
+   "n": 72,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "168d167e1c60",
+   "n": 73,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "c37013587efd",
+   "n": 74,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1cfdc11a1d66",
+   "n": 75,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "4f0c16805ba1",
+   "n": 76,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "note": "Original garage converted to living space - parking pad/driveway added."
+  },
+  {
+   "key": "853407ceb0a9",
+   "n": 77,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "3",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "f7b21e7466e0",
+   "n": 78,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "61a1d329b8d3",
+   "n": 79,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "4b48f1c6e39d",
+   "n": 80,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "96aad8975ade",
+   "n": 81,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "cannot tell",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "3accbfb25474",
+   "n": 82,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "b6df30832956",
+   "n": 83,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "e5bfc699e9c2",
+   "n": 84,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "386f66dfa04b",
+   "n": 85,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "d7918cf2a8fe",
+   "n": 86,
+   "car_access": "yes",
+   "kind": "front pad",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "151fb8360146",
+   "n": 87,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "052fb7327b4c",
+   "n": 88,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "cannot tell",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "604f8f6771b7",
+   "n": 89,
+   "car_access": "cannot tell",
+   "basis": "street-level imagery",
+   "garage": "cannot tell",
+   "note": "Multi-unit residential - cannot tell if has parking garage."
+  },
+  {
+   "key": "b35ccde20b98",
+   "n": 90,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "e71b43b961b4",
+   "n": 91,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "fc68998b2220",
+   "n": 92,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "0bbb551edbc3",
+   "n": 93,
+   "car_access": "no",
+   "garage": "no",
+   "basis": "street-level imagery",
+   "places_independent": "0",
+   "places_total": "0"
+  },
+  {
+   "key": "d4a91da6ab85",
+   "n": 94,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "2",
+   "places_total": "3",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "a6cd972ab7a8",
+   "n": 95,
+   "car_access": "yes",
+   "kind": "parking lot",
+   "garage": "yes",
+   "basis": "street-level imagery",
+   "note": "Multi-unit residential with underground parking garage.  Can't count parking spots."
+  },
+  {
+   "key": "fcc0a2b42918",
+   "n": 96,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "482fa648c4dd",
+   "n": 97,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "634a39d129b8",
+   "n": 98,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1f14d0dfc6d0",
+   "n": 99,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "a66236ff3405",
+   "n": 100,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "528e5524ba66",
+   "n": 101,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "0e8ef7293574",
+   "n": 102,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "51bc4e6e3f69",
+   "n": 103,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "5f41c6ff8bbc",
+   "n": 104,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1696050c5ec7",
+   "n": 105,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "58534a515c36",
+   "n": 106,
+   "car_access": "cannot tell",
+   "garage": "cannot tell",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "cead36fa38d3",
+   "n": 107,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "63ecdac98945",
+   "n": 108,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "4a43ebe371fb",
+   "n": 109,
+   "car_access": "no",
+   "kind": "none",
+   "places_independent": "0",
+   "places_total": "0",
+   "garage": "no",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "1e0709b60995",
+   "n": 110,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "0b7598a2333d",
+   "n": 111,
+   "car_access": "yes",
+   "kind": "own driveway",
+   "places_independent": "1",
+   "places_total": "2",
+   "garage": "yes",
+   "basis": "street-level imagery"
+  },
+  {
+   "key": "4cbfc125bffc",
+   "n": 112,
+   "car_access": "yes",
+   "kind": "shared driveway",
+   "places_independent": "1",
+   "places_total": "1",
+   "garage": "no",
+   "basis": "street-level imagery"
+  }
+ ]
+}
