@@ -1,0 +1,123 @@
+sheet,side,civic_numbers,cross_streets,logements,garage_1954,driveway_oct25,key,access_street_check,kind,converted_owner,converted,converted_basis,places_independent,places_total,garage_today,basis,note
+789-12,N,7027,Belmore-Coronation,1,no,no,f377003223e1,yes,own driveway,no,no,street check,2,3,yes,street-level imagery,
+789-12,N,7025,Belmore-Coronation,1,no,no,6c7e5da2dfa0,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-12,N,7005,Belmore-Coronation,1,yes,yes,0a7b04311abe,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-13,N,6985,Coronation-Mayfair,1,no,yes,05a5f5118688,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-13,N,6975,Coronation-Mayfair,1,no,no,8473bfc93d98,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+789-13,N,6969,Coronation-Mayfair,1,no,yes,9dbfae61b5c9,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+789-13,N,6963,Coronation-Mayfair,1,no,no,265a802001ea,no,none,no,no,street check,0,0,no,street-level imagery,
+789-13,N,6957,Coronation-Mayfair,1,no,no,22cd25f1cb49,no,none,no,no,street check,0,0,no,street-level imagery,
+789-13,N,6951,Coronation-Mayfair,1,no,no,7852d9617de8,no,none,no,no,street check,0,0,no,street-level imagery,
+789-13,N,6871,Mariette-Rosedale,1,yes,yes,1bff08db0996,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+789-13,N,6865,Mariette-Rosedale,1,yes,yes,2ecb7c6e05d7,yes,own driveway,,,,2,2,yes,street-level imagery,
+789-14,N,6847,Rosedale-King Edward,1,yes,yes,f4b16e95667f,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-14,N,6845,Rosedale-King Edward,1,yes,yes,c4492841f09c,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-14,N,6835,Rosedale-King Edward,1,yes,yes,ad1689c03fdf,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-14,N,6825,Rosedale-King Edward,1,no,no,c19cce0e3175,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-14,N,6815,Rosedale-King Edward,2,yes,yes,2ce19e7c2ad0,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-14,N,6737,King Edward-Montclair,2,yes,yes,d45a8e246b34,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+789-14,N,6685,Montclair-Walkley,1,no,no,02d052dab947,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+789-14,N,6675,Montclair-Walkley,1,yes,yes,8686c0b82699,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+789-14,N,6655,Montclair-Walkley,26,no,no,7a78dfd1fa0d,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential with underground parking garage.  Can't count spaces.
+789-15,N,6645,Walkley-Prince of Wales,22,yes,no,5d39b8acd8a0,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential with underground parking garage;  can't count spaces.
+789-15,N,6625,Walkley-Prince of Wales,1,yes,yes,a613530d44a8,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-15,N,6615,Walkley-Prince of Wales,1,yes,yes,ed972bc3fe8d,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-15,N,6505,Cumberland-Cavendish,1,yes,yes,29a6e24d2621,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-15,N,6503,Cumberland-Cavendish,1,yes,yes,fd2a492d9542,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-16,N,6497,Cavendish-Bessborough,1,no,yes,c097ba297957,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-16,N,6495,Cavendish-Bessborough,1,no,yes,3a8867330328,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-16,N,6465,Cavendish-Bessborough,1,no,yes,615af5322294,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-16,N,6455,Cavendish-Bessborough,1,no,yes,dbbc4b7cf304,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-16,N,6445,Bessborough-Benny,1,no,yes,773b6b1b5350,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+789-16,N,6435,Bessborough-Benny,1,no,yes,77d71e3e87ef,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+798-3,N,6307 (a),Benny-Madison,1,yes,yes,07d22735c2fe,no,converted to other use,"yes, none left","yes, none left",street check,0,0,yes,street-level imagery,Lot has driveway and garage but driveway is fenced off - converted to back yard?
+798-3,N,6307 (b),Benny-Madison,1,yes,yes,07d22735c2fe,no,converted to other use,"yes, none left","yes, none left",street check,0,0,yes,street-level imagery,Lot has driveway and garage but driveway is fenced off - converted to back yard?
+798-3,N,6271,Madison-Kensington,1,no,no,c4a2e6e2e6d3,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+798-3,N,6269,Madison-Kensington,1,no,no,1edb357eaa55,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+798-3,N,6257 (a),Madison-Kensington,1,no,no,f17c2dc1dfd8,yes,front pad,no,no,street check,1,1,no,street-level imagery,
+798-3,N,6257 (b),Madison-Kensington,1,no,no,f17c2dc1dfd8,yes,front pad,no,no,street check,1,1,no,street-level imagery,
+798-3,N,6241,Kensington-Grand,2,yes,yes,afa6b2689359,yes,own driveway,no,no,street check,1,1,yes,street-level imagery,
+787-5,N,6187,Grand-Beaconsfield,17,yes,no,d5dfbbfa6b8b,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential with underground parking lot - can't count spaces.
+787-5,N,6165-6161,Grand-Beaconsfield,2,no,no,628c22a02997,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+787-5,N,6157-6159,Grand-Beaconsfield,2,no,yes,39791bed2e97,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+787-5,N,6155-6153,Grand-Beaconsfield,2,no,yes,8cdef1c72e04,yes,own driveway,no,no,street check,2,3,yes,street-level imagery,Front driveway and garage;  one spot in back with curb dip.
+787-5,N,6133-6135,Beaconsfield-Hingston,2,yes,yes,c42a93e1d829,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,Two garages in back
+787-5,N,6129-6131,Beaconsfield-Hingston,2,no,yes,e71a3f791373,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,Two garages in back
+787-5,N,6123-6125,Beaconsfield-Hingston,2,yes,no,ff062e48aac4,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,2,no,street-level imagery,
+787-5,N,6119-6121,Beaconsfield-Hingston,2,yes,no,246966c8bb10,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,"At least one garage in back at end of long, narrow laneway."
+787-5,N,6107-6109,Beaconsfield-Hingston,3,yes,yes,8c6ec9fe5ce3,cannot tell,,,,,,,cannot tell,street-level imagery,
+787-5,N,6101-6103,Beaconsfield-Hingston,2,yes,yes,911f9aaf53b1,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,
+787-5,N,6091-6085 (a),Hingston-Hampton,2,yes,yes,b81a0371548d,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+787-5,N,6091-6085 (b),Hingston-Hampton,2,yes,yes,5e75777cb91e,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+787-5,N,6081-6075 (a),Hingston-Hampton,2,yes,yes,cbd50469faa0,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,
+787-5,N,6081-6075 (b),Hingston-Hampton,2,yes,yes,7890b26d3a5d,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+787-5,N,6071-6065 (a),Hingston-Hampton,2,yes,yes,df2f6a31441f,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+787-5,N,6071-6065 (b),Hingston-Hampton,2,yes,yes,826f908635ed,yes,own driveway,no,no,street check,1,2,cannot tell,street-level imagery,
+787-5,N,6061-6063,Hingston-Hampton,2,yes,yes,60944eb8fce9,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+787-5,N,6057-6051 (a),Hingston-Hampton,2,yes,yes,78cc913a1c7d,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+787-5,N,6057-6051 (b),Hingston-Hampton,2,yes,yes,9d46dc5d602c,no,converted to other use,"yes, none left","yes, none left",street check,0,0,cannot tell,street-level imagery,Driveway in back has been fenced off and converted to back yard;  looks like there may be a sunken garage in back but blocked by fence.
+787-6,N,5995-5997,Hampton-Royal,2,yes,yes,5745a62b6165,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+787-6,N,5983-5989 (a),Hampton-Royal,2,yes,yes,49200516201f,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+787-6,N,5983-5989 (b),Hampton-Royal,2,yes,yes,4792d9a1757c,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+787-6,N,5975-5977,Hampton-Royal,2,yes,yes,d11e0ccb70fd,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+787-6,N,5971-5973,Hampton-Royal,2,yes,yes,7227011497c3,yes,shared driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",3,3,no,street-level imagery,
+787-6,N,5967 (a),Hampton-Royal,1,no,yes,33adfd83d6b2,yes,shared driveway,no,no,street check,2,2,no,street-level imagery,
+787-6,N,5967-5961 (b),Hampton-Royal,1,no,yes,7da3e764e512,yes,front pad,no,no,street check,1,1,no,street-level imagery,
+787-6,N,5873-5879 (a),Royal-Draper,2,yes,yes,a2c0bee3b97e,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,Alley access in back;
+787-6,N,5873-5879 (b),Royal-Draper,2,yes,yes,4d71e6af414f,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,Alley access in back - in-ground pool in back yard.
+787-6,N,5861-5867 (a),Royal-Draper,2,yes,yes,ce4ca108a911,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+787-6,N,5861-5867 (b),Royal-Draper,2,yes,yes,2e5b45edb432,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+787-6,N,5851-5857 (a),Royal-Draper,2,yes,yes,dfd394ac65a4,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+787-6,N,5851-5857 (b),Royal-Draper,2,yes,yes,878a9c01afb5,yes,own driveway,,,,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+787-6,N,5839-5841,Draper-Melrose,2,yes,yes,438e4faba240,yes,shared driveway,no,no,street check,1,1,yes,street-level imagery,
+787-6,N,5835-5837,Draper-Melrose,3,yes,yes,2a746694bd6d,yes,shared driveway,no,no,street check,1,1,yes,street-level imagery,
+787-6,N,5827-5829,Draper-Melrose,2,yes,yes,d3e7ab09399e,cannot tell,,,,,,,cannot tell,street-level imagery,"Rear access via shared laneway - could be parking in back, but not visible from street imagery"
+787-6,N,5823-5825,Draper-Melrose,3,yes,yes,9ad81d508e26,cannot tell,,,,,,,cannot tell,street-level imagery,"Rear access via shared laneway - could be parking in back, but not visible from street imagery"
+739-2,N,5751,Melrose-Wilson,2,yes,yes,02f957759b39,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+739-2,N,5735,Wilson-Harvard,2,yes,yes,b2fcc94924c5,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+739-2,N,5719-5721,Wilson-Harvard,2,yes,yes,5549949b8762,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,
+739-2,N,5701,Wilson-Harvard,2,no,no,24d0e3d2e118,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+739-2,N,5681,Harvard-Oxford,3,yes,yes,b97bb1092f79,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+739-2,N,5657-5659,Harvard-Oxford,2,yes,no,4a47ed52a939,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Rear garages accessed via lane on Oxford
+739-2,N,5655,Harvard-Oxford,1,yes,yes,a471535d4130,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Rear garages accessed via lane on Oxford
+739-5,N,5637,Oxford-Marcil,4,no,no,f94465056f7f,yes,own driveway,no,no,street check,3,6,yes,street-level imagery,Three sunken garages
+739-5,N,5635,Oxford-Marcil,4,no,no,f94465056f7f,yes,own driveway,no,no,street check,3,6,yes,street-level imagery,Three sunken garages
+739-5,N,5625-5627,Oxford-Marcil,4,no,no,f94465056f7f,yes,own driveway,no,no,street check,3,6,yes,street-level imagery,Three sunken garages
+739-5,N,5605,Oxford-Marcil,2,no,no,5398ed5390e6,yes,shared driveway,no,no,street check,3,3,yes,street-level imagery,
+739-5,N,5581,Marcil-Old Orchard,2,yes,yes,fbefc3e0a5e6,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages in back
+739-5,N,5555,Marcil-Old Orchard,3,yes,yes,f226a97bf6fa,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+739-5,N,5535,Old Orchard-Hampstead apts,2,yes,yes,857568005b7a,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+739-5,N,5511,Old Orchard-Girouard,,yes,yes,fcb93df8a8a7,no,converted to other use,"yes, none left","yes, none left",street check,,,yes,own knowledge,Large multi-unit building with garage entries in back - the garages have been converted to apartments.
+784-1,S,6994,Coronation-Mayfair,1,no,unclear,a2ce1af80878,no,converted to other use,"yes, none left","yes, none left",street check,0,0,yes,street-level imagery,"Driveway converted to patio, blocking sunken garage.  Notable example of parking conversion."
+784-1,S,6990,Coronation-Mayfair,1,yes,no,f19039bf2798,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+784-1,S,6960,Coronation-Mayfair,1,yes,yes,3accbfb25474,yes,own driveway,,,,1,2,yes,street-level imagery,
+784-1,S,6950,Coronation-Mayfair,1,no,no,f97cda97a09f,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+784-2,S,6922,Mayfair-Mariette,1,yes,yes,56771406c4e5,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+784-2,S,6910,Mayfair-Mariette,1,no,yes,6a9873788b4f,yes,own driveway,no,no,street check,1,3,no,street-level imagery,
+784-2,S,6900,Mayfair-Mariette,1,yes,yes,1bf183dcc0aa,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+784-2,S,6840,Rosedale-King Edward,1,no,no,4aa115dfbf9a,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+784-2,S,6830,Rosedale-King Edward,1,no,no,ed0894ea2643,yes,"converted, some left (kind not given)","yes, some left","yes, some left",street check,1,1,no,street-level imagery,Sunken garage converted to front pad
+785-1,S,6720,King Edward-Montclair,1,yes,yes,ef08dca6fe56,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+785-1,S,6610,Walkley-Prince of Wales,,yes,yes,a56880e93339,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+785-1,S,6600,Walkley-Prince of Wales,,yes,yes,21c94b68c5ae,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+785-1,S,6552,Prince of Wales-Cumberland,1,yes,no,09d35e91e720,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,2,no,street-level imagery,
+785-1,S,6540,Cumberland-Cavendish,1,no,no,0aa31e3cd79a,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+785-1,S,6530,Cumberland-Cavendish,1,no,no,a9780467533e,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+785-1,S,6510,Cumberland-Cavendish,1,no,no,460ad5ff6b8a,cannot tell,,,,,,,cannot tell,street-level imagery,Old farmhouse demolished and new multi-unit building under construction in street view.
+775,S,6282,Madison-Kensington,1,no,no,9d2e5defc5d5,yes,own driveway,no,no,street check,1,2,no,the aerial crop only,Long driveway with two car capacity
+775,S,6256,Madison-Kensington,1,yes,yes,634a9dea6b1b,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,3,no,street-level imagery,
+775,S,6254,Madison-Kensington,1,yes,no,4d7b6435645a,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+787-7,S,6194-6188,Grand-Beaconsfield,4,no,no,8e2c173e9535,no,none,no,no,street check,0,0,no,street-level imagery,
+787-7,S,6184-6178,Grand-Beaconsfield,4,no,no,ef4809a8a96b,no,none,no,no,street check,0,0,no,street-level imagery,
+787-7,S,6158-6152,Grand-Beaconsfield,4,yes,no,13a8e75365bc,no,converted to other use,"yes, none left","yes, none left",street check,0,0,cannot tell,street-level imagery,Year parking appears to have been converted to a back yard.
+787-7,S,6124-6122,Beaconsfield-Hingston,2,yes,yes,240dd80ceffe,yes,own driveway,cannot tell,cannot tell,street check,2,4,cannot tell,the aerial crop only,Cars visible in aerial ; access by rear lane ; garage not visible.
+787-7,S,6120-6118,Beaconsfield-Hingston,4,yes,yes,f17553e984d5,yes,own driveway,cannot tell,cannot tell,street check,2,4,cannot tell,street-level imagery,Cars visible in aerial ; access by rear lane ; garage not visible.
+787-7,S,6118-6116,Beaconsfield-Hingston,2,yes,yes,f17553e984d5,yes,own driveway,cannot tell,cannot tell,street check,2,4,cannot tell,street-level imagery,Cars visible in aerial ; access by rear lane ; garage not visible.
+787-7,S,6094-6088,Hingston-Hampton,4,yes,yes,7f5afca312a5,yes,own driveway,cannot tell,cannot tell,street check,3,3,cannot tell,street-level imagery,Cars visible in aerial ; access by rear lane ; garage not visible.
+787-7,S,6076-6070,Hingston-Hampton,4,no,yes,1f587b517ba9,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+787-7,S,6064-6058,Hingston-Hampton,5,yes,yes,d2fec86e1873,yes,shared driveway,cannot tell,cannot tell,street check,2,2,cannot tell,street-level imagery,
+739-4,S,5680,west cross street-Oxford,,yes,no,3ca8f97e3f06,no,none,cannot tell,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,cannot tell,street-level imagery,
+739-4,S,5670-5668,west cross street-Oxford,2,no,no,3ca8f97e3f06,no,none,cannot tell,cannot tell,street check,0,0,cannot tell,street-level imagery,
+739-4,S,5654,west cross street-Oxford,2,no,no,baa8b3dce2e7,yes,shared driveway,"yes, some left","yes, some left",street check,2,2,yes,street-level imagery,Building originally had four garages.  Two have been converted to other use (visible in street view).
+739-5,S,5604,Oxford-Marcil,2,no,no,c30ccfc8309e,no,none,cannot tell,cannot tell,street check,0,0,cannot tell,street-level imagery,
+739-5,S,5510-5512,Old Orchard-Girouard,2,no,no,1db8a9dfb9b2,yes,own driveway,no,no,street check,1,2,no,street-level imagery,

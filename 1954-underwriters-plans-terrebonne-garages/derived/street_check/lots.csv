@@ -1,0 +1,155 @@
+n,key,civic_lo,civic_hi,roll_street,side,dwellings,large,year_built,rows_1954,garage_1954_any,access,kind,converted_owner,converted,converted_basis,places_independent,places_total,garage_today,basis,note
+1,dc9c53ed0c61,7075,7075,rue de Terrebonne,N,1,False,1956,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+2,f377003223e1,7027,7027,rue de Terrebonne,N,1,False,1949,789-12 N 7027,no,yes,own driveway,no,no,street check,2,3,yes,street-level imagery,
+3,6c7e5da2dfa0,7025,7025,rue de Terrebonne,N,1,False,1949,789-12 N 7025,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+4,0a7b04311abe,7005,7005,rue de Terrebonne,N,1,False,1950,789-12 N 7005,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+5,05a5f5118688,6985,6985,rue de Terrebonne,N,1,False,1949,789-13 N 6985,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+6,8473bfc93d98,6975,6975,rue de Terrebonne,N,1,False,1950,789-13 N 6975,no,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+7,9dbfae61b5c9,6969,6969,rue de Terrebonne,N,1,False,1922,789-13 N 6969,no,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+8,265a802001ea,6963,6963,rue de Terrebonne,N,1,False,1922,789-13 N 6963,no,no,none,no,no,street check,0,0,no,street-level imagery,
+9,22cd25f1cb49,6957,6957,rue de Terrebonne,N,1,False,1922,789-13 N 6957,no,no,none,no,no,street check,0,0,no,street-level imagery,
+10,7852d9617de8,6951,6951,rue de Terrebonne,N,1,False,1922,789-13 N 6951,no,no,none,no,no,street check,0,0,no,street-level imagery,
+11,1bff08db0996,6871,6871,rue de Terrebonne,N,1,False,1928,789-13 N 6871,yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+12,2ecb7c6e05d7,6865,6865,rue de Terrebonne,N,1,False,1935,789-13 N 6865,yes,yes,own driveway,,,,2,2,yes,street-level imagery,
+13,3d2aeaad34df,6859,6859,rue de Terrebonne,N,1,False,1979,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+14,f4b16e95667f,6847,6847,rue de Terrebonne,N,1,False,1950,789-14 N 6847,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+15,c4492841f09c,6845,6845,rue de Terrebonne,N,1,False,1950,789-14 N 6845,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+16,ad1689c03fdf,6835,6835,rue de Terrebonne,N,1,False,1950,789-14 N 6835,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+17,c19cce0e3175,6825,6825,rue de Terrebonne,N,1,False,1951,789-14 N 6825,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+18,2ce19e7c2ad0,6815,6815,rue de Terrebonne,N,2,False,1950,789-14 N 6815,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+19,c13432f082be,6739,6739,rue de Terrebonne,N,2,False,1910,,not in the 1954 table,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+20,d45a8e246b34,6735,6737,rue de Terrebonne,N,2,False,1910,789-14 N 6799; 789-14 N 6737,yes,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+21,b18062263947,6725,6725,rue de Terrebonne,N,1,False,1983,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+22,02d052dab947,6685,6685,rue de Terrebonne,N,1,False,1950,789-14 N 6685,no,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+23,8686c0b82699,6675,6675,rue de Terrebonne,N,1,False,1950,789-14 N 6675,yes,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+24,7a78dfd1fa0d,6655,6655,rue de Terrebonne,N,26,True,1953,789-14 N 6655,no,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential with underground parking garage.  Can't count spaces.
+25,5d39b8acd8a0,6645,6645,rue de Terrebonne,N,22,True,1950,789-15 N 6645,yes,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential with underground parking garage;  can't count spaces.
+26,a613530d44a8,6625,6625,rue de Terrebonne,N,1,False,1953,789-15 N 6625,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+27,ed972bc3fe8d,6615,6615,rue de Terrebonne,N,1,False,1953,789-15 N 6615,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+28,29a6e24d2621,6505,6505,rue de Terrebonne,N,1,False,1951,789-15 N 6505,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+29,fd2a492d9542,6503,6503,rue de Terrebonne,N,1,False,1951,789-15 N 6503,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+30,c097ba297957,6497,6497,rue de Terrebonne,N,1,False,1951,789-16 N 6497,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+31,3a8867330328,6495,6495,rue de Terrebonne,N,1,False,1951,789-16 N 6495,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+32,615af5322294,6465,6465,rue de Terrebonne,N,1,False,1951,789-16 N 6465,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+33,dbbc4b7cf304,6455,6455,rue de Terrebonne,N,1,False,1951,789-16 N 6455,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+34,773b6b1b5350,6445,6445,rue de Terrebonne,N,1,False,1951,789-16 N 6445,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+35,77d71e3e87ef,6435,6435,rue de Terrebonne,N,1,False,1951,789-16 N 6435,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+36,07d22735c2fe,6307,6307,rue de Terrebonne,N,1,False,1946,798-3 N 6307 (a); 798-3 N 6307 (b),yes,no,converted to other use,"yes, none left","yes, none left",street check,0,0,yes,street-level imagery,Lot has driveway and garage but driveway is fenced off - converted to back yard?
+37,c4a2e6e2e6d3,6271,6271,rue de Terrebonne,N,1,False,1928,798-3 N 6271,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+38,1edb357eaa55,6269,6269,rue de Terrebonne,N,1,False,1928,798-3 N 6269,no,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+39,f17c2dc1dfd8,6257,6257,rue de Terrebonne,N,1,False,1929,798-3 N 6257 (a); 798-3 N 6257 (b),no,yes,front pad,no,no,street check,1,1,no,street-level imagery,
+40,afa6b2689359,4501,4501,avenue de Kensington,N,2,False,1931,798-3 N 6241,yes,yes,own driveway,no,no,street check,1,1,yes,street-level imagery,
+41,d5dfbbfa6b8b,6187,6187,rue de Terrebonne,N,17,True,1932,787-5 N 6187,yes,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential with underground parking lot - can't count spaces.
+42,628c22a02997,6165,6167,rue de Terrebonne,N,2,False,1950,787-5 N 6165-6161,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+43,39791bed2e97,6157,6159,rue de Terrebonne,N,2,False,1950,787-5 N 6157-6159,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+44,8cdef1c72e04,6153,6155,rue de Terrebonne,N,2,False,1950,787-5 N 6155-6153,no,yes,own driveway,no,no,street check,2,3,yes,street-level imagery,Front driveway and garage;  one spot in back with curb dip.
+45,c42a93e1d829,6133,6135,rue de Terrebonne,N,2,False,1931,787-5 N 6133-6135,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,Two garages in back
+46,e71a3f791373,6129,6131,rue de Terrebonne,N,2,False,1930,787-5 N 6129-6131,no,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,Two garages in back
+47,ff062e48aac4,6123,6125,rue de Terrebonne,N,2,False,1930,787-5 N 6123-6125,yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,2,no,street-level imagery,
+48,246966c8bb10,6119,6121,rue de Terrebonne,N,2,False,1930,787-5 N 6119-6121,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,"At least one garage in back at end of long, narrow laneway."
+49,8c6ec9fe5ce3,6107,6109,rue de Terrebonne,N,3,False,1949,787-5 N 6107-6109,yes,cannot tell,,,,,,,cannot tell,street-level imagery,
+50,911f9aaf53b1,6101,6105,rue de Terrebonne,N,2,False,2002,787-5 N 6101-6103,yes,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,
+51,b81a0371548d,6089,6091,rue de Terrebonne,N,2,False,1931,787-5 N 6091-6085 (a),yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+52,5e75777cb91e,6085,6087,rue de Terrebonne,N,2,False,1931,787-5 N 6091-6085 (b),yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+53,cbd50469faa0,6079,6081,rue de Terrebonne,N,2,False,1931,787-5 N 6081-6075 (a),yes,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,
+54,7890b26d3a5d,6075,6077,rue de Terrebonne,N,2,False,1931,787-5 N 6081-6075 (b),yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+55,df2f6a31441f,6069,6071,rue de Terrebonne,N,2,False,1931,787-5 N 6071-6065 (a),yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+56,826f908635ed,6065,6067,rue de Terrebonne,N,2,False,1931,787-5 N 6071-6065 (b),yes,yes,own driveway,no,no,street check,1,2,cannot tell,street-level imagery,
+57,60944eb8fce9,6061,6063,rue de Terrebonne,N,2,False,1931,787-5 N 6061-6063,yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+58,78cc913a1c7d,6055,6057,rue de Terrebonne,N,2,False,1936,787-5 N 6057-6051 (a),yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+59,9d46dc5d602c,6051,6053,rue de Terrebonne,N,2,False,1936,787-5 N 6057-6051 (b),yes,no,converted to other use,"yes, none left","yes, none left",street check,0,0,cannot tell,street-level imagery,Driveway in back has been fenced off and converted to back yard;  looks like there may be a sunken garage in back but blocked by fence.
+60,5745a62b6165,5995,5997,rue de Terrebonne,N,2,False,1928,787-6 N 5995-5997,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+61,49200516201f,5987,5989,rue de Terrebonne,N,2,False,1935,787-6 N 5983-5989 (a),yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+62,4792d9a1757c,5983,5985,rue de Terrebonne,N,2,False,1935,787-6 N 5983-5989 (b),yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+63,d11e0ccb70fd,5975,5977,rue de Terrebonne,N,2,False,1930,787-6 N 5975-5977,yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+64,7227011497c3,5971,5973,rue de Terrebonne,N,2,False,1930,787-6 N 5971-5973,yes,yes,shared driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",3,3,no,street-level imagery,
+65,33adfd83d6b2,5965,5969,rue de Terrebonne,N,3,False,1930,787-6 N 5967 (a),no,yes,shared driveway,no,no,street check,2,2,no,street-level imagery,
+66,7da3e764e512,5961,5963,rue de Terrebonne,N,2,False,1930,787-6 N 5967-5961 (b),no,yes,front pad,no,no,street check,1,1,no,street-level imagery,
+67,a2c0bee3b97e,5877,5879,rue de Terrebonne,N,2,False,1935,787-6 N 5873-5879 (a),yes,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,Alley access in back;
+68,4d71e6af414f,5873,5875,rue de Terrebonne,N,2,False,1935,787-6 N 5873-5879 (b),yes,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,Alley access in back - in-ground pool in back yard.
+69,ce4ca108a911,5865,5867,rue de Terrebonne,N,2,False,1932,787-6 N 5861-5867 (a),yes,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+70,2e5b45edb432,5861,5863,rue de Terrebonne,N,2,False,1932,787-6 N 5861-5867 (b),yes,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+71,dfd394ac65a4,5855,5857,rue de Terrebonne,N,2,False,1932,787-6 N 5851-5857 (a),yes,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+72,878a9c01afb5,5851,5853,rue de Terrebonne,N,2,False,1932,787-6 N 5851-5857 (b),yes,yes,own driveway,,,,2,2,yes,street-level imagery,Garages with access via shared lane off of Draper
+73,438e4faba240,5839,5841,rue de Terrebonne,N,2,False,1931,787-6 N 5839-5841,yes,yes,shared driveway,no,no,street check,1,1,yes,street-level imagery,
+74,2a746694bd6d,5833,5837,rue de Terrebonne,N,3,False,1931,787-6 N 5835-5837,yes,yes,shared driveway,no,no,street check,1,1,yes,street-level imagery,
+75,d3e7ab09399e,5827,5829,rue de Terrebonne,N,2,False,1931,787-6 N 5827-5829,yes,cannot tell,,,,,,,cannot tell,street-level imagery,"Rear access via shared laneway - could be parking in back, but not visible from street imagery"
+76,9ad81d508e26,5823,5825,rue de Terrebonne,N,3,False,1931,787-6 N 5823-5825,yes,cannot tell,,,,,,,cannot tell,street-level imagery,"Rear access via shared laneway - could be parking in back, but not visible from street imagery"
+77,65e9cfe837b1,5815,5815,rue de Terrebonne,N,1,False,2010,,not in the 1954 table,yes,own driveway,"yes, some left","yes, some left",street check,1,1,no,street-level imagery,Large driveway could hold two to three cars but has been fenced off leaving a single spot.
+78,02f957759b39,4504,4504,avenue Wilson,N,2,False,1928,739-2 N 5751,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+79,b2fcc94924c5,4505,4505,avenue Wilson,N,2,False,1928,739-2 N 5735,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+80,5549949b8762,5719,5721,rue de Terrebonne,N,2,False,1928,739-2 N 5719-5721,yes,no,none,no,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,no,street-level imagery,
+81,24d0e3d2e118,4500,4500,avenue Harvard,N,2,False,1927,739-2 N 5701,no,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+82,b97bb1092f79,4501,4501,avenue Harvard,N,3,False,1927,739-2 N 5681,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+83,4a47ed52a939,5657,5659,rue de Terrebonne,N,2,False,1928,739-2 N 5657-5659,yes,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Rear garages accessed via lane on Oxford
+84,a471535d4130,4500,5655,avenue d' Oxford,N,2,False,1928,739-2 N 5655,yes,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Rear garages accessed via lane on Oxford
+85,f94465056f7f,5625,5637,rue de Terrebonne,N,4,False,1947,739-5 N 5637; 739-5 N 5635; 739-5 N 5625-5627,no,yes,own driveway,no,no,street check,3,6,yes,street-level imagery,Three sunken garages
+86,5398ed5390e6,4502,4502,avenue Marcil,N,2,False,1928,739-5 N 5605,no,yes,shared driveway,no,no,street check,3,3,yes,street-level imagery,
+87,fbefc3e0a5e6,4503,4503,avenue Marcil,N,2,False,1927,739-5 N 5581,yes,yes,shared driveway,no,no,street check,2,2,yes,street-level imagery,Garages in back
+88,f226a97bf6fa,4500,4500,avenue Old Orchard,N,3,False,1925,739-5 N 5555,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+89,857568005b7a,4501,4501,avenue Old Orchard,N,2,False,1926,739-5 N 5535,yes,yes,front pad,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+90,fcb93df8a8a7,4500,4500,avenue Girouard,N,14,True,1929,739-5 N 5511,yes,no,converted to other use,"yes, none left","yes, none left",street check,,,yes,own knowledge,Large multi-unit building with garage entries in back - the garages have been converted to apartments.
+91,c1fde4d254b9,7070,7070,rue de Terrebonne,S,1,False,1989,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+92,a2ce1af80878,6994,6994,rue de Terrebonne,S,1,False,1952,784-1 S 6994,no,no,converted to other use,"yes, none left","yes, none left",street check,0,0,yes,street-level imagery,"Driveway converted to patio, blocking sunken garage.  Notable example of parking conversion."
+93,f19039bf2798,6990,6990,rue de Terrebonne,S,1,False,1952,784-1 S 6990,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+94,84666242418f,6980,6980,rue de Terrebonne,S,1,False,1955,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+95,3accbfb25474,6960,6960,rue de Terrebonne,S,1,False,1947,784-1 S 6960,yes,yes,own driveway,,,,1,2,yes,street-level imagery,
+96,f97cda97a09f,6950,6950,rue de Terrebonne,S,1,False,1947,784-1 S 6950,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+97,56771406c4e5,6922,6922,rue de Terrebonne,S,1,False,1930,784-2 S 6922,yes,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+98,6a9873788b4f,6910,6910,rue de Terrebonne,S,1,False,1932,784-2 S 6910,no,yes,own driveway,no,no,street check,1,3,no,street-level imagery,
+99,1bf183dcc0aa,6900,6900,rue de Terrebonne,S,1,False,1932,784-2 S 6900,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+100,4aa115dfbf9a,6840,6840,rue de Terrebonne,S,1,False,1951,784-2 S 6840,no,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+101,ed0894ea2643,6830,6830,rue de Terrebonne,S,1,False,1954,784-2 S 6830,no,yes,"converted, some left (kind not given)","yes, some left","yes, some left",street check,1,1,no,street-level imagery,Sunken garage converted to front pad
+102,3bbbd19b326f,6730,6730,rue de Terrebonne,S,1,False,1991,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+103,ef08dca6fe56,6720,6720,rue de Terrebonne,S,1,False,1950,785-1 S 6720; 785-1 S (6710) small 1.5-storey house east of 6720,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+104,e77bd40fb25f,6668,6680,rue de Terrebonne,S,40,True,2002,785-1 S 6668,no,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit residential building with underground parking garage.  Can't count spaces.
+105,e99ce1c6e018,6640,6640,rue de Terrebonne,S,1,False,1952,,not in the 1954 table,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+106,a56880e93339,6630,6630,rue de Terrebonne,S,1,False,1952,785-1 S 6610,yes,yes,own driveway,no,no,street check,1,3,yes,street-level imagery,
+107,21c94b68c5ae,6620,6620,rue de Terrebonne,S,1,False,1969,785-1 S 6600,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+108,c315f08e0871,6590,6590,rue de Terrebonne,S,1,False,1959,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+109,4ad396255e98,6580,6580,rue de Terrebonne,S,1,False,1959,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+110,5673ddeed778,6570,6570,rue de Terrebonne,S,1,False,1959,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+111,23dac64a8004,6560,6560,rue de Terrebonne,S,1,False,1959,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+112,09d35e91e720,6552,6552,rue de Terrebonne,S,1,False,1922,785-1 S 6552,yes,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,2,no,street-level imagery,
+113,f0aec3b8a11c,6548,6548,rue de Terrebonne,S,1,False,1975,,not in the 1954 table,yes,own driveway,,,,1,2,yes,street-level imagery,
+114,517452736b0a,6546,6546,rue de Terrebonne,S,1,False,1975,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+115,011694d258f3,6544,6544,rue de Terrebonne,S,1,False,1964,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+116,0aa31e3cd79a,6540,6540,rue de Terrebonne,S,1,False,1964,785-1 S 6540,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+117,a9780467533e,6530,6530,rue de Terrebonne,S,1,False,1952,785-1 S 6530,no,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+118,460ad5ff6b8a,6510,6510,rue de Terrebonne,S,1,False,1923,785-1 S 6510,no,cannot tell,,,,,,,cannot tell,street-level imagery,Old farmhouse demolished and new multi-unit building under construction in street view.
+119,3780f190f7e9,6500,6500,rue de Terrebonne,S,1,False,2025,,not in the 1954 table,cannot tell,,,,,,,cannot tell,street-level imagery,Old farmhouse demolished and new multi-unit building under construction in street view.
+120,5f197b539d7f,6350,6350,rue de Terrebonne,S,127,True,1984,,not in the 1954 table,yes,parking lot,no,no,street check,,,yes,street-level imagery,Multi-unit seniors residence with underground parking garage.  Not able to count spots.
+121,9d2e5defc5d5,6282,6282,rue de Terrebonne,S,1,False,1924,775 S 6282,no,yes,own driveway,no,no,street check,1,2,no,the aerial crop only,Long driveway with two car capacity
+122,634a9dea6b1b,6256,6256,rue de Terrebonne,S,1,False,1935,775 S 6256,yes,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,3,no,street-level imagery,
+123,4d7b6435645a,6254,6254,rue de Terrebonne,S,1,False,1935,775 S 6254,yes,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+124,1411ad6ad27b,6192,6194,rue de Terrebonne,S,2,False,1930,787-7 S 6194-6188,no,no,none,,,,0,0,no,street-level imagery,
+125,8e2c173e9535,6188,6190,rue de Terrebonne,S,2,False,1930,787-7 S 6194-6188,no,no,none,no,no,street check,0,0,no,street-level imagery,
+126,47b9af61a7d1,6182,6184,rue de Terrebonne,S,2,False,1930,787-7 S 6184-6178,no,no,none,no,no,street check,0,0,no,street-level imagery,
+127,ef4809a8a96b,6178,6180,rue de Terrebonne,S,2,False,1930,787-7 S 6184-6178,no,no,none,no,no,street check,0,0,no,street-level imagery,
+128,bcada675f066,6170,6172,rue de Terrebonne,S,2,False,1958,,not in the 1954 table,yes,own driveway,"yes, some left","yes, some left",street check,1,2,cannot tell,street-level imagery,Front driveway - buildings had garages in back with access via shared laneway but probably converted.
+129,f53fb01c44c3,6162,6164,rue de Terrebonne,S,2,False,1958,,not in the 1954 table,yes,own driveway,cannot tell,cannot tell,street check,1,1,cannot tell,street-level imagery,Buildings generally have rear garages accessed via laneway.  Not possible to tell.  At least one car visible in rear parking slot with empty space beside it.
+130,8517b6de77d5,6156,6158,rue de Terrebonne,S,2,False,1929,787-7 S 6158-6152,yes,no,converted to other use,"yes, none left","yes, none left",street check,0,0,cannot tell,street-level imagery,Year parking appears to have been converted to a back yard.
+131,13a8e75365bc,6152,6154,rue de Terrebonne,S,2,False,1929,787-7 S 6158-6152,yes,no,converted to other use,"yes, none left","yes, none left",street check,0,0,cannot tell,street-level imagery,Year parking appears to have been converted to a back yard.
+132,240dd80ceffe,6120,6122,rue de Terrebonne,S,2,False,1930,787-7 S 6124-6122; 787-7 S 6120-6118,yes,yes,own driveway,cannot tell,cannot tell,street check,2,4,cannot tell,the aerial crop only,Cars visible in aerial ; access by rear lane ; garage not visible.
+133,f17553e984d5,6116,6118,rue de Terrebonne,S,2,False,1930,787-7 S 6120-6118; 787-7 S 6118-6116,yes,yes,own driveway,cannot tell,cannot tell,street check,2,4,cannot tell,street-level imagery,Cars visible in aerial ; access by rear lane ; garage not visible.
+134,b6fb81355025,6092,6094,rue de Terrebonne,S,2,False,1930,787-7 S 6094-6088,yes,yes,own driveway,no,no,street check,2,4,yes,street-level imagery,
+135,7f5afca312a5,6088,6090,rue de Terrebonne,S,2,False,1930,787-7 S 6094-6088,yes,yes,own driveway,cannot tell,cannot tell,street check,3,3,cannot tell,street-level imagery,Cars visible in aerial ; access by rear lane ; garage not visible.
+136,68883af967ae,6074,6076,rue de Terrebonne,S,2,False,1949,787-7 S 6076-6070,no,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+137,1f587b517ba9,6070,6072,rue de Terrebonne,S,2,False,1949,787-7 S 6076-6070,no,yes,own driveway,no,no,street check,1,1,no,street-level imagery,
+138,6cd22d447fcc,6062,6064,rue de Terrebonne,S,2,False,1937,787-7 S 6064-6058,yes,yes,own driveway,no,"yes, some left","1954-55 plans: garage as built; access today, no garage today",1,1,no,street-level imagery,
+139,d2fec86e1873,6056,6060,rue de Terrebonne,S,3,False,1937,787-7 S 6064-6058,yes,yes,shared driveway,cannot tell,cannot tell,street check,2,2,cannot tell,street-level imagery,
+140,fdad7550f15d,5996,5998,rue de Terrebonne,S,2,False,1949,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+141,1be568e3e1df,5990,5992,rue de Terrebonne,S,3,False,1949,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,1,2,cannot tell,street-level imagery,
+142,95197aa7850f,5976,5978,rue de Terrebonne,S,2,False,1931,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,3,3,cannot tell,street-level imagery,
+143,214951aef78a,5972,5974,rue de Terrebonne,S,2,False,1931,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,3,3,cannot tell,street-level imagery,
+144,997de046fa95,5966,5968,rue de Terrebonne,S,2,False,1931,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,2,2,cannot tell,street-level imagery,
+145,7fc314b6c5bc,5962,5964,rue de Terrebonne,S,2,False,1931,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,2,2,cannot tell,street-level imagery,
+146,e4ec0225d9ab,5954,5956,rue de Terrebonne,S,2,False,1935,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,2,2,cannot tell,street-level imagery,
+147,0e90b0f411dc,5950,5952,rue de Terrebonne,S,2,False,1931,,not in the 1954 table,yes,shared driveway,cannot tell,cannot tell,street check,2,2,yes,street-level imagery,Garage and lane visible from side street.
+148,f2e5bc1b5da0,5836,5838,rue de Terrebonne,S,2,False,1950,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+149,dadda2da1c0a,5830,5832,rue de Terrebonne,S,2,False,1950,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+150,ba50ec271d62,5820,5822,rue de Terrebonne,S,2,False,1951,,not in the 1954 table,yes,own driveway,no,no,street check,1,2,yes,street-level imagery,
+151,3ca8f97e3f06,5668,5670,rue de Terrebonne,S,2,False,1930,739-4 S 5680; 739-4 S 5670-5668,yes,no,none,cannot tell,"yes, none left",1954-55 plans: garage as built; no parking today,0,0,cannot tell,street-level imagery,
+152,baa8b3dce2e7,4468,4468,avenue d' Oxford,S,2,False,1928,739-4 S 5654,no,yes,shared driveway,"yes, some left","yes, some left",street check,2,2,yes,street-level imagery,Building originally had four garages.  Two have been converted to other use (visible in street view).
+153,c30ccfc8309e,4484,4484,avenue Marcil,S,2,False,1926,739-5 S 5604,no,no,none,cannot tell,cannot tell,street check,0,0,cannot tell,street-level imagery,
+154,1db8a9dfb9b2,5510,5512,rue de Terrebonne,S,2,False,1940,739-5 S 5510-5512,no,yes,own driveway,no,no,street check,1,2,no,street-level imagery,

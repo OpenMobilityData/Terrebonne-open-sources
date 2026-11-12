@@ -1,0 +1,79 @@
+{
+ "like_for_like": {
+  "oct25_frame_read": 123,
+  "excluded_no_dwelling_today": [
+   "6324 S"
+  ],
+  "oct25_frame": 122,
+  "decided": 118,
+  "undecided": {
+   "cannot tell": 4
+  },
+  "oct25_driveway_yes": 79,
+  "oct25_either": 89,
+  "access_yes": 99,
+  "either_garage1954_or_access": 110,
+  "converted_none_left": 12,
+  "converted_some_left": 16,
+  "garage1954_and_converted_none_left": 11,
+  "converted_by_basis": {
+   "yes, some left | 1954-55 plans: garage as built; access today, no garage today": 14,
+   "yes, none left | street check": 6,
+   "yes, none left | 1954-55 plans: garage as built; no parking today": 6,
+   "yes, some left | street check": 2
+  },
+  "crosstab_oct25_vs_street": {
+   "no -> cannot tell": 1,
+   "no -> no": 9,
+   "no -> yes": 32,
+   "unclear -> no": 1,
+   "yes -> cannot tell": 3,
+   "yes -> no": 9,
+   "yes -> yes": 67
+  },
+  "dwellings_decided": 259,
+  "dwellings_access": 225,
+  "pct_access": 83.9,
+  "pct_either": 93.2,
+  "pct_oct25_driveway": 64.8,
+  "pct_oct25_either": 73.0,
+  "pct_dwellings_access": 86.9
+ },
+ "whole_street": {
+  "lots": 154,
+  "decided": 149,
+  "undecided": {
+   "cannot tell": 5
+  },
+  "access_yes": 129,
+  "pct_access": 86.6,
+  "converted_none_left": 12,
+  "converted_some_left": 19,
+  "converted_cannot_tell": 13,
+  "converted_by_basis": {
+   "yes, some left | 1954-55 plans: garage as built; access today, no garage today": 15,
+   "yes, none left | street check": 6,
+   "yes, none left | 1954-55 plans: garage as built; no parking today": 6,
+   "yes, some left | street check": 4
+  },
+  "converted_dwellings_none_left": 34,
+  "kind": {
+   "own driveway": 92,
+   "none": 14,
+   "front pad": 11,
+   "parking lot": 5,
+   "converted to other use": 6,
+   "shared driveway": 20,
+   "converted, some left (kind not given)": 1
+  },
+  "small_decided": 143,
+  "small_access": 124,
+  "small_places_independent": 165,
+  "small_places_total": 266,
+  "small_dwellings": 230,
+  "large_lots": 6,
+  "large_with_underground_garage": 5,
+  "small_places_missing_count": 0,
+  "pct_small_access": 86.7
+ }
+}
