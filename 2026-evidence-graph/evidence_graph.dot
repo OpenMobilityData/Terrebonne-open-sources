@@ -1702,4 +1702,5 @@ t_terrebonne_street_check -> t_garages_1954 [label="computed from", color="#2a78
 c_garages_street_check -> t_terrebonne_street_check [label="computed from", color="#2a78d6", fontcolor="#2a78d6", style=solid];
 c_garages_street_check -> c_garages_today [label="differs from", color="#e34948", fontcolor="#e34948", style=dashed, tooltip="the aerial reading of Oct 25, 2026 found a driveway at 79 of 123 (64 %) and garage-or-driveway at 89 of 123 (72 %); the street check finds access at 84 % and garage-or-access at 93 %: a view from above misses driveways and cannot see conversions"];
 d_parking_note -> c_garages_street_check [label="computed from", color="#2a78d6", fontcolor="#2a78d6", style=solid];
+d_corridor_note -> t_terrebonne_street_check [label="computed from", color="#2a78d6", fontcolor="#2a78d6", style=solid];
 }

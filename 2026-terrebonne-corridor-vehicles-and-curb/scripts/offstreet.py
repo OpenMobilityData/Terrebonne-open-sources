@@ -1,9 +1,10 @@
 """Stage 5: private (off-street) parking in the corridor: measured, with its error measured too.
 
-1. Rue de Terrebonne (folder 1954-underwriters-plans-terrebonne-garages): the buildings addressed on the street, read
-   on October 25, 2026 on the 1954-55 Underwriters' plans (garage as built) and on aerial imagery (driveway or apron);
-   one place counted per building with either. Kept as first published; the check below shows that a reading from
-   above misses part of the driveways.
+1. Rue de Terrebonne (folder 1954-underwriters-plans-terrebonne-garages/derived/street_check/): every lot addressed on
+   the street along the lane (154), judged by the owner from street-level imagery on November 12, 2026: car access
+   today (at least one private place usable), places counted lot by lot, conversions. It replaced the reading of
+   October 25, 2026 (1954-55 plans + aerial imagery, one place per building with a garage or driveway: 89 of 123),
+   because the check below showed that a reading from above misses part of the driveways.
 2. The corridor's 22 dissemination areas: every lot holding a dwelling (2,358) was read on enlarged aerial crops by
    independent readers under a written protocol (derived/readings/; offstreet_readings_v2.py). The owner then judged,
    from street-level imagery and without seeing any reading, a random sample of 112 lots drawn beforehand
@@ -42,34 +43,43 @@ def main():
     tb["block"] = np.repeat(np.arange(len(tb) // 2), 2)
     key = tb.set_index(["block", "curb_side"]).dauid
 
-    # 1. measured: the buildings addressed on Terrebonne that were read on the imagery
-    b = pd.read_csv(GARAGES / "buildings_geo.csv")
-    b = b[(b.addressed_on == "Terrebonne") & b.driveway_today.isin(["yes", "no", "unclear"])].copy()
-    b["either"] = (b.garage_1954 == "yes") | (b.driveway_today == "yes")
+    # 1. measured: every lot addressed on Terrebonne along the lane, judged by the owner from street level on
+    #    November 12, 2026 (1954-underwriters-plans-terrebonne-garages/derived/street_check/lots.csv; it replaced the
+    #    aerial reading of October 25, which missed driveways). Places as the owner counted them, for the buildings of
+    #    five dwellings or fewer; the larger buildings' underground garages are not counted.
+    lots = pd.read_csv(GARAGES / "street_check" / "lots.csv", dtype={"key": str})
+    fr_ = pd.read_csv(GARAGES / "street_check_frame.csv", dtype={"key": str})[["key", "east_m"]]
+    rd = pd.read_csv(TABLES / "offstreet_readings_v2.csv", dtype={"dauid": str})[["key", "dauid"]].drop_duplicates("key")
+    b = lots.merge(fr_, on="key").merge(rd, on="key", how="left")
+    assert len(b) == len(lots) and b.dauid.notna().all(), "every lot of the street check must have its position and area"
     edges = np.array(frame.CUM)
-    b["blk"] = np.clip(np.searchsorted(edges, b.u_m.values, side="right") - 1, 0, len(edges) - 2)
-    b["dauid"] = [key.get((k, s)) for k, s in zip(b.blk, b.side)]
-    b["rate"] = b.dauid.map(d.per_household)
-    b["modelled"] = b.logements.fillna(0) * b.rate
+    b["blk"] = np.clip(np.searchsorted(edges, b.east_m.values, side="right") - 1, 0, len(edges) - 2)
+    b["judged"] = b.access.isin(["yes", "no"]); b["acc"] = b.access == "yes"; b["small"] = ~b.large.astype(bool)
+    num = lambda v: pd.to_numeric(v, errors="coerce").fillna(0)
+    b["pi"] = num(b.places_independent).where(b.small & b.acc, 0); b["pt"] = num(b.places_total).where(b.small & b.acc, 0)
+    b["modelled"] = b.dwellings.fillna(0) * b.dauid.map(d.per_household)
     lc = pd.read_csv(GARAGES / "lidar_cars_by_block.csv"); oc = pd.read_csv(GARAGES / "on_street_cars_by_block.csv")
     rows = []
     for name, a, z in SECTORS + (("whole lane", 0, 28),):
-        x = b[b.blk.between(a, z)]; t = tb[tb.block.between(a, z)]
+        x = b[b.blk.between(a, z)]; t = tb[tb.block.between(a, z)]; xs = x[x.small]
         l = lc[lc.block.between(a, z)]; o = oc[oc.block.between(a, z)]
-        rows.append({"sector": name, "buildings_read": len(x), "with_garage_or_driveway": int(x.either.sum()),
-                     "dwellings_in_buildings_read": int(x.logements.fillna(0).sum()),
-                     "dwellings_in_buildings_with_garage_or_driveway": int(x[x.either].logements.fillna(0).sum()),
-                     "modelled_automobiles_of_those_dwellings": round(x.modelled.sum(), 1),
-                     "offstreet_places_floor": int(x.either.sum()),
+        rows.append({"sector": name, "lots": len(x), "lots_judged": int(x.judged.sum()), "with_access": int(x.acc.sum()),
+                     "converted_none_left": int((x.converted == "yes, none left").sum()), "converted_some_left": int((x.converted == "yes, some left").sum()),
+                     "small_lots": len(xs), "small_lots_judged": int(xs.judged.sum()), "small_with_access": int(xs.acc.sum()),
+                     "dwellings_small_judged": int(xs[xs.judged].dwellings.sum()),
+                     "modelled_automobiles_small_judged": round(xs[xs.judged].modelled.sum(), 1),
+                     "private_places_independent": int(xs.pi.sum()), "private_places_total": int(xs.pt.sum()),
+                     "large_lots": int((~x.small).sum()), "dwellings_large": int(x[~x.small].dwellings.sum()),
+                     "large_with_underground_garage": int(((~x.small) & (x.kind == "parking lot")).sum()),
                      "curb_places_on_terrebonne_today_5.5m": round(t.legal_m.sum() / PLACE),
                      "cars_on_lots_2015_night": int(l.lot_N.sum() + l.lot_S.sum()),
                      "cars_at_curbs_2015_night": int(o.lidar_by_eye_N.sum() + o.lidar_by_eye_S.sum())})
     ts = pd.DataFrame(rows); ts.to_csv(TABLES / "offstreet_terrebonne_by_sector.csv", index=False)
     pd.set_option("display.width", 250); print(ts.T.to_string())
-    k, n = int(b.either.sum()), len(b)
+    k, n = int(b.acc.sum()), int(b.judged.sum())
     lo_t, hi_t = proportion_confint(k, n, alpha=0.05, method="wilson")
     share = k / n
-    print(f"share of buildings read with a garage as built or a driveway today: {k} of {n} = {100 * share:.1f} % ({100 * lo_t:.1f} to {100 * hi_t:.1f})")
+    print(f"lots on Terrebonne with car access today (street check): {k} of {n} judged = {100 * share:.1f} % ({100 * lo_t:.1f} to {100 * hi_t:.1f})")
 
     # 2. measured: every lot of the corridor read from above (offstreet_readings_v2.py), calibrated on the owner's check
     m = pd.read_csv(TABLES / "offstreet_readings_v2.csv", dtype={"dauid": str})
@@ -145,7 +155,7 @@ def main():
     det["curb_alone_least_favourable_minus_automobiles"] = det["curb_places_least_favourable"] - det["automobiles_least_favourable"]
     print(json.dumps({"corridor": tot, "check": check, "detectable_shortage": det}, indent=1))
     w = ts[ts.sector == "whole lane"].iloc[0]
-    json.dump({"measured": {"buildings_read": n, "with_garage_or_driveway": k, "share": round(share, 3), "share_low": round(lo_t, 3), "share_high": round(hi_t, 3),
+    json.dump({"measured": {"source": "street check, Nov 12, 2026", "lots": int(len(b)), "lots_judged": n, "with_access": k, "share": round(share, 3), "share_low": round(lo_t, 3), "share_high": round(hi_t, 3),
                             "whole_lane": {a: (float(v) if isinstance(v, (float, np.floating)) else int(v)) for a, v in w.items() if a != "sector"}},
                "corridor": tot, "check": check, "detectable_shortage": det}, open(ROOT / "derived/offstreet.json", "w"), indent=1)
     print("OK offstreet")
