@@ -1,0 +1,46 @@
+{
+ "stations": 9658,
+ "no_data_share": 0.093,
+ "curb_step_median_m": 0.16,
+ "runs": 88,
+ "run_length_median_m": 4.0,
+ "run_length_total_m": 422.0,
+ "lots": {
+  "expected_cut": 82,
+  "detected_of_expected_cut": 47,
+  "expected_no_cut": 7,
+  "detected_of_expected_no_cut": 1,
+  "recall": 0.573,
+  "false_alarm_rate": 0.143,
+  "apart": {
+   "cut": 82,
+   "apart: converted": 28,
+   "apart: access from a lane or rear": 14,
+   "apart: corner lot": 13,
+   "no cut": 7,
+   "apart: larger building": 5,
+   "apart: cannot tell": 5
+  },
+  "converted_with_cut_detected": 17,
+  "converted": 28
+ },
+ "matched_run_length_m_quartiles": [
+  2.5,
+  4.0,
+  6.0
+ ],
+ "step_at_expected_cut_lots_median_m": 0.07,
+ "step_at_expected_no_cut_lots_median_m": 0.13,
+ "parameters": {
+  "relative_drop_m": 0.05,
+  "below_m": 0.1,
+  "min_run_m": 2.0,
+  "gap_m": 1.0,
+  "intersection_m": 12.0,
+  "window_m": 1.5,
+  "band_m": [
+   0.2,
+   1.0
+  ]
+ }
+}
