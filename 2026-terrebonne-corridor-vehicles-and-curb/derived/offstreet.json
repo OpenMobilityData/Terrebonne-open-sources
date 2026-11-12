@@ -78,5 +78,21 @@
   "large_underground_garage": 6,
   "small_share_low": 0.777,
   "small_share_high": 0.914
+ },
+ "detectable_shortage": {
+  "shared_share_of_lots_with_access": 0.176,
+  "cut_m_central": 4.5,
+  "cut_m_least_favourable": 6.0,
+  "allowance_m_hydrants_bus_stops": 2000.0,
+  "curb_places_central": 4910,
+  "curb_places_least_favourable": 3948,
+  "places_central": 7138,
+  "places_least_favourable": 5998,
+  "automobiles_central": 4622,
+  "automobiles_least_favourable": 4927,
+  "automobiles_share_of_places_central": 0.65,
+  "automobiles_share_of_places_least_favourable": 0.82,
+  "surplus_places_least_favourable": 1071,
+  "curb_alone_least_favourable_minus_automobiles": -979
  }
 }

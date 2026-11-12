@@ -30,6 +30,8 @@ from corridor_lib import GARAGES, ROOT, TABLES
 sys.path.insert(0, str(GARAGES))
 SECTORS = (("residential west", 0, 11), ("institutional", 12, 16), ("residential east", 17, 28))
 PLACE = 5.5
+CUT_CENTRAL, CUT_WORST = 4.5, 6.0     # metres of curb lost per driveway (assumption: the cut and the unusable stub beside it)
+ALLOWANCE_M = 2000.0                  # metres of curb for hydrants (3 m each side, Highway Safety Code art. 386, about one per 100 m of street) and bus stops: an assumption, not a count
 
 
 def main():
@@ -125,11 +127,27 @@ def main():
              "large_underground_garage": int(((ol.car_access_owner == "yes") & (ol.kind_owner == "parking lot")).sum())}
     plo, phi = proportion_confint(check["small_yes"], check["small_judged"], alpha=0.05, method="wilson")
     check["small_share_low"], check["small_share_high"] = round(plo, 3), round(phi, 3)
-    print(json.dumps({"corridor": tot, "check": check}, indent=1))
+    # 3. the shortage that could have been detected: more registered automobiles than places, every uncertainty taken in
+    #    the direction of a shortage. The curb is reduced for what the upper bound leaves in: one curb cut per lot with car
+    #    access (a shared driveway counted once for its two lots), plus an allowance for hydrants and bus stops.
+    shared = float((chk[chk.acc == 1].kind_owner == "shared driveway").mean())            # share of lots with access whose driveway is shared
+    legal = float(s.legal_m.sum())
+    def curb_places(access, cut_m, per_car):
+        return (legal - access * (1 - shared / 2) * cut_m - ALLOWANCE_M) / per_car
+    central_curb = curb_places(T0[0], CUT_CENTRAL, PLACE); worst_curb = curb_places(hi[0], CUT_WORST, 6.0)
+    det = {"shared_share_of_lots_with_access": round(shared, 3), "cut_m_central": CUT_CENTRAL, "cut_m_least_favourable": CUT_WORST, "allowance_m_hydrants_bus_stops": ALLOWANCE_M,
+           "curb_places_central": int(round(central_curb)), "curb_places_least_favourable": int(round(worst_curb)),
+           "places_central": int(round(central_curb + T0[1])), "places_least_favourable": int(round(worst_curb + lo[1])),
+           "automobiles_central": C["automobiles_modelled"], "automobiles_least_favourable": C["high_90"]}
+    det["automobiles_share_of_places_central"] = round(det["automobiles_central"] / det["places_central"], 2)
+    det["automobiles_share_of_places_least_favourable"] = round(det["automobiles_least_favourable"] / det["places_least_favourable"], 2)
+    det["surplus_places_least_favourable"] = det["places_least_favourable"] - det["automobiles_least_favourable"]
+    det["curb_alone_least_favourable_minus_automobiles"] = det["curb_places_least_favourable"] - det["automobiles_least_favourable"]
+    print(json.dumps({"corridor": tot, "check": check, "detectable_shortage": det}, indent=1))
     w = ts[ts.sector == "whole lane"].iloc[0]
     json.dump({"measured": {"buildings_read": n, "with_garage_or_driveway": k, "share": round(share, 3), "share_low": round(lo_t, 3), "share_high": round(hi_t, 3),
                             "whole_lane": {a: (float(v) if isinstance(v, (float, np.floating)) else int(v)) for a, v in w.items() if a != "sector"}},
-               "corridor": tot, "check": check}, open(ROOT / "derived/offstreet.json", "w"), indent=1)
+               "corridor": tot, "check": check, "detectable_shortage": det}, open(ROOT / "derived/offstreet.json", "w"), indent=1)
     print("OK offstreet")
 
 
