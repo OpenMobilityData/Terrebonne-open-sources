@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The note (A4, pdflatex) and the slide deck (beamer 16:9), English, from derived/numbers.json and derived/tables/. Every figure in the text is
 read from the tables at build time.
-Usage: ~/.venvs/omd/bin/python scripts/build_docs.py [--final]   (without --final the note carries a DRAFT mark)
+Usage: ~/.venvs/omd/bin/python scripts/build_docs.py [--final]   (without --final the note carries a DRAFT mark; with it, « Preliminary results, not peer reviewed »)
 Writes docs/corridor_vehicles_curb_note_en.{tex,pdf}, docs/corridor_vehicles_curb_deck_en.{tex,pdf},
 docs/deck_figures_en/NN-<figure>.png (each figure of the deck, named by its slide number) and derived/lay_abstract_en.txt."""
 import datetime
@@ -47,7 +47,8 @@ STAT = {k: "{} green, {} yellow, {} red".format(*_n(r)) for k, r in (("A", _rA),
 STAT["red_A"] = "; ".join(f"area {int(n)}, {100 * l:.0f}\\,\\%" for n, l in zip(_m.no[_rA > 1.0], _ls[_rA > 1.0]))
 fig = lambda typ, name, cap, w=1.0: (f"\\begin{{figure}}[H]\\centering\\includegraphics[width={w}\\textwidth]{{../derived/figures/{typ}/{name}_en.png}}"
                                      f"\\caption{{{cap}}}\\end{{figure}}")
-DRAFT = "" if FINAL else (r"\begin{center}\colorbox{red!15}{\parbox{0.96\textwidth}{\centering\textbf{\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, "
+PRELIM = (r"\begin{center}\colorbox{black!6}{\parbox{0.96\textwidth}{\centering\textbf{Preliminary results, not peer reviewed} (version " + TODAY + r").}}\end{center}")   # owner, Nov 12, 2026: a stable document carries this instead of the draft mark
+DRAFT = PRELIM if FINAL else (r"\begin{center}\colorbox{red!15}{\parbox{0.96\textwidth}{\centering\textbf{\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, "
                           + TODAY + r". Not yet checked line by line; figures may change.}}}}\end{center}")
 
 LAY_WORDS = 300
@@ -254,7 +255,7 @@ Frontage on Terrebonne & FSA & hh. & autos & interval & per hh. & curb km & plac
 # ---------------------------------------------------------------- the slide deck (beamer, 16:9)
 fr = lambda title, body: "\\begin{frame}{" + title + "}\n" + body + "\n\\end{frame}\n"
 ffig = lambda title, typ, name, text="", h=0.66: fr(title, f"\\begin{{center}}\\includegraphics[height={h}\\textheight]{{../derived/figures/{typ}/{name}_en.png}}\\end{{center}}" + (f"\n{{\\footnotesize {text}}}" if text else ""))
-DMARK = "" if FINAL else r"\setbeamertemplate{footline}{\hfill{\tiny\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, " + TODAY + r"}\quad\insertframenumber}\hspace{1em}\vspace{0.4em}}"
+DMARK = (r"\setbeamertemplate{footline}{\hfill{\tiny\textcolor{black!60}{Preliminary results, not peer reviewed, " + TODAY + r"}\quad\insertframenumber}\hspace{1em}\vspace{0.4em}}") if FINAL else r"\setbeamertemplate{footline}{\hfill{\tiny\textcolor{red!70!black}{DRAFT for the author\textquoteright{}s review, " + TODAY + r"}\quad\insertframenumber}\hspace{1em}\vspace{0.4em}}"
 half = 100 * ((DA.high_90 - DA.low_90) / 2 / DA.automobiles_modelled).median()
 DECK = r"""\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs,amsmath}
@@ -319,7 +320,7 @@ Not covered by the intervals: census of 2021 against vehicles of 2024; inferred 
 \item Small buildings in the check: \textbf{""" + str(OK["small_yes"]) + r""" of """ + str(OK["small_judged"]) + r""" have car access} (""" + f"{100 * OK['small_share']:.0f}" + r"""\,\%). Where the readers said yes, the check confirmed """ + f"{OK['by_reader_answer']['yes']['owner_yes']} of {OK['by_reader_answer']['yes']['lots']}" + r"""; where they said no, only """ + f"{OK['by_reader_answer']['no']['lots'] - OK['by_reader_answer']['no']['owner_yes']} of {OK['by_reader_answer']['no']['lots']}" + r""": a view from above misses driveways.
 \item Estimate for the """ + n_(OS["small_buildings"]) + r""" small buildings, calibrated on the check: \textbf{""" + n_(OS["private_independent"]) + r""" private places} a car can leave without another being moved (""" + n_(OS["private_independent_low"]) + r""" to """ + n_(OS["private_independent_high"]) + r"""); """ + n_(OS["private_total"]) + r""" with cars one behind another. Garage interiors not counted.
 \item The """ + str(OS["large_buildings"]) + r""" buildings of six dwellings or more are given none: """ + str(OK["large_underground_garage"]) + r""" of the """ + str(OK["large_sampled"]) + r""" checked have an underground garage that cannot be counted.
-\end{itemize}""") + ffig("With private parking added, area by area", "off-street-corridor", "off_street_corridor", f"{OS['per_place_with_private']:.2f} modelled automobile per place with private places, against {OS['per_place_curb_only']:.2f} with the curb alone.", 0.7) + ffig("All the sources on one map", "corridor-parking-map", "corridor_parking_map", "Off Terrebonne, private places are shown per area only (calibrated totals), never lot by lot.", 0.8) + ffig("Automobiles as a share of places, by area", "status-map", "status_map", f"The reds in A are areas of large buildings whose garages are not counted. A share is not a measure of how full the street is.", 0.8) +  ffig("A check from another source: the 2015 LiDAR night", "lidar-check", "lidar_check", f"{int(whole.cars_at_curbs_2015_night + whole.cars_on_lots_2015_night)} cars seen for {int(whole.dwellings_addressed_on_terrebonne)} dwellings addressed on Terrebonne. Agreement in order of magnitude; area by area, no relation (rank correlation {N['lidar']['rho_rate']:.2f}, {N['lidar']['areas']} areas).", 0.6) + fr("What is shown and what is not", r"""\begin{itemize}
+\end{itemize}""") + ffig("With private parking added, area by area", "off-street-corridor", "off_street_corridor", f"{OS['per_place_with_private']:.2f} modelled automobile per place with private places, against {OS['per_place_curb_only']:.2f} with the curb alone.", 0.7) + ffig("All the sources on one map", "corridor-parking-map", "corridor_parking_map", "Off Terrebonne, private places are shown per area only (calibrated totals), never lot by lot.", 0.8) + ffig("Automobiles as a share of places, by area", "status-map", "status_map", f"Reds in A: large buildings, garages not counted. A share does not measure how full the street is.", 0.76) +  ffig("A check from another source: the 2015 LiDAR night", "lidar-check", "lidar_check", f"{int(whole.cars_at_curbs_2015_night + whole.cars_on_lots_2015_night)} cars seen for {int(whole.dwellings_addressed_on_terrebonne)} dwellings addressed on Terrebonne. Agreement in order of magnitude; area by area, no relation (rank correlation {N['lidar']['rho_rate']:.2f}, {N['lidar']['areas']} areas).", 0.6) + fr("What is shown and what is not", r"""\begin{itemize}
 \item \textbf{Measured:} the registered automobiles of H4A and H4B (type inferred); the legal curb of each block face, as an upper bound; garages and driveways on rue de Terrebonne.
 \item \textbf{Measured, with a measured error:} private places of small buildings (every lot read, a random sample checked from the street).
 \item \textbf{Not counted:} garage interiors; the garages of larger buildings.
@@ -357,4 +358,4 @@ for _ in range(3):
         print(r.stdout[-2500:]); sys.exit(1)
 for ext in ("aux", "log", "out", "toc"):
     (DOCS / f"corridor_vehicles_curb_note_en.{ext}").unlink(missing_ok=True)
-print("OK build_docs", STAMP, "final" if FINAL else "draft")
+print("OK build_docs", STAMP, "preliminary" if FINAL else "draft")

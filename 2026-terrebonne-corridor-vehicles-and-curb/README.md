@@ -1,6 +1,6 @@
-# Automobiles and curb along rue de Terrebonne: registered vehicles known by FSA, modelled below it; legal curb measured by block face (note, deck, data) — DRAFT
+# Automobiles and curb along rue de Terrebonne: registered vehicles known by FSA, modelled below it; legal curb measured by block face (note, deck, data) — preliminary results, not peer reviewed
 
-**Issued by:** the author of these repositories (see the root README). **Status: DRAFT of November 11, 2026, under the author's review; figures may change.**
+**Issued by:** the author of these repositories (see the root README). **Status: preliminary results, not peer reviewed** (reviewed by the author and promoted from draft on November 12, 2026; note and deck v2026-11-12-14-43-06).
 
 **Sources.** SAAQ, vehicle files released under the access Act for December 31, 2023 and 2024 (file 03.06.34729), by forward sortation area (FSA), as tabulated in [`Quebec-vehicle-registrations`](https://github.com/OpenMobilityData/Quebec-vehicle-registrations/blob/main/README.md) (`derived/tables/type_by_fsa.csv`; **vehicle type inferred**). Statistics Canada, 2021 Census profile by FSA (98-401-X2021013) and by dissemination area, Québec (98-401-X2021006), and the dissemination-area boundary file (Statistics Canada Open Licence; downloaded November 2026). City of Montréal open data (CC BY 4.0): géobase (downloaded October 14, 2026), « Signalisation – stationnement » (sign inventory, October 23, 2026), « Unités d'évaluation foncière » (assessment roll, October 25, 2026). FSA polygons: DMTI Spatial, CanMap Postal Code Suite v2024.3, and postal-code points: Service Objects (March 2024), both under licence and not redistributed. The 2015 LiDAR night count, the garage and driveway readings and the street frame come from [`1954-underwriters-plans-terrebonne-garages`](../1954-underwriters-plans-terrebonne-garages/); EXP's parking counts from [`2026-parking-supply-demand-survey-context`](../2026-parking-supply-demand-survey-context/).
 
@@ -38,7 +38,7 @@
 - **Automobiles.** Robust regression of the logarithm of automobiles per household on four census variables across 114 FSAs; prediction for each area; scaling to each FSA's registered total; 2,000 draws for the intervals.
 - **Tests** (at the level of FSAs, the only one with registered counts): each FSA left out in turn; neighbouring FSAs grouped by threes and the group's total shared among them.
 
-## Results (draft)
+## Results (preliminary)
 
 - Registered, by FSA (type inferred): H4A 9,598 automobiles and light trucks, 0.79 per household; H4B 7,351, 0.70.
 - Downscaling test: the model's share of a group's total is off by 4.6 % at the median; a split in proportion to households, by 13.9 %. For H4A and H4B taken as a pair the two are close (-4.6 % and +6.0 % against -5.5 % and +7.1 %).
@@ -59,7 +59,7 @@
 ~/.venvs/omd/bin/python scripts/offstreet_readings_v2.py   # collates derived/readings/ and the owner's check
 ~/.venvs/omd/bin/python scripts/offstreet.py
 for f in derived/figures/*/*.py; do ~/.venvs/omd/bin/python $f; done
-~/.venvs/omd/bin/python scripts/build_docs.py        # --final once the draft mark is lifted
+~/.venvs/omd/bin/python scripts/build_docs.py --final   # « Preliminary results, not peer reviewed »; without --final, the DRAFT mark
 ```
 
 The census, roll, sign, géobase and postal-code files are read from outside the repository (`~/Terrebonne-data/third-party/`, paths in `scripts/corridor_lib.py`); the sibling clone `Quebec-vehicle-registrations` supplies the FSA vehicle table. No raw file is kept here (`raw/` is absent: every source is a public dataset named above or a licensed product that is not redistributed).
