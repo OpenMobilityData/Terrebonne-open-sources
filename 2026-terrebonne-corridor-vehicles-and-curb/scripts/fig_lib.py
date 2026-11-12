@@ -57,6 +57,38 @@ def row_bands(ax, n):
     ax.tick_params(axis="y", length=0)
 
 
+# status colours (reserved for states, never used for a series); each chip also carries its figure, so colour is never alone
+GOOD, WARNING, CRITICAL = "#0ca30c", "#fab219", "#d03b3b"
+STATUS_T = {"en": dict(head="cars as %\nof places", low="under 80 %", mid="80 to 100 %", high="over 100 %"),
+            "fr": dict(head="voitures en %\ndes places", low="moins de 80 %", mid="80 à 100 %", high="plus de 100 %")}
+
+
+def status_column(ax, y, ratio, lang):
+    """A column at the right of the plot: modelled automobiles as a percentage of the places shown, one chip per row,
+    green under 80 %, yellow from 80 to 100 %, red over 100 % (more automobiles than places)."""
+    from matplotlib.patches import FancyBboxPatch
+    t = STATUS_T[lang]; tr = ax.get_yaxis_transform()            # x in axes fraction, y in data
+    ax.text(1.065, len(y) - 0.42, t["head"], transform=tr, ha="center", va="bottom", fontsize=8, color=MUTED, clip_on=False, linespacing=1.1)
+    for yi, r in zip(y, ratio):
+        col, ink = (GOOD, "#ffffff") if r < 0.8 else (WARNING, "#0b0b0b") if r <= 1.0 else (CRITICAL, "#ffffff")
+        ax.add_patch(FancyBboxPatch((1.025, yi - 0.27), 0.08, 0.54, boxstyle="round,pad=0,rounding_size=0.012", transform=tr, fc=col, ec="none", clip_on=False, zorder=5,
+                                    mutation_aspect=20))
+        close = abs(r - 1) < 0.005 or abs(r - 0.8) < 0.005        # at a threshold: one decimal, so the figure and the colour agree
+        lab = (f"{100 * r:.1f} %" if close else f"{100 * r:.0f} %")
+        ax.text(1.065, yi, lab if lang == "en" else lab.replace(".", ","), transform=tr, ha="center", va="center", fontsize=7.6 if close else 8.5, color=ink,
+                fontweight="bold", clip_on=False, zorder=6)
+    return [(GOOD, t["low"]), (WARNING, t["mid"]), (CRITICAL, t["high"])]
+
+
+def status_legend(fig, items, x=0.012, y=0.012, dy=0.0):
+    """The three states, each with its label, bottom right of the figure."""
+    from matplotlib.patches import Rectangle
+    x0 = 0.70
+    for k, (col, lab) in enumerate(items):
+        fig.patches.append(Rectangle((x0 + 0.1 * k, 0.05), 0.012, 0.012, transform=fig.transFigure, fc=col, ec="none"))
+        fig.text(x0 + 0.1 * k + 0.016, 0.056, lab, fontsize=8, color=MUTED, va="center")
+
+
 def fr_frontage(s):
     return s.replace("west end", "extrémité ouest").replace("N:", "N :").replace("S:", "S :")
 

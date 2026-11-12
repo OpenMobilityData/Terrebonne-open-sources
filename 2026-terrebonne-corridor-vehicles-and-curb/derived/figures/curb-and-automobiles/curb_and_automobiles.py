@@ -38,8 +38,10 @@ def main():
         ax.set_yticks(y); ax.set_yticklabels([F.fr_frontage(s) if lang == "fr" else s for s in d.frontage], fontsize=8.5)
         ax.grid(axis="x"); ax.grid(axis="y", visible=False); ax.set_xlim(0, XMAX); ax.set_xlabel(t["x"])
         F.row_bands(ax, len(d))
+        items = F.status_column(ax, y, d.automobiles_modelled / p, lang)
+        F.status_legend(fig, items)
         ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.05), ncol=2, fontsize=9)
-        F.finish(fig, HERE, "curb_and_automobiles", lang, t["title"], t["sub"], top=0.85, bottom=0.14, left=0.3)
+        F.finish(fig, HERE, "curb_and_automobiles", lang, t["title"], t["sub"], top=0.85, bottom=0.14, left=0.3, right=0.9)
     print("OK curb_and_automobiles")
 
 

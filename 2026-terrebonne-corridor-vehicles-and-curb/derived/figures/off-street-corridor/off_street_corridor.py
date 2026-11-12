@@ -42,11 +42,13 @@ def main():
         ax.set_yticks(y); ax.set_yticklabels([F.fr_frontage(v) if lang == "fr" else v for v in s.frontage], fontsize=8.5)
         ax.grid(axis="x"); ax.grid(axis="y", visible=False); ax.set_xlim(0, 860); ax.set_xlabel(t["x"])
         F.row_bands(ax, len(s))
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.045), ncol=3, fontsize=9)
+        items = F.status_column(ax, y, s.automobiles_modelled / (curb + s.private_independent), lang)
+        F.status_legend(fig, items)
+        ax.legend(loc="upper center", bbox_to_anchor=(0.44, 1.045), ncol=3, columnspacing=1.2, handletextpad=0.3, fontsize=9)
         note = t["note"].format(au=F.num(S["automobiles_modelled"], lang), cp=F.num(S["curb_places"], lang), tp=F.num(S["curb_plus_private"], lang),
                                 op=F.num(S["private_independent"], lang), ol=F.num(S["private_independent_low"], lang), oh=F.num(S["private_independent_high"], lang),
                                 lb=S["large_buildings"], ld=F.num(S["dwellings_in_large_buildings"], lang))
-        F.finish(fig, HERE, "off_street_corridor", lang, t["title"], t["sub"].format(n=K["small_judged"]), note, top=0.845, bottom=0.135, left=0.3)
+        F.finish(fig, HERE, "off_street_corridor", lang, t["title"], t["sub"].format(n=K["small_judged"]), note, top=0.845, bottom=0.135, left=0.3, right=0.9)
     print("OK off_street_corridor")
 
 
