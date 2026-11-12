@@ -35,7 +35,7 @@ T = {"en": dict(
         sub="Fill: automobiles registered to each area's households, MODELLED from the SAAQ file of 2024. Orange: legal curb by block face (measured, upper bound).\n"
             "Green on rue de Terrebonne: each lot's private places, counted from street level on Nov. 12, 2026. Table: the same three, and private places, per area.",
         cb="modelled automobiles per area (2024)",
-        curb="legal curb (no sign forbids parking at all times)", curb_no="curb forbidden at all times on half the face or more",
+        curb="legal curb, 10 m short of each intersection", curb_half="signs disagree (counted for half)", curb_no="parking forbidden at all times",
         p1="1 private place", p2="2 private places", p3="3 or more private places", conv="parking converted, no place left", none="no private place", ug="underground garage (places not counted)",
         ct="could not be told", lane="the lane (rue de Terrebonne)",
         th=["area", "automobiles\n(modelled, 90 %)", "curb places\n(5.5 m)", "private places\n(small buildings, 90 %)"], tot="corridor",
@@ -47,7 +47,7 @@ T = {"en": dict(
         sub="Fond : automobiles immatriculées aux ménages de chaque aire, MODÉLISÉES d’après le fichier SAAQ de 2024. Orange : bordure légale par côté d’îlot (mesurée, borne supérieure).\n"
             "Vert, rue de Terrebonne : places privées de chaque lot, comptées à hauteur de rue le 12 nov. 2026. Tableau : les trois, et les places privées, par aire.",
         cb="automobiles modélisées par aire (2024)",
-        curb="bordure légale (aucun panneau n’interdit le stationnement en tout temps)", curb_no="bordure interdite en tout temps sur la moitié du côté ou plus",
+        curb="bordure légale, à 10 m de chaque intersection", curb_half="panneaux contradictoires (comptés pour moitié)", curb_no="stationnement interdit en tout temps",
         p1="1 place privée", p2="2 places privées", p3="3 places privées ou plus", conv="stationnement converti, aucune place restante", none="aucune place privée", ug="garage souterrain (places non comptées)",
         ct="indéterminé", lane="la piste (rue de Terrebonne)",
         th=["aire", "automobiles\n(modélisées, 90 %)", "places en bordure\n(5,5 m)", "places privées\n(petits immeubles, 90 %)"], tot="corridor",
@@ -63,7 +63,8 @@ def main():
     m = m.sort_values(["west_to_east", "frontage"]).reset_index(drop=True); m["no"] = np.arange(1, len(m) + 1)
     cor = g[g.set == "corridor"][["dauid", "geometry"]].merge(m, on="dauid")
     assert len(cor) == len(m) == 22
-    f = gpd.read_file(TABLES / "block_faces.geojson").to_crs(CRS)
+    # the curb as measured: each block face less 10 m at each end, split where the signs change (curb_supply.py)
+    f = gpd.read_file(TABLES / "curb_stretches.geojson").to_crs(CRS)
     f = f[f.dauid.isin(cor.dauid)].copy()
     f["geometry"] = [l.offset_curve(7 if s == "L" else -7) for l, s in zip(f.geometry, f.side)]
     f = f[~f.geometry.is_empty]
@@ -93,7 +94,6 @@ def main():
     turn = lambda geom: rotate(geom, -ANG, origin=ORG)
     cor["geometry"] = cor.geometry.map(turn); f["geometry"] = f.geometry.map(turn); lane["geometry"] = lane.geometry.map(turn)
     lots["pt"] = lots.pt.map(turn)
-    ban = f.banned_m >= 0.5 * f.net_m.clip(lower=1)
     style = {"p1": dict(marker="o", s=22, c=F.AQUA), "p2": dict(marker="o", s=52, c=F.AQUA), "p3": dict(marker="o", s=92, c=F.AQUA),
              "ug": dict(marker="s", s=60, c=F.AQUA), "conv": dict(marker="o", s=40, facecolors="none", edgecolors=VIOLET, linewidths=1.8),
              "none": dict(marker="o", s=20, facecolors=F.SURFACE, edgecolors=F.INK, linewidths=0.8), "ct": dict(marker="x", s=20, c=F.INK, linewidths=0.9)}
@@ -101,8 +101,9 @@ def main():
         fig = plt.figure(figsize=(16, 11))
         ax = fig.add_axes([0.01, 0.44, 0.98, 0.43])
         cor.plot(ax=ax, column="automobiles_modelled", cmap=F.SEQ, norm=norm, edgecolor=F.SURFACE, linewidth=1.4)
-        f[~ban].plot(ax=ax, color=F.ORANGE, linewidth=1.4)
-        f[ban].plot(ax=ax, color=F.GREY, linewidth=0.9)
+        f[f.state == "legal"].plot(ax=ax, color=F.ORANGE, linewidth=1.4)
+        f[f.state == "half"].plot(ax=ax, color=F.ORANGE, linewidth=0.9, linestyle=(0, (2, 1.5)))
+        f[f.state == "banned"].plot(ax=ax, color=F.GREY, linewidth=0.9)
         lane.plot(ax=ax, color=F.INK, linewidth=0.9, linestyle=(0, (3, 2)))
         for k, sel in cats.items():
             pts = lots[sel].pt
@@ -125,7 +126,7 @@ def main():
         for k in ("p1", "p2", "p3", "ug"):
             st = style[k]
             H.append(Line2D([], [], ls="", marker=st["marker"], markersize=np.sqrt(st["s"]), markerfacecolor=st["c"], markeredgecolor=F.SURFACE, label=t[k] + f" ({int(cats[k].sum())})"))
-        H += [Line2D([], [], color=F.ORANGE, lw=2, label=t["curb"]), Line2D([], [], color=F.GREY, lw=1.2, label=t["curb_no"]),
+        H += [Line2D([], [], color=F.ORANGE, lw=2, label=t["curb"]), Line2D([], [], color=F.ORANGE, lw=1.2, ls=(0, (2, 1.5)), label=t["curb_half"]), Line2D([], [], color=F.GREY, lw=1.2, label=t["curb_no"]),
               Line2D([], [], color=F.INK, lw=1, ls=(0, (3, 2)), label=t["lane"])]
         for k in ("conv", "none", "ct"):
             st = style[k]; fc = st.get("c", st.get("facecolors"))

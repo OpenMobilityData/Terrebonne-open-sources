@@ -25,6 +25,7 @@ import numpy as np
 import pandas as pd
 from shapely import line_locate_point
 from shapely.geometry import Point
+from shapely.ops import substring
 
 from corridor_lib import CRS, DA_SHP, FSAS, GEOBASE, LANE, SIGNS, TABLES
 
@@ -91,6 +92,7 @@ def main():
         return ban, other
 
     out, flipped, conflicts, n_arrowed = {}, 0, 0, 0
+    ivs = {}                                   # (ID_TRC, side) -> [(from, to, state)] along the centre line, ends excluded (for the maps)
     for (trc, side), v in groups.items():
         L = v.L.iloc[0]; ts = [0.0] + list(v.t) + [L]; ids = [None] + list(v.POTEAU_ID_POT) + [None]
         # the arrow coding found on the whole City (street_space.py); the other one for this face if it leaves
@@ -105,12 +107,14 @@ def main():
             ban, other = b1, o1
         conflicts += int((ban & other).sum())
         w = np.where(ban & other, 0.5, np.where(ban, 1.0, 0.0))
-        tot = 0.0
+        tot = 0.0; iv = []
         for k in range(len(w)):
+            lo, hi = max(ts[k], END), min(ts[k + 1], L - END)
+            if hi > lo:
+                iv.append((lo, hi, "banned" if w[k] == 1.0 else "half" if w[k] == 0.5 else "legal"))
             if w[k]:
-                lo, hi = max(ts[k], END), min(ts[k + 1], L - END)
                 tot += w[k] * max(0.0, hi - lo)
-        out[(trc, side)] = tot
+        out[(trc, side)] = tot; ivs[(trc, side)] = iv
     print(f"block faces with poles: {len(groups)}; with arrowed signs: {n_arrowed}; read with the other arrow coding: {flipped}; "
           f"stretches still claimed both ways (counted for half): {conflicts}")
     ban_len = out
@@ -142,6 +146,19 @@ def main():
     gf[cols].round(1).to_csv(TABLES / "block_faces.csv", index=False)
     out = gf[cols + ["geometry"]].round({"length_m": 1, "net_m": 1, "banned_m": 1, "legal_m": 1}).to_crs(4326)
     out.to_file(TABLES / "block_faces.geojson", driver="GeoJSON", COORDINATE_PRECISION=6)
+    # the stretches themselves, for drawing: each face less its two ends, split where the signs change
+    st = []
+    for r in gf.itertuples():
+        iv = ivs.get((r.ID_TRC, r.side)) or ([(END, r.length_m - END, "legal")] if r.length_m > 2 * END else [])
+        for lo, hi, state in iv:
+            st.append({"ID_TRC": r.ID_TRC, "side": r.side, "dauid": r.dauid, "state": state, "length_m": round(hi - lo, 1), "geometry": substring(r.geometry, lo, hi)})
+    st = gpd.GeoDataFrame(st, geometry="geometry", crs=CRS)
+    chk = st.assign(eff=np.where(st.state == "legal", st.length_m, np.where(st.state == "half", 0.5 * st.length_m, 0.0))).groupby(["ID_TRC", "side"]).eff.sum()
+    leg = gf.set_index(["ID_TRC", "side"]).legal_m
+    bad = (chk.reindex(leg.index, fill_value=0) - leg).abs() > 0.5
+    assert not bad.any(), f"stretches disagree with legal_m on {int(bad.sum())} faces"
+    st.to_crs(4326).to_file(TABLES / "curb_stretches.geojson", driver="GeoJSON", COORDINATE_PRECISION=6)
+    print(f"curb stretches: {len(st)} ({st.groupby('state').length_m.sum().round(0).to_dict()} m); legal by stretch agrees with legal_m on every face")
     by = gf.groupby("dauid").agg(block_faces=("ID_TRC", "size"), curb_m=("length_m", "sum"), net_m=("net_m", "sum"),
                                  banned_m=("banned_m", "sum"), legal_m=("legal_m", "sum"), poles=("poles", "sum"))
     by["poles_per_km"] = 1000 * by.poles / by.curb_m
