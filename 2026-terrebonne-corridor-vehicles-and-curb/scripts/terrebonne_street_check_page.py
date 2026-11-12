@@ -34,7 +34,8 @@ OUT = Path.home() / "Terrebonne-data" / "terrebonne-street-check"
 FRAME = GARAGES / "street_check_frame.csv"
 OWNER = ROOT / "derived" / "readings" / "owner_check.json"
 KEY = "terrebonne-street-check-v1"
-FIELDS = ("car_access", "kind", "places_independent", "places_total", "garage", "basis", "note")
+MIGRATIONS = sorted(OUT.glob("migration_*.json"))   # one-time corrections of answers already given (owner-confirmed), applied once per browser
+FIELDS = ("car_access", "kind", "converted", "places_independent", "places_total", "garage", "basis", "note")
 
 
 def in_lane_1954(r):
@@ -134,7 +135,8 @@ def main():
 <p class="links"><a target="_blank" rel="noopener" href="{i['apple']}">Apple Maps (Look Around)</a> · <a target="_blank" rel="noopener" href="{i['sv']}">Google street-level view</a> · <a target="_blank" rel="noopener" href="{i['map']}">Google map</a></p>
 <div class="form">
 <label>Car access <select data-f="car_access"><option value=""></option><option>yes</option><option>no</option><option>cannot tell</option></select></label>
-<label>Kind <select data-f="kind"><option value=""></option><option>own driveway</option><option>shared driveway</option><option>front pad</option><option>rear</option><option>parking lot</option><option>none</option></select></label>
+<label>Kind <select data-f="kind"><option value=""></option><option>own driveway</option><option>shared driveway</option><option>front pad</option><option>rear</option><option>parking lot</option><option>converted to other use</option><option>none</option></select></label>
+<label>Parking converted <select data-f="converted"><option value=""></option><option>no</option><option>yes, none left</option><option>yes, some left</option><option>cannot tell</option></select></label>
 <label>Places, independent <input type="number" min="0" data-f="places_independent"></label>
 <label>Places, total <input type="number" min="0" data-f="places_total"></label>
 <label>Garage <select data-f="garage"><option value=""></option><option>yes</option><option>no</option><option>cannot tell</option></select></label>
@@ -169,6 +171,8 @@ details{{margin:10px 0}} li{{margin:4px 0}}
 <li><b>Places, total:</b> all the cars the surface holds, one behind another included. Garage interiors are not counted in either number.</li>
 <li><b>Garage:</b> yes if there is one today (here you may count what you know or can see from the street).</li>
 <li>The aerial image is older than the 2024 lane. Judge the lot as it is in the most recent view you have, and say in the note if it has changed.</li>
+<li><b>Car access</b> is « yes » only when at least one private place is usable today. <b>Parking converted</b> records a lot whose driveway, pad or garage has been turned to another use: « yes, none left » (then Car access « no » and Kind « converted to other use ») or « yes, some left » (Car access « yes », Kind = what remains).</li>
+<li><b>Converted to other use:</b> the lot once had car access (a driveway, pad or garage) but it has been fenced, landscaped or built over (a garage turned into living space, a driveway turned into a yard). Give the places that remain, often none, and say in the note what was converted and whether the curb cut is still there.</li>
 <li>« Cannot tell » is a valid answer.</li>
 </ul></details>
 {chr(10).join(card(i) for i in items)}
@@ -177,6 +181,11 @@ details{{margin:10px 0}} li{{margin:4px 0}}
 const K='{KEY}'; let st={{}}; try{{st=JSON.parse(localStorage.getItem(K)||'{{}}')}}catch(e){{}}
 const cards=[...document.querySelectorAll('.card')];
 cards.forEach(c=>{{if(c.dataset.pre&&!st[c.dataset.key]){{st[c.dataset.key]=Object.assign({{prefilled:'owner_check corridor sample'}},JSON.parse(c.dataset.pre))}}}});
+const MIG={json.dumps([json.load(open(m)) for m in MIGRATIONS])};
+MIG.forEach(m=>{{const f=K+'-'+m.id;let done=false;try{{done=!!localStorage.getItem(f)}}catch(e){{}}if(done)return;
+ Object.entries(m.set).forEach(([k,v])=>{{st[k]=st[k]||{{}};const before={{}};Object.keys(v).forEach(x=>before[x]=st[k][x]===undefined?'':st[k][x]);st[k]['before_'+m.id]=before;Object.assign(st[k],v)}});
+ Object.entries(m.default_if_empty).forEach(([k,v])=>{{st[k]=st[k]||{{}};Object.entries(v).forEach(([x,y])=>{{if(!st[k][x])st[k][x]=y}})}});
+ try{{localStorage.setItem(f,new Date().toISOString())}}catch(e){{}}}});
 try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}
 function refresh(){{let n=0;cards.forEach(c=>{{const a=st[c.dataset.key]||{{}};const d=!!a.car_access;c.classList.toggle('done',d);if(d)n++}});document.getElementById('count').textContent=n+' of '+cards.length+' answered'}}
 cards.forEach(c=>{{const a=st[c.dataset.key]||{{}};c.querySelectorAll('[data-f]').forEach(el=>{{if(a[el.dataset.f]!==undefined)el.value=a[el.dataset.f];el.addEventListener('change',()=>{{st[c.dataset.key]=st[c.dataset.key]||{{}};st[c.dataset.key][el.dataset.f]=el.value;st[c.dataset.key].edited=new Date().toISOString();try{{localStorage.setItem(K,JSON.stringify(st))}}catch(e){{}}refresh()}})}})}});
