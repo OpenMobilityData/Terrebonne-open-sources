@@ -34,9 +34,14 @@ T = {"en": dict(title="Snow-loading nights, district by district: modelled autom
                      "transactions de déneigement par secteur et par jour ; opérations de ≥ {op} chargements ; chargements ponctuels exclus. Loyola compte le stationnement gratuit de l’aréna Doug-Harvey (20 places) les hivers où il était listé.")}
 
 
+ARG = dict(a.split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)    # --in=DIR --out=DIR: render another run (e.g. scripts/snow_loading.py --out=DIR)
+
+
 def main():
-    d = pd.read_csv(TABLES / "snow_loading_district_nights.csv", parse_dates=["day"])
-    S = json.load(open(ROOT / "derived/snow_loading.json"))
+    src = Path(ARG["--in"]) if "--in" in ARG else None
+    d = pd.read_csv((src or TABLES) / "snow_loading_district_nights.csv", parse_dates=["day"])
+    S = json.load(open((src or ROOT / "derived") / "snow_loading.json"))
+    out = Path(ARG["--out"]) if "--out" in ARG else HERE
     seasons = S["winters"]; dists = ["Loyola", "Notre-Dame-de-Grâce"]
     for lang, t in T.items():
         fig, axes = plt.subplots(len(seasons), 2, figsize=(13, 11), sharey=True)
@@ -59,7 +64,7 @@ def main():
                     ax.set_title(t["cols"][dn], loc="left", fontsize=10.5, fontweight="bold", color=F.INK)
         h, l = axes[0, 0].get_legend_handles_labels()
         fig.legend(h[::-1], l[::-1], loc="upper left", bbox_to_anchor=(0.10, 0.875), ncol=3, fontsize=9)
-        F.finish(fig, HERE, "snow_loading_districts", lang, t["title"], t["sub"], t["note"].format(op=S["operation_min_truckloads"]),
+        F.finish(fig, out, "snow_loading_districts", lang, t["title"], t["sub"], t["note"].format(op=S["operation_min_truckloads"]),
                  top=0.83, bottom=0.12, left=0.11, right=0.98)
     print("OK snow_loading_districts")
 

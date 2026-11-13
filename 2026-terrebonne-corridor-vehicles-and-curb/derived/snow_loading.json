@@ -101,13 +101,13 @@
     "areas_over_100_on_loading_night": 3,
     "of_which_over_100_on_ordinary_nights": 2,
     "areas_pushed_over_100_by_loading": 1,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 0.62
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 0.75
    },
    "curb_only": {
     "areas_over_100_on_loading_night": 10,
     "of_which_over_100_on_ordinary_nights": 6,
     "areas_pushed_over_100_by_loading": 4,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 2.73
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.41
    }
   },
   "q50": {
@@ -115,13 +115,13 @@
     "areas_over_100_on_loading_night": 7,
     "of_which_over_100_on_ordinary_nights": 2,
     "areas_pushed_over_100_by_loading": 5,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 1.55
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 1.85
    },
    "curb_only": {
     "areas_over_100_on_loading_night": 17,
     "of_which_over_100_on_ordinary_nights": 6,
     "areas_pushed_over_100_by_loading": 11,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.71
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 4.51
    }
   },
   "q100": {
@@ -129,13 +129,13 @@
     "areas_over_100_on_loading_night": 22,
     "of_which_over_100_on_ordinary_nights": 2,
     "areas_pushed_over_100_by_loading": 20,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.09
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.82
    },
    "curb_only": {
     "areas_over_100_on_loading_night": 22,
     "of_which_over_100_on_ordinary_nights": 6,
     "areas_pushed_over_100_by_loading": 16,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 2.78
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.44
    }
   }
  },
@@ -201,16 +201,16 @@
    },
    "nights_over_100_with_private_high": {
     "2021-2022": 18,
-    "2022-2023": 15,
+    "2022-2023": 18,
     "2023-2024": 8,
-    "2024-2025": 4,
+    "2024-2025": 19,
     "2025-2026": 16
    },
    "nights_over_100_curb_only": {
     "2021-2022": 22,
-    "2022-2023": 22,
+    "2022-2023": 24,
     "2023-2024": 9,
-    "2024-2025": 9,
+    "2024-2025": 22,
     "2025-2026": 28
    },
    "loading_nights": {
@@ -251,7 +251,7 @@
     "loading_nights_total": 127
    },
    "Notre-Dame-de-Grâce": {
-    "nights_over_100_curb_only_total": 91,
+    "nights_over_100_curb_only_total": 106,
     "nights_over_100_with_private_total": 0,
     "loading_nights_total": 132
    }
@@ -263,7 +263,7 @@
     "loading_nights_total": 127
    },
    "Notre-Dame-de-Grâce": {
-    "nights_over_100_curb_only_total": 90,
+    "nights_over_100_curb_only_total": 105,
     "nights_over_100_with_private_total": 0,
     "loading_nights_total": 132
    }
@@ -275,10 +275,126 @@
     "loading_nights_total": 127
    },
    "Notre-Dame-de-Grâce": {
-    "nights_over_100_curb_only_total": 83,
+    "nights_over_100_curb_only_total": 98,
     "nights_over_100_with_private_total": 0,
     "loading_nights_total": 131
    }
+  }
+ },
+ "passes_method": "length-volume",
+ "runs_with_more_than_one_pass": [
+  {
+   "season": "2021-2022",
+   "sector": "CDN-106",
+   "start": "2022-01-17",
+   "end": "2022-01-23",
+   "nights": 7,
+   "truckloads": 728,
+   "passes": 1.4
+  },
+  {
+   "season": "2021-2022",
+   "sector": "CDN-301",
+   "start": "2022-01-18",
+   "end": "2022-01-25",
+   "nights": 8,
+   "truckloads": 1868,
+   "passes": 1.33
+  },
+  {
+   "season": "2021-2022",
+   "sector": "CDN-301",
+   "start": "2022-02-20",
+   "end": "2022-03-03",
+   "nights": 11,
+   "truckloads": 2301,
+   "passes": 1.83
+  },
+  {
+   "season": "2022-2023",
+   "sector": "CDN-111",
+   "start": "2023-01-14",
+   "end": "2023-01-20",
+   "nights": 7,
+   "truckloads": 601,
+   "passes": 1.17
+  },
+  {
+   "season": "2022-2023",
+   "sector": "CDN-111",
+   "start": "2023-01-26",
+   "end": "2023-02-03",
+   "nights": 9,
+   "truckloads": 818,
+   "passes": 1.5
+  },
+  {
+   "season": "2022-2023",
+   "sector": "CDN-112",
+   "start": "2023-01-14",
+   "end": "2023-01-19",
+   "nights": 6,
+   "truckloads": 493,
+   "passes": 1.2
+  },
+  {
+   "season": "2022-2023",
+   "sector": "CDN-112",
+   "start": "2023-01-27",
+   "end": "2023-02-03",
+   "nights": 8,
+   "truckloads": 716,
+   "passes": 1.6
+  },
+  {
+   "season": "2022-2023",
+   "sector": "CDN-301",
+   "start": "2023-01-26",
+   "end": "2023-02-03",
+   "nights": 9,
+   "truckloads": 2698,
+   "passes": 1.5
+  },
+  {
+   "season": "2024-2025",
+   "sector": "CDN-111",
+   "start": "2025-02-08",
+   "end": "2025-03-01",
+   "nights": 22,
+   "truckloads": 1648,
+   "passes": 3.67
+  },
+  {
+   "season": "2024-2025",
+   "sector": "CDN-112",
+   "start": "2025-02-08",
+   "end": "2025-02-27",
+   "nights": 18,
+   "truckloads": 1564,
+   "passes": 3.6
+  },
+  {
+   "season": "2024-2025",
+   "sector": "CDN-301",
+   "start": "2025-02-08",
+   "end": "2025-03-02",
+   "nights": 22,
+   "truckloads": 4804,
+   "passes": 3.67
+  }
+ ],
+ "median_full_operation": {
+  "CDN-111": {
+   "loading_days": 6.0,
+   "truckloads": 284.0
+  },
+  "CDN-112": {
+   "loading_days": 5.0,
+   "truckloads": 277.0
+  },
+  "CDN-301": {
+   "loading_days": 6.0,
+   "truckloads": 710.0
   }
  }
 }

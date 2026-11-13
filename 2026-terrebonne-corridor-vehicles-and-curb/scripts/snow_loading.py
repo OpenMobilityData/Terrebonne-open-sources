@@ -33,7 +33,9 @@ Writes derived/tables/snow_loading_{operations,areas,area_nights,district_nights
 """
 import glob
 import json
+import sys
 import warnings
+from pathlib import Path
 
 import geopandas as gpd
 import numpy as np
@@ -47,6 +49,13 @@ OP_MIN, OP_SENS = 100, (50, 200)
 QS = (0.25, 0.5, 1.0)
 PLACE_M = 5.5
 LOT_RADIUS = 500
+# Passes (owner's decision, Nov 12, 2026): a run of loading days counts as several passes through the sector when it is both
+# longer and heavier than the sector's median full operation: passes = max(1, min(nights / median nights, truckloads / median
+# truckloads)); each night's share = its share of the run's truckloads x passes (at most 1). Without it, the run of Feb 8 -
+# Mar 2, 2025 (22 nights after 34 and 36.8 cm) counted as one pass and its nights were diluted. --passes=one gives the earlier
+# rule (one pass per run), kept as a sensitivity in derived/sensitivity/one-pass/. --out=DIR writes the tables and JSON there.
+PASSES = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--passes=")), "length-volume")
+OUT = next((Path(a.split("=", 1)[1]) for a in sys.argv[1:] if a.startswith("--out=")), None)
 LOADING = REPO.parent / "Terrebonne-access-requests" / "2026-300" / "derived" / "loading_daily.csv"
 SECTORS = TP / "montreal-opendata" / "secteurs-deneigement"
 LOTS = TP / "montreal-opendata" / "stationnements-deneigement"
@@ -85,11 +94,14 @@ def operations(loads, y0, op_min):
             rows.append(dict(season=season(y0), sector=sec, start=r[0][0].date(), end=r[-1][0].date(), loading_days=len(r),
                              truckloads=int(tot), full_operation=full))
             if full:
-                nights += [dict(season=season(y0), sector=sec, day=day, share_of_operation=v / tot) for day, v in r]
+                nights += [dict(season=season(y0), sector=sec, start=r[0][0].date(), day=day, share_of_operation=v / tot) for day, v in r]
     return pd.DataFrame(rows), pd.DataFrame(nights)
 
 
 def main():
+    global T_OUT, J_OUT
+    T_OUT, J_OUT = (OUT, OUT) if OUT else (TABLES, ROOT / "derived")
+    T_OUT.mkdir(parents=True, exist_ok=True)
     m = pd.read_csv(TABLES / "offstreet_measured_by_da.csv", dtype={"dauid": str}).sort_values(["west_to_east", "frontage"]).reset_index(drop=True)
     m["no"] = np.arange(1, len(m) + 1)
     m["curb_places"] = m.legal_m / PLACE_M
@@ -144,11 +156,24 @@ def main():
         nights_by[op_min] = pd.concat(n)
         if op_min == OP_MIN:
             ops_all = pd.concat(o)
-    ops_all.to_csv(TABLES / "snow_loading_operations.csv", index=False)
-    full = ops_all[ops_all.full_operation]
+    full = ops_all[ops_all.full_operation].copy()
+    med = full.groupby("sector")[["loading_days", "truckloads"]].median()
+    full["passes"] = 1.0
+    if PASSES == "length-volume":
+        full["passes"] = [max(1.0, min(r.loading_days / med.loc[r.sector, "loading_days"], r.truckloads / med.loc[r.sector, "truckloads"])) for r in full.itertuples()]
+        for k, nn in nights_by.items():
+            o = pd.concat([operations(ld, y0, k)[0] for y0 in WINTERS]); o = o[o.full_operation]
+            o["passes"] = [max(1.0, min(r.loading_days / med.loc[r.sector, "loading_days"], r.truckloads / med.loc[r.sector, "truckloads"])) for r in o.itertuples()]
+            nn = nn.merge(o[["season", "sector", "start", "passes"]], on=["season", "sector", "start"], how="left")
+            nn["share_of_operation"] = (nn.share_of_operation * nn.passes).clip(upper=1.0)
+            nights_by[k] = nn.drop(columns="passes")
+        print("passes method:", PASSES, "| median full operation by sector:", med.to_dict("index"))
+        print(full[full.passes > 1][["season", "sector", "start", "end", "loading_days", "truckloads", "passes"]].round(2).to_string(index=False))
+    ops_all = ops_all.merge(full[["season", "sector", "start", "passes"]], on=["season", "sector", "start"], how="left")
+    ops_all.to_csv(T_OUT / "snow_loading_operations.csv", index=False)
 
     def n_ops(sec, ss):
-        return int(((full.sector == sec) & (full.season == ss)).sum())
+        return float(full[(full.sector == sec) & (full.season == ss)].passes.sum())
 
     # ---------------- area scale: each area on its own loading nights
     area_rows, night_rows = [], []
@@ -179,7 +204,7 @@ def main():
                                            nights_over_100_with_private_low=round(k / q) * ((r.low_90 / avail_with > 1) & (owl <= 1)),
                                            nights_over_100_with_private_high=round(k / q) * ((r.high_90 / avail_with > 1) & (owh <= 1))))
     an = pd.DataFrame(night_rows)
-    an.to_csv(TABLES / "snow_loading_area_nights.csv", index=False)
+    an.to_csv(T_OUT / "snow_loading_area_nights.csv", index=False)
     # per area: ordinary share, the share on its loading night (main sector, last winter's sectors), nights over 100 % per winter
     agg = an.groupby(["no", "q"]).agg(nights_with=("nights_over_100_with_private", "sum"), nights_curb=("nights_over_100_curb_only", "sum"),
                                      nights_with_low=("nights_over_100_with_private_low", "sum"), nights_with_high=("nights_over_100_with_private_high", "sum"),
@@ -232,7 +257,7 @@ def main():
     areas["adjacent_spare_curb_places"] = [float(spare[areas.dauid.isin(nb[d])].sum()) for d in areas.dauid]
     spare_half = (0.5 * areas.curb_places - (areas.automobiles_modelled - areas.private_places).clip(lower=0)).clip(lower=0)   # neighbours under the same ban that night
     areas["adjacent_spare_curb_places_if_also_loaded"] = [float(spare_half[areas.dauid.isin(nb[d])].sum()) for d in areas.dauid]
-    areas.to_csv(TABLES / "snow_loading_areas.csv", index=False, float_format="%.3f")
+    areas.to_csv(T_OUT / "snow_loading_areas.csv", index=False, float_format="%.3f")
 
     # ---------------- district scale: night by night
     curb_ds = share.merge(cor[["dauid", "district"]], on="dauid").groupby(["season", "district", "sector"]).length_m.sum() / PLACE_M
@@ -253,7 +278,7 @@ def main():
                                    share_with_private=autos / aw, share_with_private_low=lo / aw, share_with_private_high=hi / aw,
                                    share_curb_only=autos / ac))
     dn = pd.DataFrame(dn)
-    dn[dn.operation_min_truckloads == OP_MIN].drop(columns="operation_min_truckloads").to_csv(TABLES / "snow_loading_district_nights.csv", index=False, float_format="%.4f")
+    dn[dn.operation_min_truckloads == OP_MIN].drop(columns="operation_min_truckloads").to_csv(T_OUT / "snow_loading_district_nights.csv", index=False, float_format="%.4f")
     ds = dn.groupby(["operation_min_truckloads", "district", "season"]).agg(
         loading_nights=("curb_places_under_ban", lambda v: int((v > 0).sum())),
         max_share_of_curb_under_ban=("share_of_curb_under_ban", "max"),
@@ -263,7 +288,7 @@ def main():
         nights_over_100_with_private_high=("share_with_private_high", lambda v: int((v > 1).sum())),
         share_ordinary_curb_only=("share_curb_only", "min"), max_share_curb_only=("share_curb_only", "max"),
         nights_over_100_curb_only=("share_curb_only", lambda v: int((v > 1).sum()))).reset_index()
-    ds.to_csv(TABLES / "snow_loading_districts.csv", index=False, float_format="%.3f")
+    ds.to_csv(T_OUT / "snow_loading_districts.csv", index=False, float_format="%.3f")
 
     # ---------------- summary
     def by_q(q, col):
@@ -293,7 +318,11 @@ def main():
                                                               "nights_over_100_with_private_total": int(x.nights_over_100_with_private.sum()),
                                                               "loading_nights_total": int(x.loading_nights.sum())}
                                                           for d, x in g.groupby("district")} for k, g in ds.groupby("operation_min_truckloads")}}
-    json.dump(out, open(ROOT / "derived" / "snow_loading.json", "w"), indent=1, ensure_ascii=False, default=str)
+    out["passes_method"] = PASSES
+    out["runs_with_more_than_one_pass"] = [dict(season=r.season, sector=r.sector, start=str(r.start), end=str(r.end), nights=int(r.loading_days), truckloads=int(r.truckloads),
+                                                passes=round(float(r.passes), 2)) for r in full[full.passes > 1.0].itertuples() if r.sector in ("CDN-301", "CDN-111", "CDN-112", "CDN-105", "CDN-106")]
+    out["median_full_operation"] = {k: v for k, v in med.round(1).to_dict("index").items() if k in ("CDN-301", "CDN-111", "CDN-112")}
+    json.dump(out, open(J_OUT / "snow_loading.json", "w"), indent=1, ensure_ascii=False, default=str)
     print(json.dumps(out, indent=1, ensure_ascii=False, default=str)[:4000])
     print(areas[["no", "district", "sectors_2025_26", "share_ordinary_with_private", "share_q50_with_private", "nights_per_winter_q50_with_private", "share_q50_curb_only", "nights_per_winter_q50_curb_only"]].round(2).to_string())
     print("OK snow_loading")
