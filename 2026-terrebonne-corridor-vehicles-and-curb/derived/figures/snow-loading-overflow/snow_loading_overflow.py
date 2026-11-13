@@ -23,29 +23,29 @@ from corridor_lib import CRS, DISTRICTS, LANE, TABLES  # noqa: E402
 
 BINS = [(0.0, 0.0, "#eceee9", F.INK), (0.0, 0.15, "#fde0c5", F.INK), (0.15, 0.30, "#f6a96c", F.INK), (0.30, 0.50, "#e0662e", "#ffffff"), (0.50, 1.0, "#9c3a12", "#ffffff")]
 T = {"en": dict(
-        title="On its own snow-loading night, what share of an area's registered cars would not fit in it?",
-        sub="Each area along the lane on the night its streets are cleared, if half its curb is banned (the note's central case), counting driveways and garages. The share does not depend on\n"
-            "the order in which the City clears streets. Most areas fit all their cars; where some do not, the curb in the areas next to them has room for them",
-        exc=",\nand also if they are cleared the same night, except next to area {a}.",
+        title="On a snow-loading night, what share of a zone's residents would have to park their car in another zone?",
+        sub="Each zone along the lane on the night its streets are cleared, if half its curb is banned (the note's central case), counting driveways and garages. The share does not depend on\n"
+            "the order in which the City clears streets. Most zones fit all their cars; where some do not, the curb in the zones next to them has room for them",
+        exc=",\nand also if they are cleared the same night, except next to zone {a}.",
         none="all fit", bins=["up to 15 %", "15 to 30 %", "30 to 50 %", "over 50 %"],
         lab="{p} %\n≈{n} cars", hatch="hatched: mostly large buildings, whose underground garages are not counted (overstated)",
-        side="Areas that would not fit all their cars, and the spare curb next door",
-        row="area {no}: {n} cars; spare curb in touching areas {s} ({h} if they are loaded the same night)",
+        side="Zones that would not fit all their cars, and the spare curb next door",
+        row="zone {no}: {n} cars; spare curb in touching zones {s} ({h} if they are loaded the same night)",
         lane="the lane", dist="Loyola | NDG district line",
-        foot="Cars: registered automobiles of the area's households (SAAQ, Dec. 31, 2024), MODELLED below the postal district; they stand in for overnight demand. Places: legal curb at 5.5 m per car\n"
+        foot="Cars: registered automobiles of the zone's households (SAAQ, Dec. 31, 2024), MODELLED below the postal district; they stand in for overnight demand. Places: legal curb at 5.5 m per car\n"
              "(MEASURED, an upper bound) and driveways and garages of buildings of five dwellings or fewer (MEASURED, calibrated on a street-level check). Which streets are cleared on which night is not\n"
              "published; half the curb a night is an assumption (one side at a time). Capacity, not occupancy. Preliminary results, not peer reviewed. github.com/OpenMobilityData/Terrebonne-open-sources"),
      "fr": dict(
-        title="La nuit de son propre chargement de neige, quelle part des voitures immatriculées d’une aire n’y trouverait pas de place ?",
-        sub="Chaque aire le long de la piste la nuit où ses rues sont déneigées, si la moitié de sa bordure est interdite (cas central de la note), entrées et garages compris. La part ne dépend pas de\n"
-            "l’ordre dans lequel la Ville déneige les rues. La plupart des aires logent toutes leurs voitures ; là où ce n’est pas le cas, la bordure des aires voisines a de la place",
-        exc=",\nmême si elles sont déneigées la même nuit, sauf autour de l’aire {a}.",
+        title="Une nuit de chargement de la neige, quelle part des résidents d’une zone devrait garer sa voiture dans une autre zone ?",
+        sub="Chaque zone le long de la piste la nuit où ses rues sont déneigées, si la moitié de sa bordure est interdite (cas central de la note), entrées et garages compris. La part ne dépend pas de\n"
+            "l’ordre dans lequel la Ville déneige les rues. La plupart des zones logent toutes leurs voitures ; là où ce n’est pas le cas, la bordure des zones voisines a de la place",
+        exc=",\nmême si elles sont déneigées la même nuit, sauf autour de la zone {a}.",
         none="toutes logées", bins=["jusqu’à 15 %", "15 à 30 %", "30 à 50 %", "plus de 50 %"],
         lab="{p} %\n≈{n} voit.", hatch="hachuré : surtout de grands immeubles, dont les garages souterrains ne sont pas comptés (surestimé)",
-        side="Aires qui ne logeraient pas toutes leurs voitures, et la bordure libre à côté",
-        row="aire {no} : {n} voitures ; bordure libre dans les aires contiguës {s} ({h} si elles sont déneigées la même nuit)",
+        side="Zones qui ne logeraient pas toutes leurs voitures, et la bordure libre à côté",
+        row="zone {no} : {n} voitures ; bordure libre dans les zones contiguës {s} ({h} si elles sont déneigées la même nuit)",
         lane="la piste", dist="limite des districts Loyola | NDG",
-        foot="Voitures : automobiles immatriculées des ménages de l’aire (SAAQ, 31 déc. 2024), MODÉLISÉES sous la RTA ; elles tiennent lieu de la demande de nuit. Places : bordure légale à 5,5 m par voiture\n"
+        foot="Voitures : automobiles immatriculées des ménages de la zone (SAAQ, 31 déc. 2024), MODÉLISÉES sous la RTA ; elles tiennent lieu de la demande de nuit. Places : bordure légale à 5,5 m par voiture\n"
              "(MESURÉE, borne supérieure) et entrées et garages des immeubles de cinq logements ou moins (MESURÉS, calés sur une vérification de la rue). Les rues déneigées chaque nuit ne sont pas\n"
              "publiées ; la moitié de la bordure par nuit est une hypothèse (un côté à la fois). Capacité, pas occupation. Résultats préliminaires, non révisés par des pairs. github.com/OpenMobilityData/Terrebonne-open-sources")}
 
