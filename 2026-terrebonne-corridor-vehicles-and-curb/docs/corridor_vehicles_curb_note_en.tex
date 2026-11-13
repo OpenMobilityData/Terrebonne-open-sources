@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}
 \usepackage[a4paper,margin=2.2cm]{geometry}\usepackage{graphicx,booktabs,longtable,amsmath,caption,xcolor,enumitem,array,float}\usepackage[hidelinks]{hyperref}
 \captionsetup{font=small,labelfont=bf}\setlength{\parskip}{0.55em}\setlength{\parindent}{0pt}\setlist{itemsep=0.25em,topsep=0.3em}\widowpenalty=10000\clubpenalty=10000\raggedbottom
-\newcommand{\docversion}{2026-11-12-17-35-13}
+\newcommand{\docversion}{2026-11-12-20-21-04}
 \begin{document}
 {\LARGE\bfseries Automobiles and curb along rue de Terrebonne\par}\vspace{0.3em}
 {\large Registered vehicles known by postal district, modelled below it; legal curb measured block face by block face\par}\vspace{0.6em}
@@ -142,6 +142,25 @@ Figure~\ref{fig:corridor-parking-map} puts every source on one map: each area sh
 
 \begin{figure}[H]\centering\includegraphics[width=1.0\textwidth]{../derived/figures/status-map/status_map_en.png}\caption{Modelled automobiles as a share of places, by area. A: curb and private places; B: curb alone. Hatched in A: areas where most households live in buildings of six dwellings or more, whose garages are not counted.\label{fig:status-map}}\end{figure}
 
+\subsection{Snow-loading nights}\label{sec:snow}
+On a snow-loading night parking is banned on the streets being cleared. The City publishes the truckloads hauled per snow-removal sector and per day, and each season\textquoteright{}s sector outlines; it does not publish which street, or which side, was under a ban on which night. Info-Neige (Planif-Neige) is offered as a live service with a token, with no history on the open-data portal (checked November 12, 2026). That part is therefore replaced by assumptions, stated here and given a range. The figures below compare capacity on a loading night; none is an observation of a loading night.
+
+\textbf{Operations.} The corridor\textquoteright{}s legal curb lies in three sectors in 2025--26: CDN-301 (28.7\,km), CDN-111 (8.1\,km) and CDN-112 (0.4\,km); in 2021--22 it lay in the sectors of that season (CDN-301, CDN-105, CDN-106). A loading operation is taken to be a run of loading days in a sector, one-day gaps allowed, of at least 100 truckloads, between December 1 and March 31; 68 smaller runs in the borough\textquoteright{}s sectors are treated as spot removals and left out. CDN-301 had 4, 4, 2, 2 and 5 operations in the five winters 2021--22 to 2025--26. Each block face is assumed to be under a ban for one night per operation, during the night hours, when registered automobiles are at home.
+
+\textbf{Two scales.} \emph{Area}: displaced cars stay in their own area. On the area\textquoteright{}s loading nights a share of its curb is under a ban: 25\,\% (its streets spread over four nights, a side at a time), 50\,\% (a side a night, two nights: the central case) or 100\,\% (both sides the same night). \emph{District}: displaced cars can park anywhere in the district\textquoteright{}s part of the corridor; on each night the share of its curb under a ban is that night\textquoteright{}s truckloads in the sector over the operation\textquoteright{}s total, as if loading proceeded evenly over the sector. That share never exceeds 36\,\%.
+
+\textbf{Free lots.} The City\textquoteright{}s list of lots open during loading holds one lot within 1.5\,km of the corridor: the Doug-Harvey arena lot (4985 West Hill), 20 places, 18:00--07:00, listed for 2021--22, 2022--23, 2023--24 and not for the last two winters. Its places are added in the winters it was listed, to each area within 500\,m and to the Loyola district.
+
+\textbf{Area scale.} In the central case, on its loading night, 7 of the 22 areas have more modelled automobiles than places, private places included; 2 of them (areas 6 and 15, mostly of large buildings whose garages are not counted) are above 100\,\% on an ordinary night already. The other 5 (areas 12, 13, 19, 21, 22) are pushed above 100\,\% on 6.8 nights a winter on average (two nights an operation, five winters). With the curb alone, 17 areas are above 100\,\% on their loading night, 6 of them already on an ordinary night. If the ban takes 25\,\% of the curb a night, 3 areas are above 100\,\% with private places (1 pushed over by loading); if it takes 100\,\%, all 22 are (Figure~\ref{fig:snow-areas}).
+
+\textbf{District scale.} The Loyola part of the corridor stays below 100\,\% on every night of the five winters, with the curb alone (at most 77\,\%) as with private places. The Notre-Dame-de-Grâce part stays below 100\,\% with private places (at most 92\,\%); with the curb alone it is above 100\,\% on 22, 22, 9, 9 and 28 nights in the five winters, of 29, 27, 12, 28 and 36 nights with loading in its sectors. At the upper end of the automobile interval, with private places, it is above 100\,\% on 18, 15, 8, 4 and 16 nights. With a threshold of 50 or 200 truckloads for an operation, the NDG count with the curb alone over the five winters is 91 or 83, against 90 (Figure~\ref{fig:snow-districts}).
+
+\textbf{What these figures cannot show.} Which streets were under a ban on which night, and for which hours; whether loading proceeds evenly over a sector; where displaced cars actually went. A long run of loading days may hold two operations (February 2025: 22 days counted as one), which would add nights. Visitors, institutions and vehicles from elsewhere are not in the automobile figure; vehicles kept in garages are not in the places. As everywhere in this note, a share of places compares capacity, not occupancy; registered automobiles stand in for overnight demand.
+
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{../derived/figures/snow-loading-areas/snow_loading_areas_en.png}\caption{Snow-loading nights, area by area: the share of places on an ordinary night and on the area\textquoteright{}s loading night, under the three assumptions.}\label{fig:snow-areas}\end{figure}
+
+\begin{figure}[H]\centering\includegraphics[width=\textwidth]{../derived/figures/snow-loading-districts/snow_loading_districts_en.png}\caption{Snow-loading nights, district by district, five winters, night by night.}\label{fig:snow-districts}\end{figure}
+
 \subsection{A check from the 2015 LiDAR night}
 The City\textquoteright{}s 2015 LiDAR was flown at night. Counted by eye along rue de Terrebonne: 183 cars at the curbs and 253 on the lots along the street, 436 for the 573 dwellings addressed on the street: 0.76 per dwelling. The model gives 0.84 per household for the areas that hold those dwellings.
 \begin{table}[H]\centering\small
@@ -163,12 +182,12 @@ The two quantities are not the same: the LiDAR sees visitors\textquoteright{} ca
 \item \textbf{Measured, with a measured error:} private places of the corridor\textquoteright{}s small buildings, from a reading of every lot calibrated on a random sample checked from the street.
 \item \textbf{Not counted:} garage interiors; the parking of buildings of six dwellings or more, several of which have underground garages.
 \item \textbf{Modelled:} the automobiles of every area smaller than an FSA. The model shares a known total better than households alone at the one level where this can be tested; below the FSA nothing can test it, and the 2015 check does not confirm its area-by-area differences.
-\item \textbf{Not measured by anyone:} where registered vehicles are kept; occupancy of the curb since the lane was built.
+\item \textbf{Not measured by anyone:} where registered vehicles are kept; occupancy of the curb since the lane was built; which streets are under a snow-loading ban on which night (not published).
 \item The curb reading rests on the sign inventory as published on October 23, 2026 and on rules for arrows that were checked on rue de Terrebonne only.
 \end{itemize}
 
 \section{Reproducibility}
-Scripts, tables and figures: \url{https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-terrebonne-corridor-vehicles-and-curb}. Order: \texttt{build\_dataset.py}, \texttt{curb\_supply.py}, \texttt{demand\_model.py}, \texttt{corridor.py}, \texttt{offstreet\_strips.py}, \texttt{offstreet\_crops.py}, \texttt{offstreet\_readings\_v2.py}, \texttt{offstreet.py}, the figure scripts under \texttt{derived/figures/}, \texttt{build\_docs.py}. The census, roll, sign and postal-code files are read from outside the repository (sources and dates in the folder\textquoteright{}s README); the tables by dissemination area and by block face are in \texttt{derived/tables/}.
+Scripts, tables and figures: \url{https://github.com/OpenMobilityData/Terrebonne-open-sources/tree/main/2026-terrebonne-corridor-vehicles-and-curb}. Order: \texttt{build\_dataset.py}, \texttt{curb\_supply.py}, \texttt{demand\_model.py}, \texttt{corridor.py}, \texttt{offstreet\_strips.py}, \texttt{offstreet\_crops.py}, \texttt{offstreet\_readings\_v2.py}, \texttt{offstreet.py}, \texttt{snow\_loading.py}, the figure scripts under \texttt{derived/figures/}, \texttt{build\_docs.py}. The census, roll, sign and postal-code files are read from outside the repository (sources and dates in the folder\textquoteright{}s README); the tables by dissemination area and by block face are in \texttt{derived/tables/}.
 
 \appendix
 \section{Tables}

@@ -1,0 +1,277 @@
+{
+ "winters": [
+  "2021-2022",
+  "2022-2023",
+  "2023-2024",
+  "2024-2025",
+  "2025-2026"
+ ],
+ "window": "December 1 to March 31",
+ "operation_min_truckloads": 100,
+ "operations_per_winter": {
+  "2021-2022": {
+   "CDN-105": 4,
+   "CDN-106": 5,
+   "CDN-107": 4,
+   "CDN-108": 4,
+   "CDN-109": 3,
+   "CDN-110": 4,
+   "CDN-301": 4
+  },
+  "2022-2023": {
+   "CDN-111": 4,
+   "CDN-112": 4,
+   "CDN-113": 4,
+   "CDN-114": 4,
+   "CDN-115": 4,
+   "CDN-116": 4,
+   "CDN-301": 4,
+   "CDN-RE": 2
+  },
+  "2023-2024": {
+   "CDN-111": 2,
+   "CDN-112": 2,
+   "CDN-113": 2,
+   "CDN-114": 2,
+   "CDN-115": 2,
+   "CDN-116": 2,
+   "CDN-301": 2
+  },
+  "2024-2025": {
+   "CDN-111": 2,
+   "CDN-112": 2,
+   "CDN-113": 2,
+   "CDN-114": 2,
+   "CDN-115": 2,
+   "CDN-116": 3,
+   "CDN-301": 2,
+   "CDN-RE": 1
+  },
+  "2025-2026": {
+   "CDN-111": 5,
+   "CDN-112": 5,
+   "CDN-113": 5,
+   "CDN-114": 5,
+   "CDN-115": 4,
+   "CDN-116": 5,
+   "CDN-301": 5
+  }
+ },
+ "spot_runs_left_out": 68,
+ "sector_curb_km_2025_26": {
+  "CDN-111": 8.11,
+  "CDN-112": 0.38,
+  "CDN-301": 28.66
+ },
+ "free_lot": {
+  "2021-2022": [
+   {
+    "places": 20,
+    "where": "Aréna Doug-Harvey, 4985, avenue West Hill",
+    "hours": "18:00 à 07:00"
+   }
+  ],
+  "2022-2023": [
+   {
+    "places": 20,
+    "where": "Aréna Doug-Harvey, 4985, avenue West Hill",
+    "hours": "18:00 à 07:00"
+   }
+  ],
+  "2023-2024": [
+   {
+    "places": 20,
+    "where": "Aréna Doug-Harvey, 4985, avenue West Hill",
+    "hours": "18:00 à 07:00"
+   }
+  ],
+  "2024-2025": [],
+  "2025-2026": []
+ },
+ "area_scale": {
+  "q25": {
+   "with_private": {
+    "areas_over_100_on_loading_night": 3,
+    "of_which_over_100_on_ordinary_nights": 2,
+    "areas_pushed_over_100_by_loading": 1,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 0.62
+   },
+   "curb_only": {
+    "areas_over_100_on_loading_night": 10,
+    "of_which_over_100_on_ordinary_nights": 6,
+    "areas_pushed_over_100_by_loading": 4,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 2.73
+   }
+  },
+  "q50": {
+   "with_private": {
+    "areas_over_100_on_loading_night": 7,
+    "of_which_over_100_on_ordinary_nights": 2,
+    "areas_pushed_over_100_by_loading": 5,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 1.55
+   },
+   "curb_only": {
+    "areas_over_100_on_loading_night": 17,
+    "of_which_over_100_on_ordinary_nights": 6,
+    "areas_pushed_over_100_by_loading": 11,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.71
+   }
+  },
+  "q100": {
+   "with_private": {
+    "areas_over_100_on_loading_night": 22,
+    "of_which_over_100_on_ordinary_nights": 2,
+    "areas_pushed_over_100_by_loading": 20,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.09
+   },
+   "curb_only": {
+    "areas_over_100_on_loading_night": 22,
+    "of_which_over_100_on_ordinary_nights": 6,
+    "areas_pushed_over_100_by_loading": 16,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 2.78
+   }
+  }
+ },
+ "district_scale": {
+  "Loyola": {
+   "nights_over_100_with_private": {
+    "2021-2022": 0,
+    "2022-2023": 0,
+    "2023-2024": 0,
+    "2024-2025": 0,
+    "2025-2026": 0
+   },
+   "nights_over_100_with_private_high": {
+    "2021-2022": 0,
+    "2022-2023": 0,
+    "2023-2024": 0,
+    "2024-2025": 0,
+    "2025-2026": 0
+   },
+   "nights_over_100_curb_only": {
+    "2021-2022": 0,
+    "2022-2023": 0,
+    "2023-2024": 0,
+    "2024-2025": 0,
+    "2025-2026": 0
+   },
+   "loading_nights": {
+    "2021-2022": 28,
+    "2022-2023": 26,
+    "2023-2024": 11,
+    "2024-2025": 26,
+    "2025-2026": 36
+   },
+   "max_share_with_private": {
+    "2021-2022": 0.527,
+    "2022-2023": 0.529,
+    "2023-2024": 0.525,
+    "2024-2025": 0.525,
+    "2025-2026": 0.492
+   },
+   "max_share_curb_only": {
+    "2021-2022": 0.768,
+    "2022-2023": 0.774,
+    "2023-2024": 0.764,
+    "2024-2025": 0.765,
+    "2025-2026": 0.696
+   },
+   "max_share_of_curb_under_ban": {
+    "2021-2022": 0.351,
+    "2022-2023": 0.356,
+    "2023-2024": 0.348,
+    "2024-2025": 0.343,
+    "2025-2026": 0.278
+   }
+  },
+  "Notre-Dame-de-Grâce": {
+   "nights_over_100_with_private": {
+    "2021-2022": 0,
+    "2022-2023": 0,
+    "2023-2024": 0,
+    "2024-2025": 0,
+    "2025-2026": 0
+   },
+   "nights_over_100_with_private_high": {
+    "2021-2022": 18,
+    "2022-2023": 15,
+    "2023-2024": 8,
+    "2024-2025": 4,
+    "2025-2026": 16
+   },
+   "nights_over_100_curb_only": {
+    "2021-2022": 22,
+    "2022-2023": 22,
+    "2023-2024": 9,
+    "2024-2025": 9,
+    "2025-2026": 28
+   },
+   "loading_nights": {
+    "2021-2022": 29,
+    "2022-2023": 27,
+    "2023-2024": 12,
+    "2024-2025": 28,
+    "2025-2026": 36
+   },
+   "max_share_with_private": {
+    "2021-2022": 0.925,
+    "2022-2023": 0.919,
+    "2023-2024": 0.878,
+    "2024-2025": 0.877,
+    "2025-2026": 0.895
+   },
+   "max_share_curb_only": {
+    "2021-2022": 1.46,
+    "2022-2023": 1.444,
+    "2023-2024": 1.345,
+    "2024-2025": 1.343,
+    "2025-2026": 1.385
+   },
+   "max_share_of_curb_under_ban": {
+    "2021-2022": 0.364,
+    "2022-2023": 0.357,
+    "2023-2024": 0.309,
+    "2024-2025": 0.301,
+    "2025-2026": 0.322
+   }
+  }
+ },
+ "district_sensitivity_operation_min": {
+  "50": {
+   "Loyola": {
+    "nights_over_100_curb_only_total": 0,
+    "nights_over_100_with_private_total": 0,
+    "loading_nights_total": 127
+   },
+   "Notre-Dame-de-Grâce": {
+    "nights_over_100_curb_only_total": 91,
+    "nights_over_100_with_private_total": 0,
+    "loading_nights_total": 132
+   }
+  },
+  "100": {
+   "Loyola": {
+    "nights_over_100_curb_only_total": 0,
+    "nights_over_100_with_private_total": 0,
+    "loading_nights_total": 127
+   },
+   "Notre-Dame-de-Grâce": {
+    "nights_over_100_curb_only_total": 90,
+    "nights_over_100_with_private_total": 0,
+    "loading_nights_total": 132
+   }
+  },
+  "200": {
+   "Loyola": {
+    "nights_over_100_curb_only_total": 0,
+    "nights_over_100_with_private_total": 0,
+    "loading_nights_total": 127
+   },
+   "Notre-Dame-de-Grâce": {
+    "nights_over_100_curb_only_total": 83,
+    "nights_over_100_with_private_total": 0,
+    "loading_nights_total": 131
+   }
+  }
+ }
+}
