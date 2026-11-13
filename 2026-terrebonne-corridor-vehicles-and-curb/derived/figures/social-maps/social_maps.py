@@ -40,10 +40,10 @@ T = {"en": dict(
      "fr": dict(
         t1="Le corridor de Terrebonne : voitures immatriculées, bordure et stationnement privé",
         s1="Aires colorées selon les automobiles immatriculées (modélisées d’après les données de la SAAQ, 2024). Orange : bordure légale, à 10 m des intersections. Vert : places privées rue de Terrebonne, vérifiées lot par lot.",
-        t2="Voitures immatriculées en part des places de stationnement, aire par aire",
-        s2="Vert : moins de 80 %. Jaune : 80 à 100 %. Rouge : plus de 100 %. Une part compare des voitures immatriculées à des places : un indicateur de la demande de nuit, pas un dénombrement de voitures garées.",
+        t2="Voitures immatriculées en part des places de stationnement, zone par zone",
+        s2="Vert : moins de 80 %. Jaune : 80 à 100 %. Rouge : plus de 100 %. Voitures immatriculées comparées aux places : un indicateur de la demande de nuit, pas un dénombrement.",
         a="A. Bordure et places privées", b="B. Bordure seulement (chaque voiture immatriculée gardée dans la rue)",
-        cb="automobiles modélisées par aire", curb="bordure légale", p1="1 place privée", p2="2", p3="3 ou plus", ug="garage souterrain (non compté)",
+        cb="automobiles modélisées par zone", curb="bordure légale", p1="1 place privée", p2="2", p3="3 ou plus", ug="garage souterrain (non compté)",
         conv="stationnement converti, aucune place", none="aucune place privée", lane="la piste", hatch="A, hachuré : surtout de grands immeubles, dont les garages ne sont pas comptés",
         dist="{d} : {a} % avec les places privées, {b} % bordure seulement", loy="District de Loyola", ndg="District de NDG",
         src="Sources : fichiers de véhicules de la SAAQ (demande 03.06.34729) ; Statistique Canada, Recensement de 2021 ; données ouvertes de la Ville de Montréal (géobase, panneaux, rôle, districts). "
