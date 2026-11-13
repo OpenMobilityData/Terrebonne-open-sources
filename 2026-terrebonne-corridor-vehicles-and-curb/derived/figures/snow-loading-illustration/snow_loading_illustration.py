@@ -53,7 +53,8 @@ T = {"en": dict(
              "Résultats préliminaires, non révisés par des pairs. github.com/OpenMobilityData/Terrebonne-open-sources")}
 
 
-def main():
+def prepare():
+    """The corridor's legal curb sides with their illustrative night, rotated so the lane is horizontal; and the real nightly shares."""
     da = gpd.read_file(TABLES / "da_corridor.geojson").to_crs(CRS); da = da[da.set == "corridor"]
     cs = gpd.read_file(TABLES / "curb_stretches.geojson").to_crs(CRS)
     cs = cs[cs.dauid.isin(da.dauid) & cs.state.isin(["legal", "half"])].copy()
@@ -98,6 +99,11 @@ def main():
     cs = cs[~cs.geometry.is_empty]
     bounds = da.geometry.union_all().buffer(40)
     edge = sec.boundary.intersection(bounds)
+    return cs, da, lane, edge, by_night
+
+
+def main():
+    cs, da, lane, edge, by_night = prepare()
     for lang, t in T.items():
         fig = plt.figure(figsize=(16, 9))
         ax = fig.add_axes([0.005, 0.33, 0.99, 0.52])
