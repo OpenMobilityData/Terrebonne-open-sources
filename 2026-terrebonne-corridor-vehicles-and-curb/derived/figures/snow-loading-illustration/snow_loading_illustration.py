@@ -37,7 +37,7 @@ T = {"en": dict(
         title="How a snow-loading operation moves through the corridor: an illustration",
         sub="Each coloured line is a side of a street with legal parking, coloured by the night its parking is banned for loading. The City does not publish which streets are cleared\n"
             "on which night, so the ORDER shown here is invented. What is real: how much was loaded each night of the operation of January 17–22, 2026 (bars, below).",
-        badge="ILLUSTRATION – not the City's schedule", night="night {i}: {d} Jan.", lane="the lane (rue de Terrebonne)", sector="snow-removal sector boundary", sec="sector {s}: its own operation, the same nights",
+        badge="ILLUSTRATION – not the City's schedule", night="night {i}", lane="the lane (rue de Terrebonne)", sector="snow-removal sector boundary", sec="sector {s}: its own operation, the same nights",
         bars="Share of the corridor's curb under a ban, each night (from the City's truckload counts, Jan. 17–22, 2026): real",
         foot="Assumed, as in the note's central case: each side of a street is banned one night per operation; a night's share of the curb follows its share of the truckloads. "
              "Illustrated: a sweep west to east, the second side of each street a night behind the first.\nSources: City of Montréal, snow-removal transactions and sectors, géobase, parking signs (CC BY 4.0). "
@@ -46,7 +46,7 @@ T = {"en": dict(
         title="Comment une opération de chargement de la neige traverse le corridor : une illustration",
         sub="Chaque trait coloré est un côté de rue où le stationnement est permis, coloré selon la nuit où il y est interdit pour le chargement. La Ville ne publie pas quelles rues sont\n"
             "déneigées quelle nuit : l’ORDRE montré ici est inventé. Ce qui est réel : la quantité chargée chaque nuit de l’opération du 17 au 22 janvier 2026 (barres, en bas).",
-        badge="ILLUSTRATION – pas l’horaire de la Ville", night="nuit {i} : {d} janv.", lane="la piste (rue de Terrebonne)", sector="limite de secteur de déneigement", sec="secteur {s} : sa propre opération, les mêmes nuits",
+        badge="ILLUSTRATION – pas l’horaire de la Ville", night="nuit {i}", lane="la piste (rue de Terrebonne)", sector="limite de secteur de déneigement", sec="secteur {s} : sa propre opération, les mêmes nuits",
         bars="Part de la bordure du corridor interdite, chaque nuit (d’après les chargements de la Ville, 17–22 janv. 2026) : réel",
         foot="Hypothèses, comme le cas central de la note : chaque côté de rue est interdit une nuit par opération ; la part de la bordure d’une nuit suit sa part des chargements. "
              "Illustré : un balayage d’ouest en est, le second côté de chaque rue une nuit après le premier.\nSources : Ville de Montréal, transactions et secteurs de déneigement, géobase, panneaux de stationnement (CC BY 4.0). "
