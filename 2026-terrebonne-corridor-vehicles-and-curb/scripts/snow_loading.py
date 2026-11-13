@@ -213,6 +213,25 @@ def main():
             row[f"loading_nights_per_winter_q{int(q * 100)}"] = a.loading_nights / nw
         rows.append(row)
     areas = pd.DataFrame(rows)
+    # overflow (owner's question, Nov 12, 2026): on the area's own loading night, the share of its modelled automobiles that do not
+    # fit in its places (private places included), and the spare CURB in the areas that touch it that night, after their own
+    # residents have used their private places (private places are not available to others). Ordinary nights for comparison.
+    for q in QS:
+        r = areas[f"share_q{int(q * 100)}_with_private"]
+        areas[f"overflow_q{int(q * 100)}_share"] = np.where(r > 1, 1 - 1 / r, 0.0)
+        areas[f"overflow_q{int(q * 100)}_automobiles"] = areas.automobiles_modelled * areas[f"overflow_q{int(q * 100)}_share"]
+        for b_ in ("low", "high"):
+            rb = areas[f"share_q{int(q * 100)}_with_private_{b_}"]
+            areas[f"overflow_q{int(q * 100)}_share_{b_}"] = np.where(rb > 1, 1 - 1 / rb, 0.0)
+    ro = areas.share_ordinary_with_private
+    areas["overflow_ordinary_share"] = np.where(ro > 1, 1 - 1 / ro, 0.0)
+    spare = (areas.curb_places - (areas.automobiles_modelled - areas.private_places).clip(lower=0)).clip(lower=0)
+    geo = cor.set_index("dauid").geometry
+    nb = {d: [e for e in geo.index if e != d and geo[d].buffer(5).intersects(geo[e])] for d in geo.index}
+    areas["adjacent_areas"] = [", ".join(str(int(areas.loc[areas.dauid == e, "no"].iloc[0])) for e in nb[d]) for d in areas.dauid]
+    areas["adjacent_spare_curb_places"] = [float(spare[areas.dauid.isin(nb[d])].sum()) for d in areas.dauid]
+    spare_half = (0.5 * areas.curb_places - (areas.automobiles_modelled - areas.private_places).clip(lower=0)).clip(lower=0)   # neighbours under the same ban that night
+    areas["adjacent_spare_curb_places_if_also_loaded"] = [float(spare_half[areas.dauid.isin(nb[d])].sum()) for d in areas.dauid]
     areas.to_csv(TABLES / "snow_loading_areas.csv", index=False, float_format="%.3f")
 
     # ---------------- district scale: night by night
@@ -256,6 +275,9 @@ def main():
     out = {"winters": [season(y) for y in WINTERS], "window": "December 1 to March 31", "operation_min_truckloads": OP_MIN,
            "operations_per_winter": {s: {sec: int(n) for sec, n in g.groupby("sector").size().items()} for s, g in full.groupby("season")},
            "spot_runs_left_out": int((~ops_all.full_operation).sum()),
+           "overflow_q50": {"areas_with_overflow": int((areas.overflow_q50_share > 0).sum()),
+                            "areas_overflow_exceeds_adjacent_spare_curb": [int(n) for n in areas.no[areas.overflow_q50_automobiles > areas.adjacent_spare_curb_places]],
+                            "areas_overflow_exceeds_adjacent_spare_curb_if_also_loaded": [int(n) for n in areas.no[areas.overflow_q50_automobiles > areas.adjacent_spare_curb_places_if_also_loaded]]},
            "sector_curb_km_2025_26": {k: round(v / 1000, 2) for k, v in share[share.season == season(max(WINTERS))].groupby("sector").length_m.sum().items()},
            "free_lot": {season(y): [dict(places=n, where=w, hours=h) for _, n, w, h in L] for y, L in lot_by.items()},
            "area_scale": {f"q{int(q * 100)}": {"with_private": by_q(q, "with_private"), "curb_only": by_q(q, "curb_only")} for q in QS},

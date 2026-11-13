@@ -58,6 +58,13 @@
   }
  },
  "spot_runs_left_out": 68,
+ "overflow_q50": {
+  "areas_with_overflow": 7,
+  "areas_overflow_exceeds_adjacent_spare_curb": [],
+  "areas_overflow_exceeds_adjacent_spare_curb_if_also_loaded": [
+   15
+  ]
+ },
  "sector_curb_km_2025_26": {
   "CDN-111": 8.11,
   "CDN-112": 0.38,
