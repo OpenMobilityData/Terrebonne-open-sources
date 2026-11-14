@@ -1,12 +1,20 @@
 # Agglomeration council of Montréal, October 22, 2026: the Terrebonne question, checked transcript
 
-Built 2026-10-23 from the check-page export of 2026-10-23T23:57:06. Method: audio downloaded from the archived webcast; the Terrebonne exchange located by a chunked Whisper pass over the sitting; draft by Whisper (large-v3-turbo) forced to French and to English; every passage of the answer listened to and corrected by Rick Hoge on the check page; the previous answer (Aref Salem, on the STM) and the next question (on the Anse-à-l'Orme) are out of scope and left out. Times are those of the archived webcast. Hesitation sounds are removed; every other word is as spoken.
+This folder holds the transcript of the question on rue de Terrebonne put in the public question period of the sitting, and of the answer. Status of the transcript: the answer checked by ear by Rick Hoge on the check page, October 23, 2026; the question is given as submitted in writing (see « The question »).
 
-Recordings: the archived webcast of the sitting (YouTube a0Q0veyhra0), audio downloaded October 22, 2026; the clip is cut locally from it, so every time is a time of the archived webcast.
+## Transcripts
 
 | File | Segment | Webcast (link to the start) | Passages kept | Unchecked (gaps) |
 |---|---|---|---|---|
 | [`2026-10-22-agglo_01.md`](2026-10-22-agglo_01.md) | Oct 22, 2026, agglomeration council — public question period, second question: David Gamper (APC-NDG), submitted online in writing, on the Terrebonne winter layout and the SPVM; answer by Councillor Teodoresco | a0Q0veyhra0 from [29:58](https://www.youtube.com/watch?v=a0Q0veyhra0&t=1798s) | 7 | none |
+
+**Raw machine drafts:** [`derived/whisper_drafts/`](derived/whisper_drafts/) holds the unchecked Whisper output (FR and EN, clip times) for inspection of what the check changed (owner, Nov 4, 2026).
+
+## How the transcripts were made
+
+Built 2026-10-23 from the check-page export of 2026-10-23T23:57:06. Method: audio downloaded from the archived webcast; the Terrebonne exchange located by a chunked Whisper pass over the sitting; draft by Whisper (large-v3-turbo) forced to French and to English; every passage of the answer listened to and corrected by Rick Hoge on the check page; the previous answer (Aref Salem, on the STM) and the next question (on the Anse-à-l'Orme) are out of scope and left out. Times are those of the archived webcast. Hesitation sounds are removed; every other word is as spoken.
+
+Recordings: the archived webcast of the sitting (YouTube a0Q0veyhra0), audio downloaded October 22, 2026; the clip is cut locally from it, so every time is a time of the archived webcast.
 
 ## The question
 
@@ -17,5 +25,3 @@ The minutes of the sitting were not yet published on October 23, 2026; the quest
 ---
 
 *Use of AI: this README and the derived files beside it were prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*
-
-**Raw machine drafts:** [`derived/whisper_drafts/`](derived/whisper_drafts/) holds the unchecked Whisper output (FR and EN, clip times) for inspection of what the check changed (owner, Nov 4, 2026).
