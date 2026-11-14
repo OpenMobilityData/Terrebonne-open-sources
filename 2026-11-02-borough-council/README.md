@@ -66,6 +66,16 @@ Webcast: [youtube.com/watch?v=DuVHbdiAkGg](https://www.youtube.com/watch?v=DuVHb
 - **Item 30.02** ([4:09:05](https://www.youtube.com/watch?v=DuVHbdiAkGg&t=14945s)): moved by Councillor Teodoresco, seconded by Councillor Moroz; Councillor Brière spoke against; the borough mayor replied; on a recorded vote requested by Councillor McQueen ([4:16:47](https://www.youtube.com/watch?v=DuVHbdiAkGg&t=15407s)), Councillors Teodoresco, Moroz and Thiagarajah voted for and Councillors Brière and McQueen against. **Adopted on division.** On both recorded votes the five councillors were called; the borough mayor, presiding, was not.
 - **Item 30.03** ([4:17:06](https://www.youtube.com/watch?v=DuVHbdiAkGg&t=15426s)): **adopted unanimously**; the December sitting is Tuesday, December 1, 2026, 18:30, at the council chamber.
 
+## Press coverage of the sitting
+
+Cited, not reproduced; each article is linked at its publisher and, where a snapshot was made, at the Internet Archive.
+
+- Le Devoir, Jeanne Corriveau, « La piste cyclable de la rue de Terrebonne continue de diviser les résidents de Notre-Dame-de-Grâce », [November 2, 2026](https://www.ledevoir.com/actualites/transports-urbanisme/1021778/piste-cyclable-rue-terrebonne-continue-diviser-residents-notre-dame-grace).
+- The Suburban, Dan Laxer, « Terrebonne bike path vote divides council, NDG residents », [November 11, 2026](https://www.thesuburban.com/news/city_news/terrebonne-bike-path-vote-divides-council-ndg-residents/article_5f808d16-3afb-4429-8de5-69d98bc8cb6b.html) ([snapshot of November 14, 2026](https://web.archive.org/web/20261114202539/https://www.thesuburban.com/news/city_news/terrebonne-bike-path-vote-divides-council-ndg-residents/article_5f808d16-3afb-4429-8de5-69d98bc8cb6b.html)): the motion to withdraw the item and its defeat, Katherine Lund's question and the borough mayor's reply, the petition, the adoption by majority. The article describes the next steps as the centre city and then, « pending agglomeration approval », another vote in December; the borough's file names City council's acceptance of the offer under article 85 ([p. 211](https://ville.montreal.qc.ca/documents/Adi_Public/CA_Cdn/CA_Cdn_ODJ_LPP_ORDI_2026-11-02_18h30_FR.pdf#page=211)).
+- The Rover, Isaac Peltz, « Battle Over NDG Bike Lane Heats Up at Borough Council », [November 13, 2026](https://therover.ca/battle-over-ndg-bike-lane-heats-up-at-borough-council/) ([snapshot of November 14, 2026](https://web.archive.org/web/20261114202607/https://therover.ca/battle-over-ndg-bike-lane-heats-up-at-borough-council/)): the protest before the sitting, the remarks of Peter McQueen and of Patrice Blain for the Association des piétons et cyclistes de NDG, the councillor's October 6 figure of eight bicycle passages, the association's survey, the vote. The article says the street was two-way « prior to 2023 »; the one-way ordinance was adopted on June 3, 2024 ([`../2024-project-approval/`](../2024-project-approval/)).
+
+Evidence graph: `d_devoir_2026nov2`, `d_suburban_2026nov11`, `d_rover_2026nov13`.
+
 ---
 
 *Use of AI: this README was prepared with an AI assistant under the author's direction and review, and checked against the documents; see the repository's [Use of AI statement](../README.md#use-of-ai).*
