@@ -1,0 +1,20 @@
+borough,block_faces,curb_km,net_km,banned_km,poles,poles_per_km,inventory,pct_banned_of_net,legal_km,pct_net_on_faces_without_sign_local,pct_net_on_faces_without_sign_collectors_arterials
+Rivière-des-Prairies-Pointe-aux-Trembles,6578,817.01,688.41,56.62,8953,10.96,complete,8.22,631.79,5.08,44.0
+Saint-Laurent,5863,729.43,615.87,13.58,1131,1.55,incomplete,,,81.54,96.21
+Ahuntsic-Cartierville,5571,635.09,526.66,71.54,10539,16.59,complete,13.58,455.13,5.05,31.78
+Mercier-Hochelaga-Maisonneuve,5595,611.47,503.34,62.63,10111,16.54,complete,12.44,440.7,4.0,34.55
+Pierrefonds-Roxboro,4148,521.88,439.82,1.34,15,0.03,incomplete,,,99.64,99.26
+Côte-des-Neiges-Notre-Dame-de-Grâce,4119,509.11,428.75,54.63,8233,16.17,complete,12.74,374.11,8.88,21.32
+Villeray-Saint-Michel-Parc-Extension,4013,464.15,385.85,46.08,7603,16.38,complete,11.94,339.76,14.08,36.6
+Rosemont-La Petite-Patrie,3669,455.89,384.81,38.33,8212,18.01,complete,9.96,346.48,6.41,23.98
+Ville-Marie,4531,422.74,333.63,91.29,8907,21.07,complete,27.36,242.34,26.16,21.97
+LaSalle,3000,376.95,318.16,0.19,1,0.0,incomplete,,,99.9,100.0
+Saint-Léonard,3147,367.72,306.29,36.05,1019,2.77,incomplete,,,78.88,69.13
+Montréal-Nord,3225,362.27,299.68,6.57,848,2.34,incomplete,,,82.2,91.94
+Le Sud-Ouest,3334,355.72,290.35,52.51,7618,21.42,complete,18.08,237.84,7.07,29.89
+Le Plateau-Mont-Royal,2783,289.75,235.02,38.2,7546,26.04,complete,16.25,196.82,2.58,16.75
+Lachine,2205,284.35,240.69,5.98,647,2.28,incomplete,,,80.02,91.64
+Anjou,2400,278.53,232.61,30.75,3341,12.0,complete,13.22,201.85,10.78,53.94
+Verdun,1891,224.63,187.52,1.45,32,0.14,incomplete,,,99.94,95.39
+L'Île-Bizard-Sainte-Geneviève,1708,212.63,179.03,4.4,80,0.38,incomplete,,,96.88,97.59
+Outremont,845,92.62,75.91,21.83,1659,17.91,complete,28.76,54.08,11.6,18.13

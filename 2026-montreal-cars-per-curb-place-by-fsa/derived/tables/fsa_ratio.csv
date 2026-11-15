@@ -1,0 +1,97 @@
+fsa,status,rank,automobiles_city,legal_curb_m,places,automobiles_per_place,automobiles_per_100_places,automobiles_per_place_at_5_m,automobiles_per_place_at_6_m,automobiles_per_100_m_legal_curb,automobiles_per_place_signed_faces_only,rank_signed_faces_only,city_curb_m,share_city_curb_complete,share_curb_in_city,pct_automobiles_registered_in_city,automobiles_all_municipalities,pct_banned_of_net_complete,pct_net_on_faces_without_sign_complete,poles_per_km_complete,main_borough,boroughs,other_municipalities
+H3V,ranked,1.0,2003.0,7108.0,1292.0,1.55,155.0,1.409,1.691,28.18,2.862,1.0,12689.0,1.0,0.9327,99.8,2007.0,29.36,32.4,13.2,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 95 %; Ville-Marie 5 %,Westmount
+H3G,ranked,2.0,3829.0,15069.0,2740.0,1.398,140.0,1.271,1.525,25.41,1.6,3.0,23966.0,1.0,1.0,99.7,3839.0,24.69,9.5,25.7,Ville-Marie,Ville-Marie 100 %,
+H3H,ranked,3.0,4438.0,18020.0,3276.0,1.355,135.0,1.231,1.478,24.63,1.795,2.0,28530.0,1.0,0.9752,99.9,4443.0,18.42,20.0,23.0,Ville-Marie,Ville-Marie 99 %,Westmount
+H2K,ranked,4.0,12678.0,59746.0,10863.0,1.167,117.0,1.061,1.273,21.22,1.385,5.0,96811.0,1.0,1.0,99.9,12690.0,23.06,12.1,23.9,Ville-Marie,Ville-Marie 87 %; Le Plateau-Mont-Royal 13 %,
+H3S,ranked,5.0,10213.0,50024.0,9095.0,1.123,112.0,1.021,1.225,20.42,1.393,4.0,65854.0,1.0,0.9831,96.4,10599.0,10.8,17.3,14.9,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 98 %,Mont-Royal
+H3N,ranked,6.0,8134.0,46223.0,8404.0,0.968,97.0,0.88,1.056,17.6,1.175,7.0,61666.0,1.0,0.9638,99.9,8145.0,11.44,15.6,18.8,Villeray-Saint-Michel-Parc-Extension,Villeray-Saint-Michel-Parc-Extension 99 %,Mont-Royal
+H3J,ranked,7.0,4149.0,25069.0,4558.0,0.91,91.0,0.828,0.993,16.55,1.032,10.0,39363.0,1.0,0.9983,99.9,4153.0,18.48,9.6,26.3,Le Sud-Ouest,Le Sud-Ouest 98 %; Ville-Marie 2 %,Westmount
+H3W,ranked,8.0,9435.0,58825.0,10695.0,0.882,88.0,0.802,0.962,16.04,1.072,8.0,77112.0,1.0,1.0,99.9,9445.0,9.51,16.0,15.6,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 100 %,
+H1Y,ranked,9.0,10526.0,66960.0,12175.0,0.865,86.0,0.786,0.943,15.72,0.976,13.0,87414.0,1.0,1.0,100.0,10526.0,8.88,10.4,19.3,Rosemont-La Petite-Patrie,Rosemont-La Petite-Patrie 99 %,
+H1Z,ranked,10.0,14549.0,94736.0,17225.0,0.845,84.0,0.768,0.921,15.36,1.195,6.0,133577.0,0.9946,1.0,99.7,14595.0,13.6,25.3,14.1,Villeray-Saint-Michel-Parc-Extension,Villeray-Saint-Michel-Parc-Extension 99 %,
+H1W,ranked,11.0,9674.0,64200.0,11673.0,0.829,83.0,0.753,0.904,15.07,0.916,19.0,89107.0,1.0,1.0,99.9,9679.0,13.42,8.3,20.6,Mercier-Hochelaga-Maisonneuve,Mercier-Hochelaga-Maisonneuve 87 %; Rosemont-La Petite-Patrie 10 %; Ville-Marie 3 %,
+H1M,ranked,12.0,13473.0,90968.0,16540.0,0.815,81.0,0.741,0.889,14.81,1.005,11.0,123680.0,0.9968,1.0,100.0,13478.0,9.94,17.1,15.0,Mercier-Hochelaga-Maisonneuve,Mercier-Hochelaga-Maisonneuve 69 %; Anjou 28 %; Rosemont-La Petite-Patrie 2 %,
+H2N,ranked,13.0,3452.0,23702.0,4310.0,0.801,80.0,0.728,0.874,14.57,1.001,12.0,32527.0,1.0,1.0,99.2,3482.0,14.09,17.1,19.1,Ahuntsic-Cartierville,Ahuntsic-Cartierville 99 %,
+H2E,ranked,14.0,7828.0,54682.0,9942.0,0.787,79.0,0.716,0.859,14.31,0.961,14.0,69529.0,1.0,1.0,99.9,7833.0,8.27,16.6,15.5,Villeray-Saint-Michel-Parc-Extension,Villeray-Saint-Michel-Parc-Extension 94 %; Rosemont-La Petite-Patrie 6 %,
+H2G,ranked,15.0,7464.0,52399.0,9527.0,0.783,78.0,0.712,0.855,14.24,0.944,15.0,68666.0,1.0,1.0,99.9,7470.0,10.42,15.3,16.9,Rosemont-La Petite-Patrie,Rosemont-La Petite-Patrie 99 %,
+H2R,ranked,16.0,6941.0,48742.0,8862.0,0.783,78.0,0.712,0.854,14.24,0.905,21.0,64746.0,1.0,1.0,100.0,6943.0,9.91,12.1,22.3,Villeray-Saint-Michel-Parc-Extension,Villeray-Saint-Michel-Parc-Extension 96 %; Rosemont-La Petite-Patrie 4 %,
+H4V,ranked,17.0,6215.0,43662.0,7939.0,0.783,78.0,0.712,0.854,14.24,0.826,30.0,54788.0,1.0,0.6561,75.8,8199.0,7.34,4.9,14.1,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 100 %,Côte-Saint-Luc
+H1X,ranked,18.0,11024.0,77696.0,14126.0,0.78,78.0,0.709,0.851,14.19,0.938,17.0,98034.0,1.0,1.0,100.0,11026.0,6.16,15.8,15.6,Rosemont-La Petite-Patrie,Rosemont-La Petite-Patrie 97 %,
+H4J,ranked,19.0,7424.0,52618.0,9567.0,0.776,78.0,0.705,0.847,14.11,0.836,29.0,69998.0,0.9863,1.0,99.8,7436.0,9.82,6.5,18.1,Ahuntsic-Cartierville,Ahuntsic-Cartierville 99 %,
+H3T,ranked,20.0,3333.0,23704.0,4310.0,0.773,77.0,0.703,0.844,14.06,0.812,33.0,32104.0,1.0,1.0,99.8,3339.0,11.67,4.2,23.2,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 89 %; Outremont 11 %,
+H2S,ranked,21.0,7973.0,56768.0,10321.0,0.772,77.0,0.702,0.843,14.05,0.868,26.0,79243.0,1.0,1.0,99.9,7984.0,16.0,9.3,23.5,Rosemont-La Petite-Patrie,Rosemont-La Petite-Patrie 100 %,
+H2B,ranked,22.0,7648.0,54753.0,9955.0,0.768,77.0,0.698,0.838,13.97,0.873,25.0,76896.0,0.9985,1.0,99.9,7652.0,14.0,10.3,18.5,Ahuntsic-Cartierville,Ahuntsic-Cartierville 100 %,
+H3X,ranked,23.0,4829.0,35356.0,6428.0,0.751,75.0,0.683,0.819,13.66,0.939,16.0,47570.0,1.0,0.43,48.3,9999.0,11.8,17.6,14.2,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 100 %,Hampstead; Côte-Saint-Luc
+H2A,ranked,24.0,7372.0,54003.0,9819.0,0.751,75.0,0.683,0.819,13.65,1.065,9.0,76845.0,0.9992,1.0,100.0,7372.0,14.69,25.2,13.0,Villeray-Saint-Michel-Parc-Extension,Villeray-Saint-Michel-Parc-Extension 100 %,
+H2V,ranked,25.0,9654.0,71014.0,12912.0,0.748,75.0,0.68,0.816,13.59,0.915,20.0,118136.0,1.0,0.997,98.8,9767.0,26.98,13.3,18.7,Outremont,Outremont 74 %; Le Plateau-Mont-Royal 13 %; Ville-Marie 7 %; Rosemont-La Petite-Patrie 5 %,Mont-Royal
+H4B,ranked,26.0,7331.0,54185.0,9852.0,0.744,74.0,0.676,0.812,13.53,0.849,28.0,72836.0,1.0,0.9994,99.7,7351.0,11.64,10.9,15.8,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 98 %; Le Sud-Ouest 2 %,Montréal-Ouest
+H1K,ranked,27.0,16702.0,125534.0,22824.0,0.732,73.0,0.665,0.798,13.3,0.819,31.0,167213.0,1.0,1.0,100.0,16708.0,8.22,9.8,16.6,Anjou,Anjou 68 %; Mercier-Hochelaga-Maisonneuve 32 %,
+H2M,ranked,28.0,8139.0,63376.0,11523.0,0.706,71.0,0.642,0.771,12.84,0.887,23.0,88179.0,1.0,1.0,99.9,8148.0,13.87,17.5,16.4,Ahuntsic-Cartierville,Ahuntsic-Cartierville 94 %; Villeray-Saint-Michel-Parc-Extension 6 %,
+H2J,ranked,29.0,6612.0,52060.0,9465.0,0.698,70.0,0.635,0.762,12.7,0.784,36.0,78502.0,1.0,1.0,99.8,6622.0,16.37,9.2,25.8,Le Plateau-Mont-Royal,Le Plateau-Mont-Royal 100 %,
+H4A,ranked,30.0,9579.0,75518.0,13731.0,0.698,70.0,0.634,0.761,12.68,0.797,34.0,101013.0,1.0,0.9987,99.8,9598.0,12.89,10.9,19.0,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 97 %; Le Sud-Ouest 3 %,Westmount
+H2C,ranked,31.0,7197.0,56872.0,10340.0,0.696,70.0,0.633,0.759,12.66,0.785,35.0,80808.0,1.0,1.0,99.9,7203.0,14.94,9.6,16.4,Ahuntsic-Cartierville,Ahuntsic-Cartierville 100 %,
+H1V,ranked,32.0,7526.0,60048.0,10918.0,0.689,69.0,0.627,0.752,12.53,0.934,18.0,85236.0,1.0,1.0,100.0,7529.0,14.21,22.5,17.2,Mercier-Hochelaga-Maisonneuve,Mercier-Hochelaga-Maisonneuve 98 %,
+H3K,ranked,33.0,5792.0,46362.0,8429.0,0.687,69.0,0.625,0.75,12.49,0.768,38.0,68091.0,1.0,1.0,99.9,5798.0,16.46,8.8,22.4,Le Sud-Ouest,Le Sud-Ouest 100 %,
+H2H,ranked,34.0,4155.0,33724.0,6132.0,0.678,68.0,0.616,0.739,12.32,0.75,40.0,47534.0,1.0,1.0,99.8,4162.0,12.61,8.5,24.7,Le Plateau-Mont-Royal,Le Plateau-Mont-Royal 100 %,
+H3L,ranked,35.0,8824.0,71859.0,13065.0,0.675,68.0,0.614,0.737,12.28,0.814,32.0,102053.0,1.0,1.0,99.8,8838.0,16.06,14.3,16.8,Ahuntsic-Cartierville,Ahuntsic-Cartierville 100 %,
+H2P,ranked,36.0,5075.0,41455.0,7537.0,0.673,67.0,0.612,0.735,12.24,0.878,24.0,56635.0,1.0,1.0,99.9,5078.0,10.24,20.9,18.9,Villeray-Saint-Michel-Parc-Extension,Villeray-Saint-Michel-Parc-Extension 97 %; Ahuntsic-Cartierville 3 %,
+H1N,ranked,37.0,10699.0,87826.0,15968.0,0.67,67.0,0.609,0.731,12.18,0.903,22.0,133762.0,1.0,1.0,99.9,10710.0,21.23,20.3,14.1,Mercier-Hochelaga-Maisonneuve,Mercier-Hochelaga-Maisonneuve 99 %,
+H2X,ranked,38.0,3737.0,30947.0,5627.0,0.664,66.0,0.604,0.725,12.08,0.763,39.0,55985.0,1.0,1.0,99.8,3743.0,30.15,9.1,26.5,Ville-Marie,Ville-Marie 55 %; Le Plateau-Mont-Royal 45 %,
+H2L,ranked,39.0,6555.0,54295.0,9872.0,0.664,66.0,0.604,0.724,12.07,0.781,37.0,91063.0,1.0,1.0,99.5,6587.0,24.71,11.2,24.6,Ville-Marie,Ville-Marie 73 %; Le Plateau-Mont-Royal 27 %,
+H4E,ranked,40.0,11769.0,98396.0,17890.0,0.658,66.0,0.598,0.718,11.96,0.719,44.0,133084.0,0.9368,1.0,99.9,11780.0,12.46,7.5,19.8,Le Sud-Ouest,Le Sud-Ouest 94 %; Verdun 5 %,
+H2T,ranked,41.0,4150.0,34710.0,6311.0,0.658,66.0,0.598,0.717,11.96,0.72,43.0,50433.0,1.0,1.0,99.5,4170.0,15.4,7.3,27.4,Le Plateau-Mont-Royal,Le Plateau-Mont-Royal 100 %,
+H4C,ranked,42.0,5692.0,48081.0,8742.0,0.651,65.0,0.592,0.71,11.84,0.863,27.0,78735.0,1.0,1.0,99.8,5703.0,23.35,18.8,24.3,Le Sud-Ouest,Le Sud-Ouest 98 %; Côte-des-Neiges-Notre-Dame-de-Grâce 2 %,
+H1L,ranked,43.0,15219.0,130367.0,23703.0,0.642,64.0,0.584,0.7,11.67,0.736,42.0,173221.0,1.0,0.9705,98.4,15468.0,8.26,11.8,15.7,Mercier-Hochelaga-Maisonneuve,Mercier-Hochelaga-Maisonneuve 100 %,Montréal-Est
+H3M,ranked,44.0,7510.0,67194.0,12217.0,0.615,61.0,0.559,0.671,11.18,0.701,45.0,90386.0,1.0,1.0,100.0,7513.0,8.99,11.2,15.8,Ahuntsic-Cartierville,Ahuntsic-Cartierville 100 %,
+H1A,ranked,45.0,18654.0,169930.0,30896.0,0.604,60.0,0.549,0.659,10.98,0.74,41.0,226645.0,1.0,1.0,99.9,18669.0,10.11,16.6,11.9,Rivière-des-Prairies-Pointe-aux-Trembles,Rivière-des-Prairies-Pointe-aux-Trembles 100 %,
+H2W,ranked,46.0,2489.0,24380.0,4433.0,0.561,56.0,0.51,0.613,10.21,0.67,47.0,38958.0,1.0,1.0,100.0,2490.0,23.25,12.4,23.9,Le Plateau-Mont-Royal,Le Plateau-Mont-Royal 90 %; Ville-Marie 10 %,
+H1E,ranked,47.0,25050.0,253121.0,46022.0,0.544,54.0,0.495,0.594,9.9,0.687,46.0,319886.0,1.0,0.9897,98.9,25326.0,5.58,19.6,10.6,Rivière-des-Prairies-Pointe-aux-Trembles,Rivière-des-Prairies-Pointe-aux-Trembles 97 %; Anjou 3 %,Montréal-Est
+H1C,ranked,48.0,9180.0,103492.0,18817.0,0.488,49.0,0.443,0.532,8.87,0.631,48.0,134127.0,1.0,0.9789,99.9,9188.0,10.95,20.2,9.6,Rivière-des-Prairies-Pointe-aux-Trembles,Rivière-des-Prairies-Pointe-aux-Trembles 100 %,Montréal-Est
+H1B,ranked,49.0,9659.0,109167.0,19849.0,0.487,49.0,0.442,0.531,8.85,0.619,49.0,141892.0,1.0,0.6592,79.1,12209.0,8.49,19.6,11.1,Rivière-des-Prairies-Pointe-aux-Trembles,Rivière-des-Prairies-Pointe-aux-Trembles 100 %,Montréal-Est
+H3R,"not ranked: fewer than 1,000 automobiles registered in the City part",,769.0,10530.0,1915.0,0.402,40.0,0.365,0.438,7.31,0.59,,16415.0,0.9513,0.1732,14.9,5172.0,18.5,26.0,11.0,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 95 %; Saint-Laurent 5 %,Mont-Royal
+H3Y,"not ranked: fewer than 1,000 automobiles registered in the City part",,467.0,4189.0,762.0,0.613,61.0,0.557,0.668,11.14,0.687,,7568.0,1.0,0.0969,8.9,5271.0,30.92,7.5,20.3,Ville-Marie,Ville-Marie 99 %,Westmount
+H3Z,"not ranked: fewer than 1,000 automobiles registered in the City part",,179.0,1188.0,216.0,0.828,83.0,0.752,0.903,15.05,1.634,,2098.0,1.0,0.0517,3.3,5378.0,15.84,41.5,14.3,Ville-Marie,Ville-Marie 72 %; Côte-des-Neiges-Notre-Dame-de-Grâce 28 %,Westmount
+H5A,"not ranked: fewer than 1,000 automobiles registered in the City part",,430.0,201.0,37.0,11.758,1176.0,10.689,12.827,213.78,11.759,,221.0,1.0,1.0,100.0,430.0,0.0,0.0,22.6,Ville-Marie,Ville-Marie 100 %,
+H5B,"not ranked: fewer than 1,000 automobiles registered in the City part",,19.0,307.0,56.0,0.341,34.0,0.31,0.372,6.2,0.341,,614.0,1.0,1.0,86.4,22.0,44.65,0.0,24.4,Ville-Marie,Ville-Marie 100 %,
+H1J,not ranked: more than 40 % of the curb on block faces without any sign,,6963.0,85784.0,15597.0,0.446,45.0,0.406,0.487,8.12,0.883,,120630.0,0.9918,0.9997,99.7,6981.0,16.73,41.2,8.7,Anjou,Anjou 99 %,Montréal-Est
+H3C,not ranked: more than 40 % of the curb on block faces without any sign,,8238.0,67390.0,12253.0,0.672,67.0,0.611,0.733,12.22,2.231,,110740.0,1.0,1.0,99.5,8281.0,25.02,52.4,12.3,Ville-Marie,Ville-Marie 71 %; Le Sud-Ouest 29 %,
+H1G,not ranked: sign inventory incomplete,,21990.0,,,,,,,,,,206890.0,0.02,1.0,99.9,22012.0,11.76,38.7,4.4,Montréal-Nord,Montréal-Nord 98 %,
+H1H,not ranked: sign inventory incomplete,,16726.0,,,,,,,,,,159360.0,0.0086,1.0,99.8,16758.0,8.54,33.9,15.2,Montréal-Nord,Montréal-Nord 99 %,
+H1P,not ranked: sign inventory incomplete,,11168.0,,,,,,,,,,115763.0,0.0029,1.0,99.8,11190.0,0.0,58.8,11.8,Saint-Léonard,Saint-Léonard 99 %,
+H1R,not ranked: sign inventory incomplete,,15570.0,,,,,,,,,,139379.0,0.0044,1.0,99.8,15595.0,21.55,25.6,16.3,Saint-Léonard,Saint-Léonard 100 %,
+H1S,not ranked: sign inventory incomplete,,12096.0,,,,,,,,,,102750.0,0.0336,1.0,99.8,12119.0,15.05,24.9,16.8,Saint-Léonard,Saint-Léonard 97 %; Rosemont-La Petite-Patrie 2 %,
+H1T,not ranked: sign inventory incomplete,,13106.0,,,,,,,,,,114952.0,0.8828,1.0,99.9,13114.0,8.76,12.7,15.4,Rosemont-La Petite-Patrie,Rosemont-La Petite-Patrie 85 %; Saint-Léonard 12 %; Mercier-Hochelaga-Maisonneuve 3 %,
+H3E,not ranked: sign inventory incomplete,,14870.0,,,,,,,,,,71320.0,0.0475,1.0,100.0,14877.0,0.0,100.0,0.0,Verdun,Verdun 95 %; Le Sud-Ouest 5 %,
+H3P,not ranked: sign inventory incomplete,,224.0,,,,,,,,,,4029.0,0.6552,0.0411,4.3,5201.0,33.06,34.6,11.0,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 49 %; Saint-Laurent 34 %; Villeray-Saint-Michel-Parc-Extension 10 %; Outremont 6 %,Mont-Royal
+H4G,not ranked: sign inventory incomplete,,8960.0,,,,,,,,,,79680.0,0.0461,1.0,99.9,8967.0,0.0,98.0,0.5,Verdun,Verdun 95 %; Le Sud-Ouest 5 %,
+H4H,not ranked: sign inventory incomplete,,7223.0,,,,,,,,,,73968.0,0.0037,1.0,100.0,7225.0,0.0,100.0,0.0,Verdun,Verdun 99 %,
+H4K,not ranked: sign inventory incomplete,,6019.0,,,,,,,,,,83312.0,0.5947,1.0,99.9,6025.0,13.13,12.0,13.0,Ahuntsic-Cartierville,Ahuntsic-Cartierville 59 %; Saint-Laurent 38 %; Pierrefonds-Roxboro 2 %,
+H4L,not ranked: sign inventory incomplete,,15184.0,,,,,,,,,,144138.0,0.0007,1.0,99.9,15202.0,2.64,97.4,9.7,Saint-Laurent,Saint-Laurent 100 %,
+H4M,not ranked: sign inventory incomplete,,6864.0,,,,,,,,,,82918.0,0.0,0.9995,99.8,6878.0,,,,Saint-Laurent,Saint-Laurent 100 %,Mont-Royal
+H4N,not ranked: sign inventory incomplete,,13812.0,,,,,,,,,,122819.0,0.3883,0.9793,98.1,14085.0,19.78,29.2,14.5,Saint-Laurent,Saint-Laurent 61 %; Ahuntsic-Cartierville 39 %,Mont-Royal
+H4P,not ranked: sign inventory incomplete,,3700.0,,,,,,,,,,37552.0,0.8717,0.5962,57.8,6397.0,28.47,19.1,14.6,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 87 %; Saint-Laurent 13 %,Mont-Royal
+H4R,not ranked: sign inventory incomplete,,17695.0,,,,,,,,,,196891.0,0.0,1.0,99.6,17761.0,,,,Saint-Laurent,Saint-Laurent 100 %,
+H4S,not ranked: sign inventory incomplete,,3820.0,,,,,,,,,,124284.0,0.0,0.9734,96.1,3977.0,,,,Saint-Laurent,Saint-Laurent 99 %,Dorval
+H4T,not ranked: sign inventory incomplete,,2435.0,,,,,,,,,,67130.0,0.0,0.9037,90.0,2705.0,,,,Saint-Laurent,Saint-Laurent 100 %,Mont-Royal
+H4W,not ranked: sign inventory incomplete,,93.0,,,,,,,,,,1479.0,0.8284,0.0143,0.8,12396.0,22.51,36.0,11.4,Côte-des-Neiges-Notre-Dame-de-Grâce,Côte-des-Neiges-Notre-Dame-de-Grâce 83 %; Lachine 17 %,Côte-Saint-Luc; Montréal-Ouest
+H4X,not ranked: sign inventory incomplete,,96.0,,,,,,,,,,2076.0,0.8573,0.0418,2.8,3359.0,22.83,67.0,3.9,Le Sud-Ouest,Le Sud-Ouest 57 %; Côte-des-Neiges-Notre-Dame-de-Grâce 28 %; Lachine 14 %,Montréal-Ouest; Côte-Saint-Luc
+H8N,not ranked: sign inventory incomplete,,17112.0,,,,,,,,,,147546.0,0.0074,1.0,99.8,17143.0,34.29,44.1,8.2,LaSalle,LaSalle 99 %,
+H8P,not ranked: sign inventory incomplete,,11239.0,,,,,,,,,,112746.0,0.0,1.0,100.0,11243.0,,,,LaSalle,LaSalle 100 %,
+H8R,not ranked: sign inventory incomplete,,15422.0,,,,,,,,,,146122.0,0.0003,0.9976,99.7,15471.0,0.0,100.0,0.0,LaSalle,LaSalle 79 %; Lachine 21 %,Montréal-Ouest
+H8S,not ranked: sign inventory incomplete,,12877.0,,,,,,,,,,117319.0,0.0,1.0,99.9,12890.0,,,,Lachine,Lachine 99 %,
+H8T,not ranked: sign inventory incomplete,,8702.0,,,,,,,,,,135107.0,0.0,0.9952,99.9,8708.0,,,,Lachine,Lachine 100 %,Dorval
+H8Y,not ranked: sign inventory incomplete,,10377.0,,,,,,,,,,130801.0,0.0,0.9695,96.5,10756.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,Dollard-des-Ormeaux
+H8Z,not ranked: sign inventory incomplete,,8859.0,,,,,,,,,,116841.0,0.0,1.0,99.9,8864.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,
+H9A,not ranked: sign inventory incomplete,,2462.0,,,,,,,,,,30347.0,0.0,0.2425,27.6,8932.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,Dollard-des-Ormeaux
+H9B,not ranked: sign inventory incomplete,,8.0,,,,,,,,,,83.0,0.0,0.0006,0.1,12009.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,Dollard-des-Ormeaux; Pointe-Claire; Dorval
+H9C,not ranked: sign inventory incomplete,,7793.0,,,,,,,,,,135949.0,0.0,1.0,100.0,7796.0,,,,L'Île-Bizard-Sainte-Geneviève,L'Île-Bizard-Sainte-Geneviève 100 %,
+H9E,not ranked: sign inventory incomplete,,2241.0,,,,,,,,,,56030.0,0.0,1.0,99.9,2244.0,,,,L'Île-Bizard-Sainte-Geneviève,L'Île-Bizard-Sainte-Geneviève 100 %,
+H9H,not ranked: sign inventory incomplete,,9786.0,,,,,,,,,,128401.0,0.0,0.5454,63.0,15540.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 84 %; L'Île-Bizard-Sainte-Geneviève 16 %,Kirkland; Dollard-des-Ormeaux
+H9J,not ranked: sign inventory incomplete,,5452.0,,,,,,,,,,62377.0,0.0,0.3146,40.1,13592.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,Kirkland
+H9K,not ranked: sign inventory incomplete,,5331.0,,,,,,,,,,67607.0,0.0,0.9841,99.4,5363.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,Senneville; Kirkland
+H9P,not ranked: sign inventory incomplete,,27.0,,,,,,,,,,1814.0,0.0,0.0151,0.5,5282.0,,,,Lachine,Lachine 77 %; Saint-Laurent 23 %,Dorval; Pointe-Claire
+H9X,not ranked: sign inventory incomplete,,5.0,,,,,,,,,,3201.0,0.0,0.016,0.1,6570.0,,,,Pierrefonds-Roxboro,Pierrefonds-Roxboro 100 %,Baie-d'Urfé; Sainte-Anne-de-Bellevue; Senneville; Beaconsfield
+H2Y,not ranked: vehicles registered to businesses,,6110.0,13470.0,2449.0,2.495,250.0,2.268,2.722,45.36,2.867,,31719.0,1.0,1.0,99.7,6132.0,39.47,7.8,29.7,Ville-Marie,Ville-Marie 100 %,
+H2Z,not ranked: vehicles registered to businesses,,5420.0,6883.0,1251.0,4.331,433.0,3.937,4.725,78.75,6.544,,13997.0,1.0,1.0,99.8,5429.0,34.16,22.3,22.6,Ville-Marie,Ville-Marie 100 %,
+H3A,not ranked: vehicles registered to businesses,,2430.0,10200.0,1855.0,1.31,131.0,1.191,1.43,23.83,1.507,,21480.0,1.0,1.0,98.7,2462.0,41.17,7.7,25.3,Ville-Marie,Ville-Marie 95 %; Le Plateau-Mont-Royal 5 %,
+H3B,not ranked: vehicles registered to businesses,,2562.0,10412.0,1893.0,1.353,135.0,1.23,1.476,24.6,1.898,,18352.0,1.0,1.0,35.7,7184.0,25.22,21.5,23.7,Ville-Marie,Ville-Marie 100 %,

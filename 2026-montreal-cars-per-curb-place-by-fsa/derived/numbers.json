@@ -1,0 +1,111 @@
+{
+ "year": 2024,
+ "place_m": 5.5,
+ "fsas_with_city_curb": 96,
+ "ranked": 49,
+ "status_counts": {
+  "ranked": 49,
+  "not ranked: sign inventory incomplete": 36,
+  "not ranked: fewer than 1,000 automobiles registered in the City part": 5,
+  "not ranked: vehicles registered to businesses": 4,
+  "not ranked: more than 40 % of the curb on block faces without any sign": 2
+ },
+ "fsas_by_status": {
+  "not ranked: sign inventory incomplete": [
+   "H1G",
+   "H1H",
+   "H1P",
+   "H1R",
+   "H1S",
+   "H1T",
+   "H3E",
+   "H3P",
+   "H4G",
+   "H4H",
+   "H4K",
+   "H4L",
+   "H4M",
+   "H4N",
+   "H4P",
+   "H4R",
+   "H4S",
+   "H4T",
+   "H4W",
+   "H4X",
+   "H8N",
+   "H8P",
+   "H8R",
+   "H8S",
+   "H8T",
+   "H8Y",
+   "H8Z",
+   "H9A",
+   "H9B",
+   "H9C",
+   "H9E",
+   "H9H",
+   "H9J",
+   "H9K",
+   "H9P",
+   "H9X"
+  ],
+  "not ranked: fewer than 1,000 automobiles registered in the City part": [
+   "H3R",
+   "H3Y",
+   "H3Z",
+   "H5A",
+   "H5B"
+  ],
+  "not ranked: vehicles registered to businesses": [
+   "H2Y",
+   "H2Z",
+   "H3A",
+   "H3B"
+  ],
+  "not ranked: more than 40 % of the curb on block faces without any sign": [
+   "H1J",
+   "H3C"
+  ]
+ },
+ "automobiles_city_h_fsas": 754747,
+ "automobiles_ranked": 411548,
+ "pct_automobiles_ranked": 54.5,
+ "automobiles_in_fsas_without_city_curb": 268,
+ "legal_curb_km_ranked": 3138.9,
+ "places_ranked": 570717,
+ "ratio_all_ranked": 0.721,
+ "ratio_median": 0.748,
+ "ratio_min": 0.487,
+ "ratio_max": 1.55,
+ "fsa_min": "H1B",
+ "fsa_max": "H3V",
+ "ranked_at_100_or_more_per_100_places": 5,
+ "ranked_on_signed_faces_only_median": 0.873,
+ "rank_correlation_with_signed_faces_only": 0.901,
+ "lane_fsas": {
+  "H4A": {
+   "rank": 30,
+   "automobiles": 9579,
+   "legal_curb_km": 75.5,
+   "places": 13731,
+   "ratio": 0.698,
+   "per_100_places": 70,
+   "ratio_at_5_m": 0.634,
+   "ratio_at_6_m": 0.761,
+   "ratio_signed_faces_only": 0.797,
+   "rank_signed_faces_only": 34
+  },
+  "H4B": {
+   "rank": 26,
+   "automobiles": 7331,
+   "legal_curb_km": 54.2,
+   "places": 9852,
+   "ratio": 0.744,
+   "per_100_places": 74,
+   "ratio_at_5_m": 0.676,
+   "ratio_at_6_m": 0.812,
+   "ratio_signed_faces_only": 0.849,
+   "rank_signed_faces_only": 28
+  }
+ }
+}

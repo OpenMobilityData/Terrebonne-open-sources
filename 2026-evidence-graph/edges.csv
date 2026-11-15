@@ -1260,3 +1260,6 @@ d_suburban_2026nov11,d_ca_1266880005,differs_from,The article places an agglomer
 d_rover_2026nov13,e_nov2,refers_to,,
 d_rover_2026nov13,e_oct6,refers_to,,
 d_rover_2026nov13,s_oct6_12and8,refers_to,,
+t_fsa_curb_ratio,t_saaq_registrations,computed_from,,
+t_fsa_curb_ratio,d_city_signs,computed_from,,
+t_fsa_curb_ratio,t_corridor_curb,bears_on,,

@@ -1,0 +1,252 @@
+fsa,part,place,block_faces,curb_m,net_m,banned_m,legal_m,poles
+H1A,"City, complete inventory",Rivière-des-Prairies-Pointe-aux-Trembles,1908,226644.9,189045.9,19116.2,169929.7,2708
+H1B,"City, complete inventory",Anjou,3,165.0,105.0,0.0,105.0,0
+H1B,"City, complete inventory",Rivière-des-Prairies-Pointe-aux-Trembles,1151,141727.4,119190.3,10128.4,109061.9,1581
+H1B,other municipality,Montréal-Est,493,73359.7,63637.2,,,1
+H1C,"City, complete inventory",Rivière-des-Prairies-Pointe-aux-Trembles,922,134127.2,116220.8,12728.8,103492.0,1291
+H1C,other municipality,Montréal-Est,26,2897.4,2403.6,,,8
+H1E,"City, complete inventory",Anjou,96,9507.8,7840.4,750.2,7090.2,37
+H1E,"City, complete inventory",Rivière-des-Prairies-Pointe-aux-Trembles,2574,310378.4,260240.8,14209.6,246031.2,3355
+H1E,other municipality,Montréal-Est,31,3318.4,2738.7,,,18
+H1G,"City, complete inventory",Rivière-des-Prairies-Pointe-aux-Trembles,23,4132.2,3710.5,436.2,3274.3,18
+H1G,"City, incomplete inventory",Montréal-Nord,1882,202735.7,166473.5,,,218
+H1G,"City, incomplete inventory",Saint-Léonard,1,21.9,1.9,,,0
+H1H,"City, complete inventory",Ahuntsic-Cartierville,15,1317.3,1071.7,91.5,980.1,21
+H1H,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,4,60.4,0.0,0.0,0.0,0
+H1H,"City, incomplete inventory",Montréal-Nord,1320,157982.8,132085.3,,,629
+H1J,"City, complete inventory",Anjou,895,119643.3,102265.3,17108.8,85156.5,1046
+H1J,"City, incomplete inventory",Montréal-Nord,1,91.0,71.0,,,0
+H1J,"City, incomplete inventory",Saint-Léonard,11,895.5,682.2,,,0
+H1J,other municipality,Montréal-Est,1,31.3,11.3,,,0
+H1K,"City, complete inventory",Anjou,1075,114350.1,93733.1,8259.0,85474.2,1818
+H1K,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,494,52862.5,43038.0,2977.8,40060.2,950
+H1L,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,1597,173221.0,142102.9,11735.8,130367.1,2717
+H1L,other municipality,Montréal-Est,55,5259.8,4173.3,,,0
+H1M,"City, complete inventory",Anjou,323,34346.6,28307.6,4633.5,23674.2,436
+H1M,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,849,85931.1,69873.6,5188.1,64685.5,1383
+H1M,"City, complete inventory",Rosemont-La Petite-Patrie,28,3002.8,2539.1,188.4,2350.7,36
+H1M,"City, incomplete inventory",Saint-Léonard,6,399.1,286.0,,,2
+H1N,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,1152,132656.8,110568.7,23505.7,87063.0,1883
+H1N,"City, complete inventory",Rosemont-La Petite-Patrie,13,1105.4,927.7,164.6,763.2,6
+H1P,"City, complete inventory",Anjou,3,338.2,278.2,0.0,278.2,4
+H1P,"City, incomplete inventory",Montréal-Nord,15,1209.0,909.0,,,0
+H1P,"City, incomplete inventory",Saint-Léonard,889,114216.0,96759.5,,,248
+H1R,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,7,613.6,477.8,103.0,374.9,10
+H1R,"City, incomplete inventory",Saint-Léonard,1207,138765.5,115223.2,,,356
+H1S,"City, complete inventory",Anjou,5,176.3,76.3,0.0,76.3,0
+H1S,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,2,347.9,307.9,255.4,52.5,4
+H1S,"City, complete inventory",Rosemont-La Petite-Patrie,26,2106.9,1586.9,7.7,1579.2,49
+H1S,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,11,819.2,618.5,126.5,492.0,5
+H1S,"City, incomplete inventory",Saint-Léonard,870,99299.6,82375.2,,,373
+H1T,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,31,3367.5,2837.3,37.5,2799.8,30
+H1T,"City, complete inventory",Rosemont-La Petite-Patrie,827,97738.2,82012.9,7369.5,74643.3,1523
+H1T,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,6,368.7,258.8,51.6,207.2,8
+H1T,"City, incomplete inventory",Saint-Léonard,151,13477.1,10545.0,,,39
+H1V,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,785,83791.5,68863.0,9948.5,58914.5,1463
+H1V,"City, complete inventory",Rosemont-La Petite-Patrie,18,1444.9,1133.4,0.0,1133.4,0
+H1W,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,667,77785.0,64580.1,8881.9,55698.2,1666
+H1W,"City, complete inventory",Rosemont-La Petite-Patrie,76,8908.7,7430.7,1065.0,6365.6,172
+H1W,"City, complete inventory",Ville-Marie,15,2413.7,2136.3,0.0,2136.3,0
+H1X,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,16,1426.5,1125.3,104.0,1021.4,15
+H1X,"City, complete inventory",Rosemont-La Petite-Patrie,772,95297.0,80643.2,4867.0,75776.1,1492
+H1X,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,15,1310.7,1023.0,125.0,898.0,21
+H1Y,"City, complete inventory",Rosemont-La Petite-Patrie,702,86837.0,73047.0,6522.5,66524.5,1678
+H1Y,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,7,577.1,437.1,1.3,435.7,7
+H1Z,"City, complete inventory",Ahuntsic-Cartierville,4,239.8,179.1,5.2,173.9,2
+H1Z,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,1216,132609.2,108987.6,14836.2,94151.5,1876
+H1Z,"City, incomplete inventory",Montréal-Nord,4,143.3,80.2,,,1
+H1Z,"City, incomplete inventory",Saint-Léonard,10,584.5,395.6,,,1
+H2A,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,688,76782.0,63281.7,9298.9,53982.9,1001
+H2A,"City, incomplete inventory",Saint-Léonard,2,63.3,23.3,,,0
+H2B,"City, complete inventory",Ahuntsic-Cartierville,676,76783.0,63606.5,8907.4,54699.0,1419
+H2B,"City, incomplete inventory",Montréal-Nord,3,112.6,62.5,,,0
+H2C,"City, complete inventory",Ahuntsic-Cartierville,704,80808.1,66860.0,9988.1,56871.8,1326
+H2E,"City, complete inventory",Ahuntsic-Cartierville,9,286.0,114.0,0.0,114.0,0
+H2E,"City, complete inventory",Rosemont-La Petite-Patrie,16,4026.5,3706.5,114.0,3592.5,86
+H2E,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,474,65216.1,55790.9,4815.5,50975.5,992
+H2G,"City, complete inventory",Rosemont-La Petite-Patrie,501,67907.5,57935.9,6042.1,51893.8,1137
+H2G,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,10,759.1,559.1,53.9,505.2,23
+H2H,"City, complete inventory",Le Plateau-Mont-Royal,457,47389.7,38525.7,4866.6,33659.1,1176
+H2H,"City, complete inventory",Rosemont-La Petite-Patrie,4,144.6,64.6,0.0,64.6,0
+H2J,"City, complete inventory",Le Plateau-Mont-Royal,827,78501.7,62251.1,10191.3,52059.8,2022
+H2K,"City, complete inventory",Le Plateau-Mont-Royal,86,12581.0,10861.0,880.8,9980.2,357
+H2K,"City, complete inventory",Mercier-Hochelaga-Maisonneuve,2,79.7,39.7,0.0,39.7,0
+H2K,"City, complete inventory",Ville-Marie,875,84150.5,66751.8,17025.2,49726.6,1959
+H2L,"City, complete inventory",Le Plateau-Mont-Royal,243,24279.9,19490.7,4043.2,15447.5,535
+H2L,"City, complete inventory",Ville-Marie,717,66783.2,52622.8,13775.6,38847.2,1703
+H2M,"City, complete inventory",Ahuntsic-Cartierville,693,82701.7,69301.0,9337.0,59964.0,1410
+H2M,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,70,5477.1,4279.8,867.9,3411.9,34
+H2N,"City, complete inventory",Ahuntsic-Cartierville,255,32278.3,27379.9,3886.0,23494.0,621
+H2N,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,2,248.4,208.4,0.0,208.4,0
+H2P,"City, complete inventory",Ahuntsic-Cartierville,36,1603.1,897.6,177.7,719.9,13
+H2P,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,500,55031.7,45288.0,4553.1,40734.9,1055
+H2R,"City, complete inventory",Rosemont-La Petite-Patrie,31,2375.5,1781.9,87.3,1694.7,36
+H2R,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,513,62370.9,52323.4,5275.7,47047.7,1409
+H2S,"City, complete inventory",Rosemont-La Petite-Patrie,583,79068.6,67463.0,10809.8,56653.3,1860
+H2S,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,3,174.7,114.7,0.0,114.7,1
+H2T,"City, complete inventory",Le Plateau-Mont-Royal,476,50403.1,41018.9,6318.3,34700.6,1384
+H2T,"City, complete inventory",Rosemont-La Petite-Patrie,1,29.9,9.9,0.0,9.9,0
+H2V,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,11,1115.5,907.2,570.1,337.1,11
+H2V,"City, complete inventory",Le Plateau-Mont-Royal,127,15165.4,12689.4,1024.0,11665.3,383
+H2V,"City, complete inventory",Outremont,776,87783.7,72433.9,20835.4,51598.5,1565
+H2V,"City, complete inventory",Rosemont-La Petite-Patrie,69,5803.1,4473.7,1096.0,3377.7,137
+H2V,"City, complete inventory",Ville-Marie,79,8268.6,6753.3,2717.6,4035.7,108
+H2V,other municipality,Mont-Royal,7,351.4,219.4,,,0
+H2W,"City, complete inventory",Le Plateau-Mont-Royal,323,35195.6,28751.5,6433.8,22317.7,904
+H2W,"City, complete inventory",Ville-Marie,39,3762.3,3014.7,952.9,2061.8,27
+H2X,"City, complete inventory",Le Plateau-Mont-Royal,232,25189.5,20623.8,4360.7,16263.1,754
+H2X,"City, complete inventory",Ville-Marie,360,30795.2,23679.0,8995.5,14683.5,727
+H2Y,"City, complete inventory",Ville-Marie,478,31719.3,22253.0,8783.4,13469.6,942
+H2Z,"City, complete inventory",Ville-Marie,179,13997.2,10454.3,3571.3,6883.0,316
+H3A,"City, complete inventory",Le Plateau-Mont-Royal,12,1043.7,809.7,84.1,725.7,31
+H3A,"City, complete inventory",Ville-Marie,198,20436.2,16529.5,7054.7,9474.9,512
+H3B,"City, complete inventory",Ville-Marie,229,18351.9,13924.2,3512.1,10412.0,435
+H3C,"City, complete inventory",Le Sud-Ouest,357,32135.9,25149.1,9129.3,16019.8,670
+H3C,"City, complete inventory",Ville-Marie,710,78603.8,64727.9,13358.3,51369.7,696
+H3E,"City, complete inventory",Le Sud-Ouest,15,3385.4,3087.2,0.0,3087.2,0
+H3E,"City, incomplete inventory",Verdun,760,67934.2,53029.7,,,0
+H3G,"City, complete inventory",Ville-Marie,201,23965.8,20007.6,4938.9,15068.7,616
+H3H,"City, complete inventory",Le Sud-Ouest,5,323.1,223.1,28.0,195.2,5
+H3H,"City, complete inventory",Ville-Marie,328,28206.5,21864.7,4040.1,17824.6,652
+H3H,other municipality,Westmount,13,724.3,498.7,,,1
+H3J,"City, complete inventory",Le Sud-Ouest,429,38567.6,30115.8,5453.8,24661.9,1016
+H3J,"City, complete inventory",Ville-Marie,8,795.4,635.4,227.9,407.5,18
+H3J,other municipality,Westmount,1,68.1,48.1,,,0
+H3K,"City, complete inventory",Le Sud-Ouest,638,68090.9,55495.1,9133.5,46361.6,1524
+H3L,"City, complete inventory",Ahuntsic-Cartierville,852,102052.8,85606.3,13747.0,71859.4,1713
+H3M,"City, complete inventory",Ahuntsic-Cartierville,854,90385.5,73833.3,6638.8,67194.5,1429
+H3N,"City, complete inventory",Ahuntsic-Cartierville,6,659.0,547.1,0.0,547.1,0
+H3N,"City, complete inventory",Rosemont-La Petite-Patrie,2,94.6,54.6,0.0,54.6,0
+H3N,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,475,60912.5,51594.7,5973.4,45621.3,1161
+H3N,other municipality,Mont-Royal,13,2318.2,2075.1,,,1
+H3P,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,40,1982.3,1282.7,434.4,848.3,25
+H3P,"City, complete inventory",Outremont,4,240.4,160.4,144.4,16.0,4
+H3P,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,6,417.2,307.6,0.0,307.6,0
+H3P,"City, incomplete inventory",Saint-Laurent,8,1389.3,1229.3,,,0
+H3P,other municipality,Mont-Royal,851,94107.6,77981.1,,,17
+H3R,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,177,15616.6,12275.0,2270.7,10004.4,172
+H3R,"City, incomplete inventory",Saint-Laurent,8,798.8,645.1,,,0
+H3R,other municipality,Mont-Royal,710,78384.7,64450.0,,,8
+H3S,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,496,64851.0,55400.0,5728.6,49671.5,962
+H3S,"City, complete inventory",Outremont,16,1002.4,682.4,330.4,352.1,20
+H3S,other municipality,Mont-Royal,6,1131.8,1011.8,,,0
+H3T,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,218,28506.4,24203.6,2609.4,21594.2,675
+H3T,"City, complete inventory",Outremont,49,3597.6,2632.3,522.4,2109.8,70
+H3V,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,130,12009.6,9482.8,2953.9,6529.0,167
+H3V,"City, complete inventory",Ville-Marie,5,679.0,579.0,0.0,579.0,0
+H3V,other municipality,Westmount,3,915.8,855.8,,,5
+H3W,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,611,77112.5,65008.2,6183.6,58824.6,1206
+H3X,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,384,47570.5,40083.6,4728.0,35355.6,674
+H3X,other municipality,Côte-Saint-Luc,43,4870.8,4054.5,,,7
+H3X,other municipality,Hampstead,500,58188.9,48574.4,,,21
+H3Y,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,2,103.8,63.8,0.0,63.8,0
+H3Y,"City, complete inventory",Ville-Marie,74,7464.5,6000.3,1874.7,4125.5,154
+H3Y,other municipality,Westmount,612,70548.3,58366.5,,,4
+H3Z,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,6,589.0,469.0,8.6,460.5,8
+H3Z,"City, complete inventory",Ville-Marie,32,1509.3,942.7,215.1,727.6,22
+H3Z,other municipality,Westmount,378,38512.1,31072.7,,,4
+H4A,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,708,97531.1,83587.6,10395.9,73191.7,1907
+H4A,"City, complete inventory",Le Sud-Ouest,20,3481.9,3105.0,778.7,2326.4,8
+H4A,other municipality,Westmount,2,134.9,106.0,,,0
+H4B,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,571,71136.4,59863.7,7140.0,52723.7,1149
+H4B,"City, complete inventory",Le Sud-Ouest,13,1700.0,1460.9,0.0,1460.9,0
+H4B,other municipality,Montréal-Ouest,1,41.4,21.4,,,0
+H4C,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,36,1646.5,975.1,84.6,890.5,3
+H4C,"City, complete inventory",Le Sud-Ouest,777,77088.4,61753.8,14563.6,47190.2,1912
+H4E,"City, complete inventory",Le Sud-Ouest,997,124669.3,105179.1,13106.3,92072.8,2472
+H4E,"City, incomplete inventory",LaSalle,4,1144.8,1075.5,,,0
+H4E,"City, incomplete inventory",Verdun,58,7270.3,6148.0,,,24
+H4G,"City, complete inventory",Le Sud-Ouest,44,3673.6,2880.2,0.0,2880.2,2
+H4G,"City, incomplete inventory",Verdun,577,76005.9,64681.5,,,5
+H4H,"City, complete inventory",Le Sud-Ouest,2,270.4,238.3,0.0,238.3,0
+H4H,"City, incomplete inventory",LaSalle,3,280.9,220.9,,,0
+H4H,"City, incomplete inventory",Verdun,496,73416.4,63658.6,,,3
+H4J,"City, complete inventory",Ahuntsic-Cartierville,580,69036.5,57618.6,5655.7,51962.9,1247
+H4J,"City, incomplete inventory",Saint-Laurent,12,961.8,726.2,,,2
+H4K,"City, complete inventory",Ahuntsic-Cartierville,451,49547.5,40669.8,5338.1,35331.7,644
+H4K,"City, incomplete inventory",Pierrefonds-Roxboro,29,1820.2,1251.2,,,0
+H4K,"City, incomplete inventory",Saint-Laurent,346,31944.7,25477.9,,,18
+H4L,"City, complete inventory",Ahuntsic-Cartierville,4,103.6,23.6,0.6,23.0,1
+H4L,"City, incomplete inventory",Saint-Laurent,1333,144034.1,117941.0,,,152
+H4M,"City, incomplete inventory",Saint-Laurent,809,82918.2,67096.5,,,718
+H4M,other municipality,Mont-Royal,1,39.7,19.7,,,0
+H4N,"City, complete inventory",Ahuntsic-Cartierville,432,47288.7,38956.4,7763.4,31193.0,693
+H4N,"City, complete inventory",Villeray-Saint-Michel-Parc-Extension,6,406.2,293.9,0.0,293.9,0
+H4N,"City, incomplete inventory",Saint-Laurent,665,75123.9,62450.9,,,154
+H4N,other municipality,Mont-Royal,33,2602.0,1954.4,,,0
+H4P,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,313,32735.9,26651.8,7587.9,19063.9,479
+H4P,"City, incomplete inventory",Saint-Laurent,34,4816.1,4136.1,,,0
+H4P,other municipality,Mont-Royal,164,25436.5,22218.8,,,1
+H4R,"City, incomplete inventory",Saint-Laurent,1539,196891.3,167228.1,,,53
+H4S,"City, incomplete inventory",Pierrefonds-Roxboro,21,1053.4,652.2,,,1
+H4S,"City, incomplete inventory",Saint-Laurent,687,123231.0,109869.8,,,13
+H4S,other municipality,Dorval,24,3397.9,2938.5,,,0
+H4T,"City, incomplete inventory",Lachine,2,292.1,265.0,,,0
+H4T,"City, incomplete inventory",Saint-Laurent,409,66838.1,58822.5,,,21
+H4T,other municipality,Mont-Royal,48,7157.0,6197.0,,,0
+H4V,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,393,54788.5,47118.4,3456.6,43661.8,774
+H4V,other municipality,Côte-Saint-Luc,300,28719.6,22920.6,,,1
+H4W,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,17,1225.1,901.6,203.0,698.7,14
+H4W,"City, incomplete inventory",Lachine,1,253.8,233.8,,,0
+H4W,other municipality,Côte-Saint-Luc,841,102008.3,85430.3,,,0
+H4W,other municipality,Montréal-Ouest,2,131.1,91.1,,,0
+H4X,"City, complete inventory",Côte-des-Neiges-Notre-Dame-de-Grâce,6,586.7,472.5,277.0,195.5,7
+H4X,"City, complete inventory",Le Sud-Ouest,26,1192.9,740.6,0.0,740.6,0
+H4X,"City, incomplete inventory",Lachine,4,296.3,216.3,,,0
+H4X,other municipality,Côte-Saint-Luc,87,7304.9,5578.0,,,0
+H4X,other municipality,Montréal-Ouest,330,40246.5,33686.8,,,1
+H4Y,other municipality,Dorval,122,16910.8,14504.3,,,0
+H5A,"City, complete inventory",Ville-Marie,1,221.0,201.0,0.0,201.0,5
+H5B,"City, complete inventory",Ville-Marie,3,614.0,554.0,247.4,306.6,15
+H8N,"City, complete inventory",Le Sud-Ouest,9,1098.4,918.4,314.9,603.5,9
+H8N,"City, incomplete inventory",LaSalle,1146,146447.2,124187.2,,,1
+H8P,"City, incomplete inventory",LaSalle,930,112746.4,94473.2,,,0
+H8R,"City, complete inventory",Le Sud-Ouest,2,37.9,4.5,0.0,4.5,0
+H8R,"City, incomplete inventory",LaSalle,903,115307.8,97461.9,,,0
+H8R,"City, incomplete inventory",Lachine,306,30775.8,24753.7,,,72
+H8R,other municipality,Montréal-Ouest,3,356.1,296.1,,,0
+H8S,"City, incomplete inventory",LaSalle,14,1024.6,744.6,,,0
+H8S,"City, incomplete inventory",Lachine,907,116294.5,98260.4,,,446
+H8T,"City, incomplete inventory",Lachine,972,135045.4,115832.2,,,129
+H8T,"City, incomplete inventory",Saint-Laurent,1,61.4,41.4,,,0
+H8T,other municipality,Dorval,5,645.5,545.5,,,0
+H8Y,"City, incomplete inventory",Pierrefonds-Roxboro,1015,130801.1,110775.5,,,8
+H8Y,other municipality,Dollard-des-Ormeaux,41,4118.7,3360.5,,,0
+H8Z,"City, incomplete inventory",Pierrefonds-Roxboro,993,116841.0,97215.3,,,0
+H9A,"City, incomplete inventory",Pierrefonds-Roxboro,250,30347.1,25483.6,,,0
+H9A,other municipality,Dollard-des-Ormeaux,728,94805.8,80288.9,,,0
+H9B,"City, incomplete inventory",Pierrefonds-Roxboro,4,83.3,3.3,,,0
+H9B,other municipality,Dollard-des-Ormeaux,1098,148596.0,127010.5,,,0
+H9B,other municipality,Dorval,1,476.4,456.4,,,0
+H9B,other municipality,Pointe-Claire,11,1371.6,1151.6,,,0
+H9C,"City, incomplete inventory",L'Île-Bizard-Sainte-Geneviève,1166,135949.1,113032.3,,,29
+H9E,"City, incomplete inventory",L'Île-Bizard-Sainte-Geneviève,322,56030.5,49708.3,,,1
+H9G,other municipality,Dollard-des-Ormeaux,860,119521.3,102465.4,,,0
+H9H,"City, incomplete inventory",L'Île-Bizard-Sainte-Geneviève,220,20649.8,16294.2,,,50
+H9H,"City, incomplete inventory",Pierrefonds-Roxboro,924,107751.4,89429.5,,,2
+H9H,other municipality,Dollard-des-Ormeaux,70,8641.1,7289.5,,,0
+H9H,other municipality,Kirkland,813,98364.7,82430.6,,,0
+H9J,"City, incomplete inventory",Pierrefonds-Roxboro,479,62376.8,52796.8,,,0
+H9J,other municipality,Kirkland,1175,135865.6,112869.5,,,0
+H9K,"City, incomplete inventory",Pierrefonds-Roxboro,431,67607.0,59052.5,,,4
+H9K,other municipality,Kirkland,10,354.1,159.7,,,0
+H9K,other municipality,Senneville,18,736.5,376.5,,,0
+H9P,"City, incomplete inventory",Lachine,13,1391.3,1131.3,,,0
+H9P,"City, incomplete inventory",Saint-Laurent,12,423.1,202.4,,,0
+H9P,other municipality,Dorval,765,114514.1,99462.4,,,0
+H9P,other municipality,Pointe-Claire,32,3911.4,3281.9,,,0
+H9R,other municipality,Dollard-des-Ormeaux,3,400.3,340.3,,,0
+H9R,other municipality,Dorval,25,1741.3,1262.5,,,0
+H9R,other municipality,Pointe-Claire,1993,291216.8,252075.4,,,0
+H9S,other municipality,Dorval,1148,133403.8,110781.7,,,0
+H9S,other municipality,L'Île-Dorval,92,5207.3,3420.6,,,0
+H9S,other municipality,Pointe-Claire,492,70131.0,60365.2,,,0
+H9W,other municipality,Baie-d'Urfé,1,33.3,13.3,,,0
+H9W,other municipality,Beaconsfield,1884,249218.1,211813.3,,,0
+H9W,other municipality,Kirkland,2,19.3,0.0,,,0
+H9W,other municipality,Pointe-Claire,1,118.9,98.9,,,0
+H9X,"City, incomplete inventory",Pierrefonds-Roxboro,2,3201.4,3161.4,,,0
+H9X,other municipality,Baie-d'Urfé,619,91859.6,79569.2,,,0
+H9X,other municipality,Beaconsfield,1,8.6,0.0,,,0
+H9X,other municipality,Sainte-Anne-de-Bellevue,565,76141.7,65002.8,,,0
+H9X,other municipality,Senneville,123,28974.4,26552.0,,,0
