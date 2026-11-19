@@ -2,7 +2,7 @@
 """Standalone image (PDF + PNG): rue de Terrebonne at night in the City's 2015 LiDAR, vegetation
 removed, every surface coloured by its height above ground so that parked cars (0.9–2.3 m) stand
 out, over the stretch Grand to Melrose in two rows, with a magnifier inset on one detected car.
-Usage: python3 cars_hero.py [en|fr]"""
+Usage: python3 cars_overview.py [en|fr]"""
 import csv, math, os, sys
 import numpy as np, tifffile
 import matplotlib; matplotlib.use('Agg')
@@ -93,4 +93,4 @@ fig.legend(handles=handles, loc='lower center', ncol=3, fontsize=7.5, frameon=Fa
 src = {'en': "Source: Ville de Montréal, LiDAR aérien 2015 (CC-BY 4.0), height above ground from the point cloud with vegetation returns removed (pdal), 0.2 m cells, hillshaded; parcels: unités d'évaluation foncière (CC-BY 4.0). On the whole street, 183 car-height objects were counted by eye at the Terrebonne curbs that night (north 93, south 90); an automatic detector finds 85. Terrebonne-open-sources, 1954-underwriters-plans-terrebonne-garages.",
        'fr': "Source : Ville de Montréal, LiDAR aérien 2015 (CC-BY 4.0), hauteur au-dessus du sol calculée du nuage de points sans les retours de végétation (pdal), cellules de 0,2 m, ombrage; parcelles : unités d'évaluation foncière (CC-BY 4.0). Sur toute la rue, 183 objets à hauteur de voiture comptés à l'œil aux bordures de Terrebonne cette nuit-là (nord 93, sud 90); un détecteur automatique en trouve 85. Terrebonne-open-sources, 1954-underwriters-plans-terrebonne-garages."}[LANG]
 fig.text(0.5, 0.012, src, ha='center', va='bottom', fontsize=6.6, color='#52514e', wrap=True)
-base = os.path.join(HERE, f'figures/terrebonne_parked_cars_lidar_hero_{LANG}' if MODE == 'cars' else f'figures/terrebonne_lidar_hero_{MODE}_{LANG}'); fig.savefig(base + '.png', dpi=220, facecolor='white'); fig.savefig(base + '.pdf', facecolor='white'); plt.close(fig); print('wrote', base, 'target', (tgt['u_m'], tgt['v_m'], tgt['length_m'], tgt['width_m'], tgt['mean_height_m']) if tgt else 'none')
+base = os.path.join(HERE, f'figures/terrebonne_parked_cars_lidar_overview_{LANG}' if MODE == 'cars' else f'figures/terrebonne_lidar_overview_{MODE}_{LANG}'); fig.savefig(base + '.png', dpi=220, facecolor='white'); fig.savefig(base + '.pdf', facecolor='white'); plt.close(fig); print('wrote', base, 'target', (tgt['u_m'], tgt['v_m'], tgt['length_m'], tgt['width_m'], tgt['mean_height_m']) if tgt else 'none')
