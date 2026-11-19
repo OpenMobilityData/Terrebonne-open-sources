@@ -6230,13 +6230,13 @@
 <!-- d_cdn_ndg_safety_deck -->
 <g id="node153" class="node">
 <title>d_cdn_ndg_safety_deck</title>
-<g id="a_node153"><a xlink:href="https://github.com/OpenMobilityData/Montreal-collisions/blob/main/docs/cdn_ndg_road_safety_deck_en.pdf" xlink:title="Montreal&#45;collisions,\ndocs/cdn_ndg_road_safety_deck_en.pdf\n(draft of Nov 19, 2026, 22 slides,\nRick Hoge, PhD): the borough among\nthe City&#39;s 19 boroughs, its record\nby district, year, mode, severity\nand other vehicle, chemin\nQueen&#45;Mary, the Queen&#45;Mary /\nDécarie intersection and rue de\nTerrebonne; every number read from\nthe repository&#39;s tables at build\ntime.\n[2026&#45;11&#45;19]" target="_blank">
+<g id="a_node153"><a xlink:href="https://github.com/OpenMobilityData/Montreal-collisions/blob/main/docs/cdn_ndg_road_safety_deck_en.pdf" xlink:title="Montreal&#45;collisions,\ndocs/cdn_ndg_road_safety_deck_en.pdf\n(draft of Nov 19, 2026, 23 slides,\nRick Hoge, PhD): the borough among\nthe City&#39;s 19 boroughs, its record\nby district, year, mode, severity\nand other vehicle, chemin\nQueen&#45;Mary, the Queen&#45;Mary /\nDécarie intersection and rue de\nTerrebonne; every number read from\nthe repository&#39;s tables at build\ntime.\n[2026&#45;11&#45;19]" target="_blank">
 <polygon fill="#fff3e8" stroke="#9aa0a6" stroke-width="0.6" points="5708.61,-4447.36 5532.11,-4447.36 5532.11,-4312.61 5714.61,-4312.61 5714.61,-4441.36 5708.61,-4447.36"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="5708.61,-4447.36 5708.61,-4441.36"/>
 <polyline fill="none" stroke="#9aa0a6" stroke-width="0.6" points="5714.61,-4441.36 5708.61,-4441.36"/>
 <text text-anchor="middle" x="5623.36" y="-4434.81" font-family="Helvetica,sans-Serif" font-size="9.00">Montreal&#45;collisions,</text>
 <text text-anchor="middle" x="5623.36" y="-4425.06" font-family="Helvetica,sans-Serif" font-size="9.00">docs/cdn_ndg_road_safety_deck_en.pdf</text>
-<text text-anchor="middle" x="5623.36" y="-4415.31" font-family="Helvetica,sans-Serif" font-size="9.00">(draft of Nov 19, 2026, 22 slides,</text>
+<text text-anchor="middle" x="5623.36" y="-4415.31" font-family="Helvetica,sans-Serif" font-size="9.00">(draft of Nov 19, 2026, 23 slides,</text>
 <text text-anchor="middle" x="5623.36" y="-4405.56" font-family="Helvetica,sans-Serif" font-size="9.00">Rick Hoge, PhD): the borough among</text>
 <text text-anchor="middle" x="5623.36" y="-4395.81" font-family="Helvetica,sans-Serif" font-size="9.00">the City&#39;s 19 boroughs, its record</text>
 <text text-anchor="middle" x="5623.36" y="-4386.06" font-family="Helvetica,sans-Serif" font-size="9.00">by district, year, mode, severity</text>
