@@ -154,7 +154,7 @@ Two-way boulevards & """ + esc(blvd_txt) + r"""\\ \bottomrule\end{tabular}\end{f
 
 deck = r'''\documentclass[aspectratio=169,11pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs}
-\title{How wide is rue de Terrebonne?}\subtitle{The roadway along the lane, measured on the City\textquoteright{}s 2015 LiDAR}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + STAMP + r'''}
+\title{How wide is rue de Terrebonne?}\subtitle{The roadway along the lane, measured on the City\textquoteright{}s 2015 LiDAR}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{''' + STAMP + r'''}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \begin{frame}{The question}\begin{itemize}

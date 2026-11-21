@@ -13,7 +13,7 @@ In the winter layout put to the borough council on November 2, 2026, cyclists ri
 
 | File | What it is |
 |---|---|
-| [`derived/shared_lane_queue_note_en.pdf`](derived/shared_lane_queue_note_en.pdf) (+ `.tex`) | Note (6 pp.): abstract, lay summary, the rules, data, model, results, limits |
+| [`derived/shared_lane_queue_note_en.pdf`](derived/shared_lane_queue_note_en.pdf) (+ `.tex`) | Note (5 pp.): abstract, lay summary, the rules, data, model, results, limits |
 | [`derived/shared_lane_queue_deck_en.pdf`](derived/shared_lane_queue_deck_en.pdf) (+ `.tex`) | Slide deck (9 slides) |
 | [`derived/lay_abstract_en_long.txt`](derived/lay_abstract_en_long.txt), [`derived/lay_abstract_en_short.txt`](derived/lay_abstract_en_short.txt) | Lay summaries (the short one is in the note) |
 | [`derived/summary.json`](derived/summary.json) | Every number in the note and deck |

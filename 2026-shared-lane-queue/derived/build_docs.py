@@ -44,7 +44,7 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \captionsetup{font=small,labelfont=bf}\setlength{\parindent}{0pt}\setlength{\parskip}{0.6em}
 \begin{document}
 {\LARGE\textbf{How many cars queue behind a cyclist in a shared winter lane on rue de Terrebonne?}}\\[4pt]
-{\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Companion to the notes on street width, winter counts and parking. Data: the borough\textquoteright{}s loop counter (request 2026-300) and Miovision count (request 2026-634), the City géobase (CC-BY 4.0). Code, tables and figures: \url{''' + URL + r'''}.}
+{\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: Rick Hoge, PhD (see the repository\textquoteright{}s « About the author »). Companion to the notes on street width, winter counts and parking. Data: the borough\textquoteright{}s loop counter (request 2026-300) and Miovision count (request 2026-634), the City géobase (CC-BY 4.0). Code, tables and figures: \url{''' + URL + r'''}.}
 
 \section*{Abstract}
 ''' + ABSTRACT + r'''
@@ -124,7 +124,7 @@ DECK = r'''\documentclass[aspectratio=169,10pt]{beamer}
 \usetheme{default}\usefonttheme{professionalfonts}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage[scaled=0.95]{helvet}\renewcommand{\familydefault}{\sfdefault}\usepackage{booktabs,amsmath}
 \setbeamercolor{frametitle}{fg=black}\setbeamercolor{title}{fg=black}
-\title{Cars queued behind a cyclist in a shared winter lane}\subtitle{Rue de Terrebonne, winter morning peak}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + STAMP + r'''}
+\title{Cars queued behind a cyclist in a shared winter lane}\subtitle{Rue de Terrebonne, winter morning peak}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{''' + STAMP + r'''}
 \begin{document}
 \frame{\titlepage}
 \begin{frame}{The question}\begin{itemize}

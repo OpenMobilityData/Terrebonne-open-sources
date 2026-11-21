@@ -63,7 +63,7 @@ NOTE = r'''\documentclass[11pt,a4paper]{article}
 \begin{document}
 {\LARGE\textbf{How many people cycle rue de Terrebonne in winter, and how often?}}\\[3pt]
 {\large Bicycle counts on four sensors, a frequency distribution, and the survey of the Association des piétons et cyclistes de NDG (APC-NDG) in context}\\[4pt]
-{\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: a resident of Côte-des-Neiges--Notre-Dame-de-Grâce (see the repository\textquoteright{}s « About the author »). Data: borough loop counter (access requests 2026-300 and 2026-581), the author\textquoteright{}s Telraam sensors (counts: Telraam), City open data (CC-BY 4.0), ECCC. Code, tables and figures: \url{''' + URL + r'''}.}
+{\small Terrebonne-open-sources, ''' + STAMP + r'''. Author: Rick Hoge, PhD (see the repository\textquoteright{}s « About the author »). Data: borough loop counter (access requests 2026-300 and 2026-581), the author\textquoteright{}s Telraam sensors (counts: Telraam), City open data (CC-BY 4.0), ECCC. Code, tables and figures: \url{''' + URL + r'''}.}
 
 \section*{Abstract}
 ''' + ABSTRACT + r'''
@@ -195,7 +195,7 @@ Under central assumptions the 87 account for ''' + f"{si['passages_central']:,}"
 
 DECK = r'''\documentclass[aspectratio=169,10pt]{beamer}\usetheme{default}\usecolortheme{seahorse}\setbeamertemplate{navigation symbols}{}\setbeamertemplate{footline}[frame number]
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{helvet}\usepackage{booktabs,amsmath}
-\title{How many people cycle rue de Terrebonne in winter, and how often?}\subtitle{Bicycle counts on four sensors, a frequency distribution, and the survey of the Association des piétons et cyclistes de NDG (APC-NDG) in context}\author{Terrebonne-open-sources (a resident of Côte-des-Neiges--Notre-Dame-de-Grâce)}\date{''' + STAMP + r'''}
+\title{How many people cycle rue de Terrebonne in winter, and how often?}\subtitle{Bicycle counts on four sensors, a frequency distribution, and the survey of the Association des piétons et cyclistes de NDG (APC-NDG) in context}\author{Rick Hoge, PhD}\institute{Terrebonne-open-sources}\date{''' + STAMP + r'''}
 \begin{document}
 \begin{frame}\titlepage\end{frame}
 \begin{frame}{Two units}\begin{itemize}
