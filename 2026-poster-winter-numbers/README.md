@@ -1,6 +1,6 @@
 # Rue de Terrebonne in winter: the numbers on one page (poster)
 
-**Issuer:** the repository's author (a resident of Côte-des-Neiges–Notre-Dame-de-Grâce), from public records. **Date:** first built October 20, 2026; rebuilt from the data whenever the inputs change (the build date is printed on the page). **Format:** one sheet (11 × 26 in English, 11 × 28 in French; poster or two-page handout), in English and French.
+**Issuer:** the repository's author (see the root README, « About the author »), from public records. **Date:** first built October 20, 2026; rebuilt from the data whenever the inputs change (the build date is printed on the page). **Format:** one sheet (11 × 26 in English, 11 × 28 in French; poster or two-page handout), in English and French.
 
 **View:** English [web page](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-poster-winter-numbers/poster_terrebonne_winter_numbers_en.html) · [PDF](poster_terrebonne_winter_numbers_en.pdf) · [preview](poster_terrebonne_winter_numbers_en.png) — Français [page web](https://openmobilitydata.github.io/Terrebonne-open-sources/2026-poster-winter-numbers/poster_terrebonne_winter_numbers_fr.html) · [PDF](poster_terrebonne_winter_numbers_fr.pdf) · [aperçu](poster_terrebonne_winter_numbers_fr.png)
 

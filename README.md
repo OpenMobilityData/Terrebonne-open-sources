@@ -82,6 +82,12 @@ Two earlier repositories that held some of these files (`Terrebonne-EXP-Report`,
 
 Borough and City documents reproduced here are public records or publications; open data from the Ville de Montréal is under CC-BY 4.0; other third-party material keeps its own terms. These documents (`raw/`) are not licensed here. The author's own work, the READMEs and the contents of the `derived/` folders (tables, transcripts, fact checks, figures, notes and the evidence graph), is published under CC BY 4.0 ([`LICENSE`](LICENSE)); code (scripts) under the MIT licence ([`LICENSE-CODE`](LICENSE-CODE)). The repository was assembled by Rick Hoge, a resident of the borough, as a personal project; it represents no position of any organization. Corrections are welcome through the issue tracker.
 
+## About the author
+
+The repository was created, and the derived documents written, by Rick Hoge, a researcher in the Faculty of Medicine at McGill University. The views expressed here are the author's own and do not reflect the position of any institution or organization. Unless otherwise indicated, analyses presented here should be considered preliminary pre-peer-review drafts - feedback from other researchers and members of the public is welcome in the GitHub 'Issues' board.
+
+Nothing in this repository should be considered an engineering opinion or legal advice.
+
 ## Use of AI
 
 Much of the code and many of the drafts in this repository were produced with an AI assistant, Anthropic's Claude, in interactive sessions directed by the author. The author chose the questions, supplied the sources, reviewed every output, and checked every quotation, page reference and figure against the documents; the author alone is responsible for the content. Commits to which the assistant contributed name it as co-author, so the division of work is visible in the history, and errors found in its work are corrected in the open like any other. Nothing in `raw/` is edited by anyone, human or machine. The practice follows the principles of the European Commission's « Living guidelines on the responsible use of generative AI in research » (Directorate-General for Research and Innovation with the European Research Area Forum, first published March 20, 2024 and updated since; [document page](https://research-and-innovation.ec.europa.eu/document/2b6cf7e5-36ac-41cb-aab5-0d32050143dc_en)): the researcher remains responsible for the output, the use of the tool is disclosed, sources and facts are verified, privacy and third-party rights are respected, and the tool is never an author.
