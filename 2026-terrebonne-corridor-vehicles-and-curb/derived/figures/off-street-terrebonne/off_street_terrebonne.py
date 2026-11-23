@@ -17,13 +17,13 @@ from corridor_lib import TABLES  # noqa: E402
 T = {"en": dict(title="Rue de Terrebonne itself: automobiles, private places and curb",
                 sub="The {n} buildings of five dwellings or fewer on the street, judged from street level on Nov. 12, 2026 ({d} dwellings).\n"
                     "Blue: their modelled automobiles. Green: their private places, counted lot by lot. Orange: the street's one parking band today.",
-                a="modelled automobiles of those dwellings", b="private places, independent (measured)", c="curb places on Terrebonne today (5.5 m)", y="vehicles",
+                a="modelled automobiles of those dwellings", b="private places, independent (measured)", c="curb places on Terrebonne today (net of driveways and hydrants)", y="vehicles",
                 names=["residential west\n(west end – Cavendish)", "institutional\n(Cavendish – Grand)", "residential east\n(Grand – Girouard)", "whole lane"],
                 note="Not in the figure: the {g} larger buildings ({gd} dwellings; {gu} with an underground garage whose places cannot be counted), garage interiors, places in tandem\n({pt} places in all on the small lots), the cross streets' curb, visitors. On a night of 2015 the City's LiDAR shows {l} cars on the lots along the street and {c} at its curbs."),
      "fr": dict(title="La rue de Terrebonne elle-même : automobiles, places privées et bordure",
                 sub="Les {n} immeubles de cinq logements ou moins de la rue, vérifiés à hauteur de rue le 12 nov. 2026 ({d} logements).\n"
                     "Bleu : leurs automobiles modélisées. Vert : leurs places privées, comptées lot par lot. Orange : l’unique bande de la rue aujourd’hui.",
-                a="automobiles modélisées de ces logements", b="places privées indépendantes (mesurées)", c="places en bordure rue de Terrebonne aujourd’hui (5,5 m)", y="véhicules",
+                a="automobiles modélisées de ces logements", b="places privées indépendantes (mesurées)", c="places en bordure rue de Terrebonne aujourd’hui (nettes des entrées et des bornes d’incendie)", y="véhicules",
                 names=["résidentiel ouest\n(extrémité ouest – Cavendish)", "institutionnel\n(Cavendish – Grand)", "résidentiel est\n(Grand – Girouard)", "toute la piste"],
                 note="Hors figure : les {g} grands immeubles ({gd} logements; {gu} avec un garage souterrain dont les places ne peuvent être comptées), l’intérieur des garages, les places en file\n({pt} places en tout sur les petits lots), la bordure des rues transversales, les visiteurs. Une nuit de 2015, le LiDAR de la Ville montre {l} voitures sur les terrains et {c} en bordure.")}
 
@@ -34,7 +34,7 @@ def main():
     for lang, t in T.items():
         fig, ax = plt.subplots(figsize=(10, 5.8))
         for k, (col, c, lab) in enumerate((("modelled_automobiles_small_judged", F.BLUE, t["a"]), ("private_places_independent", F.AQUA, t["b"]),
-                                           ("curb_places_on_terrebonne_today_5.5m", F.ORANGE, t["c"]))):
+                                           ("curb_places_on_terrebonne_today_net", F.ORANGE, t["c"]))):
             xs = x + (k - 1) * (w + 0.015)
             ax.bar(xs, s[col], w, color=c, label=lab)
             for xi, v in zip(xs, s[col]):

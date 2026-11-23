@@ -1,0 +1,62 @@
+ID_TRC,block,curb,from_m,to_m,weight
+1320364,Belmore to Belmore,N,69.454,72.14,1.0
+1320364,Belmore to Belmore,S,69.454,72.14,1.0
+1320362,Coronation to Mayfair,S,157.618,170.662,1.0
+1320362,Coronation to Mayfair,S,170.662,199.129,1.0
+1320361,Mayfair to Mariette,S,224.099,227.557,1.0
+1320360,Mariette to Rosedale,S,316.588,329.865,1.0
+1320360,Mariette to Rosedale,S,329.865,356.052,1.0
+1320360,Mariette to Rosedale,S,356.052,376.342,1.0
+1320359,Rosedale to King-Edward,S,405.605,425.761,1.0
+1320359,Rosedale to King-Edward,S,425.761,469.86,1.0
+1320358,King-Edward to Montclair,S,494.054,526.579,1.0
+1320358,King-Edward to Montclair,S,526.579,547.199,1.0
+1320357,Montclair to Walkley,S,586.873,612.962,1.0
+1320357,Montclair to Walkley,S,612.962,647.902,1.0
+1320356,Walkley to Prince-of-Wales,S,678.231,702.535,1.0
+1320356,Walkley to Prince-of-Wales,S,702.535,722.351,1.0
+1320354,Prince-of-Wales to Cumberland,S,772.691,776.787,1.0
+1320354,Prince-of-Wales to Cumberland,S,776.787,807.377,1.0
+1320353,Cumberland to Cavendish,S,827.435,844.246,1.0
+1320353,Cumberland to Cavendish,S,844.246,860.516,1.0
+1310367,Cavendish to Bessborough,S,901.694,921.452,0.5
+1310367,Cavendish to Bessborough,S,921.452,954.805,1.0
+1310366,Bessborough to Benny,S,994.184,1040.04,1.0
+1310366,Bessborough to Benny,S,1040.04,1050.827,1.0
+1310365,Benny to Madison,S,1085.631,1121.113,1.0
+1310365,Benny to Madison,S,1121.113,1136.611,1.0
+1310365,Benny to Madison,S,1136.611,1196.654,1.0
+1310365,Benny to Madison,S,1196.654,1200.914,1.0
+1310364,Madison to Kensington,N,1239.299,1271.298,1.0
+1310364,Madison to Kensington,N,1271.298,1291.446,1.0
+1310363,Kensington to Grand,S,1320.585,1332.204,1.0
+1310363,Kensington to Grand,N,1326.984,1353.627,0.5
+1310363,Kensington to Grand,N,1353.627,1384.405,1.0
+1310362,Grand to Beaconsfield,N,1404.407,1424.128,0.5
+1310362,Grand to Beaconsfield,N,1424.128,1456.505,1.0
+1310362,Grand to Beaconsfield,N,1456.505,1460.59,1.0
+1310361,Beaconsfield to Hingston,N,1493.736,1526.62,1.0
+1310361,Beaconsfield to Hingston,N,1526.62,1549.159,1.0
+1310360,Hingston to Hampton,N,1587.169,1624.772,1.0
+1310360,Hingston to Hampton,N,1624.772,1642.915,1.0
+1310359,Hampton to Royal,N,1673.441,1714.76,1.0
+1310359,Hampton to Royal,N,1714.76,1738.979,1.0
+1310358,Royal to Draper,S,1768.147,1781.572,0.5
+1310358,Royal to Draper,S,1781.572,1808.245,1.0
+1310358,Royal to Draper,S,1808.245,1826.524,1.0
+1310358,Royal to Draper,S,1826.524,1841.671,0.5
+1310357,Draper to Melrose,N,1886.895,1897.648,1.0
+1310357,Draper to Melrose,N,1897.648,1922.692,1.0
+1600530,Melrose to Wilson,N,1956.589,1962.352,1.0
+1600530,Melrose to Wilson,N,1962.352,2001.823,1.0
+1600530,Melrose to Wilson,N,2001.823,2009.538,0.5
+1600530,Melrose to Wilson,N,2009.538,2012.44,1.0
+1310355,Wilson to Harvard,N,2038.842,2069.128,1.0
+1310355,Wilson to Harvard,N,2069.128,2080.736,1.0
+1310354,Harvard to Oxford,N,2117.472,2139.332,1.0
+1310354,Harvard to Oxford,N,2139.332,2164.908,1.0
+1310353,Oxford to Marcil,N,2191.571,2242.587,1.0
+1310352,Marcil to Old Orchard,N,2275.784,2298.28,1.0
+1310352,Marcil to Old Orchard,N,2298.28,2320.453,1.0
+1310351,Old Orchard to Girouard,N,2349.756,2365.133,1.0
+1310351,Old Orchard to Girouard,N,2365.133,2390.583,0.5

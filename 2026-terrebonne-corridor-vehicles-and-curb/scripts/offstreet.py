@@ -59,6 +59,9 @@ def main():
     b["pi"] = num(b.places_independent).where(b.small & b.acc, 0); b["pt"] = num(b.places_total).where(b.small & b.acc, 0)
     b["modelled"] = b.dwellings.fillna(0) * b.dauid.map(d.per_household)
     lc = pd.read_csv(GARAGES / "lidar_cars_by_block.csv"); oc = pd.read_csv(GARAGES / "on_street_cars_by_block.csv")
+    # today's places net of driveway entrances and fire hydrants (refinement of Nov 23, 2026; terrebonne_places_today.py), by block west to east
+    pt = pd.read_csv(TABLES / "terrebonne_places_today_by_block.csv").sort_values("u_m").reset_index(drop=True)
+    assert len(pt) == 29, "one row per block of the lane, west to east"
     rows = []
     for name, a, z in SECTORS + (("whole lane", 0, 28),):
         x = b[b.blk.between(a, z)]; t = tb[tb.block.between(a, z)]; xs = x[x.small]
@@ -71,7 +74,10 @@ def main():
                      "private_places_independent": int(xs.pi.sum()), "private_places_total": int(xs.pt.sum()),
                      "large_lots": int((~x.small).sum()), "dwellings_large": int(x[~x.small].dwellings.sum()),
                      "large_with_underground_garage": int(((~x.small) & (x.kind == "parking lot")).sum()),
-                     "curb_places_on_terrebonne_today_5.5m": round(t.legal_m.sum() / PLACE),
+                     "curb_places_on_terrebonne_today_5.5m": round(t.legal_m.sum() / PLACE),                # the signs alone: an upper bound
+                     "curb_places_on_terrebonne_today_net": round(float(pt.places_today.iloc[a:z + 1].sum())),
+                     "curb_places_on_terrebonne_today_net_low": round(float(pt.places_today_lo.iloc[a:z + 1].sum())),
+                     "curb_places_on_terrebonne_today_net_high": round(float(pt.places_today_hi.iloc[a:z + 1].sum())),
                      "cars_on_lots_2015_night": int(l.lot_N.sum() + l.lot_S.sum()),
                      "cars_at_curbs_2015_night": int(o.lidar_by_eye_N.sum() + o.lidar_by_eye_S.sum())})
     ts = pd.DataFrame(rows); ts.to_csv(TABLES / "offstreet_terrebonne_by_sector.csv", index=False)
