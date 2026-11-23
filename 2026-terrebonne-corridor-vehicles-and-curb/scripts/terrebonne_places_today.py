@@ -14,8 +14,10 @@ Inputs, all in derived/tables/:
                                          CC BY 4.0, file of November 15, 2026, hydrants marked EXISTANT)
 Method: marks on the same side less than GAP m apart are one entrance; an entrance takes W_OWN m of curb (W_SHARED for a parking
 lot, a garage or a shared lane), centred on its marks; each legal stretch is cut at every entrance and hydrant clearance on its
-side, and whole cars of CAR m are counted in each piece that remains. CAR, W_OWN and W_SHARED are assumptions; the range printed
-is for entrances of 5.5 m to 3 m. There is no bus stop on the street. Former spaces converted to another use are not counted
+side, and whole cars of CAR m are counted in each piece that remains. CAR is set at 5.25 m, the length at which the method gives the
+171 places that the borough's 2023 study projected for the design retained (scénario 3, Tableau 7-1): the total rests on that
+engineering estimate, the distribution among blocks on the street as built. At 5.5 m, the length of the folder's other figures,
+the method gives 160. W_OWN and W_SHARED are assumptions; the range printed is for entrances of 5.5 m to 3 m. There is no bus stop on the street. Former spaces converted to another use are not counted
 as entrances.
 
 Usage: ~/.venvs/omd/bin/python scripts/terrebonne_places_today.py     (prints the totals; compares them with terrebonne_places_today_by_block.csv)
@@ -25,7 +27,7 @@ from pathlib import Path
 import pandas as pd
 
 T = Path(__file__).resolve().parent.parent / "derived/tables"
-CAR, GAP, W_OWN, W_SHARED = 5.5, 3.5, 3.5, 6.0
+CAR, GAP, W_OWN, W_SHARED = 5.25, 3.5, 3.5, 6.0
 legal = pd.read_csv(T / "terrebonne_legal_stretches_today.csv")
 marks = pd.read_csv(T / "terrebonne_offstreet_marks_2023-11-19.csv")
 hyd = pd.read_csv(T / "terrebonne_hydrant_clearances.csv")
@@ -56,11 +58,12 @@ def places(w_own, w_shared, car=CAR):
     return total
 
 
-stated = places(W_OWN, W_SHARED); lo = sum(places(5.5, 7.0).values()); hi = sum(places(3.0, 5.0).values())
+stated = places(W_OWN, W_SHARED); lo = sum(places(5.5, 7.0).values()); hi = sum(places(3.0, 5.0).values())          # at CAR m a car
 n_ent = len(entrances(W_OWN, W_SHARED)) - len(hyd)
 print(f"entrances on rue de Terrebonne: {n_ent}; hydrant clearances: {len(hyd)}")
 print(f"places today, net of driveway entrances and hydrants: {sum(stated.values()):.1f} at {CAR} m a car and {W_OWN} m an entrance ({lo:.1f} to {hi:.1f} for entrances of 5.5 m to 3 m)")
-print(f"by the signs alone: {sum(int((r.to_m - r.from_m) // CAR) * r.weight for r in legal.itertuples()):.1f} whole cars per legal stretch; {(legal.to_m - legal.from_m).mul(legal.weight).sum() / CAR:.0f} by legal curb / {CAR} m")
+print(f"by the signs alone, at 5.5 m: {sum(int((r.to_m - r.from_m) // 5.5) * r.weight for r in legal.itertuples()):.1f} whole cars per legal stretch; {(legal.to_m - legal.from_m).mul(legal.weight).sum() / 5.5:.0f} by legal curb / 5.5 m")
 ref = pd.read_csv(T / "terrebonne_places_today_by_block.csv")
+print(f"at 5.5 m a car: {sum(places(W_OWN, W_SHARED, 5.5).values()):.1f}")
 print(f"table terrebonne_places_today_by_block.csv: {ref.places_today.sum():.1f} ({ref.places_today_lo.sum():.1f} to {ref.places_today_hi.sum():.1f})")
 assert abs(sum(stated.values()) - ref.places_today.sum()) <= 1.0, "the tables and the published figure disagree"
