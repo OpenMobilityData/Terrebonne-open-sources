@@ -37,7 +37,7 @@ ANGLE = -34.0                     # degrees; the map is turned 34° clockwise
 HATCHED = ("sign inventory incomplete", "block faces without any sign")
 T = {"en": dict(
         title="Registered automobiles per 100 street parking places, by postal area (FSA): City of Montréal, 2024",
-        sub="Automobiles and light trucks registered in the City part of each FSA (SAAQ, December 31, 2024; type inferred) per 100 places of legal curb, at 5.5 m a place.\n"
+        sub="Automobiles and light trucks registered in the City part of each FSA (SAAQ, December 31, 2024; type inferred) per 100 places of legal curb, at 5.37 m a place.\n"
             "The limiting case in which every registered automobile is kept on the street: it is not a measure of how full the streets are or of how hard parking is.",
         title_w="Registered automobiles per 100 street parking places, by postal area (FSA): Côte-des-Neiges–Notre-Dame-de-Grâce and its neighbours, 2024",
         legend="Automobiles per 100 places", n="{n} FSAs", n1="1 FSA",
@@ -48,12 +48,12 @@ T = {"en": dict(
         key="H4B: {b} · H4A: {a} · median of the {n} ranked FSAs: {m} · all {n} together: {t}",
         note="Legal curb: each block face of the City’s géobase (local streets, collectors and arterials), less 10 m at each end, less the stretches where a sign forbids stopping or parking at all times; an upper bound\n"
              "(driveways, hydrants, bus stops, hourly, permit, street-cleaning and seasonal rules are not deducted). Vehicles kept off the street, visitors and vehicles from elsewhere are not counted. At 5 m a place\n"
-             "every value is 9 % lower, at 6 m 9 % higher; the order of the FSAs does not change. An FSA shared with another municipality is shown for its City part (automobiles whose record gives Montréal).",
+             "every value is 7 % lower, at 6 m 12 % higher; the order of the FSAs does not change. An FSA shared with another municipality is shown for its City part (automobiles whose record gives Montréal).",
         src="Sources: SAAQ, vehicles released under the access Act (file 03.06.34729); City of Montréal, géobase, inventory of parking signs, administrative limits, electoral districts (CC BY 4.0).\n"
             "FSA boundaries: DMTI Spatial, CanMap Postal Code Suite v2024.3. Tables and scripts: OpenMobilityData/Terrebonne-open-sources, 2026-montreal-cars-per-curb-place-by-fsa."),
      "fr": dict(
         title="Automobiles immatriculées pour 100 places de stationnement sur rue, par région postale (RTA) : Ville de Montréal, 2024",
-        sub="Automobiles et camions légers immatriculés dans la partie de chaque RTA située dans la Ville (SAAQ, 31 décembre 2024 ; type inféré) pour 100 places de bordure légale, à 5,5 m la place.\n"
+        sub="Automobiles et camions légers immatriculés dans la partie de chaque RTA située dans la Ville (SAAQ, 31 décembre 2024 ; type inféré) pour 100 places de bordure légale, à 5,37 m la place.\n"
             "Le cas limite où chaque automobile immatriculée est gardée dans la rue : ce n’est pas une mesure de l’occupation des rues ni de la difficulté de se stationner.",
         title_w="Automobiles immatriculées pour 100 places de stationnement sur rue, par région postale (RTA) : Côte-des-Neiges–Notre-Dame-de-Grâce et ses voisins, 2024",
         legend="Automobiles pour 100 places", n="{n} RTA", n1="1 RTA",
@@ -64,7 +64,7 @@ T = {"en": dict(
         key="H4B : {b} · H4A : {a} · médiane des {n} RTA classées : {m} · les {n} ensemble : {t}",
         note="Bordure légale : chaque côté d’îlot de la géobase de la Ville (rues locales, collectrices et artères), moins 10 m à chaque extrémité, moins les tronçons où un panneau interdit l’arrêt ou le stationnement en tout temps ;\n"
              "une borne supérieure (entrées charretières, bornes d’incendie, arrêts d’autobus, règles horaires, vignettes, entretien et règles saisonnières non déduits). Les véhicules gardés hors rue, les visiteurs et les véhicules\n"
-             "d’ailleurs ne sont pas comptés. À 5 m la place, chaque valeur est 9 % plus basse ; à 6 m, 9 % plus haute ; l’ordre des RTA ne change pas. Une RTA partagée avec une autre municipalité est montrée pour sa partie\n"
+             "d’ailleurs ne sont pas comptés. À 5 m la place, chaque valeur est 7 % plus basse ; à 6 m, 12 % plus haute ; l’ordre des RTA ne change pas. Une RTA partagée avec une autre municipalité est montrée pour sa partie\n"
              "située dans la Ville (automobiles dont le dossier indique Montréal).",
         src="Sources : SAAQ, véhicules communiqués en vertu de la Loi sur l’accès (dossier 03.06.34729) ; Ville de Montréal, géobase, inventaire de la signalisation de stationnement, limites administratives,\n"
             "districts électoraux (CC BY 4.0). Limites des RTA : DMTI Spatial, CanMap Postal Code Suite v2024.3. Tableaux et scripts : OpenMobilityData/Terrebonne-open-sources, 2026-montreal-cars-per-curb-place-by-fsa."),

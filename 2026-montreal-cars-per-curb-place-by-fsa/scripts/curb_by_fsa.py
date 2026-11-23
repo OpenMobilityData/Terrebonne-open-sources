@@ -9,7 +9,8 @@ all times (« \\A EN TOUT TEMPS », « \\P EN TOUT TEMPS »). The stretch a sign
 pole in the direction of its arrow; a sign without an arrow governs the stretches on both sides of its pole. The
 arrow coding is the one found on the whole City in Quebec-vehicle-registrations/scripts/street_space.py, except on a
 face where the other coding leaves fewer stretches claimed both by an all-time prohibition and by another parking
-rule; a stretch still claimed both ways counts for half. Driveways, hydrants, bus stops, hourly rules, permit zones,
+rule; a stretch still claimed both ways counts for half. One block face of rue de Terrebonne is read from the street
+instead of from the inventory, as in the corridor analysis (OBSERVED below; recorded November 23, 2026). Driveways, hydrants, bus stops, hourly rules, permit zones,
 street-cleaning and seasonal rules are not deducted: an upper bound on legal curb. A face with no sign at all counts
 as legal over its whole length net of the ends.
 
@@ -44,6 +45,16 @@ CLEARANCE = 5.0      # m: no stopping within 5 m of an intersection (Highway Saf
 END = HALF_ROADWAY + CLEARANCE
 SIDE_OFFSET = 12.0
 BANS = ["\\A EN TOUT TEMPS", "\\P EN TOUT TEMPS"]
+# As in the corridor analysis (curb_supply.py). Block faces read from the street instead of from the inventory (author's observation on photographs of November 2026,
+# recorded November 23, 2026). Keyed by segment and by one pole of the face; the states are those of the face's stretches
+# in the order of the segment's own direction (the segment runs westward).
+OBSERVED = {
+    (1320361, "299368"): ["banned", "legal", "banned"],   # rue de Terrebonne, Mayfair to Mariette, south side: two no-stopping signs near the corners, both
+                                                          # entered with the same arrow code, so that either coding forbids the 63 m between them; no other sign
+                                                          # on the face. Parking is allowed there: read as on the neighbouring faces, the end signs pointing to
+                                                          # the corners, parking between them. (West of Coronation the street is two-way and has no parking, as
+                                                          # the inventory says.)
+}
 
 
 def side_of(line, t, L, pts):
@@ -91,6 +102,7 @@ def main():
         return ban, other
 
     ban_len, flipped, conflicts = {}, 0, 0
+    observed = []
     for (trc, side), v in groups.items():
         L = v.L.iloc[0]; ts = [0.0] + list(v.t) + [L]; ids = [None] + list(v.POTEAU_ID_POT) + [None]
         b1, o1 = claims(ids, side, True); b2, o2 = claims(ids, side, False)
@@ -101,12 +113,18 @@ def main():
             ban, other = b1, o1
         conflicts += int((ban & other).sum())
         w = np.where(ban & other, 0.5, np.where(ban, 1.0, 0.0))
+        obs = [v_ for (t_, p_), v_ in OBSERVED.items() if t_ == trc and p_ in ids]
+        if obs:
+            assert len(obs[0]) == len(w), f"observed states of {trc}: {len(obs[0])} given, {len(w)} stretches"
+            w = np.array([1.0 if x == "banned" else 0.0 for x in obs[0]]); observed.append((trc, side))
         tot = 0.0
         for k in range(len(w)):
             if w[k]:
                 lo, hi = max(ts[k], END), min(ts[k + 1], L - END)
                 tot += w[k] * max(0.0, hi - lo)
         ban_len[(trc, side)] = tot
+    assert len(observed) == len(OBSERVED), f"faces read from the street: {len(observed)} found of {len(OBSERVED)}"
+    print(f"block faces read from the street instead of the inventory: {observed}", flush=True)
     print(f"faces read with the other arrow coding: {flipped}; stretches still claimed both ways (counted for half): {conflicts}", flush=True)
 
     mid = g.geometry.interpolate(0.5, normalized=True)

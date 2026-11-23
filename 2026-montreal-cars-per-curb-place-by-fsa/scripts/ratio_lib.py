@@ -23,7 +23,13 @@ LANE = REPO / "1954-underwriters-plans-terrebonne-garages/derived/terrebonne_lan
 CRS = 32188                      # NAD83 / MTM zone 8, metres
 YEAR = 2024                      # vehicle file of December 31, 2024 (type inferred)
 MONTREAL = "66023"               # municipality code of the City of Montréal
-PLACE_M = 5.5                    # length of a parking place (assumption, as in the corridor note); 5.0 and 6.0 as bounds
+# Length of a parking place: 5.37 m, the length at which, on rue de Terrebonne, the count of places net of driveway
+# entrances (4 m each, the median length of the curb cuts detected on the City's 2015 LiDAR) and fire hydrants comes within
+# about 1 % of the consultant's count on the block faces where the street as built and the design retained in the 2023
+# study place the parking on the same side (139.5 against 138; EXP 2023, Annexe C); see the corridor note.
+# Before November 23, 2026: 5.5 m. 5.0 and 6.0 m as bounds.
+PLACE_M = 5.37
+PLACE_BEFORE = 5.5               # the length used until November 23, 2026: kept in the table beside the new figure
 PLACE_BOUNDS = (5.0, 6.0)
 DENSE = 8.0                      # poles per km of curb at or above which a borough's sign inventory is taken as complete
 MIN_COMPLETE = 0.90              # an FSA is ranked when at least this share of its City curb lies in such boroughs

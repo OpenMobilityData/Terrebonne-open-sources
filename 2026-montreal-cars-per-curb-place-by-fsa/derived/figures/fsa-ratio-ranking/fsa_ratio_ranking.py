@@ -24,7 +24,7 @@ XMAX = 200
 CDN = "Côte-des-Neiges–Notre-Dame-de-Grâce"
 T = {"en": dict(
         title="Registered automobiles per 100 street parking places:\nthe {n} ranked postal areas (FSAs) of the City of Montréal, 2024",
-        sub="Automobiles and light trucks registered in the City part of each FSA (SAAQ, December 31, 2024; type inferred)\nper 100 places of legal curb, at 5.5 m a place. The limiting case in which every registered automobile is kept on\n"
+        sub="Automobiles and light trucks registered in the City part of each FSA (SAAQ, December 31, 2024; type inferred)\nper 100 places of legal curb, at 5.37 m a place. The limiting case in which every registered automobile is kept on\n"
             "the street: it is not a measure of how full the streets are or of how hard parking is.",
         lane={"H4B": "the lane, west of Royal", "H4A": "the lane, east of Royal"},
         bar_lane="FSAs of the bike lane on rue de Terrebonne", bar="other FSAs", dot="the same, counting only the block faces that carry a sign",
@@ -32,14 +32,14 @@ T = {"en": dict(
         x="registered automobiles and light trucks per 100 places of legal curb",
         note="Legal curb: each block face of the City’s géobase (local streets, collectors and arterials), less 10 m at each end, less the stretches where a sign\n"
              "forbids stopping or parking at all times; an upper bound (driveways, hydrants, bus stops, hourly, permit, street-cleaning and seasonal rules are not\n"
-             "deducted). Vehicles kept off the street, visitors and vehicles from elsewhere are not counted. At 5 m a place every value is 9 % lower, at 6 m 9 % higher.\n"
+             "deducted). Vehicles kept off the street, visitors and vehicles from elsewhere are not counted. At 5 m a place every value is 7 % lower, at 6 m 12 % higher.\n"
              "Not ranked: {inc} FSAs where the borough’s sign inventory is incomplete, {uns} where over 40 % of the curb carries no sign, {fl} with vehicles registered to\n"
              "businesses, {sm} with fewer than 1,000 automobiles in the City part. Boroughs named: those holding at least a quarter of the FSA’s City curb.",
         src="Sources: SAAQ, vehicles released under the access Act (file 03.06.34729); City of Montréal, géobase and inventory of parking signs (CC BY 4.0).\n"
             "FSA boundaries: DMTI Spatial, CanMap Postal Code Suite v2024.3. Tables and scripts: OpenMobilityData/Terrebonne-open-sources."),
      "fr": dict(
         title="Automobiles immatriculées pour 100 places de stationnement sur rue :\nles {n} régions postales (RTA) classées de la Ville de Montréal, 2024",
-        sub="Automobiles et camions légers immatriculés dans la partie de chaque RTA située dans la Ville (SAAQ, 31 décembre 2024 ;\ntype inféré) pour 100 places de bordure légale, à 5,5 m la place. Le cas limite où chaque automobile immatriculée est gardée\n"
+        sub="Automobiles et camions légers immatriculés dans la partie de chaque RTA située dans la Ville (SAAQ, 31 décembre 2024 ;\ntype inféré) pour 100 places de bordure légale, à 5,37 m la place. Le cas limite où chaque automobile immatriculée est gardée\n"
             "dans la rue : ce n’est pas une mesure de l’occupation des rues ni de la difficulté de se stationner.",
         lane={"H4B": "la piste, à l’ouest de Royal", "H4A": "la piste, à l’est de Royal"},
         bar_lane="RTA de la piste cyclable de la rue de Terrebonne", bar="autres RTA", dot="la même mesure, sur les seuls côtés d’îlot qui portent un panneau",
@@ -48,7 +48,7 @@ T = {"en": dict(
         note="Bordure légale : chaque côté d’îlot de la géobase de la Ville (rues locales, collectrices et artères), moins 10 m à chaque extrémité, moins les tronçons\n"
              "où un panneau interdit l’arrêt ou le stationnement en tout temps ; une borne supérieure (entrées charretières, bornes d’incendie, arrêts d’autobus, règles\n"
              "horaires, vignettes, entretien et règles saisonnières non déduits). Les véhicules gardés hors rue, les visiteurs et les véhicules d’ailleurs ne sont pas comptés.\n"
-             "À 5 m la place, chaque valeur est 9 % plus basse ; à 6 m, 9 % plus haute. Hors classement : {inc} RTA où l’inventaire de la signalisation de l’arrondissement\n"
+             "À 5 m la place, chaque valeur est 7 % plus basse ; à 6 m, 12 % plus haute. Hors classement : {inc} RTA où l’inventaire de la signalisation de l’arrondissement\n"
              "est incomplet, {uns} où plus de 40 % de la bordure est sans panneau, {fl} où des véhicules sont immatriculés au nom d’entreprises, {sm} de moins de 1 000 automobiles\n"
              "dans la partie située dans la Ville. Arrondissements nommés : ceux qui comptent au moins le quart de la bordure de la RTA située dans la Ville.",
         src="Sources : SAAQ, véhicules communiqués en vertu de la Loi sur l’accès (dossier 03.06.34729) ; Ville de Montréal, géobase et inventaire de la signalisation\n"

@@ -4,7 +4,11 @@ Unit: the City part of each forward sortation area (FSA). Automobiles: the SAAQ 
 under the access Act (file 03.06.34729), vehicles whose record gives the municipality of Montréal, by FSA; the type
 (automobile or light truck) is INFERRED from make, model and model year (Quebec-vehicle-registrations,
 derived/tables/type_by_fsa_municipality.csv). Curb: stage 1, the faces whose side lies in the City. Places: legal
-curb at 5.5 m a place (an assumption; 5 and 6 m as bounds).
+curb at 5.37 m a place (5 and 6 m as bounds). 5.37 m is the length at which, on rue de Terrebonne, the count of places
+net of driveway entrances (4 m each, the median length of the curb cuts detected on the City's 2015 LiDAR) and fire
+hydrants comes within about 1 % of the consultant's count on the block faces where the street as built and the design
+retained in the 2023 study place the parking on the same side (139.5 against 138; EXP 2023, Annexe C); see the corridor note. Before November 23, 2026:
+5.5 m; the table keeps the ratio at 5.5 m beside the new one.
 
 An FSA is ranked when (a) at least 90 % of its City curb lies in boroughs whose sign inventory is complete (the
 remainder then takes the share forbidden at all times measured in the FSA's complete part), (b) its City part holds
@@ -28,7 +32,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from ratio_lib import FLEET, LANE_FSAS, MAX_UNSIGNED, MIN_AUTOS, MIN_COMPLETE, MONTREAL, PLACE_BOUNDS, PLACE_M, ROOT, TABLES, VEHICLES, YEAR
+from ratio_lib import FLEET, LANE_FSAS, MAX_UNSIGNED, MIN_AUTOS, MIN_COMPLETE, MONTREAL, PLACE_BEFORE, PLACE_BOUNDS, PLACE_M, ROOT, TABLES, VEHICLES, YEAR
 
 RANKED = "ranked"
 INCOMPLETE = "not ranked: sign inventory incomplete"
@@ -52,31 +56,38 @@ def main():
     d["legal_curb_m_signed_faces_only"] = np.where(ok, d.complete_legal_m_signed_faces_only * (1 + d.incomplete_net_m / d.complete_net_m), np.nan)
     d["places"] = d.legal_curb_m / PLACE_M
     d["automobiles_per_place"] = d.automobiles_city / d.places
-    for L in PLACE_BOUNDS:
+    for L in PLACE_BOUNDS + (PLACE_BEFORE,):
         d[f"automobiles_per_place_at_{L:g}_m"] = d.automobiles_city / (d.legal_curb_m / L)
     d["automobiles_per_place_signed_faces_only"] = d.automobiles_city / (d.legal_curb_m_signed_faces_only / PLACE_M)
     d["automobiles_per_100_m_legal_curb"] = 100 * d.automobiles_city / d.legal_curb_m
     d["status"] = np.select([~ok, d.automobiles_city < MIN_AUTOS, d.index.isin(FLEET), d.pct_net_on_faces_without_sign_complete > MAX_UNSIGNED],
                             [INCOMPLETE, SMALL, FLEETS, UNSIGNED], RANKED)
     d["automobiles_per_100_places"] = (100 * d.automobiles_per_place).round()
+    d["automobiles_per_100_places_at_5.5_m"] = (100 * d[f"automobiles_per_place_at_{PLACE_BEFORE:g}_m"]).round()      # the figure published before November 23, 2026
     d["pct_automobiles_registered_in_city"] = 100 * d.automobiles_city / d.automobiles_all_municipalities
     r = d.status == RANKED
     d.loc[r, "rank"] = d.loc[r, "automobiles_per_place"].rank(ascending=False, method="first")
     d.loc[r, "rank_signed_faces_only"] = d.loc[r, "automobiles_per_place_signed_faces_only"].rank(ascending=False, method="first")
     d["main_borough"] = d.boroughs.str.split(";").str[0].str.replace(r" \d+ %$", "", regex=True)
-    cols = ["status", "rank", "automobiles_city", "legal_curb_m", "places", "automobiles_per_place", "automobiles_per_100_places"] + [f"automobiles_per_place_at_{L:g}_m" for L in PLACE_BOUNDS] + [
+    cols = ["status", "rank", "automobiles_city", "legal_curb_m", "places", "automobiles_per_place", "automobiles_per_100_places"] + [f"automobiles_per_place_at_{L:g}_m" for L in PLACE_BOUNDS + (PLACE_BEFORE,)] + ["automobiles_per_100_places_at_5.5_m"] + [
         "automobiles_per_100_m_legal_curb", "automobiles_per_place_signed_faces_only", "rank_signed_faces_only", "city_curb_m", "share_city_curb_complete",
         "share_curb_in_city", "pct_automobiles_registered_in_city", "automobiles_all_municipalities", "pct_banned_of_net_complete",
         "pct_net_on_faces_without_sign_complete", "poles_per_km_complete", "main_borough", "boroughs", "other_municipalities"]
     out = d[cols].sort_values(["rank", "status"], na_position="last")
     out.index.name = "fsa"
-    out.round({"automobiles_city": 0, "legal_curb_m": 0, "places": 0, "automobiles_per_place": 3, "automobiles_per_place_at_5_m": 3, "automobiles_per_place_at_6_m": 3,
+    out.round({"automobiles_city": 0, "legal_curb_m": 0, "places": 0, "automobiles_per_place": 3, "automobiles_per_place_at_5_m": 3, "automobiles_per_place_at_6_m": 3, "automobiles_per_place_at_5.5_m": 3,
                "automobiles_per_100_m_legal_curb": 2, "automobiles_per_place_signed_faces_only": 3, "city_curb_m": 0, "pct_automobiles_registered_in_city": 1,
                "automobiles_all_municipalities": 0}).to_csv(TABLES / "fsa_ratio.csv")
 
     k = d[r]
     tot_au = v[v.muni_code == MONTREAL].n.sum()
-    N = {"year": YEAR, "place_m": PLACE_M, "fsas_with_city_curb": int(len(d)), "ranked": int(r.sum()),
+    # the figures and the README state these two percentages in words
+    lower, higher = round(100 * (1 - PLACE_BOUNDS[0] / PLACE_M)), round(100 * (PLACE_BOUNDS[1] / PLACE_M - 1))
+    assert (lower, higher) == (7, 12), f"at 5 m every value is {lower} % lower, at 6 m {higher} % higher: correct the figure texts and the README"
+    N = {"year": YEAR, "place_m": PLACE_M, "place_m_before_2026_11_23": PLACE_BEFORE, "pct_lower_at_5_m": lower, "pct_higher_at_6_m": higher,
+         "ratio_all_ranked_at_5.5_m": round(k.automobiles_city.sum() / (k.legal_curb_m.sum() / PLACE_BEFORE), 3),
+         "ratio_median_at_5.5_m": round(k[f"automobiles_per_place_at_{PLACE_BEFORE:g}_m"].median(), 3),
+         "fsas_with_city_curb": int(len(d)), "ranked": int(r.sum()),
          "status_counts": d.status.value_counts().to_dict(),
          "fsas_by_status": {s: sorted(d.index[d.status == s]) for s in (INCOMPLETE, SMALL, FLEETS, UNSIGNED)},
          "automobiles_city_h_fsas": round(tot_au), "automobiles_ranked": round(k.automobiles_city.sum()),
@@ -91,7 +102,7 @@ def main():
          "rank_correlation_with_signed_faces_only": round(k.automobiles_per_place.corr(k.automobiles_per_place_signed_faces_only, method="spearman"), 3),
          "lane_fsas": {f: {"rank": int(d.loc[f, "rank"]), "automobiles": round(d.loc[f, "automobiles_city"]), "legal_curb_km": round(d.loc[f, "legal_curb_m"] / 1000, 1),
                            "places": round(d.loc[f, "places"]), "ratio": round(d.loc[f, "automobiles_per_place"], 3), "per_100_places": int(d.loc[f, "automobiles_per_100_places"]),
-                           "ratio_at_5_m": round(d.loc[f, "automobiles_per_place_at_5_m"], 3), "ratio_at_6_m": round(d.loc[f, "automobiles_per_place_at_6_m"], 3),
+                           "per_100_places_at_5.5_m": int(d.loc[f, "automobiles_per_100_places_at_5.5_m"]), "ratio_at_5_m": round(d.loc[f, "automobiles_per_place_at_5_m"], 3), "ratio_at_6_m": round(d.loc[f, "automobiles_per_place_at_6_m"], 3),
                            "ratio_signed_faces_only": round(d.loc[f, "automobiles_per_place_signed_faces_only"], 3), "rank_signed_faces_only": int(d.loc[f, "rank_signed_faces_only"])}
                        for f in LANE_FSAS}}
     json.dump(N, open(ROOT / "derived/numbers.json", "w"), indent=1, ensure_ascii=False)
