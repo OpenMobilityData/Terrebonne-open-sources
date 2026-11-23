@@ -23,7 +23,7 @@ T = {"en": dict(title="Snow-loading nights: modelled automobiles as a share of p
                 A="A. Curb and private places", B="B. Curb alone (at 100 % no curb is left)", x="modelled automobiles as % of places",
                 o="ordinary night", q="loading night, {q} % of the curb under a ban", nights="nights a winter\npushed over 100 %\n(50 %, A)",
                 already="over 100 %\nalready", none="",
-                note="Places: legal curb at 5.5 m (measured, upper bound) and private places of buildings of five dwellings or fewer (measured, calibrated on a street-level check).\n"
+                note="Places: legal curb at 5.25 m (measured, upper bound) and private places of buildings of five dwellings or fewer (measured, calibrated on a street-level check).\n"
                      "Nights a winter: full loading operations in the area's sector (≥ {op} truckloads), mean of the five winters {w0} to {w1}, two nights an operation at 50 %. Hatched: most households in\n"
                      "buildings of six dwellings or more, whose garages are not counted. City of Montréal, snow-removal transactions and sectors (CC BY 4.0)."),
      "fr": dict(title="Nuits de chargement de la neige : automobiles modélisées en part des places, aire par aire",
@@ -33,7 +33,7 @@ T = {"en": dict(title="Snow-loading nights: modelled automobiles as a share of p
                 A="A. Bordure et places privées", B="B. Bordure seulement (à 100 %, plus de bordure)", x="automobiles modélisées en % des places",
                 o="nuit ordinaire", q="nuit de chargement, {q} % de la bordure interdite", nights="nuits par hiver\nau-delà de 100 %\n(50 %, A)",
                 already="déjà au-delà\nde 100 %", none="",
-                note="Places : bordure légale à 5,5 m (mesurée, borne supérieure) et places privées des immeubles de cinq logements ou moins (mesurées, calées sur une vérification de la rue).\n"
+                note="Places : bordure légale à 5,25 m (mesurée, borne supérieure) et places privées des immeubles de cinq logements ou moins (mesurées, calées sur une vérification de la rue).\n"
                      "Nuits par hiver : opérations complètes de chargement dans le secteur de l’aire (≥ {op} chargements), moyenne des cinq hivers {w0} à {w1}, deux nuits par opération à 50 %. Hachurées :\n"
                      "aires où la plupart des ménages vivent dans des immeubles de six logements ou plus, dont les garages ne sont pas comptés. Ville de Montréal, transactions et secteurs de déneigement (CC BY 4.0).")}
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11 10:51",
+ "generated": "2026-11-23 07:58",
  "year": 2024,
  "fsa": {
   "H4A": {
@@ -35,11 +35,11 @@
    "forbidden_at_all_times_km": 3.325,
    "legal_curb_km": 37.155,
    "places_5.0m": 7431,
-   "places_5.5m": 6755,
+   "places_5.25m": 7077,
    "places_6.0m": 6192,
-   "automobiles_per_place_5.5m": 0.684,
-   "automobiles_per_place_low_90": 0.649,
-   "automobiles_per_place_high_90": 0.729,
+   "automobiles_per_place_5.25m": 0.653,
+   "automobiles_per_place_low_90": 0.619,
+   "automobiles_per_place_high_90": 0.696,
    "legal_curb_m_per_household": 6.791
   },
   "rest": {
@@ -59,11 +59,11 @@
    "forbidden_at_all_times_km": 15.3,
    "legal_curb_km": 109.262,
    "places_5.0m": 21852,
-   "places_5.5m": 19865,
+   "places_5.25m": 20811,
    "places_6.0m": 18210,
-   "automobiles_per_place_5.5m": 0.723,
-   "automobiles_per_place_low_90": 0.706,
-   "automobiles_per_place_high_90": 0.737,
+   "automobiles_per_place_5.25m": 0.69,
+   "automobiles_per_place_low_90": 0.674,
+   "automobiles_per_place_high_90": 0.704,
    "legal_curb_m_per_household": 5.757
   },
   "all": {
@@ -83,11 +83,11 @@
    "forbidden_at_all_times_km": 18.625,
    "legal_curb_km": 146.417,
    "places_5.0m": 29283,
-   "places_5.5m": 26621,
+   "places_5.25m": 27888,
    "places_6.0m": 24402,
-   "automobiles_per_place_5.5m": 0.713,
-   "automobiles_per_place_low_90": 0.707,
-   "automobiles_per_place_high_90": 0.72,
+   "automobiles_per_place_5.25m": 0.681,
+   "automobiles_per_place_low_90": 0.675,
+   "automobiles_per_place_high_90": 0.687,
    "legal_curb_m_per_household": 5.989
   }
  },
@@ -101,9 +101,9 @@
   "per_household_max": 2.02,
   "half_width_90_median_pct": 26.767676767676768,
   "half_width_90_wide_median_pct": 31.220657276995308,
-  "per_place_p10": 0.394,
-  "per_place_median": 0.77,
-  "per_place_p90": 1.77
+  "per_place_p10": 0.374,
+  "per_place_median": 0.73,
+  "per_place_p90": 1.69
  },
  "model": {
   "fsas": 114,

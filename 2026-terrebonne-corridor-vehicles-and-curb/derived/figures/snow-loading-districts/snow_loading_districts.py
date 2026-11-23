@@ -21,7 +21,7 @@ T = {"en": dict(title="Snow-loading nights, district by district: modelled autom
                 cols={"Loyola": "Loyola district", "Notre-Dame-de-Grâce": "Notre-Dame-de-Grâce district"},
                 curb="curb alone", withp="curb and private places", ban="curb under a ban",
                 over="{n} nights over 100 % (curb alone)", none="no night over 100 %",
-                note="Places: legal curb at 5.5 m (measured, upper bound) and private places of small buildings (measured). Automobiles MODELLED. Loading: City of Montréal,\n"
+                note="Places: legal curb at 5.25 m (measured, upper bound) and private places of small buildings (measured). Automobiles MODELLED. Loading: City of Montréal,\n"
                      "snow-removal transactions by sector and day; operations of ≥ {op} truckloads; spot removals left out. Loyola includes the Doug-Harvey free lot (20 places) in the winters it was listed."),
      "fr": dict(title="Nuits de chargement de la neige, district par district : automobiles modélisées en part des places",
                 sub="Chaque nuit du 1er décembre au 31 mars. Si les voitures déplacées peuvent se garer n’importe où dans la partie du corridor qui est dans le district, la bordure perdue\n"
@@ -30,7 +30,7 @@ T = {"en": dict(title="Snow-loading nights, district by district: modelled autom
                 cols={"Loyola": "District de Loyola", "Notre-Dame-de-Grâce": "District de Notre-Dame-de-Grâce"},
                 curb="bordure seulement", withp="bordure et places privées", ban="bordure interdite",
                 over="{n} nuits au-delà de 100 % (bordure seulement)", none="aucune nuit au-delà de 100 %",
-                note="Places : bordure légale à 5,5 m (mesurée, borne supérieure) et places privées des petits immeubles (mesurées). Automobiles MODÉLISÉES. Chargement : Ville de Montréal,\n"
+                note="Places : bordure légale à 5,25 m (mesurée, borne supérieure) et places privées des petits immeubles (mesurées). Automobiles MODÉLISÉES. Chargement : Ville de Montréal,\n"
                      "transactions de déneigement par secteur et par jour ; opérations de ≥ {op} chargements ; chargements ponctuels exclus. Loyola compte le stationnement gratuit de l’aréna Doug-Harvey (20 places) les hivers où il était listé.")}
 
 

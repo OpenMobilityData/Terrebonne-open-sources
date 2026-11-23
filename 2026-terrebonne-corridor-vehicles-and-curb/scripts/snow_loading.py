@@ -24,7 +24,7 @@ Assumptions (owner's choices, November 12, 2026), each stated in the note:
   free lot    the Doug-Harvey arena lot (4985 West Hill, 20 places, 18:00-07:00), on the City's list in 2020-21 to
               2023-24 and not in 2024-25 or 2025-26: added in the winters it was listed, in full to each area within
               LOT_RADIUS m and to its district. No other listed lot lies within 1.5 km of the corridor.
-Places: legal curb at 5.5 m (MEASURED, an upper bound) and private places of small buildings (MEASURED with a measured
+Places: legal curb at 5.25 m (MEASURED, an upper bound) and private places of small buildings (MEASURED with a measured
 error); automobiles MODELLED (SAAQ 2024 by FSA, shared among areas). A share of places compares capacity; it is not
 occupancy.
 
@@ -47,7 +47,7 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 WINTERS = range(2021, 2026)                      # named by the year of December 1
 OP_MIN, OP_SENS = 100, (50, 200)
 QS = (0.25, 0.5, 1.0)
-PLACE_M = 5.5
+PLACE_M = 5.25
 LOT_RADIUS = 500
 # Passes (owner's decision, Nov 12, 2026): a run of loading days counts as several passes through the sector when it is both
 # longer and heavier than the sector's median full operation: passes = max(1, min(nights / median nights, truckloads / median

@@ -8,7 +8,7 @@ share of each area within 300 m of the lane is in the table); « rest » = the o
 H4B; « all » = both.
 
 Automobiles are MODELLED below the FSA (demand_model.py); curb is MEASURED from the sign inventory
-(curb_supply.py). Places are legal curb divided by 5, 5.5 and 6 m: an upper bound (driveways, hydrants, bus
+(curb_supply.py). Places are legal curb divided by 5, 5.25 and 6 m: an upper bound (driveways, hydrants, bus
 stops, hourly and permit rules not deducted). Off-street parking is measured only for the buildings addressed
 on rue de Terrebonne (1954-55 plans and present-day imagery): it is in no ratio here (see offstreet.py).
 
@@ -29,7 +29,7 @@ from scipy.stats import spearmanr
 from corridor_lib import CACHE, CRS, DA_SHP, FSAS, GARAGES, LANE, ROOT, SAAQ, TABLES, TP, YEAR
 
 sys.path.insert(0, str(GARAGES))
-PLACE = (5.0, 5.5, 6.0)
+PLACE = (5.0, 5.25, 6.0)
 BAND = 300.0
 SECTORS = (("residential west", 0, 11), ("institutional", 12, 16), ("residential east", 17, 28))
 
@@ -51,10 +51,10 @@ def main():
     extra = d[(d.set == "rest") & (d.share_within_300m >= 0.5)]
     print(f"areas fronting the lane: {len(fronting)}; their surface within {BAND:.0f} m of the lane: median {100 * d[d.set == 'corridor'].share_within_300m.median():.0f} %; "
           f"other areas with half their surface or more within {BAND:.0f} m: {len(extra)}")
-    d["places_5.5m"] = (d.legal_m / 5.5).round(0)
-    d["automobiles_per_place_5.5m"] = (d.automobiles_modelled / d["places_5.5m"]).round(2)
-    d["automobiles_per_place_low_90"] = (d.low_90 / d["places_5.5m"]).round(2)
-    d["automobiles_per_place_high_90"] = (d.high_90 / d["places_5.5m"]).round(2)
+    d["places_5.25m"] = (d.legal_m / 5.25).round(0)
+    d["automobiles_per_place_5.25m"] = (d.automobiles_modelled / d["places_5.25m"]).round(2)
+    d["automobiles_per_place_low_90"] = (d.low_90 / d["places_5.25m"]).round(2)
+    d["automobiles_per_place_high_90"] = (d.high_90 / d["places_5.25m"]).round(2)
     tf = tb.groupby("dauid").agg(terrebonne_frontage_m=("length_m", "sum"), terrebonne_legal_m=("legal_m", "sum"))
     d = d.join(tf)
     # a readable name for each corridor area: side of Terrebonne and the cross streets its frontage runs between
@@ -85,8 +85,8 @@ def main():
              "curb_km": s.curb_m.sum() / 1000, "forbidden_at_all_times_km": s.banned_m.sum() / 1000, "legal_curb_km": s.legal_m.sum() / 1000}
         for L in PLACE:
             r[f"places_{L}m"] = int(s.legal_m.sum() / L)
-        r["automobiles_per_place_5.5m"] = s.automobiles_modelled.sum() / (s.legal_m.sum() / 5.5)
-        r["automobiles_per_place_low_90"] = lo / (s.legal_m.sum() / 5.5); r["automobiles_per_place_high_90"] = hi / (s.legal_m.sum() / 5.5)
+        r["automobiles_per_place_5.25m"] = s.automobiles_modelled.sum() / (s.legal_m.sum() / 5.25)
+        r["automobiles_per_place_low_90"] = lo / (s.legal_m.sum() / 5.25); r["automobiles_per_place_high_90"] = hi / (s.legal_m.sum() / 5.25)
         r["legal_curb_m_per_household"] = s.legal_m.sum() / s.households.sum()
         rows.append(r)
     cs = pd.DataFrame(rows); cs.round(2).to_csv(TABLES / "corridor_sets.csv", index=False)
@@ -155,8 +155,8 @@ def main():
                 "per_household_p90": float(d.per_household.quantile(0.9)), "per_household_min": float(d.per_household.min()), "per_household_max": float(d.per_household.max()),
                 "half_width_90_median_pct": float(100 * ((d.high_90 - d.low_90) / 2 / d.automobiles_modelled).median()),
                 "half_width_90_wide_median_pct": float(100 * ((d.high_90_wide - d.low_90_wide) / 2 / d.automobiles_modelled).median()),
-                "per_place_p10": float(d["automobiles_per_place_5.5m"].quantile(0.1)), "per_place_median": float(d["automobiles_per_place_5.5m"].median()),
-                "per_place_p90": float(d["automobiles_per_place_5.5m"].quantile(0.9))},
+                "per_place_p10": float(d["automobiles_per_place_5.25m"].quantile(0.1)), "per_place_median": float(d["automobiles_per_place_5.25m"].median()),
+                "per_place_p90": float(d["automobiles_per_place_5.25m"].quantile(0.9))},
          "model": {"fsas": 114, "chosen": spec.index[spec.chosen][0], "lofo": spec.round(1).reset_index().to_dict("records"),
                    "downscaling": dsum.round(1).to_dict("records")},
          "terrebonne_curb": {s: {k: round(float(v)) for k, v in t.loc[s].items()} for s in t.index},

@@ -104,10 +104,10 @@
     "mean_nights_per_winter_pushed_over_100_corridor_areas": 0.62
    },
    "curb_only": {
-    "areas_over_100_on_loading_night": 10,
-    "of_which_over_100_on_ordinary_nights": 6,
-    "areas_pushed_over_100_by_loading": 4,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 2.73
+    "areas_over_100_on_loading_night": 8,
+    "of_which_over_100_on_ordinary_nights": 5,
+    "areas_pushed_over_100_by_loading": 3,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 1.85
    }
   },
   "q50": {
@@ -118,10 +118,10 @@
     "mean_nights_per_winter_pushed_over_100_corridor_areas": 1.55
    },
    "curb_only": {
-    "areas_over_100_on_loading_night": 17,
-    "of_which_over_100_on_ordinary_nights": 6,
+    "areas_over_100_on_loading_night": 16,
+    "of_which_over_100_on_ordinary_nights": 5,
     "areas_pushed_over_100_by_loading": 11,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.71
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.53
    }
   },
   "q100": {
@@ -133,9 +133,9 @@
    },
    "curb_only": {
     "areas_over_100_on_loading_night": 22,
-    "of_which_over_100_on_ordinary_nights": 6,
-    "areas_pushed_over_100_by_loading": 16,
-    "mean_nights_per_winter_pushed_over_100_corridor_areas": 2.78
+    "of_which_over_100_on_ordinary_nights": 5,
+    "areas_pushed_over_100_by_loading": 17,
+    "mean_nights_per_winter_pushed_over_100_corridor_areas": 3.1
    }
   }
  },
@@ -170,18 +170,18 @@
     "2025-2026": 36
    },
    "max_share_with_private": {
-    "2021-2022": 0.527,
-    "2022-2023": 0.529,
-    "2023-2024": 0.525,
-    "2024-2025": 0.525,
-    "2025-2026": 0.492
+    "2021-2022": 0.51,
+    "2022-2023": 0.513,
+    "2023-2024": 0.508,
+    "2024-2025": 0.508,
+    "2025-2026": 0.476
    },
    "max_share_curb_only": {
-    "2021-2022": 0.768,
-    "2022-2023": 0.774,
-    "2023-2024": 0.764,
-    "2024-2025": 0.765,
-    "2025-2026": 0.696
+    "2021-2022": 0.734,
+    "2022-2023": 0.739,
+    "2023-2024": 0.73,
+    "2024-2025": 0.73,
+    "2025-2026": 0.664
    },
    "max_share_of_curb_under_ban": {
     "2021-2022": 0.351,
@@ -200,18 +200,18 @@
     "2025-2026": 0
    },
    "nights_over_100_with_private_high": {
-    "2021-2022": 18,
-    "2022-2023": 15,
-    "2023-2024": 8,
-    "2024-2025": 4,
-    "2025-2026": 16
+    "2021-2022": 11,
+    "2022-2023": 9,
+    "2023-2024": 6,
+    "2024-2025": 3,
+    "2025-2026": 14
    },
    "nights_over_100_curb_only": {
-    "2021-2022": 22,
-    "2022-2023": 22,
-    "2023-2024": 9,
-    "2024-2025": 9,
-    "2025-2026": 28
+    "2021-2022": 18,
+    "2022-2023": 18,
+    "2023-2024": 8,
+    "2024-2025": 4,
+    "2025-2026": 18
    },
    "loading_nights": {
     "2021-2022": 29,
@@ -221,18 +221,18 @@
     "2025-2026": 36
    },
    "max_share_with_private": {
-    "2021-2022": 0.925,
-    "2022-2023": 0.919,
-    "2023-2024": 0.878,
-    "2024-2025": 0.877,
-    "2025-2026": 0.895
+    "2021-2022": 0.898,
+    "2022-2023": 0.892,
+    "2023-2024": 0.851,
+    "2024-2025": 0.85,
+    "2025-2026": 0.868
    },
    "max_share_curb_only": {
-    "2021-2022": 1.46,
-    "2022-2023": 1.444,
-    "2023-2024": 1.345,
-    "2024-2025": 1.343,
-    "2025-2026": 1.385
+    "2021-2022": 1.394,
+    "2022-2023": 1.379,
+    "2023-2024": 1.284,
+    "2024-2025": 1.282,
+    "2025-2026": 1.322
    },
    "max_share_of_curb_under_ban": {
     "2021-2022": 0.364,
@@ -251,7 +251,7 @@
     "loading_nights_total": 127
    },
    "Notre-Dame-de-Grâce": {
-    "nights_over_100_curb_only_total": 91,
+    "nights_over_100_curb_only_total": 66,
     "nights_over_100_with_private_total": 0,
     "loading_nights_total": 132
    }
@@ -263,7 +263,7 @@
     "loading_nights_total": 127
    },
    "Notre-Dame-de-Grâce": {
-    "nights_over_100_curb_only_total": 90,
+    "nights_over_100_curb_only_total": 66,
     "nights_over_100_with_private_total": 0,
     "loading_nights_total": 132
    }
@@ -275,7 +275,7 @@
     "loading_nights_total": 127
    },
    "Notre-Dame-de-Grâce": {
-    "nights_over_100_curb_only_total": 83,
+    "nights_over_100_curb_only_total": 59,
     "nights_over_100_with_private_total": 0,
     "loading_nights_total": 131
    }

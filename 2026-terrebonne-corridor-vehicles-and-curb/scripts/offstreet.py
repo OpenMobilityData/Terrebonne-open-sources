@@ -30,7 +30,7 @@ from corridor_lib import GARAGES, ROOT, TABLES
 
 sys.path.insert(0, str(GARAGES))
 SECTORS = (("residential west", 0, 11), ("institutional", 12, 16), ("residential east", 17, 28))
-PLACE = 5.5
+PLACE = 5.25
 CUT_CENTRAL, CUT_WORST = 4.5, 6.0     # metres of curb lost per driveway (assumption: the cut and the unusable stub beside it)
 ALLOWANCE_M = 2000.0                  # metres of curb for hydrants (3 m each side, Highway Safety Code art. 386, about one per 100 m of street) and bus stops: an assumption, not a count
 
@@ -74,7 +74,7 @@ def main():
                      "private_places_independent": int(xs.pi.sum()), "private_places_total": int(xs.pt.sum()),
                      "large_lots": int((~x.small).sum()), "dwellings_large": int(x[~x.small].dwellings.sum()),
                      "large_with_underground_garage": int(((~x.small) & (x.kind == "parking lot")).sum()),
-                     "curb_places_on_terrebonne_today_5.5m": round(t.legal_m.sum() / PLACE),                # the signs alone: an upper bound
+                     "curb_places_on_terrebonne_today_5.5m": round(t.legal_m.sum() / 5.5),                # the signs alone: an upper bound
                      "curb_places_on_terrebonne_today_net": round(float(pt.places_today.iloc[a:z + 1].sum())),
                      "curb_places_on_terrebonne_today_net_low": round(float(pt.places_today_lo.iloc[a:z + 1].sum())),
                      "curb_places_on_terrebonne_today_net_high": round(float(pt.places_today_hi.iloc[a:z + 1].sum())),
@@ -127,7 +127,7 @@ def main():
            "private_independent": int(round(T0[1])), "private_independent_low": int(round(lo[1])), "private_independent_high": int(round(hi[1])),
            "private_total": int(round(T0[2])), "private_total_low": int(round(lo[2])), "private_total_high": int(round(hi[2])),
            "large_buildings": int(len(lg)), "dwellings_in_large_buildings": int(lg.dwellings.sum()),
-           "curb_places": C["places_5.5m"], "automobiles_modelled": C["automobiles_modelled"]}
+           "curb_places": C["places_5.25m"], "automobiles_modelled": C["automobiles_modelled"]}
     tot["curb_plus_private"] = tot["curb_places"] + tot["private_independent"]
     tot["curb_plus_private_low"] = C["places_6.0m"] + tot["private_independent_low"]; tot["curb_plus_private_high"] = C["places_5.0m"] + tot["private_independent_high"]
     tot["per_place_curb_only"] = round(C["automobiles_modelled"] / tot["curb_places"], 2)

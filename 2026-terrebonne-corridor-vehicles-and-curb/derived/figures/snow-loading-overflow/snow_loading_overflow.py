@@ -32,7 +32,7 @@ T = {"en": dict(
         side="Zones that would not fit all their cars, and the spare curb next door",
         row="zone {no}: {n} cars; spare curb in touching zones {s} ({h} if they are loaded the same night)",
         lane="the lane", dist="Loyola | NDG district line",
-        foot="Cars: registered automobiles of the zone's households (SAAQ, Dec. 31, 2024), MODELLED below the postal district; they stand in for overnight demand. Places: legal curb at 5.5 m per car\n"
+        foot="Cars: registered automobiles of the zone's households (SAAQ, Dec. 31, 2024), MODELLED below the postal district; they stand in for overnight demand. Places: legal curb at 5.25 m per car\n"
              "(MEASURED, an upper bound) and driveways and garages of buildings of five dwellings or fewer (MEASURED, calibrated on a street-level check). Which streets are cleared on which night is not\n"
              "published; half the curb a night is an assumption (one side at a time). Capacity, not occupancy. Preliminary results, not peer reviewed. github.com/OpenMobilityData/Terrebonne-open-sources"),
      "fr": dict(
@@ -45,7 +45,7 @@ T = {"en": dict(
         side="Zones qui ne logeraient pas toutes leurs voitures, et la bordure libre à côté",
         row="zone {no} : {n} voitures ; bordure libre dans les zones contiguës {s} ({h} si elles sont déneigées la même nuit)",
         lane="la piste", dist="limite des districts Loyola | NDG",
-        foot="Voitures : automobiles immatriculées des ménages de la zone (SAAQ, 31 déc. 2024), MODÉLISÉES sous la RTA ; elles tiennent lieu de la demande de nuit. Places : bordure légale à 5,5 m par voiture\n"
+        foot="Voitures : automobiles immatriculées des ménages de la zone (SAAQ, 31 déc. 2024), MODÉLISÉES sous la RTA ; elles tiennent lieu de la demande de nuit. Places : bordure légale à 5,25 m par voiture\n"
              "(MESURÉE, borne supérieure) et entrées et garages des immeubles de cinq logements ou moins (MESURÉS, calés sur une vérification de la rue). Les rues déneigées chaque nuit ne sont pas\n"
              "publiées ; la moitié de la bordure par nuit est une hypothèse (un côté à la fois). Capacité, pas occupation. Résultats préliminaires, non révisés par des pairs. github.com/OpenMobilityData/Terrebonne-open-sources")}
 

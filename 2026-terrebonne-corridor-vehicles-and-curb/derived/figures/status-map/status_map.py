@@ -1,7 +1,7 @@
 """The status colours of the corridor charts on a map (owner's request, Nov 12, 2026): each dissemination area fronting
 the lane coloured by its MODELLED automobiles as a percentage of its places, green under 80 %, yellow 80 to 100 %, red
 over 100 % (the thresholds and colours of fig_lib.status_column, so the map and the charts agree area by area).
-A: places = legal curb at 5.5 m + the private places of the area's small buildings (calibrated estimate; the
+A: places = legal curb at 5.25 m + the private places of the area's small buildings (calibrated estimate; the
    off-street-corridor chart). B: places = legal curb alone, the limiting case in which every registered automobile
    is kept on the street (the curb-and-automobiles chart). A percentage compares registered vehicles with capacity;
    it is not a measure of how full the street is.
@@ -31,7 +31,7 @@ T = {"en": dict(
         a="A. Curb and private places", b="B. Curb alone (every automobile kept on the street)", lane="the lane (rue de Terrebonne)",
         hatch="A, hatched: most households in buildings of six dwellings or more, whose garages are not counted ({n} areas)",
         low="under 80 %", mid="80 to 100 %", high="over 100 %",
-        tot="Corridor: {a} modelled automobiles; {c} curb places at 5.5 m; {p} private places. A: {ra} %; B: {rb} %.",
+        tot="Corridor: {a} modelled automobiles; {c} curb places at 5.25 m; {p} private places. A: {ra} %; B: {rb} %.",
         note="A share compares registered vehicles with capacity; it is not a measure of how full the street is (no occupancy has been counted since the lane was built). Curb: legal curb by block face,\n"
              "an upper bound (driveways, hydrants, bus stops, hourly and permit rules not deducted). Private places: cars that can leave without another being moved, small buildings only; garage\n"
              "interiors and the {g} larger buildings' garages not counted. Automobiles: the central estimate; each area's 90 % interval is in the corridor-parking-map table."),
@@ -42,7 +42,7 @@ T = {"en": dict(
         a="A. Bordure et places privées", b="B. Bordure seulement (chaque automobile gardée dans la rue)", lane="la piste (rue de Terrebonne)",
         hatch="A, hachuré : la plupart des ménages dans des immeubles de six logements ou plus, dont les garages ne sont pas comptés ({n} aires)",
         low="moins de 80 %", mid="80 à 100 %", high="plus de 100 %",
-        tot="Corridor : {a} automobiles modélisées ; {c} places en bordure à 5,5 m ; {p} places privées. A : {ra} % ; B : {rb} %.",
+        tot="Corridor : {a} automobiles modélisées ; {c} places en bordure à 5,25 m ; {p} places privées. A : {ra} % ; B : {rb} %.",
         note="Une part compare des véhicules immatriculés à une capacité ; elle ne mesure pas le taux d’occupation de la rue (aucun relevé d’occupation depuis la construction de la piste). Bordure :\n"
              "bordure légale par côté d’îlot, borne supérieure (entrées, bornes d’incendie, arrêts d’autobus, règles horaires et vignettes non déduits). Places privées : voitures qui peuvent partir sans en\n"
              "déplacer une autre, petits immeubles seulement ; intérieurs de garage et garages des {g} grands immeubles non comptés. Automobiles : estimation centrale ; l’intervalle à 90 % de chaque aire\n"
@@ -64,7 +64,7 @@ def main():
     g = gpd.read_file(TABLES / "da_corridor.geojson").to_crs(CRS)
     m = pd.read_csv(TABLES / "offstreet_measured_by_da.csv", dtype={"dauid": str})
     m = m.sort_values(["west_to_east", "frontage"]).reset_index(drop=True); m["no"] = np.arange(1, len(m) + 1)
-    curb = m.legal_m / 5.5
+    curb = m.legal_m / 5.25
     m["r_with"] = m.automobiles_modelled / (curb + m.private_independent); m["r_curb"] = m.automobiles_modelled / curb
     m["large_share"] = (m.dwellings_in_large_buildings / m.households).clip(upper=1)          # households in buildings of six dwellings or more (approx.)
     cor = g[g.set == "corridor"][["dauid", "geometry"]].merge(m, on="dauid"); assert len(cor) == 22
@@ -76,7 +76,7 @@ def main():
     ANG = np.degrees(np.arctan2(z_[1] - a_[1], z_[0] - a_[0])); ORG = tuple(((a_ + z_) / 2).tolist())
     cor["geometry"] = cor.geometry.map(lambda x: rotate(x, -ANG, origin=ORG)); lane["geometry"] = lane.geometry.map(lambda x: rotate(x, -ANG, origin=ORG))
     O = json.load(open(ROOT / "derived/offstreet.json"))["corridor"]; N = F.numbers()["sets"]["corridor"]
-    ra = N["automobiles_modelled"] / (N["places_5.5m"] + O["private_independent"]); rb = N["automobiles_modelled"] / N["places_5.5m"]
+    ra = N["automobiles_modelled"] / (N["places_5.25m"] + O["private_independent"]); rb = N["automobiles_modelled"] / N["places_5.25m"]
     nx, ny = np.sin(np.radians(ANG)), np.cos(np.radians(ANG))
     for lang, t in T.items():
         fig = plt.figure(figsize=(16, 11.5))
@@ -103,7 +103,7 @@ def main():
         fig.text(0.39, 0.145, t["lane"], fontsize=9, color=F.INK, va="center")
         fig.patches.append(Rectangle((0.012, 0.117), 0.022, 0.014, transform=fig.transFigure, fc=F.GREY, ec=F.SURFACE, hatch="///", lw=0))
         fig.text(0.038, 0.124, t["hatch"].format(n=int((m.large_share > 0.5).sum())), fontsize=9, color=F.INK, va="center")
-        fig.text(0.012, 0.100, t["tot"].format(a=F.num(N["automobiles_modelled"], lang), c=F.num(N["places_5.5m"], lang), p=F.num(O["private_independent"], lang),
+        fig.text(0.012, 0.100, t["tot"].format(a=F.num(N["automobiles_modelled"], lang), c=F.num(N["places_5.25m"], lang), p=F.num(O["private_independent"], lang),
                                               ra=F.num(100 * ra, lang), rb=F.num(100 * rb, lang)), fontsize=9, color=F.INK)
         F.finish(fig, HERE, "status_map", lang, t["title"], t["sub"], t["note"].format(g=O["large_buildings"]), top=0.99, bottom=0.01, left=0.0, right=1.0)
     print("states A:", {s: int(sum(state(r)[0] == c for r in m.r_with)) for s, c in (("green", F.GOOD), ("yellow", F.WARNING), ("red", F.CRITICAL))},

@@ -4,7 +4,7 @@
 - lines: the legal curb by block face, MEASURED from the City's sign inventory (curb_supply.py; an upper bound);
 - markers: on rue de Terrebonne, every lot judged from street level by the owner on November 12, 2026, sized by
   its independent private places as counted (1954-underwriters-plans-terrebonne-garages/derived/street_check/);
-- table: per area, modelled automobiles (90 % interval), curb places at 5.5 m, and the private places of its small
+- table: per area, modelled automobiles (90 % interval), curb places at 5.25 m, and the private places of its small
   buildings estimated from the reading of every lot calibrated on the owner's random sample (offstreet.py; 90 %).
 Elsewhere than Terrebonne no private place is drawn lot by lot: per lot those are readings from above, which the
 owner's check showed to miss driveways; only the calibrated total per area is used. No ratio of automobiles to places
@@ -29,7 +29,7 @@ import offstreet_strips as S  # noqa: E402
 from corridor_lib import CRS, GARAGES, LANE, TABLES  # noqa: E402
 
 VIOLET = "#6250d6"
-PLACE = 5.5
+PLACE = 5.25
 T = {"en": dict(
         title="Parking in the Terrebonne corridor: modelled automobiles, measured curb, measured private places",
         sub="Fill: automobiles registered to each area's households, MODELLED from the SAAQ file of 2024. Orange: legal curb by block face (measured, upper bound).\n"
@@ -38,7 +38,7 @@ T = {"en": dict(
         curb="legal curb, 10 m short of each intersection", curb_half="signs disagree (counted for half)", curb_no="parking forbidden at all times",
         p1="1 private place", p2="2 private places", p3="3 or more private places", conv="parking converted, no place left", none="no private place", ug="underground garage (places not counted)",
         ct="could not be told", lane="the lane (rue de Terrebonne)",
-        th=["area", "automobiles\n(modelled, 90 %)", "curb places\n(5.5 m)", "private places\n(small buildings, 90 %)"], tot="corridor",
+        th=["area", "automobiles\n(modelled, 90 %)", "curb places\n(5.25 m)", "private places\n(small buildings, 90 %)"], tot="corridor",
         note="Curb: géobase faces less 10 m at each end and stretches forbidden at all times; driveways, hydrants, bus stops, hourly and permit rules not deducted. Private places: cars that can leave\n"
              "without another being moved; garage interiors and the {g} larger buildings' garages not counted; off Terrebonne, the reading of every lot calibrated on {k} lots checked from the street.\n"
              "Places are capacity, not use: the table does not measure how full the street is."),
@@ -50,7 +50,7 @@ T = {"en": dict(
         curb="bordure légale, à 10 m de chaque intersection", curb_half="panneaux contradictoires (comptés pour moitié)", curb_no="stationnement interdit en tout temps",
         p1="1 place privée", p2="2 places privées", p3="3 places privées ou plus", conv="stationnement converti, aucune place restante", none="aucune place privée", ug="garage souterrain (places non comptées)",
         ct="indéterminé", lane="la piste (rue de Terrebonne)",
-        th=["aire", "automobiles\n(modélisées, 90 %)", "places en bordure\n(5,5 m)", "places privées\n(petits immeubles, 90 %)"], tot="corridor",
+        th=["aire", "automobiles\n(modélisées, 90 %)", "places en bordure\n(5,25 m)", "places privées\n(petits immeubles, 90 %)"], tot="corridor",
         note="Bordure : côtés de la géobase moins 10 m à chaque extrémité et les tronçons interdits en tout temps ; entrées, bornes d’incendie, arrêts d’autobus, règles horaires et vignettes non déduits.\n"
              "Places privées : voitures qui peuvent partir sans en déplacer une autre ; intérieurs de garage et garages des {g} grands immeubles non comptés ; hors Terrebonne, la lecture de chaque lot\n"
              "calibrée sur {k} lots vérifiés à hauteur de rue. Une place est une capacité, pas un usage : le tableau ne mesure pas le taux d’occupation de la rue."),
@@ -142,7 +142,7 @@ def main():
                  F.num(r.curb_places, lang), f"{F.num(r.private_independent, lang)}  ({F.num(r.private_independent_low, lang)}–{F.num(r.private_independent_high, lang)})"]
                 for r in m.itertuples()]
         tot = [t["tot"], f"{F.num(N['automobiles_modelled'], lang)}  ({F.num(N['low_90'], lang)}–{F.num(N['high_90'], lang)})",
-               F.num(N["places_5.5m"], lang), f"{F.num(oc['private_independent'], lang)}  ({F.num(oc['private_independent_low'], lang)}–{F.num(oc['private_independent_high'], lang)})"]
+               F.num(N["places_5.25m"], lang), f"{F.num(oc['private_independent'], lang)}  ({F.num(oc['private_independent_low'], lang)}–{F.num(oc['private_independent_high'], lang)})"]
         for x0, part in ((0.02, rows[:11]), (0.52, rows[11:])):
             for x, h in zip(xs, t["th"]):
                 fig.text(x0 + x, y0, h, fontsize=8.2, color=F.MUTED, va="bottom", ha="left")

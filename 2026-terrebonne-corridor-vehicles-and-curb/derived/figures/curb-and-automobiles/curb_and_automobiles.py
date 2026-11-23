@@ -12,11 +12,11 @@ import fig_lib as F  # noqa: E402
 
 T = {"en": dict(title="If every vehicle were kept on the street: modelled automobiles and legal curb",
                 sub="Blue: automobiles registered to the area's households and businesses, modelled, with 90 % interval. Orange: vehicles the area's legal curb\n"
-                    "would hold at 5.5 m each (bar: 6 m to 5 m), an upper bound. Private parking is left out: this is the case where every vehicle is kept at the curb.",
+                    "would hold at 5.25 m each (bar: 6 m to 5 m), an upper bound. Private parking is left out: this is the case where every vehicle is kept at the curb.",
                 x="vehicles", a="modelled automobiles", b="curb places (upper bound)", clip="{v} →"),
      "fr": dict(title="Si chaque véhicule était garé sur rue : automobiles modélisées et bordure légale",
                 sub="Bleu : automobiles immatriculées par les ménages et entreprises de l’aire, modélisées, intervalle à 90 %. Orange : véhicules que contiendrait\n"
-                    "la bordure légale de l’aire à 5,5 m chacun (barre : 6 m à 5 m), une borne supérieure. Le stationnement privé est laissé de côté : c’est le cas où chaque\n"
+                    "la bordure légale de l’aire à 5,25 m chacun (barre : 6 m à 5 m), une borne supérieure. Le stationnement privé est laissé de côté : c’est le cas où chaque\n"
                     "véhicule est garé en bordure.",
                 x="véhicules", a="automobiles modélisées", b="places en bordure (borne supérieure)", clip="{v} →")}
 XMAX = 660
@@ -29,7 +29,7 @@ def main():
         fig, ax = plt.subplots(figsize=(10, 9.4))
         ax.hlines(y + 0.2, d.low_90, d.high_90, color=F.BLUE, lw=3, alpha=0.5, capstyle="round")
         ax.plot(d.automobiles_modelled, y + 0.2, "o", color=F.BLUE, ms=7, mec=F.SURFACE, mew=1.5, label=t["a"])
-        p = d.legal_m / 5.5
+        p = d.legal_m / 5.25
         ax.hlines(y - 0.2, (d.legal_m / 6).clip(upper=XMAX), (d.legal_m / 5).clip(upper=XMAX), color=F.ORANGE, lw=3, alpha=0.5, capstyle="round")
         ax.plot(p.where(p <= XMAX), y - 0.2, "D", color=F.ORANGE, ms=6, mec=F.SURFACE, mew=1.5, label=t["b"])
         for yi, v in zip(y, p):

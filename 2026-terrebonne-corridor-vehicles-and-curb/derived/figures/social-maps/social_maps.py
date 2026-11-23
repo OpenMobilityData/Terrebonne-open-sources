@@ -58,7 +58,7 @@ def state(r):
 def main():
     g = gpd.read_file(TABLES / "da_corridor.geojson").to_crs(CRS)
     m = pd.read_csv(TABLES / "offstreet_measured_by_da.csv", dtype={"dauid": str}).sort_values(["west_to_east", "frontage"]).reset_index(drop=True)
-    m["no"] = np.arange(1, len(m) + 1); curb = m.legal_m / 5.5
+    m["no"] = np.arange(1, len(m) + 1); curb = m.legal_m / 5.25
     m["r_with"] = m.automobiles_modelled / (curb + m.private_independent); m["r_curb"] = m.automobiles_modelled / curb
     m["large_share"] = (m.dwellings_in_large_buildings / m.households).clip(upper=1)
     cor = g[g.set == "corridor"][["dauid", "geometry"]].merge(m, on="dauid"); assert len(cor) == 22
@@ -70,7 +70,7 @@ def main():
     line = loy.boundary.intersection(ndg.boundary).intersection(cor.geometry.union_all().buffer(30))
     tot = {}
     for d_, x in cor.groupby("district"):
-        c_ = (x.legal_m / 5.5).sum(); tot[d_] = (round(100 * x.automobiles_modelled.sum() / (c_ + x.private_independent.sum())), round(100 * x.automobiles_modelled.sum() / c_))
+        c_ = (x.legal_m / 5.25).sum(); tot[d_] = (round(100 * x.automobiles_modelled.sum() / (c_ + x.private_independent.sum())), round(100 * x.automobiles_modelled.sum() / c_))
     f = gpd.read_file(TABLES / "curb_stretches.geojson").to_crs(CRS); f = f[f.dauid.isin(cor.dauid)].copy()
     f["geometry"] = [l.offset_curve(7 if s_ == "L" else -7) for l, s_ in zip(f.geometry, f.side)]; f = f[~f.geometry.is_empty]
     lane = gpd.read_file(LANE).to_crs(CRS)
