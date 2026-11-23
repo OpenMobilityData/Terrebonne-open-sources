@@ -1,0 +1,60 @@
+{
+ "car_m": 5.37,
+ "entrance_m": 4.0,
+ "entrance_m_range": [
+  6.0,
+  2.5
+ ],
+ "same_entrance_within_m": 3.5,
+ "places_today": 174.0,
+ "places_today_low": 160.5,
+ "places_today_high": 183.5,
+ "entrances": 101,
+ "hydrant_clearances": 27,
+ "legal_m": 1366.0,
+ "places_by_legal_curb": 254.4,
+ "like_for_like": {
+  "faces": 23,
+  "exp": 138,
+  "this_method": 139.5,
+  "mean_absolute_difference_per_face": 1.11,
+  "car_m_scan": {
+   "5.3": 143.5,
+   "5.31": 143.5,
+   "5.32": 143.5,
+   "5.33": 142.5,
+   "5.34": 141.5,
+   "5.35": 141.5,
+   "5.36": 140.5,
+   "5.37": 139.5,
+   "5.38": 138.5,
+   "5.39": 138.5,
+   "5.4": 137.5,
+   "5.41": 137.5,
+   "5.42": 136.5,
+   "5.43": 135.5,
+   "5.44": 135.5,
+   "5.45": 134.5
+  },
+  "difference_pct": 1.1,
+  "car_m_nearest": [
+   5.38,
+   5.39,
+   5.4,
+   5.41
+  ]
+ },
+ "exp_scenario3": {
+  "total_table_7_1": 171,
+  "east_of_the_lane": 5,
+  "on_the_lane_blocks": 166,
+  "where_no_parking_today": 28,
+  "west_of_coronation": 12,
+  "cavendish_to_madison_north": 16
+ },
+ "this_method_where_exp_has_none": 34.5,
+ "first_published": {
+  "legal_m": 1306,
+  "places_at_5_5m": 238
+ }
+}

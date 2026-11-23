@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23 07:58",
+ "generated": "2026-11-23 09:17",
  "year": 2024,
  "fsa": {
   "H4A": {
@@ -32,15 +32,15 @@
    "alt_3_variables": 4616,
    "alt_6_variables": 4683,
    "curb_km": 46.815,
-   "forbidden_at_all_times_km": 3.325,
-   "legal_curb_km": 37.155,
-   "places_5.0m": 7431,
-   "places_5.25m": 7077,
-   "places_6.0m": 6192,
-   "automobiles_per_place_5.25m": 0.653,
-   "automobiles_per_place_low_90": 0.619,
-   "automobiles_per_place_high_90": 0.696,
-   "legal_curb_m_per_household": 6.791
+   "forbidden_at_all_times_km": 3.265,
+   "legal_curb_km": 37.214,
+   "places_5.0m": 7442,
+   "places_5.37m": 6930,
+   "places_6.0m": 6202,
+   "automobiles_per_place_5.37m": 0.667,
+   "automobiles_per_place_low_90": 0.632,
+   "automobiles_per_place_high_90": 0.711,
+   "legal_curb_m_per_household": 6.802
   },
   "rest": {
    "dissemination_areas": 61,
@@ -59,11 +59,11 @@
    "forbidden_at_all_times_km": 15.3,
    "legal_curb_km": 109.262,
    "places_5.0m": 21852,
-   "places_5.25m": 20811,
+   "places_5.37m": 20346,
    "places_6.0m": 18210,
-   "automobiles_per_place_5.25m": 0.69,
-   "automobiles_per_place_low_90": 0.674,
-   "automobiles_per_place_high_90": 0.704,
+   "automobiles_per_place_5.37m": 0.706,
+   "automobiles_per_place_low_90": 0.69,
+   "automobiles_per_place_high_90": 0.72,
    "legal_curb_m_per_household": 5.757
   },
   "all": {
@@ -80,15 +80,15 @@
    "alt_3_variables": 18977,
    "alt_6_variables": 18968,
    "curb_km": 195.042,
-   "forbidden_at_all_times_km": 18.625,
-   "legal_curb_km": 146.417,
-   "places_5.0m": 29283,
-   "places_5.25m": 27888,
-   "places_6.0m": 24402,
-   "automobiles_per_place_5.25m": 0.681,
-   "automobiles_per_place_low_90": 0.675,
-   "automobiles_per_place_high_90": 0.687,
-   "legal_curb_m_per_household": 5.989
+   "forbidden_at_all_times_km": 18.566,
+   "legal_curb_km": 146.476,
+   "places_5.0m": 29295,
+   "places_5.37m": 27276,
+   "places_6.0m": 24412,
+   "automobiles_per_place_5.37m": 0.696,
+   "automobiles_per_place_low_90": 0.69,
+   "automobiles_per_place_high_90": 0.703,
+   "legal_curb_m_per_household": 5.991
   }
  },
  "corridor_share_within_300m_median": 1.0,
@@ -101,9 +101,9 @@
   "per_household_max": 2.02,
   "half_width_90_median_pct": 26.767676767676768,
   "half_width_90_wide_median_pct": 31.220657276995308,
-  "per_place_p10": 0.374,
-  "per_place_median": 0.73,
-  "per_place_p90": 1.69
+  "per_place_p10": 0.37600000000000006,
+  "per_place_median": 0.75,
+  "per_place_p90": 1.73
  },
  "model": {
   "fsas": 114,
@@ -255,12 +255,12 @@
   "S": {
    "length_m": 2414,
    "net_m": 1834,
-   "banned_m": 1150,
-   "legal_m": 684
+   "banned_m": 1091,
+   "legal_m": 743
   }
  },
- "terrebonne_legal_m": 1306,
- "terrebonne_places_5.5m": 238,
+ "terrebonne_legal_m": 1366,
+ "terrebonne_places_5.5m": 248,
  "lidar": {
   "sectors": [
    {

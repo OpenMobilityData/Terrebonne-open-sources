@@ -1,0 +1,31 @@
+troncon,sector,unit,initial_N,norms_N,initial_S,norms_S,scenario3_N,scenario3_S
+Saint-Ignatius-Belmore,ouest,west end to Belmore,3,2,10,9,0,8
+Belmore-Coronation,ouest,Belmore to Coronation,3,2,6,4,0,4
+Coronation-Mayfair,ouest,Coronation to Mayfair,7,5,7,6,0,5
+Mayfair-Mariette,ouest,Mayfair to Mariette,10,8,10,8,0,8
+Mariette-Rosedale,ouest,Mariette to Rosedale,9,8,12,10,0,9
+Rosedale-King-Edward,ouest,Rosedale to King-Edward,7,5,8,6,0,6
+King-Edward-Montclair,ouest,King-Edward to Montclair,11,9,10,8,0,7
+Montclair-Walkley,ouest,Montclair to Walkley,9,7,12,11,0,11
+Walkley-Prince-of-Wales,ouest,Walkley to Prince-of-Wales,7,5,8,6,0,5
+Prince-of-Wales-Cumberland,ouest,Prince-of-Wales to Cumberland,10,8,4,4,0,4
+Cumberland-Cavendish,ouest,Cumberland to Cavendish,7,5,5,2,0,2
+Cavendish-Bessborough,institutionnel,Cavendish to Madison,5,4,9,6,4,0
+Cavendish-Benny,institutionnel,Cavendish to Madison,0,0,0,0,0,0
+Bessborough-Madison,institutionnel,Cavendish to Madison,13,13,0,0,12,0
+Benny-Madison,institutionnel,Cavendish to Madison,0,0,18,17,0,0
+Madison-Kensington,institutionnel,Madison to Kensington,6,5,8,6,4,0
+Kensington-Grand,institutionnel,Kensington to Grand,7,4,9,6,4,0
+Grand-Beaconsfield,est,Grand to Beaconsfield,8,5,10,6,5,0
+Beaconsfield-Hingston,est,Beaconsfield to Hingston,9,7,7,5,7,0
+Hingston-Hampton,est,Hingston to Hampton,8,6,11,9,5,0
+Hampton-Royal,est,Hampton to Royal,8,6,7,6,6,0
+Royal-Draper,est,Royal to Draper,12,11,10,10,0,10
+Draper-Melrose,est,Draper to Melrose,8,7,6,6,7,0
+Melrose-Wilson,est,Melrose to Wilson,8,6,9,7,5,0
+Wilson-Harvard,est,Wilson to Harvard,6,4,10,8,4,0
+Harvard-Oxford,est,Harvard to Oxford,8,6,8,6,5,0
+Oxford-Marcil,est,Oxford to Marcil,9,7,10,9,7,0
+Marcil-Old Orchard,est,Marcil to Old Orchard,8,6,8,7,5,0
+Old Orchard-Girouard,est,Old Orchard to Girouard,8,7,8,5,7,0
+Girouard-Earnscliff,est,east of the lane,9,5,12,9,5,0

@@ -36,6 +36,16 @@ CLEARANCE = 5.0      # m: no stopping within 5 m of an intersection (Highway Saf
 END = HALF_ROADWAY + CLEARANCE
 SIDE_OFFSET = 12.0
 BANS = ["\\A EN TOUT TEMPS", "\\P EN TOUT TEMPS"]
+# Block faces read from the street instead of from the inventory (author's observation on photographs of November 2026,
+# recorded November 23, 2026). Keyed by segment and by one pole of the face; the states are those of the face's stretches
+# in the order of the segment's own direction (the segment runs westward).
+OBSERVED = {
+    (1320361, "299368"): ["banned", "legal", "banned"],   # rue de Terrebonne, Mayfair to Mariette, south side: two no-stopping signs near the corners, both
+                                                          # entered with the same arrow code, so that either coding forbids the 63 m between them; no other sign
+                                                          # on the face. Parking is allowed there: read as on the neighbouring faces, the end signs pointing to
+                                                          # the corners, parking between them. (West of Coronation the street is two-way and has no parking, as
+                                                          # the inventory says.)
+}
 
 
 def study_area():
@@ -92,6 +102,7 @@ def main():
         return ban, other
 
     out, flipped, conflicts, n_arrowed = {}, 0, 0, 0
+    observed = []
     ivs = {}                                   # (ID_TRC, side) -> [(from, to, state)] along the centre line, ends excluded (for the maps)
     for (trc, side), v in groups.items():
         L = v.L.iloc[0]; ts = [0.0] + list(v.t) + [L]; ids = [None] + list(v.POTEAU_ID_POT) + [None]
@@ -107,6 +118,10 @@ def main():
             ban, other = b1, o1
         conflicts += int((ban & other).sum())
         w = np.where(ban & other, 0.5, np.where(ban, 1.0, 0.0))
+        obs = [v_ for (t_, p_), v_ in OBSERVED.items() if t_ == trc and p_ in ids]
+        if obs:
+            assert len(obs[0]) == len(w), f"observed states of {trc}: {len(obs[0])} given, {len(w)} stretches"
+            w = np.array([1.0 if x == "banned" else 0.0 for x in obs[0]]); observed.append((trc, side))
         tot = 0.0; iv = []
         for k in range(len(w)):
             lo, hi = max(ts[k], END), min(ts[k + 1], L - END)
@@ -117,6 +132,8 @@ def main():
         out[(trc, side)] = tot; ivs[(trc, side)] = iv
     print(f"block faces with poles: {len(groups)}; with arrowed signs: {n_arrowed}; read with the other arrow coding: {flipped}; "
           f"stretches still claimed both ways (counted for half): {conflicts}")
+    assert len(observed) == len(OBSERVED), f"faces read from the street: {len(observed)} found of {len(OBSERVED)}"
+    print(f"block faces read from the street instead of the inventory: {observed}")
     ban_len = out
 
     rows = []

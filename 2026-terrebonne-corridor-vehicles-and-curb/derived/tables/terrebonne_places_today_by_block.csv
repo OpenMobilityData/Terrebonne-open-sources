@@ -1,30 +1,30 @@
-ID_TRC,u_m,block,places_signs_by_face,places_signs_whole_cars,hydrants_on_band,places_before_hydrants,entrances_on_band,places_net_5.0m,places_net_5.25m,places_net_5.5m,places_net_6.0m,offstreet_spaces,offstreet_with_car,offstreet_empty,places_today,places_today_lo,places_today_hi,places_at_5_5m
-1320365,29,(end) to Belmore,0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,3,1,2,0.0,0.0,0.0,0.0
-1320364,70,Belmore to Belmore,0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,1,1,0,0.0,0.0,0.0,0.0
-1320363,108,Belmore to Coronation,0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,4,1,3,0.0,0.0,0.0,0.0
-1320362,174,Coronation to Mayfair,7,7.0,0,4.0,3,4.0,4.0,4.0,3.0,9,1,8,4.0,4.0,4.0,4.0
-1320361,258,Mayfair to Mariette,0,0.0,1,0.0,0,0.0,0.0,0.0,0.0,2,1,1,0.0,0.0,0.0,0.0
-1320360,348,Mariette to Rosedale,10,9.0,0,9.0,0,11.0,9.0,9.0,9.0,5,2,3,9.0,9.0,9.0,9.0
-1320359,437,Rosedale to King-Edward,11,11.0,0,8.0,2,9.0,9.0,8.0,7.0,9,6,3,9.0,8.0,9.0,8.0
-1320358,528,King-Edward to Montclair,9,8.0,0,6.0,2,8.0,7.0,6.0,6.0,7,5,2,7.0,6.0,7.0,6.0
-1320357,619,Montclair to Walkley,11,10.0,0,10.0,0,11.0,10.0,10.0,9.0,2,1,1,10.0,10.0,10.0,10.0
-1320356,704,Walkley to Prince-of-Wales,8,7.0,0,5.0,3,5.0,5.0,5.0,5.0,5,1,4,5.0,5.0,5.0,5.0
-1320354,781,Prince-of-Wales to Cumberland,6,5.0,0,3.0,3,3.0,3.0,3.0,3.0,8,1,7,3.0,3.0,3.0,3.0
-1320353,854,Cumberland to Cavendish,6,5.0,0,3.0,2,5.0,4.0,3.0,3.0,4,0,4,4.0,4.0,5.0,3.0
-1310367,928,Cavendish to Bessborough,7,7.5,0,7.5,0,7.5,7.5,7.5,6.5,4,0,4,7.5,7.5,7.5,7.5
-1310366,1015,Bessborough to Benny,10,9.0,1,9.0,0,9.0,8.0,7.0,6.0,5,3,2,8.0,8.0,8.0,7.0
-1310365,1146,Benny to Madison,20,18.0,0,18.0,0,22.0,19.0,18.0,17.0,1,0,1,19.0,19.0,19.0,18.0
-1310364,1268,Madison to Kensington,9,8.0,0,6.0,4,6.0,6.0,6.0,6.0,4,1,3,6.0,6.0,6.0,6.0
-1310363,1352,Kensington to Grand,10,9.0,1,7.0,4,6.5,5.5,5.0,4.5,1,1,0,5.5,4.5,6.5,5.0
-1310362,1437,Grand to Beaconsfield,8,6.5,1,4.5,4,4.0,4.0,4.0,3.0,4,1,3,4.0,3.0,4.0,4.0
-1310361,1521,Beaconsfield to Hingston,10,9.0,0,7.0,2,7.0,7.0,7.0,6.0,10,3,7,7.0,6.0,7.0,7.0
-1310360,1611,Hingston to Hampton,10,9.0,0,5.0,4,6.0,6.0,5.0,4.0,11,4,7,6.0,4.0,6.0,5.0
-1310359,1709,Hampton to Royal,11,11.0,0,7.0,5,7.0,7.0,7.0,4.0,10,3,7,7.0,4.0,7.0,7.0
-1310358,1805,Royal to Draper,10,9.0,0,9.0,0,10.5,10.0,9.0,9.0,3,2,1,10.0,10.0,10.0,9.0
-1310357,1895,Draper to Melrose,6,5.0,0,4.0,2,5.0,4.0,4.0,4.0,5,1,4,4.0,4.0,4.0,4.0
-1600530,1980,Melrose to Wilson,9,8.5,0,4.5,2,6.5,5.5,4.5,3.5,2,0,2,5.5,4.5,6.5,4.5
-1310355,2060,Wilson to Harvard,7,7.0,0,5.0,2,6.0,5.0,5.0,3.0,4,1,3,5.0,4.0,6.0,5.0
-1310354,2138,Harvard to Oxford,8,7.0,0,4.0,2,6.0,5.0,4.0,4.0,4,0,4,5.0,4.0,5.0,4.0
-1310353,2217,Oxford to Marcil,9,9.0,0,7.0,1,8.0,8.0,7.0,7.0,3,0,3,8.0,8.0,8.0,7.0
-1310352,2295,Marcil to Old Orchard,8,8.0,0,8.0,0,8.0,8.0,8.0,6.0,3,1,2,8.0,8.0,8.0,8.0
-1310351,2374,Old Orchard to Girouard,5,4.0,0,4.0,0,5.5,4.0,4.0,4.0,2,1,1,4.0,4.0,4.0,4.0
+ID_TRC,u_m,block,places_signs_by_face,places_signs_whole_cars,legal_m,hydrants_on_band,places_before_hydrants,entrances_on_band,places_net_5.0m,places_net_5.25m,places_net_5.37m,places_net_5.5m,places_net_6.0m,offstreet_spaces,offstreet_with_car,offstreet_empty,places_today,places_today_lo,places_today_hi,places_at_5_5m,exp_unit
+1320365,29,(end) to Belmore,0,0.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,3,1,2,0.0,0.0,0.0,0.0,west end to Belmore
+1320364,70,Belmore to Belmore,0,0.0,5.4,0,0.0,0,0.0,0.0,0.0,0.0,0.0,1,1,0,0.0,0.0,0.0,0.0,west end to Belmore
+1320363,108,Belmore to Coronation,0,0.0,0.0,0,0.0,0,0.0,0.0,0.0,0.0,0.0,4,1,3,0.0,0.0,0.0,0.0,Belmore to Coronation
+1320362,174,Coronation to Mayfair,7,7.0,41.5,0,4.0,3,4.0,4.0,4.0,4.0,3.0,9,1,8,4.0,3.0,4.0,4.0,Coronation to Mayfair
+1320361,258,Mayfair to Mariette,11,11.0,62.8,0,9.0,2,9.0,9.0,9.0,9.0,8.0,2,1,1,9.0,8.0,9.0,9.0,Mayfair to Mariette
+1320360,348,Mariette to Rosedale,10,9.0,59.8,0,9.0,0,11.0,9.0,9.0,9.0,9.0,5,2,3,9.0,9.0,9.0,9.0,Mariette to Rosedale
+1320359,437,Rosedale to King-Edward,11,11.0,64.3,0,8.0,2,9.0,8.0,8.0,8.0,7.0,9,6,3,8.0,7.0,9.0,8.0,Rosedale to King-Edward
+1320358,528,King-Edward to Montclair,9,9.0,53.1,0,7.0,2,8.0,7.0,7.0,6.0,6.0,7,5,2,7.0,6.0,7.0,6.0,King-Edward to Montclair
+1320357,619,Montclair to Walkley,11,10.0,61.0,0,10.0,0,11.0,10.0,10.0,10.0,9.0,2,1,1,10.0,10.0,10.0,10.0,Montclair to Walkley
+1320356,704,Walkley to Prince-of-Wales,8,7.0,44.1,0,5.0,3,5.0,5.0,5.0,5.0,5.0,5,1,4,5.0,5.0,5.0,5.0,Walkley to Prince-of-Wales
+1320354,781,Prince-of-Wales to Cumberland,6,5.0,34.7,0,3.0,4,3.0,3.0,3.0,3.0,3.0,8,1,7,3.0,2.0,3.0,3.0,Prince-of-Wales to Cumberland
+1320353,854,Cumberland to Cavendish,6,6.0,33.1,0,4.0,2,5.0,4.0,4.0,3.0,3.0,4,0,4,4.0,4.0,5.0,3.0,Cumberland to Cavendish
+1310367,928,Cavendish to Bessborough,7,7.5,43.2,0,7.5,0,7.5,7.5,7.5,7.5,6.5,4,0,4,7.5,7.5,7.5,7.5,Cavendish to Madison
+1310366,1015,Bessborough to Benny,10,10.0,56.6,1,10.0,0,9.0,8.0,8.0,7.0,6.0,5,3,2,8.0,8.0,8.0,7.0,Cavendish to Madison
+1310365,1146,Benny to Madison,20,19.0,115.3,0,19.0,0,22.0,19.0,19.0,18.0,17.0,1,0,1,19.0,19.0,19.0,18.0,Cavendish to Madison
+1310364,1268,Madison to Kensington,9,8.0,52.1,0,6.0,4,6.0,6.0,6.0,6.0,6.0,4,1,3,6.0,6.0,6.0,6.0,Madison to Kensington
+1310363,1352,Kensington to Grand,10,9.0,55.7,1,8.0,4,6.5,6.5,6.0,5.0,5.0,1,1,0,6.0,4.5,6.5,5.0,Kensington to Grand
+1310362,1437,Grand to Beaconsfield,8,7.5,46.3,1,3.5,4,4.0,3.0,3.0,3.0,3.0,4,1,3,3.0,3.0,4.0,3.0,Grand to Beaconsfield
+1310361,1521,Beaconsfield to Hingston,10,10.0,55.4,0,7.0,2,7.0,7.0,7.0,7.0,5.0,10,3,7,7.0,6.0,7.0,7.0,Beaconsfield to Hingston
+1310360,1611,Hingston to Hampton,10,10.0,55.7,0,5.0,4,6.0,5.0,5.0,5.0,4.0,11,4,7,5.0,4.0,6.0,5.0,Hingston to Hampton
+1310359,1709,Hampton to Royal,11,11.0,65.5,0,6.0,6,7.0,7.0,6.0,5.0,4.0,10,3,7,6.0,4.0,7.0,5.0,Hampton to Royal
+1310358,1805,Royal to Draper,10,9.0,59.2,0,9.0,0,10.5,10.0,9.0,9.0,9.0,3,2,1,9.0,9.0,9.0,9.0,Royal to Draper
+1310357,1895,Draper to Melrose,6,6.0,35.8,0,4.0,2,5.0,4.0,4.0,4.0,4.0,5,1,4,4.0,4.0,4.0,4.0,Draper to Melrose
+1600530,1980,Melrose to Wilson,9,8.5,52.0,0,5.5,2,6.5,6.5,5.5,4.5,3.5,2,0,2,5.5,4.5,6.5,4.5,Melrose to Wilson
+1310355,2060,Wilson to Harvard,7,7.0,41.9,0,4.0,2,5.0,5.0,4.0,4.0,3.0,4,1,3,4.0,4.0,6.0,4.0,Wilson to Harvard
+1310354,2138,Harvard to Oxford,8,8.0,47.4,0,5.0,2,6.0,5.0,5.0,5.0,5.0,4,0,4,5.0,4.0,6.0,5.0,Harvard to Oxford
+1310353,2217,Oxford to Marcil,9,9.0,51.0,0,8.0,1,8.0,8.0,8.0,8.0,7.0,3,0,3,8.0,8.0,8.0,8.0,Oxford to Marcil
+1310352,2295,Marcil to Old Orchard,8,8.0,44.7,0,8.0,1,8.0,8.0,8.0,8.0,6.0,3,1,2,8.0,7.0,8.0,8.0,Marcil to Old Orchard
+1310351,2374,Old Orchard to Girouard,5,4.0,28.1,0,4.0,0,5.5,4.0,4.0,4.0,4.0,2,1,1,4.0,4.0,4.0,4.0,Old Orchard to Girouard

@@ -1,0 +1,53 @@
+unit,side,legal_m_today,places_today,exp_scenario3,like_for_like
+west end to Belmore,N,2.7,0.0,0,False
+west end to Belmore,S,2.7,0.0,8,False
+Belmore to Coronation,N,0.0,0.0,0,False
+Belmore to Coronation,S,0.0,0.0,4,False
+Coronation to Mayfair,N,0.0,0.0,0,False
+Coronation to Mayfair,S,41.5,4.0,5,True
+Mayfair to Mariette,N,0.0,0.0,0,False
+Mayfair to Mariette,S,62.8,9.0,8,True
+Mariette to Rosedale,N,0.0,0.0,0,False
+Mariette to Rosedale,S,59.8,9.0,9,True
+Rosedale to King-Edward,N,0.0,0.0,0,False
+Rosedale to King-Edward,S,64.3,8.0,6,True
+King-Edward to Montclair,N,0.0,0.0,0,False
+King-Edward to Montclair,S,53.1,7.0,7,True
+Montclair to Walkley,N,0.0,0.0,0,False
+Montclair to Walkley,S,61.0,10.0,11,True
+Walkley to Prince-of-Wales,N,0.0,0.0,0,False
+Walkley to Prince-of-Wales,S,44.1,5.0,5,True
+Prince-of-Wales to Cumberland,N,0.0,0.0,0,False
+Prince-of-Wales to Cumberland,S,34.7,3.0,4,True
+Cumberland to Cavendish,N,0.0,0.0,0,False
+Cumberland to Cavendish,S,33.1,4.0,2,True
+Cavendish to Madison,N,0.0,0.0,16,False
+Cavendish to Madison,S,215.2,34.5,0,False
+Madison to Kensington,N,52.1,6.0,4,True
+Madison to Kensington,S,0.0,0.0,0,False
+Kensington to Grand,N,44.1,6.0,4,True
+Kensington to Grand,S,11.6,0.0,0,False
+Grand to Beaconsfield,N,46.3,3.0,5,True
+Grand to Beaconsfield,S,0.0,0.0,0,False
+Beaconsfield to Hingston,N,55.4,7.0,7,True
+Beaconsfield to Hingston,S,0.0,0.0,0,False
+Hingston to Hampton,N,55.7,5.0,5,True
+Hingston to Hampton,S,0.0,0.0,0,False
+Hampton to Royal,N,65.5,6.0,6,True
+Hampton to Royal,S,0.0,0.0,0,False
+Royal to Draper,N,0.0,0.0,0,False
+Royal to Draper,S,59.2,9.0,10,True
+Draper to Melrose,N,35.8,4.0,7,True
+Draper to Melrose,S,0.0,0.0,0,False
+Melrose to Wilson,N,52.0,5.5,5,True
+Melrose to Wilson,S,0.0,0.0,0,False
+Wilson to Harvard,N,41.9,4.0,4,True
+Wilson to Harvard,S,0.0,0.0,0,False
+Harvard to Oxford,N,47.4,5.0,5,True
+Harvard to Oxford,S,0.0,0.0,0,False
+Oxford to Marcil,N,51.0,8.0,7,True
+Oxford to Marcil,S,0.0,0.0,0,False
+Marcil to Old Orchard,N,44.7,8.0,5,True
+Marcil to Old Orchard,S,0.0,0.0,0,False
+Old Orchard to Girouard,N,28.1,4.0,7,True
+Old Orchard to Girouard,S,0.0,0.0,0,False
