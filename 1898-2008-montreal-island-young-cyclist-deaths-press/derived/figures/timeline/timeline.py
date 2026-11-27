@@ -33,6 +33,7 @@ T = {
              tram='Tram', fall='A fall, no other vehicle', unknown='Vehicle not stated, or the reports differ'),
     cov='Newspaper issues returned by the {q} searches, by decade of the issue: what there was to read',
     covnote='The collection thins after the 1960s, and Le Journal de Montréal (1964 on) is absent or can be read only on BAnQ\'s premises:\nfewer marks after 1970 reflect, at least in part, fewer papers to search.',
+    spans=[(2012, 2027, 'a separate press search, 2012–2026 (its own folder)'), (2012, 2022, 'police collision data published, 2012–2021: no age recorded')],
     latest='the latest found:\nAugust 26, 2008', first='the earliest:\nApril 10, 1912', yl='deaths\nin the year', yl2='issues',
     src='Source: newspapers digitized by BAnQ numérique, {q} fixed searches, every candidate read on the page (protocol and table of events in this folder). Other vehicle as the page describes it;\nhorse-drawn only where the page says so. Not shown: deaths listed apart ({apart}), cyclists aged 15 to 17, deaths with the collision off the island.'),
  'fr': dict(
@@ -43,6 +44,7 @@ T = {
              tram='Tramway', fall='Une chute, sans autre véhicule', unknown='Véhicule non précisé, ou versions divergentes'),
     cov='Numéros de journaux retournés par les {q} recherches, par décennie du numéro : ce qu\'il y avait à lire',
     covnote='La collection s\'amenuise après les années 1960, et Le Journal de Montréal (depuis 1964) est absent ou consultable seulement dans les édifices de BAnQ :\nles marques moins nombreuses après 1970 tiennent, au moins en partie, à ce qu\'il y a moins de journaux à fouiller.',
+    spans=[(2012, 2027, 'une recherche de presse distincte, 2012–2026 (dossier à part)'), (2012, 2022, 'données policières de collisions publiées, 2012–2021 : sans âge')],
     latest='le plus récent trouvé :\n26 août 2008', first='le plus ancien :\n10 avril 1912', yl='décès\ndans l\'année', yl2='numéros',
     src='Source : journaux numérisés par BAnQ numérique, {q} recherches fixées d\'avance, chaque candidat lu sur la page (protocole et table des événements dans ce dossier). Autre véhicule tel que la page le décrit;\ntraction animale seulement lorsque la page le dit. Non montrés : les décès listés à part ({apart}), les cyclistes de 15 à 17 ans, les décès dont la collision a eu lieu hors de l\'île.'),
 }
@@ -76,6 +78,11 @@ for lang, t in T.items():
     y0, y1 = pts[0][0], pts[-1][0]
     a.annotate(t['first'], (y0 + 0.5, 1), (y0 + 0.5, 2.2), fontsize=8.5, color=INK2, ha='center', arrowprops=dict(arrowstyle='-', color=INK2, lw=0.7))
     a.annotate(t['latest'], (y1 + 0.5, 1), (y1 + 0.5, 2.2), fontsize=8.5, color=INK2, ha='center', arrowprops=dict(arrowstyle='-', color=INK2, lw=0.7))
+    for k, (xa, xb, lab) in enumerate(t['spans']):
+        ys = 3.75 - 0.42 * k
+        a.plot([xa, xb], [ys, ys], color=INK2, lw=1.6, solid_capstyle='butt', zorder=2)
+        for xx in (xa, xb): a.plot([xx, xx], [ys - 0.1, ys + 0.1], color=INK2, lw=1.0, zorder=2)
+        a.text(xa - 1, ys, lab, ha='right', va='center', fontsize=8.5, color=INK2)
     a.text(X1 - 0.5, max(stack.values()) + 0.9, t['warn'], ha='right', va='top', fontsize=10.5, color=INK, fontweight='bold', linespacing=1.35)
     used = [c for c in CL if any(x[2] == c for x in pts)]
     hs = [Line2D([], [], ls='', marker=CL[c][1], markersize=7.5 * CL[c][2] ** .5, markerfacecolor=CL[c][0], markeredgecolor=CL[c][0],
