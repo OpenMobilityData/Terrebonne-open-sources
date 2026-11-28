@@ -1,0 +1,16 @@
+street,borough,facility_type,protected_four_season,facilities,metres_on_arterial_segments,metres_on_other_segments
+rue de Terrebonne,Côte-des-Neiges-Notre-Dame-de-Grâce,Bande cyclable,Non,3,121,0
+rue de Terrebonne,Côte-des-Neiges-Notre-Dame-de-Grâce,Piste cyclable sur rue,Oui,29,2413,0
+avenue du Parc,Ahuntsic-Cartierville,Piste cyclable sur rue,Oui,4,753,0
+rue Meilleur,Ahuntsic-Cartierville,Bande cyclable,Non,3,528,0
+rue Meilleur,Ahuntsic-Cartierville,Piste cyclable sur rue,Oui,5,518,0
+rue de Port-Royal,Ahuntsic-Cartierville,Bande cyclable,Non,4,0,290
+rue de Port-Royal,Ahuntsic-Cartierville,Chaussée désignée,Non,1,0,81
+rue de Port-Royal,Ahuntsic-Cartierville,Piste cyclable sur rue,Non,1,0,72
+rue de Port-Royal,Ahuntsic-Cartierville,Piste cyclable sur rue,Oui,3,308,0
+rue Tolhurst,Ahuntsic-Cartierville,Bande cyclable,Non,5,801,260
+rue Tolhurst,Ahuntsic-Cartierville,Piste cyclable sur rue,Oui,4,257,404
+rue Legendre,Ahuntsic-Cartierville,Chaussée désignée,Non,4,0,395
+rue Legendre,Ahuntsic-Cartierville,Piste cyclable sur rue,Oui,14,1345,0
+rue Chabanel,Ahuntsic-Cartierville,Piste cyclable sur rue,Oui,2,178,0
+avenue Lajoie,Outremont,Chaussée désignée,Non,4,295,92

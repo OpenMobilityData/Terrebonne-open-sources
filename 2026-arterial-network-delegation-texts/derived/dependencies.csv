@@ -1,0 +1,14 @@
+statement_in_readme,depends_on,kind,last_checked,recheck_when
+"Rue de Terrebonne: offer voted 3–2 on November 2, 2026 (CA26 170231); the file's calendar and its wording on road works",2026-11-02-borough-council,folder,2026-11-28,that folder changes
+"No item on rue de Terrebonne on the agenda posted for December 1, 2026; minutes of November 2",2026-12-01-borough-council,folder,2026-11-28,"the sitting of December 1, 2026 is held (an item can be added); its minutes are posted"
+"No acceptance of the offer found at City council",2026-11-16-city-council-agenda,folder,2026-11-28,"the agenda of the City council of December 14, 2026 is posted; the minutes of November 16 are posted"
+"The one public statement found on the legal basis (one passage checked by ear)",2026-11-16-city-council,folder,2026-11-28,the transcript is checked or replaced
+"Ahuntsic-Cartierville: a notice to residents of October 28, 2026; no instrument published",2026-10-28-ahuntsic-district-central-winter-closure,folder,2026-11-28,"the borough's bundle of December 7, 2026 is posted (report of delegated decisions); a decision document is published"
+"How the Terrebonne lanes were established in 2024 (CA24 170018, CM24 0179, OCA24 17042)",2024-project-approval,folder,2026-11-28,that folder changes
+"Streets on the arterial network: table of the README",derived/arterial_check.csv,derived table,2026-11-28,"the City publishes a newer arterial layer or cycling file; a street is added to the cases"
+"The figure of winter changes by winter",derived/figures/winter-removals-timeline,figure,2026-11-28,a case or an instrument is added or changes
+"By-law 08-055 as codified on December 20, 2024 (arts. 2, 4, 4.5; annex C)",https://montreal.ca/reglements-municipaux/recherche/60d7c447fd65316932599684,external,2026-11-28,the City posts a newer codification or an amendment
+"By-law 02-003 as codified on October 27, 2026",https://montreal.ca/reglements-municipaux,external,2026-11-16,the City posts a newer codification
+"Charter of Ville de Montréal, arts. 85, 105 and 142 (text current to October 15, 2026)",https://www.legisquebec.gouv.qc.ca/fr/document/lc/C-11.4,external,2026-11-16,LégisQuébec shows a later currency date
+"Outremont: four by-laws on avenue Lajoie; a standing winter rule since April 2026",https://montreal.ca/reglements-municipaux,external,2026-11-23,a new by-law amends annex H of by-law 1171
+"Access requests that may answer the open questions (borough files 2026-749 and 2026-750, due December 18, 2026)",https://github.com/OpenMobilityData/Terrebonne-access-requests,external,2026-11-28,an answer is received
